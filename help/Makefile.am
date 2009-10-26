@@ -2,7 +2,7 @@ include $(top_srcdir)/gnome-doc-utils.make
 
 DOC_LINGUAS = ca cs de el en_GB es eu fr it oc ru sv
 
-DOC_MODULE = same-gnome
+DOC_MODULE = swell-foop
 
 DOC_ENTITIES = 
 DOC_INCLUDES = \
