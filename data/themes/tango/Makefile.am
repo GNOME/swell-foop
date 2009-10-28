@@ -1,4 +1,4 @@
-themedir = $(pkgdatadir)/fell-swoop/themes/tango
+themedir = $(pkgdatadir)/swell-foop/themes/tango
 theme_DATA = \
 	bkg.svg \
 	blue.svg \
