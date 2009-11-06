@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
 
-export LD_LIBRARY_PATH=@libdir@/gnome-games:$LD_LIBRARY_PATH
-/usr/bin/env seed @prefix@/share/gnome-games/swell-foop/main.js
-
+export LD_LIBRARY_PATH=%pkglibdir%:$LD_LIBRARY_PATH
+/usr/bin/env seed %pkgdatadir%/swell-foop/main.js

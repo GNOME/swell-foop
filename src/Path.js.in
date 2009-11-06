@@ -1,1 +1,1 @@
-var file_prefix = '@prefix@' + "/share/gnome-games/swell-foop/";
+var file_prefix = '%pkgdatadir%' + "/swell-foop/";
