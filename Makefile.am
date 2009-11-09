@@ -41,6 +41,7 @@ CLEANFILES = $(desktop_DATA)
 DISTCLEANFILES = $(schema_DATA)
 
 EXTRA_DIST = \
+    swell-foop.in \
     src/About.js \
     src/Board.js \
     src/Light.js \
