@@ -1,30 +1,19 @@
 SUBDIRS = data/themes
 
 if BUILD_HELP
-SUBDIRS += help
+SUBDIRS += src help
 endif
 
 swelldir=$(pkgdatadir)/swell-foop
 
 swell_DATA = \
-    src/About.js \
-    src/Board.js \
-    src/Light.js \
-    src/main.js \
-    src/Settings.js \
     data/swell-foop.ui \
-    data/settings.ui \
-    src/Score.js \
-    src/Path.js \
-    src/ThemeLoader.js
+    data/settings.ui
 
 bin_SCRIPTS = swell-foop
 
 swell-foop: swell-foop.in Makefile
 	$(AM_V_GEN) $(SED) -e "s|%pkglibdir%|$(pkglibdir)|" -e "s|%pkgdatadir%|$(pkgdatadir)|" $< > $@
-
-src/Path.js: src/Path.js.in
-	$(AM_V_GEN) $(SED) -e "s|%pkgdatadir%|$(pkgdatadir)|" $< > $@
 
 schema_in_files = swell-foop.schemas.in
 if HAVE_GNOME
@@ -42,16 +31,8 @@ DISTCLEANFILES = $(schema_DATA)
 
 EXTRA_DIST = \
     swell-foop.in \
-    src/About.js \
-    src/Board.js \
-    src/Light.js \
-    src/main.js \
-    src/Settings.js \
     data/swell-foop.ui \
     data/settings.ui \
-    src/Score.js \
-    src/Path.js.in \
-    src/ThemeLoader.js \
     $(schema_in_files)
 
 install-schemas-local: $(schema_DATA)
