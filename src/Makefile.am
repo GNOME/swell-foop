@@ -22,3 +22,9 @@ EXTRA_DIST = \
     Score.js \
     Path.js.in \
     ThemeLoader.js
+
+CLEANFILES = \
+	Path.js
+
+DISTCLEANFILES = \
+	Path.js
