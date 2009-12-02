@@ -4,7 +4,7 @@
 	<object class="GtkWindow" id="game_window">
 		<signal name="hide" handler="quit"/>
 		<property name="title" translatable="yes">Swell Foop</property>
-		<property name="icon_name">gnome-samegnome</property>
+		<property name="icon_name">gnome-swell-foop</property>
 		<property name="resizable">False</property>
 		<accel-groups>
 			<group name="accel_group"/>

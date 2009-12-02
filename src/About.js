@@ -14,7 +14,7 @@ function show_about_dialog()
 	about_dialog.copyright = _("Copyright \xa9 2009 Tim Horton");
 	about_dialog.license = GnomeGamesSupport.get_license(_("Swell Foop"));
 	about_dialog.wrap_license = true;
-	about_dialog.logo_icon_name = "gnome-samegnome";
+	about_dialog.logo_icon_name = "gnome-swell-foop";
 	about_dialog.website = "http://www.gnome.org/projects/gnome-games/";
 	about_dialog.website_label = _("GNOME Games web site"); // this doesn't work for anyone
 	about_dialog.translator_credits = _("translator-credits");
