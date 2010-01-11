@@ -12,7 +12,15 @@ Clutter = imports.gi.Clutter;
 GnomeGamesSupport = imports.gi.GnomeGamesSupport;
 _ = imports.gettext.gettext;
 
-GtkClutter.init(Seed.argv);
+try
+{
+	GtkClutter.init_with_args(Seed.argv.length, Seed.argv);
+}
+catch(e)
+{
+	print("Failed to initialise clutter: " + e.message);
+	Seed.quit(1);
+}
 
 if(GnomeGamesSupport.setgid_io_init)
 	GnomeGamesSupport.setgid_io_init();
