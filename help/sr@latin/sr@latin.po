@@ -3,7 +3,7 @@
 #
 # This file is distributed under the same license as the gnome-games package.
 #
-# Translated on 2009-10-24 by Бранко Кокановић <branko.kokanovic@gmail.com>
+# Translated on 2009-10-24 by Branko Kokanović <branko.kokanovic@gmail.com>
 #
 msgid ""
 msgstr ""
@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-19 13:32+0000\n"
 "PO-Revision-Date: 2010-02-20 12:59+0100\n"
-"Last-Translator: Бранко Кокановић <branko.kokanovic@gmail.com>\n"
+"Last-Translator: Branko Kokanović <branko.kokanovic@gmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,12 +28,12 @@ msgid ""
 "of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> or "
 "in the file COPYING-DOCS distributed with this manual."
 msgstr ""
-"Дозвољено умножавање, ширење, вршење измена овог документа под условима Гну-"
-"ове Слободне Документационе Дозволе (ГСДД), верзије 1.1 или било које "
-"накнадне верзије без непромењивих одељака, текста на насловној и последњој "
-"страни, а коју је објавила Задужбина Слободног Софтвера. Примерак ГСДД-е "
-"можете пронаћи на овој <ulink type=\"help\" url=\"ghelp:fdl\">адреси</ulink> "
-"или у датотеци COPYING-DOCS која је приложена уз ово упутство."
+"Dozvoljeno umnožavanje, širenje, vršenje izmena ovog dokumenta pod uslovima Gnu-"
+"ove Slobodne Dokumentacione Dozvole (GSDD), verzije 1.1 ili bilo koje "
+"naknadne verzije bez nepromenjivih odeljaka, teksta na naslovnoj i poslednjoj "
+"strani, a koju je objavila Zadužbina Slobodnog Softvera. Primerak GSDD-e "
+"možete pronaći na ovoj <ulink type=\"help\" url=\"ghelp:fdl\">adresi</ulink> "
+"ili u datoteci COPYING-DOCS koja je priložena uz ovo uputstvo."
 
 #: C/legal.xml:12(para)
 msgid ""
@@ -42,10 +42,10 @@ msgid ""
 "you can do so by adding a copy of the license to the manual, as described in "
 "section 6 of the license."
 msgstr ""
-"Ово упутство је део скупа Гном докумената објављених под GFDL. Уколико "
-"желите да расподељујете ово упутство одвојено од скупа, то можете урадити "
-"додавањем примерка лиценце документу, како је описано у одељку 6 саме "
-"лиценце."
+"Ovo uputstvo je deo skupa Gnom dokumenata objavljenih pod GFDL. Ukoliko "
+"želite da raspodeljujete ovo uputstvo odvojeno od skupa, to možete uraditi "
+"dodavanjem primerka licence dokumentu, kako je opisano u odeljku 6 same "
+"licence."
 
 #: C/legal.xml:19(para)
 msgid ""
@@ -55,11 +55,11 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
-"Многи називи које компаније користе у циљу препознатљивости својих производа "
-"и услуга представљају робне марке. Када (уколико) се такви називи појављују"
-"(спомињу) у било којем Гномовом документу, а чланови Гномовог "
-"документационог пројекта имају сазнања о томе, тада су називи исписани "
-"великим словима или са великим почетним словима."
+"Mnogi nazivi koje kompanije koriste u cilju prepoznatljivosti svojih proizvoda "
+"i usluga predstavljaju robne marke. Kada (ukoliko) se takvi nazivi pojavljuju"
+"(spominju) u bilo kojem Gnomovom dokumentu, a članovi Gnomovog "
+"dokumentacionog projekta imaju saznanja o tome, tada su nazivi ispisani "
+"velikim slovima ili sa velikim početnim slovima."
 
 #: C/legal.xml:35(para)
 msgid ""
@@ -75,18 +75,18 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"ДОКУМЕНТ ЈЕ ДОСТУПАН СА СВИМ СВОЈИМ ДОБРИМ И ЛОШИМ СТРАНАМА БЕЗ БИЛО КАКВОГ "
-"ЈАМСТВА, БИЛО ОНО ИЗРЕЧЕНО ИЛИ НЕ, УКЉУЧУЈУЋИ БЕЗ ОГРАНИЧЕЊА, ЈАМСТВО ДА ЈЕ "
-"ОВАЈ ДОКУМЕНТ ИЛИ ЊЕГОВА ИЗМЕЊЕНА ВЕРЗИЈА БЕЗ НЕДОСТАТАКА, СПРЕМАН ЗА "
-"ТРЖИШТЕ, СВРСИСХОДАН И НЕ НАРУШАВА ЗАКОНСКЕ НОРМЕ. ЦЕЛОКУПАН РИЗИК КОЈИ СЕ "
-"ОДНОСИ НА КВАЛИТЕТ, ТАЧНОСТ И ДОМЕТ (УЧИНАК) ДОКУМЕНТА ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ "
-"ВЕРЗИЈЕ СНОСИ КОРИСНИК. УКОЛИКО СЕ У БИЛО КОЈЕМ ДОКУМЕНТУ ИЛИ ЊЕГОВОЈ "
-"ИЗМЕЊЕНОЈ ВЕРЗИЈИ ПОЈАВИ НЕДОСТАТАК (ГРЕШКА) БИЛО КОЈЕ ВРСТЕ, КОРИСНИК (А НЕ "
-"АУТОР ИЗВОРНЕ ВЕРЗИЈЕ, БИЛО КОЈИ ДРУГИ АУТОР ИЛИ САРАДНИК) СНОСИ СВЕ "
-"ТРОШКОВЕ НЕОПХОДНОГ СЕРВИСИРАЊА, ПОПРАВКЕ ИЛИ ИСПРАВКЕ. ОВО ОГРАНИЧЕЊЕ "
-"ЈАМСТВА ПРЕДСТАВЉА САСТАВНИ ДЕО ОВЕ ДОЗВОЛЕ. УПОТРЕБА БИЛО КОЈЕГ ДОКУМЕНТА "
-"ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ НИЈЕ ДОЗВОЉЕНА ОСИМ ПОД УСЛОВИМА ОВОГ ОГРАНИЧЕЊА "
-"ЈАМСТВА."
+"DOKUMENT JE DOSTUPAN SA SVIM SVOJIM DOBRIM I LOŠIM STRANAMA BEZ BILO KAKVOG "
+"JAMSTVA, BILO ONO IZREČENO ILI NE, UKLJUČUJUĆI BEZ OGRANIČENJA, JAMSTVO DA JE "
+"OVAJ DOKUMENT ILI NJEGOVA IZMENJENA VERZIJA BEZ NEDOSTATAKA, SPREMAN ZA "
+"TRŽIŠTE, SVRSISHODAN I NE NARUŠAVA ZAKONSKE NORME. CELOKUPAN RIZIK KOJI SE "
+"ODNOSI NA KVALITET, TAČNOST I DOMET (UČINAK) DOKUMENTA ILI NJEGOVE IZMENJENE "
+"VERZIJE SNOSI KORISNIK. UKOLIKO SE U BILO KOJEM DOKUMENTU ILI NJEGOVOJ "
+"IZMENJENOJ VERZIJI POJAVI NEDOSTATAK (GREŠKA) BILO KOJE VRSTE, KORISNIK (A NE "
+"AUTOR IZVORNE VERZIJE, BILO KOJI DRUGI AUTOR ILI SARADNIK) SNOSI SVE "
+"TROŠKOVE NEOPHODNOG SERVISIRANJA, POPRAVKE ILI ISPRAVKE. OVO OGRANIČENJE "
+"JAMSTVA PREDSTAVLJA SASTAVNI DEO OVE DOZVOLE. UPOTREBA BILO KOJEG DOKUMENTA "
+"ILI NJEGOVE IZMENJENE VERZIJE NIJE DOZVOLJENA OSIM POD USLOVIMA OVOG OGRANIČENJA "
+"JAMSTVA."
 
 #: C/legal.xml:55(para)
 msgid ""
@@ -101,15 +101,15 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
 "POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"НИ ПОД КАКВИМ ОКОЛНОСТИМА ИЛИ ЗАКОНУ, БИЛО ЗБОГ КРШЕЊА (ИЛИ НЕМАРА) УГОВОРА, "
-"ИЛИ НА БИЛО КОЈИ ДРУГИ НАЧИН, АУТОР (ПРВОБИТНЕ ВЕРЗИЈЕ), САРАДНИК ИЛИ "
-"ИСПОРУЧИВАЛАЦ ДОКУМЕНТА ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ, НИТИ ДОБАВЉАЧ БИЛО КОЈЕ "
-"ОД НАВЕДЕНИХ СТРАНА НЕЋЕ СНОСИТИ МАТЕРИЈАЛНУ ОДГОВОРНОСТ ЗА НАСТАЛА "
-"ДИРЕКТНА, ИНДИРЕКТНА, ПОСЕБНА, СЛУЧАЈНА ИЛИ ТИМЕ НАСТАЛА ОШТЕЋЕЊА БИЛО КОЈЕ "
-"ВРСТЕ УКЉУЧУЈУЋИ, БЕЗ ОГРАНИЧЕЊА, ШТЕТУ НАНЕСЕНУ УГЛЕДУ ФИРМЕ, ПРЕСТАНКУ "
-"ПРОИЗВОДЊЕ, ОТКАЗИВАЊЕ РАДА РАЧУНАРА ИЛИ КВАРА КАО И ЗА СВЕ ОСТАЛЕ ШТЕТЕ ИЛИ "
-"ГУБИТКЕ НАСТАЛЕ УСЛЕД КОРИШЋЕЊА ДОКУМЕНТА И ЊЕГОВИХ ИЗМЕЊЕНИХ ВЕРЗИЈА ЧАК И "
-"АКО ЈЕ ОШТЕЋЕНА СТРАНА БИЛА ОБАВЕШТЕНА О МОГУЋНОСТИ НАСТАНКА ТЕ ШТЕТЕ."
+"NI POD KAKVIM OKOLNOSTIMA ILI ZAKONU, BILO ZBOG KRŠENJA (ILI NEMARA) UGOVORA, "
+"ILI NA BILO KOJI DRUGI NAČIN, AUTOR (PRVOBITNE VERZIJE), SARADNIK ILI "
+"ISPORUČIVALAC DOKUMENTA ILI NJEGOVE IZMENJENE VERZIJE, NITI DOBAVLJAČ BILO KOJE "
+"OD NAVEDENIH STRANA NEĆE SNOSITI MATERIJALNU ODGOVORNOST ZA NASTALA "
+"DIREKTNA, INDIREKTNA, POSEBNA, SLUČAJNA ILI TIME NASTALA OŠTEĆENJA BILO KOJE "
+"VRSTE UKLJUČUJUĆI, BEZ OGRANIČENJA, ŠTETU NANESENU UGLEDU FIRME, PRESTANKU "
+"PROIZVODNJE, OTKAZIVANJE RADA RAČUNARA ILI KVARA KAO I ZA SVE OSTALE ŠTETE ILI "
+"GUBITKE NASTALE USLED KORIŠĆENJA DOKUMENTA I NJEGOVIH IZMENJENIH VERZIJA ČAK I "
+"AKO JE OŠTEĆENA STRANA BILA OBAVEŠTENA O MOGUĆNOSTI NASTANKA TE ŠTETE."
 
 #: C/legal.xml:28(para)
 msgid ""
@@ -117,8 +117,8 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<placeholder-1/>"
 msgstr ""
-"ОВАЈ ДОКУМЕНТ И ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ СУ ДОСТУПНЕ ПОД УСЛОВИМА ГНУ-ОВЕ "
-"СЛОБОДНЕ ДОКУМЕНТАЦИОНЕ ДОЗВОЛЕ УЗ ДОДАТНУ САГЛАСНОСТ ДА: <placeholder-1/>"
+"OVAJ DOKUMENT I NJEGOVE IZMENJENE VERZIJE SU DOSTUPNE POD USLOVIMA GNU-OVE "
+"SLOBODNE DOKUMENTACIONE DOZVOLE UZ DODATNU SAGLASNOST DA: <placeholder-1/>"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -152,7 +152,7 @@ msgstr "@@image: 'figures/play4.png'; md5=0f79aacbfacbf291fcfa7956c18be3ba"
 
 #: C/swell-foop.xml:20(title)
 msgid "<application>Swell Foop</application> Manual"
-msgstr "Упутство за <application>Ланчану реакцију</application>"
+msgstr "Uputstvo za <application>Lančanu reakciju</application>"
 
 #: C/swell-foop.xml:23(para)
 msgid ""
@@ -161,11 +161,11 @@ msgid ""
 "pieces. That group will vanish and the pieces on top will fall until there "
 "are none left or no more color groups."
 msgstr ""
-"Ланчана реакција је слагалица у којој је циљ што више очистити таблу "
-"кликћући на групе објеката исте боје. Кликом на групу, она нестаје, а "
-"објекти који су били изнад ње падају. Игра се наставља док се табла не "
-"испразни или када више нема група објеката исте боје на које се може "
-"кликнути."
+"Lančana reakcija je slagalica u kojoj je cilj što više očistiti tablu "
+"klikćući na grupe objekata iste boje. Klikom na grupu, ona nestaje, a "
+"objekti koji su bili iznad nje padaju. Igra se nastavlja dok se tabla ne "
+"isprazni ili kada više nema grupa objekata iste boje na koje se može "
+"kliknuti."
 
 #: C/swell-foop.xml:33(year)
 msgid "2005"
@@ -178,7 +178,7 @@ msgstr "Callum McKenzie"
 #: C/swell-foop.xml:38(publishername) C/swell-foop.xml:51(orgname)
 #: C/swell-foop.xml:93(para) C/swell-foop.xml:102(para)
 msgid "GNOME Documentation Project"
-msgstr "Пројекат Гномове документације"
+msgstr "Projekat Gnomove dokumentacije"
 
 #: C/swell-foop.xml:48(firstname)
 msgid "Callum"
@@ -194,15 +194,15 @@ msgstr "callum@physics.otago.ac.nz"
 
 #: C/swell-foop.xml:88(revnumber)
 msgid "Swell Foop Manual V2.11"
-msgstr "Упутство за Ланчану реакцију v2.11"
+msgstr "Uputstvo za Lančanu reakciju v2.11"
 
 #: C/swell-foop.xml:89(date)
 msgid "January 2008"
-msgstr "Јануар 2008."
+msgstr "Januar 2008."
 
 #: C/swell-foop.xml:91(para)
 msgid "Adaptation of the Swell Foop manual to new template."
-msgstr "Адаптација упутства програма Ланчана реакција на нови шаблон."
+msgstr "Adaptacija uputstva programa Lančana reakcija na novi šablon."
 
 #: C/swell-foop.xml:92(para)
 msgid "Claude Paroz <email>claude@2xlibre.net</email>"
@@ -210,15 +210,15 @@ msgstr "Claude Paroz <email>claude@2xlibre.net</email>"
 
 #: C/swell-foop.xml:97(revnumber)
 msgid "Swell Foop Manual V2.10"
-msgstr "Упутство за Ланчану реакцију v2.10"
+msgstr "Uputstvo za Lančanu reakciju v2.10"
 
 #: C/swell-foop.xml:98(date)
 msgid "February 2005"
-msgstr "Фебруар 2005."
+msgstr "Februar 2005."
 
 #: C/swell-foop.xml:100(para)
 msgid "Initial version for the new Swell Foop."
-msgstr "Почетна верзија новог упутства за Ланчану реакцију."
+msgstr "Početna verzija novog uputstva za Lančanu reakciju."
 
 #: C/swell-foop.xml:101(para)
 msgid "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
@@ -226,11 +226,11 @@ msgstr "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
 
 #: C/swell-foop.xml:107(releaseinfo)
 msgid "This manual describes version 2.12 of Swell Foop."
-msgstr "Ово упуство је написано за 2.12 издање програма Ланчана реакција."
+msgstr "Ovo upustvo je napisano za 2.12 izdanje programa Lančana reakcija."
 
 #: C/swell-foop.xml:110(title)
 msgid "Feedback"
-msgstr "Примедбе"
+msgstr "Primedbe"
 
 #: C/swell-foop.xml:111(para)
 msgid ""
@@ -239,18 +239,18 @@ msgid ""
 "\"ghelp:user-guide?feedback-bugs\" type=\"help\">Feedback section of the "
 "GNOME User Guide</ulink>."
 msgstr ""
-"Да бисте пријавили грешку или дали предлог у вези програма "
-"<application>Ланчана реакција</application> или његовог упутства, пратите "
-"смернице на <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
-"\">Гномовој страни за примедбе</ulink>."
+"Da biste prijavili grešku ili dali predlog u vezi programa "
+"<application>Lančana reakcija</application> ili njegovog uputstva, pratite "
+"smernice na <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
+"\">Gnomovoj strani za primedbe</ulink>."
 
 #: C/swell-foop.xml:119(primary)
 msgid "Swell Foop"
-msgstr "Ланчана реакција"
+msgstr "Lančana reakcija"
 
 #: C/swell-foop.xml:125(title) C/swell-foop.xml:141(title)
 msgid "Playing <application>Swell Foop</application>"
-msgstr "Играње игре <application>Ланчана реакција</application>"
+msgstr "Igranje igre <application>Lančana reakcija</application>"
 
 #: C/swell-foop.xml:126(para)
 msgid ""
@@ -260,15 +260,15 @@ msgid ""
 "then collapse to fill in the gaps and new groups are formed. You cannot "
 "remove single objects."
 msgstr ""
-"<application>Ланчана реакција</application> је слагалица. Циљ игре је да се "
-"уклони што је могуће више објеката у што је мање могуће потеза. Суседни "
-"објекти се уклањају као једна група. Преостали објекти се онда скупљају да "
-"попуне настале празнине и тиме се стварају нове групе објеката. Усамљени "
-"објекат без групе се не може уклонити."
+"<application>Lančana reakcija</application> je slagalica. Cilj igre je da se "
+"ukloni što je moguće više objekata u što je manje moguće poteza. Susedni "
+"objekti se uklanjaju kao jedna grupa. Preostali objekti se onda skupljaju da "
+"popune nastale praznine i time se stvaraju nove grupe objekata. Usamljeni "
+"objekat bez grupe se ne može ukloniti."
 
 #: C/swell-foop.xml:129(title)
 msgid "<application>Swell Foop</application> at the beginning of a new game."
-msgstr "<application>Ланчана реакција</application> по покретању."
+msgstr "<application>Lančana reakcija</application> po pokretanju."
 
 #: C/swell-foop.xml:139(para)
 msgid ""
@@ -283,44 +283,44 @@ msgid ""
 "has been removed the objects above them fall down to fill the space. If an "
 "entire column is cleared then the objects slide leftward to fill the gap."
 msgstr ""
-"Табла је на почетку до врха попуњена објектима. У зависности од величине "
-"табле коју сте одабрали, на њој се налазе три или четири различите врсте "
-"објеката. Ако је група објеката исте врсте једна до друге, она се "
-"једноставно може уклонити кликом на њу (или притиском тастера за размак). "
-"Када пређете мишем преко групе која може да се уклони, објекти у њој почињу "
-"да се крећу. Број објеката у групи и број поена које добијате за уклањање "
-"ове групе се приказују у доњем левом углу прозора. Што је више објеката у "
-"групи, више се поена добија. Када се група уклони, објекти изнад ње падају "
-"да попуне њихово место. Ако нестане цео стубац, онда објекти клизе са десна "
-"на лево да попуне празнину."
+"Tabla je na početku do vrha popunjena objektima. U zavisnosti od veličine "
+"table koju ste odabrali, na njoj se nalaze tri ili četiri različite vrste "
+"objekata. Ako je grupa objekata iste vrste jedna do druge, ona se "
+"jednostavno može ukloniti klikom na nju (ili pritiskom tastera za razmak). "
+"Kada pređete mišem preko grupe koja može da se ukloni, objekti u njoj počinju "
+"da se kreću. Broj objekata u grupi i broj poena koje dobijate za uklanjanje "
+"ove grupe se prikazuju u donjem levom uglu prozora. Što je više objekata u "
+"grupi, više se poena dobija. Kada se grupa ukloni, objekti iznad nje padaju "
+"da popune njihovo mesto. Ako nestane ceo stubac, onda objekti klize sa desna "
+"na levo da popune prazninu."
 
 #: C/swell-foop.xml:144(para)
 msgid "1. Eliminate groups of two or more <placeholder-1/>"
-msgstr "1. Уклања се група са два или више објеката <placeholder-1/>"
+msgstr "1. Uklanja se grupa sa dva ili više objekata <placeholder-1/>"
 
 #: C/swell-foop.xml:152(para)
 msgid "2. Objects fall down to fill the gaps <placeholder-1/>"
-msgstr "2. Објекти падају да попуне празнине <placeholder-1/>"
+msgstr "2. Objekti padaju da popune praznine <placeholder-1/>"
 
 #: C/swell-foop.xml:160(para)
 msgid "3. Objects move left to fill empty columns <placeholder-1/>"
-msgstr "3. Објекти се померају налево да попуне празне ступце <placeholder-1/>"
+msgstr "3. Objekti se pomeraju nalevo da popune prazne stupce <placeholder-1/>"
 
 #: C/swell-foop.xml:168(para)
 msgid "4. New groups are formed and the cycle repeats <placeholder-1/>"
-msgstr "4. Нове групе се формирају и циклус се понавља <placeholder-1/>"
+msgstr "4. Nove grupe se formiraju i ciklus se ponavlja <placeholder-1/>"
 
 #: C/swell-foop.xml:180(para)
 msgid "Scoring is based on the number of objects you delete:"
-msgstr "Бодовање се рачуна на основу броја уклоњених објеката:"
+msgstr "Bodovanje se računa na osnovu broja uklonjenih objekata:"
 
 #: C/swell-foop.xml:185(entry)
 msgid "Number of Objects"
-msgstr "Број објеката"
+msgstr "Broj objekata"
 
 #: C/swell-foop.xml:186(entry)
 msgid "Points Scored"
-msgstr "Добијених поена"
+msgstr "Dobijenih poena"
 
 #: C/swell-foop.xml:189(entry) C/swell-foop.xml:199(superscript)
 msgid "2"
@@ -392,15 +392,15 @@ msgstr "(n - 2)<placeholder-1/>"
 
 #: C/swell-foop.xml:203(para)
 msgid "If you clear the board there is a 1000 point bonus."
-msgstr "Ако очистите таблу, добијате бонус од 1000 поена."
+msgstr "Ako očistite tablu, dobijate bonus od 1000 poena."
 
 #: C/swell-foop.xml:207(title)
 msgid "Customization"
-msgstr "Прилагођавање"
+msgstr "Prilagođavanje"
 
 #: C/swell-foop.xml:210(title)
 msgid "Changing the Look"
-msgstr "Промена изгледа"
+msgstr "Promena izgleda"
 
 #: C/swell-foop.xml:211(para)
 msgid ""
@@ -408,9 +408,9 @@ msgid ""
 "make the maximum use of the screen choose the <guimenuitem>Fullscreen</"
 "guimenuitem> option from the <guimenu>View</guimenu> menu."
 msgstr ""
-"Промена величине је једноставна и своди се на промену величине прозора. Да "
-"најбоље искористите екран, одаберите опцију <guimenuitem>Цео екран</"
-"guimenuitem> из менија <guimenu>Преглед</guimenu>."
+"Promena veličine je jednostavna i svodi se na promenu veličine prozora. Da "
+"najbolje iskoristite ekran, odaberite opciju <guimenuitem>Ceo ekran</"
+"guimenuitem> iz menija <guimenu>Pregled</guimenu>."
 
 #: C/swell-foop.xml:213(para)
 msgid ""
@@ -418,8 +418,8 @@ msgid ""
 "guimenuitem> item in the <guimenu>View</guimenu> menu. Selecting an item "
 "from the list changes the theme immediately."
 msgstr ""
-"Да промените изглед објеката, одаберите ставку <guimenuitem>Тема...</"
-"guimenuitem> из менија <guimenu>Преглед</guimenu>."
+"Da promenite izgled objekata, odaberite stavku <guimenuitem>Tema...</"
+"guimenuitem> iz menija <guimenu>Pregled</guimenu>."
 
 #: C/swell-foop.xml:215(para)
 msgid ""
@@ -431,16 +431,16 @@ msgid ""
 "<application>Swell Foop</application>. <filename>$XDG_DATA_HOME</filename> "
 "is usually <filename>~/.local/share/</filename>."
 msgstr ""
-"Такође можете направити и ваше теме, али процес није баш једноставан. Узмите "
-"неку постојећу тему као шаблон и измените је са у програму за цртање. "
-"Резултат ставите у <filename>$XDG_DATA_HOME/gnome-games/swell-foop/"
-"themes/2.10/</filename>. Тема ће аутоматски бити препозната следећи пут када "
-"покренете <application>Ланчану реакцију</application>. <filename>"
-"$XDG_DATA_HOME</filename> је углавном <filename>~/.local/share/</filename>."
+"Takođe možete napraviti i vaše teme, ali proces nije baš jednostavan. Uzmite "
+"neku postojeću temu kao šablon i izmenite je sa u programu za crtanje. "
+"Rezultat stavite u <filename>$XDG_DATA_HOME/gnome-games/swell-foop/"
+"themes/2.10/</filename>. Tema će automatski biti prepoznata sledeći put kada "
+"pokrenete <application>Lančanu reakciju</application>. <filename>"
+"$XDG_DATA_HOME</filename> je uglavnom <filename>~/.local/share/</filename>."
 
 #: C/swell-foop.xml:219(title)
 msgid "Changing the Size"
-msgstr "Промена величине"
+msgstr "Promena veličine"
 
 #: C/swell-foop.xml:220(para)
 msgid ""
@@ -448,13 +448,13 @@ msgid ""
 "large. Aside from increasing the number of objects, the large setting also "
 "increases the number of different objects."
 msgstr ""
-"Мени <guimenu>Величина</guimenu> садржи три подешавања: „мало“, „средње“ и "
-"„велико“. Поред повећавања броја објеката, велика величина такође повећава и "
-"број различитих објеката."
+"Meni <guimenu>Veličina</guimenu> sadrži tri podešavanja: „malo“, „srednje“ i "
+"„veliko“. Pored povećavanja broja objekata, velika veličina takođe povećava i "
+"broj različitih objekata."
 
 #: C/swell-foop.xml:224(title)
 msgid "Changing the Speed"
-msgstr "Промена брзине"
+msgstr "Promena brzine"
 
 #: C/swell-foop.xml:225(para)
 msgid ""
@@ -463,22 +463,22 @@ msgid ""
 "<guimenuitem>Fast Animation</guimenuitem> option from the <guimenu>View</"
 "guimenu> menu you can speed up game-play at the expense of animation quality."
 msgstr ""
-"Подразумевана анимација је направљена да буде глатка и лепа. Ако играте брзо "
-"и лудо, онда вам ово може бити споро. Избором опције <guimenuitem>Брза "
-"анимација</guimenuitem> из менија <guimenu>Преглед</guimenu>, убрзаћете игру "
-"на рачун квалитета анимације."
+"Podrazumevana animacija je napravljena da bude glatka i lepa. Ako igrate brzo "
+"i ludo, onda vam ovo može biti sporo. Izborom opcije <guimenuitem>Brza "
+"animacija</guimenuitem> iz menija <guimenu>Pregled</guimenu>, ubrzaćete igru "
+"na račun kvaliteta animacije."
 
 #: C/swell-foop.xml:231(title)
 msgid "Strategy"
-msgstr "Стратегија"
+msgstr "Strategija"
 
 #: C/swell-foop.xml:233(para)
 msgid ""
 "The most important rule when aiming for a high score is to think ahead: each "
 "group you remove will form and destroy other groups."
 msgstr ""
-"Најважније правило када се иде на добар резултат је да мислите унапред: "
-"свака група коју уништите ће правити и уништавати друге групе."
+"Najvažnije pravilo kada se ide na dobar rezultat je da mislite unapred: "
+"svaka grupa koju uništite će praviti i uništavati druge grupe."
 
 #: C/swell-foop.xml:235(para)
 msgid ""
@@ -486,9 +486,9 @@ msgid ""
 "larger. Vertically aligned objects can't be misaligned, but horizontal "
 "arrangements can."
 msgstr ""
-"Прво уклањајте вишље групе, осим ако би уклањање неке друге групе направило "
-"ту вишљу групу још већом. Усправно поравнати објекти не могу да се разбију, "
-"али водоравни могу."
+"Prvo uklanjajte višlje grupe, osim ako bi uklanjanje neke druge grupe napravilo "
+"tu višlju grupu još većom. Uspravno poravnati objekti ne mogu da se razbiju, "
+"ali vodoravni mogu."
 
 #: C/swell-foop.xml:237(para)
 msgid ""
@@ -500,13 +500,13 @@ msgid ""
 "of two you are left with score no points, the bigger group scores more "
 "overall."
 msgstr ""
-"Пошто резултат расте са квадратом уклоњених објеката, уклањање већих група "
-"је увек боље. На пример, разлика поена  за уклањање група од шест и седам "
-"објеката је девет поена. У ситуацији када имате избор да ли спојити две "
-"групе од по два објекта у једну групу са четири објекта, или додати један "
-"објекат групи од шест објеката, онда је боље додати тај један. Иако те групе "
-"са по два објекат неће донети ниједан поен, ова већа група ће, на дуже "
-"стазе, донети више поена."
+"Pošto rezultat raste sa kvadratom uklonjenih objekata, uklanjanje većih grupa "
+"je uvek bolje. Na primer, razlika poena  za uklanjanje grupa od šest i sedam "
+"objekata je devet poena. U situaciji kada imate izbor da li spojiti dve "
+"grupe od po dva objekta u jednu grupu sa četiri objekta, ili dodati jedan "
+"objekat grupi od šest objekata, onda je bolje dodati taj jedan. Iako te grupe "
+"sa po dva objekat neće doneti nijedan poen, ova veća grupa će, na duže "
+"staze, doneti više poena."
 
 #: C/swell-foop.xml:239(para)
 msgid ""
@@ -515,14 +515,14 @@ msgid ""
 "to be in a position where you have to sacrifice a group that large to clear "
 "the board."
 msgstr ""
-"Не заборавите ни бонус од хиљаду поена који се добија за уклањање свих "
-"лоптица. Да бисте добили 1000 поена од једне групе, у њој треба да је 34 "
-"објекта. Јако је мало вероватно да ћете бити у позицији да жртвујете тако "
-"велику групу да не бисте очистили таблу."
+"Ne zaboravite ni bonus od hiljadu poena koji se dobija za uklanjanje svih "
+"loptica. Da biste dobili 1000 poena od jedne grupe, u njoj treba da je 34 "
+"objekta. Jako je malo verovatno da ćete biti u poziciji da žrtvujete tako "
+"veliku grupu da ne biste očistili tablu."
 
 #: C/swell-foop.xml:244(title)
 msgid "About <application>Swell Foop</application>"
-msgstr "О програму <application>Ланчана реакција</application>"
+msgstr "O programu <application>Lančana reakcija</application>"
 
 #: C/swell-foop.xml:245(para)
 msgid ""
@@ -531,10 +531,10 @@ msgid ""
 "<application>Swell Foop</application>, please visit the <ulink url=\"http://"
 "live.gnome.org/GnomeGames/\" type=\"http\">GNOME Games web page</ulink>."
 msgstr ""
-"<application>Ланчану реакцију</application> је написао Callum McKenzie "
-"(<email>callum@physics.otago.ac.nz</email>). Да бисте сазнали више о игри "
-"<application>Ланчана реакција</application>, посетите <ulink url=\"http://"
-"live.gnome.org/GnomeGames/\" type=\"http\">веб страну Гномових игара</ulink>."
+"<application>Lančanu reakciju</application> je napisao Callum McKenzie "
+"(<email>callum@physics.otago.ac.nz</email>). Da biste saznali više o igri "
+"<application>Lančana reakcija</application>, posetite <ulink url=\"http://"
+"live.gnome.org/GnomeGames/\" type=\"http\">veb stranu Gnomovih igara</ulink>."
 
 #: C/swell-foop.xml:249(para)
 msgid ""
@@ -542,9 +542,9 @@ msgid ""
 "manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-"
 "bugs\" type=\"help\">Feedback section of the GNOME User Guide</ulink>."
 msgstr ""
-"Да бисте пријавили грешку или дали предлог у вези овог програма или његовог "
-"упутства, пратите смернице на <ulink url=\"ghelp:user-guide?feedback-bugs\" "
-"type=\"help\">Гномовој страни за примедбе</ulink>."
+"Da biste prijavili grešku ili dali predlog u vezi ovog programa ili njegovog "
+"uputstva, pratite smernice na <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">Gnomovoj strani za primedbe</ulink>."
 
 #: C/swell-foop.xml:255(para)
 msgid ""
@@ -555,19 +555,19 @@ msgid ""
 "documentation; another can be found in the file COPYING included with the "
 "source code of this program."
 msgstr ""
-"Овај програм се расподељује под условима ГНУ Опште Јавне Лиценце (GNU GPL); "
-"било верзије 2 те Лиценце, било (по вашем нахођењу) било које новије "
-"верзије. Примерак ове лиценце можете пронаћи на овој <ulink type=\"help\" "
-"url=\"ghelp:fdl\">адреси</ulink> или у датотеци COPYING која је приложена уз "
-"упутство."
+"Ovaj program se raspodeljuje pod uslovima GNU Opšte Javne Licence (GNU GPL); "
+"bilo verzije 2 te Licence, bilo (po vašem nahođenju) bilo koje novije "
+"verzije. Primerak ove licence možete pronaći na ovoj <ulink type=\"help\" "
+"url=\"ghelp:fdl\">adresi</ulink> ili u datoteci COPYING koja je priložena uz "
+"uputstvo."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: C/swell-foop.xml:0(None)
 msgid "translator-credits"
 msgstr ""
-"Бранко Кокановић <branko.kokanovic@gmail.com>\n"
+"Branko Kokanović <branko.kokanovic@gmail.com>\n"
 "\n"
-"Prevod.org — превод на српски језик"
+"Prevod.org — prevod na srpski jezik"
 
 #~ msgid "Same GNOME"
-#~ msgstr "Гном Исто-исто"
+#~ msgstr "Gnom Isto-isto"
