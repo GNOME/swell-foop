@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2009-07-11 23:12+0000\n"
-"PO-Revision-Date: 2009-07-12 12:51+0100\n"
+"POT-Creation-Date: 2010-03-05 17:07+0000\n"
+"PO-Revision-Date: 2010-03-08 09:15+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -121,7 +121,7 @@ msgstr ""
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/swell-foop.xml:133(None)
 msgid "@@image: 'figures/start-up.png'; md5=e1ae130ce601d40e62b9ea8794ccdf87"
-msgstr "@@image: 'figures/start-up.png'; md5=28a646e41bb2ed99836c963bc2e3db04"
+msgstr "@@image: 'figures/start-up.png'; md5=e1ae130ce601d40e62b9ea8794ccdf87"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -148,17 +148,17 @@ msgid "@@image: 'figures/play4.png'; md5=0f79aacbfacbf291fcfa7956c18be3ba"
 msgstr "@@image: 'figures/play4.png'; md5=0f79aacbfacbf291fcfa7956c18be3ba"
 
 #: C/swell-foop.xml:20(title)
-msgid "<application>Same GNOME</application> Manual"
-msgstr "Příručka ke hře <application>Stejný GNOME</application>"
+msgid "<application>Swell Foop</application> Manual"
+msgstr "Příručka ke hře <application>Swell Foop</application>"
 
 #: C/swell-foop.xml:23(para)
 msgid ""
-"Same GNOME is a puzzle game, of which the objective is to clear the window "
+"Swell Foop is a puzzle game, of which the objective is to clear the window "
 "of as many pieces as possible by clicking on groups of the same colored "
 "pieces. That group will vanish and the pieces on top will fall until there "
 "are none left or no more color groups."
 msgstr ""
-"Stejný GNOME je logická hra, jejíž podstatou je vyčistit okno od co nejvíce "
+"Swell Foop je logická hra, jejíž podstatou je vyčistit okno od co nejvíce "
 "kamenů je možné, tím že klikáte na skupiny kamenů stejné barvy. Skupina "
 "zmizí a kameny z vrchu popadají. Hraje se dokud nejsou všechny kameny pryč "
 "nebo neexistuje žádná skupina."
@@ -189,40 +189,40 @@ msgid "callum@physics.otago.ac.nz"
 msgstr "callum@physics.otago.ac.nz"
 
 #: C/swell-foop.xml:88(revnumber)
-msgid "Same GNOME Manual V2.11"
-msgstr "Příručka V2.11 ke hře Stejný GNOME"
+msgid "Swell Foop Manual V2.11"
+msgstr "Příručka V2.11 ke hře Swell Foop"
 
 #: C/swell-foop.xml:89(date)
 msgid "January 2008"
 msgstr "Leden 2008"
 
 #: C/swell-foop.xml:91(para)
-msgid "Adaptation of the Same GNOME manual to new template."
-msgstr "Přizpůsobení příručky Stejný GNOME nové šabloně."
+msgid "Adaptation of the Swell Foop manual to new template."
+msgstr "Přizpůsobení příručky Swell Foop nové šabloně."
 
 #: C/swell-foop.xml:92(para)
 msgid "Claude Paroz <email>claude@2xlibre.net</email>"
 msgstr "Claude Paroz <email>claude@2xlibre.net</email>"
 
 #: C/swell-foop.xml:97(revnumber)
-msgid "Same GNOME Manual V2.10"
-msgstr "Příručka V2.10 ke hře Stejný GNOME"
+msgid "Swell Foop Manual V2.10"
+msgstr "Příručka V2.10 ke hře Swell Foop"
 
 #: C/swell-foop.xml:98(date)
 msgid "February 2005"
 msgstr "Únor 2005"
 
 #: C/swell-foop.xml:100(para)
-msgid "Initial version for the new Same GNOME."
-msgstr "Počáteční verze pro novou hru Stejný GNOME."
+msgid "Initial version for the new Swell Foop."
+msgstr "Počáteční verze pro novou hru Swell Foop."
 
 #: C/swell-foop.xml:101(para)
 msgid "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
 msgstr "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
 
 #: C/swell-foop.xml:107(releaseinfo)
-msgid "This manual describes version 2.12 of Same GNOME."
-msgstr "Tato příručka popisuje Stejný GNOME ve verzi 2.12."
+msgid "This manual describes version 2.12 of Swell Foop."
+msgstr "Tato příručka popisuje hru Swell Foop ve verzi 2.12."
 
 #: C/swell-foop.xml:110(title)
 msgid "Feedback"
@@ -230,41 +230,41 @@ msgstr "Ohlasy"
 
 #: C/swell-foop.xml:111(para)
 msgid ""
-"To report a bug or make a suggestion regarding the <application>Same GNOME</"
+"To report a bug or make a suggestion regarding the <application>Swell Foop</"
 "application> game or this manual, follow the directions in the <ulink url="
 "\"ghelp:user-guide?feedback-bugs\" type=\"help\">Feedback section of the "
 "GNOME User Guide</ulink>."
 msgstr ""
 "Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k aplikaci "
-"<application>Stejný GNOME</application> nebo této příručce, postupujte dle "
+"<application>Swell Foop</application> nebo této příručce, postupujte dle "
 "instrukcí v <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
 "\">Kapitole Ohlasy Uživatelské příručky GNOME</ulink>."
 
 #: C/swell-foop.xml:119(primary)
-msgid "Same GNOME"
-msgstr "Stejný GNOME"
+msgid "Swell Foop"
+msgstr "Swell Foop"
 
 #: C/swell-foop.xml:125(title) C/swell-foop.xml:141(title)
-msgid "Playing <application>Same GNOME</application>"
-msgstr "Jak hrát <application>Stejný GNOME</application>"
+msgid "Playing <application>Swell Foop</application>"
+msgstr "Jak hrát <application>Swell Foop</application>"
 
 #: C/swell-foop.xml:126(para)
 msgid ""
-"<application>Same GNOME</application> is a puzzle game. The goal is to "
+"<application>Swell Foop</application> is a puzzle game. The goal is to "
 "remove as many objects as possible in as few moves as possible. Objects that "
 "are adjacent to each other get removed as a group. The remaining objects "
 "then collapse to fill in the gaps and new groups are formed. You cannot "
 "remove single objects."
 msgstr ""
-"<application>Stejný GNOME</application> je logická hra. Cílem je odstranit "
-"co nejvíce objektů je možné v co nejméně tazích je možné. Objekty, které "
-"spolu sousedí, se odstraní jako celá skupina. Zbývající objekty se sesunou "
-"tak, aby zaplnily vzniklou mezeru a tak se vytvoří nové skupiny. Samostatný "
+"<application>Swell Foop</application> je logická hra. Cílem je odstranit co "
+"nejvíce objektů je možné v co nejméně tazích je možné. Objekty, které spolu "
+"sousedí, se odstraní jako celá skupina. Zbývající objekty se sesunou tak, "
+"aby zaplnily vzniklou mezeru a tak se vytvoří nové skupiny. Samostatný "
 "objekt odstranit nelze."
 
 #: C/swell-foop.xml:129(title)
-msgid "<application>Same GNOME</application> at the beginning of a new game."
-msgstr "<application>Stejný GNOME</application> na začátku nové hry."
+msgid "<application>Swell Foop</application> at the beginning of a new game."
+msgstr "<application>Swell Foop</application> na začátku nové hry."
 
 #: C/swell-foop.xml:139(para)
 msgid ""
@@ -320,7 +320,7 @@ msgstr "Počet objektů"
 msgid "Points Scored"
 msgstr "Přidělených bodů"
 
-#: C/swell-foop.xml:189(entry) C/swell-foop.xml:198(superscript)
+#: C/swell-foop.xml:189(entry) C/swell-foop.xml:199(superscript)
 msgid "2"
 msgstr "2"
 
@@ -376,31 +376,31 @@ msgstr "36"
 msgid "49"
 msgstr "49"
 
-#: C/swell-foop.xml:197(entry)
+#: C/swell-foop.xml:198(entry)
 msgid "⋮"
 msgstr "⋮"
 
-#: C/swell-foop.xml:198(entry)
+#: C/swell-foop.xml:199(entry)
 msgid "p"
 msgstr "n"
 
-#: C/swell-foop.xml:198(entry)
+#: C/swell-foop.xml:199(entry)
 msgid "(n - 2)<placeholder-1/>"
 msgstr "(n - 2)<placeholder-1/>"
 
-#: C/swell-foop.xml:202(para)
+#: C/swell-foop.xml:203(para)
 msgid "If you clear the board there is a 1000 point bonus."
 msgstr "Pokud vyčistíte celou herní desku, dostáváte bonus 1000 bodů."
 
-#: C/swell-foop.xml:206(title)
+#: C/swell-foop.xml:207(title)
 msgid "Customization"
 msgstr "Přizpůsobení"
 
-#: C/swell-foop.xml:209(title)
+#: C/swell-foop.xml:210(title)
 msgid "Changing the Look"
 msgstr "Změna vzhledu"
 
-#: C/swell-foop.xml:210(para)
+#: C/swell-foop.xml:211(para)
 msgid ""
 "Changing the size of the objects is as simple as resizing the window. To "
 "make the maximum use of the screen choose the <guimenuitem>Fullscreen</"
@@ -411,7 +411,7 @@ msgstr ""
 "<guimenuitem>Celá obrazovka</guimenuitem> z nabídky <guimenu>Zobrazit</"
 "guimenu>."
 
-#: C/swell-foop.xml:212(para)
+#: C/swell-foop.xml:213(para)
 msgid ""
 "To change the appearance of the objects use the <guimenuitem>Theme</"
 "guimenuitem> item in the <guimenu>View</guimenu> menu. Selecting an item "
@@ -421,29 +421,29 @@ msgstr ""
 "nabídce <guimenu>Zobrazit</guimenu>. Výběrem položky v seznamu se motiv "
 "okamžitě změní."
 
-#: C/swell-foop.xml:214(para)
+#: C/swell-foop.xml:215(para)
 msgid ""
 "You can also create your own themes, although the process is not very "
 "straight-forward yet. Use a copy of an existing theme as a template and "
 "alter it with your favorite paint program. Put the result in <filename>"
-"$XDG_DATA_HOME/gnome-games/same-gnome/themes/2.10/</filename>. It will be "
+"$XDG_DATA_HOME/gnome-games/swell-foop/themes/2.10/</filename>. It will be "
 "automatically included on the themes list next time you run "
-"<application>Same GNOME</application>. <filename>$XDG_DATA_HOME</filename> "
+"<application>Swell Foop</application>. <filename>$XDG_DATA_HOME</filename> "
 "is usually <filename>~/.local/share/</filename>."
 msgstr ""
 "Můžete si vytvořit také svůj vlastní motiv, ačkoliv postup není zatím úplně "
 "přímočarý. Použijte kopii stávajícího motivu jako šablonu a ve svém "
 "oblíbeném kreslícím programu si jej upravte. Výsledek vložte do <filename>"
-"$XDG_DATA_HOME/gnome-games/same-gnome/themes/2.10/</filename>. Až znovu "
-"spustíte <application>Stejný GNOME</application>, bude zahrnutý v seznamu "
+"$XDG_DATA_HOME/gnome-games/swell-foop/themes/2.10/</filename>. Až znovu "
+"spustíte <application>Swell Foop</application>, bude zahrnutý v seznamu "
 "motivů. <filename>$XDG_DATA_HOME</filename> je obvykle <filename>~/.local/"
 "share/</filename>."
 
-#: C/swell-foop.xml:218(title)
+#: C/swell-foop.xml:219(title)
 msgid "Changing the Size"
 msgstr "Změna velikosti"
 
-#: C/swell-foop.xml:219(para)
+#: C/swell-foop.xml:220(para)
 msgid ""
 "The <guimenu>Size</guimenu> menu contains three settings: small, medium and "
 "large. Aside from increasing the number of objects, the large setting also "
@@ -453,11 +453,11 @@ msgstr ""
 "velká. Mimo zvýšení počtu objektů, přináší nastavení velké velikosti větší "
 "počet různých typů objektů."
 
-#: C/swell-foop.xml:223(title)
+#: C/swell-foop.xml:224(title)
 msgid "Changing the Speed"
 msgstr "Změna rychlosti"
 
-#: C/swell-foop.xml:224(para)
+#: C/swell-foop.xml:225(para)
 msgid ""
 "The default animation is designed to be smooth and graceful. If you like "
 "playing fast and furious then this may be too slow for you. By selecting the "
@@ -469,11 +469,11 @@ msgstr ""
 "<guimenuitem>Rychlé animace</guimenuitem> z nabídky <guimenu>Zobrazit</"
 "guimenu> můžete zrychlit hraní hry na úkor kvality animací."
 
-#: C/swell-foop.xml:230(title)
+#: C/swell-foop.xml:231(title)
 msgid "Strategy"
 msgstr "Strategie"
 
-#: C/swell-foop.xml:232(para)
+#: C/swell-foop.xml:233(para)
 msgid ""
 "The most important rule when aiming for a high score is to think ahead: each "
 "group you remove will form and destroy other groups."
@@ -481,7 +481,7 @@ msgstr ""
 "Nejdůležitější pravidlo na získání nejvyššího skóre je myslet dopředu: každá "
 "skupina, kterou odstraníte, vytvoří a naopak rozboří další skupiny."
 
-#: C/swell-foop.xml:234(para)
+#: C/swell-foop.xml:235(para)
 msgid ""
 "Remove higher groups first, unless removing another group will make it "
 "larger. Vertically aligned objects can't be misaligned, but horizontal "
@@ -491,7 +491,7 @@ msgstr ""
 "jejich zvětšení. Svisle uspořádané objekty zůstanou srovnané, ale vodorovně "
 "uspořádané se mohou zpřeházet."
 
-#: C/swell-foop.xml:236(para)
+#: C/swell-foop.xml:237(para)
 msgid ""
 "Since the score increases quadratically, big groups of objects are always "
 "better. For example, the points difference between a six object group and a "
@@ -508,7 +508,7 @@ msgstr ""
 "volit přidání onoho jednoho objektu. I přesto, že za skupinu dvou objektů "
 "nedostanete žádné body, body za větší skupinu převáží."
 
-#: C/swell-foop.xml:238(para)
+#: C/swell-foop.xml:239(para)
 msgid ""
 "Don't forget the thousand point bonus for clearing all the balls. To get "
 "1000 points from a single group you need 34 objects. You are very unlikely "
@@ -520,24 +520,24 @@ msgstr ""
 "nepravděpodobné, že byste byli v situaci, kdy byste se museli vzdát větší "
 "skupiny, kvůli tomu abyste vyčistili celou herní desku."
 
-#: C/swell-foop.xml:243(title)
-msgid "About <application>Same GNOME</application>"
-msgstr "O hře <application>Stejný GNOME</application>"
+#: C/swell-foop.xml:244(title)
+msgid "About <application>Swell Foop</application>"
+msgstr "O hře <application>Swell Foop</application>"
 
-#: C/swell-foop.xml:244(para)
+#: C/swell-foop.xml:245(para)
 msgid ""
-"<application>Same GNOME</application> was written by Callum McKenzie "
+"<application>Swell Foop</application> was written by Callum McKenzie "
 "(<email>callum@physics.otago.ac.nz</email>). To find more information about "
-"<application>Same GNOME</application>, please visit the <ulink url=\"http://"
+"<application>Swell Foop</application>, please visit the <ulink url=\"http://"
 "live.gnome.org/GnomeGames/\" type=\"http\">GNOME Games web page</ulink>."
 msgstr ""
-"Hru <application>Stejný GNOME</application> napsal McKenzie "
+"Hru <application>Swell Foop</application> napsal McKenzie "
 "(<email>callum@physics.otago.ac.nz</email>). Pokud chcete více informací o "
 "hře <application>Stejný GNOME</application>, navštivte prosím <ulink url="
 "\"http://live.gnome.org/GnomeGames/\" type=\"http\">webovou stránku Hry "
 "GNOME</ulink>."
 
-#: C/swell-foop.xml:248(para)
+#: C/swell-foop.xml:249(para)
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
 "manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-"
@@ -548,7 +548,7 @@ msgstr ""
 "user-guide?feedback-bugs\" type=\"help\">Kapitole Ohlasy v Uživatelské "
 "příručce GNOME</ulink>."
 
-#: C/swell-foop.xml:254(para)
+#: C/swell-foop.xml:255(para)
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
@@ -564,7 +564,11 @@ msgstr ""
 "projektu GNU</ulink> nebo v souboru COPYING přiloženém ke zdrojovým kódům "
 "tohoto programu. "
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: C/swell-foop.xml:0(None)
 msgid "translator-credits"
-msgstr "Marek Černocký <marek@manet.cz>, 2009."
+msgstr "Marek Černocký <marek@manet.cz>, 2009, 2010."
+
+#~ msgid "Same GNOME"
+#~ msgstr "Stejný GNOME"
+
