@@ -99,7 +99,7 @@ Board = new GType({
 			
 			var lights_lit = light_lights_from(actor).length;
 			var new_score = Score.calculate_score(lights_lit);
-			var score_string = "No points";
+			var score_string = _("No points");
 			
 			if(new_score > 0)
 				score_string = Seed.sprintf(gettext.ngettext("%d point", "%d points", new_score), new_score);
