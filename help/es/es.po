@@ -413,8 +413,8 @@ msgid "⋮"
 msgstr "⋮"
 
 #: C/swell-foop.xml:199(entry)
-msgid "p"
-msgstr "p"
+msgid "n"
+msgstr "n"
 
 #: C/swell-foop.xml:199(entry)
 msgid "(n - 2)<placeholder-1/>"

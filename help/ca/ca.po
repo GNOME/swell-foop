@@ -381,7 +381,7 @@ msgid "⋮"
 msgstr "⋮"
 
 #: C/swell-foop.xml:196(entry)
-msgid "p"
+msgid "n"
 msgstr "n"
 
 #: C/swell-foop.xml:196(entry)

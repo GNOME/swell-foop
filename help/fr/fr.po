@@ -390,7 +390,7 @@ msgid "⋮"
 msgstr "⋮"
 
 #: C/swell-foop.xml:199(entry)
-msgid "p"
+msgid "n"
 msgstr "n"
 
 #: C/swell-foop.xml:199(entry)

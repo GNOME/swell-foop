@@ -196,7 +196,7 @@
     <row><entry>9</entry><entry>49</entry></row>
     <!-- Translators: this is a vertical continuation character -->
     <row><entry>⋮</entry><entry>⋮</entry></row>
-    <row><entry>p</entry><entry>(n - 2)<superscript>2</superscript></entry></row>
+    <row><entry>n</entry><entry>(n - 2)<superscript>2</superscript></entry></row>
     </tbody>
     </tgroup>
     </informaltable>
