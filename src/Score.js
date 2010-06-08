@@ -106,7 +106,7 @@ ScoreView = new GType({
 		this.animate_final_score = function (points)
 		{
 			label.set_font_name("Bitstrem Vera Sans 50");
-			label.set_markup("<b>" + _("Game Over!") + "</b>\n" + points + " " + _("points"));
+			label.set_markup("<b>" + _("Game Over!") + "</b>\n" + Seed.sprintf(gettext.ngettext("%d point", "%d points", points), points));
 			label.set_line_alignment(Pango.Alignment.CENTER);
 			
 			main.stage.add_actor(this);
