@@ -48,7 +48,7 @@ Light = new GType({
 			
 			timeline.signal.completed.connect(this.hide_light, this);
 			
-			GLib.main_context_iteration();
+			// GLib.main_context_iteration();
 		};
 	
 		this.animate_to = function (new_x, new_y, timeline)
@@ -62,7 +62,7 @@ Light = new GType({
 				y: new_y
 			});
 			
-			GLib.main_context_iteration();
+			// GLib.main_context_iteration();
 		};
 	
 		this.get_closed = function ()

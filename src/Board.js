@@ -40,8 +40,8 @@ Board = new GType({
 			
 			var con = [li];
 			
-			while(GLib.main_context_pending())
-				GLib.main_context_iteration();
+			// while(GLib.main_context_pending())
+			//	GLib.main_context_iteration();
 			
 			var a = [], b = [], c = [], d = [];
 			
@@ -232,10 +232,10 @@ Board = new GType({
 					if(!li.get_closed())
 						empty_col = false;
 					
-					GLib.main_context_iteration();
+					// GLib.main_context_iteration();
 				}
 				
-				GLib.main_context_iteration();
+				// GLib.main_context_iteration();
 				
 				if(!empty_col)
 					real_x++;
