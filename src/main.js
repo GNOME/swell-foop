@@ -14,7 +14,7 @@ _ = imports.gettext.gettext;
 
 try
 {
-	GtkClutter.init_with_args(Seed.argv.length, Seed.argv);
+	GtkClutter.init(Seed.argv.length, Seed.argv);
 }
 catch(e)
 {
