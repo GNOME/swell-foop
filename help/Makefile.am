@@ -1,6 +1,6 @@
 include $(top_srcdir)/gnome-doc-utils.make
 
-DOC_LINGUAS = ca cs de el en_GB es eu fr it oc ru sl sr sr@latin sv
+DOC_LINGUAS = ca cs de el en_GB es eu fr it oc ru sl sr sr@latin sv zh_CN
 
 DOC_MODULE = swell-foop
 
