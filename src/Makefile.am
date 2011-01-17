@@ -28,3 +28,5 @@ CLEANFILES = \
 
 DISTCLEANFILES = \
 	Path.js
+
+-include $(top_srcdir)/git.mk
