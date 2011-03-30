@@ -164,12 +164,6 @@ function show_settings()
 
 function populate_size_selector(selector)
 {
-	// Since we're using GtkBuilder, we can't make a Gtk.ComboBox.text. Instead,
-	// we'll construct the cell renderer here, once, and use that.
-	var cell = new Gtk.CellRendererText();
-	selector.pack_start(cell, true);
-	selector.add_attribute(cell, "text", 0);
-
 	for(var i in sizes)
 	{
 		selector.append_text(sizes[i].name);
@@ -178,12 +172,6 @@ function populate_size_selector(selector)
 
 function populate_theme_selector(selector)
 {
-	// Since we're using GtkBuilder, we can't make a Gtk.ComboBox.text. Instead,
-	// we'll construct the cell renderer here, once, and use that.
-	var cell = new Gtk.CellRendererText();
-	selector.pack_start(cell, true);
-	selector.add_attribute(cell, "text", 0);
-
 	var i = 0;
 
 	for(var th in themes)

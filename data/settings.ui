@@ -7,7 +7,6 @@
     <property name="title" translatable="yes">Swell Foop</property>
     <property name="icon_name">gnome-swell-foop</property>
     <property name="type_hint">normal</property>
-    <property name="has_separator">False</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox1">
         <property name="visible">True</property>
@@ -63,9 +62,10 @@
                             <property name="visible">True</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkComboBox" id="size-selector">
+                              <object class="GtkComboBoxText" id="size-selector">
                                 <property name="visible">True</property>
-                                <property name="model">liststore2</property>
+                                <property name="entry-text-column">0</property>
+                                <property name="id-column">1</property>
                                 <signal name="changed" handler="update_size"/>
                               </object>
                               <packing>
@@ -136,9 +136,10 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkComboBox" id="theme-selector">
+                              <object class="GtkComboBoxText" id="theme-selector">
                                 <property name="visible">True</property>
-                                <property name="model">liststore1</property>
+                                <property name="entry-text-column">0</property>
+                                <property name="id-column">1</property>
                                 <signal name="changed" handler="select_theme"/>
                               </object>
                               <packing>
