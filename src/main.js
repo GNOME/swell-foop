@@ -5,12 +5,15 @@ var offset = tile_size/2;
 
 imports.gi.versions.Clutter = "1.0";
 
+const GLib = imports.gi.GLib;
 Gtk = imports.gi.Gtk;
 GtkClutter = imports.gi.GtkClutter;
 GtkBuilder = imports.gtkbuilder;
 Clutter = imports.gi.Clutter;
 GnomeGamesSupport = imports.gi.GnomeGamesSupport;
 _ = imports.gettext.gettext;
+
+GLib.set_prgname('swell-foop');
 
 try
 {
