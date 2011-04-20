@@ -10,7 +10,7 @@ function show_about_dialog()
 	var about_dialog = new Gtk.AboutDialog();
 	about_dialog.program_name = _("Swell Foop");
 	about_dialog.version = "1.0";
-	about_dialog.comments = _("I want to play that game! You know, they all go whirly-round and you click on them and they vanish!\n\nSwell Foop is a part of GNOME Games.");
+	about_dialog.comments = _("I want to play that game! You know, they all light-up and you click on them and they vanish!\n\nSwell Foop is a part of GNOME Games.");
 	about_dialog.copyright = _("Copyright \xa9 2009 Tim Horton");
 	about_dialog.license = GnomeGamesSupport.get_license(_("Swell Foop"));
 	about_dialog.wrap_license = true;
