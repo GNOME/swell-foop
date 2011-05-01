@@ -1,3 +1,3 @@
-SUBDIRS = tango test
+SUBDIRS = colors shapesandcolors
 
 -include $(top_srcdir)/git.mk

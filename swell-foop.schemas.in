@@ -6,7 +6,7 @@
         <applyto>/apps/swell-foop/theme</applyto>
         <owner>swell-foop</owner>
         <type>string</type>
-        <default>Tango</default>
+        <default>Shapes and Colors</default>
         <locale name="C">
           <short>The theme to use</short>
           <long>The title of the tile theme to use.</long>
