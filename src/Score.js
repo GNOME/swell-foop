@@ -42,7 +42,8 @@ function increment_score(tiles)
 
 function game_completed(won)
 {
-	set_score(current_score + 1000);
+	if(won)
+		set_score(current_score + 1000);
 	
 	final_score = new ScoreView();
 	final_score.animate_final_score(current_score);
