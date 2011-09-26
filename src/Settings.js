@@ -8,7 +8,7 @@ ggsconf = GnomeGamesSupport.Conf;
 
 // Defaults
 var theme, colors, zealous, size;
-var default_theme = "Tango";
+var default_theme = "Shapes and Colors";
 var default_size = 1;
 var default_colors = 3;
 var default_zealous = true;
