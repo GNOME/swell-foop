@@ -1,7 +1,7 @@
-SUBDIRS = data/themes
+SUBDIRS = data/themes src
 
 if BUILD_HELP
-SUBDIRS += src help
+SUBDIRS += help
 endif
 
 swelldir=$(pkgdatadir)/swell-foop
