@@ -6,18 +6,20 @@ ThemeLoader = imports.ThemeLoader;
 GnomeGamesSupport = imports.gi.GnomeGamesSupport;
 ggsconf = GnomeGamesSupport.Conf;
 
+_ = imports.gettext.gettext;
+
 // Defaults
 var theme, colors, zealous, size;
-var default_theme = "Shapes and Colors";
+var default_theme = _("Shapes and Colors");
 var default_size = 1;
 var default_colors = 3;
 var default_zealous = true;
 
 // Map theme names to themes
 var themes = ThemeLoader.load_themes();
-var sizes = [{name: "Small", columns: 6, rows: 5},
-             {name: "Normal", columns: 15, rows: 10},
-             {name: "Large", columns: 20, rows: 15}];
+var sizes = [{name: _("Small"), columns: 6, rows: 5},
+             {name: _("Normal"), columns: 15, rows: 10},
+             {name: _("Large"), columns: 20, rows: 15}];
 
 try
 {
