@@ -15,7 +15,7 @@ bin_SCRIPTS = swell-foop
 swell-foop: swell-foop.in Makefile
 	$(AM_V_GEN) $(SED) -e "s|%pkglibdir%|$(pkglibdir)|" -e "s|%pkgdatadir%|$(pkgdatadir)|" $< > $@
 
-schema_in_files = swell-foop.schemas.in
+schema_in_files = data/swell-foop.schemas.in
 if HAVE_GNOME
 schemadir = $(GCONF_SCHEMA_FILE_DIR)
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
