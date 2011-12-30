@@ -1,4 +1,4 @@
-SUBDIRS = data/themes src
+SUBDIRS = data/icons data/themes src
 
 if BUILD_HELP
 SUBDIRS += help
