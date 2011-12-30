@@ -18,7 +18,8 @@ desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 
 EXTRA_DIST = \
     $(swell_DATA) \
-    $(schema_in_files)
+    $(schema_in_files) \
+    $(desktop_in_files)
 
 install-schemas-local: $(schema_DATA)
 if GCONF_SCHEMAS_INSTALL
