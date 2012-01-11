@@ -4,7 +4,6 @@ GtkBuilder = imports.gtkbuilder;
 main = imports.main;
 ThemeLoader = imports.ThemeLoader;
 GnomeGamesSupport = imports.gi.GnomeGamesSupport;
-ggsconf = GnomeGamesSupport.Conf;
 
 _ = imports.gettext.gettext;
 
@@ -21,12 +20,14 @@ var sizes = [{name: _("Small"), columns: 6, rows: 5},
              {name: _("Normal"), columns: 15, rows: 10},
              {name: _("Large"), columns: 20, rows: 15}];
 
+settings = new Gio.Settings ({schema_id: "org.gnome.swell-foop"});
+
 try
 {
-	theme = themes[ggsconf.get_string(null, "theme")];
-	size = ggsconf.get_integer(null, "size");
-	colors = ggsconf.get_integer(null, "colors");
-	zealous = ggsconf.get_boolean(null, "zealous");
+	theme = themes[settings.get_string("theme")];
+	size = settings.get_int("size");
+	colors = settings.get_int("colors");
+	zealous = settings.get_boolean("zealous");
 	
 	if(colors < 2 || colors > 4)
 		colors = default_colors;
@@ -36,7 +37,7 @@ try
 }
 catch(e)
 {
-	print("Couldn't load settings from ggsconf.");
+	print("Couldn't load settings: " + e.message);
 	theme = themes[default_theme];
 	size = default_size;
 	colors = default_colors;
@@ -70,29 +71,13 @@ handlers = {
 		theme = new_theme;
 		ThemeLoader.load_theme(main.stage, theme);
 		
-		try
-		{
-			ggsconf.set_string(null, "theme", selector.get_active_text());
-		}
-		catch(e)
-		{
-			print("Couldn't save settings to ggsconf.");
-		}
-	
+		settings.set_string("theme", selector.get_active_text());	
 		Watcher.signal.theme_changed.emit();
 	},
 	set_zealous_animation: function(widget, ud)
 	{
 		zealous = widget.active;
-		
-		try
-		{
-			ggsconf.set_boolean(null, "zealous", zealous);
-		}
-		catch(e)
-		{
-			print("Couldn't save settings to ggsconf.");
-		}
+		settings.set_boolean("zealous", zealous);
 	},
 	update_size: function(widget, ud)
 	{
@@ -103,15 +88,7 @@ handlers = {
 		
 		size = new_size;
 		
-		try
-		{
-			ggsconf.set_integer(null, "size", size);
-		}
-		catch(e)
-		{
-			print("Couldn't save settings to ggsconf.");
-		}
-		
+		settings.set_int("size", size);	
 		Watcher.signal.size_changed.emit();
 	},
 	update_colors: function(widget, ud)
@@ -123,15 +100,7 @@ handlers = {
 
 		colors = new_colors;
 
-		try
-		{
-			ggsconf.set_integer(null, "colors", colors);
-		}
-		catch(e)
-		{
-			print("Couldn't save settings to ggsconf.");
-		}
-	
+		settings.set_int("colors", colors);
 		Watcher.signal.colors_changed.emit();
 	},
 	reset_defaults: function(widget, ud)

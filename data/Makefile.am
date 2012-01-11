@@ -1,15 +1,14 @@
 SUBDIRS = icons themes
 
+gsettings_in_file = org.gnome.swell-foop.gschema.xml.in
+gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
+@INTLTOOL_XML_NOMERGE_RULE@
+@GSETTINGS_RULES@
+
 swelldir=$(pkgdatadir)/swell-foop
 swell_DATA = \
     swell-foop.ui \
     settings.ui
-
-schema_in_files = swell-foop.schemas.in
-if HAVE_GNOME
-schemadir = $(GCONF_SCHEMA_FILE_DIR)
-schema_DATA = $(schema_in_files:.schemas.in=.schemas)
-endif
 
 desktop_in_files = swell-foop.desktop.in.in
 desktopdir = $(datadir)/applications
@@ -18,27 +17,16 @@ desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 
 EXTRA_DIST = \
     $(swell_DATA) \
-    $(schema_in_files) \
+    $(gsettings_in_file) \
     $(desktop_in_files)
-
-install-schemas-local: $(schema_DATA)
-if GCONF_SCHEMAS_INSTALL
-	if test -z "$(DESTDIR)" ; then \
-		for p in $^ ; do \
-			GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $$p 2>&1 > /dev/null; \
-		done \
-	fi
-endif
-
-install-data-local: install-schemas-local
 
 CLEANFILES = \
 	$(desktop_DATA)	\
-	$(schema_DATA)
+	$(gsettings_SCHEMAS)
 
 DISTCLEANFILES = \
 	$(desktop_DATA)	\
-	$(schema_DATA)
+	$(gsettings_SCHEMAS)
 
 @INTLTOOL_SCHEMAS_RULE@
 
