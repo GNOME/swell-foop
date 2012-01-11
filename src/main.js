@@ -28,8 +28,6 @@ catch(e)
 if(GnomeGamesSupport.setgid_io_init)
 	GnomeGamesSupport.setgid_io_init();
 
-GnomeGamesSupport.runtime_init("swell-foop");
-GnomeGamesSupport.Conf.initialise("swell-foop");
 GnomeGamesSupport.stock_init();
 
 Light = imports.Light;
@@ -120,7 +118,4 @@ board.show();
 board.new_game();
 
 Gtk.main();
-
-GnomeGamesSupport.Conf.shutdown();
-GnomeGamesSupport.runtime_shutdown();
 
