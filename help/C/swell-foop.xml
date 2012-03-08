@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
-  <!ENTITY appversion "2.12">
-  <!ENTITY manrevision "2.11">
-  <!ENTITY date "January 2008">
+  <!ENTITY appversion "3.4">
+  <!ENTITY manrevision "3.4">
+  <!ENTITY date "March 2012">
   <!ENTITY appname "Swell Foop">
   <!ENTITY app "<application>Swell Foop</application>">
 ]>
@@ -33,9 +33,13 @@
       <year>2005</year> 
       <holder>Callum McKenzie</holder> 
     </copyright> 
+    <copyright> 
+      <year>2012</year> 
+      <holder>Andre Klapper</holder> 
+    </copyright> 
 
     <publisher role="maintainer"> 
-      <publishername> GNOME Documentation Project </publishername> 
+      <publishername> GNOME Documentation Project</publishername> 
     </publisher> 
 
 	  <xi:include href="legal.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>   
@@ -50,6 +54,14 @@
 		<affiliation> 
 	  		<orgname>GNOME Documentation Project</orgname> 
 	  		<address> <email>callum@physics.otago.ac.nz</email> </address> 
+		</affiliation> 
+      </author> 
+      <author> 
+		<firstname>Andre</firstname> 
+		<surname>Klapper</surname> 
+		<affiliation> 
+	  		<orgname>GNOME Documentation Project</orgname> 
+	  		<address> <email>ak-47@gmx.net</email> </address> 
 		</affiliation> 
       </author> 
 <!-- This is appropriate place for other contributors: translators,
@@ -67,7 +79,7 @@
 -->
     </authorgroup>
 	
-	<releaseinfo revision="2.26" role="review"/>
+	<releaseinfo revision="3.4" role="review"/>
 
 
 <!-- According to GNU FDL, revision history is mandatory if you are -->
@@ -84,6 +96,16 @@
 <!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
 <!-- to V3.0, and so on. --> 
     <revhistory>
+      <revision> 
+		    <revnumber>Swell Foop Manual V3.4</revnumber>
+		    <date>March 2012</date> 
+		    <revdescription> 
+    			<para>Updates to the Swell Foop manual.</para>		    
+	  		  <para role="author">Andre Klapper <email>ak-47@gmx.net</email></para>
+	  		  <para role="publisher">GNOME Documentation Project</para>
+    		</revdescription> 
+      </revision> 
+
       <revision> 
 		    <revnumber>Swell Foop Manual V2.11</revnumber>
 		    <date>January 2008</date> 
@@ -208,21 +230,25 @@
 
     <sect2 id="changing-the-look">
       <title>Changing the Look</title>
-      <para>Changing the size of the objects is as simple as resizing the window. To make the maximum use of the screen choose the <guimenuitem>Fullscreen</guimenuitem> option from the <guimenu>View</guimenu> menu.</para>
 
-      <para>To change the appearance of the objects use the <guimenuitem>Theme</guimenuitem> item in the <guimenu>View</guimenu> menu. Selecting an item from the list changes the theme immediately.</para>
+      <para>To change the appearance of the objects use the <guimenuitem>Theme</guimenuitem> item under <menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Appearance</guimenuitem></menuchoice>. Selecting an item from the list changes the theme immediately.</para>
 
-        <para>You can also create your own themes, although the process is not very straight-forward yet. Use a copy of an existing theme as a template and alter it with your favorite paint program. Put the result in <filename>$XDG_DATA_HOME/gnome-games/swell-foop/themes/2.10/</filename>. It will be automatically included on the themes list next time you run &app;. <filename>$XDG_DATA_HOME</filename> is usually <filename>~/.local/share/</filename>.</para>
+        <para>You can also create your own themes, although the process is not very straight-forward yet. Use a copy of an existing theme from <filename>/usr/share/gnome-games/swell-foop/themes/</filename> as a template and alter it with your favorite paint program. Put the result in <filename>$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. It will be automatically included on the themes list next time you run &app;. <filename>$XDG_DATA_HOME</filename> is usually <filename>~/.local/share/</filename>.</para>
     </sect2>
 
     <sect2 id="changing-the-size">
       <title>Changing the Size</title>
-      <para>The <guimenu>Size</guimenu> menu contains three settings: small, medium and large. Aside from increasing the number of objects, the large setting also increases the number of different objects.</para>
+      <para>The <guimenu>Board size</guimenu> list under <menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> contains three settings: <guimenuitem>Small</guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</guimenuitem>.</para>
+    </sect2>
+
+    <sect2 id="changing-the-size">
+      <title>Changing the Number of Objects</title>
+      <para>The <guimenu>Number of colors</guimenu> option under <menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> allows you to increase the number of different objects.</para>
     </sect2>
 
     <sect2 id="changing-the-speed">
     <title>Changing the Speed</title>
-    <para>The default animation is designed to be smooth and graceful. If you like playing fast and furious then this may be too slow for you. By selecting the <guimenuitem>Fast Animation</guimenuitem> option from the <guimenu>View</guimenu> menu you can speed up game-play at the expense of animation quality.</para>
+    <para>The default animation is designed to be smooth and graceful. If you like playing fast and furious then this may be too slow for you. By selecting the <guimenuitem>Zealous Animation</guimenuitem> option under <menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Operation</guimenuitem></menuchoice> you can speed up game-play at the expense of animation quality.</para>
     </sect2>
 
   </sect1>
