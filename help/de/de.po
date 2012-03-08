@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games swell-foop manual master\n"
-"POT-Creation-Date: 2012-01-22 20:09+0000\n"
-"PO-Revision-Date: 2012-02-01 23:52+0100\n"
+"POT-Creation-Date: 2012-03-08 14:34+0000\n"
+"PO-Revision-Date: 2012-03-08 16:55+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,10 +26,24 @@ msgstr "Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2010, 2012"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/swell-foop.xml:133(imagedata)
+#: C/swell-foop.xml:155(imagedata)
 msgctxt "_"
 msgid ""
-"external ref='figures/start-up.png' md5='e1ae130ce601d40e62b9ea8794ccdf87'"
+"external ref='figures/start-up.png' md5='fa95b578df16ff5811bba39763526b8c'"
+msgstr "translated"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/swell-foop.xml:170(imagedata)
+msgctxt "_"
+msgid "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
 msgstr "original"
 
 #. This is a reference to an external file such as an image or video. When
@@ -41,9 +55,9 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/swell-foop.xml:148(imagedata)
+#: C/swell-foop.xml:178(imagedata)
 msgctxt "_"
-msgid "external ref='figures/play1.png' md5='c9fbbe88671363fc860acca6d9a8b32e'"
+msgid "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
 msgstr "original"
 
 #. This is a reference to an external file such as an image or video. When
@@ -55,9 +69,9 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/swell-foop.xml:156(imagedata)
+#: C/swell-foop.xml:186(imagedata)
 msgctxt "_"
-msgid "external ref='figures/play2.png' md5='7c1f2328f61fcb17268e18d222c6a05a'"
+msgid "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
 msgstr "original"
 
 #. This is a reference to an external file such as an image or video. When
@@ -69,23 +83,9 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/swell-foop.xml:164(imagedata)
+#: C/swell-foop.xml:194(imagedata)
 msgctxt "_"
-msgid "external ref='figures/play3.png' md5='40739ddda81595d4aa8df47305895ef5'"
-msgstr "original"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/swell-foop.xml:172(imagedata)
-msgctxt "_"
-msgid "external ref='figures/play4.png' md5='0f79aacbfacbf291fcfa7956c18be3ba'"
+msgid "external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
 msgstr "original"
 
 #: C/swell-foop.xml:20(articleinfo/title)
@@ -109,13 +109,18 @@ msgstr ""
 msgid "<year>2005</year> <holder>Callum McKenzie</holder>"
 msgstr "<year>2005</year> <holder>Callum McKenzie</holder>"
 
-#: C/swell-foop.xml:38(publisher/publishername)
-#: C/swell-foop.xml:93(revdescription/para)
-#: C/swell-foop.xml:102(revdescription/para)
+#: C/swell-foop.xml:36(articleinfo/copyright)
+msgid "<year>2012</year> <holder>Andre Klapper</holder>"
+msgstr "<year>2012</year> <holder>Andre Klapper</holder>"
+
+#: C/swell-foop.xml:42(publisher/publishername)
+#: C/swell-foop.xml:105(revdescription/para)
+#: C/swell-foop.xml:115(revdescription/para)
+#: C/swell-foop.xml:124(revdescription/para)
 msgid "GNOME Documentation Project"
 msgstr "GNOME-Dokumentationsprojekt"
 
-#: C/swell-foop.xml:47(authorgroup/author)
+#: C/swell-foop.xml:51(authorgroup/author)
 msgid ""
 "<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> "
 "<orgname>GNOME Documentation Project</orgname> <address> "
@@ -125,15 +130,41 @@ msgstr ""
 "<orgname>GNOME Documentation Project</orgname> <address> "
 "<email>callum@physics.otago.ac.nz</email> </address> </affiliation>"
 
-#: C/swell-foop.xml:91(revdescription/para)
+#: C/swell-foop.xml:59(authorgroup/author)
+msgid ""
+"<firstname>Andre</firstname> <surname>Klapper</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> <address> <email>ak-47@gmx."
+"net</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Andre</firstname> <surname>Klapper</surname> <affiliation> "
+"<orgname>GNOME-Dokumentationsprojekt</orgname> <address> <email>ak-47@gmx."
+"net</email> </address> </affiliation>"
+
+#: C/swell-foop.xml:103(revdescription/para)
+msgid "Updates to the Swell Foop manual."
+msgstr "Aktualisierung des Swell-Foop-Handbuchs."
+
+#: C/swell-foop.xml:104(revdescription/para)
+msgid "Andre Klapper <email>ak-47@gmx.net</email>"
+msgstr "Andre Klapper <email>ak-47@gmx.net</email>"
+
+#: C/swell-foop.xml:99(revhistory/revision)
+msgid ""
+"<revnumber>Swell Foop Manual V3.4</revnumber> <date>March 2012</date> <_:"
+"revdescription-1/>"
+msgstr ""
+"<revnumber>Swell-Foop-Handbuch V3.4</revnumber> <date>März 2012</date> <_:"
+"revdescription-1/>"
+
+#: C/swell-foop.xml:113(revdescription/para)
 msgid "Adaptation of the Swell Foop manual to new template."
 msgstr "Anpassung des Swell-Foop-Handbuchs an eine neue Vorlage."
 
-#: C/swell-foop.xml:92(revdescription/para)
+#: C/swell-foop.xml:114(revdescription/para)
 msgid "Claude Paroz <email>claude@2xlibre.net</email>"
 msgstr "Claude Paroz <email>claude@2xlibre.net</email>"
 
-#: C/swell-foop.xml:87(revhistory/revision)
+#: C/swell-foop.xml:109(revhistory/revision)
 msgid ""
 "<revnumber>Swell Foop Manual V2.11</revnumber> <date>January 2008</date> <_:"
 "revdescription-1/>"
@@ -141,15 +172,15 @@ msgstr ""
 "<revnumber>Swell-Foop-Handbuch V2.11</revnumber> <date>Januar 2008</date> <_:"
 "revdescription-1/>"
 
-#: C/swell-foop.xml:100(revdescription/para)
+#: C/swell-foop.xml:122(revdescription/para)
 msgid "Initial version for the new Swell Foop."
 msgstr "Erste Version für das neue Swell Foop."
 
-#: C/swell-foop.xml:101(revdescription/para)
+#: C/swell-foop.xml:123(revdescription/para)
 msgid "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
 msgstr "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
 
-#: C/swell-foop.xml:96(revhistory/revision)
+#: C/swell-foop.xml:118(revhistory/revision)
 msgid ""
 "<revnumber>Swell Foop Manual V2.10</revnumber> <date>February 2005</date> <_:"
 "revdescription-1/>"
@@ -157,15 +188,15 @@ msgstr ""
 "<revnumber>Swell-Foop-Handbuch V2.10</revnumber> <date>Februar 2005</date> <_:"
 "revdescription-1/>"
 
-#: C/swell-foop.xml:107(articleinfo/releaseinfo)
-msgid "This manual describes version 2.12 of Swell Foop."
-msgstr "Dieses Handbuch beschreibt Version 2.12 von Swell Foop."
+#: C/swell-foop.xml:129(articleinfo/releaseinfo)
+msgid "This manual describes version 3.4 of Swell Foop."
+msgstr "Dieses Handbuch beschreibt Version 3.4 von Swell Foop."
 
-#: C/swell-foop.xml:110(legalnotice/title)
+#: C/swell-foop.xml:132(legalnotice/title)
 msgid "Feedback"
 msgstr "Rückmeldungen"
 
-#: C/swell-foop.xml:111(legalnotice/para)
+#: C/swell-foop.xml:133(legalnotice/para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Swell Foop</"
 "application> game or this manual, follow the directions in the <ulink url="
@@ -177,15 +208,15 @@ msgstr ""
 "Anweisungen im <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
 "\">Abschnitt Rückmeldungen des Benutzerhandbuchs</ulink>.\""
 
-#: C/swell-foop.xml:118(article/indexterm)
+#: C/swell-foop.xml:140(article/indexterm)
 msgid "<primary>Swell Foop</primary>"
 msgstr "<primary>Swell Foop</primary>"
 
-#: C/swell-foop.xml:125(sect1/title) C/swell-foop.xml:141(table/title)
+#: C/swell-foop.xml:147(sect1/title) C/swell-foop.xml:163(table/title)
 msgid "Playing <application>Swell Foop</application>"
 msgstr "<application>Swell Foop</application> spielen"
 
-#: C/swell-foop.xml:126(sect1/para)
+#: C/swell-foop.xml:148(sect1/para)
 msgid ""
 "<application>Swell Foop</application> is a puzzle game. The goal is to remove "
 "as many objects as possible in as few moves as possible. Objects that are "
@@ -199,11 +230,11 @@ msgstr ""
 "übriggebliebenen Objekte fallen zusammen, um die entstandenen Lücken zu "
 "schließen, und bilden dadurch neue Gruppen."
 
-#: C/swell-foop.xml:129(figure/title)
+#: C/swell-foop.xml:151(figure/title)
 msgid "<application>Swell Foop</application> at the beginning of a new game."
 msgstr "<application>Swell Foop</application> zu Beginn eines neuen Spiels."
 
-#: C/swell-foop.xml:139(sect1/para)
+#: C/swell-foop.xml:161(sect1/para)
 msgid ""
 "The board starts as a full grid of objects. Depending on the size of board "
 "you select, there are either three or four types of object. If a group of "
@@ -229,197 +260,214 @@ msgstr ""
 "entstandenen Lücken. Wenn eine ganze Spalte komplett entfernt ist, "
 "verschieben sich die übrigen Objekte nach links, um die Lücken zu füllen."
 
-#: C/swell-foop.xml:144(entry/para)
+#: C/swell-foop.xml:166(entry/para)
 msgid "1. Eliminate groups of two or more <_:screenshot-1/>"
 msgstr ""
 "1. Gruppen aus zwei oder mehr Objekten werden entfernt <_:screenshot-1/>"
 
-#: C/swell-foop.xml:152(entry/para)
+#: C/swell-foop.xml:174(entry/para)
 msgid "2. Objects fall down to fill the gaps <_:screenshot-1/>"
 msgstr "2. Objekte fallen in die Lücken <_:screenshot-1/>"
 
-#: C/swell-foop.xml:160(entry/para)
+#: C/swell-foop.xml:182(entry/para)
 msgid "3. Objects move left to fill empty columns <_:screenshot-1/>"
 msgstr ""
 "3. Objekte werden nach links verschoben, um leere Spalten aufzufüllen <_:"
 "screenshot-1/>"
 
-#: C/swell-foop.xml:168(entry/para)
+#: C/swell-foop.xml:190(entry/para)
 msgid "4. New groups are formed and the cycle repeats <_:screenshot-1/>"
 msgstr ""
 "4. Neue Gruppen werden gebildet und es beginnt von vorn <_:screenshot-1/>"
 
-#: C/swell-foop.xml:180(sect1/para)
+#: C/swell-foop.xml:202(sect1/para)
 msgid "Scoring is based on the number of objects you delete:"
 msgstr ""
 "Die Anzahl der Punkte basiert auf der Anzahl der Objekte, die Sie entfernen:"
 
-#: C/swell-foop.xml:185(row/entry)
+#: C/swell-foop.xml:207(row/entry)
 msgid "Number of Objects"
 msgstr "Anzahl der Objekte"
 
-#: C/swell-foop.xml:186(row/entry)
+#: C/swell-foop.xml:208(row/entry)
 msgid "Points Scored"
 msgstr "Erzielte Punkte"
 
-#: C/swell-foop.xml:189(row/entry)
+#: C/swell-foop.xml:211(row/entry)
 msgid "2"
 msgstr "2"
 
-#: C/swell-foop.xml:189(row/entry)
+#: C/swell-foop.xml:211(row/entry)
 msgid "0"
 msgstr "0"
 
-#: C/swell-foop.xml:190(row/entry)
+#: C/swell-foop.xml:212(row/entry)
 msgid "3"
 msgstr "3"
 
-#: C/swell-foop.xml:190(row/entry)
+#: C/swell-foop.xml:212(row/entry)
 msgid "1"
 msgstr "1"
 
-#: C/swell-foop.xml:191(row/entry)
+#: C/swell-foop.xml:213(row/entry)
 msgid "4"
 msgstr "4"
 
-#: C/swell-foop.xml:192(row/entry)
+#: C/swell-foop.xml:214(row/entry)
 msgid "5"
 msgstr "5"
 
-#: C/swell-foop.xml:192(row/entry) C/swell-foop.xml:196(row/entry)
+#: C/swell-foop.xml:214(row/entry) C/swell-foop.xml:218(row/entry)
 msgid "9"
 msgstr "9"
 
-#: C/swell-foop.xml:193(row/entry)
+#: C/swell-foop.xml:215(row/entry)
 msgid "6"
 msgstr "6"
 
-#: C/swell-foop.xml:193(row/entry)
+#: C/swell-foop.xml:215(row/entry)
 msgid "16"
 msgstr "16"
 
-#: C/swell-foop.xml:194(row/entry)
+#: C/swell-foop.xml:216(row/entry)
 msgid "7"
 msgstr "7"
 
-#: C/swell-foop.xml:194(row/entry)
+#: C/swell-foop.xml:216(row/entry)
 msgid "25"
 msgstr "25"
 
-#: C/swell-foop.xml:195(row/entry)
+#: C/swell-foop.xml:217(row/entry)
 msgid "8"
 msgstr "8"
 
-#: C/swell-foop.xml:195(row/entry)
+#: C/swell-foop.xml:217(row/entry)
 msgid "36"
 msgstr "36"
 
-#: C/swell-foop.xml:196(row/entry)
+#: C/swell-foop.xml:218(row/entry)
 msgid "49"
 msgstr "49"
 
-#: C/swell-foop.xml:198(row/entry)
+#: C/swell-foop.xml:220(row/entry)
 msgid "⋮"
 msgstr "⋮"
 
-#: C/swell-foop.xml:199(row/entry)
+#: C/swell-foop.xml:221(row/entry)
 msgid "n"
 msgstr "n"
 
-#: C/swell-foop.xml:199(row/entry)
+#: C/swell-foop.xml:221(row/entry)
 msgid "(n - 2)<superscript>2</superscript>"
 msgstr "(n - 2)<superscript>2</superscript>"
 
-#: C/swell-foop.xml:203(sect1/para)
+#: C/swell-foop.xml:225(sect1/para)
 msgid "If you clear the board there is a 1000 point bonus."
 msgstr ""
 "Wenn Sie das Spielfeld vollkommen leeren, bekommen Sie einen Bonus von 1000 "
 "Punkten."
 
-#: C/swell-foop.xml:207(sect1/title)
+#: C/swell-foop.xml:229(sect1/title)
 msgid "Customization"
 msgstr "Anpassen"
 
-#: C/swell-foop.xml:210(sect2/title)
+#: C/swell-foop.xml:232(sect2/title)
 msgid "Changing the Look"
 msgstr "Aussehen anpassen"
 
-#: C/swell-foop.xml:211(sect2/para)
-msgid ""
-"Changing the size of the objects is as simple as resizing the window. To make "
-"the maximum use of the screen choose the <guimenuitem>Fullscreen</"
-"guimenuitem> option from the <guimenu>View</guimenu> menu."
-msgstr ""
-"Das Anpassen der Größe der Objekte ist ebenso einfach wie das Anpassen der "
-"Fenstergröße. Um den Bildschirm ganz auszunutzen, wählen Sie die "
-"<guimenuitem>Vollbild</guimenuitem>-Option aus dem Menü <guimenu>Ansicht</"
-"guimenu>."
-
-#: C/swell-foop.xml:213(sect2/para)
+#: C/swell-foop.xml:234(sect2/para)
 msgid ""
 "To change the appearance of the objects use the <guimenuitem>Theme</"
-"guimenuitem> item in the <guimenu>View</guimenu> menu. Selecting an item from "
-"the list changes the theme immediately."
+"guimenuitem> item under <menuchoice><guimenu>Game</"
+"guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Appearance</"
+"guimenuitem></menuchoice>. Selecting an item from the list changes the theme "
+"immediately."
 msgstr ""
 "Um das Erscheinungsbild der Objekte zu ändern, wählen Sie den Eintrag "
-"<guimenuitem>Thema</guimenuitem> im Menü <guimenu>Ansicht</guimenu>. Die "
-"Auswählen eines Eintrags in der Liste führt zur unmittelbaren Änderung des "
+"<guimenuitem>Thema</guimenuitem> im Menü <menuchoice><guimenu>Spiel</"
+"guimenu><guimenuitem>Einstellungen</"
+"guimenuitem><guimenuitem>Erscheinungsbild</guimenuitem></menuchoice>. Die "
+"Auswahl eines Eintrags in der Liste führt zur unmittelbaren Änderung des "
 "Themas."
 
-#: C/swell-foop.xml:215(sect2/para)
+#: C/swell-foop.xml:236(sect2/para)
 msgid ""
 "You can also create your own themes, although the process is not very "
-"straight-forward yet. Use a copy of an existing theme as a template and alter "
-"it with your favorite paint program. Put the result in <filename>"
-"$XDG_DATA_HOME/gnome-games/swell-foop/themes/2.10/</filename>. It will be "
-"automatically included on the themes list next time you run "
-"<application>Swell Foop</application>. <filename>$XDG_DATA_HOME</filename> is "
-"usually <filename>~/.local/share/</filename>."
+"straight-forward yet. Use a copy of an existing theme from <filename>/usr/"
+"share/gnome-games/swell-foop/themes/</filename> as a template and alter it "
+"with your favorite paint program. Put the result in <filename>$XDG_DATA_HOME/"
+"gnome-games/swell-foop/themes/</filename>. It will be automatically included "
+"on the themes list next time you run <application>Swell Foop</application>. "
+"<filename>$XDG_DATA_HOME</filename> is usually <filename>~/.local/share/</"
+"filename>."
 msgstr ""
 "Sie können auch eigene Themen erstellen, aber dies ist nicht ganz "
 "unkompliziert. Benutzen Sie am besten eine Kopie eines bestehenden Themas und "
 "bearbeiten Sie diese mit Ihrem bevorzugten Zeichenprogramm. Speichern Sie das "
-"Resultat in <filename>$XDG_DATA_HOME/gnome-games/swell-foop/themes/2.10/</"
+"Resultat in <filename>$XDG_DATA_HOME/gnome-games/swell-foop/themes/</"
 "filename>. Beim nächsten Start von <application>Swell Foop</application> wird "
 "es automatisch in die Themenliste aufgenommen. <filename>$XDG_DATA_HOME</"
 "filename> befindet sich üblicherweise in <filename>~/.local/share/</filename>."
 
-#: C/swell-foop.xml:219(sect2/title)
+#: C/swell-foop.xml:240(sect2/title)
 msgid "Changing the Size"
 msgstr "Anpassen der Größe"
 
-#: C/swell-foop.xml:220(sect2/para)
+#: C/swell-foop.xml:241(sect2/para)
 msgid ""
-"The <guimenu>Size</guimenu> menu contains three settings: small, medium and "
-"large. Aside from increasing the number of objects, the large setting also "
-"increases the number of different objects."
+"The <guimenu>Board size</guimenu> list under <menuchoice><guimenu>Game</"
+"guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</"
+"guimenuitem></menuchoice> contains three settings: <guimenuitem>Small</"
+"guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</"
+"guimenuitem>."
 msgstr ""
-"Das Menü <guimenu>Größe</guimenu> bietet drei Einstellungen: Klein, Mittel "
-"und Groß. Einhergehend mit der Erhöhung der Anzahl der Objekte erhöht die "
-"Einstellung \"Groß\" auch die Zahl der verschiedenen Objekttypen."
+"Die Liste der <guimenu>Spielfeldgrößen</guimenu> im Menü "
+"<menuchoice><guimenu>Spiel</guimenu><guimenuitem>Einstellungen</"
+"guimenuitem><guimenuitem>Allgemein</guimenuitem></menuchoice> enthält drei "
+"Einstellungen: <guimenuitem>Klein</guimenuitem>, <guimenuitem>Mittel</"
+"guimenuitem> und <guimenuitem>Groß</guimenuitem>."
 
-#: C/swell-foop.xml:224(sect2/title)
+#: C/swell-foop.xml:245(sect2/title)
+msgid "Changing the Number of Objects"
+msgstr "Ändern der Anzahl der Objekte"
+
+#: C/swell-foop.xml:246(sect2/para)
+msgid ""
+"The <guimenu>Number of colors</guimenu> option under "
+"<menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</"
+"guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> allows you to "
+"increase the number of different objects."
+msgstr ""
+"Die Option <guimenu>Anzahl Farben</guimenu> im Menü "
+"<menuchoice><guimenu>Spiel</guimenu><guimenuitem>Einstellungen</"
+"guimenuitem><guimenuitem>Allgemein</guimenuitem></menuchoice> ermöglicht "
+"Ihnen, die Anzahl der verschiedenen Objekte zu erhöhen."
+
+#: C/swell-foop.xml:250(sect2/title)
 msgid "Changing the Speed"
 msgstr "Geschwindigkeit anpassen"
 
-#: C/swell-foop.xml:225(sect2/para)
+#: C/swell-foop.xml:251(sect2/para)
 msgid ""
 "The default animation is designed to be smooth and graceful. If you like "
 "playing fast and furious then this may be too slow for you. By selecting the "
-"<guimenuitem>Fast Animation</guimenuitem> option from the <guimenu>View</"
-"guimenu> menu you can speed up game-play at the expense of animation quality."
+"<guimenuitem>Zealous Animation</guimenuitem> option under "
+"<menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</"
+"guimenuitem><guimenuitem>Operation</guimenuitem></menuchoice> you can speed "
+"up game-play at the expense of animation quality."
 msgstr ""
 "Die standardmäßige Animation ist weich und graziös. Wenn Sie wirklich schnell "
 "und rasant spielen wollen, dürfte die Animation wohl etwas zu langsam sein. "
 "Im Ankreuzfeld <guimenuitem>Schnelle Animation</guimenuitem> im Menü "
-"<guimenu>Ansicht</guimenu> können Sie das Spiel beschleunigen, was sich aber "
-"auf die Qualität der Animation auswirkt. "
+"<menuchoice><guimenu>Spiel</guimenu><guimenuitem>Einstellungen</"
+"guimenuitem><guimenuitem>Betrieb</guimenuitem></menuchoice> können Sie das "
+"Spiel beschleunigen, was sich aber auf die Qualität der Animation auswirkt. "
 
-#: C/swell-foop.xml:231(sect1/title)
+#: C/swell-foop.xml:257(sect1/title)
 msgid "Strategy"
 msgstr "Strategie"
 
-#: C/swell-foop.xml:233(sect1/para)
+#: C/swell-foop.xml:259(sect1/para)
 msgid ""
 "The most important rule when aiming for a high score is to think ahead: each "
 "group you remove will form and destroy other groups."
@@ -427,7 +475,7 @@ msgstr ""
 "Die bedeutendste Regel zum Erzielen einer hohen Punktzahl ist, dass Sie mit "
 "jeder Gruppe, die Sie entfernen, andere Gruppen erzeugen oder zerstören."
 
-#: C/swell-foop.xml:235(sect1/para)
+#: C/swell-foop.xml:261(sect1/para)
 msgid ""
 "Remove higher groups first, unless removing another group will make it "
 "larger. Vertically aligned objects can't be misaligned, but horizontal "
@@ -438,7 +486,7 @@ msgstr ""
 "können dadurch nicht verändert werden, horizontale Anordnungen allerdings "
 "schon."
 
-#: C/swell-foop.xml:237(sect1/para)
+#: C/swell-foop.xml:263(sect1/para)
 msgid ""
 "Since the score increases quadratically, big groups of objects are always "
 "better. For example, the points difference between a six object group and a "
@@ -457,7 +505,7 @@ msgstr ""
 "Objekts entscheiden. Die zwei Zweiergruppen bringen Ihnen keine Punkte, daher "
 "ist die größere Gruppe vorteilhafter."
 
-#: C/swell-foop.xml:239(sect1/para)
+#: C/swell-foop.xml:265(sect1/para)
 msgid ""
 "Don't forget the thousand point bonus for clearing all the balls. To get 1000 "
 "points from a single group you need 34 objects. You are very unlikely to be "
@@ -468,11 +516,11 @@ msgstr ""
 "Um durch das Entfernen einer Gruppe 1000 Punkte zu erzielen, benötigen Sie 34 "
 "Objekte."
 
-#: C/swell-foop.xml:244(sect1/title)
+#: C/swell-foop.xml:270(sect1/title)
 msgid "About <application>Swell Foop</application>"
 msgstr "Info zu <application>Swell Foop</application>"
 
-#: C/swell-foop.xml:245(sect1/para)
+#: C/swell-foop.xml:271(sect1/para)
 msgid ""
 "<application>Swell Foop</application> was written by Callum McKenzie "
 "(<email>callum@physics.otago.ac.nz</email>). To find more information about "
@@ -485,7 +533,7 @@ msgstr ""
 "\"http://live.gnome.org/GnomeGames/\" type=\"http\">GNOME-Games-Webseite</"
 "ulink>."
 
-#: C/swell-foop.xml:249(sect1/para)
+#: C/swell-foop.xml:275(sect1/para)
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
 "manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-"
@@ -495,7 +543,7 @@ msgstr ""
 "Handbuch zu machen, folgen Sie den Anweisungen im <ulink url=\"ghelp:usr-"
 "guide?feedback-bugs\" type=\"help\">GNOME-Benutzerhandbuch</ulink>.\""
 
-#: C/swell-foop.xml:255(sect1/para)
+#: C/swell-foop.xml:281(sect1/para)
 msgid ""
 "This program is distributed under the terms of the GNU General Public license "
 "as published by the Free Software Foundation; either version 2 of the "
@@ -624,17 +672,3 @@ msgstr ""
 "BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT DEM "
 "WEITERGEHENDEN VERSTÄNDNIS, DASS: <_:orderedlist-1/>"
 
-#~ msgid "2005"
-#~ msgstr "2005"
-
-#~ msgid "Callum McKenzie"
-#~ msgstr "Callum McKenzie"
-
-#~ msgid "Callum"
-#~ msgstr "Callum"
-
-#~ msgid "McKenzie"
-#~ msgstr "McKenzie"
-
-#~ msgid "callum@physics.otago.ac.nz"
-#~ msgstr "callum@physics.otago.ac.nz"
