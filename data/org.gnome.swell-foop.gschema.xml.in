@@ -1,12 +1,17 @@
 <schemalist>
+  <enum id="org.gnome.swell-foop.Sizes">
+    <value value="0" nick="small"/>
+    <value value="1" nick="normal"/>
+    <value value="2" nick="large"/>
+  </enum>
   <schema id="org.gnome.swell-foop" path="/org/gnome/swell-foop/" gettext-domain="gnome-games">
     <key name="theme" type="s">
-      <default>'Shapes and Colors'</default>
+      <default>'shapesandcolors'</default>
       <_summary>The theme to use</_summary>
       <_description>The title of the tile theme to use.</_description>
     </key>
-    <key name="size" type="i">
-      <default>1</default>
+    <key name="size" enum="org.gnome.swell-foop.Sizes">
+      <default>'small'</default>
       <_summary>Board size</_summary>
       <_description>The size of the game board.</_description>
     </key>

@@ -7,8 +7,7 @@ gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 
 swelldir=$(pkgdatadir)/swell-foop
 swell_DATA = \
-    swell-foop.ui \
-    settings.ui
+    preferences.ui
 
 desktop_in_files = swell-foop.desktop.in.in
 desktopdir = $(datadir)/applications

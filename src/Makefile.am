@@ -1,41 +1,35 @@
-swelldir=$(pkgdatadir)/swell-foop
+bin_PROGRAMS = swell-foop
 
-bin_SCRIPTS = swell-foop
+swell_foop_SOURCES = \
+	game-view.vala \
+	game.vala \
+	config.vapi \
+	swell-foop.vala
 
-swell-foop: swell-foop.in Makefile
-	$(AM_V_GEN) $(SED) -e "s|%pkglibdir%|$(pkglibdir)|" -e "s|%pkgdatadir%|$(pkgdatadir)|" $< > $@
-	chmod +x $@
+swell_foop_VALAFLAGS = \
+	--pkg posix \
+	--pkg gmodule-2.0 \
+	--pkg clutter-gtk-1.0 \
+	--vapidir $(top_srcdir)/libgames-support \
+	--pkg GnomeGamesSupport-1.0
 
-swell_DATA = \
-    About.js \
-    Board.js \
-    Light.js \
-    main.js \
-    Settings.js \
-    Score.js \
-    Path.js \
-    ThemeLoader.js
+swell_foop_CFLAGS = \
+	-I$(top_srcdir)/libgames-support \
+	-DVERSION=\"$(VERSION)\" \
+	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
+	-DPKGDATADIR=\""$(pkgdatadir)/swell-foop"\" \
+	-DLOCALEDIR=\"$(pkgdatadir)/locale\" \
+	$(GHTREAD_CFLAGS) \
+	$(GMODULE_CFLAGS) \
+	$(GTK_CFLAGS) \
+	$(CLUTTER_GTK_CFLAGS)
 
-Path.js: Path.js.in
-	$(AM_V_GEN) $(SED) -e "s|%pkgdatadir%|$(pkgdatadir)|" $< > $@
-
-EXTRA_DIST = \
-    swell-foop.in \
-    About.js \
-    Board.js \
-    Light.js \
-    main.js \
-    Settings.js \
-    Score.js \
-    Path.js.in \
-    ThemeLoader.js
-
-CLEANFILES = \
-	swell-foop \
-	Path.js
-
-DISTCLEANFILES = \
-	swell-foop \
-	Path.js
+swell_foop_LDADD =	\
+	$(top_builddir)/libgames-support/libgames-support.la \
+	$(GTHREAD_LIBS)	\
+	$(GMODULE_LIBS) \
+	$(GTK_LIBS)	\
+	$(CLUTTER_GTK_LIBS)	\
+	$(INTLLIBS)
 
 -include $(top_srcdir)/git.mk

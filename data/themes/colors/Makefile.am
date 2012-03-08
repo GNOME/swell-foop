@@ -4,15 +4,13 @@ theme_DATA = \
 	blue.svg \
 	green.svg \
 	red.svg \
-	yellow.svg \
-	theme.js
+	yellow.svg
 
 EXTRA_DIST = \
 	bkg.svg \
 	blue.svg \
 	green.svg \
 	red.svg \
-	yellow.svg \
-	theme.js
+	yellow.svg
 
 -include $(top_srcdir)/git.mk
