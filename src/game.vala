@@ -225,7 +225,7 @@ public class Game : Object
         if (this.has_completed ())
         {
             if (this.has_won ())
-                score += 1000;
+                increment_score (1000);
             complete ();
         }
 
@@ -281,10 +281,5 @@ public class Game : Object
         score += points_awarded;
 
         update_score (points_awarded);
-    }
-
-    public void update_score_category()
-    {
-        // TODO to be implemented
     }
 }

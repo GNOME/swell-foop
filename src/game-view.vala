@@ -8,7 +8,9 @@ public class GameView : Clutter.Group
 {
     /* A 2D array holding all tiles */
     private TileActor[,] tiles;
-    private ScoreActor score_text;
+
+    /* Group containing all the actors in the current game */
+    private Clutter.Group? game_actors = null;
 
     /* Game being played */
     private Game? _game = null;
@@ -17,6 +19,11 @@ public class GameView : Clutter.Group
         get { return _game; }
         set
         {
+            if (game_actors != null)
+                game_actors.destroy ();
+            game_actors = new Clutter.Group ();
+            add_actor (game_actors);
+
             /* Remove old tiles */
             remove_tiles ();
 
@@ -32,12 +39,6 @@ public class GameView : Clutter.Group
 
             width  = tile_size * game.columns;
             height = tile_size * game.rows;
-
-            /* View size may change so we create the object score_text everytime with a new game */
-            if (score_text != null)
-                score_text.destroy ();
-            score_text = new ScoreActor (width / 2.0, height / 2.0);
-            add_actor (score_text);
         }
     }
 
@@ -118,7 +119,7 @@ public class GameView : Clutter.Group
                 tile.leave_event.connect (tile_left_cb);
 
                 tiles[x, y] = tile;
-                add_actor (tile);
+                game_actors.add_actor (tile);
             }
         }
     }
@@ -211,13 +212,19 @@ public class GameView : Clutter.Group
     public void update_score_cb (int points_awarded)
     {
         if (is_zealous)
-            score_text.animate_score (points_awarded);
+        {
+            var text = new ScoreActor (width / 2.0, height / 2.0);
+            game_actors.add_actor (text);
+            text.animate_score (points_awarded);
+        }
     }
 
     /* Show the final score when the game is over */
     public void game_complete_cb ()
     {
-        score_text.animate_final_score (game.score);
+        var text = new ScoreActor (width / 2.0, height / 2.0);
+        game_actors.add_actor (text);
+        text.animate_final_score (game.score);
     }
 }
 
@@ -304,11 +311,6 @@ public class ScoreActor : Clutter.Group
         this.y = (float) y;
     }
 
-    public void hide_score_cb ()
-    {
-        hide ();
-    }
-
     public void animate_score (int points)
     {
         if (points <= 0)
@@ -319,23 +321,21 @@ public class ScoreActor : Clutter.Group
 
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */
-        show ();
         opacity = 255;
         depth = 0;
 
         var a = animate (Clutter.AnimationMode.EASE_OUT_SINE, 600, "depth", 500.0, "opacity", 0);
-        a.timeline.completed.connect (hide_score_cb);
+        a.timeline.completed.connect (() => { destroy (); });
     }
 
     public void animate_final_score (uint points)
     {
         label.set_font_name ("Bitstrem Vera Sans 50");
-        label.set_markup ("<b>" + _ ("Game Over!") + "</b>\n" + points.to_string () + _ ("points"));
+        label.set_markup ("<b>" + _("Game Over!") + "</b>\n" + points.to_string () + _ ("points"));
         label.set_line_alignment (Pango.Alignment.CENTER);
 
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */
-        show ();
         opacity = 255;
         depth = 0;
 

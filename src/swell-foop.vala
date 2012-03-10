@@ -122,7 +122,7 @@ public class SwellFoop : Gtk.Application
 
         var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
         status_alignment.add (status_box);
-        status_alignment.show();
+        status_alignment.show ();
 
         var status_item = new Gtk.ToolItem ();
         status_item.set_expand (true);
@@ -294,6 +294,7 @@ public class SwellFoop : Gtk.Application
     public void set_zealous_animation (Gtk.CheckButton button)
     {
         settings.set_boolean ("zealous", button.active);
+        view.is_zealous = settings.get_boolean ("zealous");
     }
 
     [CCode (cname = "G_MODULE_EXPORT update_size", instance_pos = -1)]
@@ -416,6 +417,12 @@ public class SwellFoop : Gtk.Application
 
         GnomeGamesSupport.scores_startup ();
 
+        if (GtkClutter.init (ref args) != Clutter.InitError.SUCCESS)
+        {
+            warning ("Failed to initialise Clutter");
+            return Posix.EXIT_FAILURE;
+        }
+
         var context = new OptionContext ("");
 
         context.add_group (Gtk.get_option_group (true));
@@ -434,19 +441,6 @@ public class SwellFoop : Gtk.Application
         Environment.set_application_name (_("Swell Foop"));
 
         Gtk.Window.set_default_icon_name ("swellfoop");
-
-        try
-        {
-            GtkClutter.init_with_args (ref args, "", new OptionEntry[0], null);
-        }
-        catch (Error e)
-        {
-            var dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.NONE, "Unable to initialize Clutter:\n%s", e.message);
-            dialog.set_title (Environment.get_application_name ());
-            dialog.run ();
-            dialog.destroy ();
-            return Posix.EXIT_FAILURE;
-        }
 
         var app = new SwellFoop ();
         return app.run (args);
