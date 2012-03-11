@@ -220,7 +220,7 @@ public class Game : Object
             for (int y = 0; y < rows; y++)
                 tiles[y, new_x] = null;
 
-        increment_score ((int)cl.length ());
+        increment_score_from_tiles ((int)cl.length ());
 
         if (this.has_completed ())
         {
@@ -263,23 +263,19 @@ public class Game : Object
         return true;
     }
 
-    public int calculate_score (int n_tiles)
+    public void increment_score_from_tiles (int n_tiles)
     {
         var points_awarded = 0;
 
         if (n_tiles >= 3)
             points_awarded = (n_tiles - 2) * (n_tiles - 2);
 
-        update_score (points_awarded);
-
-        return points_awarded;
+        increment_score (points_awarded);
     }
 
-    public void increment_score (int tiles)
+    public void increment_score (int increment)
     {
-        var points_awarded = calculate_score (tiles);
-        score += points_awarded;
-
-        update_score (points_awarded);
+        score += increment;
+        update_score (increment);
     }
 }
