@@ -213,7 +213,7 @@ public class GameView : Clutter.Group
     {
         if (is_zealous)
         {
-            var text = new ScoreActor (width / 2.0, height / 2.0);
+            var text = new ScoreActor (width / 2.0, height / 2.0, width, height);
             game_actors.add_actor (text);
             text.animate_score (points_awarded);
         }
@@ -222,7 +222,7 @@ public class GameView : Clutter.Group
     /* Show the final score when the game is over */
     public void game_complete_cb ()
     {
-        var text = new ScoreActor (width / 2.0, height / 2.0);
+        var text = new ScoreActor (width / 2.0, height / 2.0, width, height);
         game_actors.add_actor (text);
         text.animate_final_score (game.score);
     }
@@ -298,8 +298,10 @@ private class TileActor : Clutter.Clone
 public class ScoreActor : Clutter.Group
 {
     private Clutter.Text label;
+    private float scene_width;
+    private float scene_height;
 
-    public ScoreActor (double x, double y)
+    public ScoreActor (double x, double y, double width, double height)
     {
         label = new Clutter.Text ();
         label.set_color (Clutter.Color.from_string ("rgba(255, 255, 255, 255)"));
@@ -309,6 +311,8 @@ public class ScoreActor : Clutter.Group
 
         this.x = (float) x;
         this.y = (float) y;
+        this.scene_width = (float)width;
+        this.scene_height = (float)height;
     }
 
     public void animate_score (int points)
@@ -340,6 +344,7 @@ public class ScoreActor : Clutter.Group
         depth = 0;
 
         scale_x = scale_y = 0.0;
-        animate (Clutter.AnimationMode.EASE_OUT_ELASTIC, 2000, scale_x: 1.0, scale_y: 1.0, opacity: 255);
+        float scale_to = scene_width / this.width;
+        animate (Clutter.AnimationMode.EASE_OUT_ELASTIC, 2000, scale_x: scale_to, scale_y: scale_to, opacity: 255);
     }
 }
