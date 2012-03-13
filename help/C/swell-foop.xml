@@ -231,24 +231,24 @@
     <sect2 id="changing-the-look">
       <title>Changing the Look</title>
 
-      <para>To change the appearance of the objects use the <guimenuitem>Theme</guimenuitem> item under <menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Appearance</guimenuitem></menuchoice>. Selecting an item from the list changes the theme immediately.</para>
+      <para>To change the appearance of the objects use the <guimenuitem>Theme</guimenuitem> item under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Appearance</guimenuitem></menuchoice>. Selecting an item from the list changes the theme immediately.</para>
 
         <para>You can also create your own themes, although the process is not very straight-forward yet. Use a copy of an existing theme from <filename>/usr/share/gnome-games/swell-foop/themes/</filename> as a template and alter it with your favorite paint program. Put the result in <filename>$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. It will be automatically included on the themes list next time you run &app;. <filename>$XDG_DATA_HOME</filename> is usually <filename>~/.local/share/</filename>.</para>
     </sect2>
 
     <sect2 id="changing-the-size">
       <title>Changing the Size</title>
-      <para>The <guimenu>Board size</guimenu> list under <menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> contains three settings: <guimenuitem>Small</guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</guimenuitem>.</para>
+      <para>The <guimenu>Board size</guimenu> list under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> contains three settings: <guimenuitem>Small</guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</guimenuitem>.</para>
     </sect2>
 
     <sect2 id="changing-the-size">
       <title>Changing the Number of Objects</title>
-      <para>The <guimenu>Number of colors</guimenu> option under <menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> allows you to increase the number of different objects.</para>
+      <para>The <guimenu>Number of colors</guimenu> option under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> allows you to increase the number of different objects.</para>
     </sect2>
 
     <sect2 id="changing-the-speed">
     <title>Changing the Speed</title>
-    <para>The default animation is designed to be smooth and graceful. If you like playing fast and furious then this may be too slow for you. By selecting the <guimenuitem>Zealous Animation</guimenuitem> option under <menuchoice><guimenu>Game</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Operation</guimenuitem></menuchoice> you can speed up game-play at the expense of animation quality.</para>
+    <para>The default animation is designed to be smooth and graceful. If you like playing fast and furious then this may be too slow for you. By selecting the <guimenuitem>Zealous Animation</guimenuitem> option under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Operation</guimenuitem></menuchoice> you can speed up game-play at the expense of animation quality.</para>
     </sect2>
 
   </sect1>
