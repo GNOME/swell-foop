@@ -195,7 +195,7 @@ public class SwellFoop : Gtk.Application
             score = game.score;
 
         /* I left one more blank space at the end to make the score not too close to the window border */
-        current_score_label.set_text ("Score: %4u ".printf (score));
+        current_score_label.set_text (_("Score: %4u ").printf (score));
     }
 
     private void complete_cb ()
