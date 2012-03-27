@@ -112,6 +112,8 @@ public class SwellFoop : Gtk.Application
 
         /* Create a label in toolbar showing the score etc. */
         var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+        status_box.halign = Gtk.Align.END;
+        status_box.valign = Gtk.Align.CENTER;
         status_box.show ();
 
         /* show the current score */
@@ -120,13 +122,9 @@ public class SwellFoop : Gtk.Application
         status_box.pack_start (current_score_label, false, false, 0);
         update_score_cb (0);
 
-        var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
-        status_alignment.add (status_box);
-        status_alignment.show ();
-
         var status_item = new Gtk.ToolItem ();
         status_item.set_expand (true);
-        status_item.add (status_alignment);
+        status_item.add (status_box);
         status_item.show ();
 
         toolbar.insert (status_item, -1);
