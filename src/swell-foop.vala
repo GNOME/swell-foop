@@ -206,7 +206,7 @@ public class SwellFoop : Gtk.Application
         base.shutdown ();
 
         /* Record the score if the game isn't over. */
-        if (game != null && game.score > 0)
+        if (game != null && !game.has_completed() && game.score > 0)
             high_scores.add_plain_score (game.score);
     }
 
