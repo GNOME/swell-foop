@@ -422,6 +422,7 @@ public class SwellFoop : Gtk.Application
         }
 
         var context = new OptionContext ("");
+        context.set_translation_domain (GETTEXT_PACKAGE);
 
         context.add_group (Gtk.get_option_group (true));
         context.add_group (Clutter.get_option_group_without_init ());
