@@ -10,7 +10,7 @@ HELP_MEDIA = \
 
 HELP_FILES = \
 	legal.xml \
-	swell-foop.xml
+	index.docbook
 
 HELP_LINGUAS = ca cs de el en_GB es eu fr it oc ru sl sr sr@latin sv zh_CN
 
