@@ -5,7 +5,7 @@ gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-swelldir=$(pkgdatadir)/swell-foop
+swelldir=$(datadir)/swell-foop
 swell_DATA = \
     preferences.ui
 

@@ -245,7 +245,7 @@ public class Theme
         try
         {
             for (int i = 0; i < 4; i++)
-                textures[i] = new Clutter.Texture.from_file (Path.build_filename (PKGDATADIR, "themes", name, colors[i] + ".svg"));
+                textures[i] = new Clutter.Texture.from_file (Path.build_filename (DATADIR, "themes", name, colors[i] + ".svg"));
         }
         catch (Clutter.TextureError e)
         {

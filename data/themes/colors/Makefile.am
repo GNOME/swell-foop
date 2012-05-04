@@ -1,4 +1,4 @@
-themedir = $(pkgdatadir)/swell-foop/themes/colors
+themedir = $(datadir)/swell-foop/themes/colors
 theme_DATA = \
 	bkg.svg \
 	blue.svg \

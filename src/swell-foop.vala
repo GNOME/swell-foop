@@ -227,7 +227,7 @@ public class SwellFoop : Gtk.Application
         var preferences_builder = new Gtk.Builder ();
         try
         {
-            preferences_builder.add_from_file (Path.build_filename (PKGDATADIR, "preferences.ui", null));
+            preferences_builder.add_from_file (Path.build_filename (DATADIR, "preferences.ui", null));
         }
         catch (Error e)
         {

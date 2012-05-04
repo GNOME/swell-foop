@@ -17,8 +17,8 @@ swell_foop_CFLAGS = \
 	-I$(top_srcdir)/libgames-support \
 	-DVERSION=\"$(VERSION)\" \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
-	-DPKGDATADIR=\""$(pkgdatadir)/swell-foop"\" \
-	-DLOCALEDIR=\"$(pkgdatadir)/locale\" \
+	-DDATADIR=\""$(datadir)/swell-foop"\" \
+	-DLOCALEDIR=\"$(datadir)/locale\" \
 	$(GHTREAD_CFLAGS) \
 	$(GMODULE_CFLAGS) \
 	$(GTK_CFLAGS) \
