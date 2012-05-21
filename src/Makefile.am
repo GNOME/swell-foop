@@ -32,4 +32,9 @@ swell_foop_LDADD =	\
 	$(CLUTTER_GTK_LIBS)	\
 	$(INTLLIBS)
 
+install-exec-hook:
+	-if test "$(setgid)" = "true"; then \
+	  chgrp $(scores_group) $(DESTDIR)$(bindir)/swell-foop && chmod 2555 $(DESTDIR)$(bindir)/swell-foop ;\
+	fi
+
 -include $(top_srcdir)/git.mk
