@@ -335,7 +335,9 @@ public class ScoreActor : Clutter.Group
     public void animate_final_score (uint points)
     {
         label.set_font_name ("Bitstrem Vera Sans 50");
-        label.set_markup ("<b>" + _("Game Over!") + "</b>\n" + points.to_string () + _ ("points"));
+        var points_label = ngettext (/* Label showing the number of points at the end of the game */
+                                     "%u point", "%u points", points).printf (points);
+        label.set_markup ("<b>%s</b>\n%s".printf (_("Game Over!"), points_label));
         label.set_line_alignment (Pango.Alignment.CENTER);
 
         /* The score will be shown repeatedly therefore we need to reset some important properties
