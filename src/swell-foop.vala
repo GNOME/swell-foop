@@ -383,7 +383,7 @@ public class SwellFoop : Gtk.Application
                                "artists", artists,
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
-                               "logo-icon-name", "gnome-swell-foop",
+                               "logo-icon-name", "swell-foop",
                                "website", "http://www.gnome.org/projects/gnome-games",
                                "website-label", _("GNOME Games web site"),
                                null);
