@@ -4,8 +4,27 @@
  *  with the model class by composite relation and with the control layer by means of signals and
  *  events.
  */
+
 public class GameView : Clutter.Group
 {
+    private TileActor highlighted = null;
+
+    private CursorActor cursor;
+    private bool cursor_active = false;
+    private int _cursor_x;
+    public int cursor_x
+    {
+        get { return this._cursor_x; }
+        set { this._cursor_x = value.clamp(0, game.columns - 1); }
+    }
+
+    private int _cursor_y;
+    public int cursor_y
+    {
+        get { return this._cursor_y; }
+        set { this._cursor_y = value.clamp(0, game.rows - 1); }
+    }
+
     /* A 2D array holding all tiles */
     private TileActor[,] tiles;
 
@@ -81,6 +100,8 @@ public class GameView : Clutter.Group
                 tile.destroy ();
             }
         }
+
+        cursor.destroy ();
     }
 
     private void place_tiles ()
@@ -122,6 +143,10 @@ public class GameView : Clutter.Group
                 game_actors.add_actor (tile);
             }
         }
+
+        cursor = new CursorActor (theme.cursor, tile_size);
+        game_actors.add_actor (cursor);
+        cursor.hide ();
     }
 
     public bool is_zealous;
@@ -137,6 +162,9 @@ public class GameView : Clutter.Group
             t.hide ();
             add_actor (t);
         }
+        theme.cursor.hide ();
+        add_actor (theme.cursor);
+
         theme = new Theme ("shapesandcolors");
         themes.insert ("shapesandcolors", theme);
         foreach (var t in theme.textures)
@@ -144,6 +172,8 @@ public class GameView : Clutter.Group
             t.hide ();
             add_actor (t);
         }
+        theme.cursor.hide ();
+        add_actor (theme.cursor);
     }
 
     /* When a tile in the model layer is closed, play an animation at the view layer */
@@ -163,14 +193,27 @@ public class GameView : Clutter.Group
         tile.animate_to (new_xx, new_yy, is_zealous);
     }
 
+    /* Sets the opacity for all tiles connected to the actor */
+    private void opacity_for_connected_tiles (TileActor? actor, int opacity)
+    {
+        if (actor == null)
+            return;
+
+        var connected_tiles = game.connected_tiles (actor.tile);
+        foreach (var l in connected_tiles)
+            tiles[l.grid_x, l.grid_y].opacity = opacity;
+    }
+
     /* When the mouse enters a tile, bright up the connected tiles */
     private bool tile_entered_cb (Clutter.Actor actor, Clutter.CrossingEvent event)
     {
+        if (cursor_active)
+            return false;
+
         var tile = (TileActor) actor;
 
-        var connected_tiles = game.connected_tiles (tile.tile);
-        foreach (var l in connected_tiles)
-            tiles[l.grid_x, l.grid_y].opacity = 255;
+        opacity_for_connected_tiles (tile, 255);
+        highlighted = tile;
 
         return false;
     }
@@ -178,11 +221,12 @@ public class GameView : Clutter.Group
     /* When the mouse leaves a tile, lower the brightness of the connected tiles */
     private bool tile_left_cb (Clutter.Actor actor, Clutter.CrossingEvent event)
     {
+        if (cursor_active)
+            return false;
+
         var tile = (TileActor) actor;
 
-        var connected_tiles = game.connected_tiles (tile.tile);
-        foreach (var l in connected_tiles)
-            tiles[l.grid_x, l.grid_y].opacity = 180;
+        opacity_for_connected_tiles (tile, 180);
 
         return false;
     }
@@ -191,6 +235,18 @@ public class GameView : Clutter.Group
     private bool remove_region_cb (Clutter.Actor actor, Clutter.ButtonEvent event)
     {
         var tile = (TileActor) actor;
+
+        opacity_for_connected_tiles (highlighted, 180);
+
+        if (cursor_active)
+        {
+            cursor_active = false;
+            cursor.hide ();
+        }
+
+        /* Move the cursor to where the mouse was clicked. Expected for mixed mouse/keyboard use */
+        cursor_x = tile.tile.grid_x;
+        cursor_y = tile.tile.grid_y;
 
         game.remove_connected_tiles (tile.tile);
 
@@ -206,6 +262,30 @@ public class GameView : Clutter.Group
             tile.opacity = 180;
 
         return false;
+    }
+
+    /* Move Keyboard cursor */
+    public void cursor_move (int x, int y)
+    {
+        cursor_active = true;
+
+        opacity_for_connected_tiles (highlighted, 180);
+        cursor_x += x;
+        cursor_y += y;
+        highlighted = tiles[cursor_x, cursor_y];
+        opacity_for_connected_tiles (highlighted, 255);
+
+        float xx, yy;
+        xx = cursor_x * tile_size + tile_size / 2;
+        yy = (game.rows - 1 - cursor_y) * tile_size + tile_size / 2;
+        cursor.set_position (xx, yy);
+        cursor.show ();
+    }
+
+    /* Keyboard Cursor Click */
+    public void cursor_click ()
+    {
+        game.remove_connected_tiles (tiles[cursor_x, cursor_y].tile);
     }
 
     /* Show flying score animation after each tile-removing click */
@@ -230,11 +310,12 @@ public class GameView : Clutter.Group
 
 /**
  *  This class holds the textures for a specific theme. These textures are used for creating light
- *  actors.
+ *  actors and cursor actor.
  */
 public class Theme
 {
     public Clutter.Texture[] textures;
+    public Clutter.Texture cursor;
 
     public Theme (string name)
     {
@@ -246,6 +327,8 @@ public class Theme
         {
             for (int i = 0; i < 4; i++)
                 textures[i] = new Clutter.Texture.from_file (Path.build_filename (DATADIR, "themes", name, colors[i] + ".svg"));
+
+            cursor = new Clutter.Texture.from_file (Path.build_filename (DATADIR, "themes", name, "highlight.svg"));
         }
         catch (Clutter.TextureError e)
         {
@@ -289,6 +372,17 @@ private class TileActor : Clutter.Clone
     {
         var anim_mode = is_zealous ? Clutter.AnimationMode.EASE_OUT_BOUNCE : Clutter.AnimationMode.EASE_OUT_QUAD;
         animate (anim_mode, 500, "x", new_x, "y", new_y);
+    }
+}
+
+public class CursorActor : Clutter.Clone
+{
+   public CursorActor (Clutter.Texture texture, int size)
+    {
+        source = texture;
+        opacity = 180;
+        set_size (size, size);
+        set_anchor_point (size / 2, size / 2);
     }
 }
 

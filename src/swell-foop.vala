@@ -93,7 +93,6 @@ public class SwellFoop : Gtk.Application
             var ui_description =
             "<ui>" +
             "    <toolbar name='Toolbar'>" +
-            "        <toolitem action='NewGame'/>" +
             "    </toolbar>" +
             "</ui>";
             ui_manager.add_ui_from_string (ui_description, -1);
@@ -157,14 +156,12 @@ public class SwellFoop : Gtk.Application
         view.is_zealous = settings.get_boolean ("zealous");
         view.game = game;
         stage.add_actor (view);
-
         /* Request an appropriate size for the game view */
         stage.set_size (view.width, view.height);
         clutter_embed.set_size_request ((int) stage.width, (int) stage.height);
 
         /* When the mouse leaves the window we need to update the view */
         clutter_embed.leave_notify_event.connect (view.board_left_cb);
-
         high_scores = new GnomeGamesSupport.Scores ("swell-foop",
                                                     new GnomeGamesSupport.ScoresCategory[0],
                                                     null, null, 0,
@@ -173,6 +170,38 @@ public class SwellFoop : Gtk.Application
         high_scores.add_category ("small", _("Small"));
         high_scores.add_category ("normal", _("Normal"));
         high_scores.add_category ("large", _("Large"));
+
+        stage.key_release_event.connect (key_release_event_cb);
+    }
+
+    private bool key_release_event_cb (Clutter.Actor actor, Clutter.KeyEvent event)
+    {
+        switch (event.keyval)
+        {
+            case Clutter.Key.F2:
+                new_game ();
+                break;
+            case Clutter.Key.Up:
+                view.cursor_move (0, 1);
+                break;
+            case Clutter.Key.Down:
+                view.cursor_move (0, -1);
+                break;
+            case Clutter.Key.Left:
+                view.cursor_move (-1, 0);
+                break;
+            case Clutter.Key.Right:
+                view.cursor_move (1, 0);
+                break;
+            case Clutter.Key.space:
+            case Clutter.Key.Return:
+                view.cursor_click ();
+                break;
+            default:
+                break;
+        }
+
+        return false;
     }
 
     private Size get_size ()
