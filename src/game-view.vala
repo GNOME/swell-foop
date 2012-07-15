@@ -119,7 +119,7 @@ public class GameView : Clutter.Group
             {
                 /* For each tile object, we create a tile actor for it */
                 var l = game.get_tile (x, y);
-                if (l == null)
+                if (l == null || l.closed)
                     continue;
                 var tile = new TileActor (l, theme.textures[l.color], tile_size);
 
