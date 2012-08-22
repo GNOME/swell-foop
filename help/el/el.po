@@ -3,10 +3,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GNOME\n"
-"POT-Creation-Date: 2012-07-02 07:38+0000\n"
-"PO-Revision-Date: 2012-07-12 22:39+0200\n"
+"POT-Creation-Date: 2012-08-05 09:26+0000\n"
+"PO-Revision-Date: 2012-08-22 02:28+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,7 +17,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
-"Φώτης Τσάμης <ftsamis@gmail.com>, 2009\n"
+" Φώτης Τσάμης <ftsamis@gmail.com>, 2009\n"
 "\n"
 "Για περισσότερα δείτε http://www.gnome.gr/"
 
@@ -31,8 +32,10 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:155(imagedata)
 msgctxt "_"
-msgid "external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
-msgstr "external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+msgid ""
+"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+msgstr ""
+"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -46,7 +49,8 @@ msgstr "external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a3
 #: C/index.docbook:170(imagedata)
 msgctxt "_"
 msgid "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
-msgstr "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
+msgstr ""
+"external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -60,7 +64,8 @@ msgstr "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
 #: C/index.docbook:178(imagedata)
 msgctxt "_"
 msgid "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
-msgstr "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
+msgstr ""
+"external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -74,7 +79,8 @@ msgstr "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
 #: C/index.docbook:186(imagedata)
 msgctxt "_"
 msgid "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
-msgstr "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
+msgstr ""
+"external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -88,15 +94,25 @@ msgstr "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
 #: C/index.docbook:194(imagedata)
 msgctxt "_"
 msgid "external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
-msgstr "external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
+msgstr ""
+"external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
 
 #: C/index.docbook:20(articleinfo/title)
 msgid "<application>Swell Foop</application> Manual"
-msgstr "Τεκμηρίωση <application>Swell Foop</application>"
+msgstr "Τεκμηρίωση του <application>Swell Foop</application>"
 
 #: C/index.docbook:23(abstract/para)
-msgid "Swell Foop is a puzzle game, of which the objective is to clear the window of as many pieces as possible by clicking on groups of the same colored pieces. That group will vanish and the pieces on top will fall until there are none left or no more color groups."
-msgstr "Το Swell Foop είναι ένα παιχνίδι πάζλ, του οποίου ο στόχος είναι να καθαρίσετε το παράθυρο από όσα περισσότερα κομμάτια γίνεται κάνοντας κλικ σε ομάδες κομματιών ίδιου χρώματος. Αυτή η ομάδα θα εξαφανιστεί και τα κομμάτια στην κορυφή θα πέσουν μέχρι να μην μείνει κανένα κομμάτι ή καμία ομάδα χρώματος."
+msgid ""
+"Swell Foop is a puzzle game, of which the objective is to clear the window "
+"of as many pieces as possible by clicking on groups of the same colored "
+"pieces. That group will vanish and the pieces on top will fall until there "
+"are none left or no more color groups."
+msgstr ""
+"Το Swell Foop είναι ένα παιχνίδι παζλ, του οποίου ο στόχος είναι να "
+"καθαρίσετε το παράθυρο από όσα περισσότερα κομμάτια γίνεται κάνοντας κλικ σε "
+"ομάδες κομματιών ίδιου χρώματος. Αυτή η ομάδα θα εξαφανιστεί και τα κομμάτια "
+"στην κορυφή θα πέσουν μέχρι να μην μείνει κανένα κομμάτι ή καμία ομάδα "
+"χρώματος."
 
 #: C/index.docbook:32(articleinfo/copyright)
 msgid "<year>2005</year> <holder>Callum McKenzie</holder>"
@@ -114,12 +130,24 @@ msgid "GNOME Documentation Project"
 msgstr "Έργο Τεκμηρίωσης GNOME"
 
 #: C/index.docbook:51(authorgroup/author)
-msgid "<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> <orgname>GNOME Documentation Project</orgname> <address> <email>callum@physics.otago.ac.nz</email> </address> </affiliation>"
-msgstr "<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> <orgname>Έργο τεκμηρίωσης GNOME</orgname> <address> <email>callum@physics.otago.ac.nz</email> </address> </affiliation>"
+msgid ""
+"<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> <address> "
+"<email>callum@physics.otago.ac.nz</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> "
+"<orgname>Έργο τεκμηρίωσης GNOME</orgname> <address> <email>callum@physics."
+"otago.ac.nz</email> </address> </affiliation>"
 
 #: C/index.docbook:59(authorgroup/author)
-msgid "<firstname>Andre</firstname> <surname>Klapper</surname> <affiliation> <orgname>GNOME Documentation Project</orgname> <address> <email>ak-47@gmx.net</email> </address> </affiliation>"
-msgstr "<firstname>Andre</firstname> <surname>Klapper</surname> <affiliation> <orgname>Έργο τεκμηρίωσης GNOME</orgname> <address> <email>ak-47@gmx.net</email> </address> </affiliation>"
+msgid ""
+"<firstname>Andre</firstname> <surname>Klapper</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> <address> <email>ak-47@gmx."
+"net</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Andre</firstname> <surname>Klapper</surname> <affiliation> "
+"<orgname>Έργο τεκμηρίωσης GNOME</orgname> <address> <email>ak-47@gmx.net</"
+"email> </address> </affiliation>"
 
 #: C/index.docbook:103(revdescription/para)
 msgid "Updates to the Swell Foop manual."
@@ -130,8 +158,12 @@ msgid "Andre Klapper <email>ak-47@gmx.net</email>"
 msgstr "Andre Klapper <email>ak-47@gmx.net</email>"
 
 #: C/index.docbook:99(revhistory/revision)
-msgid "<revnumber>Swell Foop Manual V3.4</revnumber> <date>March 2012</date> <_:revdescription-1/>"
-msgstr "<revnumber>Εγχειρίδιο του Swell Foop V3.4</revnumber> <date>Μάρτιος 2012</date> <_:revdescription-1/>"
+msgid ""
+"<revnumber>Swell Foop Manual V3.4</revnumber> <date>March 2012</date> <_:"
+"revdescription-1/>"
+msgstr ""
+"<revnumber>Εγχειρίδιο του Swell Foop V3.4</revnumber> <date>Μάρτιος 2012</"
+"date> <_:revdescription-1/>"
 
 #: C/index.docbook:113(revdescription/para)
 msgid "Adaptation of the Swell Foop manual to new template."
@@ -142,8 +174,12 @@ msgid "Claude Paroz <email>claude@2xlibre.net</email>"
 msgstr "Claude Paroz <email>claude@2xlibre.net</email>"
 
 #: C/index.docbook:109(revhistory/revision)
-msgid "<revnumber>Swell Foop Manual V2.11</revnumber> <date>January 2008</date> <_:revdescription-1/>"
-msgstr "<revnumber>Εγχειρίδιο του Swell Foop V2.11</revnumber> <date>Ιανουάριος 2008</date> <_:revdescription-1/>"
+msgid ""
+"<revnumber>Swell Foop Manual V2.11</revnumber> <date>January 2008</date> <_:"
+"revdescription-1/>"
+msgstr ""
+"<revnumber>Εγχειρίδιο του Swell Foop V2.11</revnumber> <date>Ιανουάριος "
+"2008</date> <_:revdescription-1/>"
 
 #: C/index.docbook:122(revdescription/para)
 msgid "Initial version for the new Swell Foop."
@@ -154,8 +190,12 @@ msgid "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
 msgstr "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
 
 #: C/index.docbook:118(revhistory/revision)
-msgid "<revnumber>Swell Foop Manual V2.10</revnumber> <date>February 2005</date> <_:revdescription-1/>"
-msgstr "<revnumber>Εγχειρίδιο του Swell Foop V2.10</revnumber> <date>Φεβρουάριος 2005</date> <_:revdescription-1/>"
+msgid ""
+"<revnumber>Swell Foop Manual V2.10</revnumber> <date>February 2005</date> <_:"
+"revdescription-1/>"
+msgstr ""
+"<revnumber>Εγχειρίδιο του Swell Foop V2.10</revnumber> <date>Φεβρουάριος "
+"2005</date> <_:revdescription-1/>"
 
 #: C/index.docbook:129(articleinfo/releaseinfo)
 msgid "This manual describes version 3.4 of Swell Foop."
@@ -163,32 +203,72 @@ msgstr "Αυτό το εγχειρίδιο περιγράφει την έκδο�
 
 #: C/index.docbook:132(legalnotice/title)
 msgid "Feedback"
-msgstr "Aνάδραση"
+msgstr "Ανάδραση"
 
 #: C/index.docbook:133(legalnotice/para)
-msgid "To report a bug or make a suggestion regarding the <application>Swell Foop</application> game or this manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Feedback section of the GNOME User Guide</ulink>."
-msgstr "Για να αναφέρετε ένα σφάλμα ή να κάνετε μια πρόταση σχετικά με το <application>Swell Foop</application> ή αυτό το εγχειρίδιο, ακολουθήστε τις οδηγίες στην <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\"> Ενότητα ανατροφοδότησης του οδηγού χρήστη GNOME</ulink>."
+msgid ""
+"To report a bug or make a suggestion regarding the <application>Swell Foop</"
+"application> game or this manual, follow the directions in the <ulink url="
+"\"ghelp:user-guide?feedback-bugs\" type=\"help\">Feedback section of the "
+"GNOME User Guide</ulink>."
+msgstr ""
+"Για να αναφέρετε ένα σφάλμα ή να κάνετε μια πρόταση σχετικά με το "
+"<application>Swell Foop</application> ή αυτό το εγχειρίδιο, ακολουθήστε τις "
+"οδηγίες στην <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\"> "
+"Ενότητα ανατροφοδότησης του οδηγού χρήστη GNOME</ulink>."
 
 #: C/index.docbook:140(article/indexterm)
 msgid "<primary>Swell Foop</primary>"
 msgstr "<primary>Swell Foop</primary>"
 
-#: C/index.docbook:147(sect1/title)
-#: C/index.docbook:163(table/title)
+#: C/index.docbook:147(sect1/title) C/index.docbook:163(table/title)
 msgid "Playing <application>Swell Foop</application>"
 msgstr "Παίζοντας <application>Swell Foop</application>"
 
 #: C/index.docbook:148(sect1/para)
-msgid "<application>Swell Foop</application> is a puzzle game. The goal is to remove as many objects as possible in as few moves as possible. Objects that are adjacent to each other get removed as a group. The remaining objects then collapse to fill in the gaps and new groups are formed. You cannot remove single objects."
-msgstr "Το <application>Swell Foop</application> είναι ένα παιχνίδι πάζλ. Ο στόχος είναι να αφαιρέσετε όσο το δυνατό περισσότερα αντικείμενα με όσες το δυνατό λιγότερες κινήσεις. Τα αντικείμενα που είναι το ένα δίπλα στο άλλο αφαιρούνται ως ομάδα. Τα υπόλοιπα αντικείμενα τότε καταρρέουν για να συμπληρώσουν τα κενά και νέες ομάδες σχηματίζονται. Δεν μπορείτε να αφαιρέσετε τα μονά αντικείμενα."
+msgid ""
+"<application>Swell Foop</application> is a puzzle game. The goal is to "
+"remove as many objects as possible in as few moves as possible. Objects that "
+"are adjacent to each other get removed as a group. The remaining objects "
+"then collapse to fill in the gaps and new groups are formed. You cannot "
+"remove single objects."
+msgstr ""
+"Το <application>Swell Foop</application> είναι ένα παιχνίδι παζλ. Ο στόχος "
+"είναι να αφαιρέσετε όσο το δυνατό περισσότερα αντικείμενα με όσες το δυνατό "
+"λιγότερες κινήσεις. Τα αντικείμενα που είναι το ένα δίπλα στο άλλο "
+"αφαιρούνται ως ομάδα. Τα υπόλοιπα αντικείμενα τότε καταρρέουν για να "
+"συμπληρώσουν τα κενά και νέες ομάδες σχηματίζονται. Δεν μπορείτε να "
+"αφαιρέσετε τα μονά αντικείμενα."
 
 #: C/index.docbook:151(figure/title)
 msgid "<application>Swell Foop</application> at the beginning of a new game."
 msgstr "Το <application>Swell Foop</application> στην έναρξη νέου παιχνιδιού."
 
 #: C/index.docbook:161(sect1/para)
-msgid "The board starts as a full grid of objects. Depending on the size of board you select, there are either three or four types of object. If a group of objects are adjacent and all the same type, then they can be removed simply by clicking them with the mouse (or by pressing the space bar). When you move the mouse over a group you can remove, the objects will start moving. The number of objects in the group, and the points you will score for removing that group, is shown in the lower left corner of the window. The more objects in the group, the more points you will score. Once the group has been removed the objects above them fall down to fill the space. If an entire column is cleared then the objects slide leftward to fill the gap."
-msgstr "Το αβάκιο ξεκινάει σαν ένα πλήρες πλέγμα αντικειμένων. Ανάλογα με το μέγεθος του αβακίου που επιλέγετε, υπάρχουν τρεις ή τέσσερις τύποι αντικειμένων. Αν μια ομάδα αντικειμένων είναι γειτονικές και όλες του ίδιου τύπου, τότε μπορούν να αφαιρεθούν απλά κάνοντας κλικ απάνω τους (ή πατώντας το πλήκτρο διαστήματος). Όταν μετακινήσετε το ποντίκι πάνω από μία ομάδα που μπορείτε να την αφαιρέσετε, τα αντικείμενα θα ξεκινήσουν να κινούνται. Ο αριθμός των αντικειμένων στην ομάδα, και οι πόντοι που θα βαθμολογηθείτε για την αφαίρεση της ομάδας, φαίνεται στην κάτω αριστερή γωνία του παραθύρου. Όσο περισσότερα αντικείμενα στην ομάδα, τόσο για περισσότερους πόντους βαθμολογήστε. Εφόσον έχει αφαιρεθεί η ομάδα τα αντικείμενα από πάνω τους πέφτουν για να γεμίσουν τα κενά. Αν μία ολόκληρη στήλη έχει απαλειφθεί  τότε τα αντικείμενα ολισθαίνουν προς τα αριστερά για να γεμίσουν το κενό."
+msgid ""
+"The board starts as a full grid of objects. Depending on the size of board "
+"you select, there are either three or four types of object. If a group of "
+"objects are adjacent and all the same type, then they can be removed simply "
+"by clicking them with the mouse (or by pressing the space bar). When you "
+"move the mouse over a group you can remove, the objects will start moving. "
+"The number of objects in the group, and the points you will score for "
+"removing that group, is shown in the lower left corner of the window. The "
+"more objects in the group, the more points you will score. Once the group "
+"has been removed the objects above them fall down to fill the space. If an "
+"entire column is cleared then the objects slide leftward to fill the gap."
+msgstr ""
+"Το αβάκιο ξεκινάει σαν ένα πλήρες πλέγμα αντικειμένων. Ανάλογα με το μέγεθος "
+"του αβακίου που επιλέγετε, υπάρχουν τρεις ή τέσσερις τύποι αντικειμένων. Αν "
+"μια ομάδα αντικειμένων είναι γειτονικές και όλες του ίδιου τύπου, τότε "
+"μπορούν να αφαιρεθούν απλά κάνοντας κλικ απάνω τους (ή πατώντας το πλήκτρο "
+"διαστήματος). Όταν μετακινήσετε το ποντίκι πάνω από μία ομάδα που μπορείτε "
+"να την αφαιρέσετε, τα αντικείμενα θα ξεκινήσουν να κινούνται. Ο αριθμός των "
+"αντικειμένων στην ομάδα, και οι πόντοι που θα βαθμολογηθείτε για την "
+"αφαίρεση της ομάδας, φαίνεται στην κάτω αριστερή γωνία του παραθύρου. Όσο "
+"περισσότερα αντικείμενα στην ομάδα, τόσο για περισσότερους πόντους "
+"βαθμολογήστε. Εφόσον έχει αφαιρεθεί η ομάδα τα αντικείμενα από πάνω τους "
+"πέφτουν για να γεμίσουν τα κενά. Αν μία ολόκληρη στήλη έχει απαλειφθεί  τότε "
+"τα αντικείμενα ολισθαίνουν προς τα αριστερά για να γεμίσουν το κενό."
 
 #: C/index.docbook:166(entry/para)
 msgid "1. Eliminate groups of two or more <_:screenshot-1/>"
@@ -196,15 +276,19 @@ msgstr "1. Αφαιρέστε ομάδες των δύο ή περισσότερ
 
 #: C/index.docbook:174(entry/para)
 msgid "2. Objects fall down to fill the gaps <_:screenshot-1/>"
-msgstr "2. Τα αντικείμενα καταρρέουν για να συμπληρώσουν τα κενά <_:screenshot-1/>"
+msgstr ""
+"2. Τα αντικείμενα καταρρέουν για να συμπληρώσουν τα κενά <_:screenshot-1/>"
 
 #: C/index.docbook:182(entry/para)
 msgid "3. Objects move left to fill empty columns <_:screenshot-1/>"
-msgstr "3. Τα αντικείμενα μετακινούνται αριστερά για να συμπληρώσουν τις κενές στήλες <_:screenshot-1/>"
+msgstr ""
+"3. Τα αντικείμενα μετακινούνται αριστερά για να συμπληρώσουν τις κενές "
+"στήλες <_:screenshot-1/>"
 
 #: C/index.docbook:190(entry/para)
 msgid "4. New groups are formed and the cycle repeats <_:screenshot-1/>"
-msgstr "4. Νέες ομάδες σχηματίζονται και ο κύκλος επαναλαμβάνεται <_:screenshot-1/>"
+msgstr ""
+"4. Νέες ομάδες σχηματίζονται και ο κύκλος επαναλαμβάνεται <_:screenshot-1/>"
 
 #: C/index.docbook:202(sect1/para)
 msgid "Scoring is based on the number of objects you delete:"
@@ -242,8 +326,7 @@ msgstr "4"
 msgid "5"
 msgstr "5"
 
-#: C/index.docbook:214(row/entry)
-#: C/index.docbook:218(row/entry)
+#: C/index.docbook:214(row/entry) C/index.docbook:218(row/entry)
 msgid "9"
 msgstr "9"
 
@@ -300,100 +383,295 @@ msgid "Changing the Look"
 msgstr "Αλλαγή της εμφάνισης"
 
 #: C/index.docbook:234(sect2/para)
-msgid "To change the appearance of the objects use the <guimenuitem>Theme</guimenuitem> item under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Appearance</guimenuitem></menuchoice>. Selecting an item from the list changes the theme immediately."
-msgstr "Για να αλλάξετε την εμφάνιση των αντικειμένων χρησιμοποιήστε την επιλογή <guimenuitem>Θέμα</guimenuitem> στο μενού <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Προτιμήσεις</guimenuitem><guimenuitem>Εμφάνιση</guimenuitem></menuchoice>. Η επιλογή ενός αντικειμένου από την λίστα, αλλάζει το θέμα αμέσως."
+msgid ""
+"To change the appearance of the objects use the <guimenuitem>Theme</"
+"guimenuitem> item under <menuchoice><guimenu>Swell Foop</"
+"guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Appearance</"
+"guimenuitem></menuchoice>. Selecting an item from the list changes the theme "
+"immediately."
+msgstr ""
+"Για να αλλάξετε την εμφάνιση των αντικειμένων χρησιμοποιήστε την επιλογή "
+"<guimenuitem>Θέμα</guimenuitem> στο μενού <menuchoice><guimenu>Swell Foop</"
+"guimenu><guimenuitem>Προτιμήσεις</guimenuitem><guimenuitem>Εμφάνιση</"
+"guimenuitem></menuchoice>. Η επιλογή ενός αντικειμένου από την λίστα, "
+"αλλάζει το θέμα αμέσως."
 
 #: C/index.docbook:236(sect2/para)
-msgid "You can also create your own themes, although the process is not very straight-forward yet. Use a copy of an existing theme from <filename>/usr/share/gnome-games/swell-foop/themes/</filename> as a template and alter it with your favorite paint program. Put the result in <filename>$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. It will be automatically included on the themes list next time you run <application>Swell Foop</application>. <filename>$XDG_DATA_HOME</filename> is usually <filename>~/.local/share/</filename>."
-msgstr "Μπορείτε επίσης να δημιουργήσετε τα δικά σας θέματα, παρόλο που η διαδικασία δεν είναι τόσο απλή ακόμη. Χρησιμοποιήστε ένα αντίγραφο ενός υπάρχοντος θέματος από <filename>/usr/share/gnome-games/swell-foop/themes/</filename> σαν πρότυπο και αλλάξτε το με το αγαπημένο σας πρόγραμμα ζωγραφικής. Τοποθετήστε το αποτέλεσμα στο <filename>$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. Θα συμπεριληφθεί αυτόματα στην λίστα θεμάτων την επόμενη φορά που θα εκκινήσετε το <application>Swell Foop</application>.Το <filename>$XDG_DATA_HOME</filename> είναι συνήθως <filename>~/.local/share/</filename>."
+msgid ""
+"You can also create your own themes, although the process is not very "
+"straight-forward yet. Use a copy of an existing theme from <filename>/usr/"
+"share/gnome-games/swell-foop/themes/</filename> as a template and alter it "
+"with your favorite paint program. Put the result in <filename>$XDG_DATA_HOME/"
+"gnome-games/swell-foop/themes/</filename>. It will be automatically included "
+"on the themes list next time you run <application>Swell Foop</application>. "
+"<filename>$XDG_DATA_HOME</filename> is usually <filename>~/.local/share/</"
+"filename>."
+msgstr ""
+"Μπορείτε επίσης να δημιουργήσετε τα δικά σας θέματα, παρόλο που η διαδικασία "
+"δεν είναι τόσο απλή ακόμη. Χρησιμοποιήστε ένα αντίγραφο ενός υπάρχοντος "
+"θέματος από <filename>/usr/share/gnome-games/swell-foop/themes/</filename> "
+"σαν πρότυπο και αλλάξτε το με το αγαπημένο σας πρόγραμμα ζωγραφικής. "
+"Τοποθετήστε το αποτέλεσμα στο <filename>$XDG_DATA_HOME/gnome-games/swell-"
+"foop/themes/</filename>. Θα συμπεριληφθεί αυτόματα στην λίστα θεμάτων την "
+"επόμενη φορά που θα εκκινήσετε το <application>Swell Foop</application>.Το "
+"<filename>$XDG_DATA_HOME</filename> είναι συνήθως <filename>~/.local/share/</"
+"filename>."
 
 #: C/index.docbook:240(sect2/title)
 msgid "Changing the Size"
 msgstr "Αλλαγή του μεγέθους"
 
 #: C/index.docbook:241(sect2/para)
-msgid "The <guimenu>Board size</guimenu> list under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> contains three settings: <guimenuitem>Small</guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</guimenuitem>."
-msgstr "Το <guimenu>Μέγεθος ταμπλό</guimenu> που βρίσκεται στο <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Προτιμήσεις</guimenuitem><guimenuitem>Διαμόρφωση</guimenuitem></menuchoice> περιέχει τρεις ρυθμίσεις: <guimenuitem>Μικρό</guimenuitem>, <guimenuitem>Κανονικό</guimenuitem> και <guimenuitem>Μεγάλο</guimenuitem>."
+msgid ""
+"The <guimenu>Board size</guimenu> list under <menuchoice><guimenu>Swell "
+"Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</"
+"guimenuitem></menuchoice> contains three settings: <guimenuitem>Small</"
+"guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</"
+"guimenuitem>."
+msgstr ""
+"Το <guimenu>Μέγεθος ταμπλό</guimenu> που βρίσκεται στο "
+"<menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Προτιμήσεις</"
+"guimenuitem><guimenuitem>Διαμόρφωση</guimenuitem></menuchoice> περιέχει "
+"τρεις ρυθμίσεις: <guimenuitem>Μικρό</guimenuitem>, <guimenuitem>Κανονικό</"
+"guimenuitem> και <guimenuitem>Μεγάλο</guimenuitem>."
 
 #: C/index.docbook:245(sect2/title)
 msgid "Changing the Number of Objects"
 msgstr "Αλλάζοντας τον αριθμό των αντικειμένων"
 
 #: C/index.docbook:246(sect2/para)
-msgid "The <guimenu>Number of colors</guimenu> option under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> allows you to increase the number of different objects."
-msgstr "Η επιλογή <guimenu>Αριθμός χρωμάτων</guimenu> που βρίσκεται στο <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Προτιμήσεις</guimenuitem><guimenuitem>Διαμόρφωση</guimenuitem></menuchoice> σας επιτρέπει να αυξήσετε τον αριθμό των διαφορετικών αντικειμένων."
+msgid ""
+"The <guimenu>Number of colors</guimenu> option under "
+"<menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</"
+"guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> allows you to "
+"increase the number of different objects."
+msgstr ""
+"Η επιλογή <guimenu>Αριθμός χρωμάτων</guimenu> που βρίσκεται στο "
+"<menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Προτιμήσεις</"
+"guimenuitem><guimenuitem>Διαμόρφωση</guimenuitem></menuchoice> σας επιτρέπει "
+"να αυξήσετε τον αριθμό των διαφορετικών αντικειμένων."
 
 #: C/index.docbook:250(sect2/title)
 msgid "Changing the Speed"
 msgstr "Αλλαγή της ταχύτητας"
 
 #: C/index.docbook:251(sect2/para)
-msgid "The default animation is designed to be smooth and graceful. If you like playing fast and furious then this may be too slow for you. By selecting the <guimenuitem>Zealous Animation</guimenuitem> option under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Operation</guimenuitem></menuchoice> you can speed up game-play at the expense of animation quality."
-msgstr "Το προεπιλεγμένο εφέ στη κίνηση στο παιχνίδι είναι ομαλές κινήσεις. Αν θέλετε να παίξετε γρήγορα, τότε αυτό μπορεί να είναι πολύ αργό για εσάς. Επιλέγοντας <guimenuitem>Γρήγορη κίνηση</guimenuitem> από το μενού <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Προτιμήσεις</guimenuitem><guimenuitem>Λειτουργία</guimenuitem></menuchoice>, μπορείτε να επιταχύνετε το παίξιμο επιβαρύνοντας την ομαλότητα κίνησης."
+msgid ""
+"The default animation is designed to be smooth and graceful. If you like "
+"playing fast and furious then this may be too slow for you. By selecting the "
+"<guimenuitem>Zealous Animation</guimenuitem> option under "
+"<menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</"
+"guimenuitem><guimenuitem>Operation</guimenuitem></menuchoice> you can speed "
+"up game-play at the expense of animation quality."
+msgstr ""
+"Το προεπιλεγμένο εφέ στη κίνηση στο παιχνίδι είναι ομαλές κινήσεις. Αν "
+"θέλετε να παίξετε γρήγορα, τότε αυτό μπορεί να είναι πολύ αργό για εσάς. "
+"Επιλέγοντας <guimenuitem>Γρήγορη κίνηση</guimenuitem> από το μενού "
+"<menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Προτιμήσεις</"
+"guimenuitem><guimenuitem>Λειτουργία</guimenuitem></menuchoice>, μπορείτε να "
+"επιταχύνετε το παίξιμο επιβαρύνοντας την ομαλότητα κίνησης."
 
 #: C/index.docbook:257(sect1/title)
 msgid "Strategy"
 msgstr "Στρατηγική"
 
 #: C/index.docbook:259(sect1/para)
-msgid "The most important rule when aiming for a high score is to think ahead: each group you remove will form and destroy other groups."
-msgstr "Ο πιο σημαντικός κανόνας όταν στοχεύετε για υψηλά αποτελέσματα είναι να έχετε στο μυαλό σας πως κάθε ομάδα που αφαιρείτε θα σχηματίσει και θα καταστρέψει άλλες ομάδες."
+msgid ""
+"The most important rule when aiming for a high score is to think ahead: each "
+"group you remove will form and destroy other groups."
+msgstr ""
+"Ο πιο σημαντικός κανόνας όταν στοχεύετε για υψηλά αποτελέσματα είναι να "
+"έχετε στο μυαλό σας πως κάθε ομάδα που αφαιρείτε θα σχηματίσει και θα "
+"καταστρέψει άλλες ομάδες."
 
 #: C/index.docbook:261(sect1/para)
-msgid "Remove higher groups first, unless removing another group will make it larger. Vertically aligned objects can't be misaligned, but horizontal arrangements can."
-msgstr "Αφαιρέστε τις ψηλότερες ομάδες πρώτα, αν δεν αφαιρεθεί και άλλη ομάδα θα γίνει μεγαλύτερη. Τα καθέτως ευθυγραμμισμένα αντικείμενα δεν μπορούν να χάσουν την ευθυγράμμιση, αλλά τα οριζοντίως ευθυγραμμισμένα μπορούν."
+msgid ""
+"Remove higher groups first, unless removing another group will make it "
+"larger. Vertically aligned objects can't be misaligned, but horizontal "
+"arrangements can."
+msgstr ""
+"Αφαιρέστε τις ψηλότερες ομάδες πρώτα, αν δεν αφαιρεθεί και άλλη ομάδα θα "
+"γίνει μεγαλύτερη. Τα καθέτως ευθυγραμμισμένα αντικείμενα δεν μπορούν να "
+"χάσουν την ευθυγράμμιση, αλλά τα οριζοντίως ευθυγραμμισμένα μπορούν."
 
 #: C/index.docbook:263(sect1/para)
-msgid "Since the score increases quadratically, big groups of objects are always better. For example, the points difference between a six object group and a seven object group is nine points. In a situation where you have a choice between merging two groups of two into four or just adding one more to the group of six then you should add the single object. Even though the groups of two you are left with score no points, the bigger group scores more overall."
-msgstr "Επειδή το σκορ αυξάνετε τετραγωνικά, είναι καλύτερο να έχετε μεγάλες ομάδες αντικειμένων. Για παράδειγμα, η διαφορά σε βαθμούς μεταξύ μιας ομάδας έξη αντικειμένων και μιας ομάδας επτά αντικειμένων είναι εννιά βαθμοί. Αν έχετε να επιλέξετε μεταξύ της συνένωσης δύο ομάδων των δύο σε δύο ομάδες των τέσσερα, ή να προσθέσετε ένα σε μια ομάδα των έξη, τότε είναι καλύτερο να επιλέξετε μια ομάδα των επτά αντικειμένων. Ακόμα και αν οι ομάδες των δύο που απομένουν δεν προσφέρουν βαθμούς, η μεγαλύτερη ομάδα παράγει περισσότερους βαθμούς συνολικά."
+msgid ""
+"Since the score increases quadratically, big groups of objects are always "
+"better. For example, the points difference between a six object group and a "
+"seven object group is nine points. In a situation where you have a choice "
+"between merging two groups of two into four or just adding one more to the "
+"group of six then you should add the single object. Even though the groups "
+"of two you are left with score no points, the bigger group scores more "
+"overall."
+msgstr ""
+"Επειδή το σκορ αυξάνετε τετραγωνικά, είναι καλύτερο να έχετε μεγάλες ομάδες "
+"αντικειμένων. Για παράδειγμα, η διαφορά σε βαθμούς μεταξύ μιας ομάδας έξη "
+"αντικειμένων και μιας ομάδας επτά αντικειμένων είναι εννιά βαθμοί. Αν έχετε "
+"να επιλέξετε μεταξύ της συνένωσης δύο ομάδων των δύο σε δύο ομάδες των "
+"τέσσερα, ή να προσθέσετε ένα σε μια ομάδα των έξη, τότε είναι καλύτερο να "
+"επιλέξετε μια ομάδα των επτά αντικειμένων. Ακόμα και αν οι ομάδες των δύο "
+"που απομένουν δεν προσφέρουν βαθμούς, η μεγαλύτερη ομάδα παράγει "
+"περισσότερους βαθμούς συνολικά."
 
 #: C/index.docbook:265(sect1/para)
-msgid "Don't forget the thousand point bonus for clearing all the balls. To get 1000 points from a single group you need 34 objects. You are very unlikely to be in a position where you have to sacrifice a group that large to clear the board."
-msgstr "Μην ξεχνάτε την επιβράβευση των χιλίων πόντων που παίρνετε για την απαλοιφή όλων των σφαιρών. Για να πάρετε 1000 πόντους από μία μοναδική ομάδα χρειάζεστε 34 αντικείμενα. Είνια πολύ ασυνήθιστο να είστε σε θέση όπου να χρειάζεται να θυσιάσετε μία μεγάλη ομάδα για να καθαρίσετε το αβάκιο."
+msgid ""
+"Don't forget the thousand point bonus for clearing all the balls. To get "
+"1000 points from a single group you need 34 objects. You are very unlikely "
+"to be in a position where you have to sacrifice a group that large to clear "
+"the board."
+msgstr ""
+"Μην ξεχνάτε την επιβράβευση των χιλίων πόντων που παίρνετε για την απαλοιφή "
+"όλων των σφαιρών. Για να πάρετε 1000 πόντους από μία μοναδική ομάδα "
+"χρειάζεστε 34 αντικείμενα. Είναι πολύ ασυνήθιστο να είστε σε θέση όπου να "
+"χρειάζεται να θυσιάσετε μία μεγάλη ομάδα για να καθαρίσετε το αβάκιο."
 
 #: C/index.docbook:270(sect1/title)
 msgid "About <application>Swell Foop</application>"
 msgstr "Περί του <application>Swell Foop</application>"
 
 #: C/index.docbook:271(sect1/para)
-msgid "<application>Swell Foop</application> was written by Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). To find more information about <application>Swell Foop</application>, please visit the <ulink url=\"http://live.gnome.org/GnomeGames/\" type=\"http\">GNOME Games web page</ulink>."
-msgstr "Το <application>Swell Foop</application> γράφτηκε από τον Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). Για να βρείτε περισσότερες πληροφορίες σχετικά με το <application>Swell Foop</application>, παρακαλούμε επισκευθείτε την <ulink url=\"http://live.gnome.org/GnomeGames/\" type=\"http\">Ιστοσελίδα παιχνιδιών GNOME</ulink>."
+msgid ""
+"<application>Swell Foop</application> was written by Callum McKenzie "
+"(<email>callum@physics.otago.ac.nz</email>). To find more information about "
+"<application>Swell Foop</application>, please visit the <ulink url=\"http://"
+"live.gnome.org/GnomeGames/\" type=\"http\">GNOME Games web page</ulink>."
+msgstr ""
+"Το <application>Swell Foop</application> γράφτηκε από τον Callum McKenzie "
+"(<email>callum@physics.otago.ac.nz</email>). Για να βρείτε περισσότερες "
+"πληροφορίες σχετικά με το <application>Swell Foop</application>, παρακαλούμε "
+"επισκεφθείτε την <ulink url=\"http://live.gnome.org/GnomeGames/\" type=\"http"
+"\">Ιστοσελίδα παιχνιδιών GNOME</ulink>."
 
 #: C/index.docbook:275(sect1/para)
-msgid "To report a bug or make a suggestion regarding this application or this manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Feedback section of the GNOME User Guide</ulink>."
-msgstr "Για να αναφέρετε ένα σφάλμα ή να κάνετε μια πρόταση σχετικά με αυτή την εφαρμογή ή αυτό το εγχειρίδιο, ακολουθήστε τις οδηγίες στη <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">σελίδα ανάδρασης GNOME </ulink>."
+msgid ""
+"To report a bug or make a suggestion regarding this application or this "
+"manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-"
+"bugs\" type=\"help\">Feedback section of the GNOME User Guide</ulink>."
+msgstr ""
+"Για να αναφέρετε ένα σφάλμα ή να κάνετε μια πρόταση σχετικά με αυτή την "
+"εφαρμογή ή αυτό το εγχειρίδιο, ακολουθήστε τις οδηγίες στη <ulink url="
+"\"ghelp:user-guide?feedback-bugs\" type=\"help\">σελίδα ανάδρασης GNOME </"
+"ulink>."
 
 #: C/index.docbook:281(sect1/para)
-msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A <ulink url=\"ghelp:gpl\" type=\"help\">copy of this license</ulink> is included with this documentation; another can be found in the file COPYING included with the source code of this program."
-msgstr "Αυτό το πρόγραμμα διανέμεται υπό τους όρους της Γενικής Δημόσιας Άδειας GNU όπως δημοσιεύεται από το Ίδρυμα Ελεύθερου Λογισμικού, είτε με την έκδοση 2 της Άδειας, είτε (σαν επιλογή σας) με κάθε μεταγενέστερη έκδοση. Με αυτήν την τεκμηρίωση συμπεριλαμβάνεται ένα <ulink url=\"ghelp:gpl\" type=\"help\">αντίγραφο της άδειας</ulink>, ένα άλλο μπορεί να βρεθεί στο αρχείο COPYING, με τον πηγαίο κώδικα του προγράμματος."
+msgid ""
+"This program is distributed under the terms of the GNU General Public "
+"license as published by the Free Software Foundation; either version 2 of "
+"the License, or (at your option) any later version. A <ulink url=\"ghelp:gpl"
+"\" type=\"help\">copy of this license</ulink> is included with this "
+"documentation; another can be found in the file COPYING included with the "
+"source code of this program."
+msgstr ""
+"Αυτό το πρόγραμμα διανέμεται υπό τους όρους της Γενικής Δημόσιας Άδειας GNU "
+"όπως δημοσιεύεται από το Ίδρυμα Ελεύθερου Λογισμικού, είτε με την έκδοση 2 "
+"της Άδειας, είτε (σαν επιλογή σας) με κάθε μεταγενέστερη έκδοση. Με αυτήν "
+"την τεκμηρίωση συμπεριλαμβάνεται ένα <ulink url=\"ghelp:gpl\" type=\"help"
+"\">αντίγραφο της άδειας</ulink>, ένα άλλο μπορεί να βρεθεί στο αρχείο "
+"COPYING, με τον πηγαίο κώδικα του προγράμματος."
 
 #: C/legal.xml:9(para/ulink)
 msgid "link"
 msgstr "σύνδεσμο"
 
 #: C/legal.xml:2(legalnotice/para)
-msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed with this manual."
-msgstr "Παρέχεται άδεια για την αντιγραφή, διανομή και/ή τροποποίηση αυτού του εγγράφου υπό τους όρους της GNU Free Documentation License (GFDL), Έκδοση 1.1 ή μεταγενέστερης που δημοσιεύεται από το Free Software Foundation χωρίς αμετάβλητα τμήματα, χωρίς κείμενα πρωτοσέλιδου, και χωρίς κείμενα οπισθόφυλλου. Μπορεί να βρείτε ένα αντίγραφο της GFDL στο <_:ulink-1/> ή στο αρχείο COPYING-DOCS που διανέμεται με αυτό το εγχειρίδιο."
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Παρέχεται άδεια για την αντιγραφή, διανομή και/ή τροποποίηση αυτού του "
+"εγγράφου υπό τους όρους της GNU Free Documentation License (GFDL), Έκδοση "
+"1.1 ή μεταγενέστερης που δημοσιεύεται από το Free Software Foundation χωρίς "
+"αμετάβλητα τμήματα, χωρίς κείμενα πρωτοσέλιδου, και χωρίς κείμενα "
+"οπισθόφυλλου. Μπορεί να βρείτε ένα αντίγραφο της GFDL στο <_:ulink-1/> ή στο "
+"αρχείο COPYING-DOCS που διανέμεται με αυτό το εγχειρίδιο."
 
 #: C/legal.xml:12(legalnotice/para)
-msgid "This manual is part of a collection of GNOME manuals distributed under the GFDL. If you want to distribute this manual separately from the collection, you can do so by adding a copy of the license to the manual, as described in section 6 of the license."
-msgstr "Αυτός ο οδηγός είναι μέρος μιας συλλογής οδηγών του GNOME που διανέμονται υπό το GFDL. Αν επιθυμείτε να διανείμετε αυτόν τον οδηγό ξεχωριστά από τη συλλογή, μπορείτε να το πραγματοποιήσετε προσθέτοντας ένα αντίγραφο της άδειας στον οδηγό, όπως περιγράφεται στο 6ο τμήμα της άδειας."
+msgid ""
+"This manual is part of a collection of GNOME manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+"Αυτός ο οδηγός είναι μέρος μιας συλλογής οδηγών του GNOME που διανέμονται "
+"υπό το GFDL. Αν επιθυμείτε να διανείμετε αυτόν τον οδηγό ξεχωριστά από τη "
+"συλλογή, μπορείτε να το πραγματοποιήσετε προσθέτοντας ένα αντίγραφο της "
+"άδειας στον οδηγό, όπως περιγράφεται στο 6ο τμήμα της άδειας."
 
 #: C/legal.xml:19(legalnotice/para)
-msgid "Many of the names used by companies to distinguish their products and services are claimed as trademarks. Where those names appear in any GNOME documentation, and the members of the GNOME Documentation Project are made aware of those trademarks, then the names are in capital letters or initial capital letters."
-msgstr "Πολλά από τα ονόματα που χρησιμοποιούνται από επιχειρήσεις για να διακρίνουν τα προϊόντα τους και τις υπηρεσίες ζητούνται σαν εμπορικά σήματα. Όπου εμφανίζονται αυτά τα ονόματα σε κάποια τεκμηρίωση του GNOME, και τα μέλη του GNOME Documentation Project γνωρίουν για αυτά τα εμπορικά σήματα, τότε τα ονόματα είναι με κεφαλαία γράμματα ή με αρχικά κεφαλαία γράμματα."
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any GNOME "
+"documentation, and the members of the GNOME Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Πολλά από τα ονόματα που χρησιμοποιούνται από επιχειρήσεις για να διακρίνουν "
+"τα προϊόντα τους και τις υπηρεσίες ζητούνται σαν εμπορικά σήματα. Όπου "
+"εμφανίζονται αυτά τα ονόματα σε κάποια τεκμηρίωση του GNOME, και τα μέλη του "
+"έργου τεκμηρίωσης του GNOME γνωρίζουν για αυτά τα εμπορικά σήματα, τότε τα "
+"ονόματα είναι με κεφαλαία γράμματα ή με αρχικά κεφαλαία γράμματα."
 
 #: C/legal.xml:35(listitem/para)
-msgid "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
-msgstr "ΤΟ ΠΑΡΟΝ ΕΓΓΡΑΦΟ ΠΑΡΕΧΕΤΑΙ \"ΩΣ ΕΧΕΙ\", ΧΩΡΙΣ ΟΠΟΙΑΔΗΠΟΤΕ ΕΓΓΥΗΣΗ, ΕΚΠΕΦΡΑΣΜΕΝΗ Ή ΥΠΑΙΝΙΣΣΟΜΕΝΗ, ΣΥΜΠΕΡΙΛΑΜΒΑΝΟΜΕΝΩΝ, ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ, ΕΓΓΥΗΣΕΩΝ ΟΤΙ ΤΟ ΕΓΓΡΑΦΟ Ή Η ΤΡΟΠΟΠΟΙΗΜΕΝΗ ΕΚΔΟΣΗ ΤΟΥ ΕΙΝΑΙ ΑΠΑΛΑΓΜΕΝΟ ΑΤΕΛΕΙΩΝ, ΕΜΠΟΡΕΥΣΙΜΟ, ΚΑΤΑΛΛΗΛΟ ΓΙΑ ΣΥΓΚΕΚΡΙΜΕΝΗ ΧΡΗΣΗ Ή ΑΠΑΡΑΒΙΑΣΤΟ. Ο ΧΡΗΣΤΗΣ ΑΝΑΛΑΜΒΑΝΕΙ ΚΑΘΕ ΚΙΝΔΥΝΟ ΠΟΥ ΜΠΟΡΕΙ ΝΑ ΠΡΟΚΥΨΕΙ ΩΣ ΠΡΟΣ ΤΗΝ ΠΟΙΟΤΗΤΑ, ΑΚΡΙΒΕΙΑ ΚΑΙ ΛΕΙΤΟΥΡΓΙΑ ΤΟΥ ΕΓΓΡΑΦΟΥ Ή ΤΩΝ ΤΡΟΠΟΠΟΙΗΜΕΝΩΝ ΕΚΔΟΣΕΩΝ ΤΟΥ. ΑΝ ΟΠΟΙΟΔΗΠΟΤΕ ΕΓΓΡΑΦΟ Ή ΤΡΟΠΟΠΟΙΗΜΕΝΗ ΕΚΔΟΣΗ ΤΟΥ ΑΠΟΔΕΙΧΘΟΥΝ ΕΛΛΑΤΩΜΑΤΙΚΑ ΜΕ ΟΠΟΙΟΝΔΗΠΟΤΕ ΤΡΟΠΟ, Ο ΤΕΛΙΚΟΣ ΧΡΗΣΤΗΣ (ΚΑΙ ΟΧΙ Ο ΑΡΧΙΚΟΣ ΣΥΓΓΡΑΦΕΑΣ, ΣΥΝΤΑΚΤΗΣ Ή ΟΠΟΙΟΣΔΗΠΟΤΕ ΤΟ ΔΙΕΝΗΜΕ) ΑΝΑΛΑΜΒΑΝΕΙ ΤΟ ΚΟΣΤΟΣ ΟΠΟΙΑΣΔΗΠΟΤΕ ΕΠΙΣΚΕΥΗΣ Ή ΔΙΟΡΘΩΣΗΣ. ΑΥΤΗ Η ΠΑΡΑΙΤΗΣΗ ΑΠΟ ΕΓΓΥΗΤΙΚΕΣ ΕΥΘΥΝΕΣ ΣΥΝΙΣΤΑ ΟΥΣΙΑΣΤΙΚΟ ΜΕΡΟΣ ΤΗΣ ΑΔΕΙΑΣ. ΟΥΔΕΜΙΑ ΧΡΗΣΗ ΟΙΟΥΔΗΠΟΤΕ ΕΓΓΡΑΦΟΥ Ή ΤΡΟΠΟΠΟΙΗΜΕΝΟΥ ΕΓΓΡΑΦΟΥ ΕΞΟΥΣΙΟΔΟΤΕΙΤΑΙ ΕΦΕΞΗΣ, ΠΑΡΑ ΥΠΟ ΤΟΝ ΟΡΟ ΤΗΣ ΩΣ ΑΝΩ ΠΑΡΑΙΤΗΣΗΣ ΚΑΙ"
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"ΤΟ ΠΑΡΟΝ ΕΓΓΡΑΦΟ ΠΑΡΕΧΕΤΑΙ \"ΩΣ ΕΧΕΙ\", ΧΩΡΙΣ ΟΠΟΙΑΔΗΠΟΤΕ ΕΓΓΥΗΣΗ, "
+"ΕΚΠΕΦΡΑΣΜΕΝΗ Ή ΥΠΑΙΝΙΣΣΟΜΕΝΗ, ΣΥΜΠΕΡΙΛΑΜΒΑΝΟΜΕΝΩΝ, ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ, "
+"ΕΓΓΥΗΣΕΩΝ ΟΤΙ ΤΟ ΕΓΓΡΑΦΟ Ή Η ΤΡΟΠΟΠΟΙΗΜΕΝΗ ΕΚΔΟΣΗ ΤΟΥ ΕΙΝΑΙ ΑΠΑΛΑΓΜΕΝΟ "
+"ΑΤΕΛΕΙΩΝ, ΕΜΠΟΡΕΥΣΙΜΟ, ΚΑΤΑΛΛΗΛΟ ΓΙΑ ΣΥΓΚΕΚΡΙΜΕΝΗ ΧΡΗΣΗ Ή ΑΠΑΡΑΒΙΑΣΤΟ. Ο "
+"ΧΡΗΣΤΗΣ ΑΝΑΛΑΜΒΑΝΕΙ ΚΑΘΕ ΚΙΝΔΥΝΟ ΠΟΥ ΜΠΟΡΕΙ ΝΑ ΠΡΟΚΥΨΕΙ ΩΣ ΠΡΟΣ ΤΗΝ "
+"ΠΟΙΟΤΗΤΑ, ΑΚΡΙΒΕΙΑ ΚΑΙ ΛΕΙΤΟΥΡΓΙΑ ΤΟΥ ΕΓΓΡΑΦΟΥ Ή ΤΩΝ ΤΡΟΠΟΠΟΙΗΜΕΝΩΝ ΕΚΔΟΣΕΩΝ "
+"ΤΟΥ. ΑΝ ΟΠΟΙΟΔΗΠΟΤΕ ΕΓΓΡΑΦΟ Ή ΤΡΟΠΟΠΟΙΗΜΕΝΗ ΕΚΔΟΣΗ ΤΟΥ ΑΠΟΔΕΙΧΘΟΥΝ "
+"ΕΛΛΑΤΩΜΑΤΙΚΑ ΜΕ ΟΠΟΙΟΝΔΗΠΟΤΕ ΤΡΟΠΟ, Ο ΤΕΛΙΚΟΣ ΧΡΗΣΤΗΣ (ΚΑΙ ΟΧΙ Ο ΑΡΧΙΚΟΣ "
+"ΣΥΓΓΡΑΦΕΑΣ, ΣΥΝΤΑΚΤΗΣ Ή ΟΠΟΙΟΣΔΗΠΟΤΕ ΤΟ ΔΙΕΝΗΜΕ) ΑΝΑΛΑΜΒΑΝΕΙ ΤΟ ΚΟΣΤΟΣ "
+"ΟΠΟΙΑΣΔΗΠΟΤΕ ΕΠΙΣΚΕΥΗΣ Ή ΔΙΟΡΘΩΣΗΣ. ΑΥΤΗ Η ΠΑΡΑΙΤΗΣΗ ΑΠΟ ΕΓΓΥΗΤΙΚΕΣ ΕΥΘΥΝΕΣ "
+"ΣΥΝΙΣΤΑ ΟΥΣΙΑΣΤΙΚΟ ΜΕΡΟΣ ΤΗΣ ΑΔΕΙΑΣ. ΟΥΔΕΜΙΑ ΧΡΗΣΗ ΟΙΟΥΔΗΠΟΤΕ ΕΓΓΡΑΦΟΥ Ή "
+"ΤΡΟΠΟΠΟΙΗΜΕΝΟΥ ΕΓΓΡΑΦΟΥ ΕΞΟΥΣΙΟΔΟΤΕΙΤΑΙ ΕΦΕΞΗΣ, ΠΑΡΑ ΥΠΟ ΤΟΝ ΟΡΟ ΤΗΣ ΩΣ ΑΝΩ "
+"ΠΑΡΑΙΤΗΣΗΣ ΚΑΙ"
 
 #: C/legal.xml:55(listitem/para)
-msgid "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES."
-msgstr "ΣΕ ΚΑΜΙΑ ΠΕΡΙΠΤΩΣΗ ΚΑΙ ΥΠΟ ΚΑΜΙΑ ΝΟΜΙΚΗ ΣΥΝΘΗΚΗ, ΕΙΤΕ ΜΕΣΩ ΣΥΜΒΟΛΑΙΩΝ Ή ΑΛΛΙΩΣ, ΔΕΝ ΕΥΘΥΝΟΝΤΑΙ Ο ΣΥΓΓΡΑΦΕΑΣ, Ο ΔΙΑΝΟΜΕΑΣ, Η ΑΛΛΟΣ ΣΥΝΥΠΕΥΘΥΝΟΣ ΓΙΑ ΤΗΝ ΣΥΓΓΡΑΦΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ, ΓΙΑ ΕΜΜΕΣΕΣ Η ΑΜΕΣΕΣ, ΤΥΧΑΙΕΣ Ή ΜΗ ΖΗΜΙΕΣ ΠΑΝΤΩΣ ΦΥΣΕΩΣ ΠΟΥ ΠΡΟΕΡΧΟΝΤΑΙ ΑΠΟ ΤΗΝ ΧΡΗΣΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ ΚΑΙ/Ή ΠΑΡΑΛΛΑΓΩΝ ΑΥΤΗΣ ΑΚΟΜΑ ΚΑΙ ΕΑΝ ΕΧΕΙ ΥΠΑΡΞΕΙ ΠΡΟΕΙΔΟΠΟΙΗΣΗ ΓΙΑ ΤΗΝ ΠΙΘΑΝΟΤΗΤΑ ΥΠΑΡΞΗΣ ΤΕΤΟΙΩΝ ΖΗΜΙΩΝ."
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"ΣΕ ΚΑΜΙΑ ΠΕΡΙΠΤΩΣΗ ΚΑΙ ΥΠΟ ΚΑΜΙΑ ΝΟΜΙΚΗ ΣΥΝΘΗΚΗ, ΕΙΤΕ ΜΕΣΩ ΣΥΜΒΟΛΑΙΩΝ Ή "
+"ΑΛΛΙΩΣ, ΔΕΝ ΕΥΘΥΝΟΝΤΑΙ Ο ΣΥΓΓΡΑΦΕΑΣ, Ο ΔΙΑΝΟΜΕΑΣ, Η ΑΛΛΟΣ ΣΥΝΥΠΕΥΘΥΝΟΣ ΓΙΑ "
+"ΤΗΝ ΣΥΓΓΡΑΦΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ, ΓΙΑ ΕΜΜΕΣΕΣ Η ΑΜΕΣΕΣ, ΤΥΧΑΙΕΣ Ή ΜΗ ΖΗΜΙΕΣ "
+"ΠΑΝΤΩΣ ΦΥΣΕΩΣ ΠΟΥ ΠΡΟΕΡΧΟΝΤΑΙ ΑΠΟ ΤΗΝ ΧΡΗΣΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ ΚΑΙ/Ή ΠΑΡΑΛΛΑΓΩΝ "
+"ΑΥΤΗΣ ΑΚΟΜΑ ΚΑΙ ΕΑΝ ΕΧΕΙ ΥΠΑΡΞΕΙ ΠΡΟΕΙΔΟΠΟΙΗΣΗ ΓΙΑ ΤΗΝ ΠΙΘΑΝΟΤΗΤΑ ΥΠΑΡΞΗΣ "
+"ΤΕΤΟΙΩΝ ΖΗΜΙΩΝ."
 
 #: C/legal.xml:28(legalnotice/para)
-msgid "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: <_:orderedlist-1/>"
-msgstr "ΤΟ ΕΓΓΡΑΦΟ ΚΑΙ ΟΙ ΤΡΟΠΟΠΟΙΗΜΕΝΕΣ ΕΚΔΟΣΕΙΣ ΤΟΥ ΕΓΓΡΑΦΟΥ ΠΑΡΕΧΟΝΤΑΙ ΥΠΟ ΤΟΥΣ ΟΡΟΥΣ ΤΗΣ ΑΔΕΙΑΣ GNU FREE DOCUMENTATION LICENSE, ΜΕ ΤΗΝ ΕΠΙΠΛΕΟΝ ΚΑΤΑΝΟΗΣΗ ΟΤΙ: <_:orderedlist-1/>"
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
+msgstr ""
+"ΤΟ ΕΓΓΡΑΦΟ ΚΑΙ ΟΙ ΤΡΟΠΟΠΟΙΗΜΕΝΕΣ ΕΚΔΟΣΕΙΣ ΤΟΥ ΕΓΓΡΑΦΟΥ ΠΑΡΕΧΟΝΤΑΙ ΥΠΟ ΤΟΥΣ "
+"ΟΡΟΥΣ ΤΗΣ ΑΔΕΙΑΣ GNU FREE DOCUMENTATION LICENSE, ΜΕ ΤΗΝ ΕΠΙΠΛΕΟΝ ΚΑΤΑΝΟΗΣΗ "
+"ΟΤΙ: <_:orderedlist-1/>"
 
 #~ msgid ""
 #~ "@@image: 'figures/start-up.png'; md5=e1ae130ce601d40e62b9ea8794ccdf87"
