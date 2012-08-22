@@ -256,8 +256,8 @@ msgid "To report a bug or make a suggestion regarding this application or this m
 msgstr "Чтобы сообщить об ошибке или внести предложение относительно этого приложения или данного руководства следуйте ссылке <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Обратная связь с GNOME</ulink>."
 
 #: C/swell-foop.xml:210(para) 
-msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url=\"ghelp:gpl\" type=\"help\">link</ulink>, or in the file COPYING included with the source code of this program."
-msgstr "Эта программа распространяется при условии соблюдения GNU General Public license как распространяемой Фондом свободного программного обеспечения, версии 2 или (на ваш выбор) любой более поздней версии. Копию данной лицензии можно найти по этой <ulink url=\"ghelp:gpl\" type=\"help\">ссылке</ulink> или в файле COPYING, включённом в исходные тексты этой программы."
+msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url=\"help:gpl\" type=\"help\">link</ulink>, or in the file COPYING included with the source code of this program."
+msgstr "Эта программа распространяется при условии соблюдения GNU General Public license как распространяемой Фондом свободного программного обеспечения, версии 2 или (на ваш выбор) любой более поздней версии. Копию данной лицензии можно найти по этой <ulink url=\"help:gpl\" type=\"help\">ссылке</ulink> или в файле COPYING, включённом в исходные тексты этой программы."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/swell-foop.xml:0(None) 
