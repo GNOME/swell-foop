@@ -34,11 +34,6 @@ public class SwellFoop : Gtk.Application
         { "quit",          quit_cb        }
     };
 
-    private const Gtk.ActionEntry actions[] =
-    {
-       { "NewGame", GnomeGamesSupport.STOCK_NEW_GAME, null, null, null, new_game_cb }
-    };
-
     /* Constructor */
     public SwellFoop ()
     {
@@ -54,11 +49,6 @@ public class SwellFoop : Gtk.Application
         GnomeGamesSupport.stock_init ();
 
         add_action_entries (action_entries, this);
-
-        var action_group = new Gtk.ActionGroup ("group");
-        action_group.set_translation_domain (GETTEXT_PACKAGE);
-        action_group.add_actions (actions, this);
-        action_group.get_action ("NewGame").is_important = true;
 
         /* Create the main window */
         main_window = new Gtk.ApplicationWindow (this);
@@ -86,28 +76,17 @@ public class SwellFoop : Gtk.Application
         set_app_menu (menu);
 
         /* Create a toolbar */
-        var ui_manager = new Gtk.UIManager ();
-        ui_manager.insert_action_group (action_group, 0);
-        try
-        {
-            var ui_description =
-            "<ui>" +
-            "    <toolbar name='Toolbar'>" +
-            "    </toolbar>" +
-            "</ui>";
-            ui_manager.add_ui_from_string (ui_description, -1);
-        }
-        catch (Error e)
-        {
-            warning ("Failed to load UI: %s", e.message);
-        }
-        main_window.add_accel_group (ui_manager.get_accel_group ());
-
-        var toolbar = (Gtk.Toolbar) ui_manager.get_widget ("/Toolbar");
+        var toolbar = new Gtk.Toolbar ();
         toolbar.show_arrow = false;
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
         toolbar.show ();
         vbox.pack_start (toolbar, false, true, 0);
+
+        var new_game_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_NEW_GAME);
+        new_game_button.action_name = "app.new-game";
+        new_game_button.is_important = true;
+        new_game_button.show ();
+        toolbar.insert (new_game_button, -1);
 
         /* Create a label in toolbar showing the score etc. */
         var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
