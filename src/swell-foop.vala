@@ -46,9 +46,8 @@ public class SwellFoop : Gtk.Application
 
         settings = new Settings ("org.gnome.swell-foop");
 
-        GnomeGamesSupport.stock_init ();
-
         add_action_entries (action_entries, this);
+        add_accelerator ("<Primary>n", "app.new-game", null);
 
         /* Create the main window */
         main_window = new Gtk.ApplicationWindow (this);
@@ -82,7 +81,10 @@ public class SwellFoop : Gtk.Application
         toolbar.show ();
         vbox.pack_start (toolbar, false, true, 0);
 
-        var new_game_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_NEW_GAME);
+        var image = new Gtk.Image.from_icon_name ("document-new", Gtk.IconSize.LARGE_TOOLBAR);
+        image.show ();
+        var new_game_button = new Gtk.ToolButton (image, "_New");
+        new_game_button.use_underline = true;
         new_game_button.action_name = "app.new-game";
         new_game_button.is_important = true;
         new_game_button.show ();
