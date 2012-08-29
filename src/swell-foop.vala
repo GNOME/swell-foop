@@ -380,13 +380,15 @@ public class SwellFoop : Gtk.Application
         string[] artists = { "Tim Horton", null };
         string[] documenters = { null };
 
+        var license = "Swell Foop is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n\nSwell Foop is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with Swell Foop; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA";
+
         Gtk.show_about_dialog (main_window,
                                "program-name", _("Swell Foop"),
                                "version", VERSION,
                                "comments",
                                _("I want to play that game! You know, they all light-up and you click on them and they vanish!\n\nSwell Foop is a part of GNOME Games."),
                                "copyright", _("Copyright \xc2\xa9 2009 Tim Horton"),
-                               "license", GnomeGamesSupport.get_license (_("Swell Foop")),
+                               "license", license,
                                "wrap-license", true,
                                "authors", authors,
                                "artists", artists,
