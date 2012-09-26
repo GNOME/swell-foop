@@ -29,14 +29,4 @@ DISTCLEANFILES = \
 
 @INTLTOOL_SCHEMAS_RULE@
 
-install-scorefiles-local:
-	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
-	-for i in small normal large; do \
-		touch $(DESTDIR)$(scoredir)/swell-foop.$$i.scores; \
-		chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/swell-foop.$$i.scores; \
-		chmod 664 $(DESTDIR)$(scoredir)/swell-foop.$$i.scores; \
-	done
-
-install-data-local: install-scorefiles-local
-
 -include $(top_srcdir)/git.mk
