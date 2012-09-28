@@ -54,6 +54,7 @@ public class SwellFoop : Gtk.Application
         window = new Gtk.ApplicationWindow (this);
         window.set_title (_("Swell Foop"));
         window.resizable = false;
+        window.set_events (window.get_events () | Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
 
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         vbox.show ();
@@ -144,35 +145,34 @@ public class SwellFoop : Gtk.Application
         /* When the mouse leaves the window we need to update the view */
         clutter_embed.leave_notify_event.connect (view.board_left_cb);
 
-        stage.key_release_event.connect (key_release_event_cb);
-
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "swell-foop", "history"));
         history.load ();
+
+        window.key_press_event.connect (key_press_event_cb);
     }
 
-    private bool key_release_event_cb (Clutter.Actor actor, Clutter.KeyEvent event)
+    private bool key_press_event_cb (Gtk.Widget widget, Gdk.EventKey event)
     {
         switch (event.keyval)
         {
-            case Clutter.Key.F2:
+            case Gdk.Key.F2:
                 new_game ();
                 break;
-            case Clutter.Key.Up:
+            case Gdk.Key.Up:
                 view.cursor_move (0, 1);
                 break;
-            case Clutter.Key.Down:
+            case Gdk.Key.Down:
                 view.cursor_move (0, -1);
                 break;
-            case Clutter.Key.Left:
+            case Gdk.Key.Left:
                 view.cursor_move (-1, 0);
                 break;
-            case Clutter.Key.Right:
+            case Gdk.Key.Right:
                 view.cursor_move (1, 0);
                 break;
             case Clutter.Key.space:
-            case Clutter.Key.Return:
                 view.cursor_click ();
-                break;
+                return true; //handle this one to avoid activating the toolbar button
             default:
                 break;
         }
