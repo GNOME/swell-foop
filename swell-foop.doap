@@ -4,7 +4,7 @@
          xmlns:gnome="http://api.gnome.org/doap-extensions#"
          xmlns="http://usefulinc.com/ns/doap#">
 
-  <name xml:lang="en">gnome-games</name>
+  <name xml:lang="en">swell-foop</name>
   <shortdesc xml:lang="en">Clear the screen by removing groups of colored and shaped tiles</shortdesc>
   <description xml:lang="en">Clear the screen by removing groups of colored and shaped tiles</description>
   <homepage rdf:resource="http://live.gnome.org/Swell Foop" />
