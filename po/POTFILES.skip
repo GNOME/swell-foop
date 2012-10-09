@@ -1,4 +1,4 @@
-swell-foop/data/swell-foop.desktop.in
-swell-foop/src/game.c
-swell-foop/src/game-view.c
-swell-foop/src/swell-foop.c
+data/swell-foop.desktop.in
+src/game.c
+src/game-view.c
+src/swell-foop.c

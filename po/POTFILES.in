@@ -1,9 +1,9 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
 [encoding: UTF-8]
-swell-foop/data/org.gnome.swell-foop.gschema.xml.in
-[type: gettext/glade]swell-foop/data/preferences.ui
-swell-foop/data/swell-foop.desktop.in.in
-swell-foop/src/game.vala
-swell-foop/src/game-view.vala
-swell-foop/src/swell-foop.vala
+data/org.gnome.swell-foop.gschema.xml.in
+[type: gettext/glade]data/preferences.ui
+data/swell-foop.desktop.in.in
+src/game.vala
+src/game-view.vala
+src/swell-foop.vala
