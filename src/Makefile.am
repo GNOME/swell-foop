@@ -17,16 +17,13 @@ swell_foop_CFLAGS = \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DDATADIR=\""$(datadir)/swell-foop"\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
-	$(GHTREAD_CFLAGS) \
-	$(GMODULE_CFLAGS) \
-	$(GTK_CFLAGS) \
-	$(CLUTTER_GTK_CFLAGS)
+	$(SWELL_FOOP_CFLAGS)
 
 swell_foop_LDADD =	\
-	$(GTHREAD_LIBS)	\
-	$(GMODULE_LIBS) \
-	$(GTK_LIBS)	\
-	$(CLUTTER_GTK_LIBS)	\
-	$(INTLLIBS)
+	$(SWELL_FOOP_LIBS)
+
+CLEANFILES = \
+	$(patsubst %.vala,%.c,$(filter %.vala, $(SOURCES))) \
+	*_vala.stamp
 
 -include $(top_srcdir)/git.mk
