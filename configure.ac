@@ -23,6 +23,8 @@ PKG_CHECK_MODULES(SWELL_FOOP, [
   clutter-gtk-1.0 >= $CLUTTER_REQUIRED
 ])
 
+AC_CHECK_LIB([m],[floor])
+
 dnl ###########################################################################
 dnl Internationalization
 dnl ###########################################################################
