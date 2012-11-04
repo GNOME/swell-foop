@@ -49,6 +49,8 @@ public class SwellFoop : Gtk.Application
 
         add_action_entries (action_entries, this);
         add_accelerator ("<Primary>n", "app.new-game", null);
+        add_accelerator ("F1", "app.help", null);
+        add_accelerator ("<Primary>q", "app.quit", null);
 
         /* Create the main window */
         window = new Gtk.ApplicationWindow (this);
