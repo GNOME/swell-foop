@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 3.7.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-21 11:36+0100\n"
-"PO-Revision-Date: 2013-01-21 11:37+0100\n"
+"POT-Creation-Date: 2013-01-29 19:27+0100\n"
+"PO-Revision-Date: 2013-01-29 19:27+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -87,6 +87,10 @@ msgstr "Operasjon"
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
 "Tøm skjermen ved å fjerne grupper med fargede fliser med forskjellig form"
+
+#: ../data/swell-foop.desktop.in.in.h:3
+msgid "game;logic;board;same;matching;"
+msgstr "spill;logikk;brett;like fliser;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:433
