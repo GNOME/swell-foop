@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-27 18:12+0100\n"
-"PO-Revision-Date: 2013-01-27 18:13+0100\n"
+"POT-Creation-Date: 2013-02-04 17:52+0100\n"
+"PO-Revision-Date: 2013-02-04 17:53+0100\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -91,6 +91,10 @@ msgstr "Operazione"
 #: ../data/swell-foop.desktop.in.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Pulisci lo schermo rimuovendo gruppi di tessere colorate e sagomate"
+
+#: ../data/swell-foop.desktop.in.in.h:3
+msgid "game;logic;board;same;matching;"
+msgstr "gioco;giochi;board;tavola;corrispondenza;tessere;caselle;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:433
