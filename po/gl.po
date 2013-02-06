@@ -10,13 +10,13 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-24 23:18+0100\n"
-"PO-Revision-Date: 2012-12-24 23:18+0200\n"
+"POT-Creation-Date: 2013-02-07 00:39+0100\n"
+"PO-Revision-Date: 2013-02-07 00:44+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -97,6 +97,10 @@ msgstr "Operación"
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
 "Limpe a pantalla retirando grupos de bólas coloreadas e con forma de tesela "
+
+#: ../data/swell-foop.desktop.in.in.h:3
+msgid "game;logic;board;same;matching;"
+msgstr "xogo;lóxica;taboleiro;mesmo;coincidencia;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:433
