@@ -1,0 +1,203 @@
+# Aragonese translation for swell-foop.
+# Copyright (C) 2013 swell-foop's COPYRIGHT HOLDER
+# This file is distributed under the same license as the swell-foop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: swell-foop master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-foop&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-02-19 12:50+0000\n"
+"PO-Revision-Date: 2013-02-19 22:46+0100\n"
+"Last-Translator: Daniel Martinez <entaltoaragon@gmail.com>\n"
+"Language-Team: Aragonese <softaragones@googlegroups.com>\n"
+"Language: an\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+msgid "The theme to use"
+msgstr "O tema que s'usará"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+msgid "The title of the tile theme to use."
+msgstr "O titol d'o tema de fichas que s'usará."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+msgid "Board size"
+msgstr "Grandaria d'o tablero"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+msgid "The size of the game board."
+msgstr "A grandaria d'o tablero de chuego."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+msgid "Board color count"
+msgstr "Conteo de color d'o tablero"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+msgid "The number of colors of tiles to use in the game."
+msgstr "O numero de colors de fichas que s'usarán en o chuego."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+msgid "Zealous animation"
+msgstr "Animación zealous"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+msgid "Use more flashy, but slower, animations."
+msgstr "Usar animación mas pinchas, pero mas lentas."
+
+#: ../data/preferences.ui.h:1
+#: ../data/swell-foop.desktop.in.in.h:1
+#: ../src/swell-foop.vala:57
+#: ../src/swell-foop.vala:388
+#: ../src/swell-foop.vala:451
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/preferences.ui.h:2
+msgid "_Board size:"
+msgstr "Grandaria d'o ta_blero:"
+
+#: ../data/preferences.ui.h:3
+msgid "_Number of colors:"
+msgstr "_Numero de colors:"
+
+#: ../data/preferences.ui.h:4
+msgid "Setup"
+msgstr "Achustes"
+
+#: ../data/preferences.ui.h:5
+msgid "_Theme:"
+msgstr "_Tema:"
+
+#: ../data/preferences.ui.h:6
+msgid "Appearance"
+msgstr "Aspecto"
+
+#: ../data/preferences.ui.h:7
+msgid "_Zealous Animation"
+msgstr "Animación _zealous"
+
+#: ../data/preferences.ui.h:8
+msgid "Operation"
+msgstr "Operación"
+
+#: ../data/swell-foop.desktop.in.in.h:2
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "Escosque a pantalla eliminando grupos de fichas coloreadas y con formas"
+
+#: ../data/swell-foop.desktop.in.in.h:3
+msgid "game;logic;board;same;matching;"
+msgstr "chuego;lochica;tablero;iguals;coincidents;"
+
+#. Label showing the number of points at the end of the game
+#: ../src/game-view.vala:433
+#, c-format
+msgid "%u point"
+msgid_plural "%u points"
+msgstr[0] "%u punto"
+msgstr[1] "%u puntos"
+
+#: ../src/game-view.vala:434
+#, c-format
+msgid "Game Over!"
+msgstr "Chuego rematau"
+
+#: ../src/swell-foop.vala:69
+msgid "_New Game"
+msgstr "Chuego _nuevo"
+
+#: ../src/swell-foop.vala:70
+msgid "_Scores"
+msgstr "_Puntuación"
+
+#: ../src/swell-foop.vala:71
+msgid "_Preferences"
+msgstr "_Preferencias"
+
+#: ../src/swell-foop.vala:74
+msgid "_Help"
+msgstr "Ad_uya"
+
+#: ../src/swell-foop.vala:75
+msgid "_About"
+msgstr "_Arredol"
+
+#: ../src/swell-foop.vala:78
+msgid "_Quit"
+msgstr "_Surtir"
+
+#: ../src/swell-foop.vala:125
+msgid "Small"
+msgstr "Chicot"
+
+#: ../src/swell-foop.vala:126
+msgid "Normal"
+msgstr "Normal"
+
+#: ../src/swell-foop.vala:127
+msgid "Large"
+msgstr "Gran"
+
+#. I left one more blank space at the end to make the score not too close to the window border
+#: ../src/swell-foop.vala:203
+#, c-format
+msgid "Score: %4u "
+msgstr "Puntuación: %4u "
+
+#: ../src/swell-foop.vala:254
+msgid "Colors"
+msgstr "Colors"
+
+#: ../src/swell-foop.vala:258
+msgid "Shapes and Colors"
+msgstr "Colors y formas"
+
+#: ../src/swell-foop.vala:391
+msgid ""
+"I want to play that game! You know, they all light-up and you click on them and they vanish!\n"
+"\n"
+"Swell Foop is a part of GNOME Games."
+msgstr ""
+"Yo quiero chugar a ixe chuego. Ya sabes, totz s'encienden y pretas en ells y desapareixen.\n"
+"\n"
+"Swell Foop ye parte d'os Chuegos de GNOME."
+
+#: ../src/swell-foop.vala:392
+msgid "Copyright © 2009 Tim Horton"
+msgstr "Copyright © 2009 Tim Horton"
+
+#: ../src/swell-foop.vala:398
+msgid "translator-credits"
+msgstr "Daniel Martinez <entaltoaragon@gmail.com>, 2013"
+
+#: ../src/swell-foop.vala:401
+msgid "GNOME Games web site"
+msgstr "Pachina web d'os chuegos de GNOME"
+
+#: ../src/swell-foop.vala:486
+msgid "New Game"
+msgstr "Partida nueva"
+
+#: ../src/swell-foop.vala:501
+msgid "Size:"
+msgstr "Grandaria:"
+
+#: ../src/swell-foop.vala:526
+msgid "Date"
+msgstr "Calendata"
+
+#: ../src/swell-foop.vala:529
+msgid "Score"
+msgstr "Puntuación"
+
+#: ../src/swell-foop.vala:609
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u color"
+msgstr[1] "%u × %u, %u colors"
+
