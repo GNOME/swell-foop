@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:12+0000\n"
-"PO-Revision-Date: 2013-02-02 11:55+0900\n"
+"POT-Creation-Date: 2013-02-02 03:29+0000\n"
+"PO-Revision-Date: 2013-02-20 20:56+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
@@ -91,7 +91,7 @@ msgstr "رەڭلىك ياكى شەكىللىك ئۇرۇقلارنى چىقىرى
 
 #: ../data/swell-foop.desktop.in.in.h:3
 msgid "game;logic;board;same;matching;"
-msgstr "game؛logic؛board؛same؛matching؛ئويۇن؛لوگىكىلىق؛تاختا؛ئوخشاش؛مۇسابىقە؛"
+msgstr "game;logic;board;same;matching;ئويۇن;لوگىكىلىق;تاختا;ئوخشاش;مۇسابىقە;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:433
