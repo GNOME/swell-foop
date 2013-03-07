@@ -1,5 +1,5 @@
 # Brazilian Portuguese translation of gnome-games.
-# Copyright (C) 1999-2007 Free Software Foundation, Inc.
+# Copyright (C) 1999-2013 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999.
 # Cândida Nunes da Silva <candida@zaz.com.br>, 2000-2001.
@@ -22,15 +22,14 @@
 # Flamarion Jorge <jorge.flamarion@gmail.com>, 2011.
 # Djavan Fagundes <djavan@comum.org>, 2012.
 # Rafael Ferreira <rafael.f.f1@gmail.com>, 2012.
-# Enrico Nicoletto <liverig@gmail.com>, 2012.
+# Enrico Nicoletto <liverig@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-24 22:19+0000\n"
-"PO-Revision-Date: 2012-12-26 21:44-0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-foop&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-01-28 23:12+0000\n"
+"PO-Revision-Date: 2013-03-07 16:00-0300\n"
 "Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -73,8 +72,10 @@ msgstr "Animação rápida"
 msgid "Use more flashy, but slower, animations."
 msgstr "Usar animações mais brilhantes, porém mais lentas."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:57 ../src/swell-foop.vala:388
+#: ../data/preferences.ui.h:1
+#: ../data/swell-foop.desktop.in.in.h:1
+#: ../src/swell-foop.vala:57
+#: ../src/swell-foop.vala:388
 #: ../src/swell-foop.vala:451
 msgid "Swell Foop"
 msgstr "Swell Foop"
@@ -110,6 +111,10 @@ msgstr "Operação"
 #: ../data/swell-foop.desktop.in.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Limpe a tela removendo grupos de pedras coloridas e com formas"
+
+#: ../data/swell-foop.desktop.in.in.h:3
+msgid "game;logic;board;same;matching;"
+msgstr "game;jogo;jogos;lógica;tabuleiro;mesma;mesmo;coincidência;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:433
@@ -176,13 +181,11 @@ msgstr "Formas e cores"
 
 #: ../src/swell-foop.vala:391
 msgid ""
-"I want to play that game! You know, they all light-up and you click on them "
-"and they vanish!\n"
+"I want to play that game! You know, they all light-up and you click on them and they vanish!\n"
 "\n"
 "Swell Foop is a part of GNOME Games."
 msgstr ""
-"Eu quero jogar esse jogo! Você sabe, eles todos acendem e você clica neles e "
-"eles desaparecem!\n"
+"Eu quero jogar esse jogo! Você sabe, eles todos acendem e você clica neles e eles desaparecem!\n"
 "\n"
 "O Swell Foop faz parte do GNOME Games."
 
@@ -414,28 +417,28 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "_Appearance"
 #~ msgstr "_Aparência"
-
 #~ msgctxt "difficulty"
+
 #~ msgid "Easy"
 #~ msgstr "Fácil"
-
 #~ msgctxt "difficulty"
+
 #~ msgid "Normal"
 #~ msgstr "Normal"
-
 #~ msgctxt "difficulty"
+
 #~ msgid "Hard"
 #~ msgstr "Difícil"
-
 #~ msgctxt "chess-opponent"
+
 #~ msgid "Human"
 #~ msgstr "Humano"
-
 #~ msgctxt "chess-player"
+
 #~ msgid "White"
 #~ msgstr "Branca"
-
 #~ msgctxt "chess-player"
+
 #~ msgid "Black"
 #~ msgstr "Preta"
 
@@ -462,56 +465,56 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "Fancy"
 #~ msgstr "Fantasia"
-
 #~ msgctxt "chess-side"
+
 #~ msgid "White Side"
 #~ msgstr "Lado branco"
-
 #~ msgctxt "chess-side"
+
 #~ msgid "Black Side"
 #~ msgstr "Lado preto"
-
 #~ msgctxt "chess-side"
+
 #~ msgid "Human Side"
 #~ msgstr "Lado humano"
-
 #~ msgctxt "chess-side"
+
 #~ msgid "Current Player"
 #~ msgstr "Jogador atual"
-
 #~ msgctxt "chess-side"
+
 #~ msgid "Face to Face"
 #~ msgstr "Face a face"
-
 #~ msgctxt "chess-move-format"
+
 #~ msgid "Human"
 #~ msgstr "Humano"
-
 #~ msgctxt "chess-move-format"
+
 #~ msgid "Standard Algebraic"
 #~ msgstr "Algébrico padrão"
-
 #~ msgctxt "chess-move-format"
+
 #~ msgid "Figurine"
 #~ msgstr "Estatueta"
-
 #~ msgctxt "chess-move-format"
+
 #~ msgid "Long Algebraic"
 #~ msgstr "Algébrico longo"
-
 #~ msgctxt "chess-piece"
+
 #~ msgid "Queen"
 #~ msgstr "Dama"
-
 #~ msgctxt "chess-piece"
+
 #~ msgid "Knight"
 #~ msgstr "Cavalo"
-
 #~ msgctxt "chess-piece"
+
 #~ msgid "Rook"
 #~ msgstr "Torre"
-
 #~ msgctxt "chess-piece"
+
 #~ msgid "Bishop"
 #~ msgstr "Bispo"
 
@@ -790,16 +793,19 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgstr "_Salvar jogo para mais tarde"
 
 #~ msgid "second"
+
 #~ msgid_plural "seconds"
 #~ msgstr[0] "segundo"
 #~ msgstr[1] "segundos"
 
 #~ msgid "minute"
+
 #~ msgid_plural "minutes"
 #~ msgstr[0] "minuto"
 #~ msgstr[1] "minutos"
 
 #~ msgid "hour"
+
 #~ msgid_plural "hours"
 #~ msgstr[0] "hora"
 #~ msgstr[1] "horas"
@@ -1083,16 +1089,16 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgstr ""
 #~ "Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com "
 #~ "este programa. Caso contrário, veja <http://www.gnu.org/licenses/>."
-
 #~ msgctxt "board size"
+
 #~ msgid "Small"
 #~ msgstr "Pequeno"
-
 #~ msgctxt "board size"
+
 #~ msgid "Medium"
 #~ msgstr "Médio"
-
 #~ msgctxt "board size"
+
 #~ msgid "Large"
 #~ msgstr "Grande"
 
@@ -1455,36 +1461,36 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "Your score has made the top ten."
 #~ msgstr "Sua pontuação está entre as dez melhores."
-
 #~ msgctxt "game speed"
+
 #~ msgid "Beginner"
 #~ msgstr "Iniciante"
-
 #~ msgctxt "game speed"
+
 #~ msgid "Slow"
 #~ msgstr "Lento"
-
 #~ msgctxt "game speed"
+
 #~ msgid "Medium"
 #~ msgstr "Médio"
-
 #~ msgctxt "game speed"
+
 #~ msgid "Fast"
 #~ msgstr "Rápido"
-
 #~ msgctxt "game speed"
+
 #~ msgid "Beginner with Fakes"
 #~ msgstr "Iniciante com falsos"
-
 #~ msgctxt "game speed"
+
 #~ msgid "Slow with Fakes"
 #~ msgstr "Lento com falsos"
-
 #~ msgctxt "game speed"
+
 #~ msgid "Medium with Fakes"
 #~ msgstr "Médio com falsos"
-
 #~ msgctxt "game speed"
+
 #~ msgid "Fast with Fakes"
 #~ msgstr "Rápido com falsos"
 
@@ -1895,36 +1901,36 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "Disassemble a pile of tiles by removing matching pairs"
 #~ msgstr "Desmonte uma pilha de pedras removendo os pares iguais"
-
 #~ msgctxt "mahjongg map name"
+
 #~ msgid "The Ziggurat"
 #~ msgstr "O Ziggurat"
-
 #~ msgctxt "mahjongg map name"
+
 #~ msgid "Four Bridges"
 #~ msgstr "Quatro Pontes"
-
 #~ msgctxt "mahjongg map name"
+
 #~ msgid "Cloud"
 #~ msgstr "Nuvem"
-
 #~ msgctxt "mahjongg map name"
+
 #~ msgid "Tic-Tac-Toe"
 #~ msgstr "Jogo da Velha"
-
 #~ msgctxt "mahjongg map name"
+
 #~ msgid "Red Dragon"
 #~ msgstr "Dragão Vermelho"
-
 #~ msgctxt "mahjongg map name"
+
 #~ msgid "Pyramid's Walls"
 #~ msgstr "Muros da Pirâmide"
-
 #~ msgctxt "mahjongg map name"
+
 #~ msgid "Confounding Cross"
 #~ msgstr "Travessia Confusa"
-
 #~ msgctxt "mahjongg map name"
+
 #~ msgid "Difficult"
 #~ msgstr "Difícil"
 
@@ -2093,11 +2099,13 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgstr "Muito difícil"
 
 #~ msgid "Last played %(n)s second ago"
+
 #~ msgid_plural "Last played %(n)s seconds ago"
 #~ msgstr[0] "Jogado pela última vez há %(n)s segundo"
 #~ msgstr[1] "Jogado pela última vez há %(n)s segundos"
 
 #~ msgid "Last played %(n)s minute ago"
+
 #~ msgid_plural "Last played %(n)s minutes ago"
 #~ msgstr[0] "Jogado pela última vez há %(n)s minuto"
 #~ msgstr[1] "Jogado pela última vez há %(n)s minutos"
@@ -2127,16 +2135,19 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgstr "Quebra-cabeça muito difícil"
 
 #~ msgid "Played for %d hour"
+
 #~ msgid_plural "Played for %d hours"
 #~ msgstr[0] "Jogado por %d hora"
 #~ msgstr[1] "Jogado por %d horas"
 
 #~ msgid "Played for %d minute"
+
 #~ msgid_plural "Played for %d minutes"
 #~ msgstr[0] "Jogado por %d minuto"
 #~ msgstr[1] "Jogado por %d minutos"
 
 #~ msgid "Played for %d second"
+
 #~ msgid_plural "Played for %d seconds"
 #~ msgstr[0] "Jogado por %d segundo"
 #~ msgstr[1] "Jogado por %d segundos"
@@ -2211,16 +2222,19 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgstr "Destacar a linha, a coluna e a caixa atual"
 
 #~ msgid "You completed the puzzle in %d second"
+
 #~ msgid_plural "You completed the puzzle in %d seconds"
 #~ msgstr[0] "Você concluiu o quebra-cabeça em %d segundo"
 #~ msgstr[1] "Você concluiu o quebra-cabeça em %d segundos"
 
 #~ msgid "%d minute"
+
 #~ msgid_plural "%d minutes"
 #~ msgstr[0] "%d minuto"
 #~ msgstr[1] "%d minutos"
 
 #~ msgid "%d second"
+
 #~ msgid_plural "%d seconds"
 #~ msgstr[0] "%d segundo"
 #~ msgstr[1] "%d segundos"
@@ -2229,6 +2243,7 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgstr "Você concluiu o quebra-cabeça em %(minute)s e %(second)s"
 
 #~ msgid "%d hour"
+
 #~ msgid_plural "%d hours"
 #~ msgstr[0] "%d hora"
 #~ msgstr[1] "%d horas"
@@ -2237,11 +2252,13 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgstr "Você concluiu o quebra-cabeça em %(hour)s, %(minute)s e %(second)s"
 
 #~ msgid "You got %(n)s hint."
+
 #~ msgid_plural "You got %(n)s hints."
 #~ msgstr[0] "Você teve %(n)s dica"
 #~ msgstr[1] "Você teve %(n)s dicas"
 
 #~ msgid "You had %(n)s impossibility pointed out."
+
 #~ msgid_plural "You had %(n)s impossibilities pointed out."
 #~ msgstr[0] "Você teve %(n)s impossibilidade apontada."
 #~ msgstr[1] "Você teve %(n)s impossibilidades apontadas."
@@ -2376,8 +2393,8 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "Size of the board (0-2 = small-large, 3=custom)"
 #~ msgstr "Tamanho do tabuleiro (0-2 = pequeno-grande, 3=customizado)"
-
 #~ msgctxt "board size"
+
 #~ msgid "Custom"
 #~ msgstr "Personalizado"
 
@@ -2400,6 +2417,7 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgstr "_Iniciar jogo"
 
 #~ msgid "<b>%d</b> mine"
+
 #~ msgid_plural "<b>%d</b> mines"
 #~ msgstr[0] "<b>%d</b> mina"
 #~ msgstr[1] "<b>%d</b> minas"
@@ -2763,12 +2781,12 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "Number of trials for each roll for the computer"
 #~ msgstr "Número de tentativas para cada jogada para o computador"
-
 #~ msgctxt "game type"
+
 #~ msgid "Regular"
 #~ msgstr "Normal"
-
 #~ msgctxt "game type"
+
 #~ msgid "Colors"
 #~ msgstr "Colorido"
 
@@ -2785,6 +2803,7 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgstr "Pontuação do Tali"
 
 #~ msgid "%s wins the game with %d point"
+
 #~ msgid_plural "%s wins the game with %d points"
 #~ msgstr[0] "%s vence o jogo com %d ponto"
 #~ msgstr[1] "%s vence o jogo com %d pontos"
@@ -2846,8 +2865,8 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "_Difficulty:"
 #~ msgstr "_Dificuldade:"
-
 #~ msgctxt "difficulty"
+
 #~ msgid "Medium"
 #~ msgstr "Médio"
 
@@ -2991,16 +3010,16 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "_Tile set:"
 #~ msgstr "_Conjunto de pedras:"
-
 #~ msgctxt "score-dialog"
+
 #~ msgid "Time"
 #~ msgstr "Tempo"
-
 #~ msgctxt "score-dialog"
+
 #~ msgid "%1$dm %2$ds"
 #~ msgstr "%1$dm %2$ds"
-
 #~ msgctxt "score-dialog"
+
 #~ msgid "Name"
 #~ msgstr "Nome"
 
