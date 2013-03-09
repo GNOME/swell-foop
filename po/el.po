@@ -29,14 +29,14 @@
 # Simos Xenitellis <simos.lists@googlemail.com>, 2010.
 # Michael Kotsarinis <mk73628@hotmail.com>, 2010.
 # George Stefanakis <george.stefanakis@gmail.com>, 2011.
-# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2012.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-02 22:29+0000\n"
-"PO-Revision-Date: 2012-12-29 20:13+0300\n"
+"POT-Creation-Date: 2013-01-28 23:12+0000\n"
+"PO-Revision-Date: 2013-03-09 08:23+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
 "Language-Team: team@gnome.gr\n"
 "Language: el\n"
@@ -57,15 +57,15 @@ msgstr "Το όνομα του θέματος πλακιδίων που θα χ�
 
 #: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
 msgid "Board size"
-msgstr "Μέγεθος ταμπλό"
+msgstr "Μέγεθος πίνακα"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
 msgid "The size of the game board."
-msgstr "Το μέγεθος του ταμπλό του παιχνιδιού."
+msgstr "Το μέγεθος του πίνακα του παιχνιδιού."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
 msgid "Board color count"
-msgstr "Αριθμός χρωμάτων ταμπλό"
+msgstr "Αριθμός χρωμάτων πίνακα"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
 msgid "The number of colors of tiles to use in the game."
@@ -116,6 +116,10 @@ msgstr "Λειτουργία"
 #: ../data/swell-foop.desktop.in.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Καθαρίστε την οθόνη απομακρύνοντας ομάδες από χρωματιστά πλακάκια"
+
+#: ../data/swell-foop.desktop.in.in.h:3
+msgid "game;logic;board;same;matching;"
+msgstr "παιχνίδι;λογική;πίνακας;ίδιο;ταίριασμα;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:433
@@ -188,7 +192,7 @@ msgid ""
 "Swell Foop is a part of GNOME Games."
 msgstr ""
 "Θέλω να παίξω αυτό το παιχνίδι! Ξέρεις, αυτό όπου όλοι στριφογυρίζουν, και "
-"κάνεις κλικ πάνω τους και εξαφανίζονται!\n"
+"πατάς πάνω τους και εξαφανίζονται!\n"
 "\n"
 "Το Swell Foop είναι μέρος των παιχνιδιών του GNOME."
 
