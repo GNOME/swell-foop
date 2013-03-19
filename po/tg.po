@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tajik Gnome\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"foop&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-01-28 23:12+0000\n"
+"PO-Revision-Date: 2013-01-19 18:36+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: \n"
+"Language: Tajik\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+msgid "The theme to use"
+msgstr ""
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+msgid "The title of the tile theme to use."
+msgstr ""
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+msgid "Board size"
+msgstr ""
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+msgid "The size of the game board."
+msgstr ""
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+msgid "Board color count"
+msgstr ""
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+msgid "The number of colors of tiles to use in the game."
+msgstr ""
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+msgid "Zealous animation"
+msgstr ""
+
+#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+msgid "Use more flashy, but slower, animations."
+msgstr ""
+
+#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
+#: ../src/swell-foop.vala:57 ../src/swell-foop.vala:388
+#: ../src/swell-foop.vala:451
+msgid "Swell Foop"
+msgstr ""
+
+#: ../data/preferences.ui.h:2
+msgid "_Board size:"
+msgstr ""
+
+#: ../data/preferences.ui.h:3
+msgid "_Number of colors:"
+msgstr ""
+
+#: ../data/preferences.ui.h:4
+msgid "Setup"
+msgstr "Танзим"
+
+#: ../data/preferences.ui.h:5
+msgid "_Theme:"
+msgstr "_Мавзӯъ:"
+
+#: ../data/preferences.ui.h:6
+msgid "Appearance"
+msgstr "Намуди зоҳир"
+
+#: ../data/preferences.ui.h:7
+msgid "_Zealous Animation"
+msgstr ""
+
+#: ../data/preferences.ui.h:8
+msgid "Operation"
+msgstr "Кор"
+
+#: ../data/swell-foop.desktop.in.in.h:2
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr ""
+
+#: ../data/swell-foop.desktop.in.in.h:3
+msgid "game;logic;board;same;matching;"
+msgstr ""
+
+#. Label showing the number of points at the end of the game
+#: ../src/game-view.vala:433
+#, c-format
+msgid "%u point"
+msgid_plural "%u points"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/game-view.vala:434
+#, c-format
+msgid "Game Over!"
+msgstr ""
+
+#: ../src/swell-foop.vala:69
+msgid "_New Game"
+msgstr "_Бозии нав"
+
+#: ../src/swell-foop.vala:70
+msgid "_Scores"
+msgstr ""
+
+#: ../src/swell-foop.vala:71
+msgid "_Preferences"
+msgstr "_Хусусиятҳо"
+
+#: ../src/swell-foop.vala:74
+msgid "_Help"
+msgstr "_Кӯмак"
+
+#: ../src/swell-foop.vala:75
+msgid "_About"
+msgstr "_Дар бораи барнома"
+
+#: ../src/swell-foop.vala:78
+msgid "_Quit"
+msgstr "_Баромад"
+
+#: ../src/swell-foop.vala:125
+msgid "Small"
+msgstr "Хурд"
+
+#: ../src/swell-foop.vala:126
+msgid "Normal"
+msgstr "Оддӣ"
+
+#: ../src/swell-foop.vala:127
+msgid "Large"
+msgstr "Калон"
+
+#. I left one more blank space at the end to make the score not too close to the window border
+#: ../src/swell-foop.vala:203
+#, c-format
+msgid "Score: %4u "
+msgstr ""
+
+#: ../src/swell-foop.vala:254
+msgid "Colors"
+msgstr "Рангҳо"
+
+#: ../src/swell-foop.vala:258
+msgid "Shapes and Colors"
+msgstr ""
+
+#: ../src/swell-foop.vala:391
+msgid ""
+"I want to play that game! You know, they all light-up and you click on them "
+"and they vanish!\n"
+"\n"
+"Swell Foop is a part of GNOME Games."
+msgstr ""
+
+#: ../src/swell-foop.vala:392
+msgid "Copyright © 2009 Tim Horton"
+msgstr ""
+
+#: ../src/swell-foop.vala:398
+msgid "translator-credits"
+msgstr ""
+
+#: ../src/swell-foop.vala:401
+msgid "GNOME Games web site"
+msgstr ""
+
+#: ../src/swell-foop.vala:486
+msgid "New Game"
+msgstr "Бозии нав"
+
+#: ../src/swell-foop.vala:501
+msgid "Size:"
+msgstr "Андоза:"
+
+#: ../src/swell-foop.vala:526
+msgid "Date"
+msgstr "Сана"
+
+#: ../src/swell-foop.vala:529
+msgid "Score"
+msgstr ""
+
+#: ../src/swell-foop.vala:609
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, ранги %u"
