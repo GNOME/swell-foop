@@ -90,7 +90,7 @@ msgstr "Garbitu pantaila koloretako eta formadun fitxak kenduz"
 
 #: ../data/swell-foop.desktop.in.in.h:3
 msgid "game;logic;board;same;matching;"
-msgstr "jokoa;logika;taula;berdina:bat datorrena;"
+msgstr "jokoa;logika;taula;berdina;bat datorrena;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:433
