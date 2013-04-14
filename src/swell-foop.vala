@@ -85,7 +85,7 @@ public class SwellFoop : Gtk.Application
         toolbar.show ();
         vbox.pack_start (toolbar, false, true, 0);
 
-        var new_game_button = new Gtk.ToolButton (null, "_New");
+        var new_game_button = new Gtk.ToolButton (null, _("_New"));
         new_game_button.icon_name = "document-new";
         new_game_button.use_underline = true;
         new_game_button.action_name = "app.new-game";
