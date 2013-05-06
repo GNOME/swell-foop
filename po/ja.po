@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-27 17:00+0000\n"
-"PO-Revision-Date: 2013-04-13 22:45+0900\n"
+"POT-Creation-Date: 2013-05-06 05:31+0000\n"
+"PO-Revision-Date: 2013-05-06 17:19+0900\n"
 "Last-Translator: OKANO Takayoshi <kano@na.rim.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -91,11 +91,11 @@ msgstr "操作"
 
 #: ../data/swell-foop.desktop.in.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr ""
+msgstr "隣接する同じ色や形のタイルをまとめて、画面から消していくゲームです"
 
 #: ../data/swell-foop.desktop.in.in.h:3
 msgid "game;logic;board;same;matching;"
-msgstr ""
+msgstr "game;logic;board;same;matching;ゲーム;論理;ロジック;ボード;さめがめ;色合わせ;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:433
