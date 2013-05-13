@@ -18,9 +18,9 @@ msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-20 12:54+0000\n"
-"PO-Revision-Date: 2012-12-24 12:36+0400\n"
-"Last-Translator: Aleksej Kabanov <ak099@mail.ru>\n"
+"POT-Creation-Date: 2013-03-27 17:00+0000\n"
+"PO-Revision-Date: 2013-05-13 10:39+0300\n"
+"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -99,6 +99,10 @@ msgstr "Игровой процесс"
 #: ../data/swell-foop.desktop.in.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Очистите поле, удаляя группы цветных шаров"
+
+#: ../data/swell-foop.desktop.in.in.h:3
+msgid "game;logic;board;same;matching;"
+msgstr "игра;логическая;настольная;совпадение;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:433
