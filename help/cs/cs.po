@@ -1,14 +1,13 @@
 # Czech translation of same-gnome help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the same-gnome help.
-#
 # Marek Černocký <marek@manet.cz>, 2009, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
 "POT-Creation-Date: 2012-12-02 22:34+0000\n"
-"PO-Revision-Date: 2013-07-13 09:47+0200\n"
+"PO-Revision-Date: 2013-07-13 10:05+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -406,13 +405,13 @@ msgid ""
 "filename>."
 msgstr ""
 "Můžete si vytvořit také svůj vlastní motiv, ačkoliv postup není zatím úplně "
-"přímočarý. Použijte kopii stávajícího motivu z <filename>/usr/"
-"share/gnome-games/swell-foop/themes/</filename> jako šablonu a ve svém "
-"oblíbeném kreslícím programu si jej upravte. Výsledek vložte do <filename>"
-"$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. Až znovu "
-"spustíte <application>Swell Foop</application>, bude zahrnutý v seznamu "
-"motivů. <filename>$XDG_DATA_HOME</filename> je obvykle <filename>~/.local/"
-"share/</filename>."
+"přímočarý. Použijte kopii stávajícího motivu z <filename>/usr/share/gnome-"
+"games/swell-foop/themes/</filename> jako šablonu a ve svém oblíbeném "
+"kreslícím programu si jej upravte. Výsledek vložte do <filename>"
+"$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. Až znovu spustíte "
+"<application>Swell Foop</application>, bude zahrnutý v seznamu motivů. "
+"<filename>$XDG_DATA_HOME</filename> je obvykle <filename>~/.local/share/</"
+"filename>."
 
 #: C/index.docbook:240(sect2/title)
 msgid "Changing the Size"
@@ -426,6 +425,11 @@ msgid ""
 "guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</"
 "guimenuitem>."
 msgstr ""
+"Seznam <guimenu>Velikost hrací desky</guimenu> v <menuchoice><guimenu>Swell "
+"Foop</guimenu><guimenuitem>Předvolby</guimenuitem><guimenuitem>Nastavení</"
+"guimenuitem></menuchoice> obsahuje tři možnosti: <guimenuitem>Malá</"
+"guimenuitem>, <guimenuitem>Normální</guimenuitem> a <guimenuitem>Velká</"
+"guimenuitem>."
 
 #: C/index.docbook:245(sect2/title)
 msgid "Changing the Number of Objects"
@@ -438,6 +442,9 @@ msgid ""
 "guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> allows you to "
 "increase the number of different objects."
 msgstr ""
+"Pomocí volby <guimenu>Počet barev</guimenu> v <menuchoice><guimenu>Swell "
+"Foop</guimenu><guimenuitem>Předvolby</guimenuitem><guimenuitem>Nastavení</"
+"guimenuitem></menuchoice> můžete zvýšit množství různých objektů."
 
 #: C/index.docbook:250(sect2/title)
 msgid "Changing the Speed"
@@ -453,10 +460,10 @@ msgid ""
 "up game-play at the expense of animation quality."
 msgstr ""
 "Výchozí animace je navržená tak, aby byla plynulá a elegantní. Pokud chcete "
-"hrát rychle a divoce, může vám připadat příliš pomalá. Výběrem <guimenuitem>"
-"Rychlé animace</guimenuitem> v <menuchoice><guimenu>Swell Foop</guimenu>"
-"<guimenuitem>Předvolby</guimenuitem><guimenuitem>Operace</guimenuitem>"
-"</menuchoice> můžete zrychlit hraní hry na úkor kvality animací."
+"hrát rychle a divoce, může vám připadat příliš pomalá. Výběrem "
+"<guimenuitem>Rychlé animace</guimenuitem> v <menuchoice><guimenu>Swell Foop</"
+"guimenu><guimenuitem>Předvolby</guimenuitem><guimenuitem>Operace</"
+"guimenuitem></menuchoice> můžete zrychlit hraní hry na úkor kvality animací."
 
 #: C/index.docbook:257(sect1/title)
 msgid "Strategy"
