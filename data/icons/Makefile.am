@@ -15,3 +15,5 @@ icon256_DATA = 256x256/swell-foop.png
 iconscalable_DATA = scalable/swell-foop.svg
 
 EXTRA_DIST = $(icon16_DATA) $(icon22_DATA) $(icon24_DATA) $(icon32_DATA) $(icon48_DATA) $(icon256_DATA) $(iconscalable_DATA)
+
+-include $(top_srcdir)/git.mk
