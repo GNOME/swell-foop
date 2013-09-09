@@ -18,9 +18,9 @@ msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-27 17:00+0000\n"
-"PO-Revision-Date: 2013-05-13 10:39+0300\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"POT-Creation-Date: 2013-09-06 07:46+0000\n"
+"PO-Revision-Date: 2013-09-07 01:27+0600\n"
+"Last-Translator: Dmitriy S. Seregin <dseregin@59.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
 msgid "The theme to use"
@@ -63,8 +63,8 @@ msgid "Use more flashy, but slower, animations."
 msgstr "Использовать красивую анимацию."
 
 #: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:57 ../src/swell-foop.vala:388
-#: ../src/swell-foop.vala:451
+#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:399
+#: ../src/swell-foop.vala:462
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -105,7 +105,7 @@ msgid "game;logic;board;same;matching;"
 msgstr "игра;логическая;настольная;совпадение;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:433
+#: ../src/game-view.vala:443
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -113,78 +113,82 @@ msgstr[0] "%u очко"
 msgstr[1] "%u очка"
 msgstr[2] "%u очков"
 
-#: ../src/game-view.vala:434
+#: ../src/game-view.vala:444
 #, c-format
 msgid "Game Over!"
 msgstr "Игра окончена!"
 
-#: ../src/swell-foop.vala:69
+#: ../src/swell-foop.vala:79
 msgid "_New Game"
 msgstr "_Новая игра"
 
-#: ../src/swell-foop.vala:70
+#: ../src/swell-foop.vala:80
 msgid "_Scores"
 msgstr "_Результаты"
 
-#: ../src/swell-foop.vala:71
+#: ../src/swell-foop.vala:81
 msgid "_Preferences"
 msgstr "_Параметры"
 
-#: ../src/swell-foop.vala:74
+#: ../src/swell-foop.vala:84
 msgid "_Help"
 msgstr "_Справка"
 
-#: ../src/swell-foop.vala:75
+#: ../src/swell-foop.vala:85
 msgid "_About"
 msgstr "_О программе"
 
-#: ../src/swell-foop.vala:78
+#: ../src/swell-foop.vala:88
 msgid "_Quit"
 msgstr "_Закончить"
 
-#: ../src/swell-foop.vala:125
+#: ../src/swell-foop.vala:98
+msgid "_New"
+msgstr "_Новая игра"
+
+#: ../src/swell-foop.vala:135
 msgid "Small"
 msgstr "Маленький"
 
-#: ../src/swell-foop.vala:126
+#: ../src/swell-foop.vala:136
 msgid "Normal"
 msgstr "Обычный"
 
-#: ../src/swell-foop.vala:127
+#: ../src/swell-foop.vala:137
 msgid "Large"
 msgstr "Большой"
 
 #. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:203
+#: ../src/swell-foop.vala:213
 #, c-format
 msgid "Score: %4u "
 msgstr "Результат: %4u "
 
-#: ../src/swell-foop.vala:254
+#: ../src/swell-foop.vala:265
 msgid "Colors"
 msgstr "Цвета"
 
-#: ../src/swell-foop.vala:258
+#: ../src/swell-foop.vala:269
 msgid "Shapes and Colors"
 msgstr "Фигуры и цвета"
 
-#: ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:402
 msgid ""
-"I want to play that game! You know, they all light-up and you click on them "
-"and they vanish!\n"
+"I want to play that game!\n"
+"You know, they all light-up and you click on them and they vanish!\n"
 "\n"
 "Swell Foop is a part of GNOME Games."
 msgstr ""
-"Хочу играть в эту игру! Знаете, они все светятся и пропадают, когда вы "
-"щёлкаете по ним!\n"
+"Хочу играть в эту игру!\n"
+"Знаете, они все светятся и пропадают, когда вы щёлкаете по ним!\n"
 "\n"
 "Swell Foop является частью пакета GNOME Games."
 
-#: ../src/swell-foop.vala:392
+#: ../src/swell-foop.vala:403
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Авторские права © 2009 Тим Хортон (Tim Horton)"
 
-#: ../src/swell-foop.vala:398
+#: ../src/swell-foop.vala:409
 msgid "translator-credits"
 msgstr ""
 "Валек Филиппов aka frob\n"
@@ -193,731 +197,30 @@ msgstr ""
 "Михаил Яхонтов\n"
 "Леонид Кантер"
 
-#: ../src/swell-foop.vala:401
+#: ../src/swell-foop.vala:412
 msgid "GNOME Games web site"
 msgstr "Веб-сайт GNOME Games"
 
-#: ../src/swell-foop.vala:486
+#: ../src/swell-foop.vala:497
 msgid "New Game"
 msgstr "Новая игра"
 
-#: ../src/swell-foop.vala:501
+#: ../src/swell-foop.vala:512
 msgid "Size:"
 msgstr "Размер:"
 
-#: ../src/swell-foop.vala:526
+#: ../src/swell-foop.vala:537
 msgid "Date"
 msgstr "Дата"
 
-#: ../src/swell-foop.vala:529
+#: ../src/swell-foop.vala:540
 msgid "Score"
 msgstr "Счёт"
 
-#: ../src/swell-foop.vala:609
+#: ../src/swell-foop.vala:620
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u цвет"
 msgstr[1] "%u × %u, %u цвета"
 msgstr[2] "%u × %u, %u цветов"
-
-#~ msgid "Chess"
-#~ msgstr "Шахматы"
-
-#~ msgid "Play the classic two-player boardgame of chess"
-#~ msgstr "Сыграть в классические шахматы"
-
-#~ msgid "_Game"
-#~ msgstr "_Игра"
-
-#~ msgid "_Undo Move"
-#~ msgstr "_Отменить"
-
-#~ msgid "_Resign"
-#~ msgstr "Сд_аться"
-
-#~ msgid "Claim _Draw"
-#~ msgstr "Предложить _ничью"
-
-#~ msgid "_Settings"
-#~ msgstr "_Параметры"
-
-#~ msgid "_Contents"
-#~ msgstr "_Содержание"
-
-#~ msgid "Start a new game"
-#~ msgstr "Начать новую игру"
-
-#~ msgid "Undo Move"
-#~ msgstr "Отменить ход"
-
-#~ msgid "Resign"
-#~ msgstr "Сдаться"
-
-#~ msgid "Rewind to the game start"
-#~ msgstr "Откатить на начало игры"
-
-#~ msgid "Show the previous move"
-#~ msgstr "Показать предыдущий ход"
-
-#~ msgid "Show the next move"
-#~ msgstr "Показать следующий ход"
-
-#~ msgid "Show the current move"
-#~ msgstr "Показать текущий ход"
-
-#~ msgid "The width of the window"
-#~ msgstr "Ширина окна"
-
-#~ msgid "The width of the main window in pixels."
-#~ msgstr "Требуемая ширина основного окна, в пикселях."
-
-#~ msgid "The height of the window"
-#~ msgstr "Высота окна"
-
-#~ msgid "The height of the main window in pixels."
-#~ msgstr "Требуемая высота основного, в пикселах."
-
-#~ msgid "A flag to enable maximized mode"
-#~ msgstr "Разворачивать окно на весь экран"
-
-#~ msgid "A flag to enable fullscreen mode"
-#~ msgstr "Работать в полноэкранном режиме"
-
-#~ msgid "The piece to promote pawns to"
-#~ msgstr "Фигура, в которую нужно превращать пешку при проходе"
-
-#~ msgid ""
-#~ "The piece to promote to when a human player moves a pawn to the far rank"
-#~ msgstr ""
-#~ "Шахматная фигура, в которую превращается пешка при достижении последней "
-#~ "горизонтали"
-
-#~ msgid "A flag to enable 3D mode"
-#~ msgstr "Включить трёхмерный режим"
-
-#~ msgid "A flag to smooth (anti-alias) the 3D display"
-#~ msgstr "Сглаживать трёхмерное поле"
-
-#~ msgid "The piece theme to use"
-#~ msgstr "Использовать тему фигур"
-
-#~ msgid "A flag to enable move hints"
-#~ msgstr "Включить подсказки ходов"
-
-#~ msgid "A flag to enable board numbering"
-#~ msgstr "Включить нумерацию полей"
-
-#~ msgid "A flag to enable the move history browser"
-#~ msgstr "Показывать обозреватель истории ходов"
-
-#~ msgid "A flag to enable the toolbar"
-#~ msgstr "Показывать панель инструментов"
-
-#~ msgid "The directory to open the save game dialog in"
-#~ msgstr "Каталог в котором открывать диалог сохранения игры"
-
-#~ msgid "The directory to open the load game dialog in"
-#~ msgstr "Каталог в котором открывать диалог открытия игры"
-
-#~ msgid "The format to display moves in"
-#~ msgstr "Формат отображения ходов"
-
-#~ msgid "The side of the board that is in the foreground"
-#~ msgstr "Ближняя сторона доски"
-
-#~ msgid "The duration of a game in seconds (0 for no limit)"
-#~ msgstr "Продолжительность игры в секундах (0 — неограниченная)"
-
-#~ msgid "true if the human player is playing white"
-#~ msgstr "истинно, если игрок играет белыми"
-
-#~ msgid "The opponent player"
-#~ msgstr "Противник"
-
-#~ msgid ""
-#~ "Can be 'human' (play against another human player), '' (use the first "
-#~ "available chess engine) or the name of a specific engine to play against"
-#~ msgstr ""
-#~ "Возможные значения: «human» (играть против другого человека), «» (выбрать "
-#~ "первый доступный шахматный движок) или название определённого движка"
-
-#~ msgid "Difficulty of the opponent chess engine"
-#~ msgstr "Сложность игры шахматного движка"
-
-#~ msgid "Preferences"
-#~ msgstr "Параметры"
-
-#~ msgid "Play as:"
-#~ msgstr "Играть за:"
-
-#~ msgid "Opposing Player:"
-#~ msgstr "Противник:"
-
-#~ msgid "Difficulty:"
-#~ msgstr "Сложность:"
-
-#~ msgid "Game Duration:"
-#~ msgstr "Продолжительность игры:"
-
-#~ msgid "Promotion Type:"
-#~ msgstr "Фигура продвижения:"
-
-#~ msgid "Changes will take effect for the next game."
-#~ msgstr "Изменения вступят в силу для следующей игры."
-
-#~ msgid "Game"
-#~ msgstr "Игра"
-
-#~ msgid "3_D Chess View"
-#~ msgstr "Трёхм_ерная доска"
-
-#~ msgid "_Smooth Display"
-#~ msgstr "_Сглаживать поле"
-
-#~ msgid "Piece Style:"
-#~ msgstr "Стиль фигур:"
-
-#~ msgid "Show _Toolbar"
-#~ msgstr "Показать панель _инструментов"
-
-#~ msgid "Show _History"
-#~ msgstr "Пок_азать историю"
-
-#~ msgid "_Move Hints"
-#~ msgstr "Подсказки ход_ов"
-
-#~ msgid "_Board Numbering"
-#~ msgstr "Координаты пол_ей"
-
-#~ msgid "Board Orientation:"
-#~ msgstr "Положение доски:"
-
-#~ msgid "Move Format:"
-#~ msgstr "Формат ходов:"
-
-#~ msgid "_Appearance"
-#~ msgstr "_Внешний вид"
-
-#~ msgctxt "difficulty"
-#~ msgid "Easy"
-#~ msgstr "Лёгкий"
-
-#~ msgctxt "difficulty"
-#~ msgid "Normal"
-#~ msgstr "Обычный"
-
-#~ msgctxt "difficulty"
-#~ msgid "Hard"
-#~ msgstr "Сложный"
-
-#~ msgctxt "chess-opponent"
-#~ msgid "Human"
-#~ msgstr "Человек"
-
-#~ msgctxt "chess-player"
-#~ msgid "White"
-#~ msgstr "Белые"
-
-#~ msgctxt "chess-player"
-#~ msgid "Black"
-#~ msgstr "Чёрные"
-
-#~ msgid "No limit"
-#~ msgstr "неограниченная"
-
-#~ msgid "One minute"
-#~ msgstr "одну минуту"
-
-#~ msgid "Five minutes"
-#~ msgstr "пять минут"
-
-#~ msgid "30 minutes"
-#~ msgstr "полчаса"
-
-#~ msgid "One hour"
-#~ msgstr "один час"
-
-#~ msgid "Custom"
-#~ msgstr "другая"
-
-#~ msgid "Simple"
-#~ msgstr "Простой"
-
-#~ msgid "Fancy"
-#~ msgstr "Причудливый"
-
-#~ msgctxt "chess-side"
-#~ msgid "White Side"
-#~ msgstr "Сторона белых"
-
-#~ msgctxt "chess-side"
-#~ msgid "Black Side"
-#~ msgstr "Сторона чёрных"
-
-#~ msgctxt "chess-side"
-#~ msgid "Human Side"
-#~ msgstr "Сторона человека"
-
-#~ msgctxt "chess-side"
-#~ msgid "Current Player"
-#~ msgstr "Текущий игрок"
-
-#~ msgctxt "chess-side"
-#~ msgid "Face to Face"
-#~ msgstr "Лицом к лицу"
-
-#~ msgctxt "chess-move-format"
-#~ msgid "Human"
-#~ msgstr "Человек"
-
-#~ msgctxt "chess-move-format"
-#~ msgid "Standard Algebraic"
-#~ msgstr "Стандартная алгебраическая"
-
-#~ msgctxt "chess-move-format"
-#~ msgid "Figurine"
-#~ msgstr "Фигурная"
-
-#~ msgctxt "chess-move-format"
-#~ msgid "Long Algebraic"
-#~ msgstr "Полная алгебраическая"
-
-#~ msgctxt "chess-piece"
-#~ msgid "Queen"
-#~ msgstr "Ферзь"
-
-#~ msgctxt "chess-piece"
-#~ msgid "Knight"
-#~ msgstr "Конь"
-
-#~ msgctxt "chess-piece"
-#~ msgid "Rook"
-#~ msgstr "Ладья"
-
-#~ msgctxt "chess-piece"
-#~ msgid "Bishop"
-#~ msgstr "Слон"
-
-#~ msgid "%1$s (%2$s) - Chess"
-#~ msgstr "%1$s (%2$s) — Шахматы"
-
-#~ msgid "Game Start"
-#~ msgstr "Игра начата"
-
-#~ msgid "White pawn moves from %1$s to %2$s"
-#~ msgstr "Белая пешка переходит с %1$s на %2$s"
-
-#~ msgid "White pawn at %1$s takes the black pawn at %2$s"
-#~ msgstr "Белая пешка %1$s берёт чёрную пешку на %2$s"
-
-#~ msgid "White pawn at %1$s takes the black rook at %2$s"
-#~ msgstr "Белая пешка %1$s берёт чёрную ладью на %2$s"
-
-#~ msgid "White pawn at %1$s takes the black knight at %2$s"
-#~ msgstr "Белая пешка %1$s берёт чёрного коня на %2$s"
-
-#~ msgid "White pawn at %1$s takes the black bishop at %2$s"
-#~ msgstr "Белая пешка %1$s берёт чёрного слона на %2$s"
-
-#~ msgid "White pawn at %1$s takes the black queen at %2$s"
-#~ msgstr "Белая пешка %1$s берёт чёрного ферзя на %2$s"
-
-#~ msgid "White rook moves from %1$s to %2$s"
-#~ msgstr "Белая ладья переходит с %1$s на %2$s"
-
-#~ msgid "White rook at %1$s takes the black pawn at %2$s"
-#~ msgstr "Белая ладья %1$s берёт чёрную пешку на %2$s"
-
-#~ msgid "White rook at %1$s takes the black rook at %2$s"
-#~ msgstr "Белая ладья %1$s берёт чёрную ладью на %2$s"
-
-#~ msgid "White rook at %1$s takes the black knight at %2$s"
-#~ msgstr "Белая ладья %1$s берёт чёрного коня на %2$s"
-
-#~ msgid "White rook at %1$s takes the black bishop at %2$s"
-#~ msgstr "Белая ладья %1$s берёт чёрного слона на %2$s"
-
-#~ msgid "White rook at %1$s takes the black queen at %2$s"
-#~ msgstr "Белая ладья %1$s берёт чёрного ферзя на %2$s"
-
-#~ msgid "White knight moves from %1$s to %2$s"
-#~ msgstr "Белый конь переходит с %1$s на %2$s"
-
-#~ msgid "White knight at %1$s takes the black pawn at %2$s"
-#~ msgstr "Белый конь %1$s берёт чёрную пешку на %2$s"
-
-#~ msgid "White knight at %1$s takes the black rook at %2$s"
-#~ msgstr "Белый конь %1$s берёт чёрную ладью на %2$s"
-
-#~ msgid "White knight at %1$s takes the black knight at %2$s"
-#~ msgstr "Белый конь %1$s берёт чёрного коня на %2$s"
-
-#~ msgid "White knight at %1$s takes the black bishop at %2$s"
-#~ msgstr "Белый конь %1$s берёт чёрного слона на %2$s"
-
-#~ msgid "White knight at %1$s takes the black queen at %2$s"
-#~ msgstr "Белый конь %1$s берёт чёрного ферзя на %2$s"
-
-#~ msgid "White bishop moves from %1$s to %2$s"
-#~ msgstr "Белый слон переходит с %1$s на %2$s"
-
-#~ msgid "White bishop at %1$s takes the black pawn at %2$s"
-#~ msgstr "Белый слон %1$s берёт чёрную пешку на %2$s"
-
-#~ msgid "White bishop at %1$s takes the black rook at %2$s"
-#~ msgstr "Белый слон %1$s берёт чёрную ладью на %2$s"
-
-#~ msgid "White bishop at %1$s takes the black knight at %2$s"
-#~ msgstr "Белый слон %1$s берёт чёрного коня на %2$s"
-
-#~ msgid "White bishop at %1$s takes the black bishop at %2$s"
-#~ msgstr "Белый слон %1$s берёт чёрного слона на %2$s"
-
-#~ msgid "White bishop at %1$s takes the black queen at %2$s"
-#~ msgstr "Белый слон %1$s берёт чёрного ферзя на %2$s"
-
-#~ msgid "White queen moves from %1$s to %2$s"
-#~ msgstr "Белый ферзь переходит с %1$s на %2$s"
-
-#~ msgid "White queen at %1$s takes the black pawn at %2$s"
-#~ msgstr "Белый ферзь %1$s берёт чёрную пешку на %2$s"
-
-#~ msgid "White queen at %1$s takes the black rook at %2$s"
-#~ msgstr "Белый ферзь %1$s берёт чёрную ладью на %2$s"
-
-#~ msgid "White queen at %1$s takes the black knight at %2$s"
-#~ msgstr "Белый ферзь %1$s берёт чёрного коня на %2$s"
-
-#~ msgid "White queen at %1$s takes the black bishop at %2$s"
-#~ msgstr "Белый ферзь %1$s берёт чёрного слона на %2$s"
-
-#~ msgid "White queen at %1$s takes the black queen at %2$s"
-#~ msgstr "Белый ферзь %1$s берёт чёрного ферзя на %2$s"
-
-#~ msgid "White king moves from %1$s to %2$s"
-#~ msgstr "Белый король переходит с %1$s на %2$s"
-
-#~ msgid "White king at %1$s takes the black pawn at %2$s"
-#~ msgstr "Белый король %1$s берёт чёрную пешку на %2$s"
-
-#~ msgid "White king at %1$s takes the black rook at %2$s"
-#~ msgstr "Белый король %1$s берёт чёрную ладью на %2$s"
-
-#~ msgid "White king at %1$s takes the black knight at %2$s"
-#~ msgstr "Белый король %1$s берёт чёрного коня на %2$s"
-
-#~ msgid "White king at %1$s takes the black bishop at %2$s"
-#~ msgstr "Белый король %1$s берёт чёрного слона на %2$s"
-
-#~ msgid "White king at %1$s takes the black queen at %2$s"
-#~ msgstr "Белый король %1$s берёт чёрного ферзя на %2$s"
-
-#~ msgid "Black pawn moves from %1$s to %2$s"
-#~ msgstr "Чёрная пешка переходит с %1$s на %2$s"
-
-#~ msgid "Black pawn at %1$s takes the white pawn at %2$s"
-#~ msgstr "Чёрная пешка %1$s берёт белую пешку на %2$s"
-
-#~ msgid "Black pawn at %1$s takes the white rook at %2$s"
-#~ msgstr "Чёрная пешка %1$s берёт белую ладью на %2$s"
-
-#~ msgid "Black pawn at %1$s takes the white knight at %2$s"
-#~ msgstr "Чёрная пешка %1$s берёт белого коня на %2$s"
-
-#~ msgid "Black pawn at %1$s takes the white bishop at %2$s"
-#~ msgstr "Чёрная пешка %1$s берёт белого слона на %2$s"
-
-#~ msgid "Black pawn at %1$s takes the white queen at %2$s"
-#~ msgstr "Чёрная пешка %1$s берёт белого ферзя на %2$s"
-
-#~ msgid "Black rook moves from %1$s to %2$s"
-#~ msgstr "Чёрная ладья переходит с %1$s на %2$s"
-
-#~ msgid "Black rook at %1$s takes the white pawn at %2$s"
-#~ msgstr "Чёрная ладья %1$s берёт белую пешку на %2$s"
-
-#~ msgid "Black rook at %1$s takes the white rook at %2$s"
-#~ msgstr "Чёрная ладья %1$s берёт белую ладью на %2$s"
-
-#~ msgid "Black rook at %1$s takes the white knight at %2$s"
-#~ msgstr "Чёрная ладья %1$s берёт белого коня на %2$s"
-
-#~ msgid "Black rook at %1$s takes the white bishop at %2$s"
-#~ msgstr "Чёрная ладья %1$s берёт белого слона на %2$s"
-
-#~ msgid "Black rook at %1$s takes the white queen at %2$s"
-#~ msgstr "Чёрная ладья %1$s берёт белого ферзя на %2$s"
-
-#~ msgid "Black knight moves from %1$s to %2$s"
-#~ msgstr "Чёрный конь переходит с %1$s на %2$s"
-
-#~ msgid "Black knight at %1$s takes the white pawn at %2$s"
-#~ msgstr "Чёрный конь %1$s берёт белую пешку %2$s"
-
-#~ msgid "Black knight at %1$s takes the white rook at %2$s"
-#~ msgstr "Чёрный конь %1$s берёт белую ладью %2$s"
-
-#~ msgid "Black knight at %1$s takes the white knight at %2$s"
-#~ msgstr "Чёрный конь %1$s берёт белого коня %2$s"
-
-#~ msgid "Black knight at %1$s takes the white bishop at %2$s"
-#~ msgstr "Чёрный конь %1$s берёт белого слона %2$s"
-
-#~ msgid "Black knight at %1$s takes the white queen at %2$s"
-#~ msgstr "Чёрный конь %1$s берёт белого ферзя %2$s"
-
-#~ msgid "Black bishop moves from %1$s to %2$s"
-#~ msgstr "Чёрный слон переходит с %1$s на %2$s"
-
-#~ msgid "Black bishop at %1$s takes the white pawn at %2$s"
-#~ msgstr "Чёрный слон %1$s берёт белую пешку на %2$s"
-
-#~ msgid "Black bishop at %1$s takes the white rook at %2$s"
-#~ msgstr "Чёрный слон %1$s берёт белую ладью на %2$s"
-
-#~ msgid "Black bishop at %1$s takes the white knight at %2$s"
-#~ msgstr "Чёрный слон %1$s берёт белого коня на %2$s"
-
-#~ msgid "Black bishop at %1$s takes the white bishop at %2$s"
-#~ msgstr "Чёрный слон %1$s берёт белого слона на %2$s"
-
-#~ msgid "Black bishop at %1$s takes the white queen at %2$s"
-#~ msgstr "Чёрный слон %1$s берёт белого ферзя на %2$s"
-
-#~ msgid "Black queen moves from %1$s to %2$s"
-#~ msgstr "Чёрная ферзь переходит с %1$s на %2$s"
-
-#~ msgid "Black queen at %1$s takes the white pawn at %2$s"
-#~ msgstr "Чёрный ферзь %1$s берёт белую пешку %2$s"
-
-#~ msgid "Black queen at %1$s takes the white rook at %2$s"
-#~ msgstr "Чёрный ферзь %1$s берёт белую ладью %2$s"
-
-#~ msgid "Black queen at %1$s takes the white knight at %2$s"
-#~ msgstr "Чёрный ферзь %1$s берёт белого коня %2$s"
-
-#~ msgid "Black queen at %1$s takes the white bishop at %2$s"
-#~ msgstr "Чёрный ферзь %1$s берёт белого слона %2$s"
-
-#~ msgid "Black queen at %1$s takes the white queen at %2$s"
-#~ msgstr "Чёрный ферзь %1$s берёт белого ферзя %2$s"
-
-#~ msgid "Black king moves from %1$s to %2$s"
-#~ msgstr "Чёрный король переходит с %1$s на %2$s"
-
-#~ msgid "Black king at %1$s takes the white pawn at %2$s"
-#~ msgstr "Чёрный король %1$s берёт белую пешку на %2$s"
-
-#~ msgid "Black king at %1$s takes the white rook at %2$s"
-#~ msgstr "Чёрный король %1$s берёт белую ладью на %2$s"
-
-#~ msgid "Black king at %1$s takes the white knight at %2$s"
-#~ msgstr "Чёрный король %1$s берёт белого коня на %2$s"
-
-#~ msgid "Black king at %1$s takes the white bishop at %2$s"
-#~ msgstr "Чёрный король %1$s берёт белого слона на %2$s"
-
-#~ msgid "Black king at %1$s takes the white queen at %2$s"
-#~ msgstr "Чёрный король %1$s берёт белого ферзя на %2$s"
-
-#~ msgid "White wins"
-#~ msgstr "Белые победили"
-
-#~ msgid "Black wins"
-#~ msgstr "Чёрные победили"
-
-#~ msgid "Game is drawn"
-#~ msgstr "Игра закончилась ничьёй."
-
-#~ msgid "Opponent is in check and cannot move (checkmate)"
-#~ msgstr "Противник находится под шахом и не может сделать ход (шах и мат)"
-
-#~ msgid "Opponent cannot move (stalemate)"
-#~ msgstr "Противник не может сдалать ход (пат)"
-
-#~ msgid "No piece has been taken or pawn moved in the last fifty moves"
-#~ msgstr "За последние 50 ходов не было ни одного взятия, ни хода пешкой"
-
-#~ msgid "Opponent has run out of time"
-#~ msgstr "Время противника истекло"
-
-#~ msgid ""
-#~ "The same board state has occurred three times (three fold repetition)"
-#~ msgstr "Троекратное повторение одной и той же позиции"
-
-#~ msgid "Neither player can cause checkmate (insufficient material)"
-#~ msgstr "Ни один игрок не может поставить мат (недостаточно материала)"
-
-#~ msgid "The black player has resigned"
-#~ msgstr "Чёрные сдались"
-
-#~ msgid "The white player has resigned"
-#~ msgstr "Белые сдались"
-
-#~ msgid "The game has been abandoned"
-#~ msgstr "Игра оставлена"
-
-#~ msgid "One of the players has died"
-#~ msgstr "Один из игроков погиб"
-
-#~ msgid "Save this game before starting a new one?"
-#~ msgstr "Сохранить текущую игру перед началом новой?"
-
-#~ msgid "_Abandon game"
-#~ msgstr "Забр_осить игру"
-
-#~ msgid "_Save game for later"
-#~ msgstr "_Сохранить игру на будущее"
-
-#~ msgid "second"
-#~ msgid_plural "seconds"
-#~ msgstr[0] "секунда"
-#~ msgstr[1] "секунды"
-#~ msgstr[2] "секунд"
-
-#~ msgid "minute"
-#~ msgid_plural "minutes"
-#~ msgstr[0] "минута"
-#~ msgstr[1] "минуты"
-#~ msgstr[2] "минут"
-
-#~ msgid "hour"
-#~ msgid_plural "hours"
-#~ msgstr[0] "час"
-#~ msgstr[1] "часа"
-#~ msgstr[2] "часов"
-
-#~ msgid ""
-#~ "The 2D/3D chess game for GNOME. \n"
-#~ "\n"
-#~ "glChess is a part of GNOME Games."
-#~ msgstr ""
-#~ "2D/3D игра в шахматы для GNOME.\n"
-#~ "\n"
-#~ "glChess — часть пакета GNOME Games."
-
-#~ msgid "Save Chess Game"
-#~ msgstr "Сохранить шахматы"
-
-#~ msgid "PGN files"
-#~ msgstr "Файлы PGN"
-
-#~ msgid "All files"
-#~ msgstr "Все файлы"
-
-#~ msgid "Failed to save game: %s"
-#~ msgstr "Не удалось сохранить игру: %s"
-
-#~ msgid "Load Chess Game"
-#~ msgstr "Загрузить шахматы"
-
-#~ msgid "Failed to open game: %s"
-#~ msgstr "Не удалось открыть игру: %s"
-
-#~ msgid "Show release version"
-#~ msgstr "Показать номер версии"
-
-#~ msgid "[FILE] - Play Chess"
-#~ msgstr "[ФАЙЛ] — играть в шахматы"
-
-#~ msgid ""
-#~ "Run '%s --help' to see a full list of available command line options."
-#~ msgstr ""
-#~ "Запустите «%s --help», чтобы вывести список всех доступных параметров "
-#~ "командной строки."
-
-#~ msgid "Five or More"
-#~ msgstr "Цветные линии"
-
-#~ msgid "Remove colored balls from the board by forming lines"
-#~ msgstr ""
-#~ "Убирайте разноцветные шарики с поля, выстраивая прямые линии одного цвета"
-
-#~ msgid "Five or More Preferences"
-#~ msgstr "Параметры игры «Цветные линии»"
-
-#~ msgid "_Image:"
-#~ msgstr "_Шарики:"
-
-#~ msgid "B_ackground color:"
-#~ msgstr "Цвет _фона:"
-
-#~ msgid "Board Size"
-#~ msgstr "Размер игрового поля"
-
-#~ msgid "_Small"
-#~ msgstr "_Маленький"
-
-#~ msgid "_Medium"
-#~ msgstr "_Средний"
-
-#~ msgid "_Large"
-#~ msgstr "_Большой"
-
-#~ msgid "General"
-#~ msgstr "Общие"
-
-#~ msgid "_Use fast moves"
-#~ msgstr "Использовать _быстрые ходы"
-
-#~ msgid "Five or more"
-#~ msgstr "Цветные линии"
-
-#~ msgid "Scores"
-#~ msgstr "Результаты"
-
-#~ msgid "Next:"
-#~ msgstr "Следующие:"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "Score:"
-#~ msgstr "Счёт:"
-
-#~ msgid "Playing field size"
-#~ msgstr "Размер игрового поля"
-
-#~ msgid ""
-#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is "
-#~ "invalid."
-#~ msgstr ""
-#~ "Размер игрового поля. 1 - маленькое, 2 - среднее, 3 - большое. Другие "
-#~ "значения некорректны."
-
-#~ msgid "Ball style"
-#~ msgstr "Стиль шариков"
-
-#~ msgid "Ball style. The filename of the images to use for the balls."
-#~ msgstr "Стиль шариков. Это имя файла изображения шариков."
-
-#~ msgid "Background color"
-#~ msgstr "Цвет фона"
-
-#~ msgid "Background color. The hex specification of the background color."
-#~ msgstr "Цвет фона. Это шестнадцатеричное число, определяющее цвет фона."
-
-#~ msgid "Time between moves"
-#~ msgstr "Время между прыжками шариков"
-
-#~ msgid "Time between moves in milliseconds."
-#~ msgstr "Время между прыжками шарика в миллисекундах"
-
-#~ msgid "Game score"
-#~ msgstr "Результаты игры"
-
-#~ msgid "Game score from last saved session."
-#~ msgstr "Таблица результатов из последнего сохраненного сеанса игры."
-
-#~ msgid "Game field"
-#~ msgstr "Игровое поле"
-
-#~ msgid "Game field from last saved session."
-#~ msgstr "Игровое поле из последнего сохраненного сеанса игры."
-
-#~ msgid "Game preview"
-#~ msgstr "Просмотр игры"
-
-#~ msgid "Game preview from last saved session."
-#~ msgstr "Просмотр игры из последнего сохраненного сеанса игры."
