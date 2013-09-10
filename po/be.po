@@ -1,14 +1,14 @@
 # Ales Nyakhaychyk <nab@mail.by>, 2003.
-# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2011.
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2011, 2013.
 # Kasia Bondarava <kasia.bondarava@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:12+0000\n"
+"POT-Creation-Date: 2013-08-17 23:23+0000\n"
 "PO-Revision-Date: 2012-09-07 18:13+0300\n"
-"Last-Translator: Kasia Bondarava <kasia.bondarava@gmail.com>\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
@@ -52,8 +52,8 @@ msgid "Use more flashy, but slower, animations."
 msgstr "Ужыць ярчэйшую, але і маруднейшую анімацыю."
 
 #: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:57 ../src/swell-foop.vala:388
-#: ../src/swell-foop.vala:451
+#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:398
+#: ../src/swell-foop.vala:461
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -91,10 +91,11 @@ msgstr "Ачысціце экран, выдаляючы групы каляро�
 
 #: ../data/swell-foop.desktop.in.in.h:3
 msgid "game;logic;board;same;matching;"
-msgstr "гульня;логіка;лагічная гульня;настольная гульня;аднолькавае;адпаведнае;"
+msgstr ""
+"гульня;логіка;лагічная гульня;настольная гульня;аднолькавае;адпаведнае;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:433
+#: ../src/game-view.vala:443
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -102,107 +103,111 @@ msgstr[0] "%u бал"
 msgstr[1] "%u балы"
 msgstr[2] "%u балаў"
 
-#: ../src/game-view.vala:434
+#: ../src/game-view.vala:444
 #, c-format
 msgid "Game Over!"
 msgstr "Гульня скончана!"
 
-#: ../src/swell-foop.vala:69
+#: ../src/swell-foop.vala:79
 msgid "_New Game"
 msgstr "_Новая гульня"
 
-#: ../src/swell-foop.vala:70
+#: ../src/swell-foop.vala:80
 msgid "_Scores"
 msgstr "_Рэкорды"
 
-#: ../src/swell-foop.vala:71
+#: ../src/swell-foop.vala:81
 msgid "_Preferences"
 msgstr "_Настройкі"
 
-#: ../src/swell-foop.vala:74
+#: ../src/swell-foop.vala:84
 msgid "_Help"
 msgstr "_Дапамога"
 
-#: ../src/swell-foop.vala:75
+#: ../src/swell-foop.vala:85
 msgid "_About"
 msgstr "_Аб праграме"
 
-#: ../src/swell-foop.vala:78
+#: ../src/swell-foop.vala:88
 msgid "_Quit"
 msgstr "_Выйсці"
 
-#: ../src/swell-foop.vala:125
+#: ../src/swell-foop.vala:98
+msgid "_New"
+msgstr "_Новая"
+
+#: ../src/swell-foop.vala:135
 msgid "Small"
 msgstr "Малы"
 
-#: ../src/swell-foop.vala:126
+#: ../src/swell-foop.vala:136
 msgid "Normal"
 msgstr "Звычайны"
 
-#: ../src/swell-foop.vala:127
+#: ../src/swell-foop.vala:137
 msgid "Large"
 msgstr "Вялікі"
 
 #. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:203
+#: ../src/swell-foop.vala:213
 #, c-format
 msgid "Score: %4u "
 msgstr "Лік: %4u "
 
-#: ../src/swell-foop.vala:254
+#: ../src/swell-foop.vala:264
 msgid "Colors"
 msgstr "Колеры"
 
-#: ../src/swell-foop.vala:258
+#: ../src/swell-foop.vala:268
 msgid "Shapes and Colors"
 msgstr "Формы і колеры"
 
-#: ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:401
 msgid ""
-"I want to play that game! You know, they all light-up and you click on them "
-"and they vanish!\n"
+"I want to play that game!\n"
+"You know, they all light-up and you click on them and they vanish!\n"
 "\n"
 "Swell Foop is a part of GNOME Games."
 msgstr ""
-"Цудоўная гульня! Усё свеціцца, а ты пстрыкаеш, каб яно знікала!\n"
+"Цудоўная гульня!\n"
+"Усё свеціцца, а ты пстрыкаеш, каб яно знікала!\n"
 "\n"
-"Swell Foop - частка гульняў GNOME."
+"Swell Foop - складовая частка пакунка гульняў GNOME."
 
-#: ../src/swell-foop.vala:392
+#: ../src/swell-foop.vala:402
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Аўтарскія правы 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:398
+#: ../src/swell-foop.vala:408
 msgid "translator-credits"
 msgstr ""
 "Ales Nyakhaychyk <nab@mail.by>\n"
 "Ihar Hrachyshka <ihar.hrachyshka@gmail.com>"
 
-#: ../src/swell-foop.vala:401
+#: ../src/swell-foop.vala:411
 msgid "GNOME Games web site"
 msgstr "Сеціўная пляцоўка гульняў GNOME"
 
-#: ../src/swell-foop.vala:486
+#: ../src/swell-foop.vala:496
 msgid "New Game"
 msgstr "Новая гульня"
 
-#: ../src/swell-foop.vala:501
+#: ../src/swell-foop.vala:511
 msgid "Size:"
 msgstr "Памер:"
 
-#: ../src/swell-foop.vala:526
+#: ../src/swell-foop.vala:536
 msgid "Date"
 msgstr "Дата"
 
-#: ../src/swell-foop.vala:529
+#: ../src/swell-foop.vala:539
 msgid "Score"
 msgstr "Лік"
 
-#: ../src/swell-foop.vala:609
+#: ../src/swell-foop.vala:619
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u колер"
 msgstr[1] "%u × %u, %u колеры"
 msgstr[2] "%u × %u, %u колераў"
-
