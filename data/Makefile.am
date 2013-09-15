@@ -14,7 +14,11 @@ desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
+appdatadir = $(datadir)/appdata
+appdata_DATA = swell-foop.appdata.xml
+
 EXTRA_DIST = \
+    $(appdata_DATA) \
     $(swell_DATA) \
     $(gsettings_in_file) \
     $(desktop_in_files)

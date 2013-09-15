@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+ <id type="desktop">swell-foop.desktop</id>
+ <licence>CC0</licence>
+ <description>
+  <p>
+   Remove as many squares as possible from the board. Click on a group of
+   squares of the same color to make them all disappear in one fell swoop,
+   causing other squares to fall into place. It is not possible to remove a
+   single square at a time. You get far more points for clearing a larger group
+   of squares, and also for clearing the entire board.
+  </p>
+  <p>
+   Swell Foop is always very quick to play, but you can make it somewhat longer
+   by changing the board size.
+  </p>
+ </description>
+ <screenshots>
+  <screenshot type="default" width="752" height="584">https://wiki.gnome.org/Swell%20Foop?action=AttachFile&#x26;do=get&#x26;target=swell-foop.png</screenshot>
+ </screenshots>
+ <url type="homepage">https://wiki.gnome.org/Swell%20Foop</url>
+ <updatecontact>games_list_at_gnome.org</updatecontact>
+</application>
