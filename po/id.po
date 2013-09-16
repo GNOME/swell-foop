@@ -190,7 +190,7 @@ msgstr ""
 
 #: ../src/swell-foop.vala:411
 msgid "GNOME Games web site"
-msgstr "Situa web Permainan GNOME"
+msgstr "Situs web Permainan GNOME"
 
 #: ../src/swell-foop.vala:496
 msgid "New Game"
