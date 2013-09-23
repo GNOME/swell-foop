@@ -6,10 +6,10 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: 3.8\n"
+"Project-Id-Version: 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-12 23:36+0000\n"
-"PO-Revision-Date: 2013-03-12 23:40+0000\n"
+"POT-Creation-Date: 2013-09-23 02:03+0100\n"
+"PO-Revision-Date: 2013-09-23 02:05+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "Language: pt\n"
@@ -51,8 +51,8 @@ msgid "Use more flashy, but slower, animations."
 msgstr "Utilizar animações mais bonitas, mas lentas."
 
 #: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:57 ../src/swell-foop.vala:388
-#: ../src/swell-foop.vala:451
+#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:399
+#: ../src/swell-foop.vala:462
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -93,109 +93,113 @@ msgid "game;logic;board;same;matching;"
 msgstr "jogo;lógica;tabuleiro;same;coincidir;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:433
+#: ../src/game-view.vala:443
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u ponto"
 msgstr[1] "%u pontos"
 
-#: ../src/game-view.vala:434
+#: ../src/game-view.vala:444
 #, c-format
 msgid "Game Over!"
 msgstr "Jogo Terminado!"
 
-#: ../src/swell-foop.vala:69
+#: ../src/swell-foop.vala:79
 msgid "_New Game"
 msgstr "_Novo Jogo"
 
-#: ../src/swell-foop.vala:70
+#: ../src/swell-foop.vala:80
 msgid "_Scores"
 msgstr "_Pontuações"
 
-#: ../src/swell-foop.vala:71
+#: ../src/swell-foop.vala:81
 msgid "_Preferences"
 msgstr "_Preferências"
 
-#: ../src/swell-foop.vala:74
+#: ../src/swell-foop.vala:84
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: ../src/swell-foop.vala:75
+#: ../src/swell-foop.vala:85
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../src/swell-foop.vala:78
+#: ../src/swell-foop.vala:88
 msgid "_Quit"
 msgstr "_Sair"
 
-#: ../src/swell-foop.vala:125
+#: ../src/swell-foop.vala:98
+msgid "_New"
+msgstr "_Novo"
+
+#: ../src/swell-foop.vala:135
 msgid "Small"
 msgstr "Pequeno"
 
-#: ../src/swell-foop.vala:126
+#: ../src/swell-foop.vala:136
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:127
+#: ../src/swell-foop.vala:137
 msgid "Large"
 msgstr "Grande"
 
 #. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:203
+#: ../src/swell-foop.vala:213
 #, c-format
 msgid "Score: %4u "
 msgstr "Pontuação: %4u "
 
-#: ../src/swell-foop.vala:254
+#: ../src/swell-foop.vala:265
 msgid "Colors"
 msgstr "Cores"
 
-#: ../src/swell-foop.vala:258
+#: ../src/swell-foop.vala:269
 msgid "Shapes and Colors"
 msgstr "Formas e Cores"
 
-#: ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:402
 msgid ""
-"I want to play that game! You know, they all light-up and you click on them "
-"and they vanish!\n"
+"I want to play that game!\n"
+"You know, they all light-up and you click on them and they vanish!\n"
 "\n"
 "Swell Foop is a part of GNOME Games."
 msgstr ""
-"Eu quero jogar aquele jogo! Sabe, eles acendem-se, clica neles e eles "
-"desaparecem!\n"
+"Eu quero jogar aquele jogo!\n"
+"Sabe, eles acendem-se, clica neles e eles desaparecem!\n"
 "\n"
 "Swell Foop faz parte dos Jogos GNOME."
 
-#: ../src/swell-foop.vala:392
+#: ../src/swell-foop.vala:403
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:398
+#: ../src/swell-foop.vala:409
 msgid "translator-credits"
 msgstr "Duarte Loreto <happyguy_pt@hotmail.com>"
 
-#: ../src/swell-foop.vala:401
+#: ../src/swell-foop.vala:412
 msgid "GNOME Games web site"
 msgstr "Página dos jogos GNOME"
 
-#: ../src/swell-foop.vala:486
+#: ../src/swell-foop.vala:497
 msgid "New Game"
 msgstr "Novo Jogo"
 
-#: ../src/swell-foop.vala:501
+#: ../src/swell-foop.vala:512
 msgid "Size:"
 msgstr "Tamanho:"
 
-#: ../src/swell-foop.vala:526
+#: ../src/swell-foop.vala:537
 msgid "Date"
 msgstr "Data"
 
-#: ../src/swell-foop.vala:529
+#: ../src/swell-foop.vala:540
 msgid "Score"
 msgstr "Pontuação"
 
-#: ../src/swell-foop.vala:609
+#: ../src/swell-foop.vala:620
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
@@ -974,9 +978,6 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "_Hint"
 #~ msgstr "_Dica"
-
-#~ msgid "_New"
-#~ msgstr "_Novo"
 
 #~ msgid "_Redo Move"
 #~ msgstr "_Refazer a Jogada"
