@@ -3,7 +3,7 @@
 [encoding: UTF-8]
 data/org.gnome.swell-foop.gschema.xml.in
 [type: gettext/glade]data/preferences.ui
-data/swell-foop.desktop.in.in
+data/swell-foop.desktop.in
 src/game.vala
 src/game-view.vala
 src/swell-foop.vala

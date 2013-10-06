@@ -9,9 +9,9 @@ swelldir=$(datadir)/swell-foop
 swell_DATA = \
     preferences.ui
 
-desktop_in_files = swell-foop.desktop.in.in
+desktop_in_files = swell-foop.desktop.in
 desktopdir = $(datadir)/applications
-desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 appdatadir = $(datadir)/appdata
@@ -27,9 +27,7 @@ CLEANFILES = \
 	$(desktop_DATA)	\
 	$(gsettings_SCHEMAS)
 
-DISTCLEANFILES = \
-	$(desktop_DATA)	\
-	$(gsettings_SCHEMAS)
+DISTCLEANFILES = $(gsettings_SCHEMAS)
 
 @INTLTOOL_SCHEMAS_RULE@
 

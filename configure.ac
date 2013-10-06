@@ -54,7 +54,6 @@ data/icons/Makefile
 data/themes/Makefile
 data/themes/colors/Makefile
 data/themes/shapesandcolors/Makefile
-data/swell-foop.desktop.in
 help/Makefile
 src/Makefile
 ])
