@@ -7,23 +7,23 @@
   <schema id="org.gnome.swell-foop" path="/org/gnome/swell-foop/" gettext-domain="gnome-games">
     <key name="theme" type="s">
       <default>'shapesandcolors'</default>
-      <_summary>The theme to use</_summary>
-      <_description>The title of the tile theme to use.</_description>
+      <summary>The theme to use</summary>
+      <description>The title of the tile theme to use.</description>
     </key>
     <key name="size" enum="org.gnome.swell-foop.Sizes">
       <default>'small'</default>
-      <_summary>Board size</_summary>
-      <_description>The size of the game board.</_description>
+      <summary>Board size</summary>
+      <description>The size of the game board.</description>
     </key>
     <key name="colors" type="i">
       <default>3</default>
-      <_summary>Board color count</_summary>
-      <_description>The number of colors of tiles to use in the game.</_description>
+      <summary>Board color count</summary>
+      <description>The number of colors of tiles to use in the game.</description>
     </key>
     <key name="zealous" type="b">
       <default>true</default>
-      <_summary>Zealous animation</_summary>
-      <_description>Use more flashy, but slower, animations.</_description>
+      <summary>Zealous animation</summary>
+      <description>Use more flashy, but slower, animations.</description>
     </key>
   </schema>
 </schemalist>

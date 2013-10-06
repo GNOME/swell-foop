@@ -1,8 +1,6 @@
 SUBDIRS = icons themes
 
-gsettings_in_file = org.gnome.swell-foop.gschema.xml.in
-gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
-@INTLTOOL_XML_NOMERGE_RULE@
+gsettings_SCHEMAS = org.gnome.swell-foop.gschema.xml
 @GSETTINGS_RULES@
 
 swelldir=$(datadir)/swell-foop
@@ -20,16 +18,11 @@ appdata_DATA = swell-foop.appdata.xml
 EXTRA_DIST = \
     $(appdata_DATA) \
     $(swell_DATA) \
-    $(gsettings_in_file) \
+    $(gsettings_SCHEMAS) \
     $(desktop_in_files)
 
 CLEANFILES = \
-	$(desktop_DATA)	\
-	$(gsettings_SCHEMAS)
-
-DISTCLEANFILES = $(gsettings_SCHEMAS)
-
-@INTLTOOL_SCHEMAS_RULE@
+	$(desktop_DATA)
 
 check-local: $(appdata_DATA) $(desktop_DATA)
 	$(APPDATA_VALIDATE) $(appdata_DATA)
