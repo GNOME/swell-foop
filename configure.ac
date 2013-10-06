@@ -26,6 +26,9 @@ PKG_CHECK_MODULES(SWELL_FOOP, [
 
 AC_CHECK_LIB([m],[floor])
 
+AC_PATH_PROG(APPDATA_VALIDATE, appdata-validate)
+AC_PATH_PROG(DESKTOP_FILE_VALIDATE, desktop-file-validate)
+
 dnl ###########################################################################
 dnl Internationalization
 dnl ###########################################################################

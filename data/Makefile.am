@@ -33,4 +33,8 @@ DISTCLEANFILES = \
 
 @INTLTOOL_SCHEMAS_RULE@
 
+check-local: $(appdata_DATA) $(desktop_DATA)
+	$(APPDATA_VALIDATE) $(appdata_DATA)
+	$(DESKTOP_FILE_VALIDATE) $(desktop_DATA)
+
 -include $(top_srcdir)/git.mk
