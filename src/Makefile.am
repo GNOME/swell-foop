@@ -14,6 +14,7 @@ swell_foop_VALAFLAGS = \
 	--target-glib 2.36
 
 swell_foop_CFLAGS = \
+	-w \
 	-DVERSION=\"$(VERSION)\" \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DDATADIR=\""$(datadir)/swell-foop"\" \
