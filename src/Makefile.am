@@ -10,7 +10,8 @@ swell_foop_SOURCES = \
 swell_foop_VALAFLAGS = \
 	--pkg posix \
 	--pkg gmodule-2.0 \
-	--pkg clutter-gtk-1.0
+	--pkg clutter-gtk-1.0 \
+	--target-glib 2.36
 
 swell_foop_CFLAGS = \
 	-DVERSION=\"$(VERSION)\" \

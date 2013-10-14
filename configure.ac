@@ -13,12 +13,14 @@ dnl ###########################################################################
 dnl Dependencies
 dnl ###########################################################################
 
+GLIB_REQUIRED=2.36.0
 GTK_REQUIRED=3.4.0
 CLUTTER_REQUIRED=1.0.0
 CLUTTER_GTK_REQUIRED=0.91.6
 
 PKG_CHECK_MODULES(SWELL_FOOP, [
   gmodule-export-2.0
+  glib-2.0 >= $GLIB_REQUIRED
   gtk+-3.0 >= $GTK_REQUIRED
   clutter-1.0 >= $CLUTTER_REQUIRED
   clutter-gtk-1.0 >= $CLUTTER_REQUIRED
