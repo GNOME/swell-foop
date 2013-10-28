@@ -1,3 +1,11 @@
+swell-foop 3.11.1
+=================
+
+* Require intltool 0.50, glib 2.36
+* Remove BugBuddy support
+* Update AppData
+* Updated translations
+
 swell-foop 3.10.0
 =================
 
