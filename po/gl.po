@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-27 03:26+0200\n"
-"PO-Revision-Date: 2013-08-27 03:27+0200\n"
+"POT-Creation-Date: 2013-11-01 15:29+0100\n"
+"PO-Revision-Date: 2013-11-01 15:32+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -27,39 +27,39 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "O tema que se usará"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "O titulo do tema a empregar."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "Tamaño do taboleiro"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "Tamaño do taboleiro de xogo."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "Conta da cor do taboleiro"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "O número de cores das teselas a empregar nun xogo."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
 msgid "Zealous animation"
 msgstr "Entusiasta da animación"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Use more flashy, but slower, animations."
 msgstr "Usar animacións máis rechamantes pero máis lentas."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
+#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.h:1
 #: ../src/swell-foop.vala:67 ../src/swell-foop.vala:399
 #: ../src/swell-foop.vala:462
 msgid "Swell Foop"
@@ -93,12 +93,34 @@ msgstr "Animación _zealous"
 msgid "Operation"
 msgstr "Operación"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Elimine tantos cadrados como poida do taboleiro. Prema nun grupo de cadrados "
+"da mesma cor para facelos desaparecer dun golpe, causando que outros "
+"cadrados caian no lugar. Non é posíbel quitar un único cadrado á vez. Obterá "
+"moitos máis puntos limpando grandes grupos de cadrados e tamén ao limpar o "
+"taboleiro completo."
+
+#: ../data/swell-foop.appdata.xml.in.h:2
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Swell Foop é sempre moi rápido para xogar, pero pode facer que dure máis "
+"cambiando o tamaño do taboleiro."
+
+#: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
 "Limpe a pantalla retirando grupos de bólas coloreadas e con forma de tesela "
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "xogo;lóxica;taboleiro;mesmo;coincidencia;"
 
@@ -135,7 +157,7 @@ msgstr "_Axuda"
 msgid "_About"
 msgstr "So_bre"
 
-#: ../src/swell-foop.vala:88
+#: ../src/swell-foop.vala:88 ../src/swell-foop.vala:496
 msgid "_Quit"
 msgstr "_Saír"
 
@@ -208,6 +230,10 @@ msgstr "Sitio web do GNOME Games"
 #: ../src/swell-foop.vala:497
 msgid "New Game"
 msgstr "Xogo novo"
+
+#: ../src/swell-foop.vala:500
+msgid "_OK"
+msgstr "_Aceptar"
 
 #: ../src/swell-foop.vala:512
 msgid "Size:"
@@ -5255,9 +5281,6 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "_Close"
 #~ msgstr "Pecha_r"
-
-#~ msgid "_OK"
-#~ msgstr "_Aceptar"
 
 #~ msgid "Qua"
 #~ msgstr "Qua"
