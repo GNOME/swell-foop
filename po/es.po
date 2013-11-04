@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-17 23:23+0000\n"
-"PO-Revision-Date: 2013-08-19 11:40+0200\n"
+"POT-Creation-Date: 2013-10-20 03:53+0000\n"
+"PO-Revision-Date: 2013-11-04 16:26+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -24,41 +24,41 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.5\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "El tema que usar"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "El título del tema de fichas que usar."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "Tamaño del tablero"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "El tamaño del tablero de juego."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "Conteo de color del tablero"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "El número de colores de fichas que usar en el juego."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
 msgid "Zealous animation"
 msgstr "Animación zealous"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Use more flashy, but slower, animations."
 msgstr "Usar animación más vistosas, pero más lentas."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:398
-#: ../src/swell-foop.vala:461
+#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.h:1
+#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:399
+#: ../src/swell-foop.vala:462
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -90,11 +90,33 @@ msgstr "Animación _zealous"
 msgid "Operation"
 msgstr "Operación"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Quite todas las fichas que pueda del tablero. Pulse sobre un grupo de fichas "
+"del mismo color para hacer que desaparezcan de un golpe, haciendo que caigan "
+"otros en su lugar. No es posible quitar una única ficha a la vez. Obtendrá "
+"más puntos al eliminar un grupo grande de fichas, así como al limpiar el "
+"tablero completo."
+
+#: ../data/swell-foop.appdata.xml.in.h:2
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Swell Foop siempre es rápido de jugar, pero puede alargarlo un poco "
+"cambiando el tamaño del tablero."
+
+#: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Limpie la pantalla eliminando grupos de fichas coloreadas y con formas"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "juego;lógica;tablero;iguales;coincidentes;"
 
@@ -107,7 +129,6 @@ msgstr[0] "%u punto"
 msgstr[1] "%u puntos"
 
 #: ../src/game-view.vala:444
-#, c-format
 msgid "Game Over!"
 msgstr "Juego terminado"
 
@@ -131,7 +152,7 @@ msgstr "Ay_uda"
 msgid "_About"
 msgstr "_Acerca de"
 
-#: ../src/swell-foop.vala:88
+#: ../src/swell-foop.vala:88 ../src/swell-foop.vala:496
 msgid "_Quit"
 msgstr "_Salir"
 
@@ -157,20 +178,15 @@ msgstr "Grande"
 msgid "Score: %4u "
 msgstr "Puntuación: %4u "
 
-#: ../src/swell-foop.vala:264
+#: ../src/swell-foop.vala:265
 msgid "Colors"
 msgstr "Colores"
 
-#: ../src/swell-foop.vala:268
+#: ../src/swell-foop.vala:269
 msgid "Shapes and Colors"
 msgstr "Colores y formas"
 
-#: ../src/swell-foop.vala:401
-#| msgid ""
-#| "I want to play that game! You know, they all light-up and you click on "
-#| "them and they vanish!\n"
-#| "\n"
-#| "Swell Foop is a part of GNOME Games."
+#: ../src/swell-foop.vala:402
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -182,11 +198,11 @@ msgstr ""
 "\n"
 "Swell Foop es parte de los juegos de GNOME."
 
-#: ../src/swell-foop.vala:402
+#: ../src/swell-foop.vala:403
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:408
+#: ../src/swell-foop.vala:409
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
@@ -195,27 +211,31 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: ../src/swell-foop.vala:411
+#: ../src/swell-foop.vala:412
 msgid "GNOME Games web site"
 msgstr "Página web de los juegos de GNOME"
 
-#: ../src/swell-foop.vala:496
+#: ../src/swell-foop.vala:497
 msgid "New Game"
 msgstr "Partida nueva"
 
-#: ../src/swell-foop.vala:511
+#: ../src/swell-foop.vala:500
+msgid "_OK"
+msgstr "_Aceptar"
+
+#: ../src/swell-foop.vala:512
 msgid "Size:"
 msgstr "Tamaño:"
 
-#: ../src/swell-foop.vala:536
+#: ../src/swell-foop.vala:537
 msgid "Date"
 msgstr "Fecha"
 
-#: ../src/swell-foop.vala:539
+#: ../src/swell-foop.vala:540
 msgid "Score"
 msgstr "Puntuación"
 
-#: ../src/swell-foop.vala:619
+#: ../src/swell-foop.vala:620
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
@@ -4543,9 +4563,6 @@ msgstr[1] "%u × %u, %u colores"
 
 #~ msgid "_Close"
 #~ msgstr "_Cerrar"
-
-#~ msgid "_OK"
-#~ msgstr "_Aceptar"
 
 #~ msgid "Could not show link"
 #~ msgstr "No se ha podido mostrar el enlace"
