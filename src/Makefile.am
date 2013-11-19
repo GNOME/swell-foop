@@ -5,6 +5,7 @@ swell_foop_SOURCES = \
 	game.vala \
 	history.vala \
 	config.vapi \
+	score-dialog.vala \
 	swell-foop.vala
 
 swell_foop_VALAFLAGS = \
