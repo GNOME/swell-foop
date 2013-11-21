@@ -7,4 +7,5 @@ data/swell-foop.appdata.xml.in
 data/swell-foop.desktop.in
 src/game.vala
 src/game-view.vala
+src/score-dialog.vala
 src/swell-foop.vala

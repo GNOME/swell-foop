@@ -1,4 +1,5 @@
 data/swell-foop.desktop.in
 src/game.c
 src/game-view.c
+src/score-dialog.vala
 src/swell-foop.c
