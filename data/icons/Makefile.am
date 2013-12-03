@@ -4,7 +4,7 @@ icon24dir=$(datadir)/icons/hicolor/24x24/apps
 icon32dir=$(datadir)/icons/hicolor/32x32/apps
 icon48dir=$(datadir)/icons/hicolor/48x48/apps
 icon256dir=$(datadir)/icons/hicolor/256x256/apps
-iconscalabledir=$(datadir)/icons/hicolor/scalable/apps
+icon512dir=$(datadir)/icons/hicolor/512x512/apps
 
 hc16dir=$(datadir)/icons/HighContrast/16x16/apps
 hc22dir=$(datadir)/icons/HighContrast/22x22/apps
@@ -19,7 +19,7 @@ icon24_DATA = 24x24/swell-foop.png
 icon32_DATA = 32x32/swell-foop.png
 icon48_DATA = 48x48/swell-foop.png
 icon256_DATA = 256x256/swell-foop.png
-iconscalable_DATA = scalable/swell-foop.svg
+icon512_DATA = 512x512/swell-foop.png
 
 hc16_DATA = HighContrast/16x16/swell-foop.png
 hc22_DATA = HighContrast/22x22/swell-foop.png
@@ -35,7 +35,7 @@ EXTRA_DIST = \
 	$(icon32_DATA) \
 	$(icon48_DATA) \
 	$(icon256_DATA) \
-	$(iconscalable_DATA) \
+	$(icon512_DATA) \
 	$(hc16_DATA) \
 	$(hc22_DATA) \
 	$(hc24_DATA) \
