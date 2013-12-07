@@ -30,7 +30,7 @@ public class SwellFoop : Gtk.Application
 
     private Gtk.Dialog? preferences_dialog = null;
 
-    private Gtk.Label current_score_label;
+    private Gtk.HeaderBar headerbar;
 
     /* Store size options */
     public Size[] sizes;
@@ -65,6 +65,7 @@ public class SwellFoop : Gtk.Application
         /* Create the main window */
         window = new Gtk.ApplicationWindow (this);
         window.set_title (_("Swell Foop"));
+        window.icon_name = "swell-foop";
         window.resizable = false;
         window.set_events (window.get_events () | Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
 
@@ -88,39 +89,24 @@ public class SwellFoop : Gtk.Application
         section.append (_("_Quit"), "app.quit");
         set_app_menu (menu);
 
-        /* Create a toolbar */
-        var toolbar = new Gtk.Toolbar ();
-        toolbar.show_arrow = false;
-        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
-        toolbar.show ();
-        vbox.pack_start (toolbar, false, true, 0);
+        /* Create a headerbar */
+        headerbar = new Gtk.HeaderBar ();
+        headerbar.show ();
+        headerbar.title = _("Swell Foop");
+        headerbar.show_close_button = true;
+        headerbar.show_fallback_app_menu = true;
+        window.set_titlebar (headerbar);
 
-        var new_game_button = new Gtk.ToolButton (null, _("_New"));
-        new_game_button.icon_name = "document-new";
+        var new_game_button = new Gtk.Button ();
+        new_game_button.label = _("_New");
+        new_game_button.get_style_context ().add_class ("text-button");
         new_game_button.use_underline = true;
         new_game_button.action_name = "app.new-game";
-        new_game_button.is_important = true;
         new_game_button.show ();
-        toolbar.insert (new_game_button, -1);
-
-        /* Create a label in toolbar showing the score etc. */
-        var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
-        status_box.halign = Gtk.Align.END;
-        status_box.valign = Gtk.Align.CENTER;
-        status_box.show ();
+        headerbar.add (new_game_button);
 
         /* show the current score */
-        current_score_label = new Gtk.Label ("");
-        current_score_label.show ();
-        status_box.pack_start (current_score_label, false, false, 0);
         update_score_cb (0);
-
-        var status_item = new Gtk.ToolItem ();
-        status_item.set_expand (true);
-        status_item.add (status_box);
-        status_item.show ();
-
-        toolbar.insert (status_item, -1);
 
         /* Create a clutter renderer widget */
         clutter_embed = new GtkClutter.Embed ();
@@ -210,7 +196,7 @@ public class SwellFoop : Gtk.Application
             score = game.score;
 
         /* I left one more blank space at the end to make the score not too close to the window border */
-        current_score_label.set_text (_("Score: %4u ").printf (score));
+        headerbar.subtitle = _("Score: %u ").printf (score);
     }
 
     private void complete_cb ()
