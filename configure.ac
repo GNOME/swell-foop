@@ -14,7 +14,7 @@ dnl Dependencies
 dnl ###########################################################################
 
 GLIB_REQUIRED=2.36.0
-GTK_REQUIRED=3.4.0
+GTK_REQUIRED=3.11.2
 CLUTTER_REQUIRED=1.0.0
 CLUTTER_GTK_REQUIRED=0.91.6
 
