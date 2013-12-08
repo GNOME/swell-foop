@@ -97,13 +97,16 @@ public class SwellFoop : Gtk.Application
         headerbar.show_fallback_app_menu = true;
         window.set_titlebar (headerbar);
 
-        var new_game_button = new Gtk.Button ();
-        new_game_button.label = _("_New");
-        new_game_button.get_style_context ().add_class ("text-button");
-        new_game_button.use_underline = true;
-        new_game_button.action_name = "app.new-game";
-        new_game_button.show ();
-        headerbar.add (new_game_button);
+        if (Gtk.Settings.get_default ().gtk_shell_shows_app_menu)
+        {
+            var new_game_button = new Gtk.Button ();
+            new_game_button.label = _("_New");
+            new_game_button.get_style_context ().add_class ("text-button");
+            new_game_button.use_underline = true;
+            new_game_button.action_name = "app.new-game";
+            new_game_button.show ();
+            headerbar.add (new_game_button);
+        }
 
         /* show the current score */
         update_score_cb (0);
