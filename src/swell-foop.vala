@@ -100,6 +100,7 @@ public class SwellFoop : Gtk.Application
         if (Gtk.Settings.get_default ().gtk_shell_shows_app_menu)
         {
             var new_game_button = new Gtk.Button ();
+            new_game_button.valign = Gtk.Align.CENTER;
             new_game_button.label = _("_New");
             new_game_button.get_style_context ().add_class ("text-button");
             new_game_button.use_underline = true;
