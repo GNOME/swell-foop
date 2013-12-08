@@ -245,6 +245,7 @@ public class SwellFoop : Gtk.Application
 
         preferences_dialog = (Gtk.Dialog) preferences_builder.get_object ("preferences");
         preferences_dialog.transient_for = window;
+        preferences_dialog.modal = true;
 
         /* Theme */
         var theme_combo = preferences_builder.get_object ("theme-selector") as Gtk.ComboBox;

@@ -27,9 +27,8 @@
   <object class="GtkDialog" id="preferences">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
-    <property name="title" translatable="yes">Swell Foop</property>
+    <property name="title" translatable="yes">Preferences</property>
     <property name="icon_name">gnome-swell-foop</property>
-    <property name="type_hint">normal</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="visible">True</property>
