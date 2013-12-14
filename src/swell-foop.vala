@@ -92,7 +92,6 @@ public class SwellFoop : Gtk.Application
         headerbar.show ();
         headerbar.title = _("Swell Foop");
         headerbar.show_close_button = true;
-        headerbar.show_fallback_app_menu = true;
         window.set_titlebar (headerbar);
 
         if (Gtk.Settings.get_default ().gtk_shell_shows_app_menu)
