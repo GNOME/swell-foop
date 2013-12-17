@@ -1,3 +1,13 @@
+Swell Foop 3.11.3
+=================
+
+New Dependencies: GTK+ 3.10, Vala 0.22
+
+* New app icon (Jakub Steiner)
+* Use a GtkHeaderBar (William Jon McCann)
+* Autoscroll to new score in scores dialog (Isaac Lenton)
+* Updated translations
+
 swell-foop 3.11.1
 =================
 
