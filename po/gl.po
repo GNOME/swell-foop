@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 15:29+0100\n"
-"PO-Revision-Date: 2013-11-01 15:32+0200\n"
+"POT-Creation-Date: 2013-12-30 01:11+0100\n"
+"PO-Revision-Date: 2013-12-30 01:11+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -59,11 +59,9 @@ msgstr "Entusiasta da animación"
 msgid "Use more flashy, but slower, animations."
 msgstr "Usar animacións máis rechamantes pero máis lentas."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:399
-#: ../src/swell-foop.vala:462
-msgid "Swell Foop"
-msgstr "Swell Foop"
+#: ../data/preferences.ui.h:1
+msgid "Preferences"
+msgstr "Preferencias"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -74,22 +72,26 @@ msgid "_Number of colors:"
 msgstr "_Número de cores:"
 
 #: ../data/preferences.ui.h:4
+msgid "2"
+msgstr "2"
+
+#: ../data/preferences.ui.h:5
 msgid "Setup"
 msgstr "Configuración"
 
-#: ../data/preferences.ui.h:5
+#: ../data/preferences.ui.h:6
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: ../data/preferences.ui.h:6
+#: ../data/preferences.ui.h:7
 msgid "Appearance"
 msgstr "Aparencia"
 
-#: ../data/preferences.ui.h:7
+#: ../data/preferences.ui.h:8
 msgid "_Zealous Animation"
 msgstr "Animación _zealous"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:9
 msgid "Operation"
 msgstr "Operación"
 
@@ -115,6 +117,12 @@ msgstr ""
 "Swell Foop é sempre moi rápido para xogar, pero pode facer que dure máis "
 "cambiando o tamaño do taboleiro."
 
+#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:67
+#: ../src/swell-foop.vala:93 ../src/swell-foop.vala:385
+#: ../src/swell-foop.vala:447
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
 #: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
@@ -137,61 +145,88 @@ msgstr[1] "%u puntos"
 msgid "Game Over!"
 msgstr "Fin da partida!"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "Xogo _novo"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
-msgstr "_Puntuacións"
-
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "_Preferencias"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "_Axuda"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "So_bre"
-
-#: ../src/swell-foop.vala:88 ../src/swell-foop.vala:496
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:87
 msgid "_Quit"
 msgstr "_Saír"
 
-#: ../src/swell-foop.vala:98
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Xogo novo"
+
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_Aceptar"
+
+#: ../src/score-dialog.vala:44
+msgid "Size:"
+msgstr "Tamaño:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Data"
+
+#: ../src/score-dialog.vala:72
+msgid "Score"
+msgstr "Puntuación"
+
+#: ../src/score-dialog.vala:166
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u cor"
+msgstr[1] "%u × %u, %u cores"
+
+#: ../src/swell-foop.vala:80
+msgid "_New Game"
+msgstr "Xogo _novo"
+
+#: ../src/swell-foop.vala:81
+msgid "_Scores"
+msgstr "_Puntuacións"
+
+#: ../src/swell-foop.vala:82
+msgid "_Preferences"
+msgstr "_Preferencias"
+
+#: ../src/swell-foop.vala:85
+msgid "_Help"
+msgstr "_Axuda"
+
+#: ../src/swell-foop.vala:86
+msgid "_About"
+msgstr "So_bre"
+
+#: ../src/swell-foop.vala:101
 msgid "_New"
 msgstr "_Novo"
 
-#: ../src/swell-foop.vala:135
+#: ../src/swell-foop.vala:122
 msgid "Small"
 msgstr "Pequeno"
 
-#: ../src/swell-foop.vala:136
+#: ../src/swell-foop.vala:123
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:124
 msgid "Large"
 msgstr "Grande"
 
 #. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
+#: ../src/swell-foop.vala:200
 #, c-format
-msgid "Score: %4u "
-msgstr "Puntuación: %4u "
+msgid "Score: %u "
+msgstr "Puntuación: %u"
 
-#: ../src/swell-foop.vala:265
+#: ../src/swell-foop.vala:253
 msgid "Colors"
 msgstr "Cores"
 
-#: ../src/swell-foop.vala:269
+#: ../src/swell-foop.vala:257
 msgid "Shapes and Colors"
 msgstr "Formas e cores"
 
-#: ../src/swell-foop.vala:402
+#: ../src/swell-foop.vala:388
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -203,11 +238,11 @@ msgstr ""
 "\n"
 "Swell Foop é parte dos Xogos de GNOME."
 
-#: ../src/swell-foop.vala:403
+#: ../src/swell-foop.vala:389
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:409
+#: ../src/swell-foop.vala:394
 msgid "translator-credits"
 msgstr ""
 "Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.\n"
@@ -223,36 +258,9 @@ msgstr ""
 "Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas\n"
 "colaborar connosco, podes atopar máis información en http://www.trasno.net"
 
-#: ../src/swell-foop.vala:412
+#: ../src/swell-foop.vala:397
 msgid "GNOME Games web site"
 msgstr "Sitio web do GNOME Games"
-
-#: ../src/swell-foop.vala:497
-msgid "New Game"
-msgstr "Xogo novo"
-
-#: ../src/swell-foop.vala:500
-msgid "_OK"
-msgstr "_Aceptar"
-
-#: ../src/swell-foop.vala:512
-msgid "Size:"
-msgstr "Tamaño:"
-
-#: ../src/swell-foop.vala:537
-msgid "Date"
-msgstr "Data"
-
-#: ../src/swell-foop.vala:540
-msgid "Score"
-msgstr "Puntuación"
-
-#: ../src/swell-foop.vala:620
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u cor"
-msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "Chess"
 #~ msgstr "Xadrez"
@@ -378,9 +386,6 @@ msgstr[1] "%u × %u, %u cores"
 
 #~ msgid "Difficulty of the opponent chess engine"
 #~ msgstr "Dificultade do motor de xadrez do opoñente"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferencias"
 
 #~ msgid "Play as:"
 #~ msgstr "Xogar como:"
@@ -3496,10 +3501,6 @@ msgstr[1] "%u × %u, %u cores"
 #~ msgctxt "number"
 #~ msgid "1"
 #~ msgstr "1"
-
-#~ msgctxt "number"
-#~ msgid "2"
-#~ msgstr "2"
 
 #~ msgctxt "number"
 #~ msgid "3"
