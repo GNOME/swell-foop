@@ -16,15 +16,15 @@
 # Petr Pulc <petrpulc@gmail.com>, 2009.
 # Andre Klapper <ak-47@gmx.net>, 2009.
 # Petr Kovar <pknbe@volny.cz>, 2008, 2012.
-# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013.
+# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-17 23:23+0000\n"
-"PO-Revision-Date: 2013-02-20 13:36+0100\n"
+"POT-Creation-Date: 2014-01-12 18:15+0000\n"
+"PO-Revision-Date: 2014-01-18 21:25+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -35,43 +35,42 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "Používat motiv"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "Název motivu, který se má použít."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "Velikost desky"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "Velikost hrací desky."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "Počet barev na desce"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "Počet barev dílů použitých ve hře."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
 msgid "Zealous animation"
 msgstr "Rychlé animace"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Use more flashy, but slower, animations."
 msgstr "Používat efektnější, ale pomalejší animace."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:398
-#: ../src/swell-foop.vala:461
-msgid "Swell Foop"
-msgstr "Swell Foop"
+#: ../data/preferences.ui.h:1
+#| msgid "_Preferences"
+msgid "Preferences"
+msgstr "Předvolby"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -82,31 +81,63 @@ msgid "_Number of colors:"
 msgstr "_Počet barev:"
 
 #: ../data/preferences.ui.h:4
+msgid "2"
+msgstr "2"
+
+#: ../data/preferences.ui.h:5
 msgid "Setup"
 msgstr "Nastavení"
 
-#: ../data/preferences.ui.h:5
+#: ../data/preferences.ui.h:6
 msgid "_Theme:"
 msgstr "_Motiv:"
 
-#: ../data/preferences.ui.h:6
+#: ../data/preferences.ui.h:7
 msgid "Appearance"
 msgstr "Vzhled"
 
-#: ../data/preferences.ui.h:7
+#: ../data/preferences.ui.h:8
 msgid "_Zealous Animation"
 msgstr "_Rychlé animace"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:9
 msgid "Operation"
 msgstr "Operace"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Odstraňte z hrací desky co nejvíce kostek jde. Kliknutí na skupinu kostek "
+"stejné barvy způsobí, že kostky naráz zmizí a zbývající kostky popadají "
+"dolů. Takto ale nejdou odstranit osamocené kostky. Abyste získali co nejvíce "
+"bodů, odstraňujte co největší bloky kostek a také se snažte hrací desku "
+"vyčistit úplně."
+
+#: ../data/swell-foop.appdata.xml.in.h:2
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Jednotlivé hry bývají obvykle odehrány rychle, ale můžete se ji prodloužit "
+"změnou velikosti hrací desky."
+
+#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:67
+#: ../src/swell-foop.vala:93 ../src/swell-foop.vala:385
+#: ../src/swell-foop.vala:446
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
 "Vyčisti obrazovku pomocí odstraňování skupin kamenů různých barev a tvarů"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "hra;logická;desková;stejné;shodné;"
 
@@ -120,65 +151,93 @@ msgstr[1] "%u body"
 msgstr[2] "%u bodů"
 
 #: ../src/game-view.vala:444
-#, c-format
 msgid "Game Over!"
 msgstr "Konec hry!"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "_Nová hra"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
-msgstr "_Skóre"
-
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "_Předvolby"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "_Nápověda"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "O _aplikaci"
-
-#: ../src/swell-foop.vala:88
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:87
 msgid "_Quit"
 msgstr "U_končit"
 
-#: ../src/swell-foop.vala:98
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Nová hra"
+
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_Budiž"
+
+#: ../src/score-dialog.vala:44
+msgid "Size:"
+msgstr "Velikost:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Datum"
+
+#: ../src/score-dialog.vala:72
+msgid "Score"
+msgstr "Skóre"
+
+#: ../src/score-dialog.vala:166
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u barva"
+msgstr[1] "%u × %u, %u barvy"
+msgstr[2] "%u × %u, %u barev"
+
+#: ../src/swell-foop.vala:80
+msgid "_New Game"
+msgstr "_Nová hra"
+
+#: ../src/swell-foop.vala:81
+msgid "_Scores"
+msgstr "_Skóre"
+
+#: ../src/swell-foop.vala:82
+msgid "_Preferences"
+msgstr "_Předvolby"
+
+#: ../src/swell-foop.vala:85
+msgid "_Help"
+msgstr "_Nápověda"
+
+#: ../src/swell-foop.vala:86
+msgid "_About"
+msgstr "O _aplikaci"
+
+#: ../src/swell-foop.vala:101
 msgid "_New"
 msgstr "_Nová"
 
-#: ../src/swell-foop.vala:135
+#: ../src/swell-foop.vala:122
 msgid "Small"
 msgstr "Malá"
 
-#: ../src/swell-foop.vala:136
+#: ../src/swell-foop.vala:123
 msgid "Normal"
 msgstr "Normální"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:124
 msgid "Large"
 msgstr "Velká"
 
 #. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
+#: ../src/swell-foop.vala:200
 #, c-format
-msgid "Score: %4u "
-msgstr "Skóre: %4u"
+#| msgid "Score: %4u "
+msgid "Score: %u "
+msgstr "Skóre: %u"
 
-#: ../src/swell-foop.vala:264
+#: ../src/swell-foop.vala:253
 msgid "Colors"
 msgstr "Barvy"
 
-#: ../src/swell-foop.vala:268
+#: ../src/swell-foop.vala:257
 msgid "Shapes and Colors"
 msgstr "Tvary a barvy"
 
-#: ../src/swell-foop.vala:401
+#: ../src/swell-foop.vala:388
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -190,11 +249,11 @@ msgstr ""
 "\n"
 "Swell Foop je součástí her GNOME."
 
-#: ../src/swell-foop.vala:402
+#: ../src/swell-foop.vala:389
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:408
+#: ../src/swell-foop.vala:394
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -211,30 +270,5 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: ../src/swell-foop.vala:411
-msgid "GNOME Games web site"
-msgstr "Webové stránky her GNOME"
-
-#: ../src/swell-foop.vala:496
-msgid "New Game"
-msgstr "Nová hra"
-
-#: ../src/swell-foop.vala:511
-msgid "Size:"
-msgstr "Velikost:"
-
-#: ../src/swell-foop.vala:536
-msgid "Date"
-msgstr "Datum"
-
-#: ../src/swell-foop.vala:539
-msgid "Score"
-msgstr "Skóre"
-
-#: ../src/swell-foop.vala:619
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u barva"
-msgstr[1] "%u × %u, %u barvy"
-msgstr[2] "%u × %u, %u barev"
+#~ msgid "GNOME Games web site"
+#~ msgstr "Webové stránky her GNOME"
