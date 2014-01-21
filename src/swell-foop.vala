@@ -196,8 +196,7 @@ public class SwellFoop : Gtk.Application
         if (game != null)
             score = game.score;
 
-        /* I left one more blank space at the end to make the score not too close to the window border */
-        headerbar.subtitle = _("Score: %u ").printf (score);
+        headerbar.subtitle = _("Score: %u").printf (score);
     }
 
     private void complete_cb ()
