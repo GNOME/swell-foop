@@ -5,15 +5,15 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-12-08 17:25+0000\n"
-"PO-Revision-Date: 2013-12-09 16:00+0100\n"
+"POT-Creation-Date: 2014-01-21 04:44+0000\n"
+"PO-Revision-Date: 2014-01-21 10:46+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -69,8 +69,6 @@ msgid "_Number of colors:"
 msgstr "_Número de colores:"
 
 #: ../data/preferences.ui.h:4
-#| msgctxt "number"
-#| msgid "2"
 msgid "2"
 msgstr "2"
 
@@ -117,8 +115,8 @@ msgstr ""
 "cambiando el tamaño del tablero."
 
 #: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:67
-#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:387
-#: ../src/swell-foop.vala:449
+#: ../src/swell-foop.vala:93 ../src/swell-foop.vala:384
+#: ../src/swell-foop.vala:445
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -142,7 +140,7 @@ msgstr[1] "%u puntos"
 msgid "Game Over!"
 msgstr "Juego terminado"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:87
 msgid "_Quit"
 msgstr "_Salir"
 
@@ -193,38 +191,37 @@ msgstr "Ay_uda"
 msgid "_About"
 msgstr "_Acerca de"
 
-#: ../src/swell-foop.vala:103
+#: ../src/swell-foop.vala:101
 msgid "_New"
 msgstr "_Nuevo"
 
-#: ../src/swell-foop.vala:124
+#: ../src/swell-foop.vala:122
 msgid "Small"
 msgstr "Pequeño"
 
-#: ../src/swell-foop.vala:125
+#: ../src/swell-foop.vala:123
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:126
+#: ../src/swell-foop.vala:124
 msgid "Large"
 msgstr "Grande"
 
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:202
+#: ../src/swell-foop.vala:199
 #, c-format
-#| msgid "Score: %4u "
-msgid "Score: %u "
-msgstr "Puntuación: %u "
+#| msgid "Score: %u "
+msgid "Score: %u"
+msgstr "Puntuación: %u"
 
-#: ../src/swell-foop.vala:255
+#: ../src/swell-foop.vala:252
 msgid "Colors"
 msgstr "Colores"
 
-#: ../src/swell-foop.vala:259
+#: ../src/swell-foop.vala:256
 msgid "Shapes and Colors"
 msgstr "Colores y formas"
 
-#: ../src/swell-foop.vala:390
+#: ../src/swell-foop.vala:387
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -236,11 +233,11 @@ msgstr ""
 "\n"
 "Swell Foop es parte de los juegos de GNOME."
 
-#: ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:388
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:396
+#: ../src/swell-foop.vala:393
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
@@ -249,9 +246,8 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: ../src/swell-foop.vala:399
-msgid "GNOME Games web site"
-msgstr "Página web de los juegos de GNOME"
+#~ msgid "GNOME Games web site"
+#~ msgstr "Página web de los juegos de GNOME"
 
 #~ msgid "Chess"
 #~ msgstr "Ajedrez"
