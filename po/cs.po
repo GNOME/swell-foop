@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-12 18:15+0000\n"
-"PO-Revision-Date: 2014-01-18 21:25+0100\n"
+"POT-Creation-Date: 2014-01-21 04:44+0000\n"
+"PO-Revision-Date: 2014-01-26 15:22+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -68,7 +68,6 @@ msgid "Use more flashy, but slower, animations."
 msgstr "Používat efektnější, ale pomalejší animace."
 
 #: ../data/preferences.ui.h:1
-#| msgid "_Preferences"
 msgid "Preferences"
 msgstr "Předvolby"
 
@@ -127,8 +126,8 @@ msgstr ""
 "změnou velikosti hrací desky."
 
 #: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:67
-#: ../src/swell-foop.vala:93 ../src/swell-foop.vala:385
-#: ../src/swell-foop.vala:446
+#: ../src/swell-foop.vala:93 ../src/swell-foop.vala:384
+#: ../src/swell-foop.vala:445
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -222,22 +221,20 @@ msgstr "Normální"
 msgid "Large"
 msgstr "Velká"
 
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:200
+#: ../src/swell-foop.vala:199
 #, c-format
-#| msgid "Score: %4u "
-msgid "Score: %u "
+msgid "Score: %u"
 msgstr "Skóre: %u"
 
-#: ../src/swell-foop.vala:253
+#: ../src/swell-foop.vala:252
 msgid "Colors"
 msgstr "Barvy"
 
-#: ../src/swell-foop.vala:257
+#: ../src/swell-foop.vala:256
 msgid "Shapes and Colors"
 msgstr "Tvary a barvy"
 
-#: ../src/swell-foop.vala:388
+#: ../src/swell-foop.vala:387
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -249,11 +246,11 @@ msgstr ""
 "\n"
 "Swell Foop je součástí her GNOME."
 
-#: ../src/swell-foop.vala:389
+#: ../src/swell-foop.vala:388
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:394
+#: ../src/swell-foop.vala:393
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
