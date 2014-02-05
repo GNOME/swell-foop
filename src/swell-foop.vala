@@ -32,6 +32,8 @@ public class SwellFoop : Gtk.Application
 
     private Gtk.HeaderBar headerbar;
 
+    private bool game_in_progress = true;
+
     /* Store size options */
     public Size[] sizes;
 
@@ -202,6 +204,7 @@ public class SwellFoop : Gtk.Application
         var entry = new HistoryEntry (date, game.columns, game.rows, game.color_num, game.score);
         history.add (entry);
         history.save ();
+        game_in_progress = false;
     }
 
     protected override void shutdown ()
@@ -341,7 +344,10 @@ public class SwellFoop : Gtk.Application
 
     private void new_game_cb ()
     {
-        new_game ();
+        if (game_in_progress)
+            show_new_game_confirmation_dialog ();
+        else
+            new_game ();
     }
 
     private void scores_cb ()
@@ -407,7 +413,27 @@ public class SwellFoop : Gtk.Application
         stage.set_size (view.width, view.height);
         clutter_embed.set_size_request ( (int) stage.width, (int) stage.height);
 
+        game_in_progress = true;
+
         update_score_cb (0);
+    }
+
+    private void show_new_game_confirmation_dialog ()
+    {
+        var dialog = new Gtk.MessageDialog.with_markup (window,
+                                                        Gtk.DialogFlags.MODAL,
+                                                        Gtk.MessageType.QUESTION,
+                                                        Gtk.ButtonsType.NONE,
+                                                        "<span weight=\"bold\" size=\"larger\">%s</span>",
+                                                        _("Abandon this game to start a new one?"));
+        dialog.add_button (_("_Cancel"), Gtk.ResponseType.CANCEL);
+        dialog.add_button (_("_New Game"), Gtk.ResponseType.YES);
+
+        var result = dialog.run ();
+        dialog.destroy ();
+
+        if (result == Gtk.ResponseType.YES)
+            new_game ();
     }
 
     public static int main (string[] args)
