@@ -102,7 +102,7 @@ public class SwellFoop : Gtk.Application
             new_game_button.valign = Gtk.Align.CENTER;
             new_game_button.action_name = "app.new-game";
             new_game_button.show ();
-            headerbar.add (new_game_button);
+            headerbar.pack_start (new_game_button);
         }
 
         /* show the current score */
