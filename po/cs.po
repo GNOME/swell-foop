@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-08 00:08+0000\n"
-"PO-Revision-Date: 2014-02-08 10:01+0100\n"
+"POT-Creation-Date: 2014-02-20 23:31+0000\n"
+"PO-Revision-Date: 2014-02-21 10:20+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -126,8 +126,8 @@ msgstr ""
 "změnou velikosti hrací desky."
 
 #: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
-#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:387
-#: ../src/swell-foop.vala:468
+#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
+#: ../src/swell-foop.vala:469
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -185,7 +185,7 @@ msgstr[0] "%u × %u, %u barva"
 msgstr[1] "%u × %u, %u barvy"
 msgstr[2] "%u × %u, %u barev"
 
-#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:430
+#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
 msgid "_New Game"
 msgstr "_Nová hra"
 
@@ -205,32 +205,36 @@ msgstr "_Nápověda"
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: ../src/swell-foop.vala:121
+#: ../src/swell-foop.vala:104
+msgid "Start a new game"
+msgstr "Začít novou hru"
+
+#: ../src/swell-foop.vala:122
 msgid "Small"
 msgstr "Malá"
 
-#: ../src/swell-foop.vala:122
+#: ../src/swell-foop.vala:123
 msgid "Normal"
 msgstr "Normální"
 
-#: ../src/swell-foop.vala:123
+#: ../src/swell-foop.vala:124
 msgid "Large"
 msgstr "Velká"
 
-#: ../src/swell-foop.vala:198
+#: ../src/swell-foop.vala:199
 #, c-format
 msgid "Score: %u"
 msgstr "Skóre: %u"
 
-#: ../src/swell-foop.vala:252
+#: ../src/swell-foop.vala:253
 msgid "Colors"
 msgstr "Barvy"
 
-#: ../src/swell-foop.vala:256
+#: ../src/swell-foop.vala:257
 msgid "Shapes and Colors"
 msgstr "Tvary a barvy"
 
-#: ../src/swell-foop.vala:390
+#: ../src/swell-foop.vala:391
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -242,11 +246,11 @@ msgstr ""
 "\n"
 "Swell Foop je součástí her GNOME."
 
-#: ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:392
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:396
+#: ../src/swell-foop.vala:397
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -263,10 +267,10 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: ../src/swell-foop.vala:428
+#: ../src/swell-foop.vala:429
 msgid "Abandon this game to start a new one?"
 msgstr "Chcete se vzdát této hry a začít novou?"
 
-#: ../src/swell-foop.vala:429
+#: ../src/swell-foop.vala:430
 msgid "_Cancel"
 msgstr "_Zrušit"
