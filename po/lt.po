@@ -8,15 +8,15 @@
 # Vytautas Povilaitis <punktyras@nkm.lt>, 2007.
 # Gintautas Miliauskas <gintas@akl.lt>, 2006, 2007, 2008, 2010.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013.
+# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-17 23:23+0000\n"
-"PO-Revision-Date: 2013-08-27 23:53+0300\n"
+"POT-Creation-Date: 2014-02-22 11:31+0000\n"
+"PO-Revision-Date: 2014-02-22 20:44+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -27,43 +27,42 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "Naudotina tema"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "Naudotinos temos pavadinimas."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "Lentos dydis"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "Žaidimo tinklelio dydis."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "Spalvų kiekis"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "Skirtingų langelių spalvų kiekis žaidime."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
 msgid "Zealous animation"
 msgstr "Įmantri animacija"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Use more flashy, but slower, animations."
 msgstr "Naudoti įmantresnę, bet lėtesnę animaciją."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:398
-#: ../src/swell-foop.vala:461
-msgid "Swell Foop"
-msgstr "Swell Foop"
+#: ../data/preferences.ui.h:1
+#| msgid "_Preferences"
+msgid "Preferences"
+msgstr "Nustatymai"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -74,30 +73,61 @@ msgid "_Number of colors:"
 msgstr "_Spalvų skaičius:"
 
 #: ../data/preferences.ui.h:4
+msgid "2"
+msgstr "2"
+
+#: ../data/preferences.ui.h:5
 msgid "Setup"
 msgstr "Nustatymai"
 
-#: ../data/preferences.ui.h:5
+#: ../data/preferences.ui.h:6
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: ../data/preferences.ui.h:6
+#: ../data/preferences.ui.h:7
 msgid "Appearance"
 msgstr "Išvaizda"
 
-#: ../data/preferences.ui.h:7
+#: ../data/preferences.ui.h:8
 msgid "_Zealous Animation"
 msgstr "Įmantri _animacija"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:9
 msgid "Operation"
 msgstr "Operacija"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Pašalinkite kiek galima daugiau kvadratų iš lentos. Spauskite ant tos pačios "
+"kvadratų grupės jiems pašalinti bei priverčiant kitus kvadratus nukristi į "
+"jų vietą. Negalima pašalinti vieno kvadrato. Gaunate daugiau taškų, jei "
+"pašalinate didesnę kvadratų grupę, bei išvalę visą lentą."
+
+#: ../data/swell-foop.appdata.xml.in.h:2
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Swell Foop visada yra trumpas žaidimas, bet galite jį kiek prailginti "
+"pakeisdami lentos dydį."
+
+#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
+#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
+#: ../src/swell-foop.vala:469
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Išvalykite ekraną pašalindami spalvotų ir figūrinių koklių grupes"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "žaidimas;logika;lenta;vienodi;atitinkantys;"
 
@@ -111,71 +141,92 @@ msgstr[1] "%u taškai"
 msgstr[2] "%u taškų"
 
 #: ../src/game-view.vala:444
-#, c-format
 msgid "Game Over!"
 msgstr "Žaidimas baigtas!"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "_Naujas žaidimas"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
-msgstr "_Taškai"
-
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "_Nustatymai"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "_Žinynas"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "_Apie"
-
-#: ../src/swell-foop.vala:88
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
 msgid "_Quit"
 msgstr "_Išeiti"
 
-#: ../src/swell-foop.vala:98
-#| msgid "_New Game"
-msgid "_New"
-msgstr "_Naujas"
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Naujas žaidimas"
 
-#: ../src/swell-foop.vala:135
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_Gerai"
+
+#: ../src/score-dialog.vala:44
+msgid "Size:"
+msgstr "Dydis:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Data"
+
+#: ../src/score-dialog.vala:72
+msgid "Score"
+msgstr "Taškai"
+
+#: ../src/score-dialog.vala:166
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u spalva"
+msgstr[1] "%u × %u, %u spalvos"
+msgstr[2] "%u × %u, %u spalvų"
+
+#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
+msgid "_New Game"
+msgstr "_Naujas žaidimas"
+
+#: ../src/swell-foop.vala:83
+msgid "_Scores"
+msgstr "_Taškai"
+
+#: ../src/swell-foop.vala:84
+msgid "_Preferences"
+msgstr "_Nustatymai"
+
+#: ../src/swell-foop.vala:87
+msgid "_Help"
+msgstr "_Žinynas"
+
+#: ../src/swell-foop.vala:88
+msgid "_About"
+msgstr "_Apie"
+
+#: ../src/swell-foop.vala:104
+msgid "Start a new game"
+msgstr "Pradėti naują žaidimą"
+
+#: ../src/swell-foop.vala:122
 msgid "Small"
 msgstr "Maža"
 
-#: ../src/swell-foop.vala:136
+#: ../src/swell-foop.vala:123
 msgid "Normal"
 msgstr "Normalu"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:124
 msgid "Large"
 msgstr "Didelė"
 
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
+#: ../src/swell-foop.vala:199
 #, c-format
-msgid "Score: %4u "
-msgstr "Taškai: %4u"
+#| msgid "Score: %4u "
+msgid "Score: %u"
+msgstr "Taškai: %u"
 
-#: ../src/swell-foop.vala:264
+#: ../src/swell-foop.vala:253
 msgid "Colors"
 msgstr "Spalvos"
 
-#: ../src/swell-foop.vala:268
+#: ../src/swell-foop.vala:257
 msgid "Shapes and Colors"
 msgstr "Formos ir spalvos"
 
-#: ../src/swell-foop.vala:401
-#| msgid ""
-#| "I want to play that game! You know, they all light-up and you click on "
-#| "them and they vanish!\n"
-#| "\n"
-#| "Swell Foop is a part of GNOME Games."
+#: ../src/swell-foop.vala:391
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -188,11 +239,11 @@ msgstr ""
 "\n"
 "Swell Foop yra GNOME Games dalis."
 
-#: ../src/swell-foop.vala:402
+#: ../src/swell-foop.vala:392
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Autorinės teisės © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:408
+#: ../src/swell-foop.vala:397
 msgid "translator-credits"
 msgstr ""
 "Paskutinieji vertėjai:\n"
@@ -203,30 +254,11 @@ msgstr ""
 "Tomas Kuliavas <tokul@users.sf.net>,\n"
 "Gediminas Paulauskas <menesis@chatsubo.lt>"
 
-#: ../src/swell-foop.vala:411
-msgid "GNOME Games web site"
-msgstr "GNOME Games tinklalapis"
+#: ../src/swell-foop.vala:429
+msgid "Abandon this game to start a new one?"
+msgstr "Palikti šį žaidimą ir pradėti naują?"
 
-#: ../src/swell-foop.vala:496
-msgid "New Game"
-msgstr "Naujas žaidimas"
+#: ../src/swell-foop.vala:430
+msgid "_Cancel"
+msgstr "_Atsisakyti"
 
-#: ../src/swell-foop.vala:511
-msgid "Size:"
-msgstr "Dydis:"
-
-#: ../src/swell-foop.vala:536
-msgid "Date"
-msgstr "Data"
-
-#: ../src/swell-foop.vala:539
-msgid "Score"
-msgstr "Taškai"
-
-#: ../src/swell-foop.vala:619
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u spalva"
-msgstr[1] "%u × %u, %u spalvos"
-msgstr[2] "%u × %u, %u spalvų"
