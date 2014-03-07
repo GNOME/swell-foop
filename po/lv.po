@@ -5,14 +5,14 @@
 # Peteris Krisjanis <peteris.krisjanis@os.lv>, 2002.
 # Raivis Dejus <orvils@gmail.com>, 2006, 2007.
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2010, 2011.
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-17 23:23+0000\n"
-"PO-Revision-Date: 2013-09-12 10:27+0300\n"
+"POT-Creation-Date: 2014-03-07 11:33+0000\n"
+"PO-Revision-Date: 2014-03-07 16:58+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -25,43 +25,41 @@ msgstr ""
 "X-Poedit-Language: Latvian\n"
 "X-Poedit-Country: LATVIA\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "Motīvs, ko izmantot"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "Lietojamā flīžu motīva nosaukums."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "Laukuma izmērs"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "Spēles galdiņa izmērs."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "Galdiņa kārsu skaits"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "Krāsu skaits kauliņiem, kuri tiks izmantoti spēlē."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
 msgid "Zealous animation"
 msgstr "Hiperaktīva animācija"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Use more flashy, but slower, animations."
 msgstr "Lietot iespaidīgāku, bet lēnāku, animāciju."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:398
-#: ../src/swell-foop.vala:461
-msgid "Swell Foop"
-msgstr "Swell Foop"
+#: ../data/preferences.ui.h:1
+msgid "Preferences"
+msgstr "Iestatījumi"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -72,30 +70,64 @@ msgid "_Number of colors:"
 msgstr "Krāsu _skaits:"
 
 #: ../data/preferences.ui.h:4
+#| msgctxt "number"
+#| msgid "2"
+msgid "2"
+msgstr "2"
+
+#: ../data/preferences.ui.h:5
 msgid "Setup"
 msgstr "Iestatījumi"
 
-#: ../data/preferences.ui.h:5
+#: ../data/preferences.ui.h:6
 msgid "_Theme:"
 msgstr "Mo_tīvs:"
 
-#: ../data/preferences.ui.h:6
+#: ../data/preferences.ui.h:7
 msgid "Appearance"
 msgstr "Izskats"
 
-#: ../data/preferences.ui.h:7
+#: ../data/preferences.ui.h:8
 msgid "_Zealous Animation"
 msgstr "_Hiperaktīva animācija"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:9
 msgid "Operation"
 msgstr "Darbība"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Noņem pēc iespējas vairāk kvadrātu no galdiņa. Spied uz vienas krāsas "
+"kvadrātu kopas un tie pazudīs vienā rāvienā, liekot pārējiem kvadrātiem "
+"iekrist to vietā. Vienā gājienā nevar noņemt vienu kvadrātu. Tu saņemsi daudz "
+"lielāku punktu skaitu, ja attīrīsi lielāku kvadrātu kopu, kā arī pilnībā "
+"notīrot galdiņu."
+
+#: ../data/swell-foop.appdata.xml.in.h:2
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Swell Foop ir vienmēr ātra spēle, bet to var padarīt garāku, mainot galdiņa "
+"izmēru."
+
+#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
+#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
+#: ../src/swell-foop.vala:469
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Attīri ekrānu, aizvācot krāsainu kauliņu grupas"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "spēle;loģika;galdiņš;sakrīt;atbilst;"
 
@@ -109,70 +141,92 @@ msgstr[1] "%u punkti"
 msgstr[2] "%u punktu"
 
 #: ../src/game-view.vala:444
-#, c-format
 msgid "Game Over!"
 msgstr "Spēles Beigas!"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "Jau_na spēle"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
-msgstr "Re_zultāti"
-
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "_Iestatījumi"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "_Palīdzība"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "P_ar"
-
-#: ../src/swell-foop.vala:88
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
 msgid "_Quit"
 msgstr "_Iziet"
 
-#: ../src/swell-foop.vala:98
-msgid "_New"
-msgstr "Jau_na"
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Jauna spēle"
 
-#: ../src/swell-foop.vala:135
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_Labi"
+
+#: ../src/score-dialog.vala:44
+msgid "Size:"
+msgstr "Izmērs:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Datums"
+
+#: ../src/score-dialog.vala:72
+msgid "Score"
+msgstr "Rezultāts"
+
+#: ../src/score-dialog.vala:166
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u krāsa"
+msgstr[1] "%u × %u, %u krāsas"
+msgstr[2] "%u × %u, %u krāsu"
+
+#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
+msgid "_New Game"
+msgstr "Jau_na spēle"
+
+#: ../src/swell-foop.vala:83
+msgid "_Scores"
+msgstr "Re_zultāti"
+
+#: ../src/swell-foop.vala:84
+msgid "_Preferences"
+msgstr "_Iestatījumi"
+
+#: ../src/swell-foop.vala:87
+msgid "_Help"
+msgstr "_Palīdzība"
+
+#: ../src/swell-foop.vala:88
+msgid "_About"
+msgstr "P_ar"
+
+#: ../src/swell-foop.vala:104
+msgid "Start a new game"
+msgstr "Sākt jaunu spēli"
+
+#: ../src/swell-foop.vala:122
 msgid "Small"
 msgstr "Mazs"
 
-#: ../src/swell-foop.vala:136
+#: ../src/swell-foop.vala:123
 msgid "Normal"
 msgstr "Normāls"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:124
 msgid "Large"
 msgstr "Liels"
 
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
+#: ../src/swell-foop.vala:199
 #, c-format
-msgid "Score: %4u "
-msgstr "Rezultāts: %4u"
+#| msgid "Score: %4u "
+msgid "Score: %u"
+msgstr "Rezultāts: %u"
 
-#: ../src/swell-foop.vala:264
+#: ../src/swell-foop.vala:253
 msgid "Colors"
 msgstr "Krāsas"
 
-#: ../src/swell-foop.vala:268
+#: ../src/swell-foop.vala:257
 msgid "Shapes and Colors"
 msgstr "Figūras un krāsas"
 
-#: ../src/swell-foop.vala:401
-#| msgid ""
-#| "I want to play that game! You know, they all light-up and you click on "
-#| "them and they vanish!\n"
-#| "\n"
-#| "Swell Foop is a part of GNOME Games."
+#: ../src/swell-foop.vala:391
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -180,49 +234,35 @@ msgid ""
 "Swell Foop is a part of GNOME Games."
 msgstr ""
 "Es gribu spēlēt to spēli!\n"
-"Nu zini, to kur tie visi iedegās, uz kuriem "
-"uzklikšķina, un tie izgaist!\n"
+"Nu zini, to kur tie visi iedegās, uz kuriem uzklikšķina, un tie izgaist!\n"
 "\n"
 "Swell Foop ir daļa no GNOME spēlēm."
 
-#: ../src/swell-foop.vala:402
+#: ../src/swell-foop.vala:392
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Autortiesības © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:408
+#: ../src/swell-foop.vala:397
 msgid "translator-credits"
 msgstr ""
 "Raivis Dejus <orvils@gmail.com>\n"
 "Sandra Zabarovska <sandra.zabarovska@gmail.com>\n"
 "Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
 
-#: ../src/swell-foop.vala:411
-msgid "GNOME Games web site"
-msgstr "GNOME Games tīmekļa vietne"
+#: ../src/swell-foop.vala:429
+#| msgid "Save this game before starting a new one?"
+msgid "Abandon this game to start a new one?"
+msgstr "Pamest šo spēli, pirms sākt jaunu?"
 
-#: ../src/swell-foop.vala:496
-msgid "New Game"
-msgstr "Jauna spēle"
+#: ../src/swell-foop.vala:430
+msgid "_Cancel"
+msgstr "At_celt"
 
-#: ../src/swell-foop.vala:511
-msgid "Size:"
-msgstr "Izmērs:"
+#~ msgid "_New"
+#~ msgstr "Jau_na"
 
-#: ../src/swell-foop.vala:536
-msgid "Date"
-msgstr "Datums"
-
-#: ../src/swell-foop.vala:539
-msgid "Score"
-msgstr "Rezultāts"
-
-#: ../src/swell-foop.vala:619
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u krāsa"
-msgstr[1] "%u × %u, %u krāsas"
-msgstr[2] "%u × %u, %u krāsu"
+#~ msgid "GNOME Games web site"
+#~ msgstr "GNOME Games tīmekļa vietne"
 
 #~ msgid "Chess"
 #~ msgstr "Šahs"
@@ -247,9 +287,6 @@ msgstr[2] "%u × %u, %u krāsu"
 
 #~ msgid "_Contents"
 #~ msgstr "_Saturs"
-
-#~ msgid "Start a new game"
-#~ msgstr "Sākt jaunu spēli"
 
 #~ msgid "Undo Move"
 #~ msgstr "Atsaukt gājienu"
@@ -347,9 +384,6 @@ msgstr[2] "%u × %u, %u krāsu"
 
 #~ msgid "Difficulty of the opponent chess engine"
 #~ msgstr "Grūtība pretinieka šaha dzinim"
-
-#~ msgid "Preferences"
-#~ msgstr "Iestatījumi"
 
 #~ msgid "Play as:"
 #~ msgstr "Spēlē kā:"
@@ -767,9 +801,6 @@ msgstr[2] "%u × %u, %u krāsu"
 
 #~ msgid "One of the players has died"
 #~ msgstr "Viens no spēlētājiem nomira"
-
-#~ msgid "Save this game before starting a new one?"
-#~ msgstr "Saglabāt šo spēli, pirms sākt jaunu?"
 
 #~ msgid "_Abandon game"
 #~ msgstr "P_amest spēli"
@@ -3474,10 +3505,6 @@ msgstr[2] "%u × %u, %u krāsu"
 #~ msgstr "1"
 
 #~ msgctxt "number"
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgctxt "number"
 #~ msgid "3"
 #~ msgstr "3"
 
@@ -5193,14 +5220,8 @@ msgstr[2] "%u × %u, %u krāsu"
 #~ msgid "Could not show link"
 #~ msgstr "Nevar parādīt saiti"
 
-#~ msgid "_Cancel"
-#~ msgstr "At_celt"
-
 #~ msgid "_Close"
 #~ msgstr "_Aizvērt"
-
-#~ msgid "_OK"
-#~ msgstr "_Labi"
 
 #~ msgid "Qua"
 #~ msgstr "Qua"
