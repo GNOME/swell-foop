@@ -93,8 +93,10 @@ msgid ""
 "causing other squares to fall into place. It is not possible to remove a "
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
-msgstr "从棋盘上消除尽可能多的色块。点击同样颜色的一组色块来一下子消除它们。"
-"消除后其他色块会掉下来。不能一次只消除一个色块。一次消除的色块越多，或清空棋盘，你的得分就越多。"
+msgstr ""
+"从棋盘上消除尽可能多的色块。点击同样颜色的一组色块来一下子消除它们。消除后其"
+"他色块会掉下来。不能一次只消除一个色块。一次消除的色块越多，或清空棋盘，你的"
+"得分就越多。"
 
 #: ../data/swell-foop.appdata.xml.in.h:2
 msgid ""
@@ -230,10 +232,9 @@ msgstr ""
 "Xhacker Liu <liu.dongyuan@gmail.com>, 2010"
 
 #: ../src/swell-foop.vala:429
-#, fuzzy
 #| msgid "Save this game before starting a new one?"
 msgid "Abandon this game to start a new one?"
-msgstr "开始新游戏前保存当前游戏？"
+msgstr "放弃此次游戏并开始新游戏吗？"
 
 #: ../src/swell-foop.vala:430
 msgid "_Cancel"
