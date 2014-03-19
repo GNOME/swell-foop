@@ -1,5 +1,5 @@
 # Danish translation of gnome-games.
-# Copyright (C) 1998-2012 Free Software Foundation, Inc.
+# Copyright (C) 1998-2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
 # Kenneth Christiansen <kenneth@ripen.dk>, 1998-2001
@@ -7,7 +7,7 @@
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007, 08, 09, 10, 11, 12.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2014.
 #
 # RETMIG: en eller anden med forstand på kabaler skal have oversat
 # navnene på spillene. Der er en kommentar til hver af dem der
@@ -34,8 +34,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-17 18:44+0200\n"
-"PO-Revision-Date: 2013-09-16 23:56+0200\n"
+"POT-Creation-Date: 2014-03-19 22:55+0100\n"
+"PO-Revision-Date: 2014-03-18 22:59+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -44,44 +44,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "Temaet der skal benyttes"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "Navnet på briktemaet, der skal benyttes."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "Brætstørrelse"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "Størrelsen af spillebrættet."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "Antal farver på brættet"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "Antallet af farver, brikker kan have i spillet."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
 msgid "Zealous animation"
 msgstr "Ivrig animation"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Use more flashy, but slower, animations."
 msgstr "Benyt mere iøjnefaldende, men langsommere, animationer."
 
-# Yuck!  Der er folk der kritiserer the GIMP for at have valgt et dårligt navn...
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:399
-#: ../src/swell-foop.vala:462
-msgid "Swell Foop"
-msgstr "Swell Foop"
+#: ../data/preferences.ui.h:1
+msgid "Preferences"
+msgstr "Indstillinger"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -91,35 +88,69 @@ msgstr "_Brætstørrelse:"
 msgid "_Number of colors:"
 msgstr "_Antal farver:"
 
+#: ../data/preferences.ui.h:4
+msgid "2"
+msgstr "2"
+
 # setup -> konfiguration :: preferences -> indstillinger :: settings -> opsætning
 #
 # Man kunne gøre dette anderledes, men med forskellige oversættelser undgås situationen med en menu kaldet indstillinger, indeholdende et menupunkt kaldet indstillinger
-#: ../data/preferences.ui.h:4
+#: ../data/preferences.ui.h:5
 msgid "Setup"
 msgstr "Konfiguration"
 
-#: ../data/preferences.ui.h:5
+#: ../data/preferences.ui.h:6
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: ../data/preferences.ui.h:6
+#: ../data/preferences.ui.h:7
 msgid "Appearance"
 msgstr "Udseende"
 
-#: ../data/preferences.ui.h:7
+#: ../data/preferences.ui.h:8
 msgid "_Zealous Animation"
 msgstr "_Ivrig animation"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:9
 msgid "Operation"
 msgstr "Operation"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Fjern så mange firkanter som muligt fra brættet. Klik på en gruppe af "
+"firkanter af samme farve for at få dem alle til at forsvinde i én ordentlig "
+"omgang, eller \"swell foop\", så andre firkanter falder ned på deres plads. "
+"Det er ikke muligt at fjerne en enkelt firkant ad gangen. Du får langt flere "
+"points for at rydde en større gruppe firkanter, og også for at rydde hele "
+"brættet."
+
+#: ../data/swell-foop.appdata.xml.in.h:2
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Swell Foop er altid meget hurtigt at spille, men du kan få det til at vare "
+"lidt længere ved at ændre brætstørrelse."
+
+# Yuck!  Der er folk der kritiserer the GIMP for at have valgt et dårligt navn...
+#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
+#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
+#: ../src/swell-foop.vala:469
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
 "Ryd skærmen ved at fjerne grupper af ensfarvede og ens udformede brikker"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "spil;logik;bræt;samme;matching;match;"
 
@@ -136,61 +167,87 @@ msgstr[1] "%u point"
 msgid "Game Over!"
 msgstr "Spillet er slut!"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "_Nyt spil"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
-msgstr "_Resultater"
-
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "_Indstillinger"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "_Hjælp"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "_Om"
-
-#: ../src/swell-foop.vala:88
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
 msgid "_Quit"
 msgstr "_Afslut"
 
-#: ../src/swell-foop.vala:98
-msgid "_New"
-msgstr "_Nyt"
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Nyt spil"
 
-#: ../src/swell-foop.vala:135
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_O.k."
+
+#: ../src/score-dialog.vala:44
+msgid "Size:"
+msgstr "Størrelse:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Dato"
+
+#: ../src/score-dialog.vala:72
+msgid "Score"
+msgstr "Resultat"
+
+#: ../src/score-dialog.vala:166
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u farve"
+msgstr[1] "%u × %u, %u farver"
+
+#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
+msgid "_New Game"
+msgstr "_Nyt spil"
+
+#: ../src/swell-foop.vala:83
+msgid "_Scores"
+msgstr "_Resultater"
+
+#: ../src/swell-foop.vala:84
+msgid "_Preferences"
+msgstr "_Indstillinger"
+
+#: ../src/swell-foop.vala:87
+msgid "_Help"
+msgstr "_Hjælp"
+
+#: ../src/swell-foop.vala:88
+msgid "_About"
+msgstr "_Om"
+
+#: ../src/swell-foop.vala:104
+msgid "Start a new game"
+msgstr "Start et nyt spil"
+
+#: ../src/swell-foop.vala:122
 msgid "Small"
 msgstr "Lille"
 
-#: ../src/swell-foop.vala:136
+#: ../src/swell-foop.vala:123
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:124
 msgid "Large"
 msgstr "Stor"
 
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
+#: ../src/swell-foop.vala:199
 #, c-format
-msgid "Score: %4u "
-msgstr "Stilling: %4u"
+msgid "Score: %u"
+msgstr "Stilling: %u"
 
-#: ../src/swell-foop.vala:265
+#: ../src/swell-foop.vala:253
 msgid "Colors"
 msgstr "Farver"
 
-#: ../src/swell-foop.vala:269
+#: ../src/swell-foop.vala:257
 msgid "Shapes and Colors"
 msgstr "Former og farver"
 
-#: ../src/swell-foop.vala:402
+#: ../src/swell-foop.vala:391
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -202,11 +259,11 @@ msgstr ""
 "\n"
 "Swell Foop er en del af GNOME Games."
 
-#: ../src/swell-foop.vala:403
+#: ../src/swell-foop.vala:392
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Ophavsret © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:409
+#: ../src/swell-foop.vala:397
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -219,32 +276,19 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/swell-foop.vala:412
-msgid "GNOME Games web site"
-msgstr "Hjemmeside for GNOME Games"
+#: ../src/swell-foop.vala:429
+msgid "Abandon this game to start a new one?"
+msgstr "Forkast dette spil for at starte et nyt?"
 
-#: ../src/swell-foop.vala:497
-msgid "New Game"
-msgstr "Nyt spil"
+#: ../src/swell-foop.vala:430
+msgid "_Cancel"
+msgstr "_Annullér"
 
-#: ../src/swell-foop.vala:512
-msgid "Size:"
-msgstr "Størrelse:"
+#~ msgid "_New"
+#~ msgstr "_Nyt"
 
-#: ../src/swell-foop.vala:537
-msgid "Date"
-msgstr "Dato"
-
-#: ../src/swell-foop.vala:540
-msgid "Score"
-msgstr "Resultat"
-
-#: ../src/swell-foop.vala:620
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u farve"
-msgstr[1] "%u × %u, %u farver"
+#~ msgid "GNOME Games web site"
+#~ msgstr "Hjemmeside for GNOME Games"
 
 #~ msgid "Chess"
 #~ msgstr "Skak"
@@ -269,9 +313,6 @@ msgstr[1] "%u × %u, %u farver"
 
 #~ msgid "_Contents"
 #~ msgstr "_Indhold"
-
-#~ msgid "Start a new game"
-#~ msgstr "Start et nyt spil"
 
 #~ msgid "Undo Move"
 #~ msgstr "Fortryd træk"
@@ -371,9 +412,6 @@ msgstr[1] "%u × %u, %u farver"
 
 #~ msgid "Difficulty of the opponent chess engine"
 #~ msgstr "Sværhedsgrad for modstanderens skakmaskine"
-
-#~ msgid "Preferences"
-#~ msgstr "Indstillinger"
 
 #~ msgid "Play as:"
 #~ msgstr "Spil som:"
@@ -794,9 +832,6 @@ msgstr[1] "%u × %u, %u farver"
 # Det er godtnok en ekstrem formulering indenfor skak
 #~ msgid "One of the players has died"
 #~ msgstr "En af spillerne er død"
-
-#~ msgid "Save this game before starting a new one?"
-#~ msgstr "Gem dette spil før der startes et nyt?"
 
 #~ msgid "_Abandon game"
 #~ msgstr "_Forlad spillet"
@@ -3517,10 +3552,6 @@ msgstr[1] "%u × %u, %u farver"
 #~ msgstr "1"
 
 #~ msgctxt "number"
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgctxt "number"
 #~ msgid "3"
 #~ msgstr "3"
 
@@ -5253,14 +5284,8 @@ msgstr[1] "%u × %u, %u farver"
 #~ msgid "Could not show link"
 #~ msgstr "Kunne ikke vise link"
 
-#~ msgid "_Cancel"
-#~ msgstr "_Annullér"
-
 #~ msgid "_Close"
 #~ msgstr "_Luk"
-
-#~ msgid "_OK"
-#~ msgstr "_O.k."
 
 #~ msgid "_Animations"
 #~ msgstr "_Animationer"
