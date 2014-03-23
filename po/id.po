@@ -2,7 +2,7 @@
 # Copyright (c) 2010 swell-foop's COPYRIGHT HOLDER
 # This file is distributed under the same license as the swell-foop package.
 #
-# Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013.
+# Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014.
 # Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
 msgid ""
@@ -10,11 +10,11 @@ msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-17 23:23+0000\n"
-"PO-Revision-Date: 2013-09-15 13:31+0700\n"
+"POT-Creation-Date: 2014-03-22 23:46+0000\n"
+"PO-Revision-Date: 2014-03-23 15:43+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
-"Language: id_ID\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,43 +22,41 @@ msgstr ""
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "Tema untuk digunakan"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "Judul tema kotak untuk digunakan."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "Ukuran papan"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "Ukuran papan permainan."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "Penghitung warna papan"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "Jumlah warna papan kotak untuk digunakan dalam permainan."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
 msgid "Zealous animation"
 msgstr "Animasi"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Use more flashy, but slower, animations."
 msgstr "Gunakan animasi yang lebih baik, namun lebih lambat."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:398
-#: ../src/swell-foop.vala:461
-msgid "Swell Foop"
-msgstr "Swell Foop"
+#: ../data/preferences.ui.h:1
+msgid "Preferences"
+msgstr "Preferensi"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -69,31 +67,64 @@ msgid "_Number of colors:"
 msgstr "Cacah war_na:"
 
 #: ../data/preferences.ui.h:4
+msgid "2"
+msgstr "2"
+
+#: ../data/preferences.ui.h:5
 msgid "Setup"
 msgstr "Setup"
 
-#: ../data/preferences.ui.h:5
+#: ../data/preferences.ui.h:6
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: ../data/preferences.ui.h:6
+#: ../data/preferences.ui.h:7
 msgid "Appearance"
 msgstr "Tampilan"
 
-#: ../data/preferences.ui.h:7
+#: ../data/preferences.ui.h:8
 msgid "_Zealous Animation"
 msgstr "Animasi _Lincah"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:9
 msgid "Operation"
 msgstr "Operasi"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Singkirkan sebanyak mungkin kotak dari papan. Klik pada sekelompok kotak "
+"dengan warna sama untuk membuat mereka semua hilang dalam satu sapuan, "
+"menyebabkan kotak lain jatuh menggantikannya. Tak mungkin membuang satu "
+"kotak pada suatu saat. Anda mendapat poin jauh lebih banyak ketika "
+"membersihkan kelompok kotak yang lebih besar, dan juga untuk membersihkan "
+"seluruh papan."
+
+#: ../data/swell-foop.appdata.xml.in.h:2
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Swell Foop selalu cepat dimainkan, tapi Anda dapat membuatnya lebih lama "
+"dengan mengubah ukuran papan."
+
+#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
+#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
+#: ../src/swell-foop.vala:469
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
 "Bersihkan layar dengan menghapus kotak berwarna dan berbentuk yang tergrup"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "permainan;logika;papan;sama;mencocokkan;"
 
@@ -105,65 +136,89 @@ msgid_plural "%u points"
 msgstr[0] "%u poin"
 
 #: ../src/game-view.vala:444
-#, c-format
 msgid "Game Over!"
 msgstr "Permainan Usai!"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "Permai_nan Baru"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
-msgstr "_Nilai"
-
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "_Preferensi"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "_Bantuan"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "Tent_ang"
-
-#: ../src/swell-foop.vala:88
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
 msgid "_Quit"
 msgstr "_Keluar"
 
-#: ../src/swell-foop.vala:98
-msgid "_New"
-msgstr "_Baru"
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Permainan Baru"
 
-#: ../src/swell-foop.vala:135
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_OK"
+
+#: ../src/score-dialog.vala:44
+msgid "Size:"
+msgstr "Ukuran:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Tanggal"
+
+#: ../src/score-dialog.vala:72
+msgid "Score"
+msgstr "Nilai"
+
+#: ../src/score-dialog.vala:166
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u warna"
+
+#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
+msgid "_New Game"
+msgstr "Permai_nan Baru"
+
+#: ../src/swell-foop.vala:83
+msgid "_Scores"
+msgstr "_Nilai"
+
+#: ../src/swell-foop.vala:84
+msgid "_Preferences"
+msgstr "_Preferensi"
+
+#: ../src/swell-foop.vala:87
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: ../src/swell-foop.vala:88
+msgid "_About"
+msgstr "Tent_ang"
+
+#: ../src/swell-foop.vala:104
+msgid "Start a new game"
+msgstr "Mulai permainan baru"
+
+#: ../src/swell-foop.vala:122
 msgid "Small"
 msgstr "Kecil"
 
-#: ../src/swell-foop.vala:136
+#: ../src/swell-foop.vala:123
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:124
 msgid "Large"
 msgstr "Besar"
 
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
+#: ../src/swell-foop.vala:199
 #, c-format
-msgid "Score: %4u "
-msgstr "Skor: %4u "
+msgid "Score: %u"
+msgstr "Skor: %u"
 
-#: ../src/swell-foop.vala:264
+#: ../src/swell-foop.vala:253
 msgid "Colors"
 msgstr "Warna"
 
-#: ../src/swell-foop.vala:268
+#: ../src/swell-foop.vala:257
 msgid "Shapes and Colors"
 msgstr "Bentuk dan Warna"
 
-#: ../src/swell-foop.vala:401
+#: ../src/swell-foop.vala:391
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -175,41 +230,23 @@ msgstr ""
 "\n"
 "Swell Foop merupakan bagian dari Permainan GNOME"
 
-#: ../src/swell-foop.vala:402
+#: ../src/swell-foop.vala:392
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Hak Cipta © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:408
+#: ../src/swell-foop.vala:397
 msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
 "Ahmad Riza H Nst  <rizahnst@gnome.org>\n"
-"Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013.\n"
+"Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
 "Dirgita <dirgitadevina@yahoo.co.id>, 2012."
 
-#: ../src/swell-foop.vala:411
-msgid "GNOME Games web site"
-msgstr "Situs web Permainan GNOME"
+#: ../src/swell-foop.vala:429
+msgid "Abandon this game to start a new one?"
+msgstr "Tinggalkan permainan ini untuk memulai yang baru?"
 
-#: ../src/swell-foop.vala:496
-msgid "New Game"
-msgstr "Permainan Baru"
-
-#: ../src/swell-foop.vala:511
-msgid "Size:"
-msgstr "Ukuran:"
-
-#: ../src/swell-foop.vala:536
-msgid "Date"
-msgstr "Tanggal"
-
-#: ../src/swell-foop.vala:539
-msgid "Score"
-msgstr "Nilai"
-
-#: ../src/swell-foop.vala:619
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u warna"
+#: ../src/swell-foop.vala:430
+msgid "_Cancel"
+msgstr "_Batal"
