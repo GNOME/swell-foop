@@ -145,7 +145,9 @@ public class GameView : Clutter.Group
 
                 /* Respond to the user interactions */
                 tile.reactive = true;
-                tile.button_release_event.connect (remove_region_cb);
+                var tap = new Clutter.TapAction ();
+                tile.add_action (tap);
+                tap.tap.connect (remove_region_cb);
                 tile.enter_event.connect (tile_entered_cb);
                 tile.leave_event.connect (tile_left_cb);
 
@@ -242,7 +244,7 @@ public class GameView : Clutter.Group
     }
 
     /* When the user click a tile, send the model to remove the connected tile. */
-    private bool remove_region_cb (Clutter.Actor actor, Clutter.ButtonEvent event)
+    private void remove_region_cb (Clutter.TapAction tap, Clutter.Actor actor)
     {
         var tile = (TileActor) actor;
 
@@ -259,8 +261,6 @@ public class GameView : Clutter.Group
         cursor_y = tile.tile.grid_y;
 
         game.remove_connected_tiles (tile.tile);
-
-        return false;
     }
 
     /* When the mouse leaves the application window, reset all tiles to the default brightness */
