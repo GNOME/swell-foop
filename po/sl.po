@@ -5,15 +5,15 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006-2007.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007-2013.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007-2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-10-20 03:53+0000\n"
-"PO-Revision-Date: 2013-10-24 21:03+0100\n"
+"POT-Creation-Date: 2014-04-12 11:16+0000\n"
+"PO-Revision-Date: 2014-04-12 19:46+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -57,11 +57,9 @@ msgstr "Polno animiranje"
 msgid "Use more flashy, but slower, animations."
 msgstr "Uporabi lepe animacije."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:399
-#: ../src/swell-foop.vala:462
-msgid "Swell Foop"
-msgstr "Pravi Pavliha"
+#: ../data/preferences.ui.h:1
+msgid "Preferences"
+msgstr "Možnosti"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -99,12 +97,23 @@ msgid ""
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
 msgstr ""
+"Cilj igre je odstraniti čim več ploščic na igralni plošči. S klikom na "
+"skupino kvadratov enake barve, ti izginejo, preostali pa zapolnijo "
+"izpraznjena polja. Ni mogoče odstraniti le enega polja, sicer pa je "
+"dodeljenih več točk, če je barvno polje veliko."
 
 #: ../data/swell-foop.appdata.xml.in.h:2
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
 msgstr ""
+"Pravi Pavliha je dinamična igra, ki jo določa velikost igralne površine."
+
+#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
+#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
+#: ../src/swell-foop.vala:469
+msgid "Swell Foop"
+msgstr "Pravi Pavliha"
 
 #: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
@@ -128,61 +137,89 @@ msgstr[3] "%u točke"
 msgid "Game Over!"
 msgstr "Konec igre!"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "_Nova Igra"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
-msgstr "_Točke"
-
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "_Možnosti"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "Pomo_č"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "_O Programu"
-
-#: ../src/swell-foop.vala:88 ../src/swell-foop.vala:496
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
 msgid "_Quit"
 msgstr "_Končaj"
 
-#: ../src/swell-foop.vala:98
-msgid "_New"
-msgstr "_Nova"
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Nova igra"
 
-#: ../src/swell-foop.vala:135
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_V redu"
+
+#: ../src/score-dialog.vala:44
+msgid "Size:"
+msgstr "Velikost:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Datum"
+
+#: ../src/score-dialog.vala:72
+msgid "Score"
+msgstr "Rezultat"
+
+#: ../src/score-dialog.vala:166
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u barv"
+msgstr[1] "%u × %u, %u barva"
+msgstr[2] "%u × %u, %u barvi"
+msgstr[3] "%u × %u, %u barve"
+
+#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
+msgid "_New Game"
+msgstr "_Nova Igra"
+
+#: ../src/swell-foop.vala:83
+msgid "_Scores"
+msgstr "_Točke"
+
+#: ../src/swell-foop.vala:84
+msgid "_Preferences"
+msgstr "_Možnosti"
+
+#: ../src/swell-foop.vala:87
+msgid "_Help"
+msgstr "Pomo_č"
+
+#: ../src/swell-foop.vala:88
+msgid "_About"
+msgstr "_O Programu"
+
+#: ../src/swell-foop.vala:104
+msgid "Start a new game"
+msgstr "Začni novo igro"
+
+#: ../src/swell-foop.vala:122
 msgid "Small"
 msgstr "Majhno"
 
-#: ../src/swell-foop.vala:136
+#: ../src/swell-foop.vala:123
 msgid "Normal"
 msgstr "Običajno"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:124
 msgid "Large"
 msgstr "Veliko"
 
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
+#: ../src/swell-foop.vala:199
 #, c-format
-msgid "Score: %4u "
-msgstr "Rezultat: %4u "
+msgid "Score: %u"
+msgstr "Rezultat: %u"
 
-#: ../src/swell-foop.vala:265
+#: ../src/swell-foop.vala:253
 msgid "Colors"
 msgstr "Barve"
 
-#: ../src/swell-foop.vala:269
+#: ../src/swell-foop.vala:257
 msgid "Shapes and Colors"
 msgstr "Oblike in barve"
 
-#: ../src/swell-foop.vala:402
+#: ../src/swell-foop.vala:391
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -194,11 +231,11 @@ msgstr ""
 "\n"
 "Igra Pravi Pavliha je del iger GNOME."
 
-#: ../src/swell-foop.vala:403
+#: ../src/swell-foop.vala:392
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Avtorske pravice © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:409
+#: ../src/swell-foop.vala:397
 msgid "translator-credits"
 msgstr ""
 "Matic Žgur <mr.zgur@gmail.com>\n"
@@ -206,35 +243,16 @@ msgstr ""
 "Tadej Janež <tadej_janez@email.si>\n"
 "Matej Urbančič <mateju@svn.gnome.org>"
 
-#: ../src/swell-foop.vala:412
-msgid "GNOME Games web site"
-msgstr "Spletna stran iger GNOME"
+#: ../src/swell-foop.vala:429
+msgid "Abandon this game to start a new one?"
+msgstr "Ali želite končati trenutno igro in začeti novo?"
 
-#: ../src/swell-foop.vala:497
-msgid "New Game"
-msgstr "Nova igra"
+#: ../src/swell-foop.vala:430
+msgid "_Cancel"
+msgstr "_Prekliči"
 
-#: ../src/swell-foop.vala:500
-msgid "_OK"
-msgstr "_V redu"
+#~ msgid "_New"
+#~ msgstr "_Nova"
 
-#: ../src/swell-foop.vala:512
-msgid "Size:"
-msgstr "Velikost:"
-
-#: ../src/swell-foop.vala:537
-msgid "Date"
-msgstr "Datum"
-
-#: ../src/swell-foop.vala:540
-msgid "Score"
-msgstr "Rezultat"
-
-#: ../src/swell-foop.vala:620
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u barv"
-msgstr[1] "%u × %u, %u barva"
-msgstr[2] "%u × %u, %u barvi"
-msgstr[3] "%u × %u, %u barve"
+#~ msgid "GNOME Games web site"
+#~ msgstr "Spletna stran iger GNOME"
