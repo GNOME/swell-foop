@@ -57,6 +57,8 @@ public class SwellFoop : Gtk.Application
     {
         base.startup ();
 
+        Gtk.Settings.get_default ().set ("gtk-application-prefer-dark-theme", true);
+
         settings = new Settings ("org.gnome.swell-foop");
 
         add_action_entries (action_entries, this);
