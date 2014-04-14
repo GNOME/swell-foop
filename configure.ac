@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([Swell Foop], [3.12.0], [https://bugzilla.gnome.org/],
+AC_INIT([Swell Foop], [3.12.1], [https://bugzilla.gnome.org/],
         [swell-foop], [https://wiki.gnome.org/Apps/Swell%20Foop])
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])
@@ -18,7 +18,7 @@ dnl ###########################################################################
 GLIB_REQUIRED=2.36.0
 GTK_REQUIRED=3.10
 CLUTTER_REQUIRED=1.14.0
-CLUTTER_GTK_REQUIRED=1.5.0
+CLUTTER_GTK_REQUIRED=1.4.0
 
 PKG_CHECK_MODULES(SWELL_FOOP, [
   gmodule-export-2.0

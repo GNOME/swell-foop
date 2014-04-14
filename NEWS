@@ -1,3 +1,10 @@
+Swell Foop 3.12.1
+=================
+
+* Fix touch screen tapping
+* Bump clutter dep to 1.14.0, clutter-gtk to 1.4.0
+* Updated translations
+
 Swell Foop 3.12.0
 =================
 
