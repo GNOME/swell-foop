@@ -289,8 +289,9 @@ public class GameView : Clutter.Group
     {
         if (is_zealous)
         {
-            var text = new ScoreActor (width / 2.0, height / 2.0, width, height);
+            var text = new ScoreActor (game.rows / 5, width, height);
             game_actors.add_child (text);
+            text.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.BOTH, 0.5f));
             text.animate_score (points_awarded);
         }
     }
@@ -298,8 +299,9 @@ public class GameView : Clutter.Group
     /* Show the final score when the game is over */
     public void game_complete_cb ()
     {
-        var text = new ScoreActor (width / 2.0, height / 2.0, width, height);
+        var text = new ScoreActor (game.rows / 5, width, height);
         game_actors.add_child (text);
+        text.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.BOTH, 0.5f));
         text.animate_final_score (game.score);
     }
 }
@@ -413,19 +415,21 @@ public class ScoreActor : Clutter.Group
     private Clutter.Text label;
     private float scene_width;
     private float scene_height;
+    private int game_size;
 
-    public ScoreActor (double x, double y, double width, double height)
+    public ScoreActor (int game_size, double width, double height)
     {
         label = new Clutter.Text ();
         label.set_color (Clutter.Color.from_string ("rgba(255, 255, 255, 255)"));
 
-        anchor_gravity = Clutter.Gravity.CENTER;
         add_child (label);
 
-        this.x = (float) x;
-        this.y = (float) y;
+        pivot_point.x = 0.5f;
+        pivot_point.y = 0.5f;
+
         this.scene_width = (float)width;
         this.scene_height = (float)height;
+        this.game_size = game_size;
     }
 
     public void animate_score (int points)
@@ -433,7 +437,7 @@ public class ScoreActor : Clutter.Group
         if (points <= 0)
             return;
 
-        label.set_font_name ("Bitstrem Vera Sans Bold 40");
+        label.set_font_name ("Bitstrem Vera Sans Bold 30");
         label.set_text ("+" + points.to_string());
 
         /* The score will be shown repeatedly therefore we need to reset some important properties
@@ -443,14 +447,14 @@ public class ScoreActor : Clutter.Group
 
         set_easing_mode (Clutter.AnimationMode.EASE_OUT_SINE);
         set_easing_duration (600);
-        set_z_position (500f);
+        z_position = 500f;
         set_opacity (0);
         transitions_completed.connect (() => { destroy (); });
     }
 
     public void animate_final_score (uint points)
     {
-        label.set_font_name ("Bitstrem Vera Sans 50");
+        label.set_font_name ("Bitstrem Vera Sans 40");
         var points_label = ngettext (/* Label showing the number of points at the end of the game */
                                      "%u point", "%u points", points).printf (points);
         label.set_markup ("<b>%s</b>\n%s".printf (_("Game Over!"), points_label));
@@ -459,13 +463,11 @@ public class ScoreActor : Clutter.Group
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */
         opacity = 255;
-        z_position = 0f;
+        z_position = -300f + game_size * 100;
 
-        scale_x = scale_y = 0.0;
-        float scale_to = scene_width / this.width;
         set_easing_mode (Clutter.AnimationMode.EASE_OUT_ELASTIC);
         set_easing_duration (2000);
-        set_scale ( (float)scale_to, (float)scale_to);
+        z_position = -200 + game_size * 150;
         set_opacity (255);
     }
 }
