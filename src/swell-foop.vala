@@ -117,7 +117,7 @@ public class SwellFoop : Gtk.Application
         vbox.pack_start (clutter_embed, true, true);
 
         stage = (Clutter.Stage) clutter_embed.get_stage ();
-        stage.color = Clutter.Color.from_string ("#000000");  /* background color is black */
+        stage.background_color = Clutter.Color.from_string ("#000000");  /* background color is black */
 
         /* Initialize the options for sizes */
         sizes = new Size[3];
@@ -138,7 +138,7 @@ public class SwellFoop : Gtk.Application
         view.theme_name = settings.get_string ("theme");
         view.is_zealous = settings.get_boolean ("zealous");
         view.game = game;
-        stage.add_actor (view);
+        stage.add_child (view);
         /* Request an appropriate size for the game view */
         stage.set_size (view.width, view.height);
         clutter_embed.set_size_request ((int) stage.width, (int) stage.height);

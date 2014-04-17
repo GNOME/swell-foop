@@ -39,7 +39,7 @@ public class GameView : Clutter.Group
     private TileActor[,] tiles;
 
     /* Group containing all the actors in the current game */
-    private Clutter.Group? game_actors = null;
+    private Clutter.Actor? game_actors = null;
 
     /* Game being played */
     private Game? _game = null;
@@ -50,8 +50,8 @@ public class GameView : Clutter.Group
         {
             if (game_actors != null)
                 game_actors.destroy ();
-            game_actors = new Clutter.Group ();
-            add_actor (game_actors);
+            game_actors = new Clutter.Actor ();
+            add_child (game_actors);
 
             /* Remove old tiles */
             remove_tiles ();
@@ -139,8 +139,8 @@ public class GameView : Clutter.Group
 
                 /* Physical position in the stage */
                 float xx, yy;
-                xx = x * tile_size + tile_size / 2;
-                yy = (game.rows - y - 1) * tile_size + tile_size / 2;
+                xx = x * tile_size;
+                yy = (game.rows - y - 1) * tile_size;
                 tile.set_position (xx, yy);
 
                 /* Respond to the user interactions */
@@ -152,12 +152,12 @@ public class GameView : Clutter.Group
                 tile.leave_event.connect (tile_left_cb);
 
                 tiles[x, y] = tile;
-                game_actors.add_actor (tile);
+                game_actors.add_child (tile);
             }
         }
 
         cursor = new CursorActor (theme.cursor, tile_size);
-        game_actors.add_actor (cursor);
+        game_actors.add_child (cursor);
         cursor.hide ();
     }
 
@@ -169,23 +169,9 @@ public class GameView : Clutter.Group
         themes = new HashTable<string, Theme> (str_hash, str_equal);
         var theme = new Theme ("colors");
         themes.insert ("colors", theme);
-        foreach (var t in theme.textures)
-        {
-            t.hide ();
-            add_actor (t);
-        }
-        theme.cursor.hide ();
-        add_actor (theme.cursor);
 
         theme = new Theme ("shapesandcolors");
         themes.insert ("shapesandcolors", theme);
-        foreach (var t in theme.textures)
-        {
-            t.hide ();
-            add_actor (t);
-        }
-        theme.cursor.hide ();
-        add_actor (theme.cursor);
     }
 
     /* When a tile in the model layer is closed, play an animation at the view layer */
@@ -199,8 +185,8 @@ public class GameView : Clutter.Group
     {
         var tile = tiles[old_x, old_y];
         tiles[new_x, new_y] = tile;
-        var new_xx = new_x * tile_size + tile_size / 2.0;
-        var new_yy = (game.rows - new_y - 1) * tile_size + tile_size / 2.0;
+        var new_xx = new_x * tile_size;
+        var new_yy = (game.rows - new_y - 1) * tile_size;
 
         tile.animate_to (new_xx, new_yy, is_zealous);
     }
@@ -286,8 +272,8 @@ public class GameView : Clutter.Group
         opacity_for_connected_tiles (highlighted, 255);
 
         float xx, yy;
-        xx = cursor_x * tile_size + tile_size / 2;
-        yy = (game.rows - 1 - cursor_y) * tile_size + tile_size / 2;
+        xx = cursor_x * tile_size;
+        yy = (game.rows - 1 - cursor_y) * tile_size;
         cursor.set_position (xx, yy);
         cursor.show ();
     }
@@ -304,7 +290,7 @@ public class GameView : Clutter.Group
         if (is_zealous)
         {
             var text = new ScoreActor (width / 2.0, height / 2.0, width, height);
-            game_actors.add_actor (text);
+            game_actors.add_child (text);
             text.animate_score (points_awarded);
         }
     }
@@ -313,7 +299,7 @@ public class GameView : Clutter.Group
     public void game_complete_cb ()
     {
         var text = new ScoreActor (width / 2.0, height / 2.0, width, height);
-        game_actors.add_actor (text);
+        game_actors.add_child (text);
         text.animate_final_score (game.score);
     }
 }
@@ -324,23 +310,33 @@ public class GameView : Clutter.Group
  */
 public class Theme
 {
-    public Clutter.Texture[] textures;
-    public Clutter.Texture cursor;
+    public Clutter.Image[] textures;
+    public Clutter.Image cursor;
 
     public Theme (string name)
     {
-        textures = new Clutter.Texture [4];
+        textures = new Clutter.Image [4];
         string[4] colors = {"blue", "green", "yellow", "red"};
 
         /* Create the textures required to render */
         try
         {
-            for (int i = 0; i < 4; i++)
-                textures[i] = new Clutter.Texture.from_file (Path.build_filename (DATADIR, "themes", name, colors[i] + ".svg"));
-
-            cursor = new Clutter.Texture.from_file (Path.build_filename (DATADIR, "themes", name, "highlight.svg"));
+            for (int i = 0; i < 4; i++) {
+                 var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (DATADIR, "themes", name, colors[i] + ".svg"));
+                textures[i] = new Clutter.Image ();
+                textures[i].set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
+                    pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
+            }
+            var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (DATADIR, "themes", name, "highlight.svg"));
+            cursor = new Clutter.Image ();
+            cursor.set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
+               pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
         }
         catch (Clutter.TextureError e)
+        {
+            warning ("Failed to load textures: %s", e.message);
+        }
+        catch (GLib.Error e)
         {
             warning ("Failed to load textures: %s", e.message);
         }
@@ -350,26 +346,33 @@ public class Theme
 /**
  *  This class defines the view of a tile. All clutter related stuff goes here
  */
-private class TileActor : Clutter.Clone
+private class TileActor : Clutter.Actor
 {
     /* Tile being represented */
     public Tile tile;
 
-    public TileActor (Tile tile, Clutter.Texture texture, int size)
+    public TileActor (Tile tile, Clutter.Image texture, int size)
     {
         this.tile = tile;
-        source = texture;
         opacity = 180;
         set_size (size, size);
-        set_anchor_point (size / 2, size / 2);
+        content = texture;
+
+        set_content_gravity (Clutter.ContentGravity.CENTER);
+
+        pivot_point.x = 0.5f;
+        pivot_point.y = 0.5f;
     }
 
     /* Destroy the tile */
     public void animate_out ()
     {
         /* When the animination is done, hide the actor */
-        var a = animate (Clutter.AnimationMode.LINEAR, 500, "scale-x", 2.0, "scale-y", 2.0, "opacity", 0);
-        a.timeline.completed.connect (hide_tile_cb);
+        set_easing_mode (Clutter.AnimationMode.LINEAR);
+        set_easing_duration (500);
+        set_scale (2.0, 2.0);
+        set_opacity (0);
+        transitions_completed.connect (hide_tile_cb);
     }
 
     private void hide_tile_cb ()
@@ -381,18 +384,24 @@ private class TileActor : Clutter.Clone
     public void animate_to (double new_x, double new_y, bool is_zealous = false)
     {
         var anim_mode = is_zealous ? Clutter.AnimationMode.EASE_OUT_BOUNCE : Clutter.AnimationMode.EASE_OUT_QUAD;
-        animate (anim_mode, 500, "x", new_x, "y", new_y);
+        set_easing_mode (anim_mode);
+        set_easing_duration (500);
+        set_position ( (float)new_x, (float)new_y);
     }
 }
 
-public class CursorActor : Clutter.Clone
+public class CursorActor : Clutter.Actor
 {
-   public CursorActor (Clutter.Texture texture, int size)
+   public CursorActor (Clutter.Content texture, int size)
     {
-        source = texture;
         opacity = 180;
         set_size (size, size);
-        set_anchor_point (size / 2, size / 2);
+        content = texture;
+
+        set_content_gravity (Clutter.ContentGravity.CENTER);
+
+        pivot_point.x = 0.5f;
+        pivot_point.y = 0.5f;
     }
 }
 
@@ -411,7 +420,7 @@ public class ScoreActor : Clutter.Group
         label.set_color (Clutter.Color.from_string ("rgba(255, 255, 255, 255)"));
 
         anchor_gravity = Clutter.Gravity.CENTER;
-        add_actor (label);
+        add_child (label);
 
         this.x = (float) x;
         this.y = (float) y;
@@ -430,10 +439,13 @@ public class ScoreActor : Clutter.Group
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */
         opacity = 255;
-        depth = 0;
+        z_position = 0f;
 
-        var a = animate (Clutter.AnimationMode.EASE_OUT_SINE, 600, "depth", 500.0, "opacity", 0);
-        a.timeline.completed.connect (() => { destroy (); });
+        set_easing_mode (Clutter.AnimationMode.EASE_OUT_SINE);
+        set_easing_duration (600);
+        set_z_position (500f);
+        set_opacity (0);
+        transitions_completed.connect (() => { destroy (); });
     }
 
     public void animate_final_score (uint points)
@@ -447,10 +459,13 @@ public class ScoreActor : Clutter.Group
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */
         opacity = 255;
-        depth = 0;
+        z_position = 0f;
 
         scale_x = scale_y = 0.0;
         float scale_to = scene_width / this.width;
-        animate (Clutter.AnimationMode.EASE_OUT_ELASTIC, 2000, scale_x: scale_to, scale_y: scale_to, opacity: 255);
+        set_easing_mode (Clutter.AnimationMode.EASE_OUT_ELASTIC);
+        set_easing_duration (2000);
+        set_scale ( (float)scale_to, (float)scale_to);
+        set_opacity (255);
     }
 }
