@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.16.0 on Sun Dec  8 10:47:18 2013 -->
 <interface>
-  <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-requires gtk+ 3.12 -->
   <object class="GtkAdjustment" id="color-adjustment">
     <property name="lower">2</property>
     <property name="upper">4</property>
@@ -27,6 +27,7 @@
   <object class="GtkDialog" id="preferences">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="use_header_bar">1</property>
     <property name="title" translatable="yes">Preferences</property>
     <property name="icon_name">gnome-swell-foop</property>
     <child internal-child="vbox">
@@ -297,39 +298,8 @@
             <property name="position">0</property>
           </packing>
         </child>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox" id="dialog-action_area1">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
-            <child>
-              <object class="GtkButton" id="close-button">
-                <property name="label">gtk-close</property>
-                <property name="use_action_appearance">False</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">False</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="pack_type">end</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
       </object>
     </child>
-    <action-widgets>
-      <action-widget response="0">close-button</action-widget>
-    </action-widgets>
   </object>
   <object class="GtkAdjustment" id="rows-adjustment">
     <property name="lower">3</property>
