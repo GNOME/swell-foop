@@ -16,53 +16,51 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-17 23:23+0000\n"
-"PO-Revision-Date: 2013-09-14 00:12+0200\n"
-"Last-Translator: xavier <catala.xavier@gmail.com>\n"
+"POT-Creation-Date: 2014-04-21 05:10+0000\n"
+"PO-Revision-Date: 2014-03-20 07:27+0100\n"
+"Last-Translator: Pau Iranzo <paugnu@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "El tema a utilitzar"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "El títol del tema de fitxes a utilitzar."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "Mida del tauler"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "La mida del tauler de joc."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "Nombre de colors del tauler"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "El nombre de colors de fitxes a utilitzar en el joc."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
 msgid "Zealous animation"
 msgstr "Utilitza animacions vistoses"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Use more flashy, but slower, animations."
 msgstr "Utilitza animacions més espectaculars però més lentes."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:398
-#: ../src/swell-foop.vala:461
-msgid "Swell Foop"
-msgstr "Atac salvatge"
+#: ../data/preferences.ui.h:1
+msgid "Preferences"
+msgstr "Preferències"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -92,82 +90,135 @@ msgstr "Animació _vistosa"
 msgid "Operation"
 msgstr "Operacions"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Elimineu tants quadrats del tauler com sigui possible. Feu clic en un grup "
+"de quadrats del mateix color per fer-los desaparèixer d'una tirada, fent que "
+"altres quadrats caiguin al lloc buit. No és pot eliminar un sol quadrat "
+"en una tirada. Aconseguireu molts més punts si elimineu molts quadrats d'una "
+"tirada així com per buidar tot el tauler."
+
+#: ../data/swell-foop.appdata.xml.in.h:2
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"El Swell Foop és sempre un joc ràpid, però podeu allargar-lo canviant la "
+"mida del tauler."
+
+#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:71
+#: ../src/swell-foop.vala:97 ../src/swell-foop.vala:390
+#: ../src/swell-foop.vala:471
+msgid "Swell Foop"
+msgstr "Atac salvatge"
+
+#: ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Netegeu la pantalla suprimint grups de fitxes de colors"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "joc;lògica;tauler;igual;concordant;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:443
+#: ../src/game-view.vala:459
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u punt"
 msgstr[1] "%u punts"
 
-#: ../src/game-view.vala:444
-#, c-format
+#: ../src/game-view.vala:460
 msgid "Game Over!"
 msgstr "Fi del joc"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "Partida _nova"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
-msgstr "Puntuacion_s"
-
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "_Preferències"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "A_juda"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "_Quant a"
-
-#: ../src/swell-foop.vala:88
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:91
 msgid "_Quit"
 msgstr "S_urt"
 
-#: ../src/swell-foop.vala:98
-msgid "_New"
-msgstr "_Nova"
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Partida nova"
 
-#: ../src/swell-foop.vala:135
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_D'acord"
+
+#: ../src/score-dialog.vala:44
+msgid "Size:"
+msgstr "Mida:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Data"
+
+#: ../src/score-dialog.vala:72
+msgid "Score"
+msgstr "Puntuació"
+
+#: ../src/score-dialog.vala:166
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u color"
+msgstr[1] "%u × %u, %u colors"
+
+#: ../src/swell-foop.vala:84 ../src/swell-foop.vala:433
+msgid "_New Game"
+msgstr "Partida _nova"
+
+#: ../src/swell-foop.vala:85
+msgid "_Scores"
+msgstr "Puntuacion_s"
+
+#: ../src/swell-foop.vala:86
+msgid "_Preferences"
+msgstr "_Preferències"
+
+#: ../src/swell-foop.vala:89
+msgid "_Help"
+msgstr "A_juda"
+
+#: ../src/swell-foop.vala:90
+msgid "_About"
+msgstr "_Quant a"
+
+#: ../src/swell-foop.vala:106
+msgid "Start a new game"
+msgstr "Comença una partida nova"
+
+#: ../src/swell-foop.vala:124
 msgid "Small"
 msgstr "Petit"
 
-#: ../src/swell-foop.vala:136
+#: ../src/swell-foop.vala:125
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:126
 msgid "Large"
 msgstr "Gran"
 
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
+#: ../src/swell-foop.vala:201
 #, c-format
-msgid "Score: %4u "
-msgstr "Puntuació: %4u"
+msgid "Score: %u"
+msgstr "Puntuació: %u"
 
-#: ../src/swell-foop.vala:264
+#: ../src/swell-foop.vala:255
 msgid "Colors"
 msgstr "Colors"
 
-#: ../src/swell-foop.vala:268
+#: ../src/swell-foop.vala:259
 msgid "Shapes and Colors"
 msgstr "Formes i colors"
 
-#: ../src/swell-foop.vala:401
+#: ../src/swell-foop.vala:393
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -179,11 +230,11 @@ msgstr ""
 "\n"
 "El Swell Foop forma part dels jocs del GNOME."
 
-#: ../src/swell-foop.vala:402
+#: ../src/swell-foop.vala:394
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:408
+#: ../src/swell-foop.vala:399
 msgid "translator-credits"
 msgstr ""
 "Jordi Vila <gnome@softcatala.net>\n"
@@ -194,29 +245,10 @@ msgstr ""
 "David Planella <david.planella@gmail.com>\n"
 "Xavier <catala.xavier@gmail.com>"
 
-#: ../src/swell-foop.vala:411
-msgid "GNOME Games web site"
-msgstr "Lloc web dels jocs del GNOME"
+#: ../src/swell-foop.vala:431
+msgid "Abandon this game to start a new one?"
+msgstr "Voleu abandonar la partida i començar una de nova?"
 
-#: ../src/swell-foop.vala:496
-msgid "New Game"
-msgstr "Partida nova"
-
-#: ../src/swell-foop.vala:511
-msgid "Size:"
-msgstr "Mida:"
-
-#: ../src/swell-foop.vala:536
-msgid "Date"
-msgstr "Data"
-
-#: ../src/swell-foop.vala:539
-msgid "Score"
-msgstr "Puntuació"
-
-#: ../src/swell-foop.vala:619
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u color"
-msgstr[1] "%u × %u, %u colors"
+#: ../src/swell-foop.vala:432
+msgid "_Cancel"
+msgstr "_Cancel·la"
