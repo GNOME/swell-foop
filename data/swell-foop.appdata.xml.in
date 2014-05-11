@@ -2,7 +2,8 @@
 <!-- Copyright 2013 Michael Catanzaro -->
 <application>
  <id type="desktop">swell-foop.desktop</id>
- <licence>CC0</licence>
+ <metadata_licence>CC0-1.0</metadata_licence>
+ <project_license>GPL-2.0+ and GFDL-1.1</project_license>
  <description>
   <_p>
    Remove as many squares as possible from the board. Click on a group of
