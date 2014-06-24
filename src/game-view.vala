@@ -310,7 +310,7 @@ public class GameView : Clutter.Group
  *  This class holds the textures for a specific theme. These textures are used for creating light
  *  actors and cursor actor.
  */
-public class Theme
+public class Theme : Object
 {
     public Clutter.Image[] textures;
     public Clutter.Image cursor;

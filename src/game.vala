@@ -11,7 +11,7 @@
 /**
  *  This is the model layer of a tile.
  */
-public class Tile
+public class Tile : Object
 {
     /* Property */
     private bool _closed = false;
