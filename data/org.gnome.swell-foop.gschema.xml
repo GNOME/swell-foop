@@ -4,7 +4,7 @@
     <value value="1" nick="normal"/>
     <value value="2" nick="large"/>
   </enum>
-  <schema id="org.gnome.swell-foop" path="/org/gnome/swell-foop/" gettext-domain="gnome-games">
+  <schema id="org.gnome.swell-foop" path="/org/gnome/swell-foop/" gettext-domain="swell-foop">
     <key name="theme" type="s">
       <default>'shapesandcolors'</default>
       <summary>The theme to use</summary>
