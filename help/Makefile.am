@@ -9,6 +9,7 @@ HELP_FILES = \
 	index.page \
 	introduction.page \
 	legal.xml \
+	play.page \
 	start-game.page
 
 HELP_LINGUAS = ca cs de el en_GB es eu fr it oc pt_BR ru sl sr sr@latin sv zh_CN
