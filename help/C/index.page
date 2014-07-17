@@ -19,7 +19,7 @@
    <desc>Swell-foop help.</desc>
 
   </info>
-  
+
   <title>
     <media type="image" mime="image/png" src="figures/logo32.png"
     its:translate="no" />
@@ -33,8 +33,8 @@
 
   <section id="advanced" style="2column">
     <title>Advance settings</title>
-  </section> 
- 
+  </section>
+
   <section id="tip" style="2column">
     <title>Useful tips</title>
   </section>
