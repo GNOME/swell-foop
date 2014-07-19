@@ -1,0 +1,71 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="settings">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <revision pkgversion="3.14" date="2014-07-18" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+    <desc>Change game settings.</desc>
+
+  </info>
+
+  <title>Game settings</title>
+
+  <p>You can change the game look according to your preference.</p>
+
+  <section id="theme">
+  <title>Change the look</title>
+  <p>To change the appearance of the objects:</p>
+  <steps>
+    <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
+    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
+    <item><p>The default theme is <gui>Shapes and Colors</gui>. You can select
+    another theme from <gui>Theme</gui> under <gui>Appearance</gui>.</p></item>
+  </steps>
+  </section>
+
+  <section id="board-size">
+  <title>Change the size</title>
+  <p>You can set the size of the board according to your preference:</p>
+  <steps>
+    <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
+    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
+    <item><p>The default board size is <gui>Small</gui>. You can change it from
+    <gui>Board size</gui> under <gui>Setup</gui>.</p></item>
+  </steps>
+  </section>
+
+  <section id="colors">
+  <title>Change the number of objects</title>
+  <p>You can increase the number of different objects in the game.</p>
+  <steps>
+    <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
+    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
+    <item><p>The default number of colors is 3, you can increase or decrease
+    it from <gui>Number of colors</gui> under <gui>Setup</gui>. The maximum
+    number of colors allowed are 4.</p></item>
+  </steps>
+  </section>
+
+  <section id="animation">
+  <title>Change the speed</title>
+  <p>The default animation is designed to be smooth and graceful. If you like
+  playing fast and furious then this may be too slow for you. You can speed up
+  the game play at the expense of animation quality.</p>
+  <steps>
+    <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
+    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
+    <item><p>To speed up the game, check the <gui style="checkbox">Zealous
+    Animation</gui> under <gui>Operation</gui>.</p></item>
+  </steps>
+  </section>
+</page>
