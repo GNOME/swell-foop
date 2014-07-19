@@ -13,7 +13,8 @@ HELP_FILES = \
 	play.page \
 	start-game.page \
 	scores.page \
-	settings.page
+	settings.page \
+	strategy.page
 
 HELP_LINGUAS = ca cs de el en_GB es eu fr it oc pt_BR ru sl sr sr@latin sv zh_CN
 
