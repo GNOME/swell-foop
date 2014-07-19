@@ -1,0 +1,44 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="strategy">
+
+  <info>
+    <link type="guide" xref="index#tip"/>
+    <revision pkgversion="3.14" date="2014-07-19" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+    <desc>Crack the game using strategies.</desc>
+
+  </info>
+
+  <title>Strategy</title>
+
+  <p>The most important rule when aiming for a high score is to think ahead,
+  each group you remove will form and destroy other groups. Some tips are
+  to play smartly are:</p>
+  <list>
+    <item><p>Try to remove higher groups first, unless removing another group
+    will make it larger. Vertically aligned objects can't be misaligned, but
+    horizontal arrangements can.</p></item>
+    <item><p>Since the score increases quadratically, big groups of objects
+    will score more.</p></item>
+    <item><p>If you have a choice between merging two groups of two into four
+    or just adding one more to the group of six then you should add the single
+    object. Even though the groups of two you are left with score no points,
+    the bigger group scores more overall.</p></item>
+  </list>
+
+  <note style="tip">
+    <p>Don't forget the thousand point bonus for clearing the board. To get 1000
+    points from a single group you need 34 objects. You are very unlikely to be
+    in a position where you have to sacrifice a group that large to clear the
+    board.</p>
+  </note>
+</page>
