@@ -8,6 +8,7 @@ HELP_MEDIA = \
 HELP_FILES = \
 	index.page \
 	introduction.page \
+	keyboard-shortcuts.page \
 	legal.xml \
 	play.page \
 	start-game.page \
