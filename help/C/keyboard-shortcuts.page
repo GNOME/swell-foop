@@ -1,0 +1,37 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="keyboard-shortcuts">
+  <info>
+    <link type="guide" xref="index#tip" />
+    <revision pkgversion="3.14" date="2014-07-19" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+    <desc>Play the game through keyboard.</desc>
+
+  </info>
+
+  <title>Keyboard shortcuts</title>
+  <p>To access the game through keyboard, use the following shortcuts:</p>
+
+    <table frame="all" rules="cols" shade="rows">
+      <tr>
+        <td><p>New game</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>N</key></keyseq></p></td>
+      </tr>
+      <tr>
+        <td><p>Help</p></td>
+        <td><p><key>F1</key></p></td>
+      </tr>
+      <tr>
+        <td><p>Quit</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Q</key></keyseq></p></td>
+      </tr>
+    </table>
+</page>
