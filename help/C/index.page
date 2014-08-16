@@ -16,14 +16,14 @@
 
    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-   <desc>Swell-foop help.</desc>
+   <desc>Swell Foop help.</desc>
 
   </info>
 
   <title>
     <media type="image" mime="image/png" src="figures/logo32.png"
     its:translate="no" />
-    Swell-foop
+    Swell Foop
   </title>
   <p>Swell Foop is a puzzle game, previously known as Same GNOME. To know more
   about the game, see <link xref="introduction">Game introduction</link>.</p>
