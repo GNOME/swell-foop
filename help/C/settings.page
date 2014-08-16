@@ -22,17 +22,6 @@
 
   <p>You can change the game look according to your preference.</p>
 
-  <section id="theme">
-  <title>Change the look</title>
-  <p>To change the appearance of the objects:</p>
-  <steps>
-    <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
-    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
-    <item><p>The default theme is <gui>Shapes and Colors</gui>. You can select
-    another theme from <gui>Theme</gui> under <gui>Appearance</gui>.</p></item>
-  </steps>
-  </section>
-
   <section id="board-size">
   <title>Change the size</title>
   <p>You can set the size of the board according to your preference:</p>
@@ -53,6 +42,17 @@
     <item><p>The default number of colors is 3, you can increase or decrease
     it from <gui>Number of colors</gui> under <gui>Setup</gui>. The maximum
     number of colors allowed are 4.</p></item>
+  </steps>
+  </section>
+
+  <section id="theme">
+  <title>Change the look</title>
+  <p>To change the appearance of the objects:</p>
+  <steps>
+    <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
+    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
+    <item><p>The default theme is <gui>Shapes and Colors</gui>. You can select
+    another theme from <gui>Theme</gui> under <gui>Appearance</gui>.</p></item>
   </steps>
   </section>
 
