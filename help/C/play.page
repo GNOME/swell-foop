@@ -30,5 +30,5 @@
     fall down to fill the space. If an entire column is cleared then the objects
     slide leftward to fill the gap.</p></item>
   </list>
-  <media type="image" src="figures/start-game.png"/>
+  <media its:translate="no" type="image" src="figures/start-game.png"/>
 </page>
