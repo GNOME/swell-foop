@@ -21,9 +21,9 @@
 
   <title>Introduction</title>
 
-  <p>Swell Foop is a puzzle game. The goal is to remove as many objects as
-  possible in minimum number of moves. Objects that are adjacent to each other
-  get removed as a group. The remaining objects then collapse to fill in the gaps
-  and form new groups. You cannot remove single objects.</p>
+  <p>The goal of the game is to remove as many objects as possible in the
+  minimum number of moves. Objects that are adjacent to each other get removed
+  as a group. The remaining objects then collapse to fill in the gaps and form
+  new groups. You cannot remove single objects.</p>
 
 </page>
