@@ -20,7 +20,7 @@
 
   <title>Play <app>Swell Foop</app></title>
 
-  <p>The board starts as a full grid of objects. Depending on the size of board
+  <p>The board starts as a full grid of objects depending on the size of board
   you select. You can remove the tiles as follows:</p>
   <list>
     <item><p>If a group of objects are adjacent and all the same type, then
@@ -30,4 +30,5 @@
     fall down to fill the space. If an entire column is cleared then the objects
     slide leftward to fill the gap.</p></item>
   </list>
+  <media type="image" src="figures/start-game.png"/>
 </page>
