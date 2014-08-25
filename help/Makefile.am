@@ -11,7 +11,7 @@ HELP_FILES = \
 	keyboard-shortcuts.page \
 	legal.xml \
 	play.page \
-	start-game.page \
+	start.page \
 	scores.page \
 	settings.page \
 	strategy.page
