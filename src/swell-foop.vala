@@ -62,9 +62,9 @@ public class SwellFoop : Gtk.Application
         settings = new Settings ("org.gnome.swell-foop");
 
         add_action_entries (action_entries, this);
-        add_accelerator ("<Primary>n", "app.new-game", null);
-        add_accelerator ("F1", "app.help", null);
-        add_accelerator ("<Primary>q", "app.quit", null);
+        set_accels_for_action ("app.new-game", {"<Primary>n"});
+        set_accels_for_action ("app.help", {"F1"});
+        set_accels_for_action ("app.quit", {"<Primary>q"});
 
         /* Create the main window */
         window = new Gtk.ApplicationWindow (this);
