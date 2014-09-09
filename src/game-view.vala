@@ -282,6 +282,8 @@ public class GameView : Clutter.Group
     public void cursor_click ()
     {
         game.remove_connected_tiles (tiles[cursor_x, cursor_y].tile);
+        highlighted = tiles[cursor_x, cursor_y];
+        opacity_for_connected_tiles (highlighted, 255);
     }
 
     /* Show flying score animation after each tile-removing click */
