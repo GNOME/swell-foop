@@ -172,6 +172,7 @@ public class SwellFoop : Gtk.Application
                 view.cursor_move (1, 0);
                 break;
             case Gdk.Key.space:
+            case Gdk.Key.Return:
                 view.cursor_click ();
                 return true; //handle this one to avoid activating the toolbar button
             default:
