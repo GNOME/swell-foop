@@ -1,0 +1,15 @@
+.welcome {
+  font-size:1.5em;
+}
+
+.tip {
+  font-size: 1em;
+}
+ 
+.play {
+  font-size: 1em;
+  padding-right:12px;
+  padding-left:12px;
+  padding-top:6px;
+  padding-bottom:6px;
+}

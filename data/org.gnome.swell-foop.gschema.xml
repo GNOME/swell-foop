@@ -20,6 +20,11 @@
       <summary>Board color count</summary>
       <description>The number of colors of tiles to use in the game.</description>
     </key>
+    <key name="first-run" type="b">
+      <default>true</default>
+      <summary>Is this the first run</summary>
+      <description>Setting to decide whether to show first-run hint dialog or not.</description>
+    </key>
     <key name="zealous" type="b">
       <default>true</default>
       <summary>Zealous animation</summary>

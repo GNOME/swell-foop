@@ -5,7 +5,8 @@ gsettings_SCHEMAS = org.gnome.swell-foop.gschema.xml
 
 swelldir=$(datadir)/swell-foop
 swell_DATA = \
-    preferences.ui
+    preferences.ui \
+    swell-foop.css
 
 desktop_in_files = swell-foop.desktop.in
 desktopdir = $(datadir)/applications

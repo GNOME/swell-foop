@@ -53,6 +53,55 @@ public class SwellFoop : Gtk.Application
         Object (application_id: "org.gnome.swell-foop", flags: ApplicationFlags.FLAGS_NONE);
     }
 
+    private void load_css ()
+    {
+        var css_provider = new Gtk.CssProvider ();
+        var css_path = Path.build_filename (DATADIR, "swell-foop.css");
+        try
+        {
+            css_provider.load_from_path (css_path);
+        }
+        catch (GLib.Error e)
+        {
+            warning ("Error loading css styles from %s: %s", css_path, e.message);
+        }
+        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+    }
+
+    private Gtk.Stack build_first_run_stack ()
+    {
+        var stack = new Gtk.Stack ();
+        var first_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
+        load_css ();
+        var logo = new Gtk.Image.from_icon_name ("swell-foop", Gtk.IconSize.DIALOG );
+        logo.set_pixel_size (96);
+        first_vbox.pack_start (logo, false);
+        var label = new Gtk.Label (_("Welcome to Swell Foop"));
+        label.get_style_context ().add_class ("welcome");
+        first_vbox.pack_start (label, false);
+        label = new Gtk.Label (_("Clear as many blocks as you can.\nFewer clicks means more points."));
+        label.get_style_context ().add_class ("tip");
+        first_vbox.pack_start (label, false);
+        var play_button = new Gtk.Button.with_mnemonic (_("Let's _Play"));
+        play_button.get_style_context ().add_class ("play");
+        play_button.get_style_context ().add_class ("suggested-action");
+        play_button.valign = Gtk.Align.CENTER;
+        play_button.halign = Gtk.Align.CENTER;
+        play_button.clicked.connect (() => {
+            stack.set_transition_type (Gtk.StackTransitionType.SLIDE_UP);
+            stack.set_transition_duration (500);
+            stack.set_visible_child_name ("game");
+            settings.set_boolean ("first-run", false);
+        });
+        first_vbox.pack_start (play_button, false);
+        first_vbox.halign = Gtk.Align.CENTER;
+        first_vbox.valign = Gtk.Align.CENTER;
+        stack.add_named (first_vbox, "first-run");
+        stack.set_visible_child_name ("first-run");
+        stack.show_all ();
+        return stack;
+    }
+
     protected override void startup ()
     {
         base.startup ();
@@ -114,7 +163,18 @@ public class SwellFoop : Gtk.Application
         /* Create a clutter renderer widget */
         clutter_embed = new GtkClutter.Embed ();
         clutter_embed.show ();
-        vbox.pack_start (clutter_embed, true, true);
+        var first_run = settings.get_boolean ("first-run");
+
+        if (first_run)
+        {
+            var stack = build_first_run_stack ();
+            stack.add_named (clutter_embed, "game");
+            vbox.pack_start (stack, true, true);
+        }
+        else
+        {
+            vbox.pack_start (clutter_embed, true, true);
+        }
 
         stage = (Clutter.Stage) clutter_embed.get_stage ();
         stage.background_color = Clutter.Color.from_string ("#000000");  /* background color is black */
