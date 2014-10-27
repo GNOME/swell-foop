@@ -1,3 +1,10 @@
+Swell Foop 3.15.1
+==================
+
+* Updated translations
+* First-run hint screen implemented (Robert Roth)
+* Use set_accels_for_action (Arnaud Bonatti)
+
 Swell Foop 3.14.0
 ==================
 
