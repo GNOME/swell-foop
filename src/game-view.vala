@@ -25,14 +25,14 @@ public class GameView : Clutter.Group
     public int cursor_x
     {
         get { return this._cursor_x; }
-        set { this._cursor_x = value.clamp(0, game.columns - 1); }
+        set { this._cursor_x = value.clamp (0, game.columns - 1); }
     }
 
     private int _cursor_y;
     public int cursor_y
     {
         get { return this._cursor_y; }
-        set { this._cursor_y = value.clamp(0, game.rows - 1); }
+        set { this._cursor_y = value.clamp (0, game.rows - 1); }
     }
 
     /* A 2D array holding all tiles */
@@ -390,7 +390,7 @@ private class TileActor : Clutter.Actor
         var anim_mode = is_zealous ? Clutter.AnimationMode.EASE_OUT_BOUNCE : Clutter.AnimationMode.EASE_OUT_QUAD;
         set_easing_mode (anim_mode);
         set_easing_duration (500);
-        set_position ( (float)new_x, (float)new_y);
+        set_position ((float) new_x, (float) new_y);
     }
 }
 
@@ -429,8 +429,8 @@ public class ScoreActor : Clutter.Group
         pivot_point.x = 0.5f;
         pivot_point.y = 0.5f;
 
-        this.scene_width = (float)width;
-        this.scene_height = (float)height;
+        this.scene_width = (float) width;
+        this.scene_height = (float) height;
         this.game_size = game_size;
     }
 
@@ -440,7 +440,7 @@ public class ScoreActor : Clutter.Group
             return;
 
         label.set_font_name ("Bitstrem Vera Sans Bold 30");
-        label.set_text ("+" + points.to_string());
+        label.set_text ("+" + points.to_string ());
 
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */

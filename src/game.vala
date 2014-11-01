@@ -197,7 +197,7 @@ public class Game : Object
             }
 
             /* append closed tiles to not-closed tiles */
-            not_closed_tiles.concat ( (owned) closed_tiles);
+            not_closed_tiles.concat ((owned) closed_tiles);
 
             /* update tile array at the current column, not-closed tiles aret at the bottom, closed ones top */
             for (int y = 0; y < rows; y++)

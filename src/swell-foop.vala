@@ -73,7 +73,7 @@ public class SwellFoop : Gtk.Application
         var stack = new Gtk.Stack ();
         var first_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
         load_css ();
-        var logo = new Gtk.Image.from_icon_name ("swell-foop", Gtk.IconSize.DIALOG );
+        var logo = new Gtk.Image.from_icon_name ("swell-foop", Gtk.IconSize.DIALOG);
         logo.set_pixel_size (96);
         first_vbox.pack_start (logo, false);
         var label = new Gtk.Label (_("Welcome to Swell Foop"));
@@ -276,7 +276,7 @@ public class SwellFoop : Gtk.Application
         base.shutdown ();
 
         /* Record the score if the game isn't over. */
-        if (game != null && !game.has_completed() && game.score > 0)
+        if (game != null && !game.has_completed () && game.score > 0)
             complete_cb ();
     }
 
@@ -386,7 +386,7 @@ public class SwellFoop : Gtk.Application
     [CCode (cname = "G_MODULE_EXPORT update_colors", instance_pos = -1)]
     public void update_colors (Gtk.SpinButton button)
     {
-        int new_colors = (int) button.get_value();
+        int new_colors = (int) button.get_value ();
 
         if (new_colors == settings.get_int ("colors"))
             return;
@@ -475,7 +475,7 @@ public class SwellFoop : Gtk.Application
         view.is_zealous = settings.get_boolean ("zealous");
 
         stage.set_size (view.width, view.height);
-        clutter_embed.set_size_request ( (int) stage.width, (int) stage.height);
+        clutter_embed.set_size_request ((int) stage.width, (int) stage.height);
 
         game_in_progress = true;
 
