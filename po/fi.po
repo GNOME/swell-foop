@@ -1,5 +1,5 @@
 # gnome-games Finnish Translation
-# Suomennos: http://www.gnome.fi/
+# Suomennos: https://l10n.gnome.org/teams/fi/
 # Copyright (C) 2002-2009 Free Software Foundation, Inc.
 #
 #
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-10 10:35+0000\n"
+"POT-Creation-Date: 2014-11-07 11:38+0000\n"
 "PO-Revision-Date: 2014-09-10 21:00+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -115,8 +115,8 @@ msgstr ""
 "peli saattaa kestää tavallista kauemmin."
 
 #: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:71
-#: ../src/swell-foop.vala:97 ../src/swell-foop.vala:390
-#: ../src/swell-foop.vala:471
+#: ../src/swell-foop.vala:97 ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:472
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -130,14 +130,14 @@ msgid "game;logic;board;same;matching;"
 msgstr "game;logic;board;same;matching;logiikka;lauta;peli;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:459
+#: ../src/game-view.vala:461
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u piste"
 msgstr[1] "%u pistettä"
 
-#: ../src/game-view.vala:460
+#: ../src/game-view.vala:462
 msgid "Game Over!"
 msgstr "Peli päättyi!"
 
@@ -172,7 +172,7 @@ msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u väri"
 msgstr[1] "%u × %u, %u väriä"
 
-#: ../src/swell-foop.vala:84 ../src/swell-foop.vala:433
+#: ../src/swell-foop.vala:84 ../src/swell-foop.vala:434
 msgid "_New Game"
 msgstr "_Uusi peli"
 
@@ -208,20 +208,20 @@ msgstr "Normaali"
 msgid "Large"
 msgstr "Suuri"
 
-#: ../src/swell-foop.vala:201
+#: ../src/swell-foop.vala:202
 #, c-format
 msgid "Score: %u"
 msgstr "Pisteet: %u"
 
-#: ../src/swell-foop.vala:255
+#: ../src/swell-foop.vala:256
 msgid "Colors"
 msgstr "Värit"
 
-#: ../src/swell-foop.vala:259
+#: ../src/swell-foop.vala:260
 msgid "Shapes and Colors"
 msgstr "Muodot ja värit"
 
-#: ../src/swell-foop.vala:393
+#: ../src/swell-foop.vala:394
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -234,11 +234,11 @@ msgstr ""
 "\n"
 "”Swell Foop” on osa Gnome-pelejä."
 
-#: ../src/swell-foop.vala:394
+#: ../src/swell-foop.vala:395
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Tekijänoikeus © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:399
+#: ../src/swell-foop.vala:400
 msgid "translator-credits"
 msgstr ""
 "Jiri Grönroos, 2011-2014\n"
@@ -246,7 +246,7 @@ msgstr ""
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
 "\n"
-"http://www.gnome.fi/\n"
+"https://l10n.gnome.org/teams/fi/\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Heikki Kulhia https://launchpad.net/~hessuk\n"
@@ -259,11 +259,11 @@ msgstr ""
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
 
-#: ../src/swell-foop.vala:431
+#: ../src/swell-foop.vala:432
 msgid "Abandon this game to start a new one?"
 msgstr "Hylätäänkö tämä peli ja aloitetaan uusi?"
 
-#: ../src/swell-foop.vala:432
+#: ../src/swell-foop.vala:433
 msgid "_Cancel"
 msgstr "_Peru"
 
