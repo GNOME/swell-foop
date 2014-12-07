@@ -9,22 +9,22 @@
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
 # Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014.
-# Balázs Úr <urbalazs at gmail dot com>, 2013.
+# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-19 11:35+0000\n"
-"PO-Revision-Date: 2014-03-21 11:54+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"POT-Creation-Date: 2014-12-06 23:40+0000\n"
+"PO-Revision-Date: 2014-12-07 10:21+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.2\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -51,10 +51,20 @@ msgid "The number of colors of tiles to use in the game."
 msgstr "Kövek színeinek száma a játékban."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:7
+msgid "Is this the first run"
+msgstr "Ez az első indítás?"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr ""
+"Beállítás annak eldöntéséhez, hogy jelenjen-e meg az első indításkori "
+"párbeszédablak vagy sem."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
 msgstr "Gyors animáció"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:10
 msgid "Use more flashy, but slower, animations."
 msgstr "Szebb, de lassabb animáció használata."
 
@@ -71,26 +81,22 @@ msgid "_Number of colors:"
 msgstr "S_zínek száma:"
 
 #: ../data/preferences.ui.h:4
-msgid "2"
-msgstr "2"
-
-#: ../data/preferences.ui.h:5
 msgid "Setup"
 msgstr "Beállítás"
 
-#: ../data/preferences.ui.h:6
+#: ../data/preferences.ui.h:5
 msgid "_Theme:"
 msgstr "_Téma:"
 
-#: ../data/preferences.ui.h:7
+#: ../data/preferences.ui.h:6
 msgid "Appearance"
 msgstr "Megjelenés"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:7
 msgid "_Zealous Animation"
 msgstr "_Gyors animáció"
 
-#: ../data/preferences.ui.h:9
+#: ../data/preferences.ui.h:8
 msgid "Operation"
 msgstr "Működés"
 
@@ -116,9 +122,9 @@ msgstr ""
 "A Swell Foop mindig nagyon gyorsan végigjátszható, de a tábla méretének "
 "növelésével valamelyest meghosszabbítható."
 
-#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
-#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
-#: ../src/swell-foop.vala:469
+#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:120
+#: ../src/swell-foop.vala:146 ../src/swell-foop.vala:451
+#: ../src/swell-foop.vala:532
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -133,18 +139,18 @@ msgid "game;logic;board;same;matching;"
 msgstr "játék;logika;tábla;hasonló;egyezés;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:443
+#: ../src/game-view.vala:461
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u pont"
 msgstr[1] "%u pont"
 
-#: ../src/game-view.vala:444
+#: ../src/game-view.vala:462
 msgid "Game Over!"
 msgstr "Vége a játéknak!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:140
 msgid "_Quit"
 msgstr "_Kilépés"
 
@@ -175,57 +181,73 @@ msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u szín"
 msgstr[1] "%u × %u, %u szín"
 
-#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
+#: ../src/swell-foop.vala:79
+#| msgid "Swell Foop"
+msgid "Welcome to Swell Foop"
+msgstr "Üdvözli a Swell Foop"
+
+#: ../src/swell-foop.vala:82
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"Távolítson el annyi blokkot, amennyit csak tud.\n"
+"A kevesebb kattintás több pontot ér."
+
+#: ../src/swell-foop.vala:85
+msgid "Let's _Play"
+msgstr "Játsszunk"
+
+#: ../src/swell-foop.vala:133 ../src/swell-foop.vala:494
 msgid "_New Game"
 msgstr "Ú_j játék"
 
-#: ../src/swell-foop.vala:83
+#: ../src/swell-foop.vala:134
 msgid "_Scores"
 msgstr "_Pontszámok"
 
-#: ../src/swell-foop.vala:84
+#: ../src/swell-foop.vala:135
 msgid "_Preferences"
 msgstr "_Beállítások"
 
-#: ../src/swell-foop.vala:87
+#: ../src/swell-foop.vala:138
 msgid "_Help"
 msgstr "_Súgó"
 
-#: ../src/swell-foop.vala:88
+#: ../src/swell-foop.vala:139
 msgid "_About"
 msgstr "_Névjegy"
 
-#: ../src/swell-foop.vala:104
+#: ../src/swell-foop.vala:155
 msgid "Start a new game"
 msgstr "Új játék indítása"
 
-#: ../src/swell-foop.vala:122
+#: ../src/swell-foop.vala:184
 msgid "Small"
 msgstr "Kicsi"
 
-#: ../src/swell-foop.vala:123
+#: ../src/swell-foop.vala:185
 msgid "Normal"
 msgstr "Normál"
 
-#: ../src/swell-foop.vala:124
+#: ../src/swell-foop.vala:186
 msgid "Large"
 msgstr "Nagy"
 
-#: ../src/swell-foop.vala:199
+#: ../src/swell-foop.vala:262
 #, c-format
-#| msgid "Score: %4u "
 msgid "Score: %u"
 msgstr "Pontszám: %u"
 
-#: ../src/swell-foop.vala:253
+#: ../src/swell-foop.vala:316
 msgid "Colors"
 msgstr "Színek"
 
-#: ../src/swell-foop.vala:257
+#: ../src/swell-foop.vala:320
 msgid "Shapes and Colors"
 msgstr "Alakzatok és színek"
 
-#: ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:454
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!\n"
@@ -237,11 +259,11 @@ msgstr ""
 "\n"
 "A Swell Foop a GNOME játékok része."
 
-#: ../src/swell-foop.vala:392
+#: ../src/swell-foop.vala:455
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:397
+#: ../src/swell-foop.vala:460
 msgid "translator-credits"
 msgstr ""
 "Bán Szabolcs <shooby at gnome dot hu>\n"
@@ -252,14 +274,16 @@ msgstr ""
 "Tímár András <timar at gnome dot hu>\n"
 "Varga Szabolcs <shirokuma at shirokuma dot hu>"
 
-#: ../src/swell-foop.vala:429
-#| msgid "Save this game before starting a new one?"
+#: ../src/swell-foop.vala:492
 msgid "Abandon this game to start a new one?"
 msgstr "Elhagyja a játékot egy új elkezdéséhez?"
 
-#: ../src/swell-foop.vala:430
+#: ../src/swell-foop.vala:493
 msgid "_Cancel"
 msgstr "Mé_gse"
+
+#~ msgid "2"
+#~ msgstr "2"
 
 #~ msgid "_New"
 #~ msgstr "Ú_j"
