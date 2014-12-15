@@ -4,6 +4,8 @@
  <id type="desktop">swell-foop.desktop</id>
  <metadata_license>CC0-1.0</metadata_license>
  <project_license>GPL-2.0+ and GFDL-1.1</project_license>
+ <_name>Swell Foop</_name>
+ <_summary>Clear the screen by removing groups of colored and shaped tiles</_summary>
  <description>
   <_p>
    Remove as many squares as possible from the board. Click on a group of

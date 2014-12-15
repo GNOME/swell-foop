@@ -11,6 +11,8 @@ AM_PROG_CC_C_O
 
 GLIB_GSETTINGS
 
+APPSTREAM_XML
+
 dnl ###########################################################################
 dnl Dependencies
 dnl ###########################################################################
@@ -30,7 +32,6 @@ PKG_CHECK_MODULES(SWELL_FOOP, [
 
 AC_CHECK_LIB([m],[floor])
 
-AC_PATH_PROG([APPDATA_VALIDATE], [appdata-validate], [/bin/true])
 AC_PATH_PROG([DESKTOP_FILE_VALIDATE], [desktop-file-validate], [/bin/true])
 
 dnl ###########################################################################
