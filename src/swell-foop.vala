@@ -32,7 +32,7 @@ public class SwellFoop : Gtk.Application
 
     private Gtk.HeaderBar headerbar;
 
-    private bool game_in_progress = true;
+    private bool game_in_progress = false;
 
     /* Store size options */
     public Size[] sizes;
@@ -271,6 +271,11 @@ public class SwellFoop : Gtk.Application
         game_in_progress = false;
     }
 
+    private void started_cb ()
+    {
+        game_in_progress = true;
+    }
+
     protected override void shutdown ()
     {
         base.shutdown ();
@@ -470,6 +475,7 @@ public class SwellFoop : Gtk.Application
                          settings.get_int ("colors"));
         game.update_score.connect (update_score_cb);
         game.complete.connect (complete_cb);
+        game.started.connect (started_cb);
         view.theme_name = settings.get_string ("theme");
         view.game = game;
         view.is_zealous = settings.get_boolean ("zealous");
@@ -477,7 +483,7 @@ public class SwellFoop : Gtk.Application
         stage.set_size (view.width, view.height);
         clutter_embed.set_size_request ((int) stage.width, (int) stage.height);
 
-        game_in_progress = true;
+        game_in_progress = false;
 
         update_score_cb (0);
     }

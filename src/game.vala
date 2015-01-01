@@ -69,7 +69,7 @@ public class Tile : Object
 public class Game : Object
 {
     private Tile[,] tiles;
-
+    private bool is_started = false;
     /* Game score */
     public int score { get; set; default = 0; }
 
@@ -92,6 +92,7 @@ public class Game : Object
 
     public signal void update_score (int points_awarded);
     public signal void complete ();
+    public signal void started ();
 
     /* Constructor */
     public Game (int rows, int columns, int color_num)
@@ -111,6 +112,8 @@ public class Game : Object
                 tiles[y, x] = new Tile (x, y, c);
             }
         }
+
+        is_started = false;
     }
 
     /* Recursively find all the connected tile from li */
@@ -231,6 +234,11 @@ public class Game : Object
                 tiles[y, new_x] = null;
 
         increment_score_from_tiles ((int)cl.length ());
+
+        if (!is_started) {
+            is_started = true;
+            started ();
+        }
 
         if (this.has_completed ())
         {
