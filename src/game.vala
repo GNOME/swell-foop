@@ -70,6 +70,7 @@ public class Game : Object
 {
     private Tile[,] tiles;
     private bool is_started = false;
+
     /* Game score */
     public int score { get; set; default = 0; }
 
