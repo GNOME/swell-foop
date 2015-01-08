@@ -260,6 +260,15 @@ public class GameView : Clutter.Group
         return false;
     }
 
+    private TileActor? find_tile_at_position (int position_x, int position_y)
+    {
+        foreach (TileActor actor in tiles)
+            if (actor.tile.grid_x == position_x &&
+                actor.tile.grid_y == position_y)
+                return actor;
+        return null;
+    }
+
     /* Move Keyboard cursor */
     public void cursor_move (int x, int y)
     {
@@ -268,8 +277,10 @@ public class GameView : Clutter.Group
         opacity_for_connected_tiles (highlighted, 180);
         cursor_x += x;
         cursor_y += y;
-        highlighted = tiles[cursor_x, cursor_y];
-        opacity_for_connected_tiles (highlighted, 255);
+        highlighted = find_tile (cursor_x, cursor_y);
+
+        if (highlighted != null)
+            opacity_for_connected_tiles (highlighted, 255);
 
         float xx, yy;
         xx = cursor_x * tile_size;
