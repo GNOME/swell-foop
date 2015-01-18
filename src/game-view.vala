@@ -277,7 +277,7 @@ public class GameView : Clutter.Group
         opacity_for_connected_tiles (highlighted, 180);
         cursor_x += x;
         cursor_y += y;
-        highlighted = find_tile (cursor_x, cursor_y);
+        highlighted = find_tile_at_position (cursor_x, cursor_y);
 
         if (highlighted != null)
             opacity_for_connected_tiles (highlighted, 255);
