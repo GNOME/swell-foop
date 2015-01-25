@@ -456,7 +456,7 @@ public class SwellFoop : Gtk.Application
                                "program-name", _("Swell Foop"),
                                "version", VERSION,
                                "comments",
-                               _("I want to play that game!\nYou know, they all light-up and you click on them and they vanish!\n\nSwell Foop is a part of GNOME Games."),
+                               _("I want to play that game!\nYou know, they all light-up and you click on them and they vanish!"),
                                "copyright", _("Copyright \xc2\xa9 2009 Tim Horton"),
                                "license-type", Gtk.License.GPL_2_0,
                                "authors", authors,
