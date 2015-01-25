@@ -130,7 +130,6 @@ public class SwellFoop : Gtk.Application
         var menu = new Menu ();
         var section = new Menu ();
         menu.append_section (null, section);
-        section.append (_("_New Game"), "app.new-game");
         section.append (_("_Scores"), "app.scores");
         section.append (_("_Preferences"), "app.preferences");
         section = new Menu ();
