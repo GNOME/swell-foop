@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-12 12:16+0200\n"
-"PO-Revision-Date: 2014-12-12 12:20+0200\n"
+"POT-Creation-Date: 2015-02-17 01:02+0200\n"
+"PO-Revision-Date: 2015-02-17 01:03+0200\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
@@ -94,7 +94,17 @@ msgstr "ה_נפשה מהירה"
 msgid "Operation"
 msgstr "פעולה"
 
-#: ../data/swell-foop.appdata.xml.in.h:1
+#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
+#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
+#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+msgid "Swell Foop"
+msgstr "פיצוץ בצבעים"
+
+#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "פינוי המסך על ידי הסרת קבוצות של אריחים צבעוניים ובעלי צורה"
+
+#: ../data/swell-foop.appdata.xml.in.h:3
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -103,39 +113,29 @@ msgid ""
 "of squares, and also for clearing the entire board."
 msgstr ""
 
-#: ../data/swell-foop.appdata.xml.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
 msgstr ""
-
-#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:120
-#: ../src/swell-foop.vala:146 ../src/swell-foop.vala:451
-#: ../src/swell-foop.vala:532
-msgid "Swell Foop"
-msgstr "פיצוץ בצבעים"
-
-#: ../data/swell-foop.desktop.in.h:2
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "פינוי המסך על ידי הסרת קבוצות של אריחים צבעוניים ובעלי צורה"
 
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "משחק;הגיון;היגיון;לוח;דומה;זהה;התאמה;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:461
+#: ../src/game-view.vala:472
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "נקודה אחת"
 msgstr[1] "%u נקודות"
 
-#: ../src/game-view.vala:462
+#: ../src/game-view.vala:473
 msgid "Game Over!"
 msgstr "המשחק הסתיים!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:140
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
 msgid "_Quit"
 msgstr "י_ציאה"
 
@@ -182,72 +182,64 @@ msgstr ""
 msgid "Let's _Play"
 msgstr "להתחיל ל_שחק"
 
-#: ../src/swell-foop.vala:133 ../src/swell-foop.vala:494
-msgid "_New Game"
-msgstr "_משחק חדש"
-
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:133
 msgid "_Scores"
 msgstr "_תוצאות"
 
-#: ../src/swell-foop.vala:135
+#: ../src/swell-foop.vala:134
 msgid "_Preferences"
 msgstr "ה_עדפות"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:137
 msgid "_Help"
 msgstr "ע_זרה"
 
-#: ../src/swell-foop.vala:139
+#: ../src/swell-foop.vala:138
 msgid "_About"
 msgstr "על _אודות"
 
-#: ../src/swell-foop.vala:155
+#: ../src/swell-foop.vala:154
 msgid "Start a new game"
 msgstr "התחלת משחק חדש"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:183
 msgid "Small"
 msgstr "קטן"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:184
 msgid "Normal"
 msgstr "רגיל"
 
-#: ../src/swell-foop.vala:186
+#: ../src/swell-foop.vala:185
 msgid "Large"
 msgstr "גדול"
 
-#: ../src/swell-foop.vala:262
+#: ../src/swell-foop.vala:261
 #, c-format
 msgid "Score: %u"
 msgstr "ניקוד: %u"
 
-#: ../src/swell-foop.vala:316
+#: ../src/swell-foop.vala:320
 msgid "Colors"
 msgstr "צבעוני"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:324
 msgid "Shapes and Colors"
 msgstr "צורות וצבעים"
 
-#: ../src/swell-foop.vala:454
+#: ../src/swell-foop.vala:458
 msgid ""
 "I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
+"You know, they all light-up and you click on them and they vanish!"
 msgstr ""
 "אני רוצה לשחק במשחק הזה!\n"
-"תשמעו, כל המשבצות נדלקות וכשלוחצים עליהן הן נעלמות!\n"
-"\n"
-"‏Swell Foop הוא חלק מחבילת משחקי GNOME."
+"תשמעו, כל המשבצות נדלקות וכשלוחצים עליהן הן נעלמות!"
 
-#: ../src/swell-foop.vala:455
+#: ../src/swell-foop.vala:459
 msgid "Copyright © 2009 Tim Horton"
 msgstr "כל הזכויות שמורות © 2009 לטים הורטון"
 
-#: ../src/swell-foop.vala:460
+#: ../src/swell-foop.vala:464
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -262,13 +254,17 @@ msgstr ""
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
 
-#: ../src/swell-foop.vala:492
+#: ../src/swell-foop.vala:497
 msgid "Abandon this game to start a new one?"
 msgstr "האם לנטוש את המשחק לפני התחלת אחד חדש?"
 
-#: ../src/swell-foop.vala:493
+#: ../src/swell-foop.vala:498
 msgid "_Cancel"
 msgstr "_ביטול"
+
+#: ../src/swell-foop.vala:499
+msgid "_New Game"
+msgstr "_משחק חדש"
 
 #~ msgid "2"
 #~ msgstr "2"
