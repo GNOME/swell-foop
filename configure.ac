@@ -30,6 +30,8 @@ PKG_CHECK_MODULES(SWELL_FOOP, [
   clutter-gtk-1.0 >= $CLUTTER_GTK_REQUIRED
 ])
 
+AC_SUBST([GLIB_REQUIRED])
+
 AC_CHECK_LIB([m],[floor])
 
 AC_PATH_PROG([DESKTOP_FILE_VALIDATE], [desktop-file-validate], [/bin/true])
