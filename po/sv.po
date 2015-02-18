@@ -1,19 +1,19 @@
 # Swedish messages for gnome-games.
-# Copyright (C) 1999-2014 Free Software Foundation, Inc.
+# Copyright © 1999-2015 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-23 14:35+0000\n"
-"PO-Revision-Date: 2014-03-27 12:14+0100\n"
+"POT-Creation-Date: 2015-01-26 23:47+0000\n"
+"PO-Revision-Date: 2015-01-27 20:34+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.3\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -48,10 +48,20 @@ msgid "The number of colors of tiles to use in the game."
 msgstr "Antalet brickfärger att använda i spelet."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:7
+msgid "Is this the first run"
+msgstr "Är detta första körningen"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr ""
+"Inställning för att bestämma om tipsdialogen för första körningen ska visas "
+"eller inte."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
 msgstr "Maffig animation"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:10
 msgid "Use more flashy, but slower, animations."
 msgstr "Använd finare, men långsammare, animationer."
 
@@ -64,7 +74,6 @@ msgid "_Board size:"
 msgstr "_Brädstorlek:"
 
 #: ../data/preferences.ui.h:3
-#| msgid "Number of colors:"
 msgid "_Number of colors:"
 msgstr "_Antal färger:"
 
@@ -81,7 +90,6 @@ msgid "Appearance"
 msgstr "Utseende"
 
 #: ../data/preferences.ui.h:7
-#| msgid "Zealous Animation"
 msgid "_Zealous Animation"
 msgstr "_Maffig animation"
 
@@ -89,58 +97,56 @@ msgstr "_Maffig animation"
 msgid "Operation"
 msgstr "Åtgärd"
 
-#: ../data/swell-foop.appdata.xml.in.h:1
-msgid ""
-"Remove as many squares as possible from the board. Click on a group of "
-"squares of the same color to make them all disappear in one fell swoop, "
-"causing other squares to fall into place. It is not possible to remove a "
-"single square at a time. You get far more points for clearing a larger group "
-"of squares, and also for clearing the entire board."
-msgstr ""
-"Få bort så många kvadrater som möjligt från brädet. Klicka på en grupp "
-"kvadrater av samma färg för att få dem att alla försvinna samtidigt, vilket "
-"får övriga kvadrater att falla ned. Det är inte möjligt att ta bort en ensam "
-"kvadrat åt gången. Större grupper av kvadrater ger mycket mer poäng än små, "
-"och du får även poäng för att tömma hela brädet."
-
-#: ../data/swell-foop.appdata.xml.in.h:2
-msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer "
-"by changing the board size."
-msgstr ""
-"Swell Foop går alltid snabbt att spela, men du kan förlänga det något genom "
-"att ändra brädstorleken."
-
 # Plötslig attack eller liknande.. nytt namn på Same GNOME
-#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
-#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
-#: ../src/swell-foop.vala:469
+#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
+#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
+#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
-#: ../data/swell-foop.desktop.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Rensa skärmen genom att ta bort grupper av färgade och formade bollar"
+
+#: ../data/swell-foop.appdata.xml.in.h:3
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of squares "
+"of the same color to make them all disappear in one fell swoop, causing other "
+"squares to fall into place. It is not possible to remove a single square at a "
+"time. You get far more points for clearing a larger group of squares, and also "
+"for clearing the entire board."
+msgstr ""
+"Få bort så många kvadrater som möjligt från brädet. Klicka på en grupp kvadrater "
+"av samma färg för att få dem att alla försvinna samtidigt, vilket får övriga "
+"kvadrater att falla ned. Det är inte möjligt att ta bort en ensam kvadrat åt "
+"gången. Större grupper av kvadrater ger mycket mer poäng än små, och du får även "
+"poäng för att tömma hela brädet."
+
+#: ../data/swell-foop.appdata.xml.in.h:4
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer by "
+"changing the board size."
+msgstr ""
+"Swell Foop går alltid snabbt att spela, men du kan förlänga det något genom att "
+"ändra brädstorleken."
 
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "spel;logik;brädspel;samma;matchning;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:443
+#: ../src/game-view.vala:472
 #, c-format
-#| msgid "%d point"
-#| msgid_plural "%d points"
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u poäng"
 msgstr[1] "%u poäng"
 
-#: ../src/game-view.vala:444
+#: ../src/game-view.vala:473
 msgid "Game Over!"
 msgstr "Spelet är slut!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
 msgid "_Quit"
 msgstr "A_vsluta"
 
@@ -161,8 +167,6 @@ msgid "Date"
 msgstr "Datum"
 
 #: ../src/score-dialog.vala:72
-#| msgctxt "score-dialog"
-#| msgid "Score"
 msgid "Score"
 msgstr "Poäng"
 
@@ -173,79 +177,82 @@ msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u färg"
 msgstr[1] "%u × %u, %u färger"
 
-#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
-msgid "_New Game"
-msgstr "_Nytt spel"
+# Plötslig attack eller liknande.. nytt namn på Same GNOME
+#: ../src/swell-foop.vala:79
+msgid "Welcome to Swell Foop"
+msgstr "Välkommen till Swell Foop"
 
-#: ../src/swell-foop.vala:83
+#: ../src/swell-foop.vala:82
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"Rensa bort så många klossar som du kan.\n"
+"Färre klick betyder högre poäng."
+
+#: ../src/swell-foop.vala:85
+msgid "Let's _Play"
+msgstr "_Börja spela"
+
+#: ../src/swell-foop.vala:133
 msgid "_Scores"
 msgstr "_Poänglista"
 
-#: ../src/swell-foop.vala:84
+#: ../src/swell-foop.vala:134
 msgid "_Preferences"
 msgstr "_Inställningar"
 
-#: ../src/swell-foop.vala:87
+#: ../src/swell-foop.vala:137
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../src/swell-foop.vala:88
+#: ../src/swell-foop.vala:138
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/swell-foop.vala:104
+#: ../src/swell-foop.vala:154
 msgid "Start a new game"
 msgstr "Starta ett nytt spel"
 
-#: ../src/swell-foop.vala:122
+#: ../src/swell-foop.vala:183
 msgid "Small"
 msgstr "Liten"
 
-#: ../src/swell-foop.vala:123
+#: ../src/swell-foop.vala:184
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:124
+#: ../src/swell-foop.vala:185
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/swell-foop.vala:199
+#: ../src/swell-foop.vala:261
 #, c-format
-#| msgid "Score: %4u "
 msgid "Score: %u"
 msgstr "Poäng: %u "
 
-#: ../src/swell-foop.vala:253
+#: ../src/swell-foop.vala:320
 msgid "Colors"
 msgstr "Färger"
 
-#: ../src/swell-foop.vala:257
+#: ../src/swell-foop.vala:324
 msgid "Shapes and Colors"
 msgstr "Figurer och färger"
 
-#: ../src/swell-foop.vala:391
-#| msgid ""
-#| "I want to play that game! You know, they all light-up and you click on "
-#| "them and they vanish!\n"
-#| "\n"
-#| "Swell Foop is a part of GNOME Games."
+#: ../src/swell-foop.vala:458
 msgid ""
 "I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
+"You know, they all light-up and you click on them and they vanish!"
 msgstr ""
-"Jag vill spela det spelet!\n"
+"Jag vill spela det där spelet!\n"
 "Du vet, spelet där allt börjar lysa upp och man kan klicka på dem så de "
-"försvinner!\n"
-"\n"
-"Swell Foop är en del av GNOME Games."
+"försvinner!"
 
-#: ../src/swell-foop.vala:392
+#: ../src/swell-foop.vala:459
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:397
+#: ../src/swell-foop.vala:464
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -258,11 +265,14 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>."
 
-#: ../src/swell-foop.vala:429
-#| msgid "Save this game before starting a new one?"
+#: ../src/swell-foop.vala:497
 msgid "Abandon this game to start a new one?"
 msgstr "Överge detta spel för att påbörja ett nytt?"
 
-#: ../src/swell-foop.vala:430
+#: ../src/swell-foop.vala:498
 msgid "_Cancel"
 msgstr "_Avbryt"
+
+#: ../src/swell-foop.vala:499
+msgid "_New Game"
+msgstr "_Nytt spel"
