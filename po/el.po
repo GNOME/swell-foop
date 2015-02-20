@@ -30,15 +30,15 @@
 # Michael Kotsarinis <mk73628@hotmail.com>, 2010.
 # George Stefanakis <george.stefanakis@gmail.com>, 2011.
 # Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2012, 2013, 2014.
-# Efstathios Iosifidis <iosifidis@opensuse.org>, 2014.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-11-16 11:37+0000\n"
-"PO-Revision-Date: 2014-11-17 03:36+0200\n"
+"POT-Creation-Date: 2015-02-14 11:48+0000\n"
+"PO-Revision-Date: 2015-02-14 15:47+0200\n"
 "Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
 "Language-Team: Greek, Modern (1453-) <opensuse-translation-el@opensuse.org>\n"
 "Language: el\n"
@@ -123,7 +123,17 @@ msgstr "Γ_ρήγορη κίνηση εικόνων"
 msgid "Operation"
 msgstr "Λειτουργία"
 
-#: ../data/swell-foop.appdata.xml.in.h:1
+#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
+#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
+#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "Καθαρίστε την οθόνη απομακρύνοντας ομάδες από χρωματιστά πλακάκια"
+
+#: ../data/swell-foop.appdata.xml.in.h:3
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -137,7 +147,7 @@ msgstr ""
 "τετράγωνο τη φορά. Παίρνετε πολύ περισσότερα σημεία για καθαρισμό μιας "
 "μεγαλύτερης ομάδας τετραγώνων και επίσης για καθαρισμό όλου του πίνακα."
 
-#: ../data/swell-foop.appdata.xml.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -145,33 +155,23 @@ msgstr ""
 "Το Swell Foop είναι πάντα πολύ γρήγορο στο παίξιμο, αλλά μπορείτε να το "
 "κάνετε κάπως πιο μεγάλο αλλάζοντας το μέγεθος του πίνακα."
 
-#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:120
-#: ../src/swell-foop.vala:146 ../src/swell-foop.vala:451
-#: ../src/swell-foop.vala:532
-msgid "Swell Foop"
-msgstr "Swell Foop"
-
-#: ../data/swell-foop.desktop.in.h:2
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "Καθαρίστε την οθόνη απομακρύνοντας ομάδες από χρωματιστά πλακάκια"
-
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "παιχνίδι;λογική;πίνακας;ίδιο;ταίριασμα;game;logic;board;same;matching;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:461
+#: ../src/game-view.vala:472
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u πόντος"
 msgstr[1] "%u πόντοι"
 
-#: ../src/game-view.vala:462
+#: ../src/game-view.vala:473
 msgid "Game Over!"
 msgstr "Τέλος παιχνιδιού!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:140
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
 msgid "_Quit"
 msgstr "Έ_ξοδος"
 
@@ -218,72 +218,69 @@ msgstr ""
 msgid "Let's _Play"
 msgstr "Ας _παίξουμε"
 
-#: ../src/swell-foop.vala:133 ../src/swell-foop.vala:494
-msgid "_New Game"
-msgstr "_Νέο παιχνίδι"
-
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:133
 msgid "_Scores"
 msgstr "_Βαθμολογίες"
 
-#: ../src/swell-foop.vala:135
+#: ../src/swell-foop.vala:134
 msgid "_Preferences"
 msgstr "Π_ροτιμήσεις"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:137
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../src/swell-foop.vala:139
+#: ../src/swell-foop.vala:138
 msgid "_About"
 msgstr "_Περί"
 
-#: ../src/swell-foop.vala:155
+#: ../src/swell-foop.vala:154
 msgid "Start a new game"
 msgstr "Εκκίνηση νέου παιχνιδιού"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:183
 msgid "Small"
 msgstr "Μικρό"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:184
 msgid "Normal"
 msgstr "Κανονικό"
 
-#: ../src/swell-foop.vala:186
+#: ../src/swell-foop.vala:185
 msgid "Large"
 msgstr "Μεγάλο"
 
-#: ../src/swell-foop.vala:262
+#: ../src/swell-foop.vala:261
 #, c-format
 msgid "Score: %u"
 msgstr "Βαθμολογία: %u"
 
-#: ../src/swell-foop.vala:316
+#: ../src/swell-foop.vala:320
 msgid "Colors"
 msgstr "Χρώματα"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:324
 msgid "Shapes and Colors"
 msgstr "Σχήματα και χρώματα"
 
-#: ../src/swell-foop.vala:454
+#: ../src/swell-foop.vala:458
+#| msgid ""
+#| "I want to play that game!\n"
+#| "You know, they all light-up and you click on them and they vanish!\n"
+#| "\n"
+#| "Swell Foop is a part of GNOME Games."
 msgid ""
 "I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
+"You know, they all light-up and you click on them and they vanish!"
 msgstr ""
 "Θέλω να παίξω αυτό το παιχνίδι!\n"
-"Ξέρεις, αυτό όπου όλα φωτίζονται, και πατάς πάνω τους και εξαφανίζονται!\n"
-"\n"
-"Το Swell Foop είναι μέρος των παιχνιδιών του GNOME."
+"Ξέρεις, αυτό όπου όλα φωτίζονται, και πατάς πάνω τους και εξαφανίζονται!"
 
-#: ../src/swell-foop.vala:455
+#: ../src/swell-foop.vala:459
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Πνευματικά δικαιώματα © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:460
+#: ../src/swell-foop.vala:464
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -297,13 +294,17 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: ../src/swell-foop.vala:492
+#: ../src/swell-foop.vala:497
 msgid "Abandon this game to start a new one?"
 msgstr "Έξοδος από αυτό το παιχνίδι για να ξεκινήσει ένα νέο;"
 
-#: ../src/swell-foop.vala:493
+#: ../src/swell-foop.vala:498
 msgid "_Cancel"
 msgstr "Α_κύρωση"
+
+#: ../src/swell-foop.vala:499
+msgid "_New Game"
+msgstr "_Νέο παιχνίδι"
 
 #~ msgid "2"
 #~ msgstr "2"
