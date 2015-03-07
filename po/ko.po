@@ -8,7 +8,7 @@
 #
 # Updated for swell-foop:
 #
-# Changwoo Ryu <cwryu@debian.org>, 2013-2014.
+# Changwoo Ryu <cwryu@debian.org>, 2013-2015.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -21,8 +21,8 @@ msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-07 11:33+0000\n"
-"PO-Revision-Date: 2014-03-08 05:26+0900\n"
+"POT-Creation-Date: 2015-03-07 11:56+0000\n"
+"PO-Revision-Date: 2015-03-08 05:01+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: Korean\n"
@@ -56,10 +56,18 @@ msgid "The number of colors of tiles to use in the game."
 msgstr "게임에 사용할 타일의 색 개수."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:7
+msgid "Is this the first run"
+msgstr "첫번째 실행인지 여부"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr "처음에 실행하는 힌트 대화 상자를 표시할지 여부에 대한 설정."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
 msgstr "화려한 애니메이션"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:10
 msgid "Use more flashy, but slower, animations."
 msgstr "화려한(하지만 느린) 애니메이션 사용."
 
@@ -76,70 +84,72 @@ msgid "_Number of colors:"
 msgstr "색 개수(_N):"
 
 #: ../data/preferences.ui.h:4
-msgid "2"
-msgstr "2"
-
-#: ../data/preferences.ui.h:5
 msgid "Setup"
 msgstr "설정"
 
-#: ../data/preferences.ui.h:6
+#: ../data/preferences.ui.h:5
 msgid "_Theme:"
 msgstr "테마(_T):"
 
-#: ../data/preferences.ui.h:7
+#: ../data/preferences.ui.h:6
 msgid "Appearance"
 msgstr "모양"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:7
 msgid "_Zealous Animation"
 msgstr "화려한 애니메이션(_Z)"
 
-#: ../data/preferences.ui.h:9
+#: ../data/preferences.ui.h:8
 msgid "Operation"
 msgstr "동작"
 
-#: ../data/swell-foop.appdata.xml.in.h:1
+#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
+#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
+#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+msgid "Swell Foop"
+msgstr "스웰푸프"
+
+#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "같은 색이나 모양의 타일을 제거해 나가면서 화면을 청소합니다"
+
+#: ../data/swell-foop.appdata.xml.in.h:3
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
 "causing other squares to fall into place. It is not possible to remove a "
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
-msgstr "게임판에서 사각형을 가능한 많이 없애십시오. 하나로 연결된 같은 색의 사각형 그룹을 누르면 모두 사라집니다. 그러면 다른 사각형이 떨어져서 붙습니다. 한 번에 사각형 1개를 제거할 수는 없습니다. 더 큰 그룹을 제거하면 더 많은 점수를 얻고, 게임판을 완전히 치워도 추가 점수를 얻습니다."
+msgstr ""
+"게임판에서 사각형을 가능한 많이 없애십시오. 하나로 연결된 같은 색의 사각형 그"
+"룹을 누르면 모두 사라집니다. 그러면 다른 사각형이 떨어져서 붙습니다. 한 번에 "
+"사각형 1개를 제거할 수는 없습니다. 더 큰 그룹을 제거하면 더 많은 점수를 얻"
+"고, 게임판을 완전히 치워도 추가 점수를 얻습니다."
 
-#: ../data/swell-foop.appdata.xml.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
-msgstr "스웰푸프는 항상 빠르게 플레이할 수 있지만, 게임판 크기를 바꾸면 오래 플레이할 수 있습니다."
-
-#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
-#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
-#: ../src/swell-foop.vala:469
-msgid "Swell Foop"
-msgstr "스웰푸프"
-
-#: ../data/swell-foop.desktop.in.h:2
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "같은 색이나 모양의 타일을 제거해 나가면서 화면을 청소합니다"
+msgstr ""
+"스웰푸프는 항상 빠르게 플레이할 수 있지만, 게임판 크기를 바꾸면 오래 플레이"
+"할 수 있습니다."
 
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "game;게임;logic;논리;로직;board;보드;same;matching;같은;맞추기;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:443
+#: ../src/game-view.vala:472
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
-msgstr[0] "점 %u개"
+msgstr[0] "%u점"
 
-#: ../src/game-view.vala:444
+#: ../src/game-view.vala:473
 msgid "Game Over!"
 msgstr "게임 끝!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
 msgid "_Quit"
 msgstr "끝내기(_Q)"
 
@@ -169,79 +179,91 @@ msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, 색 %u개"
 
-#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
-msgid "_New Game"
-msgstr "새 게임(_N)"
+#: ../src/swell-foop.vala:79
+msgid "Welcome to Swell Foop"
+msgstr "스웰푸프입니다"
 
-#: ../src/swell-foop.vala:83
+#: ../src/swell-foop.vala:82
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"가능한 많은 블럭을 지우십시오.\n"
+"적게 누를 수록 점수가 많습니다."
+
+#: ../src/swell-foop.vala:85
+msgid "Let's _Play"
+msgstr "플레이 시작(_P)"
+
+#: ../src/swell-foop.vala:133
 msgid "_Scores"
 msgstr "점수(_S)"
 
-#: ../src/swell-foop.vala:84
+#: ../src/swell-foop.vala:134
 msgid "_Preferences"
 msgstr "기본 설정(_P)"
 
-#: ../src/swell-foop.vala:87
+#: ../src/swell-foop.vala:137
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: ../src/swell-foop.vala:88
+#: ../src/swell-foop.vala:138
 msgid "_About"
 msgstr "정보(_A)"
 
-#: ../src/swell-foop.vala:104
+#: ../src/swell-foop.vala:154
 msgid "Start a new game"
 msgstr "새 게임을 시작합니다"
 
-#: ../src/swell-foop.vala:122
+#: ../src/swell-foop.vala:183
 msgid "Small"
 msgstr "작게"
 
-#: ../src/swell-foop.vala:123
+#: ../src/swell-foop.vala:184
 msgid "Normal"
 msgstr "보통"
 
-#: ../src/swell-foop.vala:124
+#: ../src/swell-foop.vala:185
 msgid "Large"
 msgstr "크게"
 
-#: ../src/swell-foop.vala:199
+#: ../src/swell-foop.vala:261
 #, c-format
 msgid "Score: %u"
 msgstr "점수: %u"
 
-#: ../src/swell-foop.vala:253
+#: ../src/swell-foop.vala:320
 msgid "Colors"
 msgstr "색"
 
-#: ../src/swell-foop.vala:257
+#: ../src/swell-foop.vala:324
 msgid "Shapes and Colors"
 msgstr "모양과 색"
 
-#: ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:458
 msgid ""
 "I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
+"You know, they all light-up and you click on them and they vanish!"
 msgstr ""
 "게임을 즐기세요!\n"
-"반짝이는 구슬을 눌러 구슬을 없애세요!\n"
-"\n"
-"스웰푸프는 그놈 게임의 일부입니다."
+"반짝이는 구슬을 눌러 구슬을 없애세요!"
 
-#: ../src/swell-foop.vala:392
+#: ../src/swell-foop.vala:459
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:397
+#: ../src/swell-foop.vala:464
 msgid "translator-credits"
 msgstr "류창우 <cwryu@debian.org>"
 
-#: ../src/swell-foop.vala:429
+#: ../src/swell-foop.vala:497
 msgid "Abandon this game to start a new one?"
 msgstr "이 게임을 포기하고 새 게임을 시작하시겠습니까?"
 
-#: ../src/swell-foop.vala:430
+#: ../src/swell-foop.vala:498
 msgid "_Cancel"
 msgstr "취소(_C)"
+
+#: ../src/swell-foop.vala:499
+msgid "_New Game"
+msgstr "새 게임(_N)"
