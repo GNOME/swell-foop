@@ -4,20 +4,23 @@
 # Nuno Ferreira <nmrf@rnl.ist.utl.pt>, 1998.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
 # 
+# Pedro Albuquerque <palbuquerque73@openmailbox.com>, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.12\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-17 23:37+0000\n"
-"PO-Revision-Date: 2014-03-18 10:05+0000\n"
-"Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
-"Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
+"POT-Creation-Date: 2015-06-07 23:41+0000\n"
+"PO-Revision-Date: 2015-06-26 09:10+0100\n"
+"Last-Translator: Pedro Albuquerque <palbuquerque73@openmailbox.com>\n"
+"Language-Team: Português <palbuquerque73@openmailbox.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -44,10 +47,19 @@ msgid "The number of colors of tiles to use in the game."
 msgstr "O número de cores de peças a utilizar no jogo."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:7
+msgid "Is this the first run"
+msgstr "É a primeira vez"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr ""
+"Definição para decidir se é mostrado o diálogo de sugestões no primeiro jogo."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
 msgstr "Animação cuidada"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:10
 msgid "Use more flashy, but slower, animations."
 msgstr "Utilizar animações mais bonitas, mas lentas."
 
@@ -64,30 +76,36 @@ msgid "_Number of colors:"
 msgstr "_Número de cores:"
 
 #: ../data/preferences.ui.h:4
-msgid "2"
-msgstr "2"
-
-#: ../data/preferences.ui.h:5
 msgid "Setup"
 msgstr "Configurar"
 
-#: ../data/preferences.ui.h:6
+#: ../data/preferences.ui.h:5
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: ../data/preferences.ui.h:7
+#: ../data/preferences.ui.h:6
 msgid "Appearance"
 msgstr "Aparência"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:7
 msgid "_Zealous Animation"
 msgstr "Animação _Cuidada"
 
-#: ../data/preferences.ui.h:9
+#: ../data/preferences.ui.h:8
 msgid "Operation"
-msgstr "Operações"
+msgstr "Operação"
 
-#: ../data/swell-foop.appdata.xml.in.h:1
+#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
+#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
+#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "Limpe o ecrã removendo grupos de peças coloridas e de várias formas"
+
+#: ../data/swell-foop.appdata.xml.in.h:3
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -95,13 +113,13 @@ msgid ""
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
 msgstr ""
-"Remova tantos quadrados quantos possíveis do tabuleiro. Clique num grupo "
-"de quadrados da mesma cor para fazer com que todos desapareçam de uma vez, "
+"Remova tantos quadrados quantos possíveis do tabuleiro. Clique num grupo de "
+"quadrados da mesma cor para fazer com que todos desapareçam de uma vez, "
 "levando a que outros caiam no seu lugar. Não é possível remover um único "
 "quadrado isolado. Pontua mais se limpar um grupo grande de quadrados e "
 "também por limpar todo o tabuleiro."
 
-#: ../data/swell-foop.appdata.xml.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -109,43 +127,33 @@ msgstr ""
 "Swell Foop é sempre muito rápido de jogar, mas pode torná-lo um pouco mais "
 "demorado alterando o tamanho do tabuleiro."
 
-#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
-#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
-#: ../src/swell-foop.vala:469
-msgid "Swell Foop"
-msgstr "Swell Foop"
-
-#: ../data/swell-foop.desktop.in.h:2
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "Limpe o ecrã removendo grupos de peças coloridas e de várias formas"
-
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "jogo;lógica;tabuleiro;same;coincidir;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:443
+#: ../src/game-view.vala:472
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u ponto"
 msgstr[1] "%u pontos"
 
-#: ../src/game-view.vala:444
+#: ../src/game-view.vala:473
 msgid "Game Over!"
-msgstr "Jogo Terminado!"
+msgstr "Jogo terminado!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
 msgid "_Quit"
 msgstr "_Sair"
 
 #: ../src/score-dialog.vala:29
 msgid "New Game"
-msgstr "Novo Jogo"
+msgstr "Novo jogo"
 
 #: ../src/score-dialog.vala:32
 msgid "_OK"
-msgstr "_OK"
+msgstr "_Aceitar"
 
 #: ../src/score-dialog.vala:44
 msgid "Size:"
@@ -166,79 +174,104 @@ msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u cor"
 msgstr[1] "%u × %u, %u cores"
 
-#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
-msgid "_New Game"
-msgstr "_Novo Jogo"
+#: ../src/swell-foop.vala:79
+#| msgid "Swell Foop"
+msgid "Welcome to Swell Foop"
+msgstr "Boas vindas ao Swell Foop"
 
-#: ../src/swell-foop.vala:83
+#: ../src/swell-foop.vala:82
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"Limpe tantos blocos quantos conseguir.\n"
+"Menos cliques dão mais pontos."
+
+#: ../src/swell-foop.vala:85
+msgid "Let's _Play"
+msgstr "_Vamos jogar"
+
+#: ../src/swell-foop.vala:133
 msgid "_Scores"
 msgstr "_Pontuações"
 
-#: ../src/swell-foop.vala:84
+#: ../src/swell-foop.vala:134
 msgid "_Preferences"
 msgstr "_Preferências"
 
-#: ../src/swell-foop.vala:87
+#: ../src/swell-foop.vala:137
 msgid "_Help"
-msgstr "_Ajuda"
+msgstr "A_Juda"
 
-#: ../src/swell-foop.vala:88
+#: ../src/swell-foop.vala:138
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../src/swell-foop.vala:104
+#: ../src/swell-foop.vala:154
 msgid "Start a new game"
 msgstr "Iniciar um novo jogo"
 
-#: ../src/swell-foop.vala:122
+#: ../src/swell-foop.vala:183
 msgid "Small"
 msgstr "Pequeno"
 
-#: ../src/swell-foop.vala:123
+#: ../src/swell-foop.vala:184
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:124
+#: ../src/swell-foop.vala:185
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/swell-foop.vala:199
+#: ../src/swell-foop.vala:261
 #, c-format
 msgid "Score: %u"
 msgstr "Pontuação: %u"
 
-#: ../src/swell-foop.vala:253
+#: ../src/swell-foop.vala:320
 msgid "Colors"
 msgstr "Cores"
 
-#: ../src/swell-foop.vala:257
+#: ../src/swell-foop.vala:324
 msgid "Shapes and Colors"
-msgstr "Formas e Cores"
+msgstr "Formas e cores"
 
-#: ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:458
+#| msgid ""
+#| "I want to play that game!\n"
+#| "You know, they all light-up and you click on them and they vanish!\n"
+#| "\n"
+#| "Swell Foop is a part of GNOME Games."
 msgid ""
 "I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
+"You know, they all light-up and you click on them and they vanish!"
 msgstr ""
-"Eu quero jogar aquele jogo!\n"
-"Sabe, eles acendem-se, clica neles e eles desaparecem!\n"
+"Quero jogar este jogo!\n"
+"Sabe, eles acendem-se, clica-se e eles desaparecem!\n"
 "\n"
-"Swell Foop faz parte dos Jogos GNOME."
+"Swell Foop faz parte dos jogos GNOME."
 
-#: ../src/swell-foop.vala:392
+#: ../src/swell-foop.vala:459
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:397
+#: ../src/swell-foop.vala:464
 msgid "translator-credits"
-msgstr "Duarte Loreto <happyguy_pt@hotmail.com>"
+msgstr ""
+"Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Pedro Albuquerque <palbuquerque73@gmail.com>"
 
-#: ../src/swell-foop.vala:429
+#: ../src/swell-foop.vala:497
 msgid "Abandon this game to start a new one?"
 msgstr "Abandonar este jogo para iniciar um novo?"
 
-#: ../src/swell-foop.vala:430
+#: ../src/swell-foop.vala:498
 msgid "_Cancel"
 msgstr "_Cancelar"
+
+#: ../src/swell-foop.vala:499
+msgid "_New Game"
+msgstr "_Novo jogo"
+
+#~ msgid "2"
+#~ msgstr "2"
