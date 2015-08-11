@@ -274,3 +274,4 @@ msgstr "Soll dieses Spiel abgebrochen und ein neues gestartet werden?"
 #: ../src/swell-foop.vala:430
 msgid "_Cancel"
 msgstr "A_bbrechen"
+

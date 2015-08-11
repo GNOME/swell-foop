@@ -1,0 +1,29 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="introduction">
+
+  <info>
+    <link type="guide" xref="index"/>
+    <revision version="3.14" date="2014-07-17" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+    <desc>Know about <app>Swell Foop</app>.</desc>
+
+  </info>
+
+  <title>Introduction</title>
+
+  <p>The goal of the game is to remove as many objects as possible in the
+  minimum number of moves. Objects that are adjacent to each other get removed
+  as a group. The remaining objects then collapse to fill in the gaps and form
+  new groups. You cannot remove single objects.</p>
+
+</page>

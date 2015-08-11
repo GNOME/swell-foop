@@ -276,3 +276,4 @@ msgstr "_Nova Igra"
 
 #~ msgid "GNOME Games web site"
 #~ msgstr "Spletna stran iger GNOME"
+

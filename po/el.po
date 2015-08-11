@@ -530,3 +530,4 @@ msgstr "_Νέο παιχνίδι"
 
 #~ msgid "One hour"
 #~ msgstr "Μία ώρα"
+

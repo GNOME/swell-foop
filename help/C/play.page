@@ -1,0 +1,35 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="play">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision pkgversion="3.14" date="2014-07-14" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+    <desc>How to play?</desc>
+
+  </info>
+
+  <title>Play <app>Swell Foop</app></title>
+
+  <p>The board starts as a full grid of objects depending on the size of board
+  you select. You can remove the tiles as follows:</p>
+  <list>
+    <item><p>If a group of objects are adjacent and all the same type, then
+    they can be removed simply by clicking them or by pressing the
+    <key>space bar</key>.</p></item>
+    <item><p>Once the group has been removed the objects above them
+    fall down to fill the space. If an entire column is cleared then the objects
+    slide leftward to fill the gap.</p></item>
+  </list>
+  <media its:translate="no" type="image" src="figures/start-game.png"/>
+</page>

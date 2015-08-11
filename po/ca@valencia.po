@@ -251,3 +251,4 @@ msgstr "Voleu abandonar la partida i començar una de nova?"
 #: ../src/swell-foop.vala:432
 msgid "_Cancel"
 msgstr "_Cancel·la"
+
