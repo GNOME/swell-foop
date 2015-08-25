@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-02 19:41+0100\n"
-"PO-Revision-Date: 2015-03-02 19:44+0100\n"
+"POT-Creation-Date: 2015-08-25 14:40+0200\n"
+"PO-Revision-Date: 2015-08-25 14:41+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -64,7 +64,9 @@ msgstr "Czy jest to pierwsze uruchomienie"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr "Ustawienie decydujące, czy wyświetlić okno z podpowiedzią podczas pierwszego uruchomienia."
+msgstr ""
+"Ustawienie decydujące, czy wyświetlić okno z podpowiedzią podczas pierwszego "
+"uruchomienia."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
@@ -108,7 +110,7 @@ msgstr "Działanie"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
 #: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -219,36 +221,36 @@ msgstr "Pomo_c"
 msgid "_About"
 msgstr "_O grze"
 
-#: ../src/swell-foop.vala:154
+#: ../src/swell-foop.vala:152
 msgid "Start a new game"
 msgstr "Rozpoczyna nową grę"
 
-#: ../src/swell-foop.vala:183
+#: ../src/swell-foop.vala:180
 msgid "Small"
 msgstr "Mała"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:181
 msgid "Normal"
-msgstr "Standardowy"
+msgstr "Standardowa"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:182
 msgid "Large"
 msgstr "Duża"
 
-#: ../src/swell-foop.vala:261
+#: ../src/swell-foop.vala:258
 #, c-format
 msgid "Score: %u"
 msgstr "Punkty: %u"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:317
 msgid "Colors"
 msgstr "Kolory"
 
-#: ../src/swell-foop.vala:324
+#: ../src/swell-foop.vala:321
 msgid "Shapes and Colors"
 msgstr "Kształty i kolory"
 
-#: ../src/swell-foop.vala:458
+#: ../src/swell-foop.vala:455
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -256,11 +258,11 @@ msgstr ""
 "Gra polegająca na czyszczeniu planszy przez\n"
 "usuwanie grup płytek jednego koloru i kształtu"
 
-#: ../src/swell-foop.vala:459
+#: ../src/swell-foop.vala:456
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:464
+#: ../src/swell-foop.vala:461
 msgid "translator-credits"
 msgstr ""
 "Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
@@ -277,14 +279,14 @@ msgstr ""
 "Piotr Drąg <piotrdrag@gmail.com>, 2010-2015\n"
 "Aviary.pl <gnomepl@aviary.pl>, 2007-2015"
 
-#: ../src/swell-foop.vala:497
+#: ../src/swell-foop.vala:494
 msgid "Abandon this game to start a new one?"
 msgstr "Porzucić tę grę, aby rozpocząć nową?"
 
-#: ../src/swell-foop.vala:498
+#: ../src/swell-foop.vala:495
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: ../src/swell-foop.vala:499
+#: ../src/swell-foop.vala:496
 msgid "_New Game"
 msgstr "_Nowa gra"
