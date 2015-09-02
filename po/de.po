@@ -17,22 +17,23 @@
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2010-2012.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009-2012.
 # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
+# Wolfgang Stöggl <c72578@yahoo.de>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-05-02 10:24+0000\n"
-"PO-Revision-Date: 2014-05-01 19:05+0100\n"
-"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
+"POT-Creation-Date: 2015-08-19 11:51+0000\n"
+"PO-Revision-Date: 2015-09-02 11:34+0200\n"
+"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.8.4\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -59,10 +60,19 @@ msgid "The number of colors of tiles to use in the game."
 msgstr "Die Anzahl der Spielsteinfarben in einem Spiel."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:7
+msgid "Is this the first run"
+msgstr "Ist dies der erste Start"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr ""
+"Einstellung legt fest, ob der Hinweisdialog beim ersten Start angezeigt wird."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
 msgstr "Sehr viel Animation"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:10
 msgid "Use more flashy, but slower, animations."
 msgstr "Hübschere, aber langsamere Animation verwenden."
 
@@ -99,7 +109,20 @@ msgstr "_Schnelle Animation"
 msgid "Operation"
 msgstr "Betrieb"
 
-#: ../data/swell-foop.appdata.xml.in.h:1
+# Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
+#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
+#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
+#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr ""
+"Den Bildschirm durch Entfernen von Gruppen farbiger und geformter Kacheln "
+"leeren"
+
+#: ../data/swell-foop.appdata.xml.in.h:3
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -107,14 +130,14 @@ msgid ""
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
 msgstr ""
-"Entfernen Sie soviele Kacheln wie möglich vom Spielbrett. Klicken Sie auf "
-"eine Ansammlung Kacheln der selben Farbe, damit diese alle auf einmal "
+"Entfernen Sie so viele Kacheln wie möglich vom Spielbrett. Klicken Sie auf "
+"eine Ansammlung Kacheln derselben Farbe, damit diese alle auf einmal "
 "verschwinden. Daraufhin fallen andere Kacheln an diese Stellen. Es ist nicht "
 "möglich Kacheln einzeln zu entfernen. Sie erhalten deutlich mehr Punkte beim "
 "Entfernen von großen Kachelgruppen und auch für das vollständige Räumen des "
 "Spielbretts."
 
-#: ../data/swell-foop.appdata.xml.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -122,36 +145,23 @@ msgstr ""
 "Swell Foop kann immer sehr schnell gespielt werden. Bei Bedarf können Sie "
 "die Spielzeit verlängern, in dem Sie die Spielbrettgröße anpassen."
 
-# Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
-#: ../data/swell-foop.desktop.in.h:1 ../src/swell-foop.vala:69
-#: ../src/swell-foop.vala:95 ../src/swell-foop.vala:388
-#: ../src/swell-foop.vala:469
-msgid "Swell Foop"
-msgstr "Swell Foop"
-
-#: ../data/swell-foop.desktop.in.h:2
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr ""
-"Den Bildschirm durch Entfernen von Gruppen farbiger und geformter Kacheln "
-"leeren"
-
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "Spiel;Logik;Brettspiel;Same;gleich;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:443
+#: ../src/game-view.vala:472
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u Punkt"
 msgstr[1] "%u Punkte"
 
-#: ../src/game-view.vala:444
+#: ../src/game-view.vala:473
 msgid "Game Over!"
 msgstr "Spiel vorbei!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:89
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
 msgid "_Quit"
 msgstr "_Beenden"
 
@@ -182,73 +192,82 @@ msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u Farbe"
 msgstr[1] "%u × %u, %u Farben"
 
-#: ../src/swell-foop.vala:82 ../src/swell-foop.vala:431
-msgid "_New Game"
-msgstr "_Neues Spiel"
+# Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
+#: ../src/swell-foop.vala:79
+msgid "Welcome to Swell Foop"
+msgstr "Willkommen bei Swell Foop"
 
-#: ../src/swell-foop.vala:83
+#: ../src/swell-foop.vala:82
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"Beseitigen Sie so viele Blöcke wie möglich.\n"
+"Weniger Mausklicks bedeuten mehr Siegpunkte."
+
+#: ../src/swell-foop.vala:85
+msgid "Let's _Play"
+msgstr "Wir wollen _spielen"
+
+#: ../src/swell-foop.vala:133
 msgid "_Scores"
 msgstr "Er_gebnisse"
 
-#: ../src/swell-foop.vala:84
+#: ../src/swell-foop.vala:134
 msgid "_Preferences"
 msgstr "_Einstellungen"
 
-#: ../src/swell-foop.vala:87
+#: ../src/swell-foop.vala:137
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/swell-foop.vala:88
+#: ../src/swell-foop.vala:138
 msgid "_About"
 msgstr "_Info"
 
-#: ../src/swell-foop.vala:104
+#: ../src/swell-foop.vala:152
 msgid "Start a new game"
 msgstr "Ein neues Spiel beginnen"
 
-#: ../src/swell-foop.vala:122
+#: ../src/swell-foop.vala:180
 msgid "Small"
 msgstr "Klein"
 
-#: ../src/swell-foop.vala:123
+#: ../src/swell-foop.vala:181
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:124
+#: ../src/swell-foop.vala:182
 msgid "Large"
 msgstr "Groß"
 
-#: ../src/swell-foop.vala:199
+#: ../src/swell-foop.vala:258
 #, c-format
 msgid "Score: %u"
 msgstr "Punkte: %4u"
 
-#: ../src/swell-foop.vala:253
+#: ../src/swell-foop.vala:317
 msgid "Colors"
 msgstr "Farben"
 
-#: ../src/swell-foop.vala:257
+#: ../src/swell-foop.vala:321
 msgid "Shapes and Colors"
 msgstr "Formen und Farben"
 
-#: ../src/swell-foop.vala:391
+#: ../src/swell-foop.vala:455
 msgid ""
 "I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
+"You know, they all light-up and you click on them and they vanish!"
 msgstr ""
 "Ich will dieses Spiel spielen!\n"
 "Du weißt schon, alle leuchten auf, dann klickst Du drauf und sie "
-"verschwinden!\n"
-"\n"
-"Swell Foop ist ein Teil der GNOME-Spiele."
+"verschwinden!"
 
-#: ../src/swell-foop.vala:392
+#: ../src/swell-foop.vala:456
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:397
+#: ../src/swell-foop.vala:461
 msgid "translator-credits"
 msgstr ""
 "Karl Eichwalder <ke@suse.de>\n"
@@ -267,10 +286,14 @@ msgstr ""
 "Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
 "Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>"
 
-#: ../src/swell-foop.vala:429
+#: ../src/swell-foop.vala:494
 msgid "Abandon this game to start a new one?"
 msgstr "Soll dieses Spiel abgebrochen und ein neues gestartet werden?"
 
-#: ../src/swell-foop.vala:430
+#: ../src/swell-foop.vala:495
 msgid "_Cancel"
 msgstr "A_bbrechen"
+
+#: ../src/swell-foop.vala:496
+msgid "_New Game"
+msgstr "_Neues Spiel"
