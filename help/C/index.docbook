@@ -241,7 +241,7 @@
       <para>The <guimenu>Board size</guimenu> list under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> contains three settings: <guimenuitem>Small</guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</guimenuitem>.</para>
     </sect2>
 
-    <sect2 id="changing-the-size">
+    <sect2 id="changing-the-number-of-objects">
       <title>Changing the Number of Objects</title>
       <para>The <guimenu>Number of colors</guimenu> option under <menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> allows you to increase the number of different objects.</para>
     </sect2>
