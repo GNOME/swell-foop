@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([Swell Foop], [3.17.91], [https://bugzilla.gnome.org/],
+AC_INIT([Swell Foop], [3.17.92], [https://bugzilla.gnome.org/],
         [swell-foop], [https://wiki.gnome.org/Apps/Swell%20Foop])
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])
