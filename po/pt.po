@@ -2,14 +2,16 @@
 # Copyright © 1998, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 gnome-games
 # Distributed under the same licence as the gnome-games package
 # Nuno Ferreira <nmrf@rnl.ist.utl.pt>, 1998.
-# Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
-# 
+# Pedro Albuquerque <palbuquerque73@gmail.com>, 2015.
+# Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.10\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-23 02:03+0100\n"
-"PO-Revision-Date: 2013-09-23 02:05+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"foop&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-09-29 00:50+0000\n"
+"PO-Revision-Date: 2015-10-14 07:24+0100\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "Language: pt\n"
@@ -17,6 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
 msgid "The theme to use"
@@ -82,7 +85,7 @@ msgstr "Animação _Cuidada"
 
 #: ../data/preferences.ui.h:8
 msgid "Operation"
-msgstr "Operações"
+msgstr "Operação"
 
 #: ../data/swell-foop.desktop.in.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
@@ -101,13 +104,12 @@ msgstr[0] "%u ponto"
 msgstr[1] "%u pontos"
 
 #: ../src/game-view.vala:444
-#, c-format
 msgid "Game Over!"
-msgstr "Jogo Terminado!"
+msgstr "Jogo terminado!"
 
 #: ../src/swell-foop.vala:79
 msgid "_New Game"
-msgstr "_Novo Jogo"
+msgstr "_Novo jogo"
 
 #: ../src/swell-foop.vala:80
 msgid "_Scores"
@@ -119,7 +121,7 @@ msgstr "_Preferências"
 
 #: ../src/swell-foop.vala:84
 msgid "_Help"
-msgstr "_Ajuda"
+msgstr "A_Juda"
 
 #: ../src/swell-foop.vala:85
 msgid "_About"
@@ -157,7 +159,7 @@ msgstr "Cores"
 
 #: ../src/swell-foop.vala:269
 msgid "Shapes and Colors"
-msgstr "Formas e Cores"
+msgstr "Formas e cores"
 
 #: ../src/swell-foop.vala:402
 msgid ""
@@ -166,10 +168,10 @@ msgid ""
 "\n"
 "Swell Foop is a part of GNOME Games."
 msgstr ""
-"Eu quero jogar aquele jogo!\n"
-"Sabe, eles acendem-se, clica neles e eles desaparecem!\n"
+"Quero jogar este jogo!\n"
+"Sabe, eles acendem-se, clica-se e eles desaparecem!\n"
 "\n"
-"Swell Foop faz parte dos Jogos GNOME."
+"Swell Foop faz parte dos jogos GNOME."
 
 #: ../src/swell-foop.vala:403
 msgid "Copyright © 2009 Tim Horton"
@@ -177,7 +179,9 @@ msgstr "Copyright © 2009 Tim Horton"
 
 #: ../src/swell-foop.vala:409
 msgid "translator-credits"
-msgstr "Duarte Loreto <happyguy_pt@hotmail.com>"
+msgstr ""
+"Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Pedro Albuquerque <palbuquerque73@gmail.com>"
 
 #: ../src/swell-foop.vala:412
 msgid "GNOME Games web site"
@@ -185,7 +189,7 @@ msgstr "Página dos jogos GNOME"
 
 #: ../src/swell-foop.vala:497
 msgid "New Game"
-msgstr "Novo Jogo"
+msgstr "Novo jogo"
 
 #: ../src/swell-foop.vala:512
 msgid "Size:"
@@ -7406,15 +7410,15 @@ msgstr[1] "%u × %u, %u cores"
 #~ "%(move)s White %(piece)s at %1$s takes the black %(victim_piece)s at %2$s "
 #~ "(%(result)s)"
 #~ msgstr ""
-#~ "%(move)s %(piece)s Branco em %1$s toma o %(victim_piece)s Preto em %(end)"
-#~ "s (%(result)s)"
+#~ "%(move)s %(piece)s Branco em %1$s toma o %(victim_piece)s Preto em "
+#~ "%(end)s (%(result)s)"
 
 #~ msgid ""
 #~ "%(move)s Black %(piece)s at %1$s takes the white %(victim_piece)s at %2$s "
 #~ "(%(result)s)"
 #~ msgstr ""
-#~ "%(move)s %(piece)s Preto em %1$s toma o %(victim_piece)s Branco em %(end)"
-#~ "s (%(result)s)"
+#~ "%(move)s %(piece)s Preto em %1$s toma o %(victim_piece)s Branco em "
+#~ "%(end)s (%(result)s)"
 
 #~ msgid "%(move)s White %(piece)s moves from %1$s to %2$s (%(result)s)"
 #~ msgstr "%(move)s %(piece)s Branco é movido de %1$s para %2$s (%(result)s)"
