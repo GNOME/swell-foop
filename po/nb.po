@@ -5,10 +5,10 @@
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: fell-swoop 3.15.x\n"
+"Project-Id-Version: fell-swoop 3.18.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-10 17:59+0100\n"
-"PO-Revision-Date: 2015-02-10 17:59+0100\n"
+"POT-Creation-Date: 2015-10-19 19:21+0200\n"
+"PO-Revision-Date: 2015-10-19 19:24+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -47,7 +47,7 @@ msgstr "Er dette første kjøring"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr ""
+msgstr "Innstilling som bestemmer hvorvidt en dialog skal vises ved første kjøring."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
@@ -91,7 +91,7 @@ msgstr "Operasjon"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
 #: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -107,13 +107,13 @@ msgid ""
 "causing other squares to fall into place. It is not possible to remove a "
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
-msgstr ""
+msgstr "Fjern så mange ruter som mulig fra brettet. Klikk på en gruppe av ruter med samme farge for å få dem alle til å forsvinne på et blunk, for så å la andre ruter falle på plass. Det er ikke mulig å fjerne en enkel rute for seg selv. Du får mange flere poeng ved å fjerne en større gruppe med ruter, og selvfølgelig også for å tømme hele brettet."
 
 #: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
-msgstr ""
+msgstr "Swell Foop er alltid et veldig raskt spill, men du kan få det til å vare lenger ved å endre størrelse på brettet."
 
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
@@ -194,36 +194,36 @@ msgstr "_Hjelp"
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/swell-foop.vala:154
+#: ../src/swell-foop.vala:152
 msgid "Start a new game"
 msgstr "Start et nytt spill"
 
-#: ../src/swell-foop.vala:183
+#: ../src/swell-foop.vala:180
 msgid "Small"
 msgstr "Liten"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:181
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:182
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/swell-foop.vala:261
+#: ../src/swell-foop.vala:258
 #, c-format
 msgid "Score: %u"
 msgstr "Poeng: %u"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:317
 msgid "Colors"
 msgstr "Farger"
 
-#: ../src/swell-foop.vala:324
+#: ../src/swell-foop.vala:321
 msgid "Shapes and Colors"
 msgstr "Former og farger"
 
-#: ../src/swell-foop.vala:458
+#: ../src/swell-foop.vala:455
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -231,25 +231,25 @@ msgstr ""
 "Jeg vil spille dette spillet!\n"
 "Du vet, det hvor alle lyser opp og du klikker på dem så forsvinner de!"
 
-#: ../src/swell-foop.vala:459
+#: ../src/swell-foop.vala:456
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Opphavsrett © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:464
+#: ../src/swell-foop.vala:461
 msgid "translator-credits"
 msgstr ""
 "Kjartan Maraas <kmaraas@gnome.org>\n"
 "Espen Stefansen <espens@svn.gnome.org>\n"
 "Torstein Adolf Winterseth <kvikende@fsfe.org>"
 
-#: ../src/swell-foop.vala:497
+#: ../src/swell-foop.vala:494
 msgid "Abandon this game to start a new one?"
 msgstr "Forlat dette spillet for å starte et nytt?"
 
-#: ../src/swell-foop.vala:498
+#: ../src/swell-foop.vala:495
 msgid "_Cancel"
 msgstr "A_vbryt"
 
-#: ../src/swell-foop.vala:499
+#: ../src/swell-foop.vala:496
 msgid "_New Game"
 msgstr "_Nytt spill"
