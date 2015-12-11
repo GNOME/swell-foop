@@ -23,6 +23,13 @@
   <screenshot type="default" width="750" height="547">https://people.gnome.org/~mcatanzaro/swell-foop.png</screenshot>
  </screenshots>
  <url type="homepage">https://wiki.gnome.org/Apps/Swell%20Foop</url>
- <updatecontact>games_list_at_gnome.org</updatecontact>
+ <updatecontact>mcatanzaro_at_gnome.org</updatecontact>
  <project_group>GNOME</project_group>
+ <kudos>
+  <kudo>AppMenu</kudo>
+  <kudo>HiDpiIcon</kudo>
+  <kudo>HighContrast</kudo>
+  <kudo>ModernToolkit</kudo>
+  <kudo>UserDocs</kudo>
+ </kudos>
 </application>
