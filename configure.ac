@@ -1,10 +1,11 @@
 AC_PREREQ([2.63])
 AC_INIT([Swell Foop], [3.19.3], [https://bugzilla.gnome.org/],
         [swell-foop], [https://wiki.gnome.org/Apps/Swell%20Foop])
+AC_CONFIG_MACRO_DIR([m4])
+
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])
 AM_MAINTAINER_MODE
-GNOME_MAINTAINER_MODE_DEFINES
 
 AM_PROG_VALAC([0.22])
 AM_PROG_CC_C_O
