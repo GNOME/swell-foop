@@ -1,3 +1,10 @@
+Swell Foop 3.19.4
+==================
+
+* Updated translations
+* Stop using deprecated gnome-common
+* Add pre-commit and pre-applypatch hooks
+
 Swell Foop 3.19.3
 ==================
 
