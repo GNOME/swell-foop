@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-15 16:20+0100\n"
-"PO-Revision-Date: 2015-03-15 15:55+0100\n"
+"POT-Creation-Date: 2016-02-07 16:45+0100\n"
+"PO-Revision-Date: 2016-02-04 19:09+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -102,7 +102,7 @@ msgstr "Operation"
 # Yuck!  Der er folk der kritiserer the GIMP for at have valgt et dårligt navn...
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
 #: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -160,7 +160,7 @@ msgstr "Nyt spil"
 
 #: ../src/score-dialog.vala:32
 msgid "_OK"
-msgstr "_O.k."
+msgstr "_OK"
 
 #: ../src/score-dialog.vala:44
 msgid "Size:"
@@ -213,36 +213,36 @@ msgstr "_Hjælp"
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/swell-foop.vala:154
+#: ../src/swell-foop.vala:152
 msgid "Start a new game"
 msgstr "Start et nyt spil"
 
-#: ../src/swell-foop.vala:183
+#: ../src/swell-foop.vala:180
 msgid "Small"
 msgstr "Lille"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:181
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:182
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/swell-foop.vala:261
+#: ../src/swell-foop.vala:258
 #, c-format
 msgid "Score: %u"
 msgstr "Stilling: %u"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:317
 msgid "Colors"
 msgstr "Farver"
 
-#: ../src/swell-foop.vala:324
+#: ../src/swell-foop.vala:321
 msgid "Shapes and Colors"
 msgstr "Former og farver"
 
-#: ../src/swell-foop.vala:458
+#: ../src/swell-foop.vala:455
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -250,11 +250,11 @@ msgstr ""
 "Jeg vil spille det der spil!\n"
 "Du ved, de lyser op, du klikker på dem og de forsvinder!"
 
-#: ../src/swell-foop.vala:459
+#: ../src/swell-foop.vala:456
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Ophavsret © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:464
+#: ../src/swell-foop.vala:461
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -267,15 +267,15 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/swell-foop.vala:497
+#: ../src/swell-foop.vala:494
 msgid "Abandon this game to start a new one?"
 msgstr "Forkast dette spil for at starte et nyt?"
 
-#: ../src/swell-foop.vala:498
+#: ../src/swell-foop.vala:495
 msgid "_Cancel"
 msgstr "_Annullér"
 
-#: ../src/swell-foop.vala:499
+#: ../src/swell-foop.vala:496
 msgid "_New Game"
 msgstr "_Nyt spil"
 
