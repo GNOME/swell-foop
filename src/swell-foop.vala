@@ -50,7 +50,7 @@ public class SwellFoop : Gtk.Application
     /* Constructor */
     public SwellFoop ()
     {
-        Object (application_id: "org.gnome.swell-foop", flags: ApplicationFlags.FLAGS_NONE);
+        Object (application_id: "org.gnome.SwellFoop", flags: ApplicationFlags.FLAGS_NONE);
     }
 
     private void load_css ()
