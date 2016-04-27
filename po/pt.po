@@ -5,22 +5,23 @@
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
 # 
 # Pedro Albuquerque <palbuquerque73@openmailbox.com>, 2015.
+# Sérgio Cardeira <cardeira.sergio@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.12\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-07 23:41+0000\n"
-"PO-Revision-Date: 2015-06-26 09:10+0100\n"
-"Last-Translator: Pedro Albuquerque <palbuquerque73@openmailbox.com>\n"
-"Language-Team: Português <palbuquerque73@openmailbox.com>\n"
+"POT-Creation-Date: 2016-02-21 14:47+0000\n"
+"PO-Revision-Date: 2016-02-22 01:07-0100\n"
+"Last-Translator: Sérgio Cardeira <cardeira.sergio@gmail.com>\n"
+"Language-Team: Português <gnome_pt@yahoogroups.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -89,7 +90,7 @@ msgstr "Aparência"
 
 #: ../data/preferences.ui.h:7
 msgid "_Zealous Animation"
-msgstr "Animação _Cuidada"
+msgstr "Animação _cuidada"
 
 #: ../data/preferences.ui.h:8
 msgid "Operation"
@@ -97,7 +98,7 @@ msgstr "Operação"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
 #: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -175,7 +176,6 @@ msgstr[0] "%u × %u, %u cor"
 msgstr[1] "%u × %u, %u cores"
 
 #: ../src/swell-foop.vala:79
-#| msgid "Swell Foop"
 msgid "Welcome to Swell Foop"
 msgstr "Boas vindas ao Swell Foop"
 
@@ -201,47 +201,42 @@ msgstr "_Preferências"
 
 #: ../src/swell-foop.vala:137
 msgid "_Help"
-msgstr "A_Juda"
+msgstr "A_juda"
 
 #: ../src/swell-foop.vala:138
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../src/swell-foop.vala:154
+#: ../src/swell-foop.vala:152
 msgid "Start a new game"
 msgstr "Iniciar um novo jogo"
 
-#: ../src/swell-foop.vala:183
+#: ../src/swell-foop.vala:180
 msgid "Small"
 msgstr "Pequeno"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:181
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:182
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/swell-foop.vala:261
+#: ../src/swell-foop.vala:258
 #, c-format
 msgid "Score: %u"
 msgstr "Pontuação: %u"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:317
 msgid "Colors"
 msgstr "Cores"
 
-#: ../src/swell-foop.vala:324
+#: ../src/swell-foop.vala:321
 msgid "Shapes and Colors"
 msgstr "Formas e cores"
 
-#: ../src/swell-foop.vala:458
-#| msgid ""
-#| "I want to play that game!\n"
-#| "You know, they all light-up and you click on them and they vanish!\n"
-#| "\n"
-#| "Swell Foop is a part of GNOME Games."
+#: ../src/swell-foop.vala:455
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -251,25 +246,25 @@ msgstr ""
 "\n"
 "Swell Foop faz parte dos jogos GNOME."
 
-#: ../src/swell-foop.vala:459
+#: ../src/swell-foop.vala:456
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:464
+#: ../src/swell-foop.vala:461
 msgid "translator-credits"
 msgstr ""
 "Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Pedro Albuquerque <palbuquerque73@gmail.com>"
 
-#: ../src/swell-foop.vala:497
+#: ../src/swell-foop.vala:494
 msgid "Abandon this game to start a new one?"
 msgstr "Abandonar este jogo para iniciar um novo?"
 
-#: ../src/swell-foop.vala:498
+#: ../src/swell-foop.vala:495
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: ../src/swell-foop.vala:499
+#: ../src/swell-foop.vala:496
 msgid "_New Game"
 msgstr "_Novo jogo"
 
