@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-22 11:52+0000\n"
-"PO-Revision-Date: 2015-02-22 17:08+0100\n"
+"POT-Creation-Date: 2016-08-13 20:37+0000\n"
+"PO-Revision-Date: 2016-08-15 10:07+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -53,8 +53,8 @@ msgstr "Toto je prvé spustenie"
 #: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
-"Nastavenie, ktoré rozhoduje, či sa majú alebo nemajú zobraziť pomocné dialógové okná "
-"ako po prvom spustení."
+"Nastavenie, ktoré rozhoduje, či sa majú alebo nemajú zobraziť pomocné "
+"dialógové okná ako po prvom spustení."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
@@ -99,8 +99,8 @@ msgid "Operation"
 msgstr "Prevádzka"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145 ../src/swell-foop.vala:455
-#: ../src/swell-foop.vala:537
+#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
+#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -110,25 +110,29 @@ msgstr "Vyčistite obrazovku odstraňovaním skupín farebných a tvarovaných p
 
 #: ../data/swell-foop.appdata.xml.in.h:3
 msgid ""
-"Remove as many squares as possible from the board. Click on a group of squares of "
-"the same color to make them all disappear in one fell swoop, causing other squares "
-"to fall into place. It is not possible to remove a single square at a time. You get "
-"far more points for clearing a larger group of squares, and also for clearing the "
-"entire board."
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
 msgstr ""
-"Odstráňte jednou ranou čo najviac polí z hracej plochy. Kliknutie na skupinu polí "
-"rovnakej farby odstráni naraz všetky tieto polia a ostatné polia spadnú do voľného "
-"priestoru. Samostatné pole nie je možné odstrániť. Čím väčšiu skupinu polí "
-"odstránite, tým viac bodov dostanete, body získate aj pri vyčistení celej hracej "
-"plochy."
+"Odstráňte jednou ranou čo najviac polí z hracej plochy. Kliknutie na skupinu "
+"polí rovnakej farby odstráni naraz všetky tieto polia a ostatné polia spadnú "
+"do voľného priestoru. Samostatné pole nie je možné odstrániť. Čím väčšiu "
+"skupinu polí odstránite, tým viac bodov dostanete, body získate aj pri "
+"vyčistení celej hracej plochy."
 
 #: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer by "
-"changing the board size."
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
 msgstr ""
-"Swell Foop je veľmi rýchla hra, ale hranie si môžete predĺžiť zmenou veľkosti hracej "
-"plochy."
+"Swell Foop je veľmi rýchla hra, ale hranie si môžete predĺžiť zmenou "
+"veľkosti hracej plochy."
+
+#: ../data/swell-foop.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
 
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
@@ -211,50 +215,51 @@ msgstr "_Pomocník"
 msgid "_About"
 msgstr "_O programe"
 
-#: ../src/swell-foop.vala:154
+#: ../src/swell-foop.vala:152
 msgid "Start a new game"
 msgstr "Začať novú hru"
 
-#: ../src/swell-foop.vala:183
+#: ../src/swell-foop.vala:180
 msgid "Small"
 msgstr "Malá"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:181
 msgid "Normal"
 msgstr "Normálna"
 
 # veľkosť hracej plochy
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:182
 msgid "Large"
 msgstr "Veľká"
 
-#: ../src/swell-foop.vala:261
+#: ../src/swell-foop.vala:258
 #, c-format
 msgid "Score: %u"
 msgstr "Skóre: %u"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:317
 msgid "Colors"
 msgstr "Farby"
 
-#: ../src/swell-foop.vala:324
+#: ../src/swell-foop.vala:321
 msgid "Shapes and Colors"
 msgstr "Tvary a farby"
 
-#: ../src/swell-foop.vala:458
+#: ../src/swell-foop.vala:455
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
 "Túto hru si zamilujete!\n"
-"Stačí nájsť veľa rovnakých kameňov pokope, a keď na jeden kliknete, všetky zmiznú!"
+"Stačí nájsť veľa rovnakých kameňov pokope, a keď na jeden kliknete, všetky "
+"zmiznú!"
 
 # PŠ: ja by som to neprekladal
-#: ../src/swell-foop.vala:459
+#: ../src/swell-foop.vala:456
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Autorské práva © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:464
+#: ../src/swell-foop.vala:461
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
@@ -263,15 +268,15 @@ msgstr ""
 "Ján Kyselica <kyselica.jan@gmail.com>\n"
 "Dušan Kazik <prescott66@gmail.com>"
 
-#: ../src/swell-foop.vala:497
+#: ../src/swell-foop.vala:494
 msgid "Abandon this game to start a new one?"
 msgstr "Chcete vzdať túto hru a začať novú hru?"
 
-#: ../src/swell-foop.vala:498
+#: ../src/swell-foop.vala:495
 msgid "_Cancel"
 msgstr "_Zrušiť"
 
-#: ../src/swell-foop.vala:499
+#: ../src/swell-foop.vala:496
 msgid "_New Game"
 msgstr "_Nová hra"
 
