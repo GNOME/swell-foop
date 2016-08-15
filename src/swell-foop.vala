@@ -88,8 +88,13 @@ public class SwellFoop : Gtk.Application
         play_button.valign = Gtk.Align.CENTER;
         play_button.halign = Gtk.Align.CENTER;
         play_button.clicked.connect (() => {
-            stack.set_transition_type (Gtk.StackTransitionType.SLIDE_UP);
-            stack.set_transition_duration (500);
+            /* FIXME: Currently, on Wayland, the game frame is displayed outside
+             * the window if there's a transition set. Uncomment these 2 lines
+             * when that's no longer a problem.
+             *
+             * stack.set_transition_type (Gtk.StackTransitionType.SLIDE_UP);
+             * stack.set_transition_duration (500);
+             */
             stack.set_visible_child_name ("game");
             settings.set_boolean ("first-run", false);
         });
