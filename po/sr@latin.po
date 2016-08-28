@@ -1,21 +1,21 @@
 # Serbian translation of gnome-games
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2015.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2016.
 # This file is distributed under the same license as the gnome-games package.
 # Dušan Marjanović <madafaka@bsd.org.yu>
 # Igor Nestorović <igor@prevod.org>, 2005.
 # Branko Kokanović <branko.kokanovic@gmail.com>, 2010.
 # Miloš Popović <gpopac@gmai, 2010.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011—2015.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011—2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnomove igre\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-03-04 11:58+0000\n"
-"PO-Revision-Date: 2015-03-04 19:14+0200\n"
+"POT-Creation-Date: 2016-08-13 20:37+0000\n"
+"PO-Revision-Date: 2016-08-28 11:31+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <gnom@prevod.org>\n"
-"Language: sr@latin\n"
+"Language-Team: srpski <gnome-sr@googlegroups.org>\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,7 +99,7 @@ msgstr "Radnja"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
 #: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
 msgid "Swell Foop"
 msgstr "Lančana reakcija"
 
@@ -128,6 +128,10 @@ msgid ""
 msgstr ""
 "Lančana reakcija se brzo odigra u nekoliko poteza, ali vi možete malo da "
 "odužite igru menjanjem veličine table."
+
+#: ../data/swell-foop.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Gnomov projekat"
 
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
@@ -181,7 +185,6 @@ msgstr[2] "%u × %u, %u boja"
 msgstr[3] "%u × %u, %u boja"
 
 #: ../src/swell-foop.vala:79
-#| msgid "Swell Foop"
 msgid "Welcome to Swell Foop"
 msgstr "Dobro došli u lančanu reakciju"
 
@@ -213,41 +216,36 @@ msgstr "Po_moć"
 msgid "_About"
 msgstr "_O programu"
 
-#: ../src/swell-foop.vala:154
+#: ../src/swell-foop.vala:152
 msgid "Start a new game"
 msgstr "Započnite novu igru"
 
-#: ../src/swell-foop.vala:183
+#: ../src/swell-foop.vala:180
 msgid "Small"
 msgstr "Mala"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:181
 msgid "Normal"
 msgstr "Normalna"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:182
 msgid "Large"
 msgstr "Velika"
 
-#: ../src/swell-foop.vala:261
+#: ../src/swell-foop.vala:258
 #, c-format
 msgid "Score: %u"
 msgstr "Razultat: %u"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:317
 msgid "Colors"
 msgstr "Boje"
 
-#: ../src/swell-foop.vala:324
+#: ../src/swell-foop.vala:321
 msgid "Shapes and Colors"
 msgstr "Oblici i boje"
 
-#: ../src/swell-foop.vala:458
-#| msgid ""
-#| "I want to play that game!\n"
-#| "You know, they all light-up and you click on them and they vanish!\n"
-#| "\n"
-#| "Swell Foop is a part of GNOME Games."
+#: ../src/swell-foop.vala:455
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -255,11 +253,11 @@ msgstr ""
 "Želim da igram tu igru!\n"
 "Znate, svi se oni upale i vi kliknete na njih i oni nestanu!"
 
-#: ../src/swell-foop.vala:459
+#: ../src/swell-foop.vala:456
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Autorska prava © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:464
+#: ../src/swell-foop.vala:461
 msgid "translator-credits"
 msgstr ""
 "Dušan Marjanović <madafaka@root.co.yu>\n"
@@ -269,15 +267,15 @@ msgstr ""
 "\n"
 "http://prevod.org — prevod na srpski jezik"
 
-#: ../src/swell-foop.vala:497
+#: ../src/swell-foop.vala:494
 msgid "Abandon this game to start a new one?"
 msgstr "Da napustim ovu igru i da započnem novu?"
 
-#: ../src/swell-foop.vala:498
+#: ../src/swell-foop.vala:495
 msgid "_Cancel"
 msgstr "_Otkaži"
 
-#: ../src/swell-foop.vala:499
+#: ../src/swell-foop.vala:496
 msgid "_New Game"
 msgstr "_Nova igra"
 
