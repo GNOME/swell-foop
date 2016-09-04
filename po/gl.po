@@ -10,22 +10,21 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015.
-#
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-02 00:05+0100\n"
-"PO-Revision-Date: 2015-03-02 00:07+0100\n"
+"POT-Creation-Date: 2016-09-05 00:13+0200\n"
+"PO-Revision-Date: 2016-09-05 00:13+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Galician <>\n"
+"Language-Team: Galician\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
@@ -102,8 +101,8 @@ msgid "Operation"
 msgstr "Operación"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -134,6 +133,10 @@ msgstr ""
 "Swell Foop é sempre moi rápido para xogar, pero pode facer que dure máis "
 "cambiando o tamaño do taboleiro."
 
+#: ../data/swell-foop.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "O Proxecto GNOME"
+
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "xogo;lóxica;taboleiro;mesmo;coincidencia;"
@@ -150,7 +153,7 @@ msgstr[1] "%u puntos"
 msgid "Game Over!"
 msgstr "Fin da partida!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
 msgid "_Quit"
 msgstr "_Saír"
 
@@ -197,52 +200,52 @@ msgstr ""
 msgid "Let's _Play"
 msgstr "Xogu_emos"
 
-#: ../src/swell-foop.vala:133
+#: ../src/swell-foop.vala:138
 msgid "_Scores"
 msgstr "_Puntuacións"
 
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:139
 msgid "_Preferences"
 msgstr "_Preferencias"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:142
 msgid "_Help"
 msgstr "_Axuda"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:143
 msgid "_About"
 msgstr "So_bre"
 
-#: ../src/swell-foop.vala:154
+#: ../src/swell-foop.vala:157
 msgid "Start a new game"
 msgstr "Comezar un xogo novo"
 
-#: ../src/swell-foop.vala:183
+#: ../src/swell-foop.vala:185
 msgid "Small"
 msgstr "Pequeno"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:186
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:187
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/swell-foop.vala:261
+#: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "Puntuación: %u"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:322
 msgid "Colors"
 msgstr "Cores"
 
-#: ../src/swell-foop.vala:324
+#: ../src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "Formas e cores"
 
-#: ../src/swell-foop.vala:458
+#: ../src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -250,11 +253,11 @@ msgstr ""
 "Quero xogar a ese xogo. \n"
 "Xa sabes, todos acéndense e premes neles e desaparecen!"
 
-#: ../src/swell-foop.vala:459
+#: ../src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:464
+#: ../src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr ""
 "Fran Diéguez <frandieguez@ubuntu.com>, 2009-2014;\n"
@@ -270,15 +273,15 @@ msgstr ""
 "Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas\n"
 "colaborar connosco, podes atopar máis información en http://www.trasno.net"
 
-#: ../src/swell-foop.vala:497
+#: ../src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "Quere abandonar esta partida antes de comezar unha nova?"
 
-#: ../src/swell-foop.vala:498
+#: ../src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: ../src/swell-foop.vala:499
+#: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "Xogo _novo"
 
