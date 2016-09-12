@@ -7,15 +7,15 @@
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2015.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2016.
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-07 16:45+0100\n"
-"PO-Revision-Date: 2016-02-04 19:09+0100\n"
+"POT-Creation-Date: 2016-09-12 02:13+0200\n"
+"PO-Revision-Date: 2016-09-08 02:48+0200\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -101,8 +101,8 @@ msgstr "Operation"
 
 # Yuck!  Der er folk der kritiserer the GIMP for at have valgt et dårligt navn...
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -134,6 +134,10 @@ msgstr ""
 "Swell Foop er altid meget hurtigt at spille, men du kan få det til at vare "
 "lidt længere ved at ændre brætstørrelse."
 
+#: ../data/swell-foop.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME-projektet"
+
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "spil;logik;bræt;samme;matching;match;"
@@ -150,7 +154,7 @@ msgstr[1] "%u point"
 msgid "Game Over!"
 msgstr "Spillet er slut!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
 msgid "_Quit"
 msgstr "_Afslut"
 
@@ -197,52 +201,52 @@ msgstr ""
 msgid "Let's _Play"
 msgstr "Lad os _spille"
 
-#: ../src/swell-foop.vala:133
+#: ../src/swell-foop.vala:138
 msgid "_Scores"
 msgstr "_Resultater"
 
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:139
 msgid "_Preferences"
 msgstr "_Indstillinger"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:142
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:143
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/swell-foop.vala:152
+#: ../src/swell-foop.vala:157
 msgid "Start a new game"
 msgstr "Start et nyt spil"
 
-#: ../src/swell-foop.vala:180
+#: ../src/swell-foop.vala:185
 msgid "Small"
 msgstr "Lille"
 
-#: ../src/swell-foop.vala:181
+#: ../src/swell-foop.vala:186
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:182
+#: ../src/swell-foop.vala:187
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/swell-foop.vala:258
+#: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "Stilling: %u"
 
-#: ../src/swell-foop.vala:317
+#: ../src/swell-foop.vala:322
 msgid "Colors"
 msgstr "Farver"
 
-#: ../src/swell-foop.vala:321
+#: ../src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "Former og farver"
 
-#: ../src/swell-foop.vala:455
+#: ../src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -250,11 +254,11 @@ msgstr ""
 "Jeg vil spille det der spil!\n"
 "Du ved, de lyser op, du klikker på dem og de forsvinder!"
 
-#: ../src/swell-foop.vala:456
+#: ../src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Ophavsret © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:461
+#: ../src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -267,15 +271,15 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/swell-foop.vala:494
+#: ../src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "Forkast dette spil for at starte et nyt?"
 
-#: ../src/swell-foop.vala:495
+#: ../src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "_Annullér"
 
-#: ../src/swell-foop.vala:496
+#: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Nyt spil"
 
