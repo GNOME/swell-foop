@@ -6,15 +6,15 @@
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2006.
 # Danial Behzadi <dani.behzi@gmail.com>, 2012.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:12+0000\n"
-"PO-Revision-Date: 2013-03-23 12:06+0330\n"
+"POT-Creation-Date: 2016-08-13 20:37+0000\n"
+"PO-Revision-Date: 2016-09-13 23:47+0430\n"
 "Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -23,45 +23,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.9\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "تم مورد استفاده"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "عنوان تم کاشی مورد استفاده."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "اندازه‌ی صفحه"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "اندازه‌ی صفحه‌ی بازی."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "شمارش رنگ صفحه"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "تعداد رنگ‌های کاشی‌ها مورد استفاده در بازی."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
+msgid "Is this the first run"
+msgstr "آیا این اجرا اول است"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr ""
+"تنظیماتی برای اینکه آیا محاوره راهنمای اجرا اول بازی نمایش داده شود یا خیر."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
 msgstr "پویانمایی زیبا"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:10
 msgid "Use more flashy, but slower, animations."
 msgstr "استفاده از پویانمایی پر زرق و برق، ولی آهسته‌تر"
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:57 ../src/swell-foop.vala:388
-#: ../src/swell-foop.vala:451
-msgid "Swell Foop"
-msgstr "سوئل‌فوپ"
+#: ../data/preferences.ui.h:1
+msgid "Preferences"
+msgstr "ترجیحات"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -91,127 +98,180 @@ msgstr "پویانمایی _زیبا"
 msgid "Operation"
 msgstr "عملیات"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
+#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145 ../src/swell-foop.vala:452
+#: ../src/swell-foop.vala:534
+msgid "Swell Foop"
+msgstr "سوئل‌فوپ"
+
+#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "پاک سازی صفحه با برداشتن گروه‌هایی از کاشی‌های رنگی و طرح‌دار"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.appdata.xml.in.h:3
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of squares "
+"of the same color to make them all disappear in one fell swoop, causing other "
+"squares to fall into place. It is not possible to remove a single square at a "
+"time. You get far more points for clearing a larger group of squares, and also "
+"for clearing the entire board."
+msgstr ""
+"هر تعداد خانه از تخته را که می‌توانید خالی کنید.بر روی یک گروه از خانه‌های هم رنگ "
+"کلیک کنید و همه را با هم در یک حرکت پاک کنید، تا خانه‌های دیگر جای آنها را پر "
+"کنند. امکان اینکه یک خانه را خالی کنید وجود ندارد. شما برای خالی کردن گروه‌های "
+"بزرگتر، امتیاز بسیار بیشتری می‌گیرید، همچنین بابت خالی کردن کل تخته."
+
+#: ../data/swell-foop.appdata.xml.in.h:4
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer by "
+"changing the board size."
+msgstr ""
+"سوئل‌فلوپ همیشه بازی بسیار سریعی است، اما شما همیشه می‌توانید با تغییر اندازه تخته "
+"بازی، آن را طولانی‌تر کنید."
+
+#: ../data/swell-foop.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "پروژه گنوم"
+
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
-msgstr "بازی;منطق;تخته;مشابه;تطبیق;"
+msgstr "game;logic;board;same;matching;بازی;منطق;تخته;مشابه;تطبیق;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:433
+#: ../src/game-view.vala:472
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%Iu امتیازات"
 msgstr[1] "%Iu امتیازات"
 
-#: ../src/game-view.vala:434
-#, c-format
+#: ../src/game-view.vala:473
 msgid "Game Over!"
 msgstr "بازی تمام شد!"
 
-#: ../src/swell-foop.vala:69
-msgid "_New Game"
-msgstr "بازی _جدید"
-
-#: ../src/swell-foop.vala:70
-msgid "_Scores"
-msgstr "امتیا_زها"
-
-#: ../src/swell-foop.vala:71
-msgid "_Preferences"
-msgstr "_ترجیحات"
-
-#: ../src/swell-foop.vala:74
-msgid "_Help"
-msgstr "_راهنما"
-
-#: ../src/swell-foop.vala:75
-msgid "_About"
-msgstr "_درباره"
-
-#: ../src/swell-foop.vala:78
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
 msgid "_Quit"
 msgstr "_خروج"
 
-#: ../src/swell-foop.vala:125
-msgid "Small"
-msgstr "کوچک"
-
-#: ../src/swell-foop.vala:126
-msgid "Normal"
-msgstr "معمولی"
-
-#: ../src/swell-foop.vala:127
-msgid "Large"
-msgstr "بزرگ"
-
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:203
-#, c-format
-msgid "Score: %4u "
-msgstr "امتیاز: %4u "
-
-#: ../src/swell-foop.vala:254
-msgid "Colors"
-msgstr "رنگ‌ها"
-
-#: ../src/swell-foop.vala:258
-msgid "Shapes and Colors"
-msgstr "طرح‌ها و رنگ‌ها"
-
-#: ../src/swell-foop.vala:391
-msgid ""
-"I want to play that game! You know, they all light-up and you click on them "
-"and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
-msgstr ""
-"من می‌خوام آن بازی را انجام دهم! می‌دانی، آن‌ها همه روشن می‌شوند و تو رویشان "
-"کلیک می‌کنی و آن‌ها ناپدید می‌شوند!\n"
-"\n"
-"سوئل‌فوپ جزیی از بازی‌های گنوم است."
-
-#: ../src/swell-foop.vala:392
-msgid "Copyright © 2009 Tim Horton"
-msgstr "حق رونوشت © ۲۰۰۹ تیم هورتون"
-
-#: ../src/swell-foop.vala:398
-msgid "translator-credits"
-msgstr ""
-"دانیال بهزادی <dani.behzi@gmail.com>\n"
-"آرش موسوی <mousavi.arash@gmail.com>"
-
-#: ../src/swell-foop.vala:401
-msgid "GNOME Games web site"
-msgstr "وب‌سایت بازی‌های گنوم"
-
-#: ../src/swell-foop.vala:486
+#: ../src/score-dialog.vala:29
 msgid "New Game"
 msgstr "بازی جدید"
 
-#: ../src/swell-foop.vala:501
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_تایید"
+
+#: ../src/score-dialog.vala:44
 msgid "Size:"
 msgstr "اندازه:"
 
-#: ../src/swell-foop.vala:526
+#: ../src/score-dialog.vala:69
 msgid "Date"
 msgstr "تاریخ"
 
-#: ../src/swell-foop.vala:529
-#| msgctxt "score-dialog"
-#| msgid "Score"
+#: ../src/score-dialog.vala:72
 msgid "Score"
 msgstr "امتیاز"
 
-#: ../src/swell-foop.vala:609
+#: ../src/score-dialog.vala:166
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] "%Iu × %Iu, %Iu رنگ"
 msgstr[1] "%Iu × %Iu, %Iu رنگ"
+
+#: ../src/swell-foop.vala:79
+msgid "Welcome to Swell Foop"
+msgstr "به سوئل‌فوپ خوش‌آمدید"
+
+#: ../src/swell-foop.vala:82
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"هر تعداد خانه‌ای که می‌توانید را خالی کنید. کلیک‌های کمتر به معنی امتیاز بیشتر است."
+
+#: ../src/swell-foop.vala:85
+msgid "Let's _Play"
+msgstr "بریم _بازی"
+
+#: ../src/swell-foop.vala:133
+msgid "_Scores"
+msgstr "امتیا_زها"
+
+#: ../src/swell-foop.vala:134
+msgid "_Preferences"
+msgstr "_ترجیحات"
+
+#: ../src/swell-foop.vala:137
+msgid "_Help"
+msgstr "_راهنما"
+
+#: ../src/swell-foop.vala:138
+msgid "_About"
+msgstr "_درباره"
+
+#: ../src/swell-foop.vala:152
+msgid "Start a new game"
+msgstr "شروع بازی جدید"
+
+#: ../src/swell-foop.vala:180
+msgid "Small"
+msgstr "کوچک"
+
+#: ../src/swell-foop.vala:181
+msgid "Normal"
+msgstr "معمولی"
+
+#: ../src/swell-foop.vala:182
+msgid "Large"
+msgstr "بزرگ"
+
+#: ../src/swell-foop.vala:258
+#, c-format
+msgid "Score: %u"
+msgstr "امتیاز: %Iu"
+
+#: ../src/swell-foop.vala:317
+msgid "Colors"
+msgstr "رنگ‌ها"
+
+#: ../src/swell-foop.vala:321
+msgid "Shapes and Colors"
+msgstr "طرح‌ها و رنگ‌ها"
+
+#: ../src/swell-foop.vala:455
+msgid ""
+"I want to play that game!\n"
+"You know, they all light-up and you click on them and they vanish!"
+msgstr ""
+"من می‌خوام آن بازی را انجام دهم!\n"
+"می‌دانی، آن‌ها همه روشن می‌شوند و تو رویشان کلیک می‌کنی و همه ناپدید می‌شوند!"
+
+#: ../src/swell-foop.vala:456
+msgid "Copyright © 2009 Tim Horton"
+msgstr "حق رونوشت © ۲۰۰۹ تیم هورتون"
+
+#: ../src/swell-foop.vala:461
+msgid "translator-credits"
+msgstr ""
+"آرش موسوی <mousavi.arash@gmail.com>\n"
+"دانیال بهزادی <dani.behzi@gmail.com>"
+
+#: ../src/swell-foop.vala:494
+msgid "Abandon this game to start a new one?"
+msgstr "این بازی را برای شروع بازی دیگری ترک می‌کنید؟"
+
+#: ../src/swell-foop.vala:495
+msgid "_Cancel"
+msgstr "_لغو"
+
+#: ../src/swell-foop.vala:496
+msgid "_New Game"
+msgstr "بازی _جدید"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "وب‌سایت بازی‌های گنوم"
 
 #~ msgid "Chess"
 #~ msgstr "شطرنج"
@@ -236,9 +296,6 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 
 #~ msgid "_Contents"
 #~ msgstr "م_حتویات"
-
-#~ msgid "Start a new game"
-#~ msgstr "شروع بازی جدید"
 
 #~ msgid "Undo Move"
 #~ msgstr "_برگردان حرکت"
@@ -279,11 +336,9 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid "The piece to promote pawns to"
 #~ msgstr "ارتقای سربازان به مهره"
 
-#~ msgid ""
-#~ "The piece to promote to when a human player moves a pawn to the far rank"
+#~ msgid "The piece to promote to when a human player moves a pawn to the far rank"
 #~ msgstr ""
-#~ "مهره‌ای که سربازان بازیکن انسان هنگام رسیدن به ردیف آخر بدان ارتقا پیدا "
-#~ "می‌کند"
+#~ "مهره‌ای که سربازان بازیکن انسان هنگام رسیدن به ردیف آخر بدان ارتقا پیدا می‌کند"
 
 #~ msgid "A flag to enable 3D mode"
 #~ msgstr "پرچمی برای فعال کردن حالت سه‌بعدی"
@@ -336,9 +391,6 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 
 #~ msgid "Difficulty of the opponent chess engine"
 #~ msgstr "شختی موتور شطرنج رقیب"
-
-#~ msgid "Preferences"
-#~ msgstr "ترجیحات"
 
 #~ msgid "Play as:"
 #~ msgstr "بازی به عنوان:"
@@ -734,8 +786,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid "Opponent has run out of time"
 #~ msgstr "زمان رقیب تمام شد"
 
-#~ msgid ""
-#~ "The same board state has occurred three times (three fold repetition)"
+#~ msgid "The same board state has occurred three times (three fold repetition)"
 #~ msgstr "وضعیت مشابه صفحه سه بار اتفاق افتاد"
 
 #~ msgid "Neither player can cause checkmate (insufficient material)"
@@ -752,9 +803,6 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 
 #~ msgid "One of the players has died"
 #~ msgstr "یکی از بازیکنان مُرد!"
-
-#~ msgid "Save this game before starting a new one?"
-#~ msgstr "پیش از شروع بازی جدید، این بازی دخیره شود؟"
 
 #~ msgid "_Abandon game"
 #~ msgstr "_ترک کردن بازی"
@@ -810,10 +858,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[FILE] - بازی شطرنج"
 
-#~ msgid ""
-#~ "Run '%s --help' to see a full list of available command line options."
-#~ msgstr ""
-#~ "برای دیدن لیست کامل انتخاب‌های خط فرمان موجود «%s --help» را اجرا کنید."
+#~ msgid "Run '%s --help' to see a full list of available command line options."
+#~ msgstr "برای دیدن لیست کامل انتخاب‌های خط فرمان موجود «%s --help» را اجرا کنید."
 
 #~ msgid "Five or More"
 #~ msgstr "پنج یا بیش‌تر"
@@ -867,10 +913,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "اندازه زمین بازی"
 
 #~ msgid ""
-#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is "
-#~ "invalid."
-#~ msgstr ""
-#~ "اندازه‌ی زمین بازی. ۱=کوچک، ۲=متوسط، ۳=بزرگ. هر مقدار دیگری نامعتبر است."
+#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
+#~ msgstr "اندازه‌ی زمین بازی. ۱=کوچک، ۲=متوسط، ۳=بزرگ. هر مقدار دیگری نامعتبر است."
 
 #~ msgid "Ball style"
 #~ msgstr "طرح توپ"
@@ -1019,42 +1063,40 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "_تمام کردن بازی"
 
 #~ msgid ""
-#~ "%s is free software; you can redistribute it and/or modify it under the "
-#~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version %d of the License, or (at your option) any "
-#~ "later version."
+#~ "%s is free software; you can redistribute it and/or modify it under the terms "
+#~ "of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any later "
+#~ "version."
 #~ msgstr ""
-#~ "%s نرم‌افزار آزاد است؛ شما می‌تونید این را بازتوزیع کنید و/یا این را تحت "
-#~ "شرایط اجازه‌نامه‌ی عمومی همگانی گنو که توسط بنیاد نرم‌افزار آزادمنتشر شده "
-#~ "تغییر دهید؛ چه نسخه‌ی %d اجازه‌نامه، و چه (با نظر خودتان) هر نسخه‌ی متأخرتری."
+#~ "%s نرم‌افزار آزاد است؛ شما می‌تونید این را بازتوزیع کنید و/یا این را تحت شرایط "
+#~ "اجازه‌نامه‌ی عمومی همگانی گنو که توسط بنیاد نرم‌افزار آزادمنتشر شده تغییر دهید؛ "
+#~ "چه نسخه‌ی %d اجازه‌نامه، و چه (با نظر خودتان) هر نسخه‌ی متأخرتری."
 
 #~ msgid ""
 #~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-#~ "details."
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR "
+#~ "A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
 #~ msgstr ""
-#~ "%s منتشر شده به این امید که مفید باشد، ولی بدون هیچ ضمانتی؛ حتا بدون "
-#~ "ضمانت ضمنی تجاری یا تناسب برای یک منظور خاص. برای جزئیات بیش‌تر اجازه‌نامه "
-#~ "عمومی همگانی گنو را ببینید."
+#~ "%s منتشر شده به این امید که مفید باشد، ولی بدون هیچ ضمانتی؛ حتا بدون ضمانت "
+#~ "ضمنی تجاری یا تناسب برای یک منظور خاص. برای جزئیات بیش‌تر اجازه‌نامه عمومی "
+#~ "همگانی گنو را ببینید."
 
 #~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ "You should have received a copy of the GNU General Public License along with "
+#~ "%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+#~ "Fifth Floor, Boston, MA  02110-1301  USA"
 #~ msgstr ""
 #~ "شما باید به همراه %s رونوشتی از اجازه‌نامه‌ی عمومی همگانی گنو را دریافت "
 #~ "می‌کردید، اگر این‌گونه نیست، به بنیاد نرم‌افزار آزاد به آدرس Free Software "
-#~ "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  "
-#~ "02110-1301  USA نامه بفرستید "
+#~ "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  "
+#~ "USA نامه بفرستید "
 
 #~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ "You should have received a copy of the GNU General Public License along with "
+#~ "this program.  If not, see <http://www.gnu.org/licenses/>."
 #~ msgstr ""
-#~ "شما باید به همراه این برنامه رونوشتی از اجازه‌نامه‌ی عمومی همگانی گنو را "
-#~ "دریافت می‌کردید، اگر این‌گونه نیست، <http://www.gnu.org/licenses/> را "
-#~ "ببینید."
+#~ "شما باید به همراه این برنامه رونوشتی از اجازه‌نامه‌ی عمومی همگانی گنو را دریافت "
+#~ "می‌کردید، اگر این‌گونه نیست، <http://www.gnu.org/licenses/> را ببینید."
 
 #~ msgctxt "board size"
 #~ msgid "Small"
@@ -1570,32 +1612,30 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "استفاده از حرکت‌های امن"
 
 #~ msgid ""
-#~ "Use safe moves. The safe moves option will help you to avoid being killed "
-#~ "due to a mistake. If you try to make a move that would lead to your death "
-#~ "when there is a safe move available you will not be allowed to proceed."
+#~ "Use safe moves. The safe moves option will help you to avoid being killed due "
+#~ "to a mistake. If you try to make a move that would lead to your death when "
+#~ "there is a safe move available you will not be allowed to proceed."
 #~ msgstr ""
-#~ "استفاده از حرکت‌های امن. گزینه‌ی حرکت‌های امن به شما کمک خواهد کرد از کشته "
-#~ "شدن به خاطر اشتباه جلوگیری کنید. اگر زمانی که جابه‌جایی امنی وجود دارد سعی "
-#~ "کنید جابه‌جایی‌ای انجام دهید که به مرگ شما منجر شود، اجازه‌ی ادامه دادن به "
-#~ "شما داده نخواهد شد."
+#~ "استفاده از حرکت‌های امن. گزینه‌ی حرکت‌های امن به شما کمک خواهد کرد از کشته شدن "
+#~ "به خاطر اشتباه جلوگیری کنید. اگر زمانی که جابه‌جایی امنی وجود دارد سعی کنید "
+#~ "جابه‌جایی‌ای انجام دهید که به مرگ شما منجر شود، اجازه‌ی ادامه دادن به شما داده "
+#~ "نخواهد شد."
 
 #~ msgid "Use super safe moves"
 #~ msgstr "استفاده از حرکت‌های کاملاً امن"
 
 #~ msgid ""
-#~ "Use super safe moves. The player is alerted when there is no safe move "
-#~ "and the only option is to teleport out."
+#~ "Use super safe moves. The player is alerted when there is no safe move and "
+#~ "the only option is to teleport out."
 #~ msgstr ""
-#~ "استفاده از حرکت‌های کاملاً امن. زمانی که هیچ جابه‌جایی امنی وجود ندارد و "
-#~ "تنها گزینه دوربری به بیرون است به بازیکن اخطار داده می‌شود."
+#~ "استفاده از حرکت‌های کاملاً امن. زمانی که هیچ جابه‌جایی امنی وجود ندارد و تنها "
+#~ "گزینه دوربری به بیرون است به بازیکن اخطار داده می‌شود."
 
 #~ msgid "Enable game sounds"
 #~ msgstr "به کار انداختن صداهای بازی"
 
-#~ msgid ""
-#~ "Enable game sounds. Play sounds for various events throughout the game."
-#~ msgstr ""
-#~ "به کار انداختن صداهای بازی. پخش صدا برای رویدادهای مختلف در طول بازی"
+#~ msgid "Enable game sounds. Play sounds for various events throughout the game."
+#~ msgstr "به کار انداختن صداهای بازی. پخش صدا برای رویدادهای مختلف در طول بازی"
 
 #~ msgid "Key to move NW"
 #~ msgstr "کلید جابه‌جایی به شمال غربی"
@@ -1764,8 +1804,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ "The program Robots was unable to find any valid game configuration files. "
 #~ "Please check that the program is installed correctly."
 #~ msgstr ""
-#~ "برنامه‌ روبات‌ها نتوانست پرونده‌ی پیکربندی معتبریبرای بازی  پیدا کند. لطفاً "
-#~ "بررسی کنید که برنامه درست نصب شده باشد."
+#~ "برنامه‌ روبات‌ها نتوانست پرونده‌ی پیکربندی معتبریبرای بازی  پیدا کند. لطفاً بررسی "
+#~ "کنید که برنامه درست نصب شده باشد."
 
 #~ msgid "Some graphics files are missing or corrupt."
 #~ msgstr "بعضی از پرونده‌های گرافیکی گم‌شده‌اند یا مخدوشند."
@@ -1774,8 +1814,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ "The program Robots was unable to load all the necessary graphics files. "
 #~ "Please check that the program is installed correctly."
 #~ msgstr ""
-#~ "برنامه‌ روبات‌ها نتوانست همه‌ی پرونده‌های گرافیکی لازم را بارکند. لطفاً بررسی "
-#~ "کنید که برنامه درست نصب شده باشد."
+#~ "برنامه‌ روبات‌ها نتوانست همه‌ی پرونده‌های گرافیکی لازم را بارکند. لطفاً بررسی کنید "
+#~ "که برنامه درست نصب شده باشد."
 
 #~ msgid "Could not find '%s' pixmap file\n"
 #~ msgstr "پرونده‌ی pixmap «%s» پیدا نشد\n"
@@ -1941,13 +1981,12 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "دیگر نمی‌شود حرکتی کرد."
 
 #~ msgid ""
-#~ "Each puzzle has at least one solution.  You can undo your moves and try "
-#~ "and find the solution for a time penalty, restart this game or start an "
-#~ "new one."
+#~ "Each puzzle has at least one solution.  You can undo your moves and try and "
+#~ "find the solution for a time penalty, restart this game or start an new one."
 #~ msgstr ""
 #~ "هر پازل حداقل یک راه‌حل دارد. شما می‌توانید حرکاتتان را برگردانی کنید و سعی "
-#~ "کنید راه‌حل را بیابید. برای یک خطای زمانی، این بازی را راه‌انداری مجدد کرده "
-#~ "یا یک بازی جدید را آغاز کنید."
+#~ "کنید راه‌حل را بیابید. برای یک خطای زمانی، این بازی را راه‌انداری مجدد کرده یا "
+#~ "یک بازی جدید را آغاز کنید."
 
 #~ msgid "_New game"
 #~ msgstr "_بازی جدید"
@@ -2045,13 +2084,13 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "سودوکوی گنوم"
 
 #~ msgid ""
-#~ "GNOME Sudoku is a simple Sudoku generator and player. Sudoku is a "
-#~ "Japanese logic puzzle.\n"
+#~ "GNOME Sudoku is a simple Sudoku generator and player. Sudoku is a Japanese "
+#~ "logic puzzle.\n"
 #~ "\n"
 #~ "GNOME Sudoku is a part of GNOME Games."
 #~ msgstr ""
-#~ "سودوکوی گنوم یک سازنده و بازیکن ساده‌ی سودوکو است. سودوکو یک پازل منطقی "
-#~ "ژاپنی است.\n"
+#~ "سودوکوی گنوم یک سازنده و بازیکن ساده‌ی سودوکو است. سودوکو یک پازل منطقی ژاپنی "
+#~ "است.\n"
 #~ "\n"
 #~ "سودوکوی گنوم جزیی از بازی‌های گنوم است."
 
@@ -2173,10 +2212,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid "_Track Additions"
 #~ msgstr "ردگیری ا_ضافات"
 
-#~ msgid ""
-#~ "Mark new additions in a separate color so you can keep track of them."
-#~ msgstr ""
-#~ "علامت‌گذاری اضافات جدید به رنگ دیگری که بتوانید رد آن‌ها را داشته باشید."
+#~ msgid "Mark new additions in a separate color so you can keep track of them."
+#~ msgstr "علامت‌گذاری اضافات جدید به رنگ دیگری که بتوانید رد آن‌ها را داشته باشید."
 
 #~ msgid "_Highlighter"
 #~ msgstr "بر_جسته‌ساز"
@@ -2324,18 +2361,18 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 
 #~ msgid "Set to true to enable warning icons when too many flags are placed."
 #~ msgstr ""
-#~ "برای فعال کردن اخطار هنگامی که پرچم‌های خیلی زیادی قرار داده شده است روی "
-#~ "درست تنظیم شود."
+#~ "برای فعال کردن اخطار هنگامی که پرچم‌های خیلی زیادی قرار داده شده است روی درست "
+#~ "تنظیم شود."
 
 #~ msgid "Enable automatic placing of flags"
 #~ msgstr "قعال سازی جا گذاری خودکار پرچم‌ها"
 
 #~ msgid ""
-#~ "Set to true to have gnomine automatically flag squares as mined when "
-#~ "enough squares are revealed"
+#~ "Set to true to have gnomine automatically flag squares as mined when enough "
+#~ "squares are revealed"
 #~ msgstr ""
-#~ "برای پرچم‌گذاری خودکار مربع‌ها به عنوان مین هنگامی که به اندازه‌ی کافی مربع "
-#~ "فاش شد روی درست تنظیم شود"
+#~ "برای پرچم‌گذاری خودکار مربع‌ها به عنوان مین هنگامی که به اندازه‌ی کافی مربع فاش "
+#~ "شد روی درست تنظیم شود"
 
 #~ msgid "Number of columns in a custom game"
 #~ msgstr "تعداد ستون‌ها در یک بازی سفارشی"
@@ -2409,13 +2446,13 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "گرافیک‌ها:"
 
 #~ msgid ""
-#~ "The popular logic puzzle minesweeper. Clear mines from a board using "
-#~ "hints from squares you have already uncovered.\n"
+#~ "The popular logic puzzle minesweeper. Clear mines from a board using hints "
+#~ "from squares you have already uncovered.\n"
 #~ "\n"
 #~ "Mines is a part of GNOME Games."
 #~ msgstr ""
-#~ "پازل منطقی محبوب مین‌یاب. مین‌ها را به وسیله‌ی راهنمایی‌هایی از مربع‌هایی که "
-#~ "پیش‌تر کشف کردید، پاک‌سازی کنید.\n"
+#~ "پازل منطقی محبوب مین‌یاب. مین‌ها را به وسیله‌ی راهنمایی‌هایی از مربع‌هایی که پیش‌تر "
+#~ "کشف کردید، پاک‌سازی کنید.\n"
 #~ "\n"
 #~ "مین‌ها جزیی از بازی‌ها گنوم است."
 
@@ -2471,8 +2508,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid "The size of the playing grid"
 #~ msgstr "اندازه‌ی شبکه‌ی بازی"
 
-#~ msgid ""
-#~ "The value of this key is used to decide the size of the playing grid."
+#~ msgid "The value of this key is used to decide the size of the playing grid."
 #~ msgstr "مقدار این کلید برای تعیین اندازه‌ی شبکه‌ی بازی به کار می‌رود."
 
 #~ msgid "2×2"
@@ -2497,13 +2533,13 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "امتیازات تِتراوِکس"
 
 #~ msgid ""
-#~ "GNOME Tetravex is a simple puzzle where pieces must be positioned so that "
-#~ "the same numbers are touching each other.\n"
+#~ "GNOME Tetravex is a simple puzzle where pieces must be positioned so that the "
+#~ "same numbers are touching each other.\n"
 #~ "\n"
 #~ "Tetravex is a part of GNOME Games."
 #~ msgstr ""
-#~ "تتراوکس گنوم یک پازل ساده است که در آن قطعات باید به گونه‌ای قرار بگیرند "
-#~ "که اعداد یکسان هم‌دیگر را لمس کنند.\n"
+#~ "تتراوکس گنوم یک پازل ساده است که در آن قطعات باید به گونه‌ای قرار بگیرند که "
+#~ "اعداد یکسان هم‌دیگر را لمس کنند.\n"
 #~ "\n"
 #~ "تتراوکس جزیی از بازی‌های گنوم است."
 
@@ -2687,21 +2723,20 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "تأخیر بین تاس ریختن‌ها"
 
 #~ msgid ""
-#~ "Choose whether or not to insert a delay between the computer's dice rolls "
-#~ "so the player can follow what it is doing."
+#~ "Choose whether or not to insert a delay between the computer's dice rolls so "
+#~ "the player can follow what it is doing."
 #~ msgstr ""
-#~ "انتخاب این که تأخیری بین تاس ریختن‌های کامپیوتر باشد یا نه تا بازیکن "
-#~ "بتواند کار آن را دنبال کند."
+#~ "انتخاب این که تأخیری بین تاس ریختن‌های کامپیوتر باشد یا نه تا بازیکن بتواند "
+#~ "کار آن را دنبال کند."
 
 #~ msgid "Display the computer's thoughts"
 #~ msgstr "نشان دادن افکار کامپیوتر"
 
 #~ msgid ""
-#~ "If set to true, a dump of the AI's working will be done to standard "
-#~ "output."
+#~ "If set to true, a dump of the AI's working will be done to standard output."
 #~ msgstr ""
-#~ "اگر به درست تنظیم شده باشد، رونوشتی از کار هوش مصنوعی در خروجی استاندارد "
-#~ "قرار می‌گیرد."
+#~ "اگر به درست تنظیم شده باشد، رونوشتی از کار هوش مصنوعی در خروجی استاندارد قرار "
+#~ "می‌گیرد."
 
 #~ msgid "Already used! Where do you want to put that?"
 #~ msgstr "قبلاً استفاده شده! کجا می‌خواهید قرار بگیرد؟"
@@ -2771,8 +2806,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "‏%s! -- شما جلویید."
 
 #~ msgid "Select dice to roll or choose a score slot."
-#~ msgstr ""
-#~ "تاس را برای دوباره ریختن انتخاب کنید، یا خانه‌ی امتیاز را انتخاب کنید."
+#~ msgstr "تاس را برای دوباره ریختن انتخاب کنید، یا خانه‌ی امتیاز را انتخاب کنید."
 
 #~ msgid "Roll"
 #~ msgstr "ریختن"
@@ -3010,8 +3044,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid "The theme used for rendering the blocks"
 #~ msgstr "تم مورد استفاده برای ترسیم بلوک‌ها"
 
-#~ msgid ""
-#~ "The name of the theme used for rendering the blocks and the background."
+#~ msgid "The name of the theme used for rendering the blocks and the background."
 #~ msgstr "نام تم مورد استفاده برای ترسیم بلوک‌ها و پس‌زمینه"
 
 #~ msgid "Level to start with"
@@ -3056,11 +3089,11 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "فشردگی سطر‌های پر شده"
 
 #~ msgid ""
-#~ "The density of blocks in rows filled at the start of the game. The value "
-#~ "is between 0 (for no blocks) and 10 (for a completely filled row)."
+#~ "The density of blocks in rows filled at the start of the game. The value is "
+#~ "between 0 (for no blocks) and 10 (for a completely filled row)."
 #~ msgstr ""
-#~ "فشردگی بلوک‌ها در سطرهای پرشده در ابتدای بازی. مقدار بین ۰ (برای بدون "
-#~ "بلوک) و ۱۰ (برای سطرهای کاملاً پر شده) است."
+#~ "فشردگی بلوک‌ها در سطرهای پرشده در ابتدای بازی. مقدار بین ۰ (برای بدون بلوک) و "
+#~ "۱۰ (برای سطرهای کاملاً پر شده) است."
 
 #~ msgid "Whether to play sounds"
 #~ msgstr "این که صداها پخش شوند یا نه"
@@ -3261,8 +3294,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ "Unplayed games do not need to be represented."
 #~ msgstr ""
 #~ "فهرستی از رشته‌ها که به شکل پنج‌تایی هستند: نام، بردها، ‌مجموع بازی‌های انجام "
-#~ "شده، بهترین زمان (به ثانیه) و بدترین زمان (آن هم به ثانیه). باز‌‌ی‌های بازی "
-#~ "نشده نمایش داده نمی‌شوند."
+#~ "شده، بهترین زمان (به ثانیه) و بدترین زمان (آن هم به ثانیه). باز‌‌ی‌های بازی نشده "
+#~ "نمایش داده نمی‌شوند."
 
 #, fuzzy
 #~ msgid "Recently Played Games"
@@ -3275,8 +3308,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ "Select whether to drag the cards or to click on the source then the "
 #~ "destination."
 #~ msgstr ""
-#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد "
-#~ "کلیک شود"
+#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد کلیک "
+#~ "شود"
 
 #~ msgid "Statistics of games played"
 #~ msgstr "آمار بازی‌های انجام شده"
@@ -3338,14 +3371,13 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 
 #~ msgid ""
 #~ "This game uses a deprecated hint method (case 3).\n"
-#~ "Please file a bug at http://bugzilla.gnome.org including this message "
-#~ "and\n"
+#~ "Please file a bug at http://bugzilla.gnome.org including this message and\n"
 #~ "the name of the game you where playing (look in the title bar if you \n"
 #~ "aren't sure)."
 #~ msgstr ""
 #~ "این بازی از روش راهنمایی منسوخ شده‌ای استفاده می‌کند (حالت ۳).\n"
-#~ "لطفاً یک اشکال در http://bugzilla.gnome.org ثبت کنید که شامل این پیغام و "
-#~ "نام بازی‌ای \n"
+#~ "لطفاً یک اشکال در http://bugzilla.gnome.org ثبت کنید که شامل این پیغام و نام "
+#~ "بازی‌ای \n"
 #~ "که در حال انجامش بودید باشد. (اگر مطمئن نیستید به نوار عنوان نگاه کنید)."
 
 #~ msgid "You are searching for a %s."
@@ -3375,8 +3407,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ "card engine that allows many different\n"
 #~ "games to be played."
 #~ msgstr ""
-#~ "اِیل‌رایِت یک موتور قانونی برای کارت بازی یک نفره ارائه می‌کند که انجام "
-#~ "بازی‌های متفاوتی را ممکن می‌سازد."
+#~ "اِیل‌رایِت یک موتور قانونی برای کارت بازی یک نفره ارائه می‌کند که انجام بازی‌های "
+#~ "متفاوتی را ممکن می‌سازد."
 
 #~ msgid "_Control"
 #~ msgstr "_کنترل"
@@ -3648,8 +3680,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid ""
 #~ "Aim to place the suits in the order which fits the current layout most "
 #~ "naturally."
-#~ msgstr ""
-#~ "سعی کنیدخال‌ها را به طبیعی‌ترین ترتیب هماهنگ با چیدمان فعلی قرار دهید."
+#~ msgstr "سعی کنیدخال‌ها را به طبیعی‌ترین ترتیب هماهنگ با چیدمان فعلی قرار دهید."
 
 #~ msgid "Deal new cards from the deck"
 #~ msgstr "گرفتن کارت‌های جدید از دسته‌ی ورق"
@@ -4217,8 +4248,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "نمایش احتمالات"
 
 #~ msgid ""
-#~ "Display the probabilities of each dealer hand outcome and the expected "
-#~ "value of your hand."
+#~ "Display the probabilities of each dealer hand outcome and the expected value "
+#~ "of your hand."
 #~ msgstr "نمایش احتمالات هر دست داده شده و مقدار مورد انتظار از دست شما."
 
 #~ msgid "The amount of money in your bank"
@@ -4283,12 +4314,10 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "دوست دارید بیمه شوید؟"
 
 #~ msgid "Set your wager and click in the white outline to deal a new hand."
-#~ msgstr ""
-#~ "شرط‌تان را تعیین کنید و برای گرفتن یک دست جدید روی خطوط سفید کلیک کنید."
+#~ msgstr "شرط‌تان را تعیین کنید و برای گرفتن یک دست جدید روی خطوط سفید کلیک کنید."
 
 #~ msgid "Set your wager or click on the cards to deal a new hand."
-#~ msgstr ""
-#~ "شرط‌تان را تعیین کنید با برای گرفتن یک دست جدید روی کارت‌ها کلید کنید."
+#~ msgstr "شرط‌تان را تعیین کنید با برای گرفتن یک دست جدید روی کارت‌ها کلید کنید."
 
 #~ msgid "Blackjack Preferences"
 #~ msgstr "ترجیحات بازی بلک‌جک"
@@ -4333,8 +4362,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "دوبار کلیک برای کاهش شرط به %I.2f"
 
 #~ msgid "Click to deal another card; drag card to split pair"
-#~ msgstr ""
-#~ "برای گرفتن یک کارت دیگر کلیک کنید؛برای جدا کردن جفت یک کارت را بکشید"
+#~ msgstr "برای گرفتن یک کارت دیگر کلیک کنید؛برای جدا کردن جفت یک کارت را بکشید"
 
 #~ msgid "Click to deal another card"
 #~ msgstr "کلیک برای گرفتن یک کارت دیگر"
@@ -4355,8 +4383,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "بهترین گزینه ایستادن است"
 
 #~ msgid ""
-#~ "To stand means to stop adding cards to your hand.  Do this by clicking on "
-#~ "the dealer's cards or by selecting the option from the Control menu."
+#~ "To stand means to stop adding cards to your hand.  Do this by clicking on the "
+#~ "dealer's cards or by selecting the option from the Control menu."
 #~ msgstr ""
 #~ "ایستادن به معنای توقف اضافه کردن کارت‌ها به دست‌تان است. برای این کار رو "
 #~ "کارت‌های توزیع‌کننده کلیک کنید با گزینه را از منوی کنترل انتخاب کنید."
@@ -4365,11 +4393,11 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "بهترین گزینه تسلیم است"
 
 #~ msgid ""
-#~ "To surrender means to give up half your wager and not complete the hand.  "
-#~ "Do this by selecting the option from the Control menu."
+#~ "To surrender means to give up half your wager and not complete the hand.  Do "
+#~ "this by selecting the option from the Control menu."
 #~ msgstr ""
-#~ "تسلیم به معنای دادن نصف شرط‌تان و کامل نکردن دست است. برای این کار گزینه‌اش "
-#~ "را از منوی کنترل انتخاب کنید."
+#~ "تسلیم به معنای دادن نصف شرط‌تان و کامل نکردن دست است. برای این کار گزینه‌اش را "
+#~ "از منوی کنترل انتخاب کنید."
 
 #, fuzzy
 #~ msgid "Blackjack is a casino-style card game."
@@ -4919,8 +4947,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ "Height of the GNibbles window, used to restore the window size between "
 #~ "sessions."
 #~ msgstr ""
-#~ "ارتفاع پنجره‌ی جی‌نیبلر، برای بازیابی اندازه‌ی پنجره بین نشست‌ها استفاده می "
-#~ "شود."
+#~ "ارتفاع پنجره‌ی جی‌نیبلر، برای بازیابی اندازه‌ی پنجره بین نشست‌ها استفاده می شود."
 
 #~ msgid "Width of the GNibbles window"
 #~ msgstr "عرض پنجره‌ی جی‌نیبلز"
@@ -4964,64 +4991,59 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 
 #~ msgid ""
 #~ "The name of the key used to hold still. The name is a standard X key name."
-#~ msgstr ""
-#~ "نام کلید مورد استفاده برای ثابت ماندن. نام یک نام کلید X استاندارد است."
+#~ msgstr "نام کلید مورد استفاده برای ثابت ماندن. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move east. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شرق. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شرق. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move north-east. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال شرقی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال شرقی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move north-west. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال غربی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال غربی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move north. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move south-east. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب شرقی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب شرقی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move south-west. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب غربی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب غربی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move south. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move west. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به غرب. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به غرب. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
-#~ "The name of the key used to teleport randomly. The name is a standard X "
-#~ "key name."
+#~ "The name of the key used to teleport randomly. The name is a standard X key "
+#~ "name."
 #~ msgstr ""
 #~ "نام کلید مورد استفاده برای دوربری تصادفی. نام یک نام کلید X استاندارد است."
 
@@ -5078,8 +5100,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "رنگ پس‌زمینه، در قالبی که gdk_color_parse می‌فهمد."
 
 #~ msgid ""
-#~ "This selects whether or not to draw the background image over the "
-#~ "background color."
+#~ "This selects whether or not to draw the background image over the background "
+#~ "color."
 #~ msgstr "این انتخاب می‌کند که تصویر پس‌زمینه روی رنگ پس‌زمینه ترسیم شود یا نه."
 
 #, fuzzy
@@ -5123,10 +5145,6 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #, fuzzy
 #~ msgid "High Scores"
 #~ msgstr "امتیازها"
-
-#, fuzzy
-#~ msgid "_Play"
-#~ msgstr "بازیکن"
 
 #, fuzzy
 #~ msgid "Ma_ximum Difficulty"
@@ -5378,15 +5396,13 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ "Select whether to drag the tiles or to click on the source then the "
 #~ "destination."
 #~ msgstr ""
-#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد "
-#~ "کلیک شود"
+#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد کلیک "
+#~ "شود"
 
-#~ msgid ""
-#~ "The height of the playing window in pixels. At minimum it should be 240."
+#~ msgid "The height of the playing window in pixels. At minimum it should be 240."
 #~ msgstr "ارتفاع پنجره‌ی بازی برحسب نقطه. حداقل باید ۲۴۰ باشد."
 
-#~ msgid ""
-#~ "The width of the playing window in pixels. At minimum it should be 320."
+#~ msgid "The width of the playing window in pixels. At minimum it should be 320."
 #~ msgstr "عرض پنجره‌ی بازی بر حسب نقطه. حداقل باید ۳۲۰ باشد."
 
 #~ msgid "Block 10"
@@ -5423,15 +5439,15 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "جورچین‌های بلوک لغزنده"
 
 #~ msgid ""
-#~ "The requested height of the main window in pixels. If this isn't big "
-#~ "enough it will be ignored."
+#~ "The requested height of the main window in pixels. If this isn't big enough "
+#~ "it will be ignored."
 #~ msgstr ""
-#~ "ارتفاع پنجره‌ی درخواست شده بر حسب نقطه. اگر به اندازه‌ی کافی بزرگ نباشد در "
-#~ "نظر گرفته نخواهد شد."
+#~ "ارتفاع پنجره‌ی درخواست شده بر حسب نقطه. اگر به اندازه‌ی کافی بزرگ نباشد در نظر "
+#~ "گرفته نخواهد شد."
 
 #~ msgid ""
-#~ "The requested width of the main window in pixels. If this isn't big "
-#~ "enough it will be ignored."
+#~ "The requested width of the main window in pixels. If this isn't big enough it "
+#~ "will be ignored."
 #~ msgstr ""
 #~ "عرض پنجره‌ی درخواست شده بر حسب نقطه. اگر به اندازه‌ی کافی بزرگ نباشد در نظر "
 #~ "گرفته نخواهد شد."
@@ -5539,8 +5555,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid ""
 #~ "Please check your GConf configuration, specifically that the schemas have "
 #~ "been installed correctly."
-#~ msgstr ""
-#~ "لطفاً پیکربندی GConf بررسی کنید، خصوصاً این که شِماها درست نصب شده باشند. "
+#~ msgstr "لطفاً پیکربندی GConf بررسی کنید، خصوصاً این که شِماها درست نصب شده باشند. "
 
 #~ msgid "X Padding"
 #~ msgstr "لایی‌گذاری X"
@@ -5578,8 +5593,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "لقب بازیکن."
 
 #~ msgid ""
-#~ "This string identifies the default game to connect to or create "
-#~ "(depending on mode)."
+#~ "This string identifies the default game to connect to or create (depending on "
+#~ "mode)."
 #~ msgstr ""
 #~ "این رشته بازی پیش‌فرض برای اتصال یا ایجاد (بسته به حالت) را شناسایی می‌کند."
 
@@ -5633,8 +5648,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid ""
 #~ "Do you want to finish the current game or start playing with the new map "
 #~ "immediately?"
-#~ msgstr ""
-#~ "می‌خواهید بازی فعلی را تمام کنید یا بلافاصله نقشه‌ی جدید را بازی کنید؟"
+#~ msgstr "می‌خواهید بازی فعلی را تمام کنید یا بلافاصله نقشه‌ی جدید را بازی کنید؟"
 
 #~ msgid "_Finish"
 #~ msgstr "_پایان"
@@ -5655,18 +5669,18 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "حذف جفت کاشی‌های جور شده"
 
 #~ msgid ""
-#~ "The requested height of the main window in pixels. Note that the widgets "
-#~ "the window contains are at least 200 pixels high."
+#~ "The requested height of the main window in pixels. Note that the widgets the "
+#~ "window contains are at least 200 pixels high."
 #~ msgstr ""
-#~ "ارتفاع درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های "
-#~ "داخل این پنجره حداقل ۲۰۰ نقطه ارتفاع دارند."
+#~ "ارتفاع درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های داخل "
+#~ "این پنجره حداقل ۲۰۰ نقطه ارتفاع دارند."
 
 #~ msgid ""
-#~ "The requested width of the main window in pixels. Note that the widgets "
-#~ "the window contains are at least 320 pixels wide."
+#~ "The requested width of the main window in pixels. Note that the widgets the "
+#~ "window contains are at least 320 pixels wide."
 #~ msgstr ""
-#~ "عرض درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های "
-#~ "داخل این پنجره حداقل ۳۲۰ نقطه عرض دارند."
+#~ "عرض درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های داخل "
+#~ "این پنجره حداقل ۳۲۰ نقطه عرض دارند."
 
 #~ msgid "mahjongg|Easy"
 #~ msgstr "ماهجونگ|آسان"
@@ -5690,11 +5704,11 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "ارتفاع صفحه‌ی سفارشی"
 
 #~ msgid ""
-#~ "Setting this to FALSE means the pieces fall slowly, but gracefully. A "
-#~ "setting of TRUE causes the pieces to fall quickly and jerkily."
+#~ "Setting this to FALSE means the pieces fall slowly, but gracefully. A setting "
+#~ "of TRUE causes the pieces to fall quickly and jerkily."
 #~ msgstr ""
-#~ "تنظیم این روی نادرست به معنای آهسته اما با وقار افتادن قطعه‌هاست. تنظیم "
-#~ "درست باعث می‌شود قطعه‌ها به تندی و شلنگ‌اندازان بیافتند."
+#~ "تنظیم این روی نادرست به معنای آهسته اما با وقار افتادن قطعه‌هاست. تنظیم درست "
+#~ "باعث می‌شود قطعه‌ها به تندی و شلنگ‌اندازان بیافتند."
 
 #~ msgid "The board size"
 #~ msgstr "اندازه‌ی صفحه"
@@ -5703,10 +5717,8 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "ارتفاع صفحه‌ی سفارشی، ۳ &gt; ارتفاع &gt;."
 
 #~ msgid ""
-#~ "The size of the board to use. 1 = Custom, 2 = Small, 3 = Medium, 4 = "
-#~ "Large."
-#~ msgstr ""
-#~ "اندازه‌ی صفحه‌ی مورد استفاده. ۱ = سفارشی، ۲ = کوچک، ۳ = متوسط، ۴ = بزرگ."
+#~ "The size of the board to use. 1 = Custom, 2 = Small, 3 = Medium, 4 = Large."
+#~ msgstr "اندازه‌ی صفحه‌ی مورد استفاده. ۱ = سفارشی، ۲ = کوچک، ۳ = متوسط، ۴ = بزرگ."
 
 #~ msgid "The window height"
 #~ msgstr "ارتفاع پنجره"
@@ -5809,11 +5821,11 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "این که از حرکت‌های سریع استفاده شود یا نه."
 
 #~ msgid ""
-#~ "Zero corresponds to no animations, one is partial animations, two is "
-#~ "complete animations."
+#~ "Zero corresponds to no animations, one is partial animations, two is complete "
+#~ "animations."
 #~ msgstr ""
-#~ "صفر متناظر است با بدون پویانمایی، یک پویانمایی جرئی است، دو پویانمایی "
-#~ "کامل است."
+#~ "صفر متناظر است با بدون پویانمایی، یک پویانمایی جرئی است، دو پویانمایی کامل "
+#~ "است."
 
 #~ msgid "Ataxx Preferences"
 #~ msgstr "ترجیحات اتکس"
@@ -5940,11 +5952,11 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgstr "این که نتایج نهایی چرخانده شود یا نه"
 
 #~ msgid ""
-#~ "Put all the white pieces at the bottom and all the black pieces on the "
-#~ "top of the board when a game is over"
+#~ "Put all the white pieces at the bottom and all the black pieces on the top of "
+#~ "the board when a game is over"
 #~ msgstr ""
-#~ "قرار دادن تمام قطعه‌های سفید در پایید و تمام قطعه‌های سیاه در بالای صفحه "
-#~ "وقتی بازی تمام می‌شود."
+#~ "قرار دادن تمام قطعه‌های سفید در پایید و تمام قطعه‌های سیاه در بالای صفحه وقتی "
+#~ "بازی تمام می‌شود."
 
 #~ msgid "Collect all diamonds and find exit"
 #~ msgstr "همه‌ی الماس‌ها را جمع کنید و خروج را پیدا کنید"
@@ -6053,8 +6065,7 @@ msgstr[1] "%Iu × %Iu, %Iu رنگ"
 #~ msgid "Please make sure that GNOME Stones is correctly installed."
 #~ msgstr "لطفاً مطمئن شوید که سنگ‌های گنوم درست نصب شده است."
 
-#~ msgid ""
-#~ "You may be able to select a different game from the preferences dialog."
+#~ msgid "You may be able to select a different game from the preferences dialog."
 #~ msgstr "شاید بتوانید بازی دیگری از محاوره‌ی ترجیحات انتخاب کنید."
 
 #~ msgid "GNOME Stones Preferences"
