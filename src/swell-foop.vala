@@ -82,7 +82,7 @@ public class SwellFoop : Gtk.Application
         label = new Gtk.Label (_("Clear as many blocks as you can.\nFewer clicks means more points."));
         label.get_style_context ().add_class ("tip");
         first_vbox.pack_start (label, false);
-        var play_button = new Gtk.Button.with_mnemonic (_("Let's _Play"));
+        var play_button = new Gtk.Button.with_mnemonic (_("Let’s _Play"));
         play_button.get_style_context ().add_class ("play");
         play_button.get_style_context ().add_class ("suggested-action");
         play_button.valign = Gtk.Align.CENTER;
