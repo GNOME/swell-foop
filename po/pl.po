@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-16 09:51+0200\n"
-"PO-Revision-Date: 2016-08-16 09:52+0200\n"
+"POT-Creation-Date: 2016-11-16 14:01+0100\n"
+"PO-Revision-Date: 2016-11-16 14:02+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -202,7 +202,7 @@ msgstr ""
 "Mniej kliknięć oznacza więcej punktów."
 
 #: ../src/swell-foop.vala:85
-msgid "Let's _Play"
+msgid "Let’s _Play"
 msgstr "_Zacznij grę"
 
 #: ../src/swell-foop.vala:138
@@ -219,7 +219,7 @@ msgstr "Pomo_c"
 
 #: ../src/swell-foop.vala:143
 msgid "_About"
-msgstr "_O grze"
+msgstr "_O grze"
 
 #: ../src/swell-foop.vala:157
 msgid "Start a new game"
