@@ -1,19 +1,19 @@
-# Swedish messages for gnome-games.
-# Copyright © 1999-2015 Free Software Foundation, Inc.
+# Swedish messages for swell-foop.
+# Copyright © 1999-2016 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015, 2016.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
+"Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:37+0000\n"
-"PO-Revision-Date: 2016-08-14 12:09+0200\n"
+"POT-Creation-Date: 2016-11-12 12:51+0000\n"
+"PO-Revision-Date: 2016-11-28 19:25+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -99,8 +99,8 @@ msgstr "Åtgärd"
 
 # Plötslig attack eller liknande.. nytt namn på Same GNOME
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -150,7 +150,7 @@ msgstr[1] "%u poäng"
 msgid "Game Over!"
 msgstr "Spelet är slut!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
 msgid "_Quit"
 msgstr "A_vsluta"
 
@@ -195,55 +195,55 @@ msgstr ""
 "Färre klick betyder högre poäng."
 
 #: ../src/swell-foop.vala:85
-msgid "Let's _Play"
+msgid "Let’s _Play"
 msgstr "_Börja spela"
 
-#: ../src/swell-foop.vala:133
+#: ../src/swell-foop.vala:138
 msgid "_Scores"
 msgstr "_Poänglista"
 
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:139
 msgid "_Preferences"
 msgstr "_Inställningar"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:142
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:143
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/swell-foop.vala:152
+#: ../src/swell-foop.vala:157
 msgid "Start a new game"
 msgstr "Starta ett nytt spel"
 
-#: ../src/swell-foop.vala:180
+#: ../src/swell-foop.vala:185
 msgid "Small"
 msgstr "Liten"
 
-#: ../src/swell-foop.vala:181
+#: ../src/swell-foop.vala:186
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/swell-foop.vala:182
+#: ../src/swell-foop.vala:187
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/swell-foop.vala:258
+#: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "Poäng: %u "
 
-#: ../src/swell-foop.vala:317
+#: ../src/swell-foop.vala:322
 msgid "Colors"
 msgstr "Färger"
 
-#: ../src/swell-foop.vala:321
+#: ../src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "Figurer och färger"
 
-#: ../src/swell-foop.vala:455
+#: ../src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -252,11 +252,11 @@ msgstr ""
 "Du vet, spelet där allt börjar lysa upp och man kan klicka på dem så de "
 "försvinner!"
 
-#: ../src/swell-foop.vala:456
+#: ../src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:461
+#: ../src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -269,14 +269,14 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>."
 
-#: ../src/swell-foop.vala:494
+#: ../src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "Överge detta spel för att påbörja ett nytt?"
 
-#: ../src/swell-foop.vala:495
+#: ../src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "_Avbryt"
 
-#: ../src/swell-foop.vala:496
+#: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Nytt spel"
