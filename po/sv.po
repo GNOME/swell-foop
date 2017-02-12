@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-11-12 12:51+0000\n"
-"PO-Revision-Date: 2016-11-28 19:25+0100\n"
+"POT-Creation-Date: 2017-02-11 13:25+0000\n"
+"PO-Revision-Date: 2017-02-12 12:14+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -233,7 +233,7 @@ msgstr "Stor"
 #: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
-msgstr "Poäng: %u "
+msgstr "Poäng: %u"
 
 #: ../src/swell-foop.vala:322
 msgid "Colors"
