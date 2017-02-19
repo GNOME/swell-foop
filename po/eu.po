@@ -4,22 +4,22 @@
 #
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013.
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2014, 2015, 2016.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2014, 2015, 2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-fo"
-"op&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:37+0000\n"
-"PO-Revision-Date: 2016-09-20 12:18+0100\n"
-"Last-Translator: dooteo <dooteo@zundan.com>\n"
-"Language-Team: Basque <librezale@librezale.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"foop&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-02-13 07:39+0000\n"
+"PO-Revision-Date: 2017-02-19 13:33+0100\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+"Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -95,8 +95,8 @@ msgid "Operation"
 msgstr "Eragiketa"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -146,7 +146,7 @@ msgstr[1] "%u puntu"
 msgid "Game Over!"
 msgstr "Amaitu da!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
 msgid "_Quit"
 msgstr "_Irten"
 
@@ -190,55 +190,56 @@ msgstr ""
 "Zenbat eta klik gutxiago orduan eta puntu gehiago."
 
 #: ../src/swell-foop.vala:85
-msgid "Let's _Play"
+#| msgid "Let's _Play"
+msgid "Let’s _Play"
 msgstr "_Jokatu"
 
-#: ../src/swell-foop.vala:133
+#: ../src/swell-foop.vala:138
 msgid "_Scores"
 msgstr "_Puntuazioak"
 
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:139
 msgid "_Preferences"
 msgstr "_Hobespenak"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:142
 msgid "_Help"
 msgstr "La_guntza"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:143
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../src/swell-foop.vala:152
+#: ../src/swell-foop.vala:157
 msgid "Start a new game"
 msgstr "Beste joko bat hasten du"
 
-#: ../src/swell-foop.vala:180
+#: ../src/swell-foop.vala:185
 msgid "Small"
 msgstr "Txikia"
 
-#: ../src/swell-foop.vala:181
+#: ../src/swell-foop.vala:186
 msgid "Normal"
 msgstr "Normala"
 
-#: ../src/swell-foop.vala:182
+#: ../src/swell-foop.vala:187
 msgid "Large"
 msgstr "Handia"
 
-#: ../src/swell-foop.vala:258
+#: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "Puntuazioa: %u"
 
-#: ../src/swell-foop.vala:317
+#: ../src/swell-foop.vala:322
 msgid "Colors"
 msgstr "Koloreak"
 
-#: ../src/swell-foop.vala:321
+#: ../src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "Formak eta koloreak"
 
-#: ../src/swell-foop.vala:455
+#: ../src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -247,23 +248,23 @@ msgstr ""
 "Badakizu, denak pizten dira eta klik egin behar duzu haien gainean "
 "itzaltzeko."
 
-#: ../src/swell-foop.vala:456
+#: ../src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright-a © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:461
+#: ../src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
 
-#: ../src/swell-foop.vala:494
+#: ../src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "Utzi joko hau berri batekin hasteko?"
 
-#: ../src/swell-foop.vala:495
+#: ../src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "_Utzi"
 
-#: ../src/swell-foop.vala:496
+#: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Joko berria"
 
