@@ -1,14 +1,14 @@
 # Norwegian bokmål translation of fell-swoop.
 # Copyright © 1998-2002 Free Software Foundation, Inc.
-# Kjartan Maraas <kmaraas@gnome.org>, 1998-2016.
+# Kjartan Maraas <kmaraas@gnome.org>, 1998-2017.
 # Terance Edward Sola <terance@lyse.net>, 2005.
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: fell-swoop 3.22.x\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-16 12:19+0200\n"
-"PO-Revision-Date: 2016-10-16 12:19+0200\n"
+"Project-Id-Version: fell-swoop 3.23.x\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-foop&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-02-13 07:39+0000\n"
+"PO-Revision-Date: 2017-02-19 17:55+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -187,7 +187,7 @@ msgstr ""
 "Færre klikk betyr flere poeng."
 
 #: ../src/swell-foop.vala:85
-msgid "Let's _Play"
+msgid "Let’s _Play"
 msgstr "La oss s_pille"
 
 #: ../src/swell-foop.vala:138
