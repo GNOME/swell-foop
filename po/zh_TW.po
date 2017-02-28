@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-07-21 11:43+0000\n"
-"PO-Revision-Date: 2015-02-21 14:35+0800\n"
+"POT-Creation-Date: 2017-02-26 01:17+0000\n"
+"PO-Revision-Date: 2017-02-28 13:54+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (traditional)\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -95,8 +95,8 @@ msgid "Operation"
 msgstr "操作"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -124,6 +124,10 @@ msgstr ""
 "Swell Foop 永遠可以很快速的遊玩，但是您也可以改變遊戲盤的大小讓它可以玩得久一"
 "點。"
 
+#: ../data/swell-foop.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME 計畫"
+
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "game;logic;board;same;matching;遊戲;邏輯;桌面遊戲;比對;"
@@ -139,7 +143,7 @@ msgstr[0] "%u 分"
 msgid "Game Over!"
 msgstr "玩完了！"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
 msgid "_Quit"
 msgstr "結束(_Q)"
 
@@ -182,55 +186,55 @@ msgstr ""
 "點擊次數愈少分數愈高。"
 
 #: ../src/swell-foop.vala:85
-msgid "Let's _Play"
-msgstr "讓我們開始吧(_P)"
+msgid "Let’s _Play"
+msgstr "開始玩(_P)"
 
-#: ../src/swell-foop.vala:133
+#: ../src/swell-foop.vala:138
 msgid "_Scores"
 msgstr "分數(_S)"
 
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:139
 msgid "_Preferences"
 msgstr "偏好設定(_P)"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:142
 msgid "_Help"
 msgstr "求助(_H)"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:143
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../src/swell-foop.vala:154
+#: ../src/swell-foop.vala:157
 msgid "Start a new game"
 msgstr "開始另一局"
 
-#: ../src/swell-foop.vala:183
+#: ../src/swell-foop.vala:185
 msgid "Small"
 msgstr "小"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:186
 msgid "Normal"
 msgstr "一般"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:187
 msgid "Large"
 msgstr "大"
 
-#: ../src/swell-foop.vala:261
+#: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "得分：%u "
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:322
 msgid "Colors"
 msgstr "色彩"
 
-#: ../src/swell-foop.vala:324
+#: ../src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "形狀與顏色"
 
-#: ../src/swell-foop.vala:458
+#: ../src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -238,11 +242,11 @@ msgstr ""
 "我就是要玩那個遊戲！\n"
 "你知道，就是它們會轉個不停，你對它們點一點，它們就消失了！"
 
-#: ../src/swell-foop.vala:459
+#: ../src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "版權所有 © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:464
+#: ../src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
@@ -252,15 +256,15 @@ msgstr ""
 "Abel Cheung <abel@oaka.org>, 2001-07\n"
 "Fernando <bv1al@journalist.com.tw>, 1999"
 
-#: ../src/swell-foop.vala:497
+#: ../src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "放棄這局遊戲以開始另一局遊戲？"
 
-#: ../src/swell-foop.vala:498
+#: ../src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: ../src/swell-foop.vala:499
+#: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "開新局(_N)"
 
