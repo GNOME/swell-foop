@@ -18,19 +18,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:37+0000\n"
-"PO-Revision-Date: 2016-09-16 13:12+0300\n"
-"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
+"POT-Creation-Date: 2017-02-26 01:17+0000\n"
+"PO-Revision-Date: 2017-03-14 21:15+0400\n"
+"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -105,8 +105,8 @@ msgid "Operation"
 msgstr "Игровой процесс"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -156,7 +156,7 @@ msgstr[2] "%u очков"
 msgid "Game Over!"
 msgstr "Игра окончена!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
 msgid "_Quit"
 msgstr "_Завершить"
 
@@ -201,55 +201,55 @@ msgstr ""
 "Чем меньше нажатий, тем больше очков."
 
 #: ../src/swell-foop.vala:85
-msgid "Let's _Play"
+msgid "Let’s _Play"
 msgstr "_Играть"
 
-#: ../src/swell-foop.vala:133
+#: ../src/swell-foop.vala:138
 msgid "_Scores"
 msgstr "_Результаты"
 
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:139
 msgid "_Preferences"
 msgstr "_Параметры"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:142
 msgid "_Help"
 msgstr "_Справка"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:143
 msgid "_About"
 msgstr "_О приложении"
 
-#: ../src/swell-foop.vala:152
+#: ../src/swell-foop.vala:157
 msgid "Start a new game"
 msgstr "Начать новую игру"
 
-#: ../src/swell-foop.vala:180
+#: ../src/swell-foop.vala:185
 msgid "Small"
 msgstr "Маленький"
 
-#: ../src/swell-foop.vala:181
+#: ../src/swell-foop.vala:186
 msgid "Normal"
 msgstr "Обычный"
 
-#: ../src/swell-foop.vala:182
+#: ../src/swell-foop.vala:187
 msgid "Large"
 msgstr "Большой"
 
-#: ../src/swell-foop.vala:258
+#: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "Счёт: %u"
 
-#: ../src/swell-foop.vala:317
+#: ../src/swell-foop.vala:322
 msgid "Colors"
 msgstr "Цвета"
 
-#: ../src/swell-foop.vala:321
+#: ../src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "Фигуры и цвета"
 
-#: ../src/swell-foop.vala:455
+#: ../src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -257,25 +257,25 @@ msgstr ""
 "Хочу играть в эту игру!\n"
 "Они все светятся и пропадают, когда вы щёлкаете по ним!"
 
-#: ../src/swell-foop.vala:456
+#: ../src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Авторские права © 2009 Тим Хортон (Tim Horton)"
 
-#: ../src/swell-foop.vala:461
+#: ../src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr ""
 "Ivan Komaritsyn <vantu5z@mail.ru>, 2015.\n"
 "Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012, 2015."
 
-#: ../src/swell-foop.vala:494
+#: ../src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "Бросить эту игру и начать новую?"
 
-#: ../src/swell-foop.vala:495
+#: ../src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "_Отмена"
 
-#: ../src/swell-foop.vala:496
+#: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Новая игра"
 
