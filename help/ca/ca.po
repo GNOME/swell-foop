@@ -310,11 +310,11 @@ msgstr "4. Es formen grups nous i es repeteix el cicle <placeholder-1/>"
 
 #: C/swell-foop.xml:178(para)
 msgid "Scoring is based on the number of objects you delete:"
-msgstr "La puntuació està basada en el número d'objectes que traieu:"
+msgstr "La puntuació està basada en el nombre d'objectes que traieu:"
 
 #: C/swell-foop.xml:183(entry)
 msgid "Number of Objects"
-msgstr "Número d'objectes"
+msgstr "Nombre d'objectes"
 
 #: C/swell-foop.xml:184(entry)
 msgid "Points Scored"
@@ -450,8 +450,8 @@ msgid ""
 "increases the number of different objects."
 msgstr ""
 "El menú <guimenu>Mida</guimenu> conté aquests tres paràmetres: petit, mitja "
-"i gran. A part d'incrementar el número d'objectes, el paràmetre gran també "
-"incrementa el número d'objectes diferents."
+"i gran. A part d'incrementar el nombre d'objectes, el paràmetre gran també "
+"incrementa el nombre d'objectes diferents."
 
 #: C/swell-foop.xml:221(title)
 msgid "Changing the Speed"
@@ -480,7 +480,7 @@ msgid ""
 "group you remove will form and destroy other groups."
 msgstr ""
 "La regla més important quan intenteu obtenir una puntuació alta és pensar "
-"per avançat: cada grup que treieu crearà i desfarà altres grups."
+"per avançat: cada grup que traieu crearà i desfarà altres grups."
 
 #: C/swell-foop.xml:232(para)
 msgid ""
@@ -488,7 +488,7 @@ msgid ""
 "larger. Vertically aligned objects can't be misaligned, but horizontal "
 "arrangements can."
 msgstr ""
-"Primer treieu els grups superiors, a no ser que si treieu un altre grup es "
+"Primer traieu els grups superiors, a no ser que si traieu un altre grup es "
 "faci més gran. Els objectes alineats verticalment no es poden desalinear, "
 "però els horitzontals sí."
 
@@ -519,7 +519,7 @@ msgid ""
 msgstr ""
 "No oblideu la bonificació de mil punts per a netejar totes les boles. Per a "
 "obtenir 1000 punts d'un grup necessiteu 34 objectes. És molt poc probable "
-"que es doni la situació on heu de sacrificar un grup tant gran per a netejar "
+"que es doni la situació on heu de sacrificar un grup tan gran per a netejar "
 "el tauler."
 
 #: C/swell-foop.xml:241(title)
