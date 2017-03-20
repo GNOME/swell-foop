@@ -3,13 +3,13 @@
 # Yuri Syrota <rasta@renome.rovno.ua>, 1999-2000.
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2004-2010
 # Wanderlust <wanderlust@ukr.net>, 2009.
-# Daniel Korostil <ted.korostiled@gmail.com>, 2014, 2015.
+# Daniel Korostil <ted.korostiled@gmail.com>, 2014, 2015, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-14 12:31+0200\n"
-"PO-Revision-Date: 2015-03-14 12:35+0300\n"
+"POT-Creation-Date: 2017-03-20 13:52+0200\n"
+"PO-Revision-Date: 2017-03-20 13:53+0300\n"
 "Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "Language: uk\n"
@@ -94,8 +94,8 @@ msgid "Operation"
 msgstr "Операція"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:455 ../src/swell-foop.vala:537
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "Той самий"
 
@@ -124,6 +124,10 @@ msgstr ""
 "«Той самий» — дуже швидка гра, проте можна її розтягнути змінивши розмір "
 "дошки."
 
+#: ../data/swell-foop.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Проект GNOME"
+
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr "гра;логіка;дошка;той;збіг;"
@@ -141,7 +145,7 @@ msgstr[2] "%u балів"
 msgid "Game Over!"
 msgstr "Гру закінчено!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
 msgid "_Quit"
 msgstr "Ви_йти"
 
@@ -186,55 +190,55 @@ msgstr ""
 "Більше натисків — більше балів."
 
 #: ../src/swell-foop.vala:85
-msgid "Let's _Play"
+msgid "Let’s _Play"
 msgstr "Нумо _грати"
 
-#: ../src/swell-foop.vala:133
+#: ../src/swell-foop.vala:138
 msgid "_Scores"
 msgstr "_Результати"
 
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:139
 msgid "_Preferences"
 msgstr "_Параметри"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:142
 msgid "_Help"
 msgstr "_Довідка"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:143
 msgid "_About"
 msgstr "_Про програму"
 
-#: ../src/swell-foop.vala:154
+#: ../src/swell-foop.vala:157
 msgid "Start a new game"
 msgstr "Розпочати нову гру"
 
-#: ../src/swell-foop.vala:183
+#: ../src/swell-foop.vala:185
 msgid "Small"
 msgstr "Маленька"
 
-#: ../src/swell-foop.vala:184
+#: ../src/swell-foop.vala:186
 msgid "Normal"
 msgstr "Звичайний"
 
-#: ../src/swell-foop.vala:185
+#: ../src/swell-foop.vala:187
 msgid "Large"
 msgstr "Велика"
 
-#: ../src/swell-foop.vala:261
+#: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "Рахунок: %u"
 
-#: ../src/swell-foop.vala:320
+#: ../src/swell-foop.vala:322
 msgid "Colors"
 msgstr "Кольори"
 
-#: ../src/swell-foop.vala:324
+#: ../src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "Форми і кольори"
 
-#: ../src/swell-foop.vala:458
+#: ../src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -242,11 +246,11 @@ msgstr ""
 "Я хочу зіграти в цю гру!\n"
 "Знаєте, вони всі підсвічуються і якщо натиснути на них, то вони зникають!"
 
-#: ../src/swell-foop.vala:459
+#: ../src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "©2009 Tim Horton"
 
-#: ../src/swell-foop.vala:464
+#: ../src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -254,14 +258,14 @@ msgstr ""
 "Wanderlust <wanderlust@ukr.net\n"
 "Daniel Korostil <ted.korostiled@gmail.com>"
 
-#: ../src/swell-foop.vala:497
+#: ../src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "Облишити цю гру та почати нову?"
 
-#: ../src/swell-foop.vala:498
+#: ../src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "_Скасувати"
 
-#: ../src/swell-foop.vala:499
+#: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Створити гру"
