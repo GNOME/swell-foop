@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([Swell Foop], [3.23.2], [https://bugzilla.gnome.org/],
+AC_INIT([Swell Foop], [3.24.0], [https://bugzilla.gnome.org/],
         [swell-foop], [https://wiki.gnome.org/Apps/Swell%20Foop])
 AC_CONFIG_MACRO_DIR([m4])
 
