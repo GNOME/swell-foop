@@ -96,6 +96,7 @@ public class SwellFoop : Gtk.Application
              * stack.set_transition_duration (500);
              */
             stack.set_visible_child_name ("game");
+            window.key_press_event.connect (key_press_event_cb);
             settings.set_boolean ("first-run", false);
         });
         first_vbox.pack_start (play_button, false);
@@ -175,6 +176,7 @@ public class SwellFoop : Gtk.Application
         else
         {
             vbox.pack_start (clutter_embed, true, true);
+            window.key_press_event.connect (key_press_event_cb);
         }
 
         stage = (Clutter.Stage) clutter_embed.get_stage ();
@@ -209,8 +211,6 @@ public class SwellFoop : Gtk.Application
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "swell-foop", "history"));
         history.load ();
-
-        window.key_press_event.connect (key_press_event_cb);
     }
 
     private bool key_press_event_cb (Gtk.Widget widget, Gdk.EventKey event)
