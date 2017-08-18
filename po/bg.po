@@ -1,10 +1,10 @@
 # Bulgarian translation of swell-foop po-file.
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
-# Copyright (C) 2009, 2010, 2012, 2016 Free Software Foundation, Inc.
+# Copyright (C) 2009, 2010, 2012, 2016, 2017 Free Software Foundation, Inc.
 # Copyright (C) 2010, 2012 Krasimir Chonov <mk2616@abv.bg>.
 # Evgeni Boevski <linkej@yahoo.com>, 2002, 2003.
 # Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2004, 2005, 2006.
-# Alexander Shopov <ash@kambanaria.org>, 2007, 2008, 2009, 2010, 2012, 2016.
+# Alexander Shopov <ash@kambanaria.org>, 2007, 2008, 2009, 2010, 2012, 2016, 2017.
 # Yavor Doganov <yavor@gnu.org>, 2008.
 # Krasimir Chonov <mk2616@abv.bg>, 2010, 2012.
 #
@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-13 20:19+0200\n"
-"PO-Revision-Date: 2016-01-12 18:32+0200\n"
+"POT-Creation-Date: 2017-09-02 08:59+0300\n"
+"PO-Revision-Date: 2017-08-18 21:56+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -95,8 +95,8 @@ msgid "Operation"
 msgstr "Действие"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145
-#: ../src/swell-foop.vala:452 ../src/swell-foop.vala:534
+#: ../src/swell-foop.vala:126 ../src/swell-foop.vala:151
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "Еднакви"
 
@@ -127,6 +127,10 @@ msgstr ""
 "„Еднакви“ се играе бързо. Можете да промените размера на игралното поле за "
 "по-продължителна игра."
 
+#: ../data/swell-foop.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Проектът GNOME"
+
 #: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr ""
@@ -144,7 +148,7 @@ msgstr[1] "%u точки"
 msgid "Game Over!"
 msgstr "Край на играта!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:145
 msgid "_Quit"
 msgstr "_Спиране на програмата"
 
@@ -188,55 +192,55 @@ msgstr ""
 "Повече точки се получават при по-малко натискания."
 
 #: ../src/swell-foop.vala:85
-msgid "Let's _Play"
-msgstr "Да _играем!"
+msgid "Let’s _Play"
+msgstr "Да _играем"
 
-#: ../src/swell-foop.vala:133
+#: ../src/swell-foop.vala:139
 msgid "_Scores"
 msgstr "_Резултати"
 
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:140
 msgid "_Preferences"
 msgstr "_Настройки"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:143
 msgid "_Help"
 msgstr "Помо_щ"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:144
 msgid "_About"
 msgstr "_Относно"
 
-#: ../src/swell-foop.vala:152
+#: ../src/swell-foop.vala:158
 msgid "Start a new game"
 msgstr "Започване на нова игра"
 
-#: ../src/swell-foop.vala:180
+#: ../src/swell-foop.vala:187
 msgid "Small"
 msgstr "Малка"
 
-#: ../src/swell-foop.vala:181
+#: ../src/swell-foop.vala:188
 msgid "Normal"
 msgstr "Нормална"
 
-#: ../src/swell-foop.vala:182
+#: ../src/swell-foop.vala:189
 msgid "Large"
 msgstr "Голяма"
 
-#: ../src/swell-foop.vala:258
+#: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "Резултат: %u "
 
-#: ../src/swell-foop.vala:317
+#: ../src/swell-foop.vala:322
 msgid "Colors"
 msgstr "Цветове"
 
-#: ../src/swell-foop.vala:321
+#: ../src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "Форми и цветове"
 
-#: ../src/swell-foop.vala:455
+#: ../src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -244,11 +248,11 @@ msgstr ""
 "Искам да играя на това!\n"
 "Сещаш се, дето мигат и като ги натиснеш — изчезват!"
 
-#: ../src/swell-foop.vala:456
+#: ../src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Авторски права: © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:461
+#: ../src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr ""
 "Ростислав „zbrox“ Райков <zbrox@i-space.org>\n"
@@ -262,14 +266,14 @@ msgstr ""
 "Докладвайте за грешки на <a href=\"http://gnome.cult.bg/bugs\">http://gnome."
 "cult.bg/bugs</a>"
 
-#: ../src/swell-foop.vala:494
+#: ../src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "Отказване от тази игра и започване на нова?"
 
-#: ../src/swell-foop.vala:495
+#: ../src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "_Отказ"
 
-#: ../src/swell-foop.vala:496
+#: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Нова игра"
