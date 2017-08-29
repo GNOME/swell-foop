@@ -56,7 +56,7 @@ msgstr "És la primera execució"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr "Estalbeix si es mostra o no el diàleg amb consells en la primera execució."
+msgstr "Estableix si es mostra o no el diàleg amb consells en la primera execució."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
@@ -118,7 +118,7 @@ msgid ""
 msgstr ""
 "Elimineu tants quadrats del tauler com sigui possible. Feu clic en un grup de "
 "quadrats del mateix color per fer-los desaparèixer d'una tirada, fent que altres "
-"quadrats caiguin al lloc buit. No és pot eliminar un sol quadrat en una tirada. "
+"quadrats caiguin al lloc buit. No es pot eliminar un sol quadrat en una tirada. "
 "Aconseguireu molts més punts si elimineu molts quadrats d'una tirada així com "
 "per buidar tot el tauler."
 
@@ -190,7 +190,7 @@ msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
 msgstr ""
-"Netejeu tant blocs com pogueu.\n"
+"Netegeu tants blocs com pugueu.\n"
 "Amb menys clics més punts."
 
 #: ../src/swell-foop.vala:85
