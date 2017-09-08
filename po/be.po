@@ -1,14 +1,15 @@
 # Ales Nyakhaychyk <nab@mail.by>, 2003.
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2011, 2013.
 # Kasia Bondarava <kasia.bondarava@gmail.com>, 2012.
+# Yuras Shumovich <shumovichy@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-17 23:23+0000\n"
-"PO-Revision-Date: 2012-09-07 18:13+0300\n"
-"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"POT-Creation-Date: 2017-02-26 01:17+0000\n"
+"PO-Revision-Date: 2017-09-08 15:40+0300\n"
+"Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
@@ -16,46 +17,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Virtaal 0.7.0\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
+#: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
 msgstr "Матыў аздаблення"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
+#: ../data/org.gnome.swell-foop.gschema.xml.h:2
 msgid "The title of the tile theme to use."
 msgstr "Назва матыва аздаблення квадратаў."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.swell-foop.gschema.xml.h:3
 msgid "Board size"
 msgstr "Памер дошкі"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
+#: ../data/org.gnome.swell-foop.gschema.xml.h:4
 msgid "The size of the game board."
 msgstr "Памер дошкі для гульні."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
+#: ../data/org.gnome.swell-foop.gschema.xml.h:5
 msgid "Board color count"
 msgstr "Колькасць колераў дошкі"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
+#: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
 msgstr "Колькасць колераў квадратаў, ужытых у гульні."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
+#: ../data/org.gnome.swell-foop.gschema.xml.h:7
+msgid "Is this the first run"
+msgstr "Ці гэта першы запуск"
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr "Ці паказваць дыялог з парадамі пры запуску."
+
+#: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
 msgstr "Інтэнсіўная анімацыя"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
+#: ../data/org.gnome.swell-foop.gschema.xml.h:10
 msgid "Use more flashy, but slower, animations."
 msgstr "Ужыць ярчэйшую, але і маруднейшую анімацыю."
 
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:398
-#: ../src/swell-foop.vala:461
-msgid "Swell Foop"
-msgstr "Swell Foop"
+#: ../data/preferences.ui.h:1
+msgid "Preferences"
+msgstr "Настройкі"
 
 #: ../data/preferences.ui.h:2
 msgid "_Board size:"
@@ -85,17 +92,48 @@ msgstr "І_нтэнсіўная анімацыя"
 msgid "Operation"
 msgstr "Дзеянне"
 
-#: ../data/swell-foop.desktop.in.in.h:2
+#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Ачысціце экран, выдаляючы групы каляровых квадратаў розных формаў"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: ../data/swell-foop.appdata.xml.in.h:3
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Выдаліце з дашкі як мага больш плітак. Пстрыкніце па групе плітак аднаго "
+"колеру, і яна знікне адным махам, а іншыя пліткі ўпадуць на вольнае месца. "
+"Выдаліць адзіночную плітку не атрымаецца. За ачыстку вялікай групы плітак і "
+"ўсёй дашкі даецца значна болей ачкоў."
+
+#: ../data/swell-foop.appdata.xml.in.h:4
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Гульня Swell Foop вельмі хуткая, яле можна падоўжыць яе, павялічыўшы памер "
+"дашкі."
+
+#: ../data/swell-foop.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Праект GNOME"
+
+#: ../data/swell-foop.desktop.in.h:3
 msgid "game;logic;board;same;matching;"
 msgstr ""
 "гульня;логіка;лагічная гульня;настольная гульня;аднолькавае;адпаведнае;"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:443
+#: ../src/game-view.vala:472
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -103,111 +141,136 @@ msgstr[0] "%u бал"
 msgstr[1] "%u балы"
 msgstr[2] "%u балаў"
 
-#: ../src/game-view.vala:444
-#, c-format
+#: ../src/game-view.vala:473
 msgid "Game Over!"
 msgstr "Гульня скончана!"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "_Новая гульня"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
-msgstr "_Рэкорды"
-
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "_Настройкі"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "_Дапамога"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "_Аб праграме"
-
-#: ../src/swell-foop.vala:88
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
 msgid "_Quit"
 msgstr "_Выйсці"
 
-#: ../src/swell-foop.vala:98
-msgid "_New"
-msgstr "_Новая"
-
-#: ../src/swell-foop.vala:135
-msgid "Small"
-msgstr "Малы"
-
-#: ../src/swell-foop.vala:136
-msgid "Normal"
-msgstr "Звычайны"
-
-#: ../src/swell-foop.vala:137
-msgid "Large"
-msgstr "Вялікі"
-
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
-#, c-format
-msgid "Score: %4u "
-msgstr "Лік: %4u "
-
-#: ../src/swell-foop.vala:264
-msgid "Colors"
-msgstr "Колеры"
-
-#: ../src/swell-foop.vala:268
-msgid "Shapes and Colors"
-msgstr "Формы і колеры"
-
-#: ../src/swell-foop.vala:401
-msgid ""
-"I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
-msgstr ""
-"Цудоўная гульня!\n"
-"Усё свеціцца, а ты пстрыкаеш, каб яно знікала!\n"
-"\n"
-"Swell Foop - складовая частка пакунка гульняў GNOME."
-
-#: ../src/swell-foop.vala:402
-msgid "Copyright © 2009 Tim Horton"
-msgstr "Аўтарскія правы 2009 Tim Horton"
-
-#: ../src/swell-foop.vala:408
-msgid "translator-credits"
-msgstr ""
-"Ales Nyakhaychyk <nab@mail.by>\n"
-"Ihar Hrachyshka <ihar.hrachyshka@gmail.com>"
-
-#: ../src/swell-foop.vala:411
-msgid "GNOME Games web site"
-msgstr "Сеціўная пляцоўка гульняў GNOME"
-
-#: ../src/swell-foop.vala:496
+#: ../src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Новая гульня"
 
-#: ../src/swell-foop.vala:511
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_Добра"
+
+#: ../src/score-dialog.vala:44
 msgid "Size:"
 msgstr "Памер:"
 
-#: ../src/swell-foop.vala:536
+#: ../src/score-dialog.vala:69
 msgid "Date"
 msgstr "Дата"
 
-#: ../src/swell-foop.vala:539
+#: ../src/score-dialog.vala:72
 msgid "Score"
 msgstr "Лік"
 
-#: ../src/swell-foop.vala:619
+#: ../src/score-dialog.vala:166
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u колер"
 msgstr[1] "%u × %u, %u колеры"
 msgstr[2] "%u × %u, %u колераў"
+
+#: ../src/swell-foop.vala:79
+msgid "Welcome to Swell Foop"
+msgstr "Вітаем у Swell Foop"
+
+#: ../src/swell-foop.vala:82
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"Ачысціць як мага больш блокаў.\n"
+"Менш пстрычак - больш ачкоў. "
+
+#: ../src/swell-foop.vala:85
+msgid "Let’s _Play"
+msgstr "Давайце _гуляць"
+
+#: ../src/swell-foop.vala:138
+msgid "_Scores"
+msgstr "_Рэкорды"
+
+#: ../src/swell-foop.vala:139
+msgid "_Preferences"
+msgstr "_Настройкі"
+
+#: ../src/swell-foop.vala:142
+msgid "_Help"
+msgstr "_Дапамога"
+
+#: ../src/swell-foop.vala:143
+msgid "_About"
+msgstr "_Аб праграме"
+
+#: ../src/swell-foop.vala:157
+msgid "Start a new game"
+msgstr "Распачаць новую гульню"
+
+#: ../src/swell-foop.vala:185
+msgid "Small"
+msgstr "Малы"
+
+#: ../src/swell-foop.vala:186
+msgid "Normal"
+msgstr "Звычайны"
+
+#: ../src/swell-foop.vala:187
+msgid "Large"
+msgstr "Вялікі"
+
+#: ../src/swell-foop.vala:263
+#, c-format
+msgid "Score: %u"
+msgstr "Лік: %u"
+
+#: ../src/swell-foop.vala:322
+msgid "Colors"
+msgstr "Колеры"
+
+#: ../src/swell-foop.vala:326
+msgid "Shapes and Colors"
+msgstr "Формы і колеры"
+
+#: ../src/swell-foop.vala:460
+msgid ""
+"I want to play that game!\n"
+"You know, they all light-up and you click on them and they vanish!"
+msgstr ""
+"Цудоўная гульня!\n"
+"Усё свеціцца, а ты пстрыкаеш, каб яно знікала!"
+
+#: ../src/swell-foop.vala:461
+msgid "Copyright © 2009 Tim Horton"
+msgstr "Аўтарскія правы 2009 Tim Horton"
+
+#: ../src/swell-foop.vala:466
+msgid "translator-credits"
+msgstr ""
+"Ales Nyakhaychyk <nab@mail.by>\n"
+"Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"Юрась Шумовіч <shumovichy@gmail.com>"
+
+#: ../src/swell-foop.vala:499
+msgid "Abandon this game to start a new one?"
+msgstr "Кінуць гэтую гульню і распачаць новую?"
+
+#: ../src/swell-foop.vala:500
+msgid "_Cancel"
+msgstr "_Скасаваць"
+
+#: ../src/swell-foop.vala:501
+msgid "_New Game"
+msgstr "_Новая гульня"
+
+#~ msgid "_New"
+#~ msgstr "_Новая"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Сеціўная пляцоўка гульняў GNOME"
