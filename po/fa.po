@@ -6,15 +6,15 @@
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2006.
 # Danial Behzadi <dani.behzi@gmail.com>, 2012.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013, 2016.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013, 2016, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:37+0000\n"
-"PO-Revision-Date: 2016-09-13 23:47+0430\n"
+"POT-Creation-Date: 2017-04-06 10:08+0000\n"
+"PO-Revision-Date: 2017-09-22 23:19+0330\n"
 "Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
 msgid "The theme to use"
@@ -64,7 +64,7 @@ msgstr "پویانمایی زیبا"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:10
 msgid "Use more flashy, but slower, animations."
-msgstr "استفاده از پویانمایی پر زرق و برق، ولی آهسته‌تر"
+msgstr "استفاده از پویانمایی پر زرق و برق، ولی آهسته‌تر."
 
 #: ../data/preferences.ui.h:1
 msgid "Preferences"
@@ -99,8 +99,8 @@ msgid "Operation"
 msgstr "عملیات"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:145 ../src/swell-foop.vala:452
-#: ../src/swell-foop.vala:534
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150 ../src/swell-foop.vala:457
+#: ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "سوئل‌فوپ"
 
@@ -149,7 +149,7 @@ msgstr[1] "%Iu امتیازات"
 msgid "Game Over!"
 msgstr "بازی تمام شد!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:139
+#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
 msgid "_Quit"
 msgstr "_خروج"
 
@@ -192,55 +192,55 @@ msgstr ""
 "هر تعداد خانه‌ای که می‌توانید را خالی کنید. کلیک‌های کمتر به معنی امتیاز بیشتر است."
 
 #: ../src/swell-foop.vala:85
-msgid "Let's _Play"
+msgid "Let’s _Play"
 msgstr "بریم _بازی"
 
-#: ../src/swell-foop.vala:133
+#: ../src/swell-foop.vala:138
 msgid "_Scores"
 msgstr "امتیا_زها"
 
-#: ../src/swell-foop.vala:134
+#: ../src/swell-foop.vala:139
 msgid "_Preferences"
 msgstr "_ترجیحات"
 
-#: ../src/swell-foop.vala:137
+#: ../src/swell-foop.vala:142
 msgid "_Help"
 msgstr "_راهنما"
 
-#: ../src/swell-foop.vala:138
+#: ../src/swell-foop.vala:143
 msgid "_About"
 msgstr "_درباره"
 
-#: ../src/swell-foop.vala:152
+#: ../src/swell-foop.vala:157
 msgid "Start a new game"
 msgstr "شروع بازی جدید"
 
-#: ../src/swell-foop.vala:180
+#: ../src/swell-foop.vala:185
 msgid "Small"
 msgstr "کوچک"
 
-#: ../src/swell-foop.vala:181
+#: ../src/swell-foop.vala:186
 msgid "Normal"
 msgstr "معمولی"
 
-#: ../src/swell-foop.vala:182
+#: ../src/swell-foop.vala:187
 msgid "Large"
 msgstr "بزرگ"
 
-#: ../src/swell-foop.vala:258
+#: ../src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "امتیاز: %Iu"
 
-#: ../src/swell-foop.vala:317
+#: ../src/swell-foop.vala:322
 msgid "Colors"
 msgstr "رنگ‌ها"
 
-#: ../src/swell-foop.vala:321
+#: ../src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "طرح‌ها و رنگ‌ها"
 
-#: ../src/swell-foop.vala:455
+#: ../src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -248,25 +248,25 @@ msgstr ""
 "من می‌خوام آن بازی را انجام دهم!\n"
 "می‌دانی، آن‌ها همه روشن می‌شوند و تو رویشان کلیک می‌کنی و همه ناپدید می‌شوند!"
 
-#: ../src/swell-foop.vala:456
+#: ../src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "حق رونوشت © ۲۰۰۹ تیم هورتون"
 
-#: ../src/swell-foop.vala:461
+#: ../src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr ""
 "آرش موسوی <mousavi.arash@gmail.com>\n"
 "دانیال بهزادی <dani.behzi@gmail.com>"
 
-#: ../src/swell-foop.vala:494
+#: ../src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "این بازی را برای شروع بازی دیگری ترک می‌کنید؟"
 
-#: ../src/swell-foop.vala:495
+#: ../src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "_لغو"
 
-#: ../src/swell-foop.vala:496
+#: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "بازی _جدید"
 
