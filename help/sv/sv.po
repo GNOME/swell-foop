@@ -1,11 +1,14 @@
+# Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Swell-foop doc\n"
-"POT-Creation-Date: 2016-11-08 07:45+0000\n"
+"POT-Creation-Date: 2017-04-06 10:08+0000\n"
 "PO-Revision-Date: 2017-02-11 14:23+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
-"Language-Team: Swedish\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,62 +25,6 @@ msgstr ""
 "Erik Sköldås <erik.skoldas@tele2.se>, 2015\n"
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:155
-msgctxt "_"
-msgid ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
-msgstr ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:170
-msgctxt "_"
-msgid "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
-msgstr ""
-"external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:178
-msgctxt "_"
-msgid "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
-msgstr ""
-"external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:186
-msgctxt "_"
-msgid "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
-msgstr ""
-"external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:194
-msgctxt "_"
-msgid "external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
-msgstr ""
-"external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:20
@@ -247,6 +194,18 @@ msgstr ""
 msgid "<application>Swell Foop</application> at the beginning of a new game."
 msgstr "<application>Swell Foop</application> i början av ett nytt spel."
 
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:155
+msgctxt "_"
+msgid ""
+"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+msgstr ""
+"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+
 #. (itstool) path: sect1/para
 #: C/index.docbook:161
 msgid ""
@@ -273,21 +232,65 @@ msgstr ""
 "utrymmet. Om en hel kolumn töms kommer objekten att glida åt vänster för att "
 "fylla tomrummet."
 
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:170
+msgctxt "_"
+msgid "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
+msgstr ""
+"external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
+
 #. (itstool) path: entry/para
 #: C/index.docbook:166
 msgid "1. Eliminate groups of two or more <_:screenshot-1/>"
 msgstr "1. Eliminera grupper om två eller flera <_:screenshot-1/>"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:178
+msgctxt "_"
+msgid "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
+msgstr ""
+"external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:174
 msgid "2. Objects fall down to fill the gaps <_:screenshot-1/>"
 msgstr "2. Objekten faller ner för att fylla tomrummen <_:screenshot-1/>"
 
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:186
+msgctxt "_"
+msgid "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
+msgstr ""
+"external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
+
 #. (itstool) path: entry/para
 #: C/index.docbook:182
 msgid "3. Objects move left to fill empty columns <_:screenshot-1/>"
 msgstr ""
 "3. Objekten flyttas åt vänster för att fylla tomma kolumner <_:screenshot-1/>"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:194
+msgctxt "_"
+msgid "external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
+msgstr ""
+"external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:190
