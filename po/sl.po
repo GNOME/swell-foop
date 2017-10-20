@@ -5,7 +5,7 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006–2007.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007–2017.
+# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2017.
 #
 msgid ""
 msgstr ""
@@ -47,7 +47,7 @@ msgstr "Števec barv plošče"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:6
 msgid "The number of colors of tiles to use in the game."
-msgstr "Število barv ploščic uporabljenih v igri."
+msgstr "Število barv ploščic, uporabljenih v igri."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:7
 msgid "Is this the first run"
@@ -63,7 +63,7 @@ msgstr "Polno animiranje"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:10
 msgid "Use more flashy, but slower, animations."
-msgstr "Uporabi lepe animacije."
+msgstr "Uporabi lepo animiranje, ki lahko vpliva na hitrost izvajanja."
 
 #: ../data/preferences.ui.h:1
 msgid "Preferences"
@@ -117,15 +117,14 @@ msgid ""
 msgstr ""
 "Cilj igre je odstraniti čim več ploščic na igralni plošči. S klikom na "
 "skupino kvadratov enake barve, ti izginejo, preostali pa zapolnijo "
-"izpraznjena polja. Ni mogoče odstraniti le enega polja, sicer pa je "
-"dodeljenih več točk, če je barvno polje veliko."
+"izpraznjena polja. Ni mogoče odstraniti le enega polja, z večanjem "
+"velikosti barvnega polja, pa se povečuje tudi število dodeljenih točk."
 
 #: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
-msgstr ""
-"Pravi Pavliha je dinamična igra, ki jo določa velikost igralne površine."
+msgstr "Pravi Pavliha je dinamična igra, ki jo določa velikost igralne površine."
 
 #: ../data/swell-foop.appdata.xml.in.h:5
 msgid "The GNOME Project"
