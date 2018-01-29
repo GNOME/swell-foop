@@ -22,7 +22,7 @@ public class ScoreDialog : Gtk.Dialog
         this.history = history;
         history.entry_added.connect (entry_added_cb);
         this.selected_entry = selected_entry;
-
+        this.set_title (_("High Scores"));
         if (show_quit)
         {
             add_button (_("_Quit"), Gtk.ResponseType.CLOSE);
