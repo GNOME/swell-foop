@@ -316,6 +316,27 @@ public class GameView : Clutter.Group
         game_actors.add_child (text);
         text.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.BOTH, 0.5f));
         text.animate_final_score (game.score);
+
+        var play_again_button = new Gtk.Button.with_mnemonic (_("_Play Again"));
+        play_again_button.width_request = 130;
+        play_again_button.height_request = 40;
+        play_again_button.action_name = "app.new-game";
+        play_again_button.show ();
+
+        var style = play_again_button.get_style_context ();
+        style.add_class ("suggested-action");
+
+        var button_actor = new GtkClutter.Actor.with_contents (play_again_button);
+        game_actors.add_child (button_actor);
+        button_actor.visible = true;
+        button_actor.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.X_AXIS, 0.5f));
+        button_actor.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.Y_AXIS, 0.88f));
+
+        button_actor.set_easing_mode (Clutter.AnimationMode.EASE_OUT_ELASTIC);
+        button_actor.set_easing_duration (2000);
+        button_actor.z_position = -50;
+        button_actor.set_opacity (255);
+
     }
 }
 
@@ -467,7 +488,7 @@ public class ScoreActor : Clutter.Group
 
     public void animate_final_score (uint points)
     {
-        label.set_font_name ("Bitstrem Vera Sans 40");
+        label.set_font_name ("Bitstrem Vera Sans 30");
         var points_label = ngettext (/* Label showing the number of points at the end of the game */
                                      "%u point", "%u points", points).printf (points);
         label.set_markup ("<b>%s</b>\n%s".printf (_("Game Over!"), points_label));
