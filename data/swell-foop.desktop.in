@@ -1,7 +1,9 @@
 [Desktop Entry]
-_Name=Swell Foop
-_Comment=Clear the screen by removing groups of colored and shaped tiles
-_Keywords=game;logic;board;same;matching;
+Name=Swell Foop
+Comment=Clear the screen by removing groups of colored and shaped tiles
+# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+Keywords=game;logic;board;same;matching;
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=swell-foop
 Exec=swell-foop
 Terminal=false
