@@ -268,9 +268,3 @@ msgstr "_Скасаваць"
 #: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Новая гульня"
-
-#~ msgid "_New"
-#~ msgstr "_Новая"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Сеціўная пляцоўка гульняў GNOME"

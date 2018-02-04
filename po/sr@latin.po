@@ -19,8 +19,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:1
@@ -117,9 +117,9 @@ msgid ""
 msgstr ""
 "Uklonite što je više moguće kvadrata sa table. Pritisnite na grupu kvadrata "
 "iste boje kako bi svi nestali u jednoj lančanoj reakciji, dovodeći do "
-"premeštanja ostalih kvadrata na njihova mesta. Uklanjanje samo jednog kvadrata "
-"nije moguće. Dobijate više poena kada očistite veću grupu kvadrata, a takođe "
-"i za čišćenje čitave table."
+"premeštanja ostalih kvadrata na njihova mesta. Uklanjanje samo jednog "
+"kvadrata nije moguće. Dobijate više poena kada očistite veću grupu kvadrata, "
+"a takođe i za čišćenje čitave table."
 
 #: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
@@ -197,7 +197,6 @@ msgstr ""
 "Manje pritisaka znači više poena."
 
 #: ../src/swell-foop.vala:85
-#| msgid "Let's _Play"
 msgid "Let’s _Play"
 msgstr "_Igraj"
 
@@ -279,6 +278,3 @@ msgstr "_Otkaži"
 #: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Nova igra"
-
-#~ msgid "2"
-#~ msgstr "2"

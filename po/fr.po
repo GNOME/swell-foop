@@ -213,7 +213,6 @@ msgstr ""
 "Moins vous cliquez, plus vous obtenez de points."
 
 #: ../src/swell-foop.vala:85
-#| msgid "Let's _Play"
 msgid "Let’s _Play"
 msgstr "_Jouer"
 

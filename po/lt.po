@@ -281,6 +281,3 @@ msgstr "_Atsisakyti"
 #: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Naujas žaidimas"
-
-#~ msgid "2"
-#~ msgstr "2"

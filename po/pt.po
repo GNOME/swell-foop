@@ -272,6 +272,3 @@ msgstr "_Cancelar"
 #: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Novo jogo"
-
-#~ msgid "2"
-#~ msgstr "2"

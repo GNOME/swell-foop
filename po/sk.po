@@ -279,12 +279,3 @@ msgstr "_Zrušiť"
 #: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Nová hra"
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "_New"
-#~ msgstr "_Nová"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Webové stránky Hier GNOME"

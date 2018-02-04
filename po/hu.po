@@ -198,7 +198,6 @@ msgstr ""
 "A kevesebb kattintás több pontot ér."
 
 #: ../src/swell-foop.vala:85
-#| msgid "Let's _Play"
 msgid "Let’s _Play"
 msgstr "_Játsszunk"
 
@@ -281,4 +280,3 @@ msgstr "Mé_gse"
 #: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "Ú_j játék"
-

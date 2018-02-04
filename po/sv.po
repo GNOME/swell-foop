@@ -141,7 +141,6 @@ msgstr "spel;logik;brädspel;samma;matchning;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/swell-foop.desktop.in:8
-#| msgid "Swell Foop"
 msgid "swell-foop"
 msgstr "swell-foop"
 
@@ -291,6 +290,3 @@ msgstr "Överge detta spel för att påbörja ett nytt?"
 #: src/swell-foop.vala:498
 msgid "_Cancel"
 msgstr "_Avbryt"
-
-#~ msgid "Start a new game"
-#~ msgstr "Starta ett nytt spel"

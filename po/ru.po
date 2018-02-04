@@ -278,12 +278,3 @@ msgstr "_Отмена"
 #: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Новая игра"
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "_New"
-#~ msgstr "_Новая игра"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Веб-сайт GNOME Games"

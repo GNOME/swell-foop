@@ -117,14 +117,15 @@ msgid ""
 msgstr ""
 "Cilj igre je odstraniti čim več ploščic na igralni plošči. S klikom na "
 "skupino kvadratov enake barve, ti izginejo, preostali pa zapolnijo "
-"izpraznjena polja. Ni mogoče odstraniti le enega polja, z večanjem "
-"velikosti barvnega polja, pa se povečuje tudi število dodeljenih točk."
+"izpraznjena polja. Ni mogoče odstraniti le enega polja, z večanjem velikosti "
+"barvnega polja, pa se povečuje tudi število dodeljenih točk."
 
 #: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
-msgstr "Pravi Pavliha je dinamična igra, ki jo določa velikost igralne površine."
+msgstr ""
+"Pravi Pavliha je dinamična igra, ki jo določa velikost igralne površine."
 
 #: ../data/swell-foop.appdata.xml.in.h:5
 msgid "The GNOME Project"
@@ -273,12 +274,3 @@ msgstr "_Prekliči"
 #: ../src/swell-foop.vala:501
 msgid "_New Game"
 msgstr "_Nova Igra"
-
-#~ msgid "Let's _Play"
-#~ msgstr "Začnimo z igranjem"
-
-#~ msgid "_New"
-#~ msgstr "_Nova"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Spletna stran iger GNOME"

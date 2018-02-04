@@ -13,7 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-foop&keywords=I18N+L10N&component=general\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"foop&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-08-17 23:23+0000\n"
 "PO-Revision-Date: 2013-09-16 14:16+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
@@ -96,7 +97,9 @@ msgstr "隣接する同じ色や形のタイルをまとめて、画面から消
 
 #: ../data/swell-foop.desktop.in.in.h:3
 msgid "game;logic;board;same;matching;"
-msgstr "game;logic;board;same;matching;ゲーム;論理;ロジック;ボード;さめがめ;色合わせ;puzzle;パズル;"
+msgstr ""
+"game;logic;board;same;matching;ゲーム;論理;ロジック;ボード;さめがめ;色合わせ;"
+"puzzle;パズル;"
 
 #. Label showing the number of points at the end of the game
 #: ../src/game-view.vala:443
@@ -171,7 +174,8 @@ msgid ""
 "\n"
 "Swell Foop is a part of GNOME Games."
 msgstr ""
-"ゲームで遊びたい! 知ってのとおり、同じ色の玉をクリックすると消えてなくなります!\n"
+"ゲームで遊びたい! 知ってのとおり、同じ色の玉をクリックすると消えてなくなりま"
+"す!\n"
 "\n"
 "Swell Foopは GNOME ゲーム集の一部です。"
 

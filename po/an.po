@@ -174,7 +174,6 @@ msgstr[0] "%u × %u, %u color"
 msgstr[1] "%u × %u, %u colors"
 
 #: ../src/swell-foop.vala:79
-#| msgid "Swell Foop"
 msgid "Welcome to Swell Foop"
 msgstr "Bienveniu a Swell Foop"
 
@@ -236,11 +235,6 @@ msgid "Shapes and Colors"
 msgstr "Colors y formas"
 
 #: ../src/swell-foop.vala:458
-#| msgid ""
-#| "I want to play that game!\n"
-#| "You know, they all light-up and you click on them and they vanish!\n"
-#| "\n"
-#| "Swell Foop is a part of GNOME Games."
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -267,9 +261,3 @@ msgstr "_Cancelar"
 #: ../src/swell-foop.vala:499
 msgid "_New Game"
 msgstr "Chuego _nuevo"
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Pachina web d'os chuegos de GNOME"

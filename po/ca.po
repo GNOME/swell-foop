@@ -56,7 +56,8 @@ msgstr "És la primera execució"
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:8
 msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr "Estableix si es mostra o no el diàleg amb consells en la primera execució."
+msgstr ""
+"Estableix si es mostra o no el diàleg amb consells en la primera execució."
 
 #: ../data/org.gnome.swell-foop.gschema.xml.h:9
 msgid "Zealous animation"
@@ -99,8 +100,8 @@ msgid "Operation"
 msgstr "Operacions"
 
 #: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150 ../src/swell-foop.vala:457
-#: ../src/swell-foop.vala:539
+#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
+#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "Atac salvatge"
 
@@ -110,25 +111,25 @@ msgstr "Netegeu la pantalla suprimint grups de fitxes de colors"
 
 #: ../data/swell-foop.appdata.xml.in.h:3
 msgid ""
-"Remove as many squares as possible from the board. Click on a group of squares "
-"of the same color to make them all disappear in one fell swoop, causing other "
-"squares to fall into place. It is not possible to remove a single square at a "
-"time. You get far more points for clearing a larger group of squares, and also "
-"for clearing the entire board."
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
 msgstr ""
-"Elimineu tants quadrats del tauler com sigui possible. Feu clic en un grup de "
-"quadrats del mateix color per fer-los desaparèixer d'una tirada, fent que altres "
-"quadrats caiguin al lloc buit. No es pot eliminar un sol quadrat en una tirada. "
-"Aconseguireu molts més punts si elimineu molts quadrats d'una tirada així com "
-"per buidar tot el tauler."
+"Elimineu tants quadrats del tauler com sigui possible. Feu clic en un grup "
+"de quadrats del mateix color per fer-los desaparèixer d'una tirada, fent que "
+"altres quadrats caiguin al lloc buit. No es pot eliminar un sol quadrat en "
+"una tirada. Aconseguireu molts més punts si elimineu molts quadrats d'una "
+"tirada així com per buidar tot el tauler."
 
 #: ../data/swell-foop.appdata.xml.in.h:4
 msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer by "
-"changing the board size."
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
 msgstr ""
-"L'Atac salvatge és sempre un joc ràpid, però podeu allargar-lo canviant la mida "
-"del tauler."
+"L'Atac salvatge és sempre un joc ràpid, però podeu allargar-lo canviant la "
+"mida del tauler."
 
 #: ../data/swell-foop.appdata.xml.in.h:5
 msgid "The GNOME Project"
