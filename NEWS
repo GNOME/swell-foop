@@ -1,3 +1,12 @@
+Swell Foop 3.27.90
+==================
+
+* Minor user interface updates (Robert Roth)
+* Gettext migration (Robert Roth)
+* Added meson build (Robert Roth)
+* Obsolete translations cleanup (Piotr Drąg)
+* Updated translations
+
 Swell Foop 3.27.2
 ==================
 
