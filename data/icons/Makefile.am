@@ -7,14 +7,14 @@ icon256dir=$(datadir)/icons/hicolor/256x256/apps
 icon512dir=$(datadir)/icons/hicolor/512x512/apps
 iconsymbolicdir=$(datadir)/icons/hicolor/symbolic/apps
 
-icon16_DATA = 16x16/swell-foop.png
-icon22_DATA = 22x22/swell-foop.png
-icon24_DATA = 24x24/swell-foop.png
-icon32_DATA = 32x32/swell-foop.png
-icon48_DATA = 48x48/swell-foop.png
-icon256_DATA = 256x256/swell-foop.png
-icon512_DATA = 512x512/swell-foop.png
-iconsymbolic_DATA = symbolic/swell-foop-symbolic.svg
+icon16_DATA = hicolor/16x16/swell-foop.png
+icon22_DATA = hicolor/22x22/swell-foop.png
+icon24_DATA = hicolor/24x24/swell-foop.png
+icon32_DATA = hicolor/32x32/swell-foop.png
+icon48_DATA = hicolor/48x48/swell-foop.png
+icon256_DATA = hicolor/256x256/swell-foop.png
+icon512_DATA = hicolor/512x512/swell-foop.png
+iconsymbolic_DATA = hicolor/symbolic/swell-foop-symbolic.svg
 
 EXTRA_DIST = \
 	$(icon16_DATA) \
