@@ -16,6 +16,7 @@ $(desktop_DATA): $(desktop_in_files)
 
 appstream_in_files = swell-foop.appdata.xml.in
 appstream_XML = $(appstream_in_files:.xml.in=.xml)
+@APPSTREAM_XML_RULES@
 $(appstream_XML): $(appstream_in_files)
 	$(AM_V_GEN)$(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
