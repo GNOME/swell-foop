@@ -7,7 +7,10 @@ install_subdir('icons',
 # Themes
 install_subdir('themes',
   install_dir: pkgdatadir,
-  exclude_files: [ '**/Makefile', '**/Makefile.in', '**/Makefile.am', '**/.gitignore' ],
+  exclude_files: [ 'Makefile', 'Makefile.in', 'Makefile.am', '.gitignore',
+                   'colors/Makefile', 'colors/Makefile.in', 'colors/Makefile.am', 'colors/.gitignore',
+                   'shapesandcolors/Makefile', 'shapesandcolors/Makefile.in', 
+                   'shapesandcolors/Makefile.am', 'shapesandcolors/.gitignore', ],
 )
 
 # UI files
