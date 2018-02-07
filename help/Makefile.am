@@ -14,4 +14,6 @@ HELP_FILES = \
 
 HELP_LINGUAS = ca cs de el en_GB es eu fr hu it oc pl pt_BR ru sl sr sr@latin sv zh_CN
 
+EXTRA_DIST = LINGUAS
+
 -include $(top_srcdir)/git.mk
