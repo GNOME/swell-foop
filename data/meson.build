@@ -1,6 +1,6 @@
 # Icons
 install_subdir('icons',
-  install_dir: join_paths(get_option('datadir')),
+  install_dir: datadir,
   exclude_files: [ 'Makefile', 'Makefile.in', 'Makefile.am', 'icon-source.svg','.gitignore' ],
 )
 
@@ -22,28 +22,31 @@ install_data('swell-foop.css',
   install_dir: pkgdatadir,
 )
 
+desktop = 'swell-foop.desktop'
+
 # Desktop file
 i18n.merge_file(
-  input: 'swell-foop.desktop.in',
-  output: 'swell-foop.desktop',
+  input: desktop + '.in',
+  output: desktop,
   type: 'desktop',
   po_dir: podir,
   install: true,
-  install_dir: join_paths(get_option('datadir'), 'applications'),
+  install_dir: join_paths(datadir, 'applications'),
 )
+
+appdata = 'swell-foop.appdata.xml'
 
 # Appdata
 i18n.merge_file(
-  input: 'swell-foop.appdata.xml.in',
-  output: 'swell-foop.appdata.xml',
-  type: 'xml',
+  input: appdata + '.in',
+  output: appdata,
   po_dir: podir,
   install: true,
-  install_dir: join_paths(get_option('datadir'), 'metainfo')
+  install_dir: join_paths(datadir, 'metainfo')
 )
 
 # Gschema
 install_data('org.gnome.swell-foop.gschema.xml',
-  install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas'),
+  install_dir: join_paths(datadir, 'glib-2.0', 'schemas'),
 )
 

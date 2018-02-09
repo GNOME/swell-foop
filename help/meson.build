@@ -1,9 +1,9 @@
-swell_foop_help_pages = [
+help_pages = [
   'legal.xml',
   'index.docbook',
 ]
 
-swell_foop_help_media = [
+help_media = [
   'figures/play1.png',
   'figures/play2.png',
   'figures/play3.png',
@@ -12,6 +12,6 @@ swell_foop_help_media = [
 ]
 
 gnome.yelp(meson.project_name(),
-  sources: swell_foop_help_pages,
-  media: swell_foop_help_media
+  sources: help_pages,
+  media: help_media
 )

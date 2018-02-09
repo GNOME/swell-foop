@@ -16,20 +16,20 @@ pkgdatadir = join_paths (datadir, 'swell-foop')
 
 glib_min_version = '2.36'
 
-glib = dependency('glib-2.0', version: '>= ' + glib_min_version)
-gmodule = dependency('gmodule-2.0')
-gobject = dependency('gobject-2.0', version: '>= ' + glib_min_version)
-gtk = dependency('gtk+-3.0', version: '>= 3.12')
-clutter = dependency('clutter-1.0', version: '>= 1.14.0')
-clutter_gtk = dependency('clutter-gtk-1.0', version: '>= 1.5.0')
+glib_dep = dependency('glib-2.0', version: '>= ' + glib_min_version)
+gmodule_dep = dependency('gmodule-2.0')
+gobject_dep = dependency('gobject-2.0', version: '>= ' + glib_min_version)
+gtk_dep = dependency('gtk+-3.0', version: '>= 3.12')
+clutter_dep = dependency('clutter-1.0', version: '>= 1.14.0')
+clutter_gtk_dep = dependency('clutter-gtk-1.0', version: '>= 1.5.0')
 
 # Check for compilers
 valac = meson.get_compiler('vala')
 cc = meson.get_compiler('c')
 
 # Libraries
-libmath = cc.find_library('m')
-posix = valac.find_library('posix')
+libmath_dep = cc.find_library('m')
+posix_dep = valac.find_library('posix')
 
 # Configuration
 conf = configuration_data()
@@ -39,11 +39,7 @@ conf.set_quoted('LOCALEDIR', localedir)
 conf.set_quoted('DATADIR', pkgdatadir)
 conf.set_quoted('VERSION', meson.project_version())
 
-configure_file(output: 'config.h', configuration: conf)
-config_h_dir = include_directories('.')
-
-# Extra scripts
-meson.add_install_script('meson_post_install.py')
+config_h_inc = include_directories('.')
 
 # Subdirs
 subdir('data')
@@ -51,4 +47,6 @@ subdir('src')
 subdir('help')
 subdir('po')
 
-
+config_file = configure_file(output: 'config.h', configuration: conf)
+# Extra scripts
+meson.add_install_script('meson_post_install.py', datadir)
