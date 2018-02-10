@@ -15,6 +15,8 @@
  *  events.
  */
 
+using Config;
+
 public class GameView : Clutter.Group
 {
     private TileActor highlighted = null;
@@ -358,12 +360,12 @@ public class Theme : Object
         try
         {
             for (int i = 0; i < 4; i++) {
-                 var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (DATADIR, "themes", name, colors[i] + ".svg"));
+                 var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, colors[i] + ".svg"));
                 textures[i] = new Clutter.Image ();
                 textures[i].set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
                     pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
             }
-            var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (DATADIR, "themes", name, "highlight.svg"));
+            var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, "highlight.svg"));
             cursor = new Clutter.Image ();
             cursor.set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
                pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());

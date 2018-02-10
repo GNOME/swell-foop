@@ -18,11 +18,10 @@ deps = [
   clutter_gtk_dep,
 ]
 
-c_flags = [ 
-  '-DVERSION="@0@"'.format (meson.project_version ()),
-  '-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()),
-  '-DLOCALEDIR="@0@"'.format (localedir),
-  '-DDATADIR="@0@"'.format (pkgdatadir),
+c_flags = [
+  '-DDATADIR="@0@"'.format(pkgdatadir),
+  '-DLOCALEDIR="@0@"'.format(localedir),
+  '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())
 ]
 
 executable('swell-foop', sources,
