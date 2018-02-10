@@ -465,7 +465,7 @@ public class SwellFoop : Gtk.Application
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
                                "logo-icon-name", "swell-foop",
-                               "website", "https://wiki.gnome.org/Apps/Swell%20Foop",
+                               "website", Config.PACKAGE_URL,
                                null);
     }
 

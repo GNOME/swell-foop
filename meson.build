@@ -38,6 +38,7 @@ posix_dep = valac.find_library('posix')
 conf = configuration_data()
 
 conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())
+conf.set_quoted('PACKAGE_URL', 'https://wiki.gnome.org/Apps/Swell%20Foop')
 conf.set_quoted('VERSION', meson.project_version())
 
 config_h_inc = include_directories('.')
