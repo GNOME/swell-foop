@@ -2,6 +2,7 @@ AC_PREREQ([2.63])
 AC_INIT([Swell Foop], [3.28.0], [https://bugzilla.gnome.org/],
         [swell-foop], [https://wiki.gnome.org/Apps/Swell%20Foop])
 AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_HEADER(config.h)
 
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])

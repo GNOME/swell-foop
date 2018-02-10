@@ -1,5 +1,4 @@
 sources = [
-  'config.vapi',
   'history.vala',
   'game.vala',
   'game-view.vala',
@@ -8,6 +7,7 @@ sources = [
 ]
 
 deps = [
+  config_dep,
   posix_dep,
   libmath_dep,
   gmodule_dep,

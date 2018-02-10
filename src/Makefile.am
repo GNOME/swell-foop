@@ -4,11 +4,12 @@ swell_foop_SOURCES = \
 	game-view.vala \
 	game.vala \
 	history.vala \
-	config.vapi \
 	score-dialog.vala \
 	swell-foop.vala
 
 swell_foop_VALAFLAGS = \
+	--vapidir $(top_srcdir)/vapi \
+	--pkg config \
 	--pkg posix \
 	--pkg gmodule-2.0 \
 	--pkg clutter-gtk-1.0 \

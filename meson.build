@@ -8,9 +8,11 @@ gnome = import('gnome')
 i18n = import('i18n')
 
 localedir = join_paths(get_option('prefix'), get_option('localedir'))
-podir = join_paths(meson.source_root(), 'po')
 datadir = join_paths (get_option ('prefix'), get_option ('datadir'))
 pkgdatadir = join_paths (datadir, 'swell-foop')
+
+podir = join_paths(meson.source_root(), 'po')
+vapidir = join_paths(meson.source_root(), 'vapi')
 
 # Dependencies
 
@@ -29,6 +31,7 @@ cc = meson.get_compiler('c')
 
 # Libraries
 libmath_dep = cc.find_library('m')
+config_dep = valac.find_library('config', dirs: vapidir)
 posix_dep = valac.find_library('posix')
 
 # Configuration
