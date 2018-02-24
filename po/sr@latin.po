@@ -11,9 +11,9 @@ msgstr ""
 "Project-Id-Version: Gnomove igre\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-02-04 06:03+0000\n"
-"PO-Revision-Date: 2017-02-21 07:17+0200\n"
-"Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
+"POT-Creation-Date: 2018-02-22 10:06+0000\n"
+"PO-Revision-Date: 2018-02-22 19:49+0100\n"
+"Last-Translator: Marko M. Kostić <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
@@ -140,14 +141,12 @@ msgstr "igra;logika;tabla;isto;podudarnost;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/swell-foop.desktop.in:8
-#, fuzzy
-#| msgid "Swell Foop"
 msgid "swell-foop"
-msgstr "Lančana reakcija"
+msgstr "swell-foop"
 
 #: src/game-view.vala:320
 msgid "_Play Again"
-msgstr ""
+msgstr "Igraj o_pet"
 
 #. Label showing the number of points at the end of the game
 #: src/game-view.vala:493
@@ -164,10 +163,8 @@ msgid "Game Over!"
 msgstr "Igra je gotova!"
 
 #: src/score-dialog.vala:25
-#, fuzzy
-#| msgid "_Scores"
 msgid "High Scores"
-msgstr "_Rezultati"
+msgstr "Najbolji rezultati"
 
 #: src/score-dialog.vala:28 src/swell-foop.vala:150
 msgid "_Quit"
@@ -223,10 +220,8 @@ msgid "_New Game"
 msgstr "_Nova igra"
 
 #: src/swell-foop.vala:142
-#, fuzzy
-#| msgid "_Scores"
 msgid "High _Scores"
-msgstr "_Rezultati"
+msgstr "Na_jbolji rezultati"
 
 #: src/swell-foop.vala:145
 msgid "_Preferences"
