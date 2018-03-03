@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-25 21:00+0000\n"
-"PO-Revision-Date: 2015-09-21 16:40+0500\n"
+"POT-Creation-Date: 2018-02-04 06:03+0000\n"
+"PO-Revision-Date: 2018-03-03 20:50+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -17,91 +17,91 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:1
+#: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
-msgstr ""
+msgstr "Қолданылатын тема"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:2
+#: data/org.gnome.swell-foop.gschema.xml:11
 msgid "The title of the tile theme to use."
 msgstr ""
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:3
+#: data/org.gnome.swell-foop.gschema.xml:15
 msgid "Board size"
-msgstr ""
+msgstr "Тақта өлшемі"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:4
+#: data/org.gnome.swell-foop.gschema.xml:16
 msgid "The size of the game board."
 msgstr ""
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:5
+#: data/org.gnome.swell-foop.gschema.xml:20
 msgid "Board color count"
-msgstr ""
+msgstr "Тақтаның түстер саны"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:6
+#: data/org.gnome.swell-foop.gschema.xml:21
 msgid "The number of colors of tiles to use in the game."
 msgstr ""
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:7
+#: data/org.gnome.swell-foop.gschema.xml:25
 msgid "Is this the first run"
 msgstr ""
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+#: data/org.gnome.swell-foop.gschema.xml:26
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:9
+#: data/org.gnome.swell-foop.gschema.xml:30
 msgid "Zealous animation"
 msgstr ""
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:10
+#: data/org.gnome.swell-foop.gschema.xml:31
 msgid "Use more flashy, but slower, animations."
 msgstr ""
 
-#: ../data/preferences.ui.h:1
+#: data/preferences.ui:31
 msgid "Preferences"
 msgstr "Қалаулар"
 
-#: ../data/preferences.ui.h:2
+#: data/preferences.ui:68
 msgid "_Board size:"
 msgstr "_Тақта өлшемі:"
 
-#: ../data/preferences.ui.h:3
+#: data/preferences.ui:84
 msgid "_Number of colors:"
 msgstr ""
 
-#: ../data/preferences.ui.h:4
+#: data/preferences.ui:142
 msgid "Setup"
 msgstr "Орнату"
 
-#: ../data/preferences.ui.h:5
+#: data/preferences.ui:180
 msgid "_Theme:"
 msgstr "Т_ақырыбы:"
 
-#: ../data/preferences.ui.h:6
+#: data/preferences.ui:227
 msgid "Appearance"
 msgstr "Сыртқы түрі"
 
-#: ../data/preferences.ui.h:7
+#: data/preferences.ui:258
 msgid "_Zealous Animation"
 msgstr ""
 
-#: ../data/preferences.ui.h:8
+#: data/preferences.ui:283
 msgid "Operation"
 msgstr ""
 
-#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:120 ../src/swell-foop.vala:146
-#: ../src/swell-foop.vala:456 ../src/swell-foop.vala:538
+#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
+#: src/swell-foop.vala:126 src/swell-foop.vala:156 src/swell-foop.vala:455
+#: src/swell-foop.vala:537
 msgid "Swell Foop"
 msgstr ""
 
-#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
 
-#: ../data/swell-foop.appdata.xml.in.h:3
+#: data/swell-foop.appdata.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -110,138 +110,154 @@ msgid ""
 "of squares, and also for clearing the entire board."
 msgstr ""
 
-#: ../data/swell-foop.appdata.xml.in.h:4
+#: data/swell-foop.appdata.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
 msgstr ""
 
-#: ../data/swell-foop.desktop.in.h:3
+#: data/swell-foop.appdata.xml.in:42
+msgid "The GNOME Project"
+msgstr "GNOME жобасы"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/swell-foop.desktop.in:6
 msgid "game;logic;board;same;matching;"
 msgstr ""
 
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/swell-foop.desktop.in:8
+msgid "swell-foop"
+msgstr "swell-foop"
+
+#: src/game-view.vala:320
+msgid "_Play Again"
+msgstr "Қайта о_йнау"
+
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:472
+#: src/game-view.vala:493
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] ""
 
-#: ../src/game-view.vala:473
+#: src/game-view.vala:494
 msgid "Game Over!"
 msgstr "Ойын аяқталды!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:140
+#: src/score-dialog.vala:25
+#| msgid "_Scores"
+msgid "High Scores"
+msgstr ""
+
+#: src/score-dialog.vala:28 src/swell-foop.vala:150
 msgid "_Quit"
 msgstr "_Шығу"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Жаңа ойын"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "_OK"
 msgstr "_ОК"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Size:"
 msgstr "Өлшемі:"
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "Күні"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:72
 msgid "Score"
 msgstr "Нәтиже"
 
-#: ../src/score-dialog.vala:166
+#: src/score-dialog.vala:166
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] ""
 
-#: ../src/swell-foop.vala:79
+#: src/swell-foop.vala:79
 msgid "Welcome to Swell Foop"
 msgstr ""
 
-#: ../src/swell-foop.vala:82
+#: src/swell-foop.vala:82
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
 msgstr ""
 
-#: ../src/swell-foop.vala:85
-msgid "Let's _Play"
+#: src/swell-foop.vala:85
+msgid "Let’s _Play"
 msgstr ""
 
-#: ../src/swell-foop.vala:133 ../src/swell-foop.vala:500
+#: src/swell-foop.vala:139 src/swell-foop.vala:499
 msgid "_New Game"
 msgstr "Ж_аңа ойын"
 
-#: ../src/swell-foop.vala:134
-msgid "_Scores"
-msgstr "_Есептер"
+#: src/swell-foop.vala:142
+#| msgid "_Scores"
+msgid "High _Scores"
+msgstr ""
 
-#: ../src/swell-foop.vala:135
+#: src/swell-foop.vala:145
 msgid "_Preferences"
 msgstr "_Баптаулар"
 
-#: ../src/swell-foop.vala:138
+#: src/swell-foop.vala:148
 msgid "_Help"
 msgstr "_Көмек"
 
-#: ../src/swell-foop.vala:139
+#: src/swell-foop.vala:149
 msgid "_About"
 msgstr "О_сы туралы"
 
-#: ../src/swell-foop.vala:155
-msgid "Start a new game"
-msgstr ""
-
-#: ../src/swell-foop.vala:184
+#: src/swell-foop.vala:185
 msgid "Small"
 msgstr "Кішкентай"
 
-#: ../src/swell-foop.vala:185
+#: src/swell-foop.vala:186
 msgid "Normal"
 msgstr "Қалыпты"
 
-#: ../src/swell-foop.vala:186
+#: src/swell-foop.vala:187
 msgid "Large"
 msgstr "Үлкен"
 
-#: ../src/swell-foop.vala:262
+#: src/swell-foop.vala:261
 #, c-format
 msgid "Score: %u"
 msgstr "Есебі: %u"
 
-#: ../src/swell-foop.vala:321
+#: src/swell-foop.vala:320
 msgid "Colors"
 msgstr "Түстер"
 
-#: ../src/swell-foop.vala:325
+#: src/swell-foop.vala:324
 msgid "Shapes and Colors"
 msgstr ""
 
-#: ../src/swell-foop.vala:459
+#: src/swell-foop.vala:458
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
 
-#: ../src/swell-foop.vala:460
+#: src/swell-foop.vala:459
 msgid "Copyright © 2009 Tim Horton"
-msgstr ""
+msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:465
+#: src/swell-foop.vala:464
 msgid "translator-credits"
 msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
-#: ../src/swell-foop.vala:498
+#: src/swell-foop.vala:497
 msgid "Abandon this game to start a new one?"
 msgstr ""
 
-#: ../src/swell-foop.vala:499
+#: src/swell-foop.vala:498
 msgid "_Cancel"
 msgstr "Ба_с тарту"
