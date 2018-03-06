@@ -30,110 +30,110 @@
 # Michael Kotsarinis <mk73628@hotmail.com>, 2010.
 # George Stefanakis <george.stefanakis@gmail.com>, 2011.
 # Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2012, 2013, 2014.
-# Efstathios Iosifidis <iosifidis@opensuse.org>, 2014, 2015.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2014, 2015, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-02-26 01:17+0000\n"
-"PO-Revision-Date: 2017-04-06 13:07+0300\n"
+"POT-Creation-Date: 2018-02-09 19:00+0000\n"
+"PO-Revision-Date: 2018-03-07 01:03+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gnome.org>\n"
-"Language-Team: Greek, Modern (1453-) <opensuse-translation-el@opensuse.org>\n"
+"Language-Team: Ελληνικά <>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:1
+#: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
 msgstr "Το θέμα που θα χρησιμοποιηθεί"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:2
+#: data/org.gnome.swell-foop.gschema.xml:11
 msgid "The title of the tile theme to use."
 msgstr "Το όνομα του θέματος πλακιδίων που θα χρησιμοποιηθεί."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:3
+#: data/org.gnome.swell-foop.gschema.xml:15
 msgid "Board size"
 msgstr "Μέγεθος πίνακα"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:4
+#: data/org.gnome.swell-foop.gschema.xml:16
 msgid "The size of the game board."
 msgstr "Το μέγεθος πίνακα του παιχνιδιού."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:5
+#: data/org.gnome.swell-foop.gschema.xml:20
 msgid "Board color count"
 msgstr "Αριθμός χρωμάτων πίνακα"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:6
+#: data/org.gnome.swell-foop.gschema.xml:21
 msgid "The number of colors of tiles to use in the game."
 msgstr "Ο αριθμός των χρωμάτων πλακιδίων που θα χρησιμοποιούνται στο παιχνίδι."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:7
+#: data/org.gnome.swell-foop.gschema.xml:25
 msgid "Is this the first run"
 msgstr "Είναι η πρώτη σας φορά;"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+#: data/org.gnome.swell-foop.gschema.xml:26
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
 "Καθορίστε εάν θα εμφανίζεται ή όχι το παράθυρο της πρώτης εκκίνησης του "
 "παιχνιδιού."
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:9
+#: data/org.gnome.swell-foop.gschema.xml:30
 msgid "Zealous animation"
 msgstr "Γρήγορες κινούμενες εικόνες"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:10
+#: data/org.gnome.swell-foop.gschema.xml:31
 msgid "Use more flashy, but slower, animations."
 msgstr "Χρήση πιο εντυπωσιακών, αλλά λιγότερο γρήγορων κινούμενων εικόνων."
 
-#: ../data/preferences.ui.h:1
+#: data/preferences.ui:31
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: ../data/preferences.ui.h:2
+#: data/preferences.ui:68
 msgid "_Board size:"
 msgstr "Μέγε_θος πίνακα:"
 
-#: ../data/preferences.ui.h:3
+#: data/preferences.ui:84
 msgid "_Number of colors:"
 msgstr "Αριθ_μός χρωμάτων:"
 
-#: ../data/preferences.ui.h:4
+#: data/preferences.ui:142
 msgid "Setup"
 msgstr "Ρύθμιση"
 
-#: ../data/preferences.ui.h:5
+#: data/preferences.ui:180
 msgid "_Theme:"
 msgstr "_Θέμα:"
 
-#: ../data/preferences.ui.h:6
+#: data/preferences.ui:227
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
-#: ../data/preferences.ui.h:7
+#: data/preferences.ui:258
 msgid "_Zealous Animation"
 msgstr "Γ_ρήγορη κίνηση εικόνων"
 
-#: ../data/preferences.ui.h:8
+#: data/preferences.ui:283
 msgid "Operation"
 msgstr "Λειτουργία"
 
-#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
-#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
+#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
+#: src/swell-foop.vala:126 src/swell-foop.vala:156 src/swell-foop.vala:455
+#: src/swell-foop.vala:537
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
-#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Καθαρίστε την οθόνη απομακρύνοντας ομάδες από χρωματιστά πλακάκια"
 
-#: ../data/swell-foop.appdata.xml.in.h:3
+#: data/swell-foop.appdata.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -147,7 +147,7 @@ msgstr ""
 "τετράγωνο τη φορά. Παίρνετε πολύ περισσότερα σημεία για καθαρισμό μιας "
 "μεγαλύτερης ομάδας τετραγώνων και επίσης για καθαρισμό όλου του πίνακα."
 
-#: ../data/swell-foop.appdata.xml.in.h:4
+#: data/swell-foop.appdata.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -155,62 +155,76 @@ msgstr ""
 "Το Swell Foop είναι πάντα πολύ γρήγορο στο παίξιμο, αλλά μπορείτε να το "
 "κάνετε κάπως πιο μεγάλο αλλάζοντας το μέγεθος του πίνακα."
 
-#: ../data/swell-foop.appdata.xml.in.h:5
+#: data/swell-foop.appdata.xml.in:42
 msgid "The GNOME Project"
 msgstr "Το έργο GNOME"
 
-#: ../data/swell-foop.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/swell-foop.desktop.in:6
 msgid "game;logic;board;same;matching;"
 msgstr "παιχνίδι;λογική;πίνακας;ίδιο;ταίριασμα;game;logic;board;same;matching;"
 
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/swell-foop.desktop.in:8
+msgid "swell-foop"
+msgstr "swell-foop"
+
+#: src/game-view.vala:320
+msgid "_Play Again"
+msgstr "_Παίξτε ξανά"
+
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:472
+#: src/game-view.vala:493
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u πόντος"
 msgstr[1] "%u πόντοι"
 
-#: ../src/game-view.vala:473
+#: src/game-view.vala:494
 msgid "Game Over!"
 msgstr "Τέλος παιχνιδιού!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
+#: src/score-dialog.vala:25
+msgid "High Scores"
+msgstr "Βαθμολογίες"
+
+#: src/score-dialog.vala:28 src/swell-foop.vala:150
 msgid "_Quit"
 msgstr "Έ_ξοδος"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Νέο παιχνίδι"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "_OK"
 msgstr "Ε_ντάξει"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Size:"
 msgstr "Μέγεθος:"
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "Ημερομηνία"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:72
 msgid "Score"
 msgstr "Βαθμολογία"
 
-#: ../src/score-dialog.vala:166
+#: src/score-dialog.vala:166
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u χρώμα"
 msgstr[1] "%u × %u, %u χρώματα"
 
-#: ../src/swell-foop.vala:79
+#: src/swell-foop.vala:79
 msgid "Welcome to Swell Foop"
 msgstr "Καλώς ήρθατε στο Swell Foop"
 
-#: ../src/swell-foop.vala:82
+#: src/swell-foop.vala:82
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -218,56 +232,56 @@ msgstr ""
 "Καθαρίστε όσα περισσότερα τετράγωνα μπορείτε.\n"
 "Λιγότερα κλικ σημαίνουν περισσότεροι πόντοι."
 
-#: ../src/swell-foop.vala:85
+#: src/swell-foop.vala:85
 msgid "Let’s _Play"
 msgstr "Ας _παίξουμε"
 
-#: ../src/swell-foop.vala:138
-msgid "_Scores"
+#: src/swell-foop.vala:139 src/swell-foop.vala:499
+msgid "_New Game"
+msgstr "_Νέο παιχνίδι"
+
+#: src/swell-foop.vala:142
+msgid "High _Scores"
 msgstr "_Βαθμολογίες"
 
-#: ../src/swell-foop.vala:139
+#: src/swell-foop.vala:145
 msgid "_Preferences"
 msgstr "Π_ροτιμήσεις"
 
-#: ../src/swell-foop.vala:142
+#: src/swell-foop.vala:148
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../src/swell-foop.vala:143
+#: src/swell-foop.vala:149
 msgid "_About"
 msgstr "_Περί"
 
-#: ../src/swell-foop.vala:157
-msgid "Start a new game"
-msgstr "Εκκίνηση νέου παιχνιδιού"
-
-#: ../src/swell-foop.vala:185
+#: src/swell-foop.vala:185
 msgid "Small"
 msgstr "Μικρό"
 
-#: ../src/swell-foop.vala:186
+#: src/swell-foop.vala:186
 msgid "Normal"
 msgstr "Κανονικό"
 
-#: ../src/swell-foop.vala:187
+#: src/swell-foop.vala:187
 msgid "Large"
 msgstr "Μεγάλο"
 
-#: ../src/swell-foop.vala:263
+#: src/swell-foop.vala:261
 #, c-format
 msgid "Score: %u"
 msgstr "Βαθμολογία: %u"
 
-#: ../src/swell-foop.vala:322
+#: src/swell-foop.vala:320
 msgid "Colors"
 msgstr "Χρώματα"
 
-#: ../src/swell-foop.vala:326
+#: src/swell-foop.vala:324
 msgid "Shapes and Colors"
 msgstr "Σχήματα και χρώματα"
 
-#: ../src/swell-foop.vala:460
+#: src/swell-foop.vala:458
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -275,11 +289,11 @@ msgstr ""
 "Θέλω να παίξω αυτό το παιχνίδι!\n"
 "Ξέρεις, αυτό όπου όλα φωτίζονται, και πατάς πάνω τους και εξαφανίζονται!"
 
-#: ../src/swell-foop.vala:461
+#: src/swell-foop.vala:459
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Πνευματικά δικαιώματα © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:466
+#: src/swell-foop.vala:464
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -293,14 +307,13 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: ../src/swell-foop.vala:499
+#: src/swell-foop.vala:497
 msgid "Abandon this game to start a new one?"
 msgstr "Έξοδος από αυτό το παιχνίδι για να ξεκινήσει ένα νέο;"
 
-#: ../src/swell-foop.vala:500
+#: src/swell-foop.vala:498
 msgid "_Cancel"
 msgstr "Α_κύρωση"
 
-#: ../src/swell-foop.vala:501
-msgid "_New Game"
-msgstr "_Νέο παιχνίδι"
+#~ msgid "Start a new game"
+#~ msgstr "Εκκίνηση νέου παιχνιδιού"
