@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: gnome-games 0\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-01-30 19:02+0000\n"
-"PO-Revision-Date: 2008-04-16 07:32+0000\n"
+"POT-Creation-Date: 2018-02-04 06:03+0000\n"
+"PO-Revision-Date: 2018-03-14 01:10+0100\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -18,71 +18,63 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2008-05-28 02:59+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
-msgstr "Ime teme koja će se koristiti"
+msgstr "Tema koja će se koristiti"
 
 #: data/org.gnome.swell-foop.gschema.xml:11
-#, fuzzy
 msgid "The title of the tile theme to use."
-msgstr "Datoteka sa temom koja će se koristiti"
+msgstr "Naziv teme pločice koja će se koristiti."
 
 #: data/org.gnome.swell-foop.gschema.xml:15
-#, fuzzy
 msgid "Board size"
-msgstr "Veličina table"
+msgstr "Veličina ploče"
 
 #: data/org.gnome.swell-foop.gschema.xml:16
-#, fuzzy
 msgid "The size of the game board."
-msgstr "Broj polja za igru"
+msgstr "Veličina igrače ploče."
 
 #: data/org.gnome.swell-foop.gschema.xml:20
-#, fuzzy
 msgid "Board color count"
-msgstr "Boja pozadine"
+msgstr "Broj boja pločica"
 
 #: data/org.gnome.swell-foop.gschema.xml:21
-#, fuzzy
 msgid "The number of colors of tiles to use in the game."
-msgstr "Broj redova koje treba popuniti"
+msgstr "Broj boja pločica koje se koriste u igri."
 
 #: data/org.gnome.swell-foop.gschema.xml:25
 msgid "Is this the first run"
-msgstr ""
+msgstr "Je li ovo prvo pokretanje"
 
 #: data/org.gnome.swell-foop.gschema.xml:26
 msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr ""
+msgstr "Postavite za prikaz dijaloga prvog pokretanja."
 
 #: data/org.gnome.swell-foop.gschema.xml:30
-#, fuzzy
 msgid "Zealous animation"
-msgstr "Koristi brzu animaciju pokreta"
+msgstr "Efektnija animacija"
 
 #: data/org.gnome.swell-foop.gschema.xml:31
-#, fuzzy
 msgid "Use more flashy, but slower, animations."
-msgstr "Koristi brzu animaciju pokreta"
+msgstr "Koristi više efektnije, ali sporije animacije."
 
 #: data/preferences.ui:31
 msgid "Preferences"
-msgstr "Podešenja"
+msgstr "Osobitosti"
 
 #: data/preferences.ui:68
 msgid "_Board size:"
-msgstr ""
+msgstr "_Veličina ploče:"
 
 #: data/preferences.ui:84
-#, fuzzy
 msgid "_Number of colors:"
-msgstr "_Broj igrača:"
+msgstr "_Broj boja:"
 
 #: data/preferences.ui:142
 msgid "Setup"
-msgstr "Podešavanje"
+msgstr "Postavljanje"
 
 #: data/preferences.ui:180
 msgid "_Theme:"
@@ -93,23 +85,22 @@ msgid "Appearance"
 msgstr "Izgled"
 
 #: data/preferences.ui:258
-#, fuzzy
 msgid "_Zealous Animation"
-msgstr "_Brza animacija"
+msgstr "_Efektnija animacija"
 
 #: data/preferences.ui:283
 msgid "Operation"
-msgstr "Operacija"
+msgstr "Radnja"
 
 #: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
 #: src/swell-foop.vala:126 src/swell-foop.vala:156 src/swell-foop.vala:455
 #: src/swell-foop.vala:537
 msgid "Swell Foop"
-msgstr ""
+msgstr "Jedan potez"
 
 #: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr ""
+msgstr "Očistite ploču uklanjanje grupa obojanih i oblikovanih pločica"
 
 #: data/swell-foop.appdata.xml.in:10
 msgid ""
@@ -119,53 +110,57 @@ msgid ""
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
 msgstr ""
+"Uklonite što je više moguće kvadrata iz ploče. Kliknite na grupu kvadrata "
+"iste boje kako bi ih uklonili u jednom potezu, uzrokujući da na oslobođena "
+"mjesta padaju drugi kvadrati. Nije moguće ukloniti jedan kvadrat. Dobivate "
+"više bodova uklanjanjem veće grupe kvadrata i za čišćenje cijele ploče."
 
 #: data/swell-foop.appdata.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
 msgstr ""
+"Jedan potez se uvijek brzo odigra, ali to možete produljiti promjenom "
+"veličine ploče."
 
 #: data/swell-foop.appdata.xml.in:42
 msgid "The GNOME Project"
-msgstr ""
+msgstr "GNOME projekt"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/swell-foop.desktop.in:6
 msgid "game;logic;board;same;matching;"
-msgstr ""
+msgstr "igra;logika;ploča;isto;podudaranje;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/swell-foop.desktop.in:8
 msgid "swell-foop"
-msgstr ""
+msgstr "swell-foop"
 
 #: src/game-view.vala:320
-#, fuzzy
 msgid "_Play Again"
-msgstr "Igrač 2"
+msgstr "_Igraj ponovno"
 
 #. Label showing the number of points at the end of the game
 #: src/game-view.vala:493
-#, fuzzy, c-format
+#, c-format
 msgid "%u point"
 msgid_plural "%u points"
-msgstr[0] "%d bod"
-msgstr[1] "%d boda"
-msgstr[2] "%d bodova"
+msgstr[0] "%u bod"
+msgstr[1] "%u boda"
+msgstr[2] "%u bodova"
 
 #: src/game-view.vala:494
 msgid "Game Over!"
 msgstr "Kraj igre!"
 
 #: src/score-dialog.vala:25
-#, fuzzy
 msgid "High Scores"
 msgstr "Rezultati"
 
 #: src/score-dialog.vala:28 src/swell-foop.vala:150
 msgid "_Quit"
-msgstr ""
+msgstr "_Zatvori"
 
 #: src/score-dialog.vala:29
 msgid "New Game"
@@ -173,7 +168,7 @@ msgstr "Nova igra"
 
 #: src/score-dialog.vala:32
 msgid "_OK"
-msgstr ""
+msgstr "_U redu"
 
 #: src/score-dialog.vala:44
 msgid "Size:"
@@ -181,7 +176,7 @@ msgstr "Veličina:"
 
 #: src/score-dialog.vala:69
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: src/score-dialog.vala:72
 msgid "Score"
@@ -191,63 +186,62 @@ msgstr "Rezultat"
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%u × %u, %u boja"
+msgstr[1] "%u × %u, %u boje"
+msgstr[2] "%u × %u, %u boja"
 
 #: src/swell-foop.vala:79
-#, fuzzy
 msgid "Welcome to Swell Foop"
-msgstr "Dobrodošli u Iagno!"
+msgstr "Dobrodošli u Jedan potez"
 
 #: src/swell-foop.vala:82
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
 msgstr ""
+"Uklonite što je više moguće blokova.\n"
+"Manje klikova znači više bodova."
 
 #: src/swell-foop.vala:85
 msgid "Let’s _Play"
-msgstr ""
+msgstr "_Zaigrajmo"
 
 #: src/swell-foop.vala:139 src/swell-foop.vala:499
 msgid "_New Game"
 msgstr "_Nova igra"
 
 #: src/swell-foop.vala:142
-#, fuzzy
 msgid "High _Scores"
 msgstr "_Rezultati"
 
 #: src/swell-foop.vala:145
-#, fuzzy
 msgid "_Preferences"
-msgstr "Podešenja"
+msgstr "_Osobitosti"
 
 #: src/swell-foop.vala:148
 msgid "_Help"
-msgstr "_Pomoć"
+msgstr "_Priručnik"
 
 #: src/swell-foop.vala:149
 msgid "_About"
-msgstr ""
+msgstr "_O programu"
 
 #: src/swell-foop.vala:185
 msgid "Small"
-msgstr "Malen"
+msgstr "Mala"
 
 #: src/swell-foop.vala:186
 msgid "Normal"
-msgstr ""
+msgstr "Normalna"
 
 #: src/swell-foop.vala:187
 msgid "Large"
-msgstr "Veliko"
+msgstr "Velika"
 
 #: src/swell-foop.vala:261
-#, fuzzy, c-format
+#, c-format
 msgid "Score: %u"
-msgstr "Rezultat: %d"
+msgstr "Rezultat: %u"
 
 #: src/swell-foop.vala:320
 msgid "Colors"
@@ -255,17 +249,19 @@ msgstr "Boje"
 
 #: src/swell-foop.vala:324
 msgid "Shapes and Colors"
-msgstr ""
+msgstr "Oblici i boje"
 
 #: src/swell-foop.vala:458
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
+"Ako želite igrati ovu igru!\n"
+"Znajte, oni svi zasvijetle a vi kliknete na njih i oni zatim nestanu!"
 
 #: src/swell-foop.vala:459
 msgid "Copyright © 2009 Tim Horton"
-msgstr ""
+msgstr "Autorsko pravo © 2009 Tim Horton"
 
 #: src/swell-foop.vala:464
 msgid "translator-credits"
@@ -296,8 +292,8 @@ msgstr ""
 
 #: src/swell-foop.vala:497
 msgid "Abandon this game to start a new one?"
-msgstr ""
+msgstr "Napustite ovu igru i započnite novu?"
 
 #: src/swell-foop.vala:498
 msgid "_Cancel"
-msgstr ""
+msgstr "_Odustani"
