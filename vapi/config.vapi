@@ -8,7 +8,11 @@
  * license.
  */
 
-public const string DATADIR;
-public const string LOCALEDIR;
-public const string GETTEXT_PACKAGE;
-public const string VERSION;
+[CCode (cprefix = "", lower_case_cprefix = "", cheader_filename = "config.h")]
+namespace Config {
+    public const string DATADIR;
+    public const string GETTEXT_PACKAGE;
+    public const string LOCALEDIR;
+    public const string PACKAGE_URL;
+    public const string VERSION;
+}

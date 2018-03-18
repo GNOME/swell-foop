@@ -2,15 +2,14 @@
 
 import os
 import subprocess
-
-install_prefix = os.environ['MESON_INSTALL_PREFIX']
-icondir = os.path.join(install_prefix, 'share', 'icons', 'hicolor')
-schemadir = os.path.join(install_prefix, 'share', 'glib-2.0', 'schemas')
+import sys
 
 if not os.environ.get('DESTDIR'):
+  icon_dir = os.path.join(sys.argv[1], 'icons', 'hicolor')
+  schema_dir = os.path.join(sys.argv[1], 'glib-2.0', 'schemas')
   print('Update icon cache...')
-  subprocess.call(['gtk-update-icon-cache', '-f', '-t', icondir])
+  subprocess.call(['gtk-update-icon-cache', '-f', '-t', icon_dir])
 
   print('Compiling gsettings schemas...')
-  subprocess.call(['glib-compile-schemas', schemadir])
+  subprocess.call(['glib-compile-schemas', schema_dir])
 

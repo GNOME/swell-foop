@@ -8,6 +8,8 @@
  * license.
  */
 
+using Config;
+
 public class SwellFoop : Gtk.Application
 {
     /* Application settings */
@@ -56,7 +58,7 @@ public class SwellFoop : Gtk.Application
     private void load_css ()
     {
         var css_provider = new Gtk.CssProvider ();
-        var css_path = Path.build_filename (DATADIR, "swell-foop.css");
+        var css_path = Path.build_filename (Config.DATADIR, "swell-foop.css");
         try
         {
             css_provider.load_from_path (css_path);
@@ -301,7 +303,7 @@ public class SwellFoop : Gtk.Application
         var preferences_builder = new Gtk.Builder ();
         try
         {
-            preferences_builder.add_from_file (Path.build_filename (DATADIR, "preferences.ui", null));
+            preferences_builder.add_from_file (Path.build_filename (Config.DATADIR, "preferences.ui", null));
         }
         catch (Error e)
         {
@@ -453,7 +455,7 @@ public class SwellFoop : Gtk.Application
 
         Gtk.show_about_dialog (window,
                                "program-name", _("Swell Foop"),
-                               "version", VERSION,
+                               "version", Config.VERSION,
                                "comments",
                                _("I want to play that game!\nYou know, they all light-up and you click on them and they vanish!"),
                                "copyright", _("Copyright \xc2\xa9 2009 Tim Horton"),
@@ -463,7 +465,7 @@ public class SwellFoop : Gtk.Application
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
                                "logo-icon-name", "swell-foop",
-                               "website", "https://wiki.gnome.org/Apps/Swell%20Foop",
+                               "website", Config.PACKAGE_URL,
                                null);
     }
 
@@ -508,9 +510,9 @@ public class SwellFoop : Gtk.Application
     public static int main (string[] args)
     {
         Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-        Intl.textdomain (GETTEXT_PACKAGE);
+        Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (Config.GETTEXT_PACKAGE);
 
         if (GtkClutter.init (ref args) != Clutter.InitError.SUCCESS)
         {
@@ -519,7 +521,7 @@ public class SwellFoop : Gtk.Application
         }
 
         var context = new OptionContext (null);
-        context.set_translation_domain (GETTEXT_PACKAGE);
+        context.set_translation_domain (Config.GETTEXT_PACKAGE);
 
         context.add_group (Gtk.get_option_group (true));
         context.add_group (Clutter.get_option_group_without_init ());

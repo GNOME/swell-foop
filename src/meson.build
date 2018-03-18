@@ -1,5 +1,4 @@
-swell_foop_sources = [
-  'config.vapi',
+sources = [
   'history.vala',
   'game.vala',
   'game-view.vala',
@@ -7,31 +6,27 @@ swell_foop_sources = [
   'swell-foop.vala',
 ]
 
-swell_foop_deps = [
-  posix,
-  libmath,
-  gmodule,
-  glib,
-  gobject,
-  gtk,
-  clutter,
-  clutter_gtk,
+deps = [
+  config_dep,
+  posix_dep,
+  libmath_dep,
+  gmodule_dep,
+  glib_dep,
+  gobject_dep,
+  gtk_dep,
+  clutter_dep,
+  clutter_gtk_dep,
 ]
 
-swell_foop_c_flags = [ 
-  '-DVERSION="@0@"'.format (meson.project_version ()),
-  '-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()),
-  '-DLOCALEDIR="@0@"'.format (localedir),
-  '-DDATADIR="@0@"'.format (pkgdatadir),
+c_flags = [
+  '-DDATADIR="@0@"'.format(pkgdatadir),
+  '-DLOCALEDIR="@0@"'.format(localedir),
+  '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())
 ]
 
-swell_foop_vala_flags = [
-  '--target-glib', glib_min_version,
-]
-
-executable('swell-foop', swell_foop_sources,
-  dependencies: swell_foop_deps,
-  vala_args: swell_foop_vala_flags,
-  c_args: swell_foop_c_flags,
+executable('swell-foop', sources,
+  dependencies: deps,
+  include_directories: config_h_inc,
+  c_args: c_flags,
   install: true,
 )
