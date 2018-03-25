@@ -1,0 +1,43 @@
+{
+    "app-id" : "org.gnome.SwellFoop",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "3.28",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "swell-foop",
+    "tags" : [
+        "nightly"
+    ],
+    "rename-icon" : "swell-foop",
+    "rename-desktop-file" : "swell-foop.desktop",
+    "desktop-file-name-prefix" : "(Nightly) ",
+    "finish-args" : [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "build-options" : {
+        "cflags" : "-O2 -g",
+        "env" : {
+        }
+    },
+    "cleanup" : [
+        "/share/man"
+    ],
+    "modules" : [
+        {
+            "name" : "swell-foop",
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "git://git.gnome.org/swell-foop"
+                }
+            ]
+        }
+    ]
+}
