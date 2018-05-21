@@ -2,106 +2,107 @@
 # Copyright 2011 Free Software Foundation, Inc.
 # Aron Xu <aronxu@gnome.org>, 2011.
 # YunQiang Su <wzssyqa@gmail.com>, 2011, 2012.
+# Mingcong Bai <jeffbai@aosc.xyz>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-11-12 12:51+0000\n"
-"PO-Revision-Date: 2017-02-13 15:33+0800\n"
-"Last-Translator: Jeff Bai <jeffbai@aosc.xyz>\n"
+"POT-Creation-Date: 2018-03-26 22:46+0000\n"
+"PO-Revision-Date: 2018-05-10 11:20-0500\n"
+"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:1
+#: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
 msgstr "要使用的主题"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:2
+#: data/org.gnome.swell-foop.gschema.xml:11
 msgid "The title of the tile theme to use."
 msgstr "要使用的牌面主题名称。"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:3
+#: data/org.gnome.swell-foop.gschema.xml:15
 msgid "Board size"
 msgstr "盘面大小"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:4
+#: data/org.gnome.swell-foop.gschema.xml:16
 msgid "The size of the game board."
 msgstr "游戏棋盘大小"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:5
+#: data/org.gnome.swell-foop.gschema.xml:20
 msgid "Board color count"
 msgstr "棋盘颜色数量"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:6
+#: data/org.gnome.swell-foop.gschema.xml:21
 msgid "The number of colors of tiles to use in the game."
 msgstr "游戏中色块的颜色数量。"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:7
+#: data/org.gnome.swell-foop.gschema.xml:25
 msgid "Is this the first run"
 msgstr "是否第一次运行"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
+#: data/org.gnome.swell-foop.gschema.xml:26
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr "决定是否显示初次运行提示对话框的设置。"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:9
+#: data/org.gnome.swell-foop.gschema.xml:30
 msgid "Zealous animation"
 msgstr "华丽的动画"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:10
+#: data/org.gnome.swell-foop.gschema.xml:31
 msgid "Use more flashy, but slower, animations."
 msgstr "使用更华丽、更缓慢的动画。"
 
-#: ../data/preferences.ui.h:1
+#: data/preferences.ui:31
 msgid "Preferences"
 msgstr "首选项"
 
-#: ../data/preferences.ui.h:2
+#: data/preferences.ui:68
 msgid "_Board size:"
 msgstr "棋盘大小(_B)："
 
-#: ../data/preferences.ui.h:3
+#: data/preferences.ui:84
 msgid "_Number of colors:"
 msgstr "颜色数量(_N)："
 
-#: ../data/preferences.ui.h:4
+#: data/preferences.ui:142
 msgid "Setup"
 msgstr "设置"
 
-#: ../data/preferences.ui.h:5
+#: data/preferences.ui:180
 msgid "_Theme:"
 msgstr "主题(_T)："
 
-#: ../data/preferences.ui.h:6
+#: data/preferences.ui:227
 msgid "Appearance"
 msgstr "外观"
 
-#: ../data/preferences.ui.h:7
+#: data/preferences.ui:258
 msgid "_Zealous Animation"
 msgstr "华丽的动画(_Z)"
 
-#: ../data/preferences.ui.h:8
+#: data/preferences.ui:283
 msgid "Operation"
 msgstr "操作"
 
-#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
-#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
+#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
+#: src/swell-foop.vala:128 src/swell-foop.vala:158 src/swell-foop.vala:457
+#: src/swell-foop.vala:539
 msgid "Swell Foop"
 msgstr "消色块"
 
-#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "移除同样的色块以清空屏幕"
 
-#: ../data/swell-foop.appdata.xml.in.h:3
+#: data/swell-foop.appdata.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -113,66 +114,80 @@ msgstr ""
 "他色块会掉下来。不能一次只消除一个色块。一次消除的色块越多，或清空棋盘，你的"
 "得分就越多。"
 
-#: ../data/swell-foop.appdata.xml.in.h:4
+#: data/swell-foop.appdata.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
 msgstr "Swell Foop (消色块)玩起来很快，您可以改变棋盘大小延长玩的时间。"
 
-#: ../data/swell-foop.appdata.xml.in.h:5
+#: data/swell-foop.appdata.xml.in:42
 msgid "The GNOME Project"
 msgstr "GNOME 项目"
 
-#: ../data/swell-foop.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/swell-foop.desktop.in:6
 msgid "game;logic;board;same;matching;"
 msgstr "game;logic;board;same;matching;游戏;逻辑;棋牌;相同;匹配;消除;"
 
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/swell-foop.desktop.in:8
+msgid "swell-foop"
+msgstr "消色块 "
+
+#: src/game-view.vala:322
+msgid "_Play Again"
+msgstr "重玩(_P)"
+
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:472
+#: src/game-view.vala:495
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u 分"
 
-#: ../src/game-view.vala:473
+#: src/game-view.vala:496
 msgid "Game Over!"
 msgstr "游戏结束！"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
+#: src/score-dialog.vala:25
+msgid "High Scores"
+msgstr "高分榜"
+
+#: src/score-dialog.vala:28 src/swell-foop.vala:152
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "新游戏"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "_OK"
 msgstr "确认(_O)"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Size:"
 msgstr "大小："
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "日期"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:72
 msgid "Score"
 msgstr "得分"
 
-#: ../src/score-dialog.vala:166
+#: src/score-dialog.vala:166
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u，%u 种颜色"
 
-#: ../src/swell-foop.vala:79
+#: src/swell-foop.vala:81
 msgid "Welcome to Swell Foop"
 msgstr "欢迎来到消色块"
 
-#: ../src/swell-foop.vala:82
+#: src/swell-foop.vala:84
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -180,56 +195,56 @@ msgstr ""
 "尽可能清除所有方块。\n"
 "点击越少分数越高。"
 
-#: ../src/swell-foop.vala:85
+#: src/swell-foop.vala:87
 msgid "Let’s _Play"
 msgstr "开始游戏(_P)"
 
-#: ../src/swell-foop.vala:138
-msgid "_Scores"
-msgstr "得分(_S)"
+#: src/swell-foop.vala:141 src/swell-foop.vala:501
+msgid "_New Game"
+msgstr "新建游戏(_N)"
 
-#: ../src/swell-foop.vala:139
+#: src/swell-foop.vala:144
+msgid "High _Scores"
+msgstr "高分榜(_S)"
+
+#: src/swell-foop.vala:147
 msgid "_Preferences"
 msgstr "首选项(_P)"
 
-#: ../src/swell-foop.vala:142
+#: src/swell-foop.vala:150
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../src/swell-foop.vala:143
+#: src/swell-foop.vala:151
 msgid "_About"
 msgstr "关于(_A)"
 
-#: ../src/swell-foop.vala:157
-msgid "Start a new game"
-msgstr "开始新游戏"
-
-#: ../src/swell-foop.vala:185
+#: src/swell-foop.vala:187
 msgid "Small"
 msgstr "小"
 
-#: ../src/swell-foop.vala:186
+#: src/swell-foop.vala:188
 msgid "Normal"
 msgstr "正常"
 
-#: ../src/swell-foop.vala:187
+#: src/swell-foop.vala:189
 msgid "Large"
 msgstr "大"
 
-#: ../src/swell-foop.vala:263
+#: src/swell-foop.vala:263
 #, c-format
 msgid "Score: %u"
 msgstr "得分：%u"
 
-#: ../src/swell-foop.vala:322
+#: src/swell-foop.vala:322
 msgid "Colors"
 msgstr "颜色"
 
-#: ../src/swell-foop.vala:326
+#: src/swell-foop.vala:326
 msgid "Shapes and Colors"
 msgstr "形状和颜色"
 
-#: ../src/swell-foop.vala:460
+#: src/swell-foop.vala:460
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -237,25 +252,25 @@ msgstr ""
 "我想玩那个游戏！\n"
 "点击那些闪动的方块，它们就消失了！"
 
-#: ../src/swell-foop.vala:461
+#: src/swell-foop.vala:461
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:466
+#: src/swell-foop.vala:466
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
 "Ping Z <zpsigma@gmail.com>, 2007\n"
-"Xhacker Liu <liu.dongyuan@gmail.com>, 2010"
+"Xhacker Liu <liu.dongyuan@gmail.com>, 2010\n"
+"Mingcong Bai <jeffbai@aosc.xyz>, 2018"
 
-#: ../src/swell-foop.vala:499
+#: src/swell-foop.vala:499
 msgid "Abandon this game to start a new one?"
 msgstr "放弃此次游戏并开始新游戏吗？"
 
-#: ../src/swell-foop.vala:500
+#: src/swell-foop.vala:500
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: ../src/swell-foop.vala:501
-msgid "_New Game"
-msgstr "新建游戏(_N)"
+#~ msgid "Start a new game"
+#~ msgstr "开始新游戏"
