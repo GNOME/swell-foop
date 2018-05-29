@@ -35,7 +35,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "git://git.gnome.org/swell-foop"
+                    "url" : "https://gitlab.gnome.org/GNOME/swell-foop.git"
                 }
             ]
         }

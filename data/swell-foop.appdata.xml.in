@@ -25,7 +25,7 @@
     </screenshot>
   </screenshots>
   <url type="homepage">https://wiki.gnome.org/Apps/Swell%20Foop</url>
-  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=swell-foop</url>
+  <url type="bugtracker">https://gitlab.gnome.org/GNOME/swell-foop/issues</url>
   <url type="donation">http://www.gnome.org/friends/</url>
   <url type="help">https://help.gnome.org/users/swell-foop/stable/</url>
   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
