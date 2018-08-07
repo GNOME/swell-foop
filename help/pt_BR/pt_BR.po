@@ -2,89 +2,35 @@
 # Copyright (C) 2013 swell-foop's COPYRIGHT HOLDER
 # This file is distributed under the same license as the swell-foop package.
 # Enrico Nicoletto <liverig@gmail.com>, 2013.
-#
+# Rafael Fontenelle <rafaelff@gnome.org>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop help\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-13 22:13+0000\n"
-"PO-Revision-Date: 2013-09-13 22:08-0300\n"
-"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+"POT-Creation-Date: 2018-06-10 14:59+0000\n"
+"PO-Revision-Date: 2018-08-07 16:43-0200\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Virtaal 1.0.0-beta1\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:155
-msgctxt "_"
-msgid ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
-msgstr ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:170
-msgctxt "_"
-msgid "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
-msgstr ""
-"external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:178
-msgctxt "_"
-msgid "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
-msgstr ""
-"external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:186
-msgctxt "_"
-msgid "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
-msgstr ""
-"external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:194
-msgctxt "_"
-msgid "external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
-msgstr ""
-"external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
+"Enrico Nicoletto <liverig@gmail.com>, 2013\n"
+"Rafael Fontenelle <rafaelff@gnome.org>, 2018"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:20
 msgid "<application>Swell Foop</application> Manual"
-msgstr ""
+msgstr "Manual do <application>Swell Foop</application>"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:23
@@ -94,6 +40,10 @@ msgid ""
 "pieces. That group will vanish and the pieces on top will fall until there "
 "are none left or no more color groups."
 msgstr ""
+"Swell Foop é um jogo de quebra-cabeças, cujo objetivo é limpar a janela do "
+"maior número possível de peças clicando nos grupos das mesmas peças "
+"coloridas. Esse grupo desaparecerá e as peças no topo cairão até não "
+"restarem mais grupos de cores."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:32
@@ -120,7 +70,7 @@ msgid ""
 "<email>callum@physics.otago.ac.nz</email> </address> </affiliation>"
 msgstr ""
 "<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> "
-"<orgname>GNOME Documentation Project</orgname> <address> "
+"<orgname>Projeto de documentação do GNOME</orgname> <address> "
 "<email>callum@physics.otago.ac.nz</email> </address> </affiliation>"
 
 #. (itstool) path: authorgroup/author
@@ -131,13 +81,13 @@ msgid ""
 "net</email> </address> </affiliation>"
 msgstr ""
 "<firstname>Andre</firstname> <surname>Klapper</surname> <affiliation> "
-"<orgname>GNOME Documentation Project</orgname> <address> <email>ak-47@gmx."
-"net</email> </address> </affiliation>"
+"<orgname>Projeto de documentação do GNOME</orgname> <address> "
+"<email>ak-47@gmx.net</email> </address> </affiliation>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:103
 msgid "Updates to the Swell Foop manual."
-msgstr ""
+msgstr "Atualizações ao manual do Swell Foop."
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:104
@@ -150,11 +100,13 @@ msgid ""
 "<revnumber>Swell Foop Manual V3.4</revnumber> <date>March 2012</date> <_:"
 "revdescription-1/>"
 msgstr ""
+"<revnumber>Swell Foop, manual V3.4</revnumber> <date>Março de 2012</date> <_:"
+"revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:113
 msgid "Adaptation of the Swell Foop manual to new template."
-msgstr ""
+msgstr "Adaptação do manual do Swell Foop ao novo modelo."
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:114
@@ -167,11 +119,13 @@ msgid ""
 "<revnumber>Swell Foop Manual V2.11</revnumber> <date>January 2008</date> <_:"
 "revdescription-1/>"
 msgstr ""
+"<revnumber>Swell Foop, manual V2.11</revnumber> <date>Janeiro de 2008</date> "
+"<_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:122
 msgid "Initial version for the new Swell Foop."
-msgstr ""
+msgstr "Versão inicial para o novo Swell Foop."
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:123
@@ -184,16 +138,18 @@ msgid ""
 "<revnumber>Swell Foop Manual V2.10</revnumber> <date>February 2005</date> <_:"
 "revdescription-1/>"
 msgstr ""
+"<revnumber>Swell Foop, manual V2.10</revnumber> <date>Fevereiro de 2005</"
+"date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:129
 msgid "This manual describes version 3.4 of Swell Foop."
-msgstr ""
+msgstr "Esse manual descreve a versão 3.4 do Swell Foop."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:132
 msgid "Feedback"
-msgstr ""
+msgstr "Feedback"
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:133
@@ -203,17 +159,21 @@ msgid ""
 "\"ghelp:user-guide?feedback-bugs\" type=\"help\">Feedback section of the "
 "GNOME User Guide</ulink>."
 msgstr ""
+"Para relatar um erro ou fazer uma sugestão sobre o jogo <application>Swell "
+"Foop</application> ou este manual, siga as instruções na <ulink url=\"ghelp:"
+"user-guide?feedback-bugs\" type=\"help\">seção Feedback do guia do usuário "
+"do GNOME</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:140
 msgid "<primary>Swell Foop</primary>"
-msgstr ""
+msgstr "<primary>Swell Foop</primary>"
 
 #. (itstool) path: sect1/title
 #. (itstool) path: table/title
 #: C/index.docbook:147 C/index.docbook:163
 msgid "Playing <application>Swell Foop</application>"
-msgstr ""
+msgstr "Jogando <application>Swell Foop</application>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:148
@@ -224,11 +184,28 @@ msgid ""
 "then collapse to fill in the gaps and new groups are formed. You cannot "
 "remove single objects."
 msgstr ""
+"<application>Swell Foop</application> é um jogo de quebra-cabeça. O objetivo "
+"é remover o maior número de objetos possível no menor número de movimentos "
+"possível. Objetos adjacentes são removidos como um grupo. Os objetos "
+"restantes entram em colapso para preencher as lacunas e novos grupos são "
+"formados. Você não pode remover objetos únicos."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:151
 msgid "<application>Swell Foop</application> at the beginning of a new game."
+msgstr "<application>Swell Foop</application> no começo de um novo jogo."
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:155
+msgctxt "_"
+msgid ""
+"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
 msgstr ""
+"external ref='figures/start-up.png' md5='af4f96509d9d99f8057765be9fd0fdd0'"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:161
@@ -244,31 +221,87 @@ msgid ""
 "has been removed the objects above them fall down to fill the space. If an "
 "entire column is cleared then the objects slide leftward to fill the gap."
 msgstr ""
+"O tabuleiro começa como uma grade completa de objetos. Dependendo do tamanho "
+"da placa selecionada, existem três ou quatro tipos de objeto. Se um grupo de "
+"objetos é adjacente e todo o mesmo tipo, eles podem ser removidos "
+"simplesmente clicando neles com o mouse (ou pressionando a barra de espaço). "
+"Quando você move o mouse sobre um grupo que você pode remover, os objetos "
+"começarão a se mover. O número de objetos no grupo e os pontos que você "
+"marcará para removê-lo serão mostrados no canto inferior esquerdo da janela. "
+"Quanto mais objetos no grupo, mais pontos você fará. Uma vez que o grupo "
+"tenha sido removido, os objetos acima deles caem para preencher o espaço. Se "
+"uma coluna inteira for limpa, os objetos deslizarão para a esquerda para "
+"preencher a lacuna."
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:170
+msgctxt "_"
+msgid "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
+msgstr ""
+"external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:166
 msgid "1. Eliminate groups of two or more <_:screenshot-1/>"
+msgstr "1. Elimine grupos de dois ou mais <_:screenshot-1/>"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:178
+msgctxt "_"
+msgid "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
 msgstr ""
+"external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:174
 msgid "2. Objects fall down to fill the gaps <_:screenshot-1/>"
+msgstr "2. Objetos caem para preencher as lacunas <_:screenshot-1/>"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:186
+msgctxt "_"
+msgid "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
 msgstr ""
+"external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:182
 msgid "3. Objects move left to fill empty columns <_:screenshot-1/>"
 msgstr ""
+"3. Objetos se movem à esquerda preenchendo colunas vazias <_:screenshot-1/>"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:194
+msgctxt "_"
+msgid "external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
+msgstr ""
+"external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:190
 msgid "4. New groups are formed and the cycle repeats <_:screenshot-1/>"
-msgstr ""
+msgstr "4. Novos grupos são formados e o ciclo se repete <_:screenshot-1/>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:202
 msgid "Scoring is based on the number of objects you delete:"
-msgstr ""
+msgstr "A pontuação é baseada no número de objetos que você exclui:"
 
 #. (itstool) path: row/entry
 #: C/index.docbook:207
@@ -277,9 +310,8 @@ msgstr "Número de objetos"
 
 #. (itstool) path: row/entry
 #: C/index.docbook:208
-#, fuzzy
 msgid "Points Scored"
-msgstr "Pontuações do Minas"
+msgstr "Pontuações feitas"
 
 #. (itstool) path: row/entry
 #: C/index.docbook:211
@@ -369,18 +401,17 @@ msgstr "(n - 2)<superscript>2</superscript>"
 #. (itstool) path: sect1/para
 #: C/index.docbook:225
 msgid "If you clear the board there is a 1000 point bonus."
-msgstr ""
+msgstr "Se você limpar o tabuleiro, há um bônus de 1000 pontos."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:229
-#, fuzzy
 msgid "Customization"
-msgstr "Personalizado"
+msgstr "Personalização"
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:232
 msgid "Changing the Look"
-msgstr ""
+msgstr "Mudando a aparência"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:234
@@ -391,6 +422,11 @@ msgid ""
 "guimenuitem></menuchoice>. Selecting an item from the list changes the theme "
 "immediately."
 msgstr ""
+"Para mudar a aparência dos objetos use o item <guimenuitem>Tema</"
+"guimenuitem> sob <menuchoice><guimenu>Swell Foop</"
+"guimenu><guimenuitem>Preferências</guimenuitem><guimenuitem>Aparência</"
+"guimenuitem></menuchoice>. Selecionar um item da lista altera o tema "
+"imediatamente."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:236
@@ -404,11 +440,19 @@ msgid ""
 "<filename>$XDG_DATA_HOME</filename> is usually <filename>~/.local/share/</"
 "filename>."
 msgstr ""
+"Você também pode criar seus próprios temas, embora o processo não seja muito "
+"direto ainda. Use uma cópia de um tema existente em <filename>/usr/share/"
+"gnome-games/swell-foop/themes/</filename> como um modelo e altere-o com seu "
+"programa de pintura favorito. Coloque o resultado em <filename>"
+"$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. Ele será incluído "
+"automaticamente na lista de temas da próxima vez que você executar o "
+"<application>Swell Foop</application>. <filename>XDG_DATA_HOME</filename> é "
+"geralmente <filename>~/.local/share/</filename>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:240
 msgid "Changing the Size"
-msgstr ""
+msgstr "Mudando o tamanho"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:241
@@ -419,11 +463,16 @@ msgid ""
 "guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</"
 "guimenuitem>."
 msgstr ""
+"A lista <guimenu>Tamanho do tabuleiro</guimenu> sob "
+"<menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferências</"
+"guimenuitem><guimenuitem>Configurações</guimenuitem></menuchoice> contém "
+"três opções: <guimenuitem>Pequeno</guimenuitem>, <guimenuitem>Médio</"
+"guimenuitem> e <guimenuitem>Grande</guimenuitem>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:245
 msgid "Changing the Number of Objects"
-msgstr ""
+msgstr "Mudando o número de objetos"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:246
@@ -433,11 +482,15 @@ msgid ""
 "guimenuitem><guimenuitem>Setup</guimenuitem></menuchoice> allows you to "
 "increase the number of different objects."
 msgstr ""
+"A opção <guimenu>Número de cores</guimenu> sob <menuchoice><guimenu>Swell "
+"Foop</guimenu><guimenuitem>Preferências</"
+"guimenuitem><guimenuitem>Configurações</guimenuitem></menuchoice> permite "
+"que você aumente o número de objetos diferentes."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:250
 msgid "Changing the Speed"
-msgstr ""
+msgstr "Mudando a velocidade"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:251
@@ -449,6 +502,12 @@ msgid ""
 "guimenuitem><guimenuitem>Operation</guimenuitem></menuchoice> you can speed "
 "up game-play at the expense of animation quality."
 msgstr ""
+"A animação padrão é projetada para ser suave e graciosa. Se você gosta de "
+"jogar rápido e furioso, então isso pode ser muito lento para você. Ao "
+"selecionar a opção <guimenuitem>Animação rápida</guimenuitem> em "
+"<menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Preferências</"
+"guimenuitem><guimenuitem>Operação</guimenuitem></menuchoice> você pode "
+"acelerar jogo a custo de qualidade de animação."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:257
@@ -461,6 +520,8 @@ msgid ""
 "The most important rule when aiming for a high score is to think ahead: each "
 "group you remove will form and destroy other groups."
 msgstr ""
+"A regra mais importante quando se busca obter uma pontuação alta é pensar no "
+"futuro: cada grupo que você remover formará e destruirá outros grupos."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:261
@@ -469,6 +530,9 @@ msgid ""
 "larger. Vertically aligned objects can't be misaligned, but horizontal "
 "arrangements can."
 msgstr ""
+"Remova os grupos superiores primeiro, a menos que remover outro grupo o "
+"torne maior. Objetos alinhados verticalmente não podem estar desalinhados, "
+"mas arranjos horizontais podem."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:263
@@ -481,6 +545,13 @@ msgid ""
 "of two you are left with score no points, the bigger group scores more "
 "overall."
 msgstr ""
+"Como a pontuação aumenta quadraticamente, grandes grupos de objetos são "
+"sempre melhores. Por exemplo, a diferença de pontos entre um grupo de seis "
+"objetos e um grupo de sete objetos é nove pontos. Em uma situação onde você "
+"tem uma escolha entre mesclar dois grupos de dois em quatro ou apenas "
+"adicionar mais um ao grupo de seis, então você deve adicionar o único "
+"objeto. Mesmo que os grupos de dois que lhe restam não pontuem, o grupo "
+"maior pontua mais no geral."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:265
@@ -490,11 +561,15 @@ msgid ""
 "to be in a position where you have to sacrifice a group that large to clear "
 "the board."
 msgstr ""
+"Não se esqueça do bônus de mil pontos por limpar todas as bolas. Para obter "
+"1000 pontos de um único grupo, você precisa de 34 objetos. É muito "
+"improvável que você esteja em posição de sacrificar um grupo tão grande para "
+"liberar o tabuleiro."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:270
 msgid "About <application>Swell Foop</application>"
-msgstr ""
+msgstr "Sobre o <application>Swell Foop</application>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:271
@@ -504,6 +579,11 @@ msgid ""
 "<application>Swell Foop</application>, please visit the <ulink url=\"http://"
 "live.gnome.org/GnomeGames/\" type=\"http\">GNOME Games web page</ulink>."
 msgstr ""
+"<application>Swell Foop</application> foi escrito por Callum McKenzie "
+"(<email>callum@physics.otago.ac.nz</email>). Para saber mais sobre o "
+"<application>Swell Foop</application>, por favor visite a <ulink url="
+"\"http://live.gnome.org/GnomeGames/\" type=\"http\">página web do GNOME "
+"Games</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:275
@@ -512,6 +592,9 @@ msgid ""
 "manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-"
 "bugs\" type=\"help\">Feedback section of the GNOME User Guide</ulink>."
 msgstr ""
+"Para relatar um erro ou fazer uma sugestão sobre esse aplicativo ou este "
+"manual, siga as instruções na <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">seção Feedback do guia do usuário do GNOME</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:281
@@ -523,6 +606,12 @@ msgid ""
 "documentation; another can be found in the file COPYING included with the "
 "source code of this program."
 msgstr ""
+"Este programa é distribuído sob os termos da Licença Pública Geral GNU (GNU "
+"General Public License), conforme publicada pela Free Software Foundation; "
+"versão 2 da Licença, ou (a seu critério) qualquer versão posterior. Uma "
+"<ulink url=\"help:gpl\" type=\"help\">cópia desta licença</ulink> está "
+"incluída nesta documentação; outra cópia pode ser encontrada no arquivo "
+"COPYING incluído no código-fonte deste programa."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
@@ -539,6 +628,12 @@ msgid ""
 "of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
+"Permissão concedida para copiar, distribuir e/ou modificar este documento "
+"sob os termos da Licença de Documentação Livre GNU (GNU Free Documentation "
+"License), Versão 1.1 ou qualquer versão mais recente publicada pela Free "
+"Software Foundation; sem Seções Invariantes, Textos de Capa Frontal, e sem "
+"Textos de Contracapa. Você pode encontrar uma cópia da licença GFDL neste <_:"
+"ulink-1/> ou no arquivo COPYING-DOCS distribuído com este manual."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:12
@@ -548,6 +643,10 @@ msgid ""
 "you can do so by adding a copy of the license to the manual, as described in "
 "section 6 of the license."
 msgstr ""
+"Este manual é parte da coleção de manuais do GNOME distribuídos sob a GFDL. "
+"Se você quiser distribuí-lo separadamente da coleção, você pode fazê-lo "
+"adicionando ao manual uma cópia da licença, como descrito na seção 6 da "
+"licença."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:19
@@ -558,6 +657,11 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
+"Muitos dos nomes usados por empresas para distinguir seus produtos e "
+"serviços são reivindicados como marcas registradas. Onde esses nomes "
+"aparecem em qualquer documentação do GNOME e os membros do Projeto de "
+"Documentação do GNOME estiverem cientes dessas marcas registradas, os nomes "
+"aparecerão impressos em letras maiúsculas ou com iniciais em maiúsculas."
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:35
@@ -574,6 +678,18 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
+"O DOCUMENTO É FORNECIDO NA BASE “COMO ESTÁ”, SEM GARANTIAS DE QUALQUER TIPO, "
+"TANTO EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO LIMITADO A, GARANTIAS DE QUE "
+"O DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO SEJA COMERCIALIZÁVEL, LIVRE DE "
+"DEFEITOS, PRÓPRIO PARA UM PROPÓSITO ESPECÍFICO OU SEM INFRAÇÕES. TODO O "
+"RISCO A RESPEITO DA QUALIDADE, EXATIDÃO, E DESEMPENHO DO DOCUMENTO OU "
+"VERSÕES MODIFICADAS DO DOCUMENTO É DE SUA RESPONSABILIDADE. SE ALGUM "
+"DOCUMENTO OU VERSÃO MODIFICADA SE PROVAR DEFEITUOSO EM QUALQUER ASPECTO, "
+"VOCÊ (NÃO O ESCRITOR INICIAL, AUTOR OU QUALQUER CONTRIBUIDOR) ASSUME O CUSTO "
+"DE QUALQUER SERVIÇO NECESSÁRIO, REPARO OU CORREÇÃO. ESSA RENÚNCIA DE "
+"GARANTIAS CONSTITUI UMA PARTE ESSENCIAL DESTA LICENÇA. NENHUM USO DESTE "
+"DOCUMENTO OU VERSÃO MODIFICADA DESTE DOCUMENTO É AUTORIZADO SE NÃO FOR SOB "
+"ESSA RENÚNCIA; E"
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:55
@@ -589,6 +705,17 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
 "POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
+"SOB NENHUMA CIRCUNSTÂNCIA E SOB NENHUMA TEORIA LEGAL, TANTO EM DANO "
+"(INCLUINDO NEGLIGÊNCIA), CONTRATO, OU OUTROS, DEVEM O AUTOR, ESCRITOR "
+"INICIAL, QUALQUER CONTRIBUIDOR, OU QUALQUER DISTRIBUIDOR DO DOCUMENTO OU "
+"VERSÃO MODIFICADA DO DOCUMENTO, OU QUALQUER FORNECEDOR DE ALGUMA DESSAS "
+"PARTES, SEREM CONSIDERADOS RESPONSÁVEIS A QUALQUER PESSOA POR QUALQUER DANO, "
+"SEJA DIRETO, INDIRETO, ESPECIAL, ACIDENTAL OU DANOS DECORRENTES DE QUALQUER "
+"NATUREZA, INCLUINDO, MAS NÃO LIMITADO A, DANOS POR PERDA DE BOA VONTADE, "
+"TRABALHO PARADO, FALHA OU MAU FUNCIONAMENTO DO COMPUTADOR, OU QUALQUER E "
+"TODOS OS OUTROS DANOS OU PERDAS RESULTANTES OU RELACIONADOS AO USO DO "
+"DOCUMENTO E VERSÕES MODIFICADAS, MESMO QUE TAL PARTE TENHA SIDO INFORMADA DA "
+"POSSIBILIDADE DE TAIS DANOS."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:28
@@ -597,6 +724,9 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
+"O DOCUMENTO E VERSÕES MODIFICADAS DO DOCUMENTO SÃO FORNECIDOS SOB OS TERMOS "
+"DA GNU FREE DOCUMENTATION LICENSE COM O ENTENDIMENTO ADICIONAL DE QUE: <_:"
+"orderedlist-1/>"
 
 #~ msgid "The theme to use"
 #~ msgstr "O tema para usar"
