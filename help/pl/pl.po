@@ -1,14 +1,14 @@
 # Polish translation for swell-foop help.
-# Copyright © 2017 the swell-foop authors.
+# Copyright © 2017-2018 the swell-foop authors.
 # This file is distributed under the same license as the swell-foop help.
-# Piotr Drąg <piotrdrag@gmail.com>, 2017.
-# Aviary.pl <community-poland@mozilla.org>, 2017.
+# Piotr Drąg <piotrdrag@gmail.com>, 2017-2018.
+# Aviary.pl <community-poland@mozilla.org>, 2017-2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop-help\n"
-"POT-Creation-Date: 2018-01-30 19:03+0000\n"
-"PO-Revision-Date: 2017-09-16 02:55+0200\n"
+"POT-Creation-Date: 2018-09-06 12:24+0000\n"
+"PO-Revision-Date: 2018-09-06 18:33+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -22,8 +22,8 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Piotr Drąg <piotrdrag@gmail.com>, 2017\n"
-"Aviary.pl <community-poland@mozilla.org>, 2017"
+"Piotr Drąg <piotrdrag@gmail.com>, 2017-2018\n"
+"Aviary.pl <community-poland@mozilla.org>, 2017-2018"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:20
@@ -200,9 +200,9 @@ msgstr "<application>Swell Foop</application> na początku gry."
 #: C/index.docbook:155
 msgctxt "_"
 msgid ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
 msgstr ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:161
