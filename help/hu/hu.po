@@ -2,18 +2,18 @@
 # Copyright (C) 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the swell-foop package.
 #
-# Balázs Úr <urbalazs@gmail.com>, 2015.
+# Balázs Úr <urbalazs@gmail.com>, 2015, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
-"POT-Creation-Date: 2015-01-07 23:39+0000\n"
-"PO-Revision-Date: 2015-01-09 00:54+0100\n"
+"POT-Creation-Date: 2018-09-06 12:24+0000\n"
+"PO-Revision-Date: 2018-09-13 23:16+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.2\n"
 
@@ -21,62 +21,6 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr "Úr Balázs <urbalazs@gmail.com>, 2015."
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:155
-msgctxt "_"
-msgid ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
-msgstr ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:170
-msgctxt "_"
-msgid "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
-msgstr ""
-"external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:178
-msgctxt "_"
-msgid "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
-msgstr ""
-"external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:186
-msgctxt "_"
-msgid "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
-msgstr ""
-"external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:194
-msgctxt "_"
-msgid "external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
-msgstr ""
-"external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:20
@@ -92,10 +36,10 @@ msgid ""
 "are none left or no more color groups."
 msgstr ""
 "A Swell Foop egy fejtörő játék, amelynek célja, hogy az azonos színű darabok "
-"csoportjaira kattintva annyi darabot távolítson el az ablakról, amennyit csak "
-"lehetséges. A csoportok el fognak tűnni, és a fent lévő darabok le fognak "
-"esni egészen addig, amíg nem marad egyetlen egy sem vagy nincs több színes "
-"csoport."
+"csoportjaira kattintva annyi darabot távolítson el az ablakról, amennyit "
+"csak lehetséges. A csoportok el fognak tűnni, és a fent lévő darabok le "
+"fognak esni egészen addig, amíg nem marad egyetlen egy sem vagy nincs több "
+"színes csoport."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:32
@@ -152,8 +96,8 @@ msgid ""
 "<revnumber>Swell Foop Manual V3.4</revnumber> <date>March 2012</date> <_:"
 "revdescription-1/>"
 msgstr ""
-"<revnumber>Swell Foop kézikönyv V3.4</revnumber> <date>2012. március</date> <"
-"_:revdescription-1/>"
+"<revnumber>Swell Foop kézikönyv V3.4</revnumber> <date>2012. március</date> "
+"<_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:113
@@ -171,8 +115,8 @@ msgid ""
 "<revnumber>Swell Foop Manual V2.11</revnumber> <date>January 2008</date> <_:"
 "revdescription-1/>"
 msgstr ""
-"<revnumber>Swell Foop kézikönyv V2.11</revnumber> <date>2008. január</date> <"
-"_:revdescription-1/>"
+"<revnumber>Swell Foop kézikönyv V2.11</revnumber> <date>2008. január</date> "
+"<_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:122
@@ -212,10 +156,9 @@ msgid ""
 "GNOME User Guide</ulink>."
 msgstr ""
 "A <application>Swell Foop</application> játékkal vagy ezen kézikönyvvel "
-"kapcsolatos megjegyzéseit és hibajelentéseit <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">a GNOME felhasználói "
-"kézikönyv visszajelzés szakasza</ulink> útmutatási alapján juttathatja el "
-"hozzánk."
+"kapcsolatos megjegyzéseit és hibajelentéseit <ulink url=\"ghelp:user-guide?"
+"feedback-bugs\" type=\"help\">a GNOME felhasználói kézikönyv visszajelzés "
+"szakasza</ulink> útmutatási alapján juttathatja el hozzánk."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:140
@@ -238,15 +181,27 @@ msgid ""
 "remove single objects."
 msgstr ""
 "A <application>Swell Foop</application> egy fejtörő játék. A célja a lehető "
-"legtöbb objektum eltávolítása a lehetséges legkevesebb lépésből. Az egymással "
-"szomszédos objektumok csoportként kerülnek eltávolításra. A megmaradó "
-"objektumok ekkor összecsukódnak, hogy kitöltsék a réseket, és új csoportok "
-"alakulnak. Egyedülálló objektumokat nem lehet eltávolítani."
+"legtöbb objektum eltávolítása a lehetséges legkevesebb lépésből. Az "
+"egymással szomszédos objektumok csoportként kerülnek eltávolításra. A "
+"megmaradó objektumok ekkor összecsukódnak, hogy kitöltsék a réseket, és új "
+"csoportok alakulnak. Egyedülálló objektumokat nem lehet eltávolítani."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:151
 msgid "<application>Swell Foop</application> at the beginning of a new game."
 msgstr "A <application>Swell Foop</application> egy új játék elején."
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:155
+msgctxt "_"
+msgid ""
+"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
+msgstr ""
+"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:161
@@ -268,11 +223,22 @@ msgstr ""
 "eltávolíthatók, ha rájuk kattint az egérrel (vagy megnyomja a szóköz "
 "billentyűt). Amikor egy olyan csoport fölé viszi az egérkurzort, amely "
 "eltávolítható, akkor az objektumok mozogni kezdenek. A csoportban lévő "
-"objektumok száma és a csoport eltávolításáért járó pontszám az ablak bal alsó "
-"sarkában látható. Minél több objektum van a csoportban, annál több több "
+"objektumok száma és a csoport eltávolításáért járó pontszám az ablak bal "
+"alsó sarkában látható. Minél több objektum van a csoportban, annál több több "
 "pontot fog kapni értük. Amikor egy csoport eltávolításra került, a fölöttük "
 "lévő objektumok leesnek, hogy kitöltsék a helyet. Ha egy egész oszlop lett "
 "törölve, akkor az objektumok balra csúsznak a rés kitöltéséért."
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:170
+msgctxt "_"
+msgid "external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
+msgstr ""
+"external ref='figures/play1.png' md5='848b317a3c414cfd4827a4746d508c41'"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:166
@@ -280,17 +246,50 @@ msgid "1. Eliminate groups of two or more <_:screenshot-1/>"
 msgstr ""
 "1. Számolja fel a kettő vagy több elemből álló csoportokat <_:screenshot-1/>"
 
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:178
+msgctxt "_"
+msgid "external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
+msgstr ""
+"external ref='figures/play2.png' md5='038038b3da780193d770c956a9c82af0'"
+
 #. (itstool) path: entry/para
 #: C/index.docbook:174
 msgid "2. Objects fall down to fill the gaps <_:screenshot-1/>"
 msgstr "2. Az objektumok leesnek, hogy kitöltsék a réseket <_:screenshot-1/>"
 
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:186
+msgctxt "_"
+msgid "external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
+msgstr ""
+"external ref='figures/play3.png' md5='e68a47c4f8e8c5db9a0ecc01fd9e29b7'"
+
 #. (itstool) path: entry/para
 #: C/index.docbook:182
 msgid "3. Objects move left to fill empty columns <_:screenshot-1/>"
 msgstr ""
-"3. Az objektumok balra mozognak, hogy kitöltsék az üres oszlopokat<"
-"_:screenshot-1/>"
+"3. Az objektumok balra mozognak, hogy kitöltsék az üres oszlopokat<_:"
+"screenshot-1/>"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:194
+msgctxt "_"
+msgid "external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
+msgstr ""
+"external ref='figures/play4.png' md5='64b02b430eb023aee91d8cf9ed502a1c'"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:190
@@ -422,11 +421,11 @@ msgid ""
 "guimenuitem></menuchoice>. Selecting an item from the list changes the theme "
 "immediately."
 msgstr ""
-"Az objektumok megjelenésének módosításához használja a <guimenuitem>Téma<"
-"/guimenuitem> menüpontot a <menuchoice><guimenu>Swell Foop</guimenu><"
-"guimenuitem>Beállítások</guimenuitem><guimenuitem>Megjelenés</guimenuitem><"
-"/menuchoice> menü alatt. Egy elem kiválasztása a listából azonnal "
-"megváltoztatja a témát."
+"Az objektumok megjelenésének módosításához használja a <guimenuitem>Téma</"
+"guimenuitem> menüpontot a <menuchoice><guimenu>Swell Foop</"
+"guimenu><guimenuitem>Beállítások</guimenuitem><guimenuitem>Megjelenés</"
+"guimenuitem></menuchoice> menü alatt. Egy elem kiválasztása a listából "
+"azonnal megváltoztatja a témát."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:236
@@ -441,13 +440,13 @@ msgid ""
 "filename>."
 msgstr ""
 "Létrehozhat saját témákat is, habár a folyamat még nem túl egyszerű. "
-"Használja egy meglévő téma másolatát sablonként a <filename>"
-"/usr/share/gnome-games/swell-foop/themes/</filename> mappából, és módosítsa "
-"azt a kedvenc rajzprogramjával. Az eredményt helyezze a <filename>"
-"$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename> mappába. "
-"Automatikusan fel lesz véve a témalistába a <application>Swell Foop<"
-"/application> következő futtatásakor. A <filename>$XDG_DATA_HOME</filename> "
-"általában a <filename>~/.local/share/</filename>."
+"Használja egy meglévő téma másolatát sablonként a <filename>/usr/share/gnome-"
+"games/swell-foop/themes/</filename> mappából, és módosítsa azt a kedvenc "
+"rajzprogramjával. Az eredményt helyezze a <filename>$XDG_DATA_HOME/gnome-"
+"games/swell-foop/themes/</filename> mappába. Automatikusan fel lesz véve a "
+"témalistába a <application>Swell Foop</application> következő futtatásakor. "
+"A <filename>$XDG_DATA_HOME</filename> általában a <filename>~/.local/share/</"
+"filename>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:240
@@ -463,11 +462,11 @@ msgid ""
 "guimenuitem>, <guimenuitem>Medium</guimenuitem> and <guimenuitem>Large</"
 "guimenuitem>."
 msgstr ""
-"A <guimenu>Táblaméret</guimenu> lista a <menuchoice><guimenu>Swell Foop<"
-"/guimenu><guimenuitem>Beállítások</guimenuitem><guimenuitem>Beállítás<"
-"/guimenuitem></menuchoice> alatt három beállítást tartalmaz: <guimenuitem>"
-"Kicsi</guimenuitem>, <guimenuitem>Közepes</guimenuitem> és <guimenuitem>Nagy<"
-"/guimenuitem>."
+"A <guimenu>Táblaméret</guimenu> lista a <menuchoice><guimenu>Swell Foop</"
+"guimenu><guimenuitem>Beállítások</guimenuitem><guimenuitem>Beállítás</"
+"guimenuitem></menuchoice> alatt három beállítást tartalmaz: "
+"<guimenuitem>Kicsi</guimenuitem>, <guimenuitem>Közepes</guimenuitem> és "
+"<guimenuitem>Nagy</guimenuitem>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:245
@@ -483,9 +482,9 @@ msgid ""
 "increase the number of different objects."
 msgstr ""
 "A <guimenu>Színek száma</guimenu> beállítás a <menuchoice><guimenu>Swell "
-"Foop</guimenu><guimenuitem>Beállítások</"
-"guimenuitem><guimenuitem>Beállítás</guimenuitem></menuchoice> menüpont alatt "
-"lehetővé teszi a különböző objektumok számának növelését."
+"Foop</guimenu><guimenuitem>Beállítások</guimenuitem><guimenuitem>Beállítás</"
+"guimenuitem></menuchoice> menüpont alatt lehetővé teszi a különböző "
+"objektumok számának növelését."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:250
@@ -503,11 +502,11 @@ msgid ""
 "up game-play at the expense of animation quality."
 msgstr ""
 "Az alapértelmezett animációt úgy tervezték, hogy sima és kecses legyen. Ha a "
-"gyors és dühös játékot kedveli, akkor ez túl lassú lesz Önnek. A <guimenuitem>"
-"Gyors animáció</guimenuitem> lehetőség választásával a <menuchoice><guimenu>"
-"Swell Foop</guimenu><guimenuitem>Beállítások</guimenuitem><guimenuitem>"
-"Működés</guimenuitem></menuchoice> menüpontban felgyorsíthatja a játékmenetet "
-"az animáció minőségének rovására."
+"gyors és dühös játékot kedveli, akkor ez túl lassú lesz Önnek. A "
+"<guimenuitem>Gyors animáció</guimenuitem> lehetőség választásával a "
+"<menuchoice><guimenu>Swell Foop</guimenu><guimenuitem>Beállítások</"
+"guimenuitem><guimenuitem>Működés</guimenuitem></menuchoice> menüpontban "
+"felgyorsíthatja a játékmenetet az animáció minőségének rovására."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:257
@@ -580,11 +579,11 @@ msgid ""
 "<application>Swell Foop</application>, please visit the <ulink url=\"http://"
 "live.gnome.org/GnomeGames/\" type=\"http\">GNOME Games web page</ulink>."
 msgstr ""
-"A <application>Swell Foop</application> játékot Callum McKenzie (<email>"
-"callum@physics.otago.ac.nz</email>) írta. Ha további információkat szeretne a "
-"<application>Swell Foop</application> játékról, akkor látogassa meg a <ulink "
-"url=\"http://live.gnome.org/GnomeGames/\" type=\"http\">GNOME játékok "
-"weboldalát</ulink>."
+"A <application>Swell Foop</application> játékot Callum McKenzie "
+"(<email>callum@physics.otago.ac.nz</email>) írta. Ha további információkat "
+"szeretne a <application>Swell Foop</application> játékról, akkor látogassa "
+"meg a <ulink url=\"http://live.gnome.org/GnomeGames/\" type=\"http\">GNOME "
+"játékok weboldalát</ulink>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:275
@@ -594,9 +593,9 @@ msgid ""
 "bugs\" type=\"help\">Feedback section of the GNOME User Guide</ulink>."
 msgstr ""
 "Az alkalmazással, vagy ezen kézikönyvvel kapcsolatos megjegyzéseit és "
-"hibajelentéseit <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">a "
-"GNOME felhasználói kézikönyv visszajelzés szakasza</ulink> útmutatási alapján "
-"juttathatja el hozzánk."
+"hibajelentéseit <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
+"\">a GNOME felhasználói kézikönyv visszajelzés szakasza</ulink> útmutatási "
+"alapján juttathatja el hozzánk."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:281
@@ -609,10 +608,11 @@ msgid ""
 "source code of this program."
 msgstr ""
 "Ez a program a Free Software Foundation által kiadott GNU General Public "
-"License dokumentumban leírtak, akár a licenc 2-es, akár (tetszőleges) későbbi "
-"változata szerint kerül terjesztésre. Ennek a <ulink url=\"help:gpl\" "
-"type=\"help\">licencnek egy példányát</ulink> ez a dokumentáció tartalmazza, "
-"vagy a program forráskódjával melléklet COPYING fájlban is megtalálható."
+"License dokumentumban leírtak, akár a licenc 2-es, akár (tetszőleges) "
+"későbbi változata szerint kerül terjesztésre. Ennek a <ulink url=\"help:gpl"
+"\" type=\"help\">licencnek egy példányát</ulink> ez a dokumentáció "
+"tartalmazza, vagy a program forráskódjával melléklet COPYING fájlban is "
+"megtalálható."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
@@ -727,5 +727,4 @@ msgid ""
 msgstr ""
 "A DOKUMENTUM ÉS A DOKUMENTUM MÓDOSÍTOTT VERZIÓJA A GNU FREE DOCUMENTATION "
 "LICENSE (GFDL) ALATT JELENIK MEG AZ ALÁBBI ÉRTELMEZÉSSEL: <_:orderedlist-1/>"
-
 
