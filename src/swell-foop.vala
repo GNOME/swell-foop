@@ -149,7 +149,6 @@ public class SwellFoop : Gtk.Application
         menu.append_section (null, section);
         section.append (_("_Help"), "app.help");
         section.append (_("_About"), "app.about");
-        section.append (_("_Quit"), "app.quit");
         set_app_menu (menu);
 
         /* Create a headerbar */
