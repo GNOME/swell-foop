@@ -149,7 +149,6 @@ public class SwellFoop : Gtk.Application
         menu.append_section (null, section);
         section.append (_("_Help"), "app.help");
         section.append (_("_About Swell Foop"), "app.about");
-        set_app_menu (menu);
 
         /* Create a headerbar */
         headerbar = new Gtk.HeaderBar ();
@@ -157,6 +156,13 @@ public class SwellFoop : Gtk.Application
         headerbar.title = _("Swell Foop");
         headerbar.show_close_button = true;
         window.set_titlebar (headerbar);
+
+        /* Add the primary menu button */
+        var primary_menu = new Gtk.MenuButton ();
+        primary_menu.show ();
+        primary_menu.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.BUTTON));
+        primary_menu.set_menu_model (menu);
+        headerbar.pack_end (primary_menu);
 
         /* show the current score */
         update_score_cb (0);
