@@ -145,8 +145,6 @@ public class SwellFoop : Gtk.Application
         section = new Menu ();
         menu.append_section (null, section);
         section.append (_("_Preferences"), "app.preferences");
-        section = new Menu ();
-        menu.append_section (null, section);
         section.append (_("_Help"), "app.help");
         section.append (_("_About Swell Foop"), "app.about");
 
