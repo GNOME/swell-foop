@@ -1,3 +1,11 @@
+Swell Foop 3.31.1
+==================
+
+* Updated translations
+* Build fixes for flathub deployment
+* Meson build fix
+* Removed appmenu (#11)
+
 Swell Foop 3.30.0
 ==================
 
