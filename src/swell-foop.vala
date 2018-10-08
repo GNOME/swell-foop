@@ -75,7 +75,7 @@ public class SwellFoop : Gtk.Application
         var stack = new Gtk.Stack ();
         var first_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
         load_css ();
-        var logo = new Gtk.Image.from_icon_name ("swell-foop", Gtk.IconSize.DIALOG);
+        var logo = new Gtk.Image.from_icon_name ("org.gnome.SwellFoop", Gtk.IconSize.DIALOG);
         logo.set_pixel_size (96);
         first_vbox.pack_start (logo, false);
         var label = new Gtk.Label (_("Welcome to Swell Foop"));
@@ -126,7 +126,7 @@ public class SwellFoop : Gtk.Application
         /* Create the main window */
         window = new Gtk.ApplicationWindow (this);
         window.set_title (_("Swell Foop"));
-        window.icon_name = "swell-foop";
+        window.icon_name = "org.gnome.SwellFoop";
         window.resizable = false;
         window.set_events (window.get_events () | Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
 
@@ -467,7 +467,7 @@ public class SwellFoop : Gtk.Application
                                "artists", artists,
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
-                               "logo-icon-name", "swell-foop",
+                               "logo-icon-name", "org.gnome.SwellFoop",
                                "website", Config.PACKAGE_URL,
                                null);
     }

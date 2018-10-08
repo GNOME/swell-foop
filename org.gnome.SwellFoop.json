@@ -4,9 +4,6 @@
     "runtime-version" : "3.30",
     "sdk" : "org.gnome.Sdk",
     "command" : "swell-foop",
-    "rename-icon" : "swell-foop",
-    "rename-desktop-file" : "swell-foop.desktop",
-    "rename-appdata-file" : "swell-foop.appdata.xml",
     "tags" : [
         "nightly"
     ],

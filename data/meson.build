@@ -18,7 +18,7 @@ install_data('swell-foop.css',
   install_dir: pkgdatadir,
 )
 
-desktop = 'swell-foop.desktop'
+desktop = 'org.gnome.SwellFoop.desktop'
 
 # Desktop file
 i18n.merge_file(
@@ -30,7 +30,7 @@ i18n.merge_file(
   install_dir: join_paths(datadir, 'applications'),
 )
 
-appdata = 'swell-foop.appdata.xml'
+appdata = 'org.gnome.SwellFoop.appdata.xml'
 
 # Appdata
 i18n.merge_file(
