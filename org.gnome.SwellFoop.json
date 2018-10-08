@@ -1,9 +1,12 @@
 {
     "app-id" : "org.gnome.SwellFoop",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.28",
+    "runtime-version" : "3.30",
     "sdk" : "org.gnome.Sdk",
     "command" : "swell-foop",
+    "rename-icon" : "swell-foop",
+    "rename-desktop-file" : "swell-foop.desktop",
+    "rename-appdata-file" : "swell-foop.appdata.xml",
     "tags" : [
         "nightly"
     ],
@@ -22,11 +25,9 @@
     ],
     "build-options" : {
         "cflags" : "-O2 -g",
-        "env" : {
-        }
+        "cxxflags": "-O2 -g",
     },
     "cleanup" : [
-        "/share/man"
     ],
     "modules" : [
         {
