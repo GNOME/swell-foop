@@ -7,8 +7,6 @@
     "tags" : [
         "nightly"
     ],
-    "rename-icon" : "swell-foop",
-    "rename-desktop-file" : "swell-foop.desktop",
     "desktop-file-name-prefix" : "(Nightly) ",
     "finish-args" : [
         "--share=ipc",
