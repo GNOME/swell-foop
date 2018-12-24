@@ -6,10 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-01-30 19:02+0000\n"
-"PO-Revision-Date: 2018-02-04 17:43+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2018-10-08 19:28+0000\n"
+"PO-Revision-Date: 2018-12-24 18:16+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -17,7 +16,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.2\n"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
+#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "Nete il schermi gjavant grups di tessaris coloradis e sagomadis"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Gjave de taule di zûc ducj i cuadrâts che tu rivis: fâs clic suntun grup di "
+"cuadrâts dal stes colôr par fâju sparî ducj adun e fâ colâ altris. No tu "
+"puedis gjavâ un cuadrât ae volte: plui tu 'nd gjavis adun, plui ponts tu âs "
+"(e tu varâs ancjemò plui ponts se tu ju eliminis ducj)."
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Swell Foop al è un zûc veloç, ma si pues slungjâlu modificant la dimension "
+"de taule di zûc."
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:42
+msgid "The GNOME Project"
+msgstr "Il progjet GNOME"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
+msgid "game;logic;board;same;matching;"
+msgstr ""
+"zûc;zûcs;logjiche;board;taule;corispuindince;tessaris;casellis;compagn;"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.SwellFoop.desktop.in:8
+#| msgid "Swell Foop"
+msgid "org.gnome.SwellFoop"
+msgstr "org.gnome.SwellFoop"
 
 #: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
@@ -91,66 +138,19 @@ msgstr "Animazion _veloce"
 msgid "Operation"
 msgstr "Operazion"
 
-#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
-#: src/swell-foop.vala:126 src/swell-foop.vala:156 src/swell-foop.vala:455
-#: src/swell-foop.vala:537
-msgid "Swell Foop"
-msgstr "Swell Foop"
-
-#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "Nete il schermi gjavant grups di tessaris coloradis e sagomadis"
-
-#: data/swell-foop.appdata.xml.in:10
-msgid ""
-"Remove as many squares as possible from the board. Click on a group of "
-"squares of the same color to make them all disappear in one fell swoop, "
-"causing other squares to fall into place. It is not possible to remove a "
-"single square at a time. You get far more points for clearing a larger group "
-"of squares, and also for clearing the entire board."
-msgstr ""
-"Gjave de taule di zûc ducj i cuadrâts che tu rivis: fâs clic suntun grup di "
-"cuadrâts dal stes colôr par fâju sparî ducj adun e fâ colâ altris. No tu "
-"puedis gjavâ un cuadrât ae volte: plui tu 'nd gjavis adun, plui ponts tu âs "
-"(e tu varâs ancjemò plui ponts se tu ju eliminis ducj)."
-
-#: data/swell-foop.appdata.xml.in:17
-msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer "
-"by changing the board size."
-msgstr ""
-"Swell Foop al è un zûc veloç, ma si pues slungjâlu modificant la dimension "
-"de taule di zûc."
-
-#: data/swell-foop.appdata.xml.in:42
-msgid "The GNOME Project"
-msgstr "Il progjet GNOME"
-
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/swell-foop.desktop.in:6
-msgid "game;logic;board;same;matching;"
-msgstr ""
-"zûc;zûcs;logjiche;board;taule;corispuindince;tessaris;casellis;compagn;"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/swell-foop.desktop.in:8
-#| msgid "Swell Foop"
-msgid "swell-foop"
-msgstr "swell-foop"
-
-#: src/game-view.vala:320
+#: src/game-view.vala:322
 msgid "_Play Again"
 msgstr "_Torne zuie"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:493
+#: src/game-view.vala:495
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u pont"
 msgstr[1] "%u ponts"
 
-#: src/game-view.vala:494
+#: src/game-view.vala:496
 msgid "Game Over!"
 msgstr "Partide finide!"
 
@@ -158,7 +158,7 @@ msgstr "Partide finide!"
 msgid "High Scores"
 msgstr "Risultâts miôrs"
 
-#: src/score-dialog.vala:28 src/swell-foop.vala:150
+#: src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "_Jes"
 
@@ -189,11 +189,11 @@ msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u colôr"
 msgstr[1] "%u × %u, %u colôrs"
 
-#: src/swell-foop.vala:79
+#: src/swell-foop.vala:81
 msgid "Welcome to Swell Foop"
 msgstr "Benvignûts in Swell Foop"
 
-#: src/swell-foop.vala:82
+#: src/swell-foop.vala:84
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -201,19 +201,19 @@ msgstr ""
 "Gjave ducj i cuadrâts che tu rivis.\n"
 "Mancul mossis tu fasis, plui ponts tu fasis."
 
-#: src/swell-foop.vala:85
+#: src/swell-foop.vala:87
 msgid "Let’s _Play"
 msgstr "_Zuin"
 
-#: src/swell-foop.vala:139 src/swell-foop.vala:499
+#: src/swell-foop.vala:141 src/swell-foop.vala:504
 msgid "_New Game"
 msgstr "_Gnove partide"
 
-#: src/swell-foop.vala:142
+#: src/swell-foop.vala:144
 msgid "High _Scores"
 msgstr "_Risultâts miôr"
 
-#: src/swell-foop.vala:145
+#: src/swell-foop.vala:147
 msgid "_Preferences"
 msgstr "_Preferencis"
 
@@ -222,35 +222,35 @@ msgid "_Help"
 msgstr "_Jutori"
 
 #: src/swell-foop.vala:149
-msgid "_About"
-msgstr "_Informazions"
+msgid "_About Swell Foop"
+msgstr "_Informazions su Swell Foop"
 
-#: src/swell-foop.vala:185
+#: src/swell-foop.vala:190
 msgid "Small"
 msgstr "Piçul"
 
-#: src/swell-foop.vala:186
+#: src/swell-foop.vala:191
 msgid "Normal"
 msgstr "Normâl"
 
-#: src/swell-foop.vala:187
+#: src/swell-foop.vala:192
 msgid "Large"
 msgstr "Grant"
 
-#: src/swell-foop.vala:261
+#: src/swell-foop.vala:266
 #, c-format
 msgid "Score: %u"
 msgstr "Ponts: %u"
 
-#: src/swell-foop.vala:320
+#: src/swell-foop.vala:325
 msgid "Colors"
 msgstr "Colôrs"
 
-#: src/swell-foop.vala:324
+#: src/swell-foop.vala:329
 msgid "Shapes and Colors"
 msgstr "Formis e colôrs"
 
-#: src/swell-foop.vala:458
+#: src/swell-foop.vala:463
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -258,21 +258,28 @@ msgstr ""
 "O ai voie di zuiâ a chel zûc!\n"
 "Sâstu, a si piin e tu âs di fâ lôr clic parsore par fâju sparî!"
 
-#: src/swell-foop.vala:459
+#: src/swell-foop.vala:464
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: src/swell-foop.vala:464
+#: src/swell-foop.vala:469
 msgid "translator-credits"
 msgstr "Fabio Tomat <f.t.public@gmail.com>"
 
-#: src/swell-foop.vala:497
+#: src/swell-foop.vala:502
 msgid "Abandon this game to start a new one?"
 msgstr "Bandonâ cheste partide e tacâ une gnove?"
 
-#: src/swell-foop.vala:498
+#: src/swell-foop.vala:503
 msgid "_Cancel"
 msgstr "_Anule"
+
+#~| msgid "Swell Foop"
+#~ msgid "swell-foop"
+#~ msgstr "swell-foop"
+
+#~ msgid "_About"
+#~ msgstr "_Informazions"
 
 #~ msgid "Start a new game"
 #~ msgstr "Tache une gnove partide"
