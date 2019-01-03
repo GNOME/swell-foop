@@ -1,12 +1,12 @@
 # Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Swell-foop doc\n"
-"POT-Creation-Date: 2017-04-06 10:08+0000\n"
-"PO-Revision-Date: 2017-02-11 14:23+0100\n"
+"POT-Creation-Date: 2018-09-06 12:24+0000\n"
+"PO-Revision-Date: 2019-01-03 22:57+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.2\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -200,11 +200,14 @@ msgstr "<application>Swell Foop</application> i början av ett nytt spel."
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:155
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
 msgctxt "_"
 msgid ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
 msgstr ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:161
