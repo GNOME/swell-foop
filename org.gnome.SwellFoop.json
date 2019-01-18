@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.SwellFoop",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.30",
+    "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
     "command" : "swell-foop",
     "tags" : [
@@ -17,12 +17,6 @@
         "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
-    ],
-    "build-options" : {
-        "cflags" : "-O2 -g",
-        "cxxflags": "-O2 -g",
-    },
-    "cleanup" : [
     ],
     "modules" : [
         {
