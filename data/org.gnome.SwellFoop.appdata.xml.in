@@ -32,7 +32,6 @@
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
-    <kudo>AppMenu</kudo>
     <kudo>HiDpiIcon</kudo>
     <kudo>HighContrast</kudo>
     <kudo>ModernToolkit</kudo>
@@ -64,3 +63,4 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
 </component>
+
