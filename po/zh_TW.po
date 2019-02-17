@@ -1,26 +1,72 @@
 # Chinese (Taiwan) translation of gnome-games.
 # Copyright (C) 1999-2006 Free Software Foundation, Inc.
 # (http://vegas.wcn.com.tw/21.shtml for blackjack terms)
+#
 # Fernando <bv1al@journalist.com.tw>, 1999.
 # Abel Cheung <abel@oaka.org>, 2001-2006.
 # Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2010.
 # Wei-Lun Chao <chaoweilun@gmail.com>, 2010.
-#
+# pan93412 <pan93412@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-03-26 22:46+0000\n"
-"PO-Revision-Date: 2018-06-09 13:09+0800\n"
-"Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
-"Language-Team: Chinese (traditional)\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2018-10-08 19:28+0000\n"
+"PO-Revision-Date: 2019-02-17 23:18+0800\n"
+"Last-Translator: pan93412 <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.8\n"
+"X-Generator: Lokalize 18.12.2\n"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
+#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "清除畫面上聚在一起的同樣顏色和形狀的拼圖"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"儘可能將遊戲盤上的方塊移除。點選一群同顏色的方塊能讓它們一次消失，但是會讓其"
+"他的方塊變色。如果一次清除比較大群的方塊，您所獲得的分數也會大大提升，清除整"
+"個遊戲盤時也會有大量加分。"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Swell Foop 永遠可以很快速的遊玩，但是您也可以改變遊戲盤的大小讓它可以玩得久一"
+"點。"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:42
+msgid "The GNOME Project"
+msgstr "GNOME 計畫"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
+msgid "game;logic;board;same;matching;"
+msgstr "game;logic;board;same;matching;遊戲;邏輯;桌面遊戲;比對;"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.SwellFoop.desktop.in:8
+#| msgid "Swell Foop"
+msgid "org.gnome.SwellFoop"
+msgstr "org.gnome.SwellFoop"
 
 #: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
@@ -94,51 +140,6 @@ msgstr "_Zealous 動畫"
 msgid "Operation"
 msgstr "操作"
 
-#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
-#: src/swell-foop.vala:128 src/swell-foop.vala:158 src/swell-foop.vala:457
-#: src/swell-foop.vala:539
-msgid "Swell Foop"
-msgstr "Swell Foop"
-
-#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "清除畫面上聚在一起的同樣顏色和形狀的拼圖"
-
-#: data/swell-foop.appdata.xml.in:10
-msgid ""
-"Remove as many squares as possible from the board. Click on a group of "
-"squares of the same color to make them all disappear in one fell swoop, "
-"causing other squares to fall into place. It is not possible to remove a "
-"single square at a time. You get far more points for clearing a larger group "
-"of squares, and also for clearing the entire board."
-msgstr ""
-"儘可能將遊戲盤上的方塊移除。點選一群同顏色的方塊能讓它們一次消失，但是會讓其"
-"他的方塊變色。如果一次清除比較大群的方塊，您所獲得的分數也會大大提升，清除整"
-"個遊戲盤時也會有大量加分。"
-
-#: data/swell-foop.appdata.xml.in:17
-msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer "
-"by changing the board size."
-msgstr ""
-"Swell Foop 永遠可以很快速的遊玩，但是您也可以改變遊戲盤的大小讓它可以玩得久一"
-"點。"
-
-#: data/swell-foop.appdata.xml.in:42
-msgid "The GNOME Project"
-msgstr "GNOME 計畫"
-
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/swell-foop.desktop.in:6
-msgid "game;logic;board;same;matching;"
-msgstr "game;logic;board;same;matching;遊戲;邏輯;桌面遊戲;比對;"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/swell-foop.desktop.in:8
-#| msgid "Swell Foop"
-msgid "swell-foop"
-msgstr "swell-foop"
-
 #: src/game-view.vala:322
 msgid "_Play Again"
 msgstr "再玩一次(_P)"
@@ -158,7 +159,7 @@ msgstr "玩完了！"
 msgid "High Scores"
 msgstr "最高分數"
 
-#: src/score-dialog.vala:28 src/swell-foop.vala:152
+#: src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "結束(_Q)"
 
@@ -204,7 +205,7 @@ msgstr ""
 msgid "Let’s _Play"
 msgstr "開始玩(_P)"
 
-#: src/swell-foop.vala:141 src/swell-foop.vala:501
+#: src/swell-foop.vala:141 src/swell-foop.vala:504
 msgid "_New Game"
 msgstr "開新局(_N)"
 
@@ -216,40 +217,41 @@ msgstr "最高分數(_S)"
 msgid "_Preferences"
 msgstr "偏好設定(_P)"
 
-#: src/swell-foop.vala:150
+#: src/swell-foop.vala:148
 msgid "_Help"
 msgstr "求助(_H)"
 
-#: src/swell-foop.vala:151
-msgid "_About"
-msgstr "關於(_A)"
+#: src/swell-foop.vala:149
+#| msgid "Swell Foop"
+msgid "_About Swell Foop"
+msgstr "關於 Swell Foop(_A)"
 
-#: src/swell-foop.vala:187
+#: src/swell-foop.vala:190
 msgid "Small"
 msgstr "小"
 
-#: src/swell-foop.vala:188
+#: src/swell-foop.vala:191
 msgid "Normal"
 msgstr "一般"
 
-#: src/swell-foop.vala:189
+#: src/swell-foop.vala:192
 msgid "Large"
 msgstr "大"
 
-#: src/swell-foop.vala:263
+#: src/swell-foop.vala:266
 #, c-format
 msgid "Score: %u"
 msgstr "得分：%u "
 
-#: src/swell-foop.vala:322
+#: src/swell-foop.vala:325
 msgid "Colors"
 msgstr "色彩"
 
-#: src/swell-foop.vala:326
+#: src/swell-foop.vala:329
 msgid "Shapes and Colors"
 msgstr "形狀與顏色"
 
-#: src/swell-foop.vala:460
+#: src/swell-foop.vala:463
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -257,11 +259,11 @@ msgstr ""
 "我就是要玩那個遊戲！\n"
 "你知道，就是它們會轉個不停，你對它們點一點，它們就消失了！"
 
-#: src/swell-foop.vala:461
+#: src/swell-foop.vala:464
 msgid "Copyright © 2009 Tim Horton"
 msgstr "版權所有 © 2009 Tim Horton"
 
-#: src/swell-foop.vala:466
+#: src/swell-foop.vala:469
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
@@ -271,13 +273,20 @@ msgstr ""
 "Abel Cheung <abel@oaka.org>, 2001-07\n"
 "Fernando <bv1al@journalist.com.tw>, 1999"
 
-#: src/swell-foop.vala:499
+#: src/swell-foop.vala:502
 msgid "Abandon this game to start a new one?"
 msgstr "放棄這局遊戲以開始另一局遊戲？"
 
-#: src/swell-foop.vala:500
+#: src/swell-foop.vala:503
 msgid "_Cancel"
 msgstr "取消(_C)"
+
+#~| msgid "Swell Foop"
+#~ msgid "swell-foop"
+#~ msgstr "swell-foop"
+
+#~ msgid "_About"
+#~ msgstr "關於(_A)"
 
 #~ msgid "Start a new game"
 #~ msgstr "開始另一局"
