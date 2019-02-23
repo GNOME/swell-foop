@@ -1,8 +1,6 @@
-# Esperanto translation for gnome-games.
-# Copyright (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
-# This file is distributed under the same license as the gnome-games package.
-#
-# FIRST AUTHOR < >, 2005.
+# Esperanto translation for swell-foop.
+# Copyright (C) 2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the swell-foop package.
 # Billy HAND < >, 2008.
 # Sergio ĤLUTĈIN < >, 2009.
 # Arturo < >, 2009.
@@ -13,27 +11,65 @@
 # Michael MORONI < >, 2011.
 # Serge LEBLANC < >, 2011.
 # Miĥa-Johano WALTER < >, 2011.
-# Tiffany Antopolski <tiffany.antopolski@gmail.com>, 2011, 2012.
-# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010, 2011, 2012.
-#
+# Tiffany ANTOPOLSKI <tiffany.antopolski@gmail.com>, 2011, 2012.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010, 2011, 2012, 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-01-30 19:02+0000\n"
-"PO-Revision-Date: 2012-03-09 22:20+0100\n"
+"Project-Id-Version: swell-foop\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2018-10-08 19:28+0000\n"
+"PO-Revision-Date: 2019-02-23 19:36+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
-"Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
+"Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Virtaal 0.7.1-rc1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-DamnedLies-Scope: partial\n"
-"X-Launchpad-Export-Date: 2012-01-11 17:32+0000\n"
 "X-Project-Style: gnome\n"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
+#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
+msgid "Swell Foop"
+msgstr "Manda Grovo"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "Vakigu la ekranon per forigi kolorajn kaj formatajn kahelarojn"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:42
+msgid "The GNOME Project"
+msgstr "La GNOME-projekto"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
+msgid "game;logic;board;same;matching;"
+msgstr ""
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.SwellFoop.desktop.in:8
+#| msgid "Swell Foop"
+msgid "org.gnome.SwellFoop"
+msgstr "org.gnome.SwellFoop"
 
 #: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
@@ -84,9 +120,8 @@ msgid "_Board size:"
 msgstr "Ta_bula grando:"
 
 #: data/preferences.ui:84
-#, fuzzy
 msgid "_Number of colors:"
-msgstr "Numbro da koloroj:"
+msgstr "_Numbro da koloroj:"
 
 #: data/preferences.ui:142
 msgid "Setup"
@@ -103,75 +138,33 @@ msgstr "Aspekto"
 #: data/preferences.ui:258
 #, fuzzy
 msgid "_Zealous Animation"
-msgstr "Fervoranimacio"
+msgstr "_Fervoranimacio"
 
 #: data/preferences.ui:283
 msgid "Operation"
 msgstr "Operacio"
 
-#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
-#: src/swell-foop.vala:126 src/swell-foop.vala:156 src/swell-foop.vala:455
-#: src/swell-foop.vala:537
-msgid "Swell Foop"
-msgstr "Manda Grovo"
-
-#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "Vakigu la ekranon per forigi kolorajn kaj formatajn kahelarojn."
-
-#: data/swell-foop.appdata.xml.in:10
-msgid ""
-"Remove as many squares as possible from the board. Click on a group of "
-"squares of the same color to make them all disappear in one fell swoop, "
-"causing other squares to fall into place. It is not possible to remove a "
-"single square at a time. You get far more points for clearing a larger group "
-"of squares, and also for clearing the entire board."
-msgstr ""
-
-#: data/swell-foop.appdata.xml.in:17
-msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer "
-"by changing the board size."
-msgstr ""
-
-#: data/swell-foop.appdata.xml.in:42
-msgid "The GNOME Project"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/swell-foop.desktop.in:6
-msgid "game;logic;board;same;matching;"
-msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/swell-foop.desktop.in:8
-#, fuzzy
-msgid "swell-foop"
-msgstr "Manda Grovo"
-
-#: src/game-view.vala:320
-#, fuzzy
+#: src/game-view.vala:322
 msgid "_Play Again"
-msgstr "Ludi kiel:"
+msgstr "_Ludi denove"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:493
-#, fuzzy, c-format
+#: src/game-view.vala:495
+#, c-format
 msgid "%u point"
 msgid_plural "%u points"
-msgstr[0] "%d poento"
-msgstr[1] "%d poentoj"
+msgstr[0] "%u poento"
+msgstr[1] "%u poentoj"
 
-#: src/game-view.vala:494
+#: src/game-view.vala:496
 msgid "Game Over!"
 msgstr "Ludo finita!"
 
 #: src/score-dialog.vala:25
-#, fuzzy
 msgid "High Scores"
-msgstr "Poentaroj de Tali"
+msgstr "Altaj poentaroj"
 
-#: src/score-dialog.vala:28 src/swell-foop.vala:150
+#: src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "_Fini"
 
@@ -189,10 +182,9 @@ msgstr "Grando:"
 
 #: src/score-dialog.vala:69
 msgid "Date"
-msgstr ""
+msgstr "Dato"
 
 #: src/score-dialog.vala:72
-#, fuzzy
 msgid "Score"
 msgstr "Poentoj"
 
@@ -200,34 +192,33 @@ msgstr "Poentoj"
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%u × %u, %u koloro"
+msgstr[1] "%u × %u, %u koloroj"
 
-#: src/swell-foop.vala:79
-#, fuzzy
+#: src/swell-foop.vala:81
 msgid "Welcome to Swell Foop"
-msgstr "Manda Grovo"
+msgstr "Bonvenon al Manda Grovo"
 
-#: src/swell-foop.vala:82
+#: src/swell-foop.vala:84
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
 msgstr ""
 
-#: src/swell-foop.vala:85
+#: src/swell-foop.vala:87
 msgid "Let’s _Play"
-msgstr ""
+msgstr "Ni _ludu"
 
-#: src/swell-foop.vala:139 src/swell-foop.vala:499
+#: src/swell-foop.vala:141 src/swell-foop.vala:504
 msgid "_New Game"
 msgstr "_Nova ludo"
 
-#: src/swell-foop.vala:142
+#: src/swell-foop.vala:144
 #, fuzzy
 msgid "High _Scores"
-msgstr "_Poentaroj"
+msgstr "Altaj _poentaroj"
 
-#: src/swell-foop.vala:145
+#: src/swell-foop.vala:147
 msgid "_Preferences"
 msgstr "_Preferoj"
 
@@ -236,76 +227,74 @@ msgid "_Help"
 msgstr "_Helpo"
 
 #: src/swell-foop.vala:149
-msgid "_About"
-msgstr "_Pri"
+#| msgid "Swell Foop"
+msgid "_About Swell Foop"
+msgstr "_Pri Manda Grovo"
 
-#: src/swell-foop.vala:185
+#: src/swell-foop.vala:190
 msgid "Small"
 msgstr "Eta"
 
-#: src/swell-foop.vala:186
+#: src/swell-foop.vala:191
 msgid "Normal"
 msgstr "Normala"
 
-#: src/swell-foop.vala:187
+#: src/swell-foop.vala:192
 msgid "Large"
 msgstr "Granda"
 
-#: src/swell-foop.vala:261
-#, fuzzy, c-format
+#: src/swell-foop.vala:266
+#, c-format
 msgid "Score: %u"
-msgstr "Poentoj: %d"
+msgstr "Poentoj: %u"
 
-#: src/swell-foop.vala:320
+#: src/swell-foop.vala:325
 msgid "Colors"
 msgstr "Koloroj"
 
-#: src/swell-foop.vala:324
+#: src/swell-foop.vala:329
 msgid "Shapes and Colors"
 msgstr "Formoj kaj koloroj"
 
-#: src/swell-foop.vala:458
-#, fuzzy
+#: src/swell-foop.vala:463
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
-"Mi volas ludi tiun ludon! Jen ili ĉiuj ŝaltiĝadas kaj vi alklakadas ilin kaj "
-"ili malaperadas!\n"
-"\n"
-"Manda Grovo estas parto de GNOME Games."
-
-#: src/swell-foop.vala:459
-#, fuzzy
-msgid "Copyright © 2009 Tim Horton"
-msgstr "Kopirajto  2009 Tim HORTON"
+"Mi volas ludi tiun ludon!\n"
+"Jen ili ĉiuj ŝaltiĝadas kaj vi alklakadas ilin kaj ili malaperadas!"
 
 #: src/swell-foop.vala:464
+msgid "Copyright © 2009 Tim Horton"
+msgstr "Kopirajto © 2009 Tim HORTON"
+
+#: src/swell-foop.vala:469
 msgid "translator-credits"
 msgstr ""
-"Launchpad Contributions:\n"
-"  Alekso42 https://launchpad.net/~alekso42\n"
-"  Arturo https://launchpad.net/~asly-esperanto\n"
-"  Benno Schulenberg https://launchpad.net/~bennoschulenberg\n"
-"  Billy Hand https://launchpad.net/~billythethird\n"
-"  Johano https://launchpad.net/~johanohepton\n"
-"  Kristjan SCHMIDT https://launchpad.net/~kristjan-eo\n"
-"  Marek Blahuš https://launchpad.net/~s-launchpad-blahus-cz\n"
-"  Michael Moroni https://launchpad.net/~airon90\n"
-"  Miguel Pérez https://launchpad.net/~rraton-esperanto\n"
-"  Robert BOGENSCHNEIDER https://launchpad.net/~robog\n"
-"  Serge Leblanc https://launchpad.net/~serge-leblanc\n"
-"  Sergio Ĥlutĉin https://launchpad.net/~sergej-hlutchin\n"
-"  Thomas Heinis https://launchpad.net/~th-sitrino\n"
-"\n"
-"GNOME Contributions:\n"
-"  Tiffany Antopolski"
+"Billy HAND\n"
+"Sergio ĤLUTĈIN\n"
+"Arturo\n"
+"Benno SCHULENBERG\n"
+"Robert BOGENSCHNEIDER\n"
+"Alekso42\n"
+"Miguel PÉREZ\n"
+"Michael MORONI\n"
+"Serge LEBLANC\n"
+"Miĥa-Johano WALTER\n"
+"Tiffany ANTOPOLSKI\n"
+"Kristjan SCHMIDT"
 
-#: src/swell-foop.vala:497
-#, fuzzy
+#: src/swell-foop.vala:502
 msgid "Abandon this game to start a new one?"
-msgstr "Ĉu la ludo konservendas antaŭ ol la nova ludo komenciĝas?"
+msgstr "Ĉu forlasi ĉi tiun ludon por komenci novan?"
 
-#: src/swell-foop.vala:498
+#: src/swell-foop.vala:503
 msgid "_Cancel"
 msgstr "_Nuligu"
+
+#, fuzzy
+#~ msgid "swell-foop"
+#~ msgstr "Manda Grovo"
+
+#~ msgid "_About"
+#~ msgstr "_Pri"
