@@ -37,14 +37,13 @@
 # Tino Meinen <tino.meinen@gmail.com>, 2002–2009.
 # Wouter Bolsterlee <wbolster@gnome.org>, 2008.
 # Redmar <redmar@ubuntu-nl.org>, 2011.
-# Nathan Follens <nthn@unseen.is>, 2016-2018.
+# Nathan Follens <nthn@unseen.is>, 2016-2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-02-04 06:03+0000\n"
-"PO-Revision-Date: 2018-02-08 18:41+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2018-10-08 19:28+0000\n"
+"PO-Revision-Date: 2019-02-24 16:05+0100\n"
 "Last-Translator: Nathan Follens <nthn@unseen.is>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "Language: nl\n"
@@ -53,7 +52,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2011-09-18 07:04+0000\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
+#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr ""
+"Maak het scherm leeg door groepen gekleurde en gevormde tegels te verwijderen"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Verwijder zo veel mogelijk vierkantjes van het bord. Klik op een groep "
+"vierkantjes van dezelfde kleur om ze allemaal tegelijk in een klap te doen "
+"verdwijnen, waardoor andere vierkantjes in hun plaats vallen. Het is niet "
+"mogelijk om een vierkantje per keer te verwijderen. U krijgt veel meer "
+"punten voor een grotere groep vierkantjes, en ook voor het hele bord te "
+"legen."
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Swell Foop is altijd heel snel uitgespeeld, maar u kan het langer laten "
+"duren door de bordgrootte aan te passen."
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:42
+msgid "The GNOME Project"
+msgstr "Het Gnome-project"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
+msgid "game;logic;board;same;matching;"
+msgstr "game;spel;logic;logica;board;bord;same;matching;paren;"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.SwellFoop.desktop.in:8
+#| msgid "Swell Foop"
+msgid "org.gnome.SwellFoop"
+msgstr "org.gnome.SwellFoop"
 
 #: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
@@ -131,61 +180,12 @@ msgstr "_Zealous-animaties"
 msgid "Operation"
 msgstr "Bewerking"
 
-#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
-#: src/swell-foop.vala:126 src/swell-foop.vala:156 src/swell-foop.vala:455
-#: src/swell-foop.vala:537
-msgid "Swell Foop"
-msgstr "Swell Foop"
-
-#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr ""
-"Maak het scherm leeg door groepen gekleurde en gevormde tegels te verwijderen"
-
-#: data/swell-foop.appdata.xml.in:10
-msgid ""
-"Remove as many squares as possible from the board. Click on a group of "
-"squares of the same color to make them all disappear in one fell swoop, "
-"causing other squares to fall into place. It is not possible to remove a "
-"single square at a time. You get far more points for clearing a larger group "
-"of squares, and also for clearing the entire board."
-msgstr ""
-"Verwijder zo veel mogelijk vierkantjes van het bord. Klik op een groep "
-"vierkantjes van dezelfde kleur om ze allemaal tegelijk in een klap te doen "
-"verdwijnen, waardoor andere vierkantjes in hun plaats vallen. Het is niet "
-"mogelijk om een vierkantje per keer te verwijderen. U krijgt veel meer "
-"punten voor een grotere groep vierkantjes, en ook voor het hele bord te "
-"legen."
-
-#: data/swell-foop.appdata.xml.in:17
-msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer "
-"by changing the board size."
-msgstr ""
-"Swell Foop is altijd heel snel uitgespeeld, maar u kan het langer laten "
-"duren door de bordgrootte aan te passen."
-
-#: data/swell-foop.appdata.xml.in:42
-msgid "The GNOME Project"
-msgstr "Het Gnome-project"
-
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/swell-foop.desktop.in:6
-msgid "game;logic;board;same;matching;"
-msgstr "game;spel;logic;logica;board;bord;same;matching;paren;"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/swell-foop.desktop.in:8
-#| msgid "Swell Foop"
-msgid "swell-foop"
-msgstr "swell-foop"
-
-#: src/game-view.vala:320
+#: src/game-view.vala:322
 msgid "_Play Again"
 msgstr "O_pnieuw spelen"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:493
+#: src/game-view.vala:495
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -193,7 +193,7 @@ msgstr[0] "%u punt"
 msgstr[1] "%u punten"
 
 # voorbij/afgelopen
-#: src/game-view.vala:494
+#: src/game-view.vala:496
 msgid "Game Over!"
 msgstr "Spel afgelopen!"
 
@@ -201,7 +201,7 @@ msgstr "Spel afgelopen!"
 msgid "High Scores"
 msgstr "Hoogste scores"
 
-#: src/score-dialog.vala:28 src/swell-foop.vala:150
+#: src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "_Afsluiten"
 
@@ -233,11 +233,11 @@ msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, %u kleur"
 msgstr[1] "%u × %u, %u kleuren"
 
-#: src/swell-foop.vala:79
+#: src/swell-foop.vala:81
 msgid "Welcome to Swell Foop"
 msgstr "Welkom bij Swell Foop"
 
-#: src/swell-foop.vala:82
+#: src/swell-foop.vala:84
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -245,19 +245,19 @@ msgstr ""
 "Verwijder zo veel blokken als u kan.\n"
 "Hoe minder u klikt, des te meer punten u krijgt."
 
-#: src/swell-foop.vala:85
+#: src/swell-foop.vala:87
 msgid "Let’s _Play"
 msgstr "Laten we s_pelen"
 
-#: src/swell-foop.vala:139 src/swell-foop.vala:499
+#: src/swell-foop.vala:141 src/swell-foop.vala:504
 msgid "_New Game"
 msgstr "_Nieuw spel"
 
-#: src/swell-foop.vala:142
+#: src/swell-foop.vala:144
 msgid "High _Scores"
 msgstr "Hoogste _scores"
 
-#: src/swell-foop.vala:145
+#: src/swell-foop.vala:147
 msgid "_Preferences"
 msgstr "_Voorkeuren"
 
@@ -266,35 +266,35 @@ msgid "_Help"
 msgstr "_Hulp"
 
 #: src/swell-foop.vala:149
-msgid "_About"
-msgstr "I_nfo"
+msgid "_About Swell Foop"
+msgstr "_Over Swell Foop"
 
-#: src/swell-foop.vala:185
+#: src/swell-foop.vala:190
 msgid "Small"
 msgstr "Klein"
 
-#: src/swell-foop.vala:186
+#: src/swell-foop.vala:191
 msgid "Normal"
 msgstr "Normaal"
 
-#: src/swell-foop.vala:187
+#: src/swell-foop.vala:192
 msgid "Large"
 msgstr "Groot"
 
-#: src/swell-foop.vala:261
+#: src/swell-foop.vala:266
 #, c-format
 msgid "Score: %u"
 msgstr "Score: %u"
 
-#: src/swell-foop.vala:320
+#: src/swell-foop.vala:325
 msgid "Colors"
 msgstr "Kleuren"
 
-#: src/swell-foop.vala:324
+#: src/swell-foop.vala:329
 msgid "Shapes and Colors"
 msgstr "Vormen en kleuren"
 
-#: src/swell-foop.vala:458
+#: src/swell-foop.vala:463
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -302,11 +302,11 @@ msgstr ""
 "Ik wil dat spel spelen!\n"
 "Je weet wel, ze lichten allemaal op, je klikt erop en ze verdwijnen!"
 
-#: src/swell-foop.vala:459
+#: src/swell-foop.vala:464
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: src/swell-foop.vala:464
+#: src/swell-foop.vala:469
 msgid "translator-credits"
 msgstr ""
 "Tino Meinen\n"
@@ -338,13 +338,20 @@ msgstr ""
 "  kerplunk https://launchpad.net/~schorpioen"
 
 # andere/nieuwe
-#: src/swell-foop.vala:497
+#: src/swell-foop.vala:502
 msgid "Abandon this game to start a new one?"
 msgstr "Dit spel verlaten om een nieuw te beginnen?"
 
-#: src/swell-foop.vala:498
+#: src/swell-foop.vala:503
 msgid "_Cancel"
 msgstr "_Annuleren"
+
+#~| msgid "Swell Foop"
+#~ msgid "swell-foop"
+#~ msgstr "swell-foop"
+
+#~ msgid "_About"
+#~ msgstr "I_nfo"
 
 #~ msgid "Start a new game"
 #~ msgstr "Een nieuw spel beginnen"
