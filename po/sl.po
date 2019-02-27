@@ -5,14 +5,14 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006–2007.
-# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2018.
+# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
 "POT-Creation-Date: 2018-10-13 22:21+0000\n"
-"PO-Revision-Date: 2018-10-25 20:14+0200\n"
+"PO-Revision-Date: 2019-02-16 21:18+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -235,15 +235,15 @@ msgstr "_O igri"
 
 #: src/swell-foop.vala:190
 msgid "Small"
-msgstr "Majhno"
+msgstr "Majhna"
 
 #: src/swell-foop.vala:191
 msgid "Normal"
-msgstr "Običajno"
+msgstr "Običajna"
 
 #: src/swell-foop.vala:192
 msgid "Large"
-msgstr "Veliko"
+msgstr "Velika"
 
 #: src/swell-foop.vala:266
 #, c-format
