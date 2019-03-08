@@ -201,9 +201,9 @@ msgstr "<application>Swell Foop</application> na začátku nové hry."
 #: C/index.docbook:155
 msgctxt "_"
 msgid ""
-"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
+"external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 msgstr ""
-"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
+"external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:161
