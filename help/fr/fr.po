@@ -38,9 +38,9 @@ msgstr ""
 #: C/swell-foop.xml:155(imagedata)
 msgctxt "_"
 msgid ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+"external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 msgstr ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+"external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
