@@ -1,26 +1,26 @@
 # Hungarian translation for swell-foop.
-# Copyright (C) 2015 Free Software Foundation, Inc.
+# Copyright (C) 2015, 2018, 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the swell-foop package.
 #
-# Balázs Úr <urbalazs@gmail.com>, 2015, 2018.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2015, 2018, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
-"POT-Creation-Date: 2018-09-06 12:24+0000\n"
-"PO-Revision-Date: 2018-09-13 23:16+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
-"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"POT-Creation-Date: 2019-03-02 15:30+0000\n"
+"PO-Revision-Date: 2019-03-09 07:49+0200\n"
+"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
+"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Úr Balázs <urbalazs@gmail.com>, 2015."
+msgstr "Úr Balázs <ur. balazs at fsf dot hu>, 2015, 2018, 2019."
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:20
@@ -199,9 +199,9 @@ msgstr "A <application>Swell Foop</application> egy új játék elején."
 #: C/index.docbook:155
 msgctxt "_"
 msgid ""
-"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
+"external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 msgstr ""
-"external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
+"external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:161
@@ -727,4 +727,3 @@ msgid ""
 msgstr ""
 "A DOKUMENTUM ÉS A DOKUMENTUM MÓDOSÍTOTT VERZIÓJA A GNU FREE DOCUMENTATION "
 "LICENSE (GFDL) ALATT JELENIK MEG AZ ALÁBBI ÉRTELMEZÉSSEL: <_:orderedlist-1/>"
-
