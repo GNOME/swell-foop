@@ -4,10 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 0\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-02-04 06:03+0000\n"
-"PO-Revision-Date: 2018-03-14 14:31+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2019-03-18 07:34+0000\n"
+"PO-Revision-Date: 2019-03-26 19:33+0100\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -19,6 +18,52 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2008-05-28 02:59+0000\n"
 "X-Generator: Poedit 2.0.6\n"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
+#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
+msgid "Swell Foop"
+msgstr "Jedan potez"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "Očistite ploču uklanjanje grupa obojanih i oblikovanih pločica"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+"Uklonite što je više moguće kvadrata iz ploče. Kliknite na grupu kvadrata "
+"iste boje kako bi ih uklonili u jednom potezu, uzrokujući da na oslobođena "
+"mjesta padaju drugi kvadrati. Nije moguće ukloniti jedan kvadrat. Dobivate "
+"više bodova uklanjanjem veće grupe kvadrata i za čišćenje cijele ploče."
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+"Jedan potez se uvijek brzo odigra, ali to možete produljiti promjenom "
+"veličine ploče."
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
+msgid "The GNOME Project"
+msgstr "GNOME projekt"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
+msgid "game;logic;board;same;matching;"
+msgstr "igra;logika;ploča;isto;podudaranje;"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.SwellFoop.desktop.in:8
+msgid "org.gnome.SwellFoop"
+msgstr "org.gnome.SwellFoop"
 
 #: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
@@ -92,57 +137,12 @@ msgstr "_Efektnija animacija"
 msgid "Operation"
 msgstr "Radnja"
 
-#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
-#: src/swell-foop.vala:126 src/swell-foop.vala:156 src/swell-foop.vala:455
-#: src/swell-foop.vala:537
-msgid "Swell Foop"
-msgstr "Jedan potez"
-
-#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "Očistite ploču uklanjanje grupa obojanih i oblikovanih pločica"
-
-#: data/swell-foop.appdata.xml.in:10
-msgid ""
-"Remove as many squares as possible from the board. Click on a group of "
-"squares of the same color to make them all disappear in one fell swoop, "
-"causing other squares to fall into place. It is not possible to remove a "
-"single square at a time. You get far more points for clearing a larger group "
-"of squares, and also for clearing the entire board."
-msgstr ""
-"Uklonite što je više moguće kvadrata iz ploče. Kliknite na grupu kvadrata "
-"iste boje kako bi ih uklonili u jednom potezu, uzrokujući da na oslobođena "
-"mjesta padaju drugi kvadrati. Nije moguće ukloniti jedan kvadrat. Dobivate "
-"više bodova uklanjanjem veće grupe kvadrata i za čišćenje cijele ploče."
-
-#: data/swell-foop.appdata.xml.in:17
-msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer "
-"by changing the board size."
-msgstr ""
-"Jedan potez se uvijek brzo odigra, ali to možete produljiti promjenom "
-"veličine ploče."
-
-#: data/swell-foop.appdata.xml.in:42
-msgid "The GNOME Project"
-msgstr "GNOME projekt"
-
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/swell-foop.desktop.in:6
-msgid "game;logic;board;same;matching;"
-msgstr "igra;logika;ploča;isto;podudaranje;"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/swell-foop.desktop.in:8
-msgid "swell-foop"
-msgstr "swell-foop"
-
-#: src/game-view.vala:320
+#: src/game-view.vala:322
 msgid "_Play Again"
 msgstr "_Igraj ponovno"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:493
+#: src/game-view.vala:495
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -150,7 +150,7 @@ msgstr[0] "%u bod"
 msgstr[1] "%u boda"
 msgstr[2] "%u bodova"
 
-#: src/game-view.vala:494
+#: src/game-view.vala:496
 msgid "Game Over!"
 msgstr "Kraj igre!"
 
@@ -158,7 +158,7 @@ msgstr "Kraj igre!"
 msgid "High Scores"
 msgstr "Rezultati"
 
-#: src/score-dialog.vala:28 src/swell-foop.vala:150
+#: src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "_Zatvori"
 
@@ -190,11 +190,11 @@ msgstr[0] "%u × %u, %u boja"
 msgstr[1] "%u × %u, %u boje"
 msgstr[2] "%u × %u, %u boja"
 
-#: src/swell-foop.vala:79
+#: src/swell-foop.vala:81
 msgid "Welcome to Swell Foop"
 msgstr "Dobrodošli u Jedan potez"
 
-#: src/swell-foop.vala:82
+#: src/swell-foop.vala:84
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -202,19 +202,19 @@ msgstr ""
 "Uklonite što je više moguće blokova.\n"
 "Manje klikova znači više bodova."
 
-#: src/swell-foop.vala:85
+#: src/swell-foop.vala:87
 msgid "Let’s _Play"
 msgstr "_Zaigrajmo"
 
-#: src/swell-foop.vala:139 src/swell-foop.vala:499
+#: src/swell-foop.vala:141 src/swell-foop.vala:504
 msgid "_New Game"
 msgstr "_Nova igra"
 
-#: src/swell-foop.vala:142
+#: src/swell-foop.vala:144
 msgid "High _Scores"
 msgstr "_Rezultati"
 
-#: src/swell-foop.vala:145
+#: src/swell-foop.vala:147
 msgid "_Preferences"
 msgstr "_Osobitosti"
 
@@ -223,35 +223,35 @@ msgid "_Help"
 msgstr "_Priručnik"
 
 #: src/swell-foop.vala:149
-msgid "_About"
-msgstr "_O programu"
+msgid "_About Swell Foop"
+msgstr "_O Jednom potezu"
 
-#: src/swell-foop.vala:185
+#: src/swell-foop.vala:190
 msgid "Small"
 msgstr "Mala"
 
-#: src/swell-foop.vala:186
+#: src/swell-foop.vala:191
 msgid "Normal"
 msgstr "Normalna"
 
-#: src/swell-foop.vala:187
+#: src/swell-foop.vala:192
 msgid "Large"
 msgstr "Velika"
 
-#: src/swell-foop.vala:261
+#: src/swell-foop.vala:266
 #, c-format
 msgid "Score: %u"
 msgstr "Rezultat: %u"
 
-#: src/swell-foop.vala:320
+#: src/swell-foop.vala:325
 msgid "Colors"
 msgstr "Boje"
 
-#: src/swell-foop.vala:324
+#: src/swell-foop.vala:329
 msgid "Shapes and Colors"
 msgstr "Oblici i boje"
 
-#: src/swell-foop.vala:458
+#: src/swell-foop.vala:463
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -259,20 +259,26 @@ msgstr ""
 "Ako želite igrati ovu igru!\n"
 "Znajte, oni svi zasvijetle a vi kliknete na njih i oni zatim nestanu!"
 
-#: src/swell-foop.vala:459
+#: src/swell-foop.vala:464
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Autorsko pravo © 2009 Tim Horton"
 
-#: src/swell-foop.vala:464
+#: src/swell-foop.vala:469
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  gogo https://launchpad.net/~trebelnik-stefina"
 
-#: src/swell-foop.vala:497
+#: src/swell-foop.vala:502
 msgid "Abandon this game to start a new one?"
 msgstr "Napustite ovu igru i započnite novu?"
 
-#: src/swell-foop.vala:498
+#: src/swell-foop.vala:503
 msgid "_Cancel"
 msgstr "_Odustani"
+
+#~ msgid "swell-foop"
+#~ msgstr "swell-foop"
+
+#~ msgid "_About"
+#~ msgstr "_O programu"
