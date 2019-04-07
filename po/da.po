@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2018-10-08 19:28+0000\n"
+"POT-Creation-Date: 2019-03-26 18:34+0000\n"
 "PO-Revision-Date: 2019-02-13 00:22+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -60,7 +60,7 @@ msgstr ""
 "Swell Foop er altid meget hurtigt at spille, men du kan få det til at vare "
 "lidt længere ved at ændre brætstørrelse."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:42
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
@@ -68,12 +68,6 @@ msgstr "GNOME-projektet"
 #: data/org.gnome.SwellFoop.desktop.in:6
 msgid "game;logic;board;same;matching;"
 msgstr "spil;logik;bræt;samme;matching;match;"
-
-# Yuck!  Der er folk der kritiserer the GIMP for at have valgt et dårligt navn...
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.SwellFoop.desktop.in:8
-msgid "org.gnome.SwellFoop"
-msgstr "org.gnome.SwellFoop"
 
 #: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
@@ -284,8 +278,9 @@ msgstr ""
 "Ole Laursen\n"
 "Ask Hjorth Larsen\n"
 "\n"
-"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
-"Mere info: http://www.dansk-gruppen.dk"
+"Dansk-gruppen\n"
+"Websted <http://dansk-gruppen.dk>\n"
+"E-mail <dansk@dansk-gruppen.dk>"
 
 #: src/swell-foop.vala:502
 msgid "Abandon this game to start a new one?"
@@ -295,6 +290,10 @@ msgstr "Forkast dette spil for at starte et nyt?"
 msgid "_Cancel"
 msgstr "_Annullér"
 
+#~ # Yuck!  Der er folk der kritiserer the GIMP for at have valgt et dårligt navn...
+#~ msgid "org.gnome.SwellFoop"
+#~ msgstr "org.gnome.SwellFoop"
+
 #~ msgid "swell-foop"
 #~ msgstr "swell-foop"
 
@@ -303,3 +302,4 @@ msgstr "_Annullér"
 
 #~ msgid "Start a new game"
 #~ msgstr "Start et nyt spil"
+
