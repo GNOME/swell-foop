@@ -2,267 +2,266 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-#
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2014, 2015, 2016, 2017.
+# Asier Sarasua Garmendia  <asier.sarasua@gmail.com>, 2019.
+#
 msgid ""
-msgstr ""
-"Project-Id-Version: swell-foop master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-02-13 07:39+0000\n"
-"PO-Revision-Date: 2017-02-19 13:33+0100\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+msgstr "Project-Id-Version: swell-foop master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2019-03-26 18:34+0000\n"
+"PO-Revision-Date: 2019-08-14 10:00+0100\n"
+"Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:1
-msgid "The theme to use"
-msgstr "Erabili beharreko gaia"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:2
-msgid "The title of the tile theme to use."
-msgstr "Erabili beharreko fitxa-gaiaren izena."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:3
-msgid "Board size"
-msgstr "Taularen tamaina"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:4
-msgid "The size of the game board."
-msgstr "Joko-mahaiaren tamaina."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:5
-msgid "Board color count"
-msgstr "Mahaiaren kolore zenbaketa"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:6
-msgid "The number of colors of tiles to use in the game."
-msgstr "Jokoan erabiliko diren fitxen kolore kopurua"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:7
-msgid "Is this the first run"
-msgstr "Aurreneko exekuzioa da hau"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
-msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr ""
-"Aurreneko exekuzioaren argibidearen elkarrizketa-koadroa erakutsi edo ez."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:9
-msgid "Zealous animation"
-msgstr "Zealous animazioa"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:10
-msgid "Use more flashy, but slower, animations."
-msgstr "Erabili animazio ikusgarriagoak, baina motelagoak"
-
-#: ../data/preferences.ui.h:1
-msgid "Preferences"
-msgstr "Hobespenak"
-
-#: ../data/preferences.ui.h:2
-msgid "_Board size:"
-msgstr "_Taularen tamaina:"
-
-#: ../data/preferences.ui.h:3
-msgid "_Number of colors:"
-msgstr "Kolore _kopurua:"
-
-#: ../data/preferences.ui.h:4
-msgid "Setup"
-msgstr "Konfigurazioa"
-
-#: ../data/preferences.ui.h:5
-msgid "_Theme:"
-msgstr "_Gaia:"
-
-#: ../data/preferences.ui.h:6
-msgid "Appearance"
-msgstr "Itxura"
-
-#: ../data/preferences.ui.h:7
-msgid "_Zealous Animation"
-msgstr "Zealous _animazioa"
-
-#: ../data/preferences.ui.h:8
-msgid "Operation"
-msgstr "Eragiketa"
-
-#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
-#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
+#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
-#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "Garbitu pantaila koloretako eta formadun fitxak kenduz"
+msgstr "Garbitu pantaila koloretako eta formadun fitxak kenduta"
 
-#: ../data/swell-foop.appdata.xml.in.h:3
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
 "causing other squares to fall into place. It is not possible to remove a "
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
-msgstr ""
-"Kendu ahalik eta karratu gehienen mahaitik. Egin klik kolore berdineko "
-"karratu talde baten gainean guztiak kolpe batez desagertzeko, eta beste "
-"karratuak gainera erortzeko. Ezinezkoa da karratu bakar bat kentzea. Zenbat "
-"eta handiago izan kentzen den karratu taldea, are eta puntuazio hobeagoa "
-"izango duzu."
+msgstr "Kendu ahalik eta karratu gehienen mahaitik. Egin klik kolore berdineko karratu talde baten gainean guztiak kolpe batez desagertzeko, eta beste karratuak gainera erortzeko. Ezinezkoa da karratu bakar bat kentzea. Zenbat eta handiago izan kentzen den karratu taldea, are eta puntuazio hobeagoa izango duzu."
 
-#: ../data/swell-foop.appdata.xml.in.h:4
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
-msgstr ""
-"Swell Foop beti da oso azkarra jokatzeko, baina mahaiaren tamaina alda "
-"dezakezu nolabait geldotzeko."
+msgstr "Swell Foop beti da oso azkarra jokatzeko, baina mahaiaren tamaina alda dezakezu nolabait geldotzeko."
 
-#: ../data/swell-foop.appdata.xml.in.h:5
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
-#: ../data/swell-foop.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
 msgid "game;logic;board;same;matching;"
 msgstr "jokoa;logika;taula;berdina;bat datorrena;"
 
+#: data/org.gnome.swell-foop.gschema.xml:10
+msgid "The theme to use"
+msgstr "Erabili beharreko gaia"
+
+#: data/org.gnome.swell-foop.gschema.xml:11
+msgid "The title of the tile theme to use."
+msgstr "Erabili beharreko fitxa-gaiaren izena."
+
+#: data/org.gnome.swell-foop.gschema.xml:15
+msgid "Board size"
+msgstr "Taularen tamaina"
+
+#: data/org.gnome.swell-foop.gschema.xml:16
+msgid "The size of the game board."
+msgstr "Joko-mahaiaren tamaina."
+
+#: data/org.gnome.swell-foop.gschema.xml:20
+msgid "Board color count"
+msgstr "Mahaiaren kolore zenbaketa"
+
+#: data/org.gnome.swell-foop.gschema.xml:21
+msgid "The number of colors of tiles to use in the game."
+msgstr "Jokoan erabiliko diren fitxen kolore kopurua"
+
+#: data/org.gnome.swell-foop.gschema.xml:25
+msgid "Is this the first run"
+msgstr "Lehen exekuzioa da"
+
+#: data/org.gnome.swell-foop.gschema.xml:26
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr "Lehen exekuzioan argibideen elkarrizketa-koadroa erakutsiko den ala ez."
+
+#: data/org.gnome.swell-foop.gschema.xml:30
+msgid "Zealous animation"
+msgstr "Zealous animazioa"
+
+#: data/org.gnome.swell-foop.gschema.xml:31
+msgid "Use more flashy, but slower, animations."
+msgstr "Erabili animazio ikusgarriagoak, baina motelagoak"
+
+#: data/preferences.ui:31
+msgid "Preferences"
+msgstr "Hobespenak"
+
+#: data/preferences.ui:68
+msgid "_Board size:"
+msgstr "_Taularen tamaina:"
+
+#: data/preferences.ui:84
+msgid "_Number of colors:"
+msgstr "Kolore _kopurua:"
+
+#: data/preferences.ui:142
+msgid "Setup"
+msgstr "Konfigurazioa"
+
+#: data/preferences.ui:180
+msgid "_Theme:"
+msgstr "_Gaia:"
+
+#: data/preferences.ui:227
+msgid "Appearance"
+msgstr "Itxura"
+
+#: data/preferences.ui:258
+msgid "_Zealous Animation"
+msgstr "Zealous _animazioa"
+
+#: data/preferences.ui:283
+msgid "Operation"
+msgstr "Eragiketa"
+
+#: src/game-view.vala:322
+msgid "_Play Again"
+msgstr "Jokatu _berriro"
+
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:472
+#: src/game-view.vala:495
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "puntu %u"
 msgstr[1] "%u puntu"
 
-#: ../src/game-view.vala:473
+#: src/game-view.vala:496
 msgid "Game Over!"
 msgstr "Amaitu da!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
-msgid "_Quit"
-msgstr "_Irten"
+#: src/score-dialog.vala:25
+msgid "High Scores"
+msgstr "Puntuaziorik onenak"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:28
+msgid "_Quit"
+msgstr "I_rten"
+
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Joko berria"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "_OK"
-msgstr "Ado_s"
+msgstr "_Ados"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Size:"
 msgstr "Tamaina:"
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "Data"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:72
 msgid "Score"
 msgstr "Puntuazioa"
 
-#: ../src/score-dialog.vala:166
+#: src/score-dialog.vala:166
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] "%u × %u, kolore %u"
 msgstr[1] "%u × %u, %u kolore"
 
-#: ../src/swell-foop.vala:79
+#: src/swell-foop.vala:81
 msgid "Welcome to Swell Foop"
 msgstr "Ongi etorri Swell Foop-era"
 
-#: ../src/swell-foop.vala:82
+#: src/swell-foop.vala:84
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
-msgstr ""
-"Garbitu ahal dituzun bloke kopuru gehienak.\n"
+msgstr "Garbitu ahal dituzun bloke kopuru gehienak.\n"
 "Zenbat eta klik gutxiago orduan eta puntu gehiago."
 
-#: ../src/swell-foop.vala:85
+#: src/swell-foop.vala:87
 msgid "Let’s _Play"
-msgstr "_Jokatu"
+msgstr "Joka _dezagun"
 
-#: ../src/swell-foop.vala:138
-msgid "_Scores"
-msgstr "_Puntuazioak"
+#: src/swell-foop.vala:141 src/swell-foop.vala:504
+msgid "_New Game"
+msgstr "_Joko berria"
 
-#: ../src/swell-foop.vala:139
+#: src/swell-foop.vala:144
+msgid "High _Scores"
+msgstr "Puntuaziorik _onenak"
+
+#: src/swell-foop.vala:147
 msgid "_Preferences"
 msgstr "_Hobespenak"
 
-#: ../src/swell-foop.vala:142
+#: src/swell-foop.vala:148
 msgid "_Help"
-msgstr "La_guntza"
+msgstr "_Laguntza"
 
-#: ../src/swell-foop.vala:143
-msgid "_About"
-msgstr "Honi _buruz"
+#: src/swell-foop.vala:149
+msgid "_About Swell Foop"
+msgstr "Swell Foop jokoari _buruz"
 
-#: ../src/swell-foop.vala:157
-msgid "Start a new game"
-msgstr "Beste joko bat hasten du"
-
-#: ../src/swell-foop.vala:185
+#: src/swell-foop.vala:190
 msgid "Small"
 msgstr "Txikia"
 
-#: ../src/swell-foop.vala:186
+#: src/swell-foop.vala:191
 msgid "Normal"
-msgstr "Normala"
+msgstr "Arrunta"
 
-#: ../src/swell-foop.vala:187
+#: src/swell-foop.vala:192
 msgid "Large"
 msgstr "Handia"
 
-#: ../src/swell-foop.vala:263
+#: src/swell-foop.vala:266
 #, c-format
 msgid "Score: %u"
 msgstr "Puntuazioa: %u"
 
-#: ../src/swell-foop.vala:322
+#: src/swell-foop.vala:325
 msgid "Colors"
 msgstr "Koloreak"
 
-#: ../src/swell-foop.vala:326
+#: src/swell-foop.vala:329
 msgid "Shapes and Colors"
 msgstr "Formak eta koloreak"
 
-#: ../src/swell-foop.vala:460
+#: src/swell-foop.vala:463
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
-msgstr ""
-"Jokatzea nahi dut.\n"
-"Badakizu, denak pizten dira eta klik egin behar duzu haien gainean "
-"itzaltzeko."
+msgstr "Jokatzea nahi dut.\n"
+"Badakizu, denak pizten dira eta klik egin behar duzu haien gainean itzaltzeko."
 
-#: ../src/swell-foop.vala:461
+#: src/swell-foop.vala:464
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright-a © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:466
+#: src/swell-foop.vala:469
 msgid "translator-credits"
-msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
+msgstr "Asier Sarasua Garmendia <asier.sarasua@gmail.com>"
 
-#: ../src/swell-foop.vala:499
+#: src/swell-foop.vala:502
 msgid "Abandon this game to start a new one?"
 msgstr "Utzi joko hau berri batekin hasteko?"
 
-#: ../src/swell-foop.vala:500
+#: src/swell-foop.vala:503
 msgid "_Cancel"
 msgstr "_Utzi"
 
-#: ../src/swell-foop.vala:501
-msgid "_New Game"
-msgstr "_Joko berria"
+#~ msgid "_About"
+#~ msgstr "Honi _buruz"
+
+#~ msgid "Start a new game"
+#~ msgstr "Beste joko bat hasten du"
