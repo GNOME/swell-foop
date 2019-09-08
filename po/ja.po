@@ -13,9 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-17 23:23+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2019-03-26 18:34+0000\n"
 "PO-Revision-Date: 2013-09-16 14:16+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -25,165 +24,255 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:1
-msgid "The theme to use"
-msgstr "使用するテーマファイル"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:2
-msgid "The title of the tile theme to use."
-msgstr "使用するタイルテーマのタイトルです。"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:3
-msgid "Board size"
-msgstr "盤の大きさ"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:4
-msgid "The size of the game board."
-msgstr "ゲーム盤の大きさ"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:5
-msgid "Board color count"
-msgstr "盤の色数"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:6
-msgid "The number of colors of tiles to use in the game."
-msgstr "ゲーム中で使用するタイルの色の数です。"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:7
-msgid "Zealous animation"
-msgstr "白熱したアニメーション"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.in.h:8
-msgid "Use more flashy, but slower, animations."
-msgstr "より派手だがより遅くなるアニメーションを使用します。"
-
-#: ../data/preferences.ui.h:1 ../data/swell-foop.desktop.in.in.h:1
-#: ../src/swell-foop.vala:67 ../src/swell-foop.vala:398
-#: ../src/swell-foop.vala:461
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
+#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
-#: ../data/preferences.ui.h:2
-msgid "_Board size:"
-msgstr "盤の大きさ(_B):"
-
-#: ../data/preferences.ui.h:3
-msgid "_Number of colors:"
-msgstr "色の数(_N):"
-
-#: ../data/preferences.ui.h:4
-msgid "Setup"
-msgstr "事前設定"
-
-#: ../data/preferences.ui.h:5
-msgid "_Theme:"
-msgstr "テーマ(_T):"
-
-#: ../data/preferences.ui.h:6
-msgid "Appearance"
-msgstr "外観"
-
-#: ../data/preferences.ui.h:7
-msgid "_Zealous Animation"
-msgstr "白熱したアニメーション(_Z)"
-
-#: ../data/preferences.ui.h:8
-msgid "Operation"
-msgstr "操作"
-
-#: ../data/swell-foop.desktop.in.in.h:2
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "隣接する同じ色や形のタイルをまとめて、画面から消していくゲームです"
 
-#: ../data/swell-foop.desktop.in.in.h:3
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr ""
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr ""
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
+msgid "The GNOME Project"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
 msgid "game;logic;board;same;matching;"
 msgstr ""
 "game;logic;board;same;matching;ゲーム;論理;ロジック;ボード;さめがめ;色合わせ;"
 "puzzle;パズル;"
 
+#: data/org.gnome.swell-foop.gschema.xml:10
+msgid "The theme to use"
+msgstr "使用するテーマファイル"
+
+#: data/org.gnome.swell-foop.gschema.xml:11
+msgid "The title of the tile theme to use."
+msgstr "使用するタイルテーマのタイトルです。"
+
+#: data/org.gnome.swell-foop.gschema.xml:15
+msgid "Board size"
+msgstr "盤の大きさ"
+
+#: data/org.gnome.swell-foop.gschema.xml:16
+msgid "The size of the game board."
+msgstr "ゲーム盤の大きさ"
+
+#: data/org.gnome.swell-foop.gschema.xml:20
+msgid "Board color count"
+msgstr "盤の色数"
+
+#: data/org.gnome.swell-foop.gschema.xml:21
+msgid "The number of colors of tiles to use in the game."
+msgstr "ゲーム中で使用するタイルの色の数です。"
+
+#: data/org.gnome.swell-foop.gschema.xml:25
+msgid "Is this the first run"
+msgstr ""
+
+#: data/org.gnome.swell-foop.gschema.xml:26
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr ""
+
+#: data/org.gnome.swell-foop.gschema.xml:30
+msgid "Zealous animation"
+msgstr "白熱したアニメーション"
+
+#: data/org.gnome.swell-foop.gschema.xml:31
+msgid "Use more flashy, but slower, animations."
+msgstr "より派手だがより遅くなるアニメーションを使用します。"
+
+#: data/preferences.ui:31
+#, fuzzy
+#| msgid "_Preferences"
+msgid "Preferences"
+msgstr "設定(_P)"
+
+#: data/preferences.ui:68
+msgid "_Board size:"
+msgstr "盤の大きさ(_B):"
+
+#: data/preferences.ui:84
+msgid "_Number of colors:"
+msgstr "色の数(_N):"
+
+#: data/preferences.ui:142
+msgid "Setup"
+msgstr "事前設定"
+
+#: data/preferences.ui:180
+msgid "_Theme:"
+msgstr "テーマ(_T):"
+
+#: data/preferences.ui:227
+msgid "Appearance"
+msgstr "外観"
+
+#: data/preferences.ui:258
+msgid "_Zealous Animation"
+msgstr "白熱したアニメーション(_Z)"
+
+#: data/preferences.ui:283
+msgid "Operation"
+msgstr "操作"
+
+#: src/game-view.vala:322
+msgid "_Play Again"
+msgstr ""
+
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:443
+#: src/game-view.vala:495
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u ポイント"
 
-#: ../src/game-view.vala:444
-#, c-format
+#: src/game-view.vala:496
 msgid "Game Over!"
 msgstr "ゲームオーバー!"
 
-#: ../src/swell-foop.vala:79
-msgid "_New Game"
-msgstr "新しいゲーム(_N)"
-
-#: ../src/swell-foop.vala:80
-msgid "_Scores"
+#: src/score-dialog.vala:25
+#, fuzzy
+#| msgid "_Scores"
+msgid "High Scores"
 msgstr "得点(_S)"
 
-#: ../src/swell-foop.vala:81
-msgid "_Preferences"
-msgstr "設定(_P)"
-
-#: ../src/swell-foop.vala:84
-msgid "_Help"
-msgstr "ヘルプ(_H)"
-
-#: ../src/swell-foop.vala:85
-msgid "_About"
-msgstr "このアプリケーションについて(_A)"
-
-#: ../src/swell-foop.vala:88
+#: src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: ../src/swell-foop.vala:98
-msgid "_New"
-msgstr "新規(_N)"
+#: src/score-dialog.vala:29
+msgid "New Game"
+msgstr "新しいゲーム"
 
-#: ../src/swell-foop.vala:135
+#: src/score-dialog.vala:32
+msgid "_OK"
+msgstr ""
+
+#: src/score-dialog.vala:44
+msgid "Size:"
+msgstr "大きさ:"
+
+#: src/score-dialog.vala:69
+msgid "Date"
+msgstr "日付"
+
+#: src/score-dialog.vala:72
+msgid "Score"
+msgstr "得点"
+
+#: src/score-dialog.vala:166
+#, c-format
+msgid "%u × %u, %u color"
+msgid_plural "%u × %u, %u colors"
+msgstr[0] "%u × %u, %u 色"
+
+#: src/swell-foop.vala:81
+#, fuzzy
+#| msgid "Swell Foop"
+msgid "Welcome to Swell Foop"
+msgstr "Swell Foop"
+
+#: src/swell-foop.vala:84
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+
+#: src/swell-foop.vala:87
+msgid "Let’s _Play"
+msgstr ""
+
+#: src/swell-foop.vala:141 src/swell-foop.vala:504
+msgid "_New Game"
+msgstr "新しいゲーム(_N)"
+
+#: src/swell-foop.vala:144
+#, fuzzy
+#| msgid "_Scores"
+msgid "High _Scores"
+msgstr "得点(_S)"
+
+#: src/swell-foop.vala:147
+msgid "_Preferences"
+msgstr "設定(_P)"
+
+#: src/swell-foop.vala:148
+msgid "_Help"
+msgstr "ヘルプ(_H)"
+
+#: src/swell-foop.vala:149
+#, fuzzy
+#| msgid "Swell Foop"
+msgid "_About Swell Foop"
+msgstr "Swell Foop"
+
+#: src/swell-foop.vala:190
 msgid "Small"
 msgstr "小さい"
 
-#: ../src/swell-foop.vala:136
+#: src/swell-foop.vala:191
 msgid "Normal"
 msgstr "ふつう"
 
-#: ../src/swell-foop.vala:137
+#: src/swell-foop.vala:192
 msgid "Large"
 msgstr "大きい"
 
-#. I left one more blank space at the end to make the score not too close to the window border
-#: ../src/swell-foop.vala:213
-#, c-format
-msgid "Score: %4u "
+#: src/swell-foop.vala:266
+#, fuzzy, c-format
+#| msgid "Score: %4u "
+msgid "Score: %u"
 msgstr "得点: %4u"
 
-#: ../src/swell-foop.vala:264
+#: src/swell-foop.vala:325
 msgid "Colors"
 msgstr "色付き"
 
-#: ../src/swell-foop.vala:268
+#: src/swell-foop.vala:329
 msgid "Shapes and Colors"
 msgstr "形と色"
 
-#: ../src/swell-foop.vala:401
+#: src/swell-foop.vala:463
+#, fuzzy
+#| msgid ""
+#| "I want to play that game!\n"
+#| "You know, they all light-up and you click on them and they vanish!\n"
+#| "\n"
+#| "Swell Foop is a part of GNOME Games."
 msgid ""
 "I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
+"You know, they all light-up and you click on them and they vanish!"
 msgstr ""
 "ゲームで遊びたい! 知ってのとおり、同じ色の玉をクリックすると消えてなくなりま"
 "す!\n"
 "\n"
 "Swell Foopは GNOME ゲーム集の一部です。"
 
-#: ../src/swell-foop.vala:402
+#: src/swell-foop.vala:464
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:408
+#: src/swell-foop.vala:469
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
@@ -196,28 +285,19 @@ msgstr ""
 "松澤 二郎 <jmatsuzawa@gnome.org>\n"
 "日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
 
-#: ../src/swell-foop.vala:411
-msgid "GNOME Games web site"
-msgstr "GNOME ゲーム集のウェブサイト"
+#: src/swell-foop.vala:502
+msgid "Abandon this game to start a new one?"
+msgstr ""
 
-#: ../src/swell-foop.vala:496
-msgid "New Game"
-msgstr "新しいゲーム"
+#: src/swell-foop.vala:503
+msgid "_Cancel"
+msgstr ""
 
-#: ../src/swell-foop.vala:511
-msgid "Size:"
-msgstr "大きさ:"
+#~ msgid "_About"
+#~ msgstr "このアプリケーションについて(_A)"
 
-#: ../src/swell-foop.vala:536
-msgid "Date"
-msgstr "日付"
+#~ msgid "_New"
+#~ msgstr "新規(_N)"
 
-#: ../src/swell-foop.vala:539
-msgid "Score"
-msgstr "得点"
-
-#: ../src/swell-foop.vala:619
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u 色"
+#~ msgid "GNOME Games web site"
+#~ msgstr "GNOME ゲーム集のウェブサイト"
