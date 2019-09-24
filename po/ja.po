@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2019-03-26 18:34+0000\n"
-"PO-Revision-Date: 2019-09-09 18:00+0900\n"
+"POT-Creation-Date: 2019-09-22 20:03+0000\n"
+"PO-Revision-Date: 2019-09-24 19:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: data/org.gnome.SwellFoop.appdata.xml.in:41
 msgid "The GNOME Project"
-msgstr ""
+msgstr "The GNOME Project"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
@@ -136,7 +136,7 @@ msgstr "操作"
 
 #: src/game-view.vala:322
 msgid "_Play Again"
-msgstr ""
+msgstr "再挑戦(_P)"
 
 #. Label showing the number of points at the end of the game
 #: src/game-view.vala:495
@@ -245,12 +245,6 @@ msgid "Shapes and Colors"
 msgstr "形と色"
 
 #: src/swell-foop.vala:463
-#, fuzzy
-#| msgid ""
-#| "I want to play that game!\n"
-#| "You know, they all light-up and you click on them and they vanish!\n"
-#| "\n"
-#| "Swell Foop is a part of GNOME Games."
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
