@@ -11,11 +11,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-04-06 10:08+0000\n"
-"PO-Revision-Date: 2017-09-22 23:19+0330\n"
-"Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2019-09-24 10:13+0000\n"
+"PO-Revision-Date: 2019-09-29 13:04+0000\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -23,105 +22,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:1
-msgid "The theme to use"
-msgstr "تم مورد استفاده"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:2
-msgid "The title of the tile theme to use."
-msgstr "عنوان تم کاشی مورد استفاده."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:3
-msgid "Board size"
-msgstr "اندازه‌ی صفحه"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:4
-msgid "The size of the game board."
-msgstr "اندازه‌ی صفحه‌ی بازی."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:5
-msgid "Board color count"
-msgstr "شمارش رنگ صفحه"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:6
-msgid "The number of colors of tiles to use in the game."
-msgstr "تعداد رنگ‌های کاشی‌ها مورد استفاده در بازی."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:7
-msgid "Is this the first run"
-msgstr "آیا این اجرا اول است"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
-msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr ""
-"تنظیماتی برای اینکه آیا محاوره راهنمای اجرا اول بازی نمایش داده شود یا خیر."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:9
-msgid "Zealous animation"
-msgstr "پویانمایی زیبا"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:10
-msgid "Use more flashy, but slower, animations."
-msgstr "استفاده از پویانمایی پر زرق و برق، ولی آهسته‌تر."
-
-#: ../data/preferences.ui.h:1
-msgid "Preferences"
-msgstr "ترجیحات"
-
-#: ../data/preferences.ui.h:2
-msgid "_Board size:"
-msgstr "اندازه‌ی ص_فحه:"
-
-#: ../data/preferences.ui.h:3
-msgid "_Number of colors:"
-msgstr "_تعداد رنگ‌ها:"
-
-#: ../data/preferences.ui.h:4
-msgid "Setup"
-msgstr "برپاسازی"
-
-#: ../data/preferences.ui.h:5
-msgid "_Theme:"
-msgstr "_تم:"
-
-#: ../data/preferences.ui.h:6
-msgid "Appearance"
-msgstr "ظاهر"
-
-#: ../data/preferences.ui.h:7
-msgid "_Zealous Animation"
-msgstr "پویانمایی _زیبا"
-
-#: ../data/preferences.ui.h:8
-msgid "Operation"
-msgstr "عملیات"
-
-#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
-#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
+#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
 msgid "Swell Foop"
 msgstr "سوئل‌فوپ"
 
-#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "پاک سازی صفحه با برداشتن گروه‌هایی از کاشی‌های رنگی و طرح‌دار"
 
-#: ../data/swell-foop.appdata.xml.in.h:3
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
 msgid ""
-"Remove as many squares as possible from the board. Click on a group of "
-"squares of the same color to make them all disappear in one fell swoop, "
-"causing other squares to fall into place. It is not possible to remove a "
-"single square at a time. You get far more points for clearing a larger group "
-"of squares, and also for clearing the entire board."
+"Remove as many squares as possible from the board. Click on a group of squares "
+"of the same color to make them all disappear in one fell swoop, causing other "
+"squares to fall into place. It is not possible to remove a single square at a "
+"time. You get far more points for clearing a larger group of squares, and also "
+"for clearing the entire board."
 msgstr ""
-"هر تعداد خانه از تخته را که می‌توانید خالی کنید.بر روی یک گروه از خانه‌های هم "
-"رنگ کلیک کنید و همه را با هم در یک حرکت پاک کنید، تا خانه‌های دیگر جای آنها "
-"را پر کنند. امکان اینکه یک خانه را خالی کنید وجود ندارد. شما برای خالی کردن "
-"گروه‌های بزرگتر، امتیاز بسیار بیشتری می‌گیرید، همچنین بابت خالی کردن کل تخته."
+"هر تعداد خانه از تخته را که می‌توانید خالی کنید.روی یک گروه از خانه‌های هم رنگ "
+"کلیک کنید و همه را با هم در یک حرکت پاک کنید، تا خانه‌های دیگر جای آنها را پر "
+"کنند. امکان اینکه یک خانه را خالی کنید وجود ندارد. شما برای خالی کردن گروه‌های "
+"بزرگتر، امتیاز بسیار بیشتری می‌گیرید، همچنین بابت خالی کردن کل تخته."
 
-#: ../data/swell-foop.appdata.xml.in.h:4
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -129,62 +56,143 @@ msgstr ""
 "سوئل‌فلوپ همیشه بازی بسیار سریعی است، اما شما همیشه می‌توانید با تغییر اندازه "
 "تخته بازی، آن را طولانی‌تر کنید."
 
-#: ../data/swell-foop.appdata.xml.in.h:5
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
 msgid "The GNOME Project"
 msgstr "پروژه گنوم"
 
-#: ../data/swell-foop.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
 msgid "game;logic;board;same;matching;"
 msgstr "game;logic;board;same;matching;بازی;منطق;تخته;مشابه;تطبیق;"
 
+#: data/org.gnome.swell-foop.gschema.xml:10
+msgid "The theme to use"
+msgstr "تم مورد استفاده"
+
+#: data/org.gnome.swell-foop.gschema.xml:11
+msgid "The title of the tile theme to use."
+msgstr "عنوان تم کاشی مورد استفاده."
+
+#: data/org.gnome.swell-foop.gschema.xml:15
+msgid "Board size"
+msgstr "اندازهٔ صفحه"
+
+#: data/org.gnome.swell-foop.gschema.xml:16
+msgid "The size of the game board."
+msgstr "اندازهٔ صفحهٔ بازی."
+
+#: data/org.gnome.swell-foop.gschema.xml:20
+msgid "Board color count"
+msgstr "شمارش رنگ صفحه"
+
+#: data/org.gnome.swell-foop.gschema.xml:21
+msgid "The number of colors of tiles to use in the game."
+msgstr "تعداد رنگ‌های کاشی‌ها مورد استفاده در بازی."
+
+#: data/org.gnome.swell-foop.gschema.xml:25
+msgid "Is this the first run"
+msgstr "آیا این اجرا اول است"
+
+#: data/org.gnome.swell-foop.gschema.xml:26
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr "تنظیماتی برای این که محاوره راهنمای اجرا اول بازی نمایش داده شود یا خیر."
+
+#: data/org.gnome.swell-foop.gschema.xml:30
+msgid "Zealous animation"
+msgstr "پویانمایی زیبا"
+
+#: data/org.gnome.swell-foop.gschema.xml:31
+msgid "Use more flashy, but slower, animations."
+msgstr "استفاده از پویانمایی پر زرق و برق، ولی آهسته‌تر."
+
+#: data/preferences.ui:31
+msgid "Preferences"
+msgstr "ترجیحات"
+
+#: data/preferences.ui:68
+msgid "_Board size:"
+msgstr "اندازهٔ ص_فحه:"
+
+#: data/preferences.ui:84
+msgid "_Number of colors:"
+msgstr "_تعداد رنگ‌ها:"
+
+#: data/preferences.ui:142
+msgid "Setup"
+msgstr "برپاسازی"
+
+#: data/preferences.ui:180
+msgid "_Theme:"
+msgstr "_زمینه:"
+
+#: data/preferences.ui:227
+msgid "Appearance"
+msgstr "ظاهر"
+
+#: data/preferences.ui:258
+msgid "_Zealous Animation"
+msgstr "پویانمایی _زیبا"
+
+#: data/preferences.ui:283
+msgid "Operation"
+msgstr "عملیات"
+
+#: src/game-view.vala:322
+msgid "_Play Again"
+msgstr "_بازی دوباره"
+
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:472
+#: src/game-view.vala:495
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%Iu امتیازات"
 msgstr[1] "%Iu امتیازات"
 
-#: ../src/game-view.vala:473
+#: src/game-view.vala:496
 msgid "Game Over!"
 msgstr "بازی تمام شد!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
+#: src/score-dialog.vala:25
+msgid "High Scores"
+msgstr "بالاترین امتیازها"
+
+#: src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "_خروج"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "بازی جدید"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "_OK"
 msgstr "_تایید"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Size:"
 msgstr "اندازه:"
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "تاریخ"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:72
 msgid "Score"
 msgstr "امتیاز"
 
-#: ../src/score-dialog.vala:166
+#: src/score-dialog.vala:166
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
 msgstr[0] "%Iu × %Iu, %Iu رنگ"
 msgstr[1] "%Iu × %Iu, %Iu رنگ"
 
-#: ../src/swell-foop.vala:79
+#: src/swell-foop.vala:81
 msgid "Welcome to Swell Foop"
 msgstr "به سوئل‌فوپ خوش‌آمدید"
 
-#: ../src/swell-foop.vala:82
+#: src/swell-foop.vala:84
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -192,81 +200,83 @@ msgstr ""
 "هر تعداد خانه‌ای که می‌توانید را خالی کنید. کلیک‌های کمتر به معنی امتیاز بیشتر "
 "است."
 
-#: ../src/swell-foop.vala:85
+#: src/swell-foop.vala:87
 msgid "Let’s _Play"
 msgstr "بریم _بازی"
 
-#: ../src/swell-foop.vala:138
-msgid "_Scores"
-msgstr "امتیا_زها"
+#: src/swell-foop.vala:141 src/swell-foop.vala:504
+msgid "_New Game"
+msgstr "بازی _جدید"
 
-#: ../src/swell-foop.vala:139
+#: src/swell-foop.vala:144
+msgid "High _Scores"
+msgstr "_بالاترین امتیازها"
+
+#: src/swell-foop.vala:147
 msgid "_Preferences"
 msgstr "_ترجیحات"
 
-#: ../src/swell-foop.vala:142
+#: src/swell-foop.vala:148
 msgid "_Help"
 msgstr "_راهنما"
 
-#: ../src/swell-foop.vala:143
-msgid "_About"
-msgstr "_درباره"
+#: src/swell-foop.vala:149
+msgid "_About Swell Foop"
+msgstr "_دربارهٔ سوئل‌فوپ"
 
-#: ../src/swell-foop.vala:157
-msgid "Start a new game"
-msgstr "شروع بازی جدید"
-
-#: ../src/swell-foop.vala:185
+#: src/swell-foop.vala:190
 msgid "Small"
 msgstr "کوچک"
 
-#: ../src/swell-foop.vala:186
+#: src/swell-foop.vala:191
 msgid "Normal"
 msgstr "معمولی"
 
-#: ../src/swell-foop.vala:187
+#: src/swell-foop.vala:192
 msgid "Large"
 msgstr "بزرگ"
 
-#: ../src/swell-foop.vala:263
+#: src/swell-foop.vala:266
 #, c-format
 msgid "Score: %u"
 msgstr "امتیاز: %Iu"
 
-#: ../src/swell-foop.vala:322
+#: src/swell-foop.vala:325
 msgid "Colors"
 msgstr "رنگ‌ها"
 
-#: ../src/swell-foop.vala:326
+#: src/swell-foop.vala:329
 msgid "Shapes and Colors"
 msgstr "طرح‌ها و رنگ‌ها"
 
-#: ../src/swell-foop.vala:460
+#: src/swell-foop.vala:463
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
-"من می‌خوام آن بازی را انجام دهم!\n"
-"می‌دانی، آن‌ها همه روشن می‌شوند و تو رویشان کلیک می‌کنی و همه ناپدید می‌شوند!"
+"می‌خوام آن بازی را انجام دهم!\n"
+"می‌دانی، آن‌ها همه روشن می‌شوند و رویشان کلیک می‌کنی و همه ناپدید می‌شوند!"
 
-#: ../src/swell-foop.vala:461
+#: src/swell-foop.vala:464
 msgid "Copyright © 2009 Tim Horton"
 msgstr "حق رونوشت © ۲۰۰۹ تیم هورتون"
 
-#: ../src/swell-foop.vala:466
+#: src/swell-foop.vala:469
 msgid "translator-credits"
 msgstr ""
 "آرش موسوی <mousavi.arash@gmail.com>\n"
 "دانیال بهزادی <dani.behzi@gmail.com>"
 
-#: ../src/swell-foop.vala:499
+#: src/swell-foop.vala:502
 msgid "Abandon this game to start a new one?"
 msgstr "این بازی را برای شروع بازی دیگری ترک می‌کنید؟"
 
-#: ../src/swell-foop.vala:500
+#: src/swell-foop.vala:503
 msgid "_Cancel"
 msgstr "_لغو"
 
-#: ../src/swell-foop.vala:501
-msgid "_New Game"
-msgstr "بازی _جدید"
+#~ msgid "_About"
+#~ msgstr "_درباره"
+
+#~ msgid "Start a new game"
+#~ msgstr "شروع بازی جدید"
