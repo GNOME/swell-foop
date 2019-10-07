@@ -397,9 +397,7 @@ private class TileActor : Clutter.Actor
         content = texture;
 
         set_content_gravity (Clutter.ContentGravity.CENTER);
-
-        pivot_point.x = 0.5f;
-        pivot_point.y = 0.5f;
+        set_pivot_point (0.5f, 0.5f);
     }
 
     /* Destroy the tile */
@@ -437,9 +435,7 @@ public class CursorActor : Clutter.Actor
         content = texture;
 
         set_content_gravity (Clutter.ContentGravity.CENTER);
-
-        pivot_point.x = 0.5f;
-        pivot_point.y = 0.5f;
+        set_pivot_point (0.5f, 0.5f);
     }
 }
 
@@ -460,8 +456,7 @@ public class ScoreActor : Clutter.Group
 
         add_child (label);
 
-        pivot_point.x = 0.5f;
-        pivot_point.y = 0.5f;
+        set_pivot_point (0.5f, 0.5f);
 
         this.scene_width = (float) width;
         this.scene_height = (float) height;
