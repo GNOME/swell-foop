@@ -4,112 +4,31 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-Games 2.0.x\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-01-30 19:02+0000\n"
-"PO-Revision-Date: 2003-11-24 01:54+0800\n"
-"Last-Translator: Hasbullah Bin Pit <sebol@ikhlas.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2019-10-19 10:42+0000\n"
+"PO-Revision-Date: 2019-12-29 00:58+0800\n"
+"Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Projek Gabai <gabai-penyumbang@lists.sourceforge.org>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: data/org.gnome.swell-foop.gschema.xml:10
-#, fuzzy
-msgid "The theme to use"
-msgstr "Fail permainan yang hendak digunakan"
-
-#: data/org.gnome.swell-foop.gschema.xml:11
-#, fuzzy
-msgid "The title of the tile theme to use."
-msgstr "Fail tema yang hendak digunakan."
-
-#: data/org.gnome.swell-foop.gschema.xml:15
-#, fuzzy
-msgid "Board size"
-msgstr "Saiz papan"
-
-#: data/org.gnome.swell-foop.gschema.xml:16
-#, fuzzy
-msgid "The size of the game board."
-msgstr "Saiz bagi grid permainan"
-
-#: data/org.gnome.swell-foop.gschema.xml:20
-#, fuzzy
-msgid "Board color count"
-msgstr "Warna latar belakang"
-
-#: data/org.gnome.swell-foop.gschema.xml:21
-msgid "The number of colors of tiles to use in the game."
-msgstr ""
-
-#: data/org.gnome.swell-foop.gschema.xml:25
-msgid "Is this the first run"
-msgstr ""
-
-#: data/org.gnome.swell-foop.gschema.xml:26
-msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr ""
-
-#: data/org.gnome.swell-foop.gschema.xml:30
-#, fuzzy
-msgid "Zealous animation"
-msgstr "Guna pergerakan pantas"
-
-#: data/org.gnome.swell-foop.gschema.xml:31
-#, fuzzy
-msgid "Use more flashy, but slower, animations."
-msgstr "Guna pergerakan pantas"
-
-#: data/preferences.ui:31
-msgid "Preferences"
-msgstr "Keutamaan"
-
-#: data/preferences.ui:68
-#, fuzzy
-msgid "_Board size:"
-msgstr "Saiz papan"
-
-#: data/preferences.ui:84
-#, fuzzy
-msgid "_Number of colors:"
-msgstr "Bilangan pemain."
-
-#: data/preferences.ui:142
-msgid "Setup"
-msgstr ""
-
-#: data/preferences.ui:180
-#, fuzzy
-msgid "_Theme:"
-msgstr "Tema"
-
-#: data/preferences.ui:227
-#, fuzzy
-msgid "Appearance"
-msgstr "Pen_ampilan"
-
-#: data/preferences.ui:258
-#, fuzzy
-msgid "_Zealous Animation"
-msgstr "Animasi"
-
-#: data/preferences.ui:283
-msgid "Operation"
-msgstr "Operasi"
-
-#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
-#: src/swell-foop.vala:126 src/swell-foop.vala:156 src/swell-foop.vala:455
-#: src/swell-foop.vala:537
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
+#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
 msgid "Swell Foop"
-msgstr ""
+msgstr "Swell Foop"
 
-#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
+"Kosongkan skrin dengan membuang sekumpulan jubin berwarna dan berbentuk"
 
-#: data/swell-foop.appdata.xml.in:10
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -117,168 +36,236 @@ msgid ""
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
 msgstr ""
+"Buang sebanyak mungkin yang ada di dalam papan. Klik pada sekumpulan petak "
+"berwarna sama supaya mereka hilang dalam satu klik, menyebabkan petak-petak "
+"lain jatuh ke bawah. Berkemungkinan anda hanya dapat membuang satu petak "
+"pada satu masa. Anda akan mendapat lebih banyak mata sekiranya membuang "
+"sekumpulan besar petak, dan juga dapat mengosongkan keseluruhan papan."
 
-#: data/swell-foop.appdata.xml.in:17
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
 msgstr ""
+"Swell Foop dimainkan dengan sangat pantas, tetapi anda boleh lanjutkan "
+"permainan dengan mengubah saiz papan."
 
-#: data/swell-foop.appdata.xml.in:42
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
 msgid "The GNOME Project"
-msgstr ""
+msgstr "Projek GNOME"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/swell-foop.desktop.in:6
+#: data/org.gnome.SwellFoop.desktop.in:6
 msgid "game;logic;board;same;matching;"
-msgstr ""
+msgstr "permainan;logik;papan;serupa;sepadan;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/swell-foop.desktop.in:8
-msgid "swell-foop"
-msgstr ""
+#: data/org.gnome.swell-foop.gschema.xml:10
+msgid "The theme to use"
+msgstr "Tema yang digunakan"
 
-#: src/game-view.vala:320
-#, fuzzy
+#: data/org.gnome.swell-foop.gschema.xml:11
+msgid "The title of the tile theme to use."
+msgstr "Tajuk tema jubin yang digunakan."
+
+#: data/org.gnome.swell-foop.gschema.xml:15
+msgid "Board size"
+msgstr "Saiz papan"
+
+#: data/org.gnome.swell-foop.gschema.xml:16
+msgid "The size of the game board."
+msgstr "Saiz bagi papan permainan."
+
+#: data/org.gnome.swell-foop.gschema.xml:20
+msgid "Board color count"
+msgstr "Kiraan warna papan"
+
+#: data/org.gnome.swell-foop.gschema.xml:21
+msgid "The number of colors of tiles to use in the game."
+msgstr "Bilangan warna jubin yang digunakan dalam permainan."
+
+#: data/org.gnome.swell-foop.gschema.xml:25
+msgid "Is this the first run"
+msgstr "Adakah ini pertama kali dijalankan"
+
+#: data/org.gnome.swell-foop.gschema.xml:26
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr ""
+"Tetapan untuk tentukan sama ada mahu tunjukkan dialog pembayang pertama-kali "
+"atau sebaliknya."
+
+#: data/org.gnome.swell-foop.gschema.xml:30
+msgid "Zealous animation"
+msgstr "Animasi jelas"
+
+#: data/org.gnome.swell-foop.gschema.xml:31
+msgid "Use more flashy, but slower, animations."
+msgstr "Guna animasi lebih menonjol, tetapi perlahan."
+
+#: data/preferences.ui:31
+msgid "Preferences"
+msgstr "Keutamaan"
+
+#: data/preferences.ui:68
+msgid "_Board size:"
+msgstr "Saiz _papan:"
+
+#: data/preferences.ui:84
+msgid "_Number of colors:"
+msgstr "Bilangan _warna:"
+
+#: data/preferences.ui:142
+msgid "Setup"
+msgstr "Persediaan"
+
+#: data/preferences.ui:180
+msgid "_Theme:"
+msgstr "_Tema:"
+
+#: data/preferences.ui:227
+msgid "Appearance"
+msgstr "Penampilan"
+
+#: data/preferences.ui:258
+msgid "_Zealous Animation"
+msgstr "Animasi _jelas"
+
+#: data/preferences.ui:283
+msgid "Operation"
+msgstr "Operasi"
+
+#: src/game-view.vala:322
 msgid "_Play Again"
-msgstr "Nama Pemain"
+msgstr "_Main Lagi"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:493
+#: src/game-view.vala:490
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%u mata"
 
-#: src/game-view.vala:494
+#: src/game-view.vala:491
 msgid "Game Over!"
 msgstr "Permainan Tamat!"
 
 #: src/score-dialog.vala:25
-#, fuzzy
 msgid "High Scores"
-msgstr "Markah."
+msgstr "Skor Tertinggi"
 
-#: src/score-dialog.vala:28 src/swell-foop.vala:150
+#: src/score-dialog.vala:28
 msgid "_Quit"
-msgstr ""
+msgstr "_Keluar"
 
 #: src/score-dialog.vala:29
 msgid "New Game"
-msgstr "Permainan Baru"
+msgstr "Permainan Baharu"
 
 #: src/score-dialog.vala:32
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: src/score-dialog.vala:44
-#, fuzzy
 msgid "Size:"
-msgstr "Masa:"
+msgstr "Saiz:"
 
 #: src/score-dialog.vala:69
-#, fuzzy
 msgid "Date"
-msgstr "Kilas"
+msgstr "Tarikh"
 
 #: src/score-dialog.vala:72
-#, fuzzy
 msgid "Score"
-msgstr "Markah."
+msgstr "Skor"
 
 #: src/score-dialog.vala:166
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%u × %u, %u warna"
 
-#: src/swell-foop.vala:79
-#, fuzzy
+#: src/swell-foop.vala:81
 msgid "Welcome to Swell Foop"
-msgstr "Selamat datang ke lagno!"
+msgstr "Selamat datang ke Swell Foop!"
 
-#: src/swell-foop.vala:82
+#: src/swell-foop.vala:84
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
 msgstr ""
+"Kosongkan sebanyak mungkin blok-blok.\n"
+"Lebih sedikit klik bermaksud lebih banyak mata diperoleh."
 
-#: src/swell-foop.vala:85
+#: src/swell-foop.vala:87
 msgid "Let’s _Play"
-msgstr ""
+msgstr "_Jom Main"
 
-#: src/swell-foop.vala:139 src/swell-foop.vala:499
-#, fuzzy
+#: src/swell-foop.vala:141 src/swell-foop.vala:504
 msgid "_New Game"
-msgstr "Permainan Baru"
+msgstr "Permainan _Baharu"
 
-#: src/swell-foop.vala:142
-#, fuzzy
+#: src/swell-foop.vala:144
 msgid "High _Scores"
-msgstr "Markah."
+msgstr "Skor _Tertinggi"
 
-#: src/swell-foop.vala:145
-#, fuzzy
+#: src/swell-foop.vala:147
 msgid "_Preferences"
-msgstr "Keutamaan"
+msgstr "Ke_utamaan"
 
 #: src/swell-foop.vala:148
-#, fuzzy
 msgid "_Help"
-msgstr "Bantuan"
+msgstr "_Bantuan"
 
 #: src/swell-foop.vala:149
-msgid "_About"
-msgstr ""
+msgid "_About Swell Foop"
+msgstr "Perih_al Swell Foop"
 
-#: src/swell-foop.vala:185
+#: src/swell-foop.vala:190
 msgid "Small"
 msgstr "Kecil"
 
-#: src/swell-foop.vala:186
-#, fuzzy
+#: src/swell-foop.vala:191
 msgid "Normal"
-msgstr "Warna cacing:"
+msgstr "Biasa"
 
-#: src/swell-foop.vala:187
+#: src/swell-foop.vala:192
 msgid "Large"
 msgstr "Besar"
 
-#: src/swell-foop.vala:261
-#, fuzzy, c-format
+#: src/swell-foop.vala:266
+#, c-format
 msgid "Score: %u"
-msgstr "Markah:"
+msgstr "Skor: %u"
 
-#: src/swell-foop.vala:320
+#: src/swell-foop.vala:325
 msgid "Colors"
 msgstr "Warna"
 
-#: src/swell-foop.vala:324
+#: src/swell-foop.vala:329
 msgid "Shapes and Colors"
-msgstr ""
+msgstr "Bentuk dan Warna"
 
-#: src/swell-foop.vala:458
+#: src/swell-foop.vala:463
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
-
-#: src/swell-foop.vala:459
-msgid "Copyright © 2009 Tim Horton"
-msgstr ""
+"Saya mahu main permainan ini!\n"
+"Mereka menyala dan bila diklik padanya ia padam!"
 
 #: src/swell-foop.vala:464
+msgid "Copyright © 2009 Tim Horton"
+msgstr "Hak cipta © 2009 Tim Horton"
+
+#: src/swell-foop.vala:469
 msgid "translator-credits"
 msgstr ""
-"\"kenang daku semasa bermain..ahaks...'\n"
-"Noor Azurah Anuar <gbumla@yahoo.com>, Bandar Hilir."
+"abuyop\n"
+"'kenang daku semasa bermain..ahaks...'\n"
+"Noor Azurah Anuar <gbumla@yahoo.com>, Bandar Hilir"
 
-#: src/swell-foop.vala:497
+#: src/swell-foop.vala:502
 msgid "Abandon this game to start a new one?"
-msgstr ""
+msgstr "Abai permainan ini dan mulakan yang baharu?"
 
-#: src/swell-foop.vala:498
+#: src/swell-foop.vala:503
 msgid "_Cancel"
-msgstr ""
+msgstr "_Batal"
