@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2019-09-22 20:03+0000\n"
+"POT-Creation-Date: 2020-01-09 02:58+0000\n"
 "PO-Revision-Date: 2019-09-24 19:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -139,13 +139,13 @@ msgid "_Play Again"
 msgstr "再挑戦(_P)"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:495
+#: src/game-view.vala:490
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u ポイント"
 
-#: src/game-view.vala:496
+#: src/game-view.vala:491
 msgid "Game Over!"
 msgstr "ゲームオーバー!"
 
