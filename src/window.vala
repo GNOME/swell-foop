@@ -19,9 +19,12 @@
 
 using Gtk;
 
+[GtkTemplate (ui = "/org/gnome/SwellFoop/ui/swell-foop.ui")]
 private class SwellFoopWindow : ApplicationWindow
 {
-    private HeaderBar headerbar;
+    [GtkChild] private HeaderBar    headerbar;
+    [GtkChild] private Box          main_box;
+
     public GLib.Settings settings { private get; protected construct; }
 
     /* Game history */
@@ -48,42 +51,7 @@ private class SwellFoopWindow : ApplicationWindow
     {
         add_action_entries (win_actions, this);
 
-        set_title (_("Swell Foop"));
-        icon_name = "org.gnome.SwellFoop";
-        resizable = false;
         add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
-
-        var vbox = new Box (Orientation.VERTICAL, 0);
-        vbox.show ();
-        add (vbox);
-
-        /* Create the menus */
-        var menu = new GLib.Menu ();
-        var section = new GLib.Menu ();
-        menu.append_section (null, section);
-        section.append (_("_New Game"), "win.new-game");
-        section = new GLib.Menu ();
-        menu.append_section (null, section);
-        section.append (_("High _Scores"), "win.scores");
-        section = new GLib.Menu ();
-        menu.append_section (null, section);
-        section.append (_("_Preferences"), "app.preferences");
-        section.append (_("_Help"), "app.help");
-        section.append (_("_About Swell Foop"), "app.about");
-
-        /* Create a headerbar */
-        headerbar = new HeaderBar ();
-        headerbar.show ();
-        headerbar.title = _("Swell Foop");
-        headerbar.show_close_button = true;
-        set_titlebar (headerbar);
-
-        /* Add the primary menu button */
-        var primary_menu = new MenuButton ();
-        primary_menu.show ();
-        primary_menu.set_image (new Image.from_icon_name ("open-menu-symbolic", IconSize.BUTTON));
-        primary_menu.set_menu_model (menu);
-        headerbar.pack_end (primary_menu);
 
         /* show the current score */
         update_score_cb (0);
@@ -97,11 +65,11 @@ private class SwellFoopWindow : ApplicationWindow
         {
             var stack = build_first_run_stack ();
             stack.add_named (clutter_embed, "game");
-            vbox.pack_start (stack, true, true);
+            main_box.pack_start (stack, true, true);
         }
         else
         {
-            vbox.pack_start (clutter_embed, true, true);
+            main_box.pack_start (clutter_embed, true, true);
             key_press_event.connect (key_press_event_cb);
         }
     }

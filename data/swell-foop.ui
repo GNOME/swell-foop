@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   This file is part of Swell-Foop.
+
+   Copyright (C) 2020 Arnaud Bonatti <arnaud.bonatti@gmail.com>
+
+   Swell-Foop is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 2 of the License, or
+   (at your option) any later version.
+
+   Swell-Foop is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with Swell-Foop.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<interface>
+  <menu id="hamburger-menu">
+    <section>
+      <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
+        <attribute name="label" translatable="yes">_New Game</attribute>
+        <attribute name="action">win.new-game</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
+        <attribute name="label" translatable="yes">High _Scores</attribute>
+        <attribute name="action">win.scores</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
+        <attribute name="label" translatable="yes">_Help</attribute>
+        <attribute name="action">app.help</attribute>
+      </item>
+      <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
+        <attribute name="label" translatable="yes">_About Swell Foop</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+  <requires lib="gtk+" version="3.12"/>
+  <template class="SwellFoopWindow" parent="GtkApplicationWindow">
+    <property name="visible">True</property>
+    <property name="resizable">False</property>
+    <property name="icon-name">org.gnome.SwellFoop</property>
+    <!-- Translators: title of the window displayed by window managers; name of the application -->
+    <property name="title" translatable="yes">Swell Foop</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headerbar">
+        <property name="visible">True</property>
+        <property name="show-close-button">True</property>
+        <!-- Translators: title of the window displayed on the headerbar; name of the application -->
+        <property name="title" translatable="yes">Swell Foop</property>
+        <child>
+          <object class="GtkMenuButton">
+            <property name="visible">True</property>
+            <property name="menu-model">hamburger-menu</property>
+            <style>
+              <class name="image-button"/>
+            </style>
+            <child>
+              <object class="GtkImage">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="visible">True</property>
+                <property name="icon-size">1</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="pack-type">end</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="visible">True</property>
+      </object>
+    </child>
+  </template>
+</interface>
