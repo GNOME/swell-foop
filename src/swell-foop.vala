@@ -77,22 +77,14 @@ public class SwellFoop : Gtk.Application
             return;
         }
 
-        var preferences_builder = new Gtk.Builder ();
-        try
-        {
-            preferences_builder.add_from_file (Path.build_filename (Config.DATADIR, "preferences.ui", null));
-        }
-        catch (Error e)
-        {
-            warning ("Could not load preferences UI: %s", e.message);
-        }
+        var preferences_builder = new Gtk.Builder.from_resource ("/org/gnome/SwellFoop/ui/preferences.ui");
 
         preferences_dialog = (Gtk.Dialog) preferences_builder.get_object ("preferences");
         preferences_dialog.transient_for = window;
         preferences_dialog.modal = true;
 
         /* Theme */
-        var theme_combo = preferences_builder.get_object ("theme-selector") as Gtk.ComboBox;
+        var theme_combo = (Gtk.ComboBox) preferences_builder.get_object ("theme-selector");
         var model = (Gtk.ListStore) theme_combo.model;
         Gtk.TreeIter iter;
         model.append (out iter);
@@ -105,7 +97,7 @@ public class SwellFoop : Gtk.Application
             theme_combo.set_active_iter (iter);
 
         /* Board size */
-        var size_combo = preferences_builder.get_object ("size-selector") as Gtk.ComboBox;
+        var size_combo = (Gtk.ComboBox) preferences_builder.get_object ("size-selector");
         model = (Gtk.ListStore) size_combo.model;
         for (int i = 0; i < sizes.length; i++)
         {

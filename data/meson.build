@@ -9,11 +9,6 @@ install_subdir('themes',
   install_dir: pkgdatadir,
 )
 
-# UI files
-install_data('preferences.ui',
-  install_dir: pkgdatadir,
-)
-
 desktop = 'org.gnome.SwellFoop.desktop'
 
 # Desktop file
