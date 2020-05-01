@@ -322,7 +322,7 @@ public class GameView : Clutter.Group
         var play_again_button = new Gtk.Button.with_mnemonic (_("_Play Again"));
         play_again_button.width_request = 130;
         play_again_button.height_request = 40;
-        play_again_button.action_name = "app.new-game";
+        play_again_button.action_name = "win.new-game";
         play_again_button.show ();
 
         var style = play_again_button.get_style_context ();

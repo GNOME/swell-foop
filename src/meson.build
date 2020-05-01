@@ -4,6 +4,7 @@ sources = [
   'game-view.vala',
   'score-dialog.vala',
   'swell-foop.vala',
+  'window.vala',
 ]
 
 deps = [
