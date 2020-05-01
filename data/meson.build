@@ -14,10 +14,6 @@ install_data('preferences.ui',
   install_dir: pkgdatadir,
 )
 
-install_data('swell-foop.css',
-  install_dir: pkgdatadir,
-)
-
 desktop = 'org.gnome.SwellFoop.desktop'
 
 # Desktop file

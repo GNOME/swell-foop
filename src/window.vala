@@ -108,57 +108,30 @@ private class SwellFoopWindow : ApplicationWindow
 
     private Stack build_first_run_stack ()
     {
-        var stack = new Stack ();
-        var first_vbox = new Box (Orientation.VERTICAL, 12);
-        load_css ();
-        var logo = new Image.from_icon_name ("org.gnome.SwellFoop", IconSize.DIALOG);
-        logo.set_pixel_size (96);
-        first_vbox.pack_start (logo, false);
-        var label = new Label (_("Welcome to Swell Foop"));
-        label.get_style_context ().add_class ("welcome");
-        first_vbox.pack_start (label, false);
-        label = new Label (_("Clear as many blocks as you can.\nFewer clicks means more points."));
-        label.get_style_context ().add_class ("tip");
-        first_vbox.pack_start (label, false);
-        var play_button = new Button.with_mnemonic (_("Let’s _Play"));
-        play_button.get_style_context ().add_class ("play");
-        play_button.get_style_context ().add_class ("suggested-action");
-        play_button.valign = Align.CENTER;
-        play_button.halign = Align.CENTER;
+        CssProvider css_provider = new CssProvider ();
+        css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
+        Gdk.Screen? gdk_screen = Gdk.Screen.get_default ();
+        if (gdk_screen != null) // else..?
+            StyleContext.add_provider_for_screen ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/first-run-stack.ui");
+        var stack = (Stack) builder.get_object ("first_run_stack");
+        var tip_label = (Label) builder.get_object ("tip_label");
+        tip_label.set_label (_("Clear as many blocks as you can.\nFewer clicks means more points."));
+        var play_button = (Button) builder.get_object ("play_button");
         play_button.clicked.connect (() => {
             /* FIXME: Currently, on Wayland, the game frame is displayed outside
              * the window if there's a transition set. Uncomment these 2 lines
              * when that's no longer a problem.
-             *
-             * stack.set_transition_type (StackTransitionType.SLIDE_UP);
-             * stack.set_transition_duration (500);
              */
+              stack.set_transition_type (StackTransitionType.SLIDE_UP);
+              stack.set_transition_duration (500);
+             /* */
             stack.set_visible_child_name ("game");
             key_press_event.connect (key_press_event_cb);
             settings.set_boolean ("first-run", false);
         });
-        first_vbox.pack_start (play_button, false);
-        first_vbox.halign = Align.CENTER;
-        first_vbox.valign = Align.CENTER;
-        stack.add_named (first_vbox, "first-run");
-        stack.set_visible_child_name ("first-run");
-        stack.show_all ();
         return stack;
-    }
-
-    private void load_css ()
-    {
-        var css_provider = new CssProvider ();
-        var css_path = Path.build_filename (Config.DATADIR, "swell-foop.css");
-        try
-        {
-            css_provider.load_from_path (css_path);
-        }
-        catch (GLib.Error e)
-        {
-            warning ("Error loading css styles from %s: %s", css_path, e.message);
-        }
-        StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
     }
 
     /*\
