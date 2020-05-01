@@ -11,16 +11,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2018-10-08 19:28+0000\n"
-"PO-Revision-Date: 2019-02-17 23:18+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
+"POT-Creation-Date: 2019-10-19 10:42+0000\n"
+"PO-Revision-Date: 2020-05-01 22:56+0800\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 18.12.2\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
 #: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
@@ -53,28 +53,22 @@ msgstr ""
 "Swell Foop 永遠可以很快速的遊玩，但是您也可以改變遊戲盤的大小讓它可以玩得久一"
 "點。"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:42
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
 msgid "The GNOME Project"
-msgstr "GNOME 計畫"
+msgstr "GNOME 專案"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
 msgid "game;logic;board;same;matching;"
 msgstr "game;logic;board;same;matching;遊戲;邏輯;桌面遊戲;比對;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.SwellFoop.desktop.in:8
-#| msgid "Swell Foop"
-msgid "org.gnome.SwellFoop"
-msgstr "org.gnome.SwellFoop"
-
 #: data/org.gnome.swell-foop.gschema.xml:10
 msgid "The theme to use"
-msgstr "會使用的佈景主題"
+msgstr "會使用的布景主題"
 
 #: data/org.gnome.swell-foop.gschema.xml:11
 msgid "The title of the tile theme to use."
-msgstr "要使用的拼貼佈景圖案。"
+msgstr "要使用的拼貼布景圖案。"
 
 #: data/org.gnome.swell-foop.gschema.xml:15
 msgid "Board size"
@@ -90,7 +84,7 @@ msgstr "遊戲盤顏色統計"
 
 #: data/org.gnome.swell-foop.gschema.xml:21
 msgid "The number of colors of tiles to use in the game."
-msgstr "要這次遊戲中拼貼顏色的數目"
+msgstr "要這次遊戲中拼貼顏色的數目。"
 
 #: data/org.gnome.swell-foop.gschema.xml:25
 msgid "Is this the first run"
@@ -114,11 +108,11 @@ msgstr "偏好設定"
 
 #: data/preferences.ui:68
 msgid "_Board size:"
-msgstr "棋盤大小(_B):"
+msgstr "棋盤大小(_B)："
 
 #: data/preferences.ui:84
 msgid "_Number of colors:"
-msgstr "顏色數(_N)"
+msgstr "顏色數(_N)："
 
 #: data/preferences.ui:142
 msgid "Setup"
@@ -126,7 +120,7 @@ msgstr "設定"
 
 #: data/preferences.ui:180
 msgid "_Theme:"
-msgstr "佈景主題(_T)："
+msgstr "布景主題(_T)："
 
 #: data/preferences.ui:227
 msgid "Appearance"
@@ -145,13 +139,13 @@ msgid "_Play Again"
 msgstr "再玩一次(_P)"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:495
+#: src/game-view.vala:490
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u 分"
 
-#: src/game-view.vala:496
+#: src/game-view.vala:491
 msgid "Game Over!"
 msgstr "玩完了！"
 
@@ -222,9 +216,8 @@ msgid "_Help"
 msgstr "求助(_H)"
 
 #: src/swell-foop.vala:149
-#| msgid "Swell Foop"
 msgid "_About Swell Foop"
-msgstr "關於 Swell Foop(_A)"
+msgstr "關於《Swell Foop》(_A)"
 
 #: src/swell-foop.vala:190
 msgid "Small"
@@ -241,7 +234,7 @@ msgstr "大"
 #: src/swell-foop.vala:266
 #, c-format
 msgid "Score: %u"
-msgstr "得分：%u "
+msgstr "得分：%u"
 
 #: src/swell-foop.vala:325
 msgid "Colors"
@@ -261,7 +254,7 @@ msgstr ""
 
 #: src/swell-foop.vala:464
 msgid "Copyright © 2009 Tim Horton"
-msgstr "版權所有 © 2009 Tim Horton"
+msgstr "著作權所有 © 2009 Tim Horton"
 
 #: src/swell-foop.vala:469
 msgid "translator-credits"
@@ -280,6 +273,10 @@ msgstr "放棄這局遊戲以開始另一局遊戲？"
 #: src/swell-foop.vala:503
 msgid "_Cancel"
 msgstr "取消(_C)"
+
+#~| msgid "Swell Foop"
+#~ msgid "org.gnome.SwellFoop"
+#~ msgstr "org.gnome.SwellFoop"
 
 #~| msgid "Swell Foop"
 #~ msgid "swell-foop"
