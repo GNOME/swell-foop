@@ -193,7 +193,7 @@ public class SwellFoop : Gtk.Application
     {
         try
         {
-            Gtk.show_uri (window.get_screen (), "help:swell-foop", Gtk.get_current_event_time ());
+            Gtk.show_uri_on_window (window, "help:swell-foop", Gtk.get_current_event_time ());
         }
         catch (Error e)
         {
