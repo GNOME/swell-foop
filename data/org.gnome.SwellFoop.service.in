@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.gnome.SwellFoop
+Exec=@bindir@/swell-foop --gapplication-service
