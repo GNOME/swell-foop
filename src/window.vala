@@ -27,9 +27,6 @@ private class SwellFoopWindow : ApplicationWindow
 
     public GLib.Settings settings { private get; protected construct; }
 
-    /* Game history */
-    private History history;
-
     /* Game being played */
     private Game? game = null;
 
@@ -52,6 +49,8 @@ private class SwellFoopWindow : ApplicationWindow
         add_action_entries (win_actions, this);
 
         add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
+
+        init_scores ();
 
         /* show the current score */
         update_score_cb (0);
@@ -102,9 +101,6 @@ private class SwellFoopWindow : ApplicationWindow
 
         /* When the mouse leaves the window we need to update the view */
         clutter_embed.leave_notify_event.connect (view.board_left_cb);
-
-        history = new History (Path.build_filename (Environment.get_user_data_dir (), "swell-foop", "history"));
-        history.load ();
     }
 
     private inline Stack build_first_run_stack ()
@@ -152,10 +148,7 @@ private class SwellFoopWindow : ApplicationWindow
 
     private void complete_cb ()
     {
-        var date = new DateTime.now_local ();
-        var entry = new HistoryEntry (date, game.columns, game.rows, game.color_num, game.score);
-        history.add (entry);
-        history.save ();
+        Idle.add (() => { add_score (); return Source.REMOVE; });
         game_in_progress = false;
     }
 
@@ -166,13 +159,13 @@ private class SwellFoopWindow : ApplicationWindow
 
     private Size get_board_size ()
     {
-        for (var i = 0; i < ((SwellFoop) application).sizes.length; i++)
+        for (var i = 0; i < SwellFoop.sizes.length; i++)
         {
-            if (((SwellFoop) application).sizes[i].id == settings.get_string ("size"))
-                return ((SwellFoop) application).sizes[i];
+            if (SwellFoop.sizes [i].id == settings.get_string ("size"))
+                return SwellFoop.sizes [i];
         }
 
-        return ((SwellFoop) application).sizes[0];
+        return SwellFoop.sizes [0];
     }
 
     /*\
@@ -222,12 +215,7 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline void scores_cb (/* SimpleAction action, Variant? variant */)
     {
-        var dialog = new ScoreDialog (history);
-        dialog.modal = true;
-        dialog.transient_for = this;
-
-        dialog.run ();
-        dialog.destroy ();
+        scores_context.run_dialog ();
     }
 
     private inline void new_game_cb (/* SimpleAction action, Variant? variant */)
@@ -304,5 +292,131 @@ private class SwellFoopWindow : ApplicationWindow
         }
 
         return false;
+    }
+
+    /*\
+    * * scores
+    \*/
+
+    private Games.Scores.Context scores_context;
+    private static HashTable<string, Games.Scores.Category> score_categories;
+
+    class construct
+    {
+        score_categories = new HashTable<string, Games.Scores.Category> (str_hash, str_equal);
+        for (uint8 i = 2; i <= 4; i++)
+            foreach (unowned Size size in SwellFoop.sizes)
+            {
+                string id = @"$(size.id)-$i";
+                string name = ngettext ("%s, %d color", "%s, %d colors", i).printf (size.name, i);
+                Games.Scores.Category category = new Games.Scores.Category (id, name);
+                score_categories.insert (id, (owned) category);
+            }
+    }
+
+    private inline void init_scores ()  // called on construct
+    {
+        scores_context = new Games.Scores.Context.with_importer (
+            "swell-foop",
+            /* Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed */
+            _("Type"),
+            this,
+            category_request,
+            Games.Scores.Style.POINTS_GREATER_IS_BETTER,
+            new Games.Scores.HistoryFileImporter (parse_old_score));
+    }
+
+    private inline Games.Scores.Category? category_request (string key)
+    {
+        Games.Scores.Category? category = score_categories.lookup (key);
+        if (category == null)
+            assert_not_reached ();
+        return (!) category;
+    }
+
+    private inline void parse_old_score (string line, out Games.Scores.Score? score, out Games.Scores.Category? category)
+    {
+        score = null;
+        category = null;
+
+        string [] tokens = line.split (" ");
+        if (tokens.length != 5)
+            return;
+
+        int64 date = Games.Scores.HistoryFileImporter.parse_date (tokens [0]);
+        if (date == 0)
+            return;
+
+        uint64 number_64;
+
+        uint8 cols;
+        uint8 rows;
+        // cols
+        if (!uint64.try_parse (tokens [1], out number_64))
+            return;
+        if (number_64 == 0 || number_64 > 255)
+            return;
+        cols = (uint8) number_64;
+        // rows
+        if (!uint64.try_parse (tokens [2], out number_64))
+            return;
+        if (number_64 == 0 || number_64 > 255)
+            return;
+        rows = (uint8) number_64;
+
+        string id = "";
+        foreach (unowned Size size in SwellFoop.sizes)
+        {
+            if (size.rows == rows && size.columns == cols)
+            {
+                id = size.id;
+                break;
+            }
+        }
+        if (id == "")
+            return;
+
+        uint8 colors;
+        long score_value;
+        // colors
+        if (!uint64.try_parse (tokens [3], out number_64))
+            return;
+        if (number_64 < 2 || number_64 > 4)
+            return;
+        colors = (uint8) number_64;
+        // score
+        if (!uint64.try_parse (tokens [4], out number_64))
+            return;
+        if (number_64 > long.MAX)
+            return;
+        score_value = (long) number_64;
+
+        category = category_request (@"$id-$colors");
+        score = new Games.Scores.Score (score_value, date);
+        score.user = Environment.get_real_name ();
+        if (score.user == "Unknown")
+            score.user = Environment.get_user_name ();
+    }
+
+    private inline void add_score ()
+    {
+        string id = @"$(get_board_size ().id)-$(game.color_num)";
+        Games.Scores.Category? category = score_categories.lookup (id);
+        if (category == null)
+            assert_not_reached ();
+        scores_context.add_score.begin (game.score,
+                                        (!) category,
+                                        /* cancellable */ null,
+                                        (object, result) => {
+                try
+                {
+                    scores_context.add_score.end (result);
+                }
+                catch (Error e)
+                {
+                    warning ("Failed to add score: %s", e.message);
+                }
+                scores_context.run_dialog ();
+            });
     }
 }
