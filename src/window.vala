@@ -87,6 +87,7 @@ private class SwellFoopWindow : ApplicationWindow
         /* Game score change will be sent to the main window and show in the score label */
         game.update_score.connect (update_score_cb);
         game.complete.connect (complete_cb);
+        game.started.connect (started_cb);
 
         /* Create an instance of game view. This follow the Model-View-Controller paradigm */
         view = new GameView ();
