@@ -21,7 +21,7 @@ glib_min_version = '2.36'
 glib_dep = dependency('glib-2.0', version: '>= ' + glib_min_version)
 gmodule_dep = dependency('gmodule-2.0')
 gobject_dep = dependency('gobject-2.0')
-gtk_dep = dependency('gtk+-3.0', version: '>= 3.12')
+gtk_dep = dependency('gtk+-3.0', version: '>= 3.24')
 clutter_dep = dependency('clutter-1.0', version: '>= 1.14.0')
 clutter_gtk_dep = dependency('clutter-gtk-1.0', version: '>= 1.5.0')
 

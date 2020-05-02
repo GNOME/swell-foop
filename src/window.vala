@@ -70,7 +70,7 @@ private class SwellFoopWindow : ApplicationWindow
         else
         {
             main_box.pack_start (clutter_embed, true, true);
-            key_press_event.connect (key_press_event_cb);
+            init_keyboard ();
         }
     }
 
@@ -128,7 +128,7 @@ private class SwellFoopWindow : ApplicationWindow
               stack.set_transition_duration (500);
              /* */
             stack.set_visible_child_name ("game");
-            key_press_event.connect (key_press_event_cb);
+            init_keyboard ();
             settings.set_boolean ("first-run", false);
         });
         return stack;
@@ -257,29 +257,40 @@ private class SwellFoopWindow : ApplicationWindow
     * * keyboard
     \*/
 
-    private bool key_press_event_cb (Widget widget, Gdk.EventKey event)
+    private EventControllerKey key_controller;          // for keeping in memory
+
+    private inline void init_keyboard ()
     {
-        switch (event.keyval)
+        key_controller = new EventControllerKey (this);
+        key_controller.key_pressed.connect (on_key_pressed);
+    }
+
+    private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
+    {
+        switch (keyval)
         {
             case Gdk.Key.F2:
                 new_game ();
                 break;
+
             case Gdk.Key.Up:
-                view.cursor_move (0, 1);
+                view.cursor_move ( 0,  1);
                 break;
             case Gdk.Key.Down:
-                view.cursor_move (0, -1);
+                view.cursor_move ( 0, -1);
                 break;
             case Gdk.Key.Left:
-                view.cursor_move (-1, 0);
+                view.cursor_move (-1,  0);
                 break;
             case Gdk.Key.Right:
-                view.cursor_move (1, 0);
+                view.cursor_move ( 1,  0);
                 break;
+
             case Gdk.Key.space:
             case Gdk.Key.Return:
                 view.cursor_click ();
                 return true; //handle this one to avoid activating the toolbar button
+
             default:
                 break;
         }
