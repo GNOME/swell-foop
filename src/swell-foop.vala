@@ -246,7 +246,7 @@ public class SwellFoop : Gtk.Application
 
         Environment.set_application_name (_("Swell Foop"));
 
-        Gtk.Window.set_default_icon_name ("swellfoop");
+        Gtk.Window.set_default_icon_name ("org.gnome.SwellFoop");
 
         var app = new SwellFoop ();
         return app.run (args);
