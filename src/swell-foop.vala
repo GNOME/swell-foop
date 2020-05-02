@@ -21,15 +21,20 @@ public class SwellFoop : Gtk.Application
     private Gtk.Dialog? preferences_dialog = null;
 
     /* Store size options */
-    internal Size [] sizes = {
-        /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
-        { "small",  _("Small"),   6,  5 },
+    internal static Size [] sizes;
+    class construct
+    {
+        sizes = {
+            /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
+            { "small",  _("Small"),   6,  5 },
 
-        /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
-        { "normal", _("Normal"), 15, 10 },
+            /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
+            { "normal", _("Normal"), 15, 10 },
 
-        /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
-        { "large",  _("Large"),  20, 15 }};
+            /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
+            { "large",  _("Large"),  20, 15 }
+        };
+    }
 
     private const GLib.ActionEntry[] action_entries =
     {
