@@ -8,26 +8,26 @@
  * license.
  */
 
-public class History : Object
+private class History : Object
 {
-    public string filename;
-    public List<HistoryEntry> entries;
+    internal string filename;
+    internal List<HistoryEntry> entries;
 
-    public signal void entry_added (HistoryEntry entry);
+    internal signal void entry_added (HistoryEntry entry);
 
-    public History (string filename)
+    internal History (string filename)
     {
         this.filename = filename;
         entries = new List<HistoryEntry> ();
     }
 
-    public void add (HistoryEntry entry)
+    internal void add (HistoryEntry entry)
     {
         entries.append (entry);
         entry_added (entry);
     }
 
-    public void load ()
+    internal void load ()
     {
         entries = new List<HistoryEntry> ();
 
@@ -61,7 +61,7 @@ public class History : Object
         }
     }
 
-    public void save ()
+    internal void save ()
     {
         var contents = "";
 
@@ -99,20 +99,16 @@ public class History : Object
     }
 }
 
-public class HistoryEntry : Object
+private class HistoryEntry : Object
 {
-    public DateTime date;
-    public uint width;
-    public uint height;
-    public uint n_colors;
-    public uint score;
+    public DateTime date        { internal get; protected construct; }
+    public uint     width       { internal get; protected construct; }
+    public uint     height      { internal get; protected construct; }
+    public uint     n_colors    { internal get; protected construct; }
+    public uint     score       { internal get; protected construct; }
 
-    public HistoryEntry (DateTime date, uint width, uint height, uint n_colors, uint score)
+    internal HistoryEntry (DateTime date, uint width, uint height, uint n_colors, uint score)
     {
-        this.date = date;
-        this.width = width;
-        this.height = height;
-        this.n_colors = n_colors;
-        this.score = score;
+        Object (date: date, width: width, height: height, n_colors: n_colors, score: score);
     }
 }

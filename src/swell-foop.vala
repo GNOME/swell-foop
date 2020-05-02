@@ -21,9 +21,15 @@ public class SwellFoop : Gtk.Application
     private Gtk.Dialog? preferences_dialog = null;
 
     /* Store size options */
-    internal Size [] sizes = {{ "small",  _("Small"),   6,  5 },
-                              { "normal", _("Normal"), 15, 10 },
-                              { "large",  _("Large"),  20, 15 }};
+    internal Size [] sizes = {
+        /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
+        { "small",  _("Small"),   6,  5 },
+
+        /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
+        { "normal", _("Normal"), 15, 10 },
+
+        /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
+        { "large",  _("Large"),  20, 15 }};
 
     private const GLib.ActionEntry[] action_entries =
     {
@@ -68,7 +74,7 @@ public class SwellFoop : Gtk.Application
         window.present ();
     }
 
-    public void preferences_cb ()
+    public inline void preferences_cb (/* SimpleAction action, Variant? variant */)
     {
         /* Show existing dialog */
         if (preferences_dialog != null)
@@ -88,10 +94,12 @@ public class SwellFoop : Gtk.Application
         var model = (Gtk.ListStore) theme_combo.model;
         Gtk.TreeIter iter;
         model.append (out iter);
+        /* Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox */
         model.set (iter, 0, _("Colors"), 1, "colors", -1);
         if (settings.get_string ("theme") == "colors")
             theme_combo.set_active_iter (iter);
         model.append (out iter);
+        /* Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox */
         model.set (iter, 0, _("Shapes and Colors"), 1, "shapesandcolors", -1);
         if (settings.get_string ("theme") == "shapesandcolors")
             theme_combo.set_active_iter (iter);
@@ -170,18 +178,18 @@ public class SwellFoop : Gtk.Application
         window.new_game ();
     }
 
-    private void preferences_response_cb ()
+    private inline void preferences_response_cb ()
     {
         preferences_dialog.destroy ();
         preferences_dialog = null;
     }
 
-    private void quit_cb ()
+    private inline void quit_cb (/* SimpleAction action, Variant? variant */)
     {
         window.destroy ();
     }
 
-    private void help_cb ()
+    private inline void help_cb (/* SimpleAction action, Variant? variant */)
     {
         try
         {
@@ -193,26 +201,39 @@ public class SwellFoop : Gtk.Application
         }
     }
 
-    private void about_cb ()
+    private inline void about_cb (/* SimpleAction action, Variant? variant */)
     {
-        string[] authors = { "Tim Horton", "Sophia Yu", null };
-        string[] artists = { "Tim Horton", null };
-        string[] documenters = { null };
+        string[] authors = {
+            /* Translators: About dialog text, name of an author */
+            _("Tim Horton"),
+
+
+            /* Translators: About dialog text, name of an author */
+            _("Sophia Yu")
+        };
+        string[] artists = {
+            /* Translators: About dialog text, name of an artist */
+            _("Tim Horton")
+        };
+        string[] documenters = {};
 
         Gtk.show_about_dialog (window,
+                               /* Translators: About dialog text, name of the application */
                                "program-name", _("Swell Foop"),
                                "version", Config.VERSION,
                                "comments",
+                               /* Translators: About dialog text, small description of the application */
                                _("I want to play that game!\nYou know, they all light-up and you click on them and they vanish!"),
-                               "copyright", _("Copyright \xc2\xa9 2009 Tim Horton"),
                                "license-type", Gtk.License.GPL_2_0,
                                "authors", authors,
+                               /* Translators: About dialog text, copyright line */
+                               "copyright", _("Copyright \xc2\xa9 2009 Tim Horton"),
                                "artists", artists,
                                "documenters", documenters,
+                               /* Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally! */
                                "translator-credits", _("translator-credits"),
                                "logo-icon-name", "org.gnome.SwellFoop",
-                               "website", Config.PACKAGE_URL,
-                               null);
+                               "website", Config.PACKAGE_URL);
     }
 
     public static int main (string[] args)
@@ -244,8 +265,8 @@ public class SwellFoop : Gtk.Application
             return Posix.EXIT_FAILURE;
         }
 
+        /* Translators: name of the application, as displayed in the window manager */
         Environment.set_application_name (_("Swell Foop"));
-
         Gtk.Window.set_default_icon_name ("org.gnome.SwellFoop");
 
         var app = new SwellFoop ();
@@ -254,7 +275,7 @@ public class SwellFoop : Gtk.Application
 }
 
 /* An array will store multiply game size options. */
-public struct Size
+private struct Size
 {
     public string id;
     public string name;

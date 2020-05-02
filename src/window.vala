@@ -106,7 +106,7 @@ private class SwellFoopWindow : ApplicationWindow
         history.load ();
     }
 
-    private Stack build_first_run_stack ()
+    private inline Stack build_first_run_stack ()
     {
         CssProvider css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
@@ -117,6 +117,7 @@ private class SwellFoopWindow : ApplicationWindow
         Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/first-run-stack.ui");
         var stack = (Stack) builder.get_object ("first_run_stack");
         var tip_label = (Label) builder.get_object ("tip_label");
+        /* Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application */
         tip_label.set_label (_("Clear as many blocks as you can.\nFewer clicks means more points."));
         var play_button = (Button) builder.get_object ("play_button");
         play_button.clicked.connect (() => {
@@ -144,6 +145,7 @@ private class SwellFoopWindow : ApplicationWindow
         if (game != null)
             score = game.score;
 
+        /* Translators: subtitle of the headerbar; the %u is replaced by the score */
         headerbar.subtitle = _("Score: %u").printf (score);
     }
 
@@ -156,7 +158,7 @@ private class SwellFoopWindow : ApplicationWindow
         game_in_progress = false;
     }
 
-    private void started_cb ()
+    private inline void started_cb ()
     {
         game_in_progress = true;
     }
@@ -196,17 +198,17 @@ private class SwellFoopWindow : ApplicationWindow
         update_score_cb (0);
     }
 
-    internal void set_theme_name (string new_theme)
+    internal inline void set_theme_name (string new_theme)
     {
         view.theme_name = new_theme;
     }
 
-    internal void set_is_zealous (bool is_zealous)
+    internal inline void set_is_zealous (bool is_zealous)
     {
         view.is_zealous = is_zealous;
     }
 
-    internal void on_shutdown ()
+    internal inline void on_shutdown ()
     {
         /* Record the score if the game isn't over. */
         if (game != null && !game.has_completed () && game.score > 0)
@@ -217,7 +219,7 @@ private class SwellFoopWindow : ApplicationWindow
     * * actions
     \*/
 
-    private inline void scores_cb ()
+    private inline void scores_cb (/* SimpleAction action, Variant? variant */)
     {
         var dialog = new ScoreDialog (history);
         dialog.modal = true;
@@ -227,7 +229,7 @@ private class SwellFoopWindow : ApplicationWindow
         dialog.destroy ();
     }
 
-    private inline void new_game_cb ()
+    private inline void new_game_cb (/* SimpleAction action, Variant? variant */)
     {
         if (game_in_progress)
             show_new_game_confirmation_dialog ();
@@ -235,15 +237,20 @@ private class SwellFoopWindow : ApplicationWindow
             new_game ();
     }
 
-    private void show_new_game_confirmation_dialog ()
+    private inline void show_new_game_confirmation_dialog ()
     {
         var dialog = new MessageDialog.with_markup (this,
                                                     DialogFlags.MODAL,
                                                     MessageType.QUESTION,
                                                     ButtonsType.NONE,
                                                     "<span weight=\"bold\" size=\"larger\">%s</span>",
+                                                    /* Translators: text of a Dialog that may appear if you start a new game while one is running */
                                                     _("Abandon this game to start a new one?"));
+
+        /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game” */
         dialog.add_button (_("_Cancel"),    ResponseType.CANCEL);
+
+        /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel” */
         dialog.add_button (_("_New Game"),  ResponseType.YES);
 
         var result = dialog.run ();

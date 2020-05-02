@@ -8,7 +8,7 @@
  * license.
  */
  
-public class ScoreDialog : Gtk.Dialog
+private class ScoreDialog : Gtk.Dialog
 {
     private History history;
     private HistoryEntry? selected_entry = null;
@@ -17,18 +17,23 @@ public class ScoreDialog : Gtk.Dialog
     private Gtk.ComboBox size_combo;
     private Gtk.TreeView scores;
 
-    public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false)
+    internal ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false)
     {
         this.history = history;
         history.entry_added.connect (entry_added_cb);
         this.selected_entry = selected_entry;
+        /* Translators: title of the Scores dialog */
         this.set_title (_("High Scores"));
         if (show_quit)
         {
+            /* Translations: label of one of the two buttons of the Scores dialog, as displayed when a new best score was maid; the other is “New Game” */
             add_button (_("_Quit"), Gtk.ResponseType.CLOSE);
+
+            /* Translations: label of one of the two buttons of the Scores dialog, as displayed when a new best score was maid; the other is “_Quit” */
             add_button (_("New Game"), Gtk.ResponseType.OK);
         }
         else
+            /* Translations: label of the only button of the Scores dialog, as displayed when called from the hamburger menu */
             add_button (_("_OK"), Gtk.ResponseType.DELETE_EVENT);
         set_size_request (200, 300);
 
@@ -41,6 +46,7 @@ public class ScoreDialog : Gtk.Dialog
         hbox.show ();
         vbox.pack_start (hbox, false, false, 0);
 
+        /* Translators: in the Scores dialog, text of the label introducing the combobox to choose of which category the best scores will be displayed */
         var label = new Gtk.Label (_("Size:"));
         label.show ();
         hbox.pack_start (label, false, false, 0);
@@ -66,9 +72,11 @@ public class ScoreDialog : Gtk.Dialog
 
         scores = new Gtk.TreeView ();
         renderer = new Gtk.CellRendererText ();
+        /* Translators: in the Scores dialog, name of a column of the best scores table */
         scores.insert_column_with_attributes (-1, _("Date"), renderer, "text", 0, "weight", 2);
         renderer = new Gtk.CellRendererText ();
         renderer.xalign = 1.0f;
+        /* Translators: in the Scores dialog, name of a column of the best scores table */
         scores.insert_column_with_attributes (-1, _("Score"), renderer, "text", 1, "weight", 2);
         scores.model = score_model;
         scores.show ();
@@ -78,7 +86,7 @@ public class ScoreDialog : Gtk.Dialog
             entry_added_cb (entry);
     }
 
-    public void set_size (uint width, uint height, uint n_colors)
+    private void set_size (uint width, uint height, uint n_colors)  // designed to be made public
     {
         score_model.clear ();
 
