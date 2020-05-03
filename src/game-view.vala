@@ -17,24 +17,24 @@
 
 using Config;
 
-public class GameView : Clutter.Group
+private class GameView : Clutter.Group
 {
     private TileActor highlighted = null;
 
     private CursorActor cursor;
     private bool cursor_active = false;
     private int _cursor_x;
-    public int cursor_x
+    private int cursor_x
     {
-        get { return this._cursor_x; }
-        set { this._cursor_x = value.clamp (0, game.columns - 1); }
+        private get { return this._cursor_x; }
+        private set { this._cursor_x = value.clamp (0, game.columns - 1); }
     }
 
     private int _cursor_y;
-    public int cursor_y
+    private int cursor_y
     {
-        get { return this._cursor_y; }
-        set { this._cursor_y = value.clamp (0, game.rows - 1); }
+        private get { return this._cursor_y; }
+        private set { this._cursor_y = value.clamp (0, game.rows - 1); }
     }
 
     /* A 2D array holding all tiles */
@@ -45,10 +45,10 @@ public class GameView : Clutter.Group
 
     /* Game being played */
     private Game? _game = null;
-    public Game? game
+    internal Game? game
     {
-        get { return _game; }
-        set
+        private get { return _game; }
+        internal set
         {
             if (game_actors != null)
                 game_actors.destroy ();
@@ -78,10 +78,10 @@ public class GameView : Clutter.Group
 
     /* Theme being used */
     private string _theme_name = "shapesandcolors";
-    public string theme_name
+    internal string theme_name
     {
-        get { return _theme_name; }
-        set
+        private get { return _theme_name; }
+        internal set
         {
             if (theme_name == value)
                 return;
@@ -163,9 +163,9 @@ public class GameView : Clutter.Group
         cursor.hide ();
     }
 
-    public bool is_zealous;
+    internal bool is_zealous { private get; internal set; }
 
-    public GameView ()
+    internal GameView ()
     {
         /* Initialize the theme resources */
         themes = new HashTable<string, Theme> (str_hash, str_equal);
@@ -177,13 +177,13 @@ public class GameView : Clutter.Group
     }
 
     /* When a tile in the model layer is closed, play an animation at the view layer */
-    public void close_cb (int grid_x, int grid_y)
+    private inline void close_cb (int grid_x, int grid_y)
     {
         tiles[grid_x, grid_y].animate_out ();
     }
 
     /* When a tile in the model layer is moved, play an animation at the view layer */
-    public void move_cb (int old_x, int old_y, int new_x, int new_y)
+    private inline void move_cb (int old_x, int old_y, int new_x, int new_y)
     {
         var tile = tiles[old_x, old_y];
         tiles[new_x, new_y] = tile;
@@ -252,7 +252,7 @@ public class GameView : Clutter.Group
     }
 
     /* When the mouse leaves the application window, reset all tiles to the default brightness */
-    public bool board_left_cb ()
+    internal bool board_left_cb ()
     {
         game.reset_visit ();
 
@@ -272,7 +272,7 @@ public class GameView : Clutter.Group
     }
 
     /* Move Keyboard cursor */
-    public void cursor_move (int x, int y)
+    internal void cursor_move (int x, int y)
     {
         cursor_active = true;
 
@@ -292,7 +292,7 @@ public class GameView : Clutter.Group
     }
 
     /* Keyboard Cursor Click */
-    public void cursor_click ()
+    internal void cursor_click ()
     {
         game.remove_connected_tiles (tiles[cursor_x, cursor_y].tile);
         highlighted = tiles[cursor_x, cursor_y];
@@ -300,7 +300,7 @@ public class GameView : Clutter.Group
     }
 
     /* Show flying score animation after each tile-removing click */
-    public void update_score_cb (int points_awarded)
+    private void update_score_cb (int points_awarded)
     {
         if (is_zealous)
         {
@@ -312,17 +312,18 @@ public class GameView : Clutter.Group
     }
 
     /* Show the final score when the game is over */
-    public void game_complete_cb ()
+    private void game_complete_cb ()
     {
         var text = new ScoreActor (game.rows / 5, width, height);
         game_actors.add_child (text);
         text.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.BOTH, 0.5f));
         text.animate_final_score (game.score);
 
+        /* Translators: text of a button that appears on the board at the end of a game */
         var play_again_button = new Gtk.Button.with_mnemonic (_("_Play Again"));
         play_again_button.width_request = 130;
         play_again_button.height_request = 40;
-        play_again_button.action_name = "app.new-game";
+        play_again_button.action_name = "win.new-game";
         play_again_button.show ();
 
         var style = play_again_button.get_style_context ();
@@ -338,7 +339,6 @@ public class GameView : Clutter.Group
         button_actor.set_easing_duration (2000);
         button_actor.z_position = -50;
         button_actor.set_opacity (255);
-
     }
 }
 
@@ -346,12 +346,12 @@ public class GameView : Clutter.Group
  *  This class holds the textures for a specific theme. These textures are used for creating light
  *  actors and cursor actor.
  */
-public class Theme : Object
+private class Theme : Object
 {
-    public Clutter.Image[] textures;
-    public Clutter.Image cursor;
+    internal Clutter.Image[] textures;
+    internal Clutter.Image cursor;
 
-    public Theme (string name)
+    internal Theme (string name)
     {
         textures = new Clutter.Image [4];
         string[4] colors = {"blue", "green", "yellow", "red"};
@@ -387,9 +387,9 @@ public class Theme : Object
 private class TileActor : Clutter.Actor
 {
     /* Tile being represented */
-    public Tile tile;
+    internal Tile tile;
 
-    public TileActor (Tile tile, Clutter.Image texture, int size)
+    internal TileActor (Tile tile, Clutter.Image texture, int size)
     {
         this.tile = tile;
         opacity = 180;
@@ -401,7 +401,7 @@ private class TileActor : Clutter.Actor
     }
 
     /* Destroy the tile */
-    public void animate_out ()
+    internal void animate_out ()
     {
         /* When the animination is done, hide the actor */
         set_easing_mode (Clutter.AnimationMode.LINEAR);
@@ -417,7 +417,7 @@ private class TileActor : Clutter.Actor
     }
 
     /* Define how the tile moves */
-    public void animate_to (double new_x, double new_y, bool is_zealous = false)
+    internal void animate_to (double new_x, double new_y, bool is_zealous = false)
     {
         var anim_mode = is_zealous ? Clutter.AnimationMode.EASE_OUT_BOUNCE : Clutter.AnimationMode.EASE_OUT_QUAD;
         set_easing_mode (anim_mode);
@@ -426,9 +426,9 @@ private class TileActor : Clutter.Actor
     }
 }
 
-public class CursorActor : Clutter.Actor
+private class CursorActor : Clutter.Actor
 {
-   public CursorActor (Clutter.Content texture, int size)
+    internal CursorActor (Clutter.Content texture, int size)
     {
         opacity = 180;
         set_size (size, size);
@@ -442,14 +442,14 @@ public class CursorActor : Clutter.Actor
 /**
  *  This class defines the view of a score. All clutter related stuff goes here
  */
-public class ScoreActor : Clutter.Group
+private class ScoreActor : Clutter.Group
 {
     private Clutter.Text label;
     private float scene_width;
     private float scene_height;
     private int game_size;
 
-    public ScoreActor (int game_size, double width, double height)
+    internal ScoreActor (int game_size, double width, double height)
     {
         label = new Clutter.Text ();
         label.set_color (Clutter.Color.from_string ("rgba(255, 255, 255, 255)"));
@@ -463,7 +463,7 @@ public class ScoreActor : Clutter.Group
         this.game_size = game_size;
     }
 
-    public void animate_score (int points)
+    internal void animate_score (int points)
     {
         if (points <= 0)
             return;
@@ -483,11 +483,13 @@ public class ScoreActor : Clutter.Group
         transitions_completed.connect (() => { destroy (); });
     }
 
-    public void animate_final_score (uint points)
+    internal void animate_final_score (uint points)
     {
         label.set_font_name ("Bitstrem Vera Sans 30");
         var points_label = ngettext (/* Label showing the number of points at the end of the game */
                                      "%u point", "%u points", points).printf (points);
+
+        /* Translators: text of a label that appears on the board at the end of a game */
         label.set_markup ("<b>%s</b>\n%s".printf (_("Game Over!"), points_label));
         label.set_line_alignment (Pango.Alignment.CENTER);
 

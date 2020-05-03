@@ -4,25 +4,26 @@ project('swell-foop', ['c','vala'],
   license: 'GPLv2+',
 )
 
-gnome = import('gnome')
-i18n = import('i18n')
+gnome   = import('gnome')
+i18n    = import('i18n')
 
-localedir = join_paths(get_option('prefix'), get_option('localedir'))
-datadir = join_paths (get_option ('prefix'), get_option ('datadir'))
-pkgdatadir = join_paths (datadir, 'swell-foop')
+localedir   = join_paths (get_option ('prefix'), get_option ('localedir'))
+datadir     = join_paths (get_option ('prefix'), get_option ('datadir'))
+pkgdatadir  = join_paths (datadir, 'swell-foop')
+bindir      = join_paths (get_option ('prefix'), get_option ('bindir'))
 
-podir = join_paths(meson.source_root(), 'po')
+podir   = join_paths(meson.source_root(), 'po')
 vapidir = join_paths(meson.source_root(), 'vapi')
 
 # Dependencies
 
 glib_min_version = '2.36'
 
-glib_dep = dependency('glib-2.0', version: '>= ' + glib_min_version)
-gmodule_dep = dependency('gmodule-2.0')
-gobject_dep = dependency('gobject-2.0')
-gtk_dep = dependency('gtk+-3.0', version: '>= 3.12')
-clutter_dep = dependency('clutter-1.0', version: '>= 1.14.0')
+glib_dep        = dependency('glib-2.0', version: '>= ' + glib_min_version)
+gmodule_dep     = dependency('gmodule-2.0')
+gobject_dep     = dependency('gobject-2.0')
+gtk_dep         = dependency('gtk+-3.0', version: '>= 3.24')
+clutter_dep     = dependency('clutter-1.0', version: '>= 1.14.0')
 clutter_gtk_dep = dependency('clutter-gtk-1.0', version: '>= 1.5.0')
 
 # Check for compilers

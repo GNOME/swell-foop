@@ -7,64 +7,49 @@
     <property name="upper">4</property>
     <property name="step_increment">1</property>
   </object>
-  <object class="GtkAdjustment" id="columns-adjustment">
-    <property name="lower">3</property>
-    <property name="upper">21</property>
-    <property name="step_increment">1</property>
-  </object>
-  <object class="GtkListStore" id="liststore1">
-    <columns>
-      <!-- column-name str -->
-      <column type="gchararray"/>
-    </columns>
-  </object>
-  <object class="GtkListStore" id="liststore2">
-    <columns>
-      <!-- column-name str -->
-      <column type="gchararray"/>
-    </columns>
-  </object>
   <object class="GtkDialog" id="preferences">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="use_header_bar">1</property>
+    <!-- Translators: title of the Preferences dialog -->
     <property name="title" translatable="yes">Preferences</property>
     <property name="icon_name">gnome-swell-foop</property>
     <child internal-child="vbox">
-      <object class="GtkBox" id="dialog-vbox1">
+      <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkBox" id="box1">
+          <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="border_width">5</property>
             <property name="orientation">vertical</property>
             <property name="spacing">12</property>
             <child>
-              <object class="GtkFrame" id="frame3">
+              <object class="GtkFrame">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment3">
+                  <object class="GtkAlignment">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_start">12</property>
                     <child>
-                      <object class="GtkGrid" id="grid1">
+                      <object class="GtkGrid">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="row_spacing">6</property>
                         <property name="column_spacing">10</property>
                         <child>
-                          <object class="GtkLabel" id="label3">
+                          <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
+                            <!-- Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the board size -->
                             <property name="label" translatable="yes">_Board size:</property>
                             <property name="use_underline">True</property>
                             <property name="mnemonic_widget">size-selector</property>
@@ -77,10 +62,11 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="label9">
+                          <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
+                            <!-- Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the number of colors -->
                             <property name="label" translatable="yes">_Number of colors:</property>
                             <property name="use_underline">True</property>
                             <property name="mnemonic_widget">colors-spinner</property>
@@ -96,10 +82,10 @@
                           <object class="GtkComboBox" id="size-selector">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="model">size_model</property>
+                            <property name="model">size-model</property>
                             <signal name="changed" handler="update_size" swapped="no"/>
                             <child>
-                              <object class="GtkCellRendererText" id="size_cellrenderer"/>
+                              <object class="GtkCellRendererText"/>
                               <attributes>
                                 <attribute name="text">0</attribute>
                               </attributes>
@@ -134,11 +120,12 @@
                   </object>
                 </child>
                 <child type="label">
-                  <object class="GtkLabel" id="label5">
+                  <object class="GtkLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_top">5</property>
                     <property name="margin_bottom">5</property>
+                    <!-- Translators: in the Preferences dialog, name of the section in which there are settings for board size and number of colors -->
                     <property name="label" translatable="yes">Setup</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
@@ -153,30 +140,31 @@
               </packing>
             </child>
             <child>
-              <object class="GtkFrame" id="frame1">
+              <object class="GtkFrame">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment1">
+                  <object class="GtkAlignment">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_start">12</property>
                     <child>
-                      <object class="GtkBox" id="box3">
+                      <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkBox" id="box4">
+                          <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="spacing">6</property>
                             <child>
-                              <object class="GtkLabel" id="label1">
+                              <object class="GtkLabel">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
+                                <!-- Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the theme -->
                                 <property name="label" translatable="yes">_Theme:</property>
                                 <property name="use_underline">True</property>
                                 <property name="mnemonic_widget">theme-selector</property>
@@ -191,10 +179,10 @@
                               <object class="GtkComboBox" id="theme-selector">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="model">theme_model</property>
+                                <property name="model">theme-model</property>
                                 <signal name="changed" handler="select_theme" swapped="no"/>
                                 <child>
-                                  <object class="GtkCellRendererText" id="theme_cellrenderer"/>
+                                  <object class="GtkCellRendererText"/>
                                   <attributes>
                                     <attribute name="text">0</attribute>
                                   </attributes>
@@ -219,11 +207,12 @@
                   </object>
                 </child>
                 <child type="label">
-                  <object class="GtkLabel" id="label2">
+                  <object class="GtkLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_top">5</property>
                     <property name="margin_bottom">5</property>
+                    <!-- Translators: in the Preferences dialog, name of the section in which there is the theme option -->
                     <property name="label" translatable="yes">Appearance</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
@@ -238,23 +227,24 @@
               </packing>
             </child>
             <child>
-              <object class="GtkFrame" id="frame2">
+              <object class="GtkFrame">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment2">
+                  <object class="GtkAlignment">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_start">12</property>
                     <child>
-                      <object class="GtkBox" id="box2">
+                      <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
                         <child>
                           <object class="GtkCheckButton" id="zealous-checkbox">
+                            <!-- Translators: in the Preferences dialog, text of the fast-animation checkbox -->
                             <property name="label" translatable="yes">_Zealous Animation</property>
                             <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
@@ -275,11 +265,12 @@
                   </object>
                 </child>
                 <child type="label">
-                  <object class="GtkLabel" id="label8">
+                  <object class="GtkLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_top">5</property>
                     <property name="margin_bottom">5</property>
+                    <!-- Translators: in the Preferences dialog, name of the section in which there is the fast-animation option -->
                     <property name="label" translatable="yes">Operation</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
@@ -303,12 +294,7 @@
       </object>
     </child>
   </object>
-  <object class="GtkAdjustment" id="rows-adjustment">
-    <property name="lower">3</property>
-    <property name="upper">21</property>
-    <property name="step_increment">1</property>
-  </object>
-  <object class="GtkListStore" id="size_model">
+  <object class="GtkListStore" id="size-model">
     <columns>
       <!-- column-name label -->
       <column type="gchararray"/>
@@ -316,7 +302,7 @@
       <column type="gchararray"/>
     </columns>
   </object>
-  <object class="GtkListStore" id="theme_model">
+  <object class="GtkListStore" id="theme-model">
     <columns>
       <!-- column-name label -->
       <column type="gchararray"/>

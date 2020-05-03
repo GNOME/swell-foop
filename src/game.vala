@@ -11,14 +11,14 @@
 /**
  *  This is the model layer of a tile.
  */
-public class Tile : Object
+private class Tile : Object
 {
     /* Property */
     private bool _closed = false;
-    public bool closed
+    internal bool closed
     {
-        get { return _closed; }
-        set
+        internal get { return _closed; }
+        private set
         {
             _closed = value;
             /* Send close signal */
@@ -27,17 +27,17 @@ public class Tile : Object
         }
     }
 
-    public int grid_x;
-    public int grid_y;
-    public int color;
-    public bool visited = false;
+    internal int grid_x     { internal get; private set; }
+    internal int grid_y     { internal get; private set; }
+    internal int color      { internal get; private set; }
+    internal bool visited   { internal get; private set; default = false; }
 
     /* Signals */
-    public signal void move (int old_x, int old_y, int new_x, int new_y);
-    public signal void close (int grid_x, int grid_y);
+    internal signal void move (int old_x, int old_y, int new_x, int new_y);
+    internal signal void close (int grid_x, int grid_y);
 
     /* Constructor */
-    public Tile (int x, int y, int c)
+    internal Tile (int x, int y, int c)
     {
         grid_x = x;
         grid_y = y;
@@ -45,7 +45,7 @@ public class Tile : Object
     }
 
     /* Do not use this mothod to initialize the position. */
-    public void update_position (int new_x, int new_y)
+    internal void update_position (int new_x, int new_y)
     {
         var old_x = grid_x;
         var old_y = grid_y;
@@ -66,19 +66,19 @@ public class Tile : Object
  *  This is the model layer of the whole game. All game logic goes here. This class tries not to
  *  bring in any visual stuff to comply the separation of view-model idea.
  */
-public class Game : Object
+private class Game : Object
 {
     private Tile[,] tiles;
     private bool is_started = false;
 
     /* Game score */
-    public int score { get; set; default = 0; }
+    internal int score { internal get; private set; default = 0; }
 
     private int _color_num = 3;
     public int color_num
     {
-        get { return _color_num; }
-        set
+        internal get { return _color_num; }
+        protected construct
         {
             if (value < 2 || value > 4)
                 _color_num = 3;
@@ -88,19 +88,17 @@ public class Game : Object
     }
 
     /* Property */
-    public int rows { get; set; default = 8; }
-    public int columns { get; set; default = 8; }
+    public int rows       { internal get; protected construct; default = 8; }
+    public int columns    { internal get; protected construct; default = 8; }
 
-    public signal void update_score (int points_awarded);
-    public signal void complete ();
-    public signal void started ();
+    internal signal void update_score (int points_awarded);
+    internal signal void complete ();
+    internal signal void started ();
 
     /* Constructor */
-    public Game (int rows, int columns, int color_num)
+    internal Game (int rows, int columns, int color_num)
     {
-        _rows = rows;
-        _columns = columns;
-        _color_num = color_num;
+        Object (rows: rows, columns: columns, color_num: color_num);
 
         /* A 2D array holds all tiles */
         tiles = new Tile [rows, columns];
@@ -147,7 +145,7 @@ public class Game : Object
         return cl;
     }
 
-    public List<Tile> connected_tiles (Tile li)
+    internal List<Tile> connected_tiles (Tile li)
     {
         foreach (var l in tiles)
         {
@@ -164,12 +162,12 @@ public class Game : Object
         return cl;
     }
 
-    public Tile get_tile (int x, int y)
+    internal Tile get_tile (int x, int y)
     {
         return tiles[y, x];
     }
 
-    public bool remove_connected_tiles (Tile tile)
+    internal bool remove_connected_tiles (Tile tile)
     {
         List<Tile> cl = connected_tiles (tile);
 
@@ -251,7 +249,7 @@ public class Game : Object
         return false;
     }
 
-    public void reset_visit ()
+    internal void reset_visit ()
     {
         foreach (var l in tiles)
         {
@@ -260,7 +258,7 @@ public class Game : Object
         }
     }
 
-    public bool has_completed ()
+    internal bool has_completed ()
     {
         foreach (var l in tiles)
         {
@@ -271,7 +269,7 @@ public class Game : Object
         return true;
     }
 
-    public bool has_won ()
+    internal bool has_won ()
     {
         foreach (var l in tiles)
         {
@@ -282,7 +280,7 @@ public class Game : Object
         return true;
     }
 
-    public void increment_score_from_tiles (int n_tiles)
+    internal void increment_score_from_tiles (int n_tiles)
     {
         var points_awarded = 0;
 
@@ -292,7 +290,7 @@ public class Game : Object
         increment_score (points_awarded);
     }
 
-    public void increment_score (int increment)
+    internal void increment_score (int increment)
     {
         score += increment;
         update_score (increment);

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/SwellFoop/ui">
+    <file preprocess="xml-stripblanks" alias="first-run-stack.ui">../data/first-run-stack.ui</file>
+    <file preprocess="xml-stripblanks" alias="preferences.ui">../data/preferences.ui</file>
+    <file alias="swell-foop.css">../data/swell-foop.css</file>
+    <file preprocess="xml-stripblanks" alias="swell-foop.ui">../data/swell-foop.ui</file>
+  </gresource>
+</gresources>

@@ -4,7 +4,11 @@ sources = [
   'game-view.vala',
   'score-dialog.vala',
   'swell-foop.vala',
+  'window.vala',
 ]
+
+resource_files = files ('@0@.gresource.xml'.format('org.gnome.SwellFoop'))
+resources = gnome.compile_resources ('org.gnome.SwellFoop', resource_files)
 
 deps = [
   config_dep,
@@ -24,7 +28,7 @@ c_flags = [
   '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())
 ]
 
-executable('swell-foop', sources,
+executable('swell-foop', sources + resources,
   dependencies: deps,
   include_directories: config_h_inc,
   c_args: c_flags,
