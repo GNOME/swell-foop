@@ -16,8 +16,6 @@ deps = [
   glib_dep,
   gobject_dep,
   gtk_dep,
-  clutter_dep,
-  clutter_gtk_dep,
   lggs_dep,
   gee_dep,
 ]
