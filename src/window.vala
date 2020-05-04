@@ -204,11 +204,14 @@ private class SwellFoopWindow : ApplicationWindow
         view.is_zealous = is_zealous;
     }
 
-    internal inline void on_shutdown ()
+    private bool being_destroyed = false;
+    protected override void destroy ()
     {
         /* Record the score if the game isn't over. */
+        being_destroyed = true;
         if (game != null && !game.has_completed () && game.score > 0)
-            complete_cb ();
+            add_score ();
+        base.destroy ();
     }
 
     /*\
@@ -423,7 +426,8 @@ private class SwellFoopWindow : ApplicationWindow
                 {
                     warning ("Failed to add score: %s", e.message);
                 }
-                scores_context.run_dialog ();
+                if (!being_destroyed)
+                    scores_context.run_dialog ();
             });
     }
 }
