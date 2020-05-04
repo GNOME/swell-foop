@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2019-09-22 20:03+0000\n"
-"PO-Revision-Date: 2020-03-16 22:07+0200\n"
+"POT-Creation-Date: 2020-05-04 05:27+0000\n"
+"PO-Revision-Date: 2020-05-04 09:09+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -19,12 +19,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
 "=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 20.03.70\n"
+"X-Generator: Lokalize 20.07.70\n"
 "X-Project-Style: gnome\n"
 
+#. Translators: About dialog text, name of the application
+#. Translators: name of the application, as displayed in the window manager
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
-#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
+#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:222
+#: src/swell-foop.vala:269
 msgid "Swell Foop"
 msgstr "Той самий"
 
@@ -103,44 +105,53 @@ msgstr "Ретельна анімація"
 msgid "Use more flashy, but slower, animations."
 msgstr "Більш розкішна, але більш повільна анімація."
 
-#: data/preferences.ui:31
+#. Translators: title of the Preferences dialog
+#: data/preferences.ui:15
 msgid "Preferences"
 msgstr "Параметри"
 
-#: data/preferences.ui:68
+#. Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the board size
+#: data/preferences.ui:53
 msgid "_Board size:"
 msgstr "Розмір _дошки:"
 
-#: data/preferences.ui:84
+#. Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the number of colors
+#: data/preferences.ui:70
 msgid "_Number of colors:"
 msgstr "_Кількість кольорів:"
 
-#: data/preferences.ui:142
+#. Translators: in the Preferences dialog, name of the section in which there are settings for board size and number of colors
+#: data/preferences.ui:129
 msgid "Setup"
 msgstr "Параметри"
 
-#: data/preferences.ui:180
+#. Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the theme
+#: data/preferences.ui:168
 msgid "_Theme:"
 msgstr "_Тема:"
 
-#: data/preferences.ui:227
+#. Translators: in the Preferences dialog, name of the section in which there is the theme option
+#: data/preferences.ui:216
 msgid "Appearance"
 msgstr "Вигляд"
 
-#: data/preferences.ui:258
+#. Translators: in the Preferences dialog, text of the fast-animation checkbox
+#: data/preferences.ui:248
 msgid "_Zealous Animation"
 msgstr "_Ретельна анімація"
 
-#: data/preferences.ui:283
+#. Translators: in the Preferences dialog, name of the section in which there is the fast-animation option
+#: data/preferences.ui:274
 msgid "Operation"
 msgstr "Операція"
 
-#: src/game-view.vala:322
+#. Translators: text of a button that appears on the board at the end of a game
+#: src/game-view.vala:323
 msgid "_Play Again"
 msgstr "_Зіграти ще раз"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:495
+#: src/game-view.vala:490
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -148,40 +159,47 @@ msgstr[0] "%u бал"
 msgstr[1] "%u бали"
 msgstr[2] "%u балів"
 
-#: src/game-view.vala:496
+#. Translators: text of a label that appears on the board at the end of a game
+#: src/game-view.vala:493
 msgid "Game Over!"
 msgstr "Гру закінчено!"
 
-#: src/score-dialog.vala:25
-#| msgid "_Scores"
+#. Translators: title of the Scores dialog
+#: src/score-dialog.vala:26
 msgid "High Scores"
 msgstr "Найкращі результати"
 
-#: src/score-dialog.vala:28
+#. Translations: label of one of the two buttons of the Scores dialog, as displayed when a new best score was maid; the other is “New Game”
+#: src/score-dialog.vala:30
 msgid "_Quit"
 msgstr "Ви_йти"
 
-#: src/score-dialog.vala:29
+#. Translations: label of one of the two buttons of the Scores dialog, as displayed when a new best score was maid; the other is “_Quit”
+#: src/score-dialog.vala:33
 msgid "New Game"
 msgstr "Створити гру"
 
-#: src/score-dialog.vala:32
+#. Translations: label of the only button of the Scores dialog, as displayed when called from the hamburger menu
+#: src/score-dialog.vala:37
 msgid "_OK"
 msgstr "_Гаразд"
 
-#: src/score-dialog.vala:44
+#. Translators: in the Scores dialog, text of the label introducing the combobox to choose of which category the best scores will be displayed
+#: src/score-dialog.vala:50
 msgid "Size:"
 msgstr "Розмір:"
 
-#: src/score-dialog.vala:69
+#. Translators: in the Scores dialog, name of a column of the best scores table
+#: src/score-dialog.vala:76
 msgid "Date"
 msgstr "Дата"
 
-#: src/score-dialog.vala:72
+#. Translators: in the Scores dialog, name of a column of the best scores table
+#: src/score-dialog.vala:80
 msgid "Score"
 msgstr "Рахунок"
 
-#: src/score-dialog.vala:166
+#: src/score-dialog.vala:174
 #, c-format
 msgid "%u × %u, %u color"
 msgid_plural "%u × %u, %u colors"
@@ -189,70 +207,44 @@ msgstr[0] "%u × %u, %u колір"
 msgstr[1] "%u × %u, %u кольори"
 msgstr[2] "%u × %u, %u кольорів"
 
-#: src/swell-foop.vala:81
-msgid "Welcome to Swell Foop"
-msgstr "Ласкаво просимо в «Той самий»"
-
-#: src/swell-foop.vala:84
-msgid ""
-"Clear as many blocks as you can.\n"
-"Fewer clicks means more points."
-msgstr ""
-"Очистіть якнайбільше блоків.\n"
-"Більше натисків — більше балів."
-
-#: src/swell-foop.vala:87
-msgid "Let’s _Play"
-msgstr "Нумо _грати"
-
-#: src/swell-foop.vala:141 src/swell-foop.vala:504
-msgid "_New Game"
-msgstr "_Створити гру"
-
-#: src/swell-foop.vala:144
-#| msgid "_Scores"
-msgid "High _Scores"
-msgstr "Найкращі _результати"
-
-#: src/swell-foop.vala:147
-msgid "_Preferences"
-msgstr "_Параметри"
-
-#: src/swell-foop.vala:148
-msgid "_Help"
-msgstr "_Довідка"
-
-#: src/swell-foop.vala:149
-#| msgid "Swell Foop"
-msgid "_About Swell Foop"
-msgstr "_Про «Той самий»"
-
-#: src/swell-foop.vala:190
+#. Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox
+#: src/swell-foop.vala:26
 msgid "Small"
 msgstr "Маленька"
 
-#: src/swell-foop.vala:191
+#. Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox
+#: src/swell-foop.vala:29
 msgid "Normal"
 msgstr "Звичайний"
 
-#: src/swell-foop.vala:192
+#. Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox
+#: src/swell-foop.vala:32
 msgid "Large"
 msgstr "Велика"
 
-#: src/swell-foop.vala:266
-#, c-format
-msgid "Score: %u"
-msgstr "Рахунок: %u"
-
-#: src/swell-foop.vala:325
+#. Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox
+#: src/swell-foop.vala:98
 msgid "Colors"
 msgstr "Кольори"
 
-#: src/swell-foop.vala:329
+#. Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox
+#: src/swell-foop.vala:103
 msgid "Shapes and Colors"
 msgstr "Форми і кольори"
 
-#: src/swell-foop.vala:463
+#. Translators: About dialog text, name of an author
+#. Translators: About dialog text, name of an artist
+#: src/swell-foop.vala:208 src/swell-foop.vala:216
+msgid "Tim Horton"
+msgstr "Tim Horton"
+
+#. Translators: About dialog text, name of an author
+#: src/swell-foop.vala:212
+msgid "Sophia Yu"
+msgstr "Sophia Yu"
+
+#. Translators: About dialog text, small description of the application
+#: src/swell-foop.vala:226
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -260,11 +252,13 @@ msgstr ""
 "Я хочу зіграти в цю гру!\n"
 "Знаєте, вони всі підсвічуються і якщо натиснути на них, то вони зникають!"
 
-#: src/swell-foop.vala:464
+#. Translators: About dialog text, copyright line
+#: src/swell-foop.vala:230
 msgid "Copyright © 2009 Tim Horton"
 msgstr "©2009 Tim Horton"
 
-#: src/swell-foop.vala:469
+#. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
+#: src/swell-foop.vala:234
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -272,10 +266,41 @@ msgstr ""
 "Wanderlust <wanderlust@ukr.net\n"
 "Daniel Korostil <ted.korostiled@gmail.com>"
 
-#: src/swell-foop.vala:502
-msgid "Abandon this game to start a new one?"
-msgstr "Облишити цю гру та почати нову?"
+#~ msgid "Welcome to Swell Foop"
+#~ msgstr "Ласкаво просимо в «Той самий»"
 
-#: src/swell-foop.vala:503
-msgid "_Cancel"
-msgstr "_Скасувати"
+#~ msgid ""
+#~ "Clear as many blocks as you can.\n"
+#~ "Fewer clicks means more points."
+#~ msgstr ""
+#~ "Очистіть якнайбільше блоків.\n"
+#~ "Більше натисків — більше балів."
+
+#~ msgid "Let’s _Play"
+#~ msgstr "Нумо _грати"
+
+#~ msgid "_New Game"
+#~ msgstr "_Створити гру"
+
+#~| msgid "_Scores"
+#~ msgid "High _Scores"
+#~ msgstr "Найкращі _результати"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Параметри"
+
+#~ msgid "_Help"
+#~ msgstr "_Довідка"
+
+#~| msgid "Swell Foop"
+#~ msgid "_About Swell Foop"
+#~ msgstr "_Про «Той самий»"
+
+#~ msgid "Score: %u"
+#~ msgstr "Рахунок: %u"
+
+#~ msgid "Abandon this game to start a new one?"
+#~ msgstr "Облишити цю гру та почати нову?"
+
+#~ msgid "_Cancel"
+#~ msgstr "_Скасувати"
