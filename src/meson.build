@@ -1,8 +1,6 @@
 sources = [
-  'history.vala',
   'game.vala',
   'game-view.vala',
-  'score-dialog.vala',
   'swell-foop.vala',
   'window.vala',
 ]
@@ -20,6 +18,8 @@ deps = [
   gtk_dep,
   clutter_dep,
   clutter_gtk_dep,
+  lggs_dep,
+  gee_dep,
 ]
 
 c_flags = [
