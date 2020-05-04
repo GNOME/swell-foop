@@ -6,4 +6,7 @@
     <file alias="swell-foop.css">../data/swell-foop.css</file>
     <file preprocess="xml-stripblanks" alias="swell-foop.ui">../data/ui/swell-foop.ui</file>
   </gresource>
+  <gresource prefix="/org/gnome/SwellFoop/gtk">
+    <file preprocess="xml-stripblanks" alias="help-overlay.ui">../data/ui/help-overlay.ui</file>
+  </gresource>
 </gresources>

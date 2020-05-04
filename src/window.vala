@@ -24,6 +24,7 @@ private class SwellFoopWindow : ApplicationWindow
 {
     [GtkChild] private HeaderBar    headerbar;
     [GtkChild] private Box          main_box;
+    [GtkChild] private MenuButton   hamburger_button;
 
     public GLib.Settings settings { private get; protected construct; }
 
@@ -40,8 +41,9 @@ private class SwellFoopWindow : ApplicationWindow
 
     private const GLib.ActionEntry[] win_actions =
     {
-        { "new-game",   new_game_cb },
-        { "scores",     scores_cb   }
+        { "new-game",           new_game_cb         },
+        { "scores",             scores_cb           },
+        { "toggle-hamburger",   toggle_hamburger    }
     };
 
     construct
@@ -247,6 +249,11 @@ private class SwellFoopWindow : ApplicationWindow
 
         if (result == ResponseType.YES)
             new_game ();
+    }
+
+    private inline void toggle_hamburger (/* SimpleAction action, Variant? variant */)
+    {
+        hamburger_button.active = !hamburger_button.active;
     }
 
     /*\
