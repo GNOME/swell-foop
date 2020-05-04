@@ -102,7 +102,7 @@ private class SwellFoopWindow : ApplicationWindow
         clutter_embed.set_size_request ((int) stage.width, (int) stage.height);
 
         /* When the mouse leaves the window we need to update the view */
-        clutter_embed.leave_notify_event.connect (view.board_left_cb);
+        init_motion ();
     }
 
     private inline Stack build_first_run_stack ()
@@ -429,5 +429,18 @@ private class SwellFoopWindow : ApplicationWindow
                 if (!being_destroyed)
                     scores_context.run_dialog ();
             });
+    }
+
+    /*\
+    * * motion control
+    \*/
+
+    private EventControllerMotion motion_controller;    // for keeping in memory
+
+    private inline void init_motion ()
+    {
+        motion_controller = new EventControllerMotion (clutter_embed);
+        motion_controller.set_propagation_phase (PropagationPhase.CAPTURE);
+        motion_controller.leave.connect (view.board_left_cb);
     }
 }

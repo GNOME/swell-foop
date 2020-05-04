@@ -252,14 +252,12 @@ private class GameView : Clutter.Group
     }
 
     /* When the mouse leaves the application window, reset all tiles to the default brightness */
-    internal bool board_left_cb ()
+    internal void board_left_cb ()
     {
         game.reset_visit ();
 
         foreach (var tile in tiles)
             tile.opacity = 180;
-
-        return false;
     }
 
     private TileActor? find_tile_at_position (int position_x, int position_y)
