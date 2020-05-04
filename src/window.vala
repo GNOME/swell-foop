@@ -24,6 +24,7 @@ private class SwellFoopWindow : ApplicationWindow
 {
     [GtkChild] private HeaderBar    headerbar;
     [GtkChild] private Box          main_box;
+    [GtkChild] private MenuButton   hamburger_button;
 
     public GLib.Settings settings { private get; protected construct; }
 
@@ -40,8 +41,9 @@ private class SwellFoopWindow : ApplicationWindow
 
     private const GLib.ActionEntry[] win_actions =
     {
-        { "new-game",   new_game_cb },
-        { "scores",     scores_cb   }
+        { "new-game",           new_game_cb         },
+        { "scores",             scores_cb           },
+        { "toggle-hamburger",   toggle_hamburger    }
     };
 
     construct
@@ -100,7 +102,7 @@ private class SwellFoopWindow : ApplicationWindow
         clutter_embed.set_size_request ((int) stage.width, (int) stage.height);
 
         /* When the mouse leaves the window we need to update the view */
-        clutter_embed.leave_notify_event.connect (view.board_left_cb);
+        init_motion ();
     }
 
     private inline Stack build_first_run_stack ()
@@ -202,11 +204,14 @@ private class SwellFoopWindow : ApplicationWindow
         view.is_zealous = is_zealous;
     }
 
-    internal inline void on_shutdown ()
+    private bool being_destroyed = false;
+    protected override void destroy ()
     {
         /* Record the score if the game isn't over. */
+        being_destroyed = true;
         if (game != null && !game.has_completed () && game.score > 0)
-            complete_cb ();
+            add_score ();
+        base.destroy ();
     }
 
     /*\
@@ -247,6 +252,11 @@ private class SwellFoopWindow : ApplicationWindow
 
         if (result == ResponseType.YES)
             new_game ();
+    }
+
+    private inline void toggle_hamburger (/* SimpleAction action, Variant? variant */)
+    {
+        hamburger_button.active = !hamburger_button.active;
     }
 
     /*\
@@ -416,7 +426,21 @@ private class SwellFoopWindow : ApplicationWindow
                 {
                     warning ("Failed to add score: %s", e.message);
                 }
-                scores_context.run_dialog ();
+                if (!being_destroyed)
+                    scores_context.run_dialog ();
             });
+    }
+
+    /*\
+    * * motion control
+    \*/
+
+    private EventControllerMotion motion_controller;    // for keeping in memory
+
+    private inline void init_motion ()
+    {
+        motion_controller = new EventControllerMotion (clutter_embed);
+        motion_controller.set_propagation_phase (PropagationPhase.CAPTURE);
+        motion_controller.leave.connect (view.board_left_cb);
     }
 }
