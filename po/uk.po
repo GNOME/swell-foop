@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-05-04 05:27+0000\n"
-"PO-Revision-Date: 2020-05-04 09:09+0300\n"
+"POT-Creation-Date: 2020-05-05 14:32+0000\n"
+"PO-Revision-Date: 2020-05-05 18:30+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -22,11 +22,13 @@ msgstr ""
 "X-Generator: Lokalize 20.07.70\n"
 "X-Project-Style: gnome\n"
 
+#. Translators: title of the window displayed by window managers; name of the application
+#. Translators: title of the window displayed on the headerbar; name of the application
 #. Translators: About dialog text, name of the application
 #. Translators: name of the application, as displayed in the window manager
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:222
-#: src/swell-foop.vala:269
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:64
+#: data/ui/swell-foop.ui:70 src/swell-foop.vala:228 src/swell-foop.vala:275
 msgid "Swell Foop"
 msgstr "Той самий"
 
@@ -105,53 +107,162 @@ msgstr "Ретельна анімація"
 msgid "Use more flashy, but slower, animations."
 msgstr "Більш розкішна, але більш повільна анімація."
 
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:43
+msgid "Welcome to Swell Foop"
+msgstr "Ласкаво просимо в «Той самий»"
+
+#. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:64
+msgid "Let’s _Play"
+msgstr "Нумо _грати"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr "Основні функції"
+
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
+#: data/ui/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Розпочати нову гру"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
+#: data/ui/help-overlay.ui:46
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Гра за допомогою клавіатури"
+
+#. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
+#: data/ui/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Move keyboard highlight"
+msgstr "Пересування позначення за допомогою клавіатури"
+
+#. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Destroy selected block"
+msgstr "Знищити позначений блок"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:69
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Загальні"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Open menu"
+msgstr "Відкрити меню"
+
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:82
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Клавіатурні скорочення"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:90
+#| msgid "_Help"
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Довідка"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Про програму"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:106
+#| msgid "_Quit"
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Вийти"
+
 #. Translators: title of the Preferences dialog
-#: data/preferences.ui:15
+#: data/ui/preferences.ui:15
 msgid "Preferences"
 msgstr "Параметри"
 
 #. Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the board size
-#: data/preferences.ui:53
+#: data/ui/preferences.ui:53
 msgid "_Board size:"
 msgstr "Розмір _дошки:"
 
 #. Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the number of colors
-#: data/preferences.ui:70
+#: data/ui/preferences.ui:70
 msgid "_Number of colors:"
 msgstr "_Кількість кольорів:"
 
 #. Translators: in the Preferences dialog, name of the section in which there are settings for board size and number of colors
-#: data/preferences.ui:129
+#: data/ui/preferences.ui:129
 msgid "Setup"
 msgstr "Параметри"
 
 #. Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the theme
-#: data/preferences.ui:168
+#: data/ui/preferences.ui:168
 msgid "_Theme:"
 msgstr "_Тема:"
 
 #. Translators: in the Preferences dialog, name of the section in which there is the theme option
-#: data/preferences.ui:216
+#: data/ui/preferences.ui:216
 msgid "Appearance"
 msgstr "Вигляд"
 
 #. Translators: in the Preferences dialog, text of the fast-animation checkbox
-#: data/preferences.ui:248
+#: data/ui/preferences.ui:248
 msgid "_Zealous Animation"
 msgstr "_Ретельна анімація"
 
 #. Translators: in the Preferences dialog, name of the section in which there is the fast-animation option
-#: data/preferences.ui:274
+#: data/ui/preferences.ui:274
 msgid "Operation"
 msgstr "Операція"
 
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
+#: data/ui/swell-foop.ui:25 src/window.vala:248
+msgid "_New Game"
+msgstr "_Створити гру"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:32
+msgid "High _Scores"
+msgstr "Найкращі _результати"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:39
+msgid "_Preferences"
+msgstr "_Параметри"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:44
+msgid "_Keyboard Shortcuts"
+msgstr "_Клавіатурні скорочення"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:49
+msgid "_Help"
+msgstr "_Довідка"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:54
+msgid "_About Swell Foop"
+msgstr "_Про «Той самий»"
+
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:323
+#: src/game-view.vala:321
 msgid "_Play Again"
 msgstr "_Зіграти ще раз"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:490
+#: src/game-view.vala:488
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -160,91 +271,48 @@ msgstr[1] "%u бали"
 msgstr[2] "%u балів"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:493
+#: src/game-view.vala:491
 msgid "Game Over!"
 msgstr "Гру закінчено!"
 
-#. Translators: title of the Scores dialog
-#: src/score-dialog.vala:26
-msgid "High Scores"
-msgstr "Найкращі результати"
-
-#. Translations: label of one of the two buttons of the Scores dialog, as displayed when a new best score was maid; the other is “New Game”
-#: src/score-dialog.vala:30
-msgid "_Quit"
-msgstr "Ви_йти"
-
-#. Translations: label of one of the two buttons of the Scores dialog, as displayed when a new best score was maid; the other is “_Quit”
-#: src/score-dialog.vala:33
-msgid "New Game"
-msgstr "Створити гру"
-
-#. Translations: label of the only button of the Scores dialog, as displayed when called from the hamburger menu
-#: src/score-dialog.vala:37
-msgid "_OK"
-msgstr "_Гаразд"
-
-#. Translators: in the Scores dialog, text of the label introducing the combobox to choose of which category the best scores will be displayed
-#: src/score-dialog.vala:50
-msgid "Size:"
-msgstr "Розмір:"
-
-#. Translators: in the Scores dialog, name of a column of the best scores table
-#: src/score-dialog.vala:76
-msgid "Date"
-msgstr "Дата"
-
-#. Translators: in the Scores dialog, name of a column of the best scores table
-#: src/score-dialog.vala:80
-msgid "Score"
-msgstr "Рахунок"
-
-#: src/score-dialog.vala:174
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u колір"
-msgstr[1] "%u × %u, %u кольори"
-msgstr[2] "%u × %u, %u кольорів"
-
 #. Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox
-#: src/swell-foop.vala:26
+#: src/swell-foop.vala:29
 msgid "Small"
 msgstr "Маленька"
 
 #. Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox
-#: src/swell-foop.vala:29
+#: src/swell-foop.vala:32
 msgid "Normal"
 msgstr "Звичайний"
 
 #. Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox
-#: src/swell-foop.vala:32
+#: src/swell-foop.vala:35
 msgid "Large"
 msgstr "Велика"
 
 #. Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox
-#: src/swell-foop.vala:98
+#: src/swell-foop.vala:104
 msgid "Colors"
 msgstr "Кольори"
 
 #. Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox
-#: src/swell-foop.vala:103
+#: src/swell-foop.vala:109
 msgid "Shapes and Colors"
 msgstr "Форми і кольори"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:208 src/swell-foop.vala:216
+#: src/swell-foop.vala:214 src/swell-foop.vala:222
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:212
+#: src/swell-foop.vala:218
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
 #. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:226
+#: src/swell-foop.vala:232
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -253,12 +321,12 @@ msgstr ""
 "Знаєте, вони всі підсвічуються і якщо натиснути на них, то вони зникають!"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:230
+#: src/swell-foop.vala:236
 msgid "Copyright © 2009 Tim Horton"
 msgstr "©2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:234
+#: src/swell-foop.vala:240
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -266,41 +334,42 @@ msgstr ""
 "Wanderlust <wanderlust@ukr.net\n"
 "Daniel Korostil <ted.korostiled@gmail.com>"
 
-#~ msgid "Welcome to Swell Foop"
-#~ msgstr "Ласкаво просимо в «Той самий»"
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: src/window.vala:120
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"Очистіть якнайбільше блоків.\n"
+"Більше натисків — більше балів."
 
-#~ msgid ""
-#~ "Clear as many blocks as you can.\n"
-#~ "Fewer clicks means more points."
-#~ msgstr ""
-#~ "Очистіть якнайбільше блоків.\n"
-#~ "Більше натисків — більше балів."
+#. Translators: subtitle of the headerbar; the %u is replaced by the score
+#: src/window.vala:148
+#, c-format
+msgid "Score: %u"
+msgstr "Рахунок: %u"
 
-#~ msgid "Let’s _Play"
-#~ msgstr "Нумо _грати"
+#. Translators: text of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:242
+msgid "Abandon this game to start a new one?"
+msgstr "Облишити цю гру та почати нову?"
 
-#~ msgid "_New Game"
-#~ msgstr "_Створити гру"
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
+#: src/window.vala:245
+msgid "_Cancel"
+msgstr "_Скасувати"
 
-#~| msgid "_Scores"
-#~ msgid "High _Scores"
-#~ msgstr "Найкращі _результати"
+#: src/window.vala:321
+#, c-format
+#| msgid "%u × %u, %u color"
+#| msgid_plural "%u × %u, %u colors"
+msgid "%s, %d color"
+msgid_plural "%s, %d colors"
+msgstr[0] "%s, %d колір"
+msgstr[1] "%s, %d кольори"
+msgstr[2] "%s, %d кольорів"
 
-#~ msgid "_Preferences"
-#~ msgstr "_Параметри"
-
-#~ msgid "_Help"
-#~ msgstr "_Довідка"
-
-#~| msgid "Swell Foop"
-#~ msgid "_About Swell Foop"
-#~ msgstr "_Про «Той самий»"
-
-#~ msgid "Score: %u"
-#~ msgstr "Рахунок: %u"
-
-#~ msgid "Abandon this game to start a new one?"
-#~ msgstr "Облишити цю гру та почати нову?"
-
-#~ msgid "_Cancel"
-#~ msgstr "_Скасувати"
+#. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
+#: src/window.vala:332
+msgid "Type"
+msgstr "Тип"
