@@ -71,7 +71,7 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <!-- Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu -->
-                <property name="title" translatable="yes" context="shortcut window">Toggle main menu</property>
+                <property name="title" translatable="yes" context="shortcut window">Open menu</property>
                 <property name="accelerator">F10</property>
               </object>
             </child>
