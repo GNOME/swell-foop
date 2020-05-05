@@ -1,4 +1,4 @@
 src/game.c
 src/game-view.c
-src/score-dialog.c
 src/swell-foop.c
+src/window.c
