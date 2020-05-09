@@ -39,8 +39,39 @@ private class SwellFoopWindow : ApplicationWindow
 
     private bool game_in_progress = false;
 
+    /* Store size options */
+    private struct Size
+    {
+        public string id;
+        public string name;
+        public int    columns;
+        public int    rows;
+    }
+    private static Size [] sizes;
+    private static inline void class_init_sizes ()     // called on class construct
+    {
+        sizes = {
+            /* Translators: name of a possible size of the grid */
+            { "small",  _("Small"),   6,  5 },
+
+            /* Translators: name of a possible size of the grid */
+            { "normal", _("Normal"), 15, 10 },
+
+            /* Translators: name of a possible size of the grid */
+            { "large",  _("Large"),  20, 15 }
+        };
+    }
+
+    class construct
+    {
+        class_init_sizes ();
+        class_init_scores ();
+    }
+
     private const GLib.ActionEntry[] win_actions =
     {
+        { "change-theme",       null,       "s", "'shapesandcolors'",   change_theme_cb     },  // cannot be done via create_action as long as it’s an open form
+        { "change-colors",      null,       "s", "'3'",                 change_colors_cb    },  // cannot be done via create_action because it’s an int
         { "new-game",           new_game_cb         },
         { "scores",             scores_cb           },
         { "toggle-hamburger",   toggle_hamburger    }
@@ -49,6 +80,20 @@ private class SwellFoopWindow : ApplicationWindow
     construct
     {
         add_action_entries (win_actions, this);
+        add_action (settings.create_action ("size"));
+
+        add_action (settings.create_action ("zealous"));
+        settings.changed ["zealous"].connect ((_settings, _key_name) => { view.is_zealous = _settings.get_boolean (_key_name); });
+
+        string theme = settings.get_string ("theme");
+        if (theme != "colors" && theme != "shapesandcolors")
+            theme = "shapesandcolors";
+        SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
+        theme_action.set_state (new Variant.@string (theme));
+
+        int32 colors = settings.get_int ("colors"); // 2 <= colors <= 4, per schema file
+        SimpleAction colors_action = (SimpleAction) lookup_action ("change-colors");
+        colors_action.set_state (new Variant.@string (colors.to_string ()));
 
         add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
 
@@ -161,13 +206,14 @@ private class SwellFoopWindow : ApplicationWindow
 
     private Size get_board_size ()
     {
-        for (var i = 0; i < SwellFoop.sizes.length; i++)
+        string current_size = settings.get_string ("size");
+        for (var i = 0; i < sizes.length; i++)
         {
-            if (SwellFoop.sizes [i].id == settings.get_string ("size"))
-                return SwellFoop.sizes [i];
+            if (sizes [i].id == current_size)
+                return sizes [i];
         }
 
-        return SwellFoop.sizes [0];
+        return sizes [0];
     }
 
     /*\
@@ -194,16 +240,6 @@ private class SwellFoopWindow : ApplicationWindow
         update_score_cb (0);
     }
 
-    internal inline void set_theme_name (string new_theme)
-    {
-        view.theme_name = new_theme;
-    }
-
-    internal inline void set_is_zealous (bool is_zealous)
-    {
-        view.is_zealous = is_zealous;
-    }
-
     private bool being_destroyed = false;
     protected override void destroy ()
     {
@@ -217,6 +253,25 @@ private class SwellFoopWindow : ApplicationWindow
     /*\
     * * actions
     \*/
+
+    private inline void change_theme_cb (SimpleAction action, Variant? variant)
+        requires (variant != null)
+    {
+        string new_theme = ((!) variant).get_string ();
+        action.set_state ((!) variant);
+        view.theme_name = new_theme;
+        if (settings.get_string ("theme") != new_theme)
+            settings.set_string ("theme", new_theme);
+    }
+
+    private inline void change_colors_cb (SimpleAction action, Variant? variant)
+        requires (variant != null)
+    {
+        int32 new_colors = (int32) int.parse (((!) variant).get_string ());
+        action.set_state ((!) variant);
+        if (settings.get_int ("colors") != new_colors)
+            settings.set_int ("colors", new_colors);
+    }
 
     private inline void scores_cb (/* SimpleAction action, Variant? variant */)
     {
@@ -311,11 +366,11 @@ private class SwellFoopWindow : ApplicationWindow
     private Games.Scores.Context scores_context;
     private static HashTable<string, Games.Scores.Category> score_categories;
 
-    class construct
+    private static inline void class_init_scores ()    // called on class construct
     {
         score_categories = new HashTable<string, Games.Scores.Category> (str_hash, str_equal);
         for (uint8 i = 2; i <= 4; i++)
-            foreach (unowned Size size in SwellFoop.sizes)
+            foreach (unowned Size size in sizes)
             {
                 string id = @"$(size.id)-$i";
                 string name = ngettext ("%s, %d color", "%s, %d colors", i).printf (size.name, i);
@@ -375,7 +430,7 @@ private class SwellFoopWindow : ApplicationWindow
         rows = (uint8) number_64;
 
         string id = "";
-        foreach (unowned Size size in SwellFoop.sizes)
+        foreach (unowned Size size in sizes)
         {
             if (size.rows == rows && size.columns == cols)
             {

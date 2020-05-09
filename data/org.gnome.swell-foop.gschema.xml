@@ -17,6 +17,7 @@
     </key>
     <key name="colors" type="i">
       <default>3</default>
+      <range min="2" max="4"/>
       <summary>Board color count</summary>
       <description>The number of colors of tiles to use in the game.</description>
     </key>
