@@ -25,6 +25,57 @@
         <attribute name="label" translatable="yes">_New Game</attribute>
         <attribute name="action">win.new-game</attribute>
       </item>
+      <submenu>
+        <!-- Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors -->
+        <attribute name="label" translatable="yes">_Setup</attribute>
+        <section>
+          <item>
+            <!-- Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large" -->
+            <attribute name="label" translatable="yes">_Small board</attribute>
+            <attribute name="action">win.size</attribute>
+            <attribute name="target">small</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large" -->
+            <attribute name="label" translatable="yes">_Normal board</attribute>
+            <attribute name="action">win.size</attribute>
+            <attribute name="target">normal</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal" -->
+            <attribute name="label" translatable="yes">Large board</attribute>
+            <attribute name="action">win.size</attribute>
+            <attribute name="target">large</attribute>
+          </item>
+        </section>
+        <section>
+          <item>
+            <!-- Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large" -->
+            <attribute name="label" translatable="yes">_Two colors</attribute>
+            <attribute name="action">win.change-colors</attribute>
+            <attribute name="target">2</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large" -->
+            <attribute name="label" translatable="yes">T_hree colors</attribute>
+            <attribute name="action">win.change-colors</attribute>
+            <attribute name="target">3</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal" -->
+            <attribute name="label" translatable="yes">_Four colors</attribute>
+            <attribute name="action">win.change-colors</attribute>
+            <attribute name="target">4</attribute>
+          </item>
+        </section>
+        <section>
+          <item>
+            <!-- Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
+            <attribute name="label" translatable="yes">_New Game</attribute>
+            <attribute name="action">win.new-game</attribute>
+          </item>
+        </section>
+      </submenu>
     </section>
     <section>
       <item>
@@ -59,11 +110,6 @@
       </submenu>
     </section>
     <section>
-      <item>
-        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
-        <attribute name="label" translatable="yes">_Preferences</attribute>
-        <attribute name="action">app.preferences</attribute>
-      </item>
       <item>
         <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
         <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>

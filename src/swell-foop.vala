@@ -18,27 +18,8 @@ public class SwellFoop : Gtk.Application
     /* Main window */
     private SwellFoopWindow window;
 
-    private Gtk.Dialog? preferences_dialog = null;
-
-    /* Store size options */
-    internal static Size [] sizes;
-    class construct
-    {
-        sizes = {
-            /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
-            { "small",  _("Small"),   6,  5 },
-
-            /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
-            { "normal", _("Normal"), 15, 10 },
-
-            /* Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox */
-            { "large",  _("Large"),  20, 15 }
-        };
-    }
-
     private const GLib.ActionEntry[] action_entries =
     {
-        { "preferences",   preferences_cb },
         { "help",          help_cb        },
         { "about",         about_cb       },
         { "quit",          quit_cb        }
@@ -78,75 +59,6 @@ public class SwellFoop : Gtk.Application
     protected override void activate ()
     {
         window.present ();
-    }
-
-    public inline void preferences_cb (/* SimpleAction action, Variant? variant */)
-    {
-        /* Show existing dialog */
-        if (preferences_dialog != null)
-        {
-            preferences_dialog.present ();
-            return;
-        }
-
-        var preferences_builder = new Gtk.Builder.from_resource ("/org/gnome/SwellFoop/ui/preferences.ui");
-
-        preferences_dialog = (Gtk.Dialog) preferences_builder.get_object ("preferences");
-        preferences_dialog.transient_for = window;
-        preferences_dialog.modal = true;
-
-        /* Board size */
-        var size_combo = (Gtk.ComboBox) preferences_builder.get_object ("size-selector");
-        var model = (Gtk.ListStore) size_combo.model;
-        Gtk.TreeIter iter;
-        for (int i = 0; i < sizes.length; i++)
-        {
-            model.append (out iter);
-            model.set (iter, 0, sizes[i].name, 1, sizes[i].id, -1);
-            if (settings.get_string ("size") == sizes[i].id)
-                size_combo.set_active_iter (iter);
-        }
-
-        /* Number of colors */
-        ((Gtk.SpinButton) preferences_builder.get_object ("colors-spinner")).value = settings.get_int ("colors");
-
-        preferences_builder.connect_signals (this);
-        preferences_dialog.response.connect (preferences_response_cb);
-        preferences_dialog.present ();
-    }
-
-    [CCode (cname = "G_MODULE_EXPORT update_size", instance_pos = -1)]
-    public void update_size (Gtk.ComboBox size_combo)
-    {
-        Gtk.TreeIter iter;
-        if (!size_combo.get_active_iter (out iter))
-            return;
-        string new_size;
-        size_combo.model.get (iter, 1, out new_size, -1);
-
-        if (new_size == settings.get_string ("size"))
-            return;
-
-        settings.set_string ("size", new_size);
-        window.new_game ();
-    }
-
-    [CCode (cname = "G_MODULE_EXPORT update_colors", instance_pos = -1)]
-    public void update_colors (Gtk.SpinButton button)
-    {
-        int new_colors = (int) button.get_value ();
-
-        if (new_colors == settings.get_int ("colors"))
-            return;
-
-        settings.set_int ("colors", new_colors);
-        window.new_game ();
-    }
-
-    private inline void preferences_response_cb ()
-    {
-        preferences_dialog.destroy ();
-        preferences_dialog = null;
     }
 
     private inline void quit_cb (/* SimpleAction action, Variant? variant */)
@@ -237,13 +149,4 @@ public class SwellFoop : Gtk.Application
         var app = new SwellFoop ();
         return app.run (args);
     }
-}
-
-/* An array will store multiply game size options. */
-private struct Size
-{
-    public string id;
-    public string name;
-    public int    columns;
-    public int    rows;
 }

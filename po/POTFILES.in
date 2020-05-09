@@ -5,7 +5,6 @@ data/org.gnome.SwellFoop.desktop.in
 data/org.gnome.swell-foop.gschema.xml
 data/ui/first-run-stack.ui
 data/ui/help-overlay.ui
-data/ui/preferences.ui
 data/ui/swell-foop.ui
 src/game.vala
 src/game-view.vala
