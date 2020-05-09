@@ -41,6 +41,7 @@ private class SwellFoopWindow : ApplicationWindow
 
     private const GLib.ActionEntry[] win_actions =
     {
+        { "change-theme",       null,       "s", "'shapesandcolors'",   change_theme_cb },  // cannot be done via create_action as long as it’s an open form
         { "new-game",           new_game_cb         },
         { "scores",             scores_cb           },
         { "toggle-hamburger",   toggle_hamburger    }
@@ -49,6 +50,15 @@ private class SwellFoopWindow : ApplicationWindow
     construct
     {
         add_action_entries (win_actions, this);
+
+        add_action (settings.create_action ("zealous"));
+        settings.changed ["zealous"].connect ((_settings, _key_name) => { view.is_zealous = _settings.get_boolean (_key_name); });
+
+        string theme = settings.get_string ("theme");
+        if (theme != "colors" && theme != "shapesandcolors")
+            theme = "shapesandcolors";
+        SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
+        theme_action.set_state (new Variant.@string (theme));
 
         add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
 
@@ -194,16 +204,6 @@ private class SwellFoopWindow : ApplicationWindow
         update_score_cb (0);
     }
 
-    internal inline void set_theme_name (string new_theme)
-    {
-        view.theme_name = new_theme;
-    }
-
-    internal inline void set_is_zealous (bool is_zealous)
-    {
-        view.is_zealous = is_zealous;
-    }
-
     private bool being_destroyed = false;
     protected override void destroy ()
     {
@@ -217,6 +217,16 @@ private class SwellFoopWindow : ApplicationWindow
     /*\
     * * actions
     \*/
+
+    private inline void change_theme_cb (SimpleAction action, Variant? variant)
+        requires (variant != null)
+    {
+        string new_theme = ((!) variant).get_string ();
+        action.set_state ((!) variant);
+        view.theme_name = new_theme;
+        if (settings.get_string ("theme") != new_theme)
+            settings.set_string ("theme", new_theme);
+    }
 
     private inline void scores_cb (/* SimpleAction action, Variant? variant */)
     {

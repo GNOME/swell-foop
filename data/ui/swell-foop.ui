@@ -32,6 +32,31 @@
         <attribute name="label" translatable="yes">High _Scores</attribute>
         <attribute name="action">win.scores</attribute>
       </item>
+      <submenu>
+        <!-- Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme -->
+        <attribute name="label" translatable="yes">A_ppearance</attribute>
+        <section>
+          <item>
+            <!-- Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Shapes and Colors" -->
+            <attribute name="label" translatable="yes">_Colors</attribute>
+            <attribute name="action">win.change-theme</attribute>
+            <attribute name="target">colors</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Colors" -->
+            <attribute name="label" translatable="yes">_Shapes and Colors</attribute>
+            <attribute name="action">win.change-theme</attribute>
+            <attribute name="target">shapesandcolors</attribute>
+          </item>
+        </section>
+        <section>
+          <item>
+            <!-- Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster -->
+            <attribute name="label" translatable="yes">_Zealous Animation</attribute>
+            <attribute name="action">win.zealous</attribute>
+          </item>
+        </section>
+      </submenu>
     </section>
     <section>
       <item>

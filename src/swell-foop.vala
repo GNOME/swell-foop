@@ -95,24 +95,10 @@ public class SwellFoop : Gtk.Application
         preferences_dialog.transient_for = window;
         preferences_dialog.modal = true;
 
-        /* Theme */
-        var theme_combo = (Gtk.ComboBox) preferences_builder.get_object ("theme-selector");
-        var model = (Gtk.ListStore) theme_combo.model;
-        Gtk.TreeIter iter;
-        model.append (out iter);
-        /* Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox */
-        model.set (iter, 0, _("Colors"), 1, "colors", -1);
-        if (settings.get_string ("theme") == "colors")
-            theme_combo.set_active_iter (iter);
-        model.append (out iter);
-        /* Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox */
-        model.set (iter, 0, _("Shapes and Colors"), 1, "shapesandcolors", -1);
-        if (settings.get_string ("theme") == "shapesandcolors")
-            theme_combo.set_active_iter (iter);
-
         /* Board size */
         var size_combo = (Gtk.ComboBox) preferences_builder.get_object ("size-selector");
-        model = (Gtk.ListStore) size_combo.model;
+        var model = (Gtk.ListStore) size_combo.model;
+        Gtk.TreeIter iter;
         for (int i = 0; i < sizes.length; i++)
         {
             model.append (out iter);
@@ -124,36 +110,9 @@ public class SwellFoop : Gtk.Application
         /* Number of colors */
         ((Gtk.SpinButton) preferences_builder.get_object ("colors-spinner")).value = settings.get_int ("colors");
 
-        /* Zealous moves */
-        ((Gtk.CheckButton) preferences_builder.get_object ("zealous-checkbox")).active = settings.get_boolean ("zealous");
-
         preferences_builder.connect_signals (this);
         preferences_dialog.response.connect (preferences_response_cb);
         preferences_dialog.present ();
-    }
-
-    [CCode (cname = "G_MODULE_EXPORT select_theme", instance_pos = -1)]
-    public void select_theme (Gtk.ComboBox theme_combo)
-    {
-        Gtk.TreeIter iter;
-        if (!theme_combo.get_active_iter (out iter))
-            return;
-        string new_theme;
-        theme_combo.model.get (iter, 1, out new_theme, -1);
-
-        if (new_theme == settings.get_string ("theme"))
-            return;
-
-        settings.set_string ("theme", new_theme);
-
-        window.set_theme_name (new_theme);
-    }
-
-    [CCode (cname = "G_MODULE_EXPORT set_zealous_animation", instance_pos = -1)]
-    public void set_zealous_animation (Gtk.CheckButton button)
-    {
-        settings.set_boolean ("zealous", button.active);
-        window.set_is_zealous (settings.get_boolean ("zealous"));
     }
 
     [CCode (cname = "G_MODULE_EXPORT update_size", instance_pos = -1)]
