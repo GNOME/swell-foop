@@ -127,8 +127,12 @@ private class SwellFoopWindow : ApplicationWindow
         stage = (Clutter.Stage) clutter_embed.get_stage ();
         stage.background_color = Clutter.Color.from_string ("#000000");  /* background color is black */
 
-        /* Create an instance of game with initial values for row, column and color */
-        game = new Game (get_board_size ().rows, get_board_size ().columns, settings.get_int ("colors"));
+        /* Create an instance of game, either with a saved game, or with initial values for row, column and color */
+        Size size = get_board_size ();
+        game = new Game (size.rows, size.columns, settings.get_int ("colors"), settings.get_value ("saved-game"));
+        update_score_cb (game.score);
+        if (game.score != 0)
+            game_in_progress = true;
 
         /* Game score change will be sent to the main window and show in the score label */
         game.update_score.connect (update_score_cb);
@@ -222,8 +226,9 @@ private class SwellFoopWindow : ApplicationWindow
 
     internal void new_game ()
     {
-        game = new Game (get_board_size ().rows,
-                         get_board_size ().columns,
+        Size size = get_board_size ();
+        game = new Game (size.rows,
+                         size.columns,
                          settings.get_int ("colors"));
         game.update_score.connect (update_score_cb);
         game.complete.connect (complete_cb);
@@ -240,13 +245,19 @@ private class SwellFoopWindow : ApplicationWindow
         update_score_cb (0);
     }
 
-    private bool being_destroyed = false;
     protected override void destroy ()
     {
-        /* Record the score if the game isn't over. */
-        being_destroyed = true;
-        if (game != null && !game.has_completed () && game.score > 0)
-            add_score ();
+        settings.delay ();
+        settings.set_value ("saved-game", game.get_saved_game ());
+        settings.set_int ("colors", game.color_num);
+        for (uint8 i = 0; i < sizes.length; i++)
+            if (game.rows == sizes [i].rows && game.columns == sizes [i].columns)
+            {
+                settings.set_string ("size", sizes [i].id);
+                break;
+            }
+        settings.apply ();
+
         base.destroy ();
     }
 
@@ -481,8 +492,7 @@ private class SwellFoopWindow : ApplicationWindow
                 {
                     warning ("Failed to add score: %s", e.message);
                 }
-                if (!being_destroyed)
-                    scores_context.run_dialog ();
+                scores_context.run_dialog ();
             });
     }
 

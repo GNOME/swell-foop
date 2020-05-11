@@ -7,29 +7,46 @@
   <schema id="org.gnome.swell-foop" path="/org/gnome/swell-foop/" gettext-domain="swell-foop">
     <key name="theme" type="s">
       <default>'shapesandcolors'</default>
+      <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme' -->
       <summary>The theme to use</summary>
+      <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme' -->
       <description>The title of the tile theme to use.</description>
     </key>
     <key name="size" enum="org.gnome.swell-foop.Sizes">
       <default>'small'</default>
+      <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size' -->
       <summary>Board size</summary>
+      <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size' -->
       <description>The size of the game board.</description>
     </key>
     <key name="colors" type="i">
       <default>3</default>
       <range min="2" max="4"/>
+      <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors' -->
       <summary>Board color count</summary>
+      <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors' -->
       <description>The number of colors of tiles to use in the game.</description>
     </key>
     <key name="first-run" type="b">
       <default>true</default>
+      <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run' -->
       <summary>Is this the first run</summary>
+      <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run' -->
       <description>Setting to decide whether to show first-run hint dialog or not.</description>
     </key>
     <key name="zealous" type="b">
       <default>true</default>
+      <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous' -->
       <summary>Zealous animation</summary>
+      <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous' -->
       <description>Use more flashy, but slower, animations.</description>
+    </key>
+    <key name="saved-game" type="m(yqaay)">
+      <default>nothing</default>
+      <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game' -->
+      <summary>Saved game</summary>
+      <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example -->
+      <description>Has value “nothing” if there is no saved game. Else, the values are: the number of colors, the score, and a copy of the board, where “0” means “empty”.</description>
     </key>
   </schema>
 </schemalist>

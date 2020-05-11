@@ -78,7 +78,7 @@ private class Game : Object
     public int color_num
     {
         internal get { return _color_num; }
-        protected construct
+        protected construct set     // TODO should be doable to make construct only again
         {
             if (value < 2 || value > 4)
                 _color_num = 3;
@@ -96,10 +96,15 @@ private class Game : Object
     internal signal void started ();
 
     /* Constructor */
-    internal Game (int rows, int columns, int color_num)
+    internal Game (int rows, int columns, int color_num, Variant? variant = null)
     {
         Object (rows: rows, columns: columns, color_num: color_num);
+        if (variant == null || !load_saved_game ((!) variant))
+            create_new_game ();
+    }
 
+    private inline void create_new_game ()
+    {
         /* A 2D array holds all tiles */
         tiles = new Tile [rows, columns];
 
@@ -294,5 +299,84 @@ private class Game : Object
     {
         score += increment;
         update_score (increment);
+    }
+
+    /*\
+    * * loading and saving
+    \*/
+
+    private inline bool load_saved_game (Variant variant)
+    {
+        if (variant.get_type_string () != "m(yqaay)")
+            return false;   // assert_not_reached() ?
+
+        Variant? child = variant.get_maybe ();
+        if (child == null)
+            return false;
+
+        VariantIter iter = new VariantIter ((!) child);
+        uint8 color_num;
+        uint16 score;
+        iter.next ("y", out color_num);
+        iter.next ("q", out score);
+        Variant tmp_variant = iter.next_value ();
+
+        if (color_num < 2 || color_num > 4)
+            return false;
+
+        // all the following way to extract values feels horrible, but there is a bug when trying to do it properly (05/2020)
+        Variant tmp_variant_2 = tmp_variant.get_child_value (0);
+        uint rows = (uint) tmp_variant.n_children ();
+        uint columns = (uint) tmp_variant_2.n_children ();
+        if (rows    != this.rows
+         || columns != this.columns)
+            return false;
+
+        this.color_num = color_num;
+        this.score = score;
+        update_score (score);
+        tiles = new Tile [rows, columns];
+        for (uint8 i = 0; i < rows; i++)
+        {
+            tmp_variant_2 = tmp_variant.get_child_value (i);
+            for (uint8 j = 0; j < columns; j++)
+            {
+                Variant tmp_variant_3 = tmp_variant_2.get_child_value (j);
+                uint8 color = tmp_variant_3.get_byte ();
+                if (color == 0)
+                {
+                    tiles [rows - i - 1, j] = new Tile (j, (int) (rows - i - 1), 0);
+                    tiles [rows - i - 1, j].closed = true;
+                }
+                else
+                    tiles [rows - i - 1, j] = new Tile (j, (int) (rows - i - 1), color - 1);
+            }
+        }
+        is_started = true;
+        return true;
+    }
+
+    internal Variant get_saved_game ()
+    {
+        if (!is_started || has_completed ())
+            return new Variant ("m(yqaay)", null);
+
+        VariantBuilder builder = new VariantBuilder (new VariantType ("(yqaay)"));
+        builder.add ("y", (uint8) color_num);
+        builder.add ("q", (uint16) score);
+        builder.open (new VariantType ("aay"));
+        VariantType ay_type = new VariantType ("ay");
+        for (uint8 i = (uint8) rows; i > 0; i--)
+        {
+            builder.open (ay_type);
+            for (uint8 j = 0; j < columns; j++)
+                if (tiles [i - 1, j] == null || ((!) tiles [i - 1, j]).closed)
+                    builder.add ("y", 0);
+                else
+                    builder.add ("y", tiles [i - 1, j].color + 1);
+            builder.close ();
+        }
+        builder.close ();
+        return new Variant.maybe (null, builder.end ());
     }
 }
