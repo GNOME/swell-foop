@@ -111,11 +111,11 @@ private class SwellFoopWindow : ApplicationWindow
         {
             var stack = build_first_run_stack ();
             stack.add_named (view, "game");
-            main_box.pack_start (stack, true, true);
+            main_box.add (stack);
         }
         else
         {
-            main_box.pack_start (view, true, true);
+            main_box.add (view);
             init_keyboard ();
         }
     }
