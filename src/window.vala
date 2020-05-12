@@ -330,8 +330,9 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline void init_keyboard ()
     {
-        key_controller = new EventControllerKey (this);
+        key_controller = new EventControllerKey ();
         key_controller.key_pressed.connect (on_key_pressed);
+        ((Widget) this).add_controller (key_controller);
     }
 
     private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
@@ -504,8 +505,9 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline void init_motion ()
     {
-        motion_controller = new EventControllerMotion (view);
+        motion_controller = new EventControllerMotion ();
         motion_controller.set_propagation_phase (PropagationPhase.CAPTURE);
         motion_controller.leave.connect (view.board_left_cb);
+        view.add_controller (motion_controller);
     }
 }
