@@ -77,14 +77,7 @@ public class SwellFoop : Gtk.Application
 
     private inline void help_cb (/* SimpleAction action, Variant? variant */)
     {
-        try
-        {
-            Gtk.show_uri_on_window (window, "help:swell-foop", Gtk.get_current_event_time ());
-        }
-        catch (Error e)
-        {
-            warning ("Failed to show help: %s", e.message);
-        }
+        Gtk.show_uri (window, "help:swell-foop", Gdk.CURRENT_TIME);
     }
 
     private inline void about_cb (/* SimpleAction action, Variant? variant */)
