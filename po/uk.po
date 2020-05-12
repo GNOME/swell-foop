@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-05-10 08:04+0000\n"
-"PO-Revision-Date: 2020-05-10 11:30+0300\n"
+"POT-Creation-Date: 2020-05-12 05:19+0000\n"
+"PO-Revision-Date: 2020-05-12 09:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -67,45 +67,73 @@ msgstr "Проект GNOME"
 msgid "game;logic;board;same;matching;"
 msgstr "гра;логіка;дошка;той;збіг;"
 
-#: data/org.gnome.swell-foop.gschema.xml:10
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.swell-foop.gschema.xml:11
 msgid "The theme to use"
 msgstr "Тема для гри"
 
-#: data/org.gnome.swell-foop.gschema.xml:11
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.swell-foop.gschema.xml:13
 msgid "The title of the tile theme to use."
 msgstr "Назва теми мозаїки."
 
-#: data/org.gnome.swell-foop.gschema.xml:15
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.swell-foop.gschema.xml:18
 msgid "Board size"
 msgstr "Розмір ігрового поля"
 
-#: data/org.gnome.swell-foop.gschema.xml:16
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.swell-foop.gschema.xml:20
 msgid "The size of the game board."
 msgstr "Розмір ігрового поля."
 
-#: data/org.gnome.swell-foop.gschema.xml:21
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.swell-foop.gschema.xml:26
 msgid "Board color count"
 msgstr "Кількість кольорів дошки"
 
-#: data/org.gnome.swell-foop.gschema.xml:22
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.swell-foop.gschema.xml:28
 msgid "The number of colors of tiles to use in the game."
 msgstr "Кількість кольорів мозаїки у грі."
 
-#: data/org.gnome.swell-foop.gschema.xml:26
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.swell-foop.gschema.xml:33
 msgid "Is this the first run"
 msgstr "Чи це перший запуск"
 
-#: data/org.gnome.swell-foop.gschema.xml:27
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.swell-foop.gschema.xml:35
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr "параметр, який визначає, чи показувати підказки для новачків."
 
-#: data/org.gnome.swell-foop.gschema.xml:31
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.swell-foop.gschema.xml:40
 msgid "Zealous animation"
 msgstr "Ретельна анімація"
 
-#: data/org.gnome.swell-foop.gschema.xml:32
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.swell-foop.gschema.xml:42
 msgid "Use more flashy, but slower, animations."
 msgstr "Більш розкішна, але більш повільна анімація."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
+#: data/org.gnome.swell-foop.gschema.xml:47
+#| msgctxt "shortcut window"
+#| msgid "Start a new game"
+msgid "Saved game"
+msgstr "Збережена гра"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
+#: data/org.gnome.swell-foop.gschema.xml:49
+msgid ""
+"Has value “nothing” if there is no saved game. Else, the values are: the "
+"number of colors, the score, and a copy of the board, where “0” means "
+"“empty”."
+msgstr ""
+"Має значення «nothing» («нічого»), якщо збережених ігор не існує. Якщо"
+" збережені ігри існують, значеннями є такі: кількість кольорів, результат та"
+" копія дошки, де «0» означає «порожньо»."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
@@ -186,13 +214,12 @@ msgstr "Вийти"
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:303
+#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:314
 msgid "_New Game"
 msgstr "_Створити гру"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
 #: data/ui/swell-foop.ui:30
-#| msgid "Setup"
 msgid "_Setup"
 msgstr "_Налаштування"
 
@@ -213,7 +240,6 @@ msgstr "_Великий (20 × 15)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
 #: data/ui/swell-foop.ui:54
-#| msgid "_Number of colors:"
 msgid "_Two colors"
 msgstr "Два _кольори"
 
@@ -224,7 +250,6 @@ msgstr "_Три кольори"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
 #: data/ui/swell-foop.ui:66
-#| msgid "_Number of colors:"
 msgid "_Four colors"
 msgstr "_Чотири кольори"
 
@@ -235,19 +260,16 @@ msgstr "Найкращі _результати"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/swell-foop.ui:88
-#| msgid "Appearance"
 msgid "A_ppearance"
 msgstr "_Вигляд"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Shapes and Colors"
 #: data/ui/swell-foop.ui:92
-#| msgid "Colors"
 msgid "_Colors"
 msgstr "_Кольори"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Colors"
 #: data/ui/swell-foop.ui:98
-#| msgid "Shapes and Colors"
 msgid "_Shapes and Colors"
 msgstr "_Форми і кольори"
 
@@ -340,7 +362,7 @@ msgid "Large"
 msgstr "Велика"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: src/window.vala:165
+#: src/window.vala:169
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -349,22 +371,22 @@ msgstr ""
 "Більше натисків — більше балів."
 
 #. Translators: subtitle of the headerbar; the %u is replaced by the score
-#: src/window.vala:193
+#: src/window.vala:197
 #, c-format
 msgid "Score: %u"
 msgstr "Рахунок: %u"
 
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:297
+#: src/window.vala:308
 msgid "Abandon this game to start a new one?"
 msgstr "Облишити цю гру та почати нову?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:300
+#: src/window.vala:311
 msgid "_Cancel"
 msgstr "_Скасувати"
 
-#: src/window.vala:376
+#: src/window.vala:387
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -373,21 +395,6 @@ msgstr[1] "%s, %d кольори"
 msgstr[2] "%s, %d кольорів"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:387
+#: src/window.vala:398
 msgid "Type"
 msgstr "Тип"
-
-#~ msgid "Preferences"
-#~ msgstr "Параметри"
-
-#~ msgid "_Board size:"
-#~ msgstr "Розмір _дошки:"
-
-#~ msgid "_Theme:"
-#~ msgstr "_Тема:"
-
-#~ msgid "Operation"
-#~ msgstr "Операція"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Параметри"
