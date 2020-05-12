@@ -148,9 +148,9 @@ private class SwellFoopWindow : ApplicationWindow
     {
         CssProvider css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
-        Gdk.Screen? gdk_screen = Gdk.Screen.get_default ();
-        if (gdk_screen != null) // else..?
-            StyleContext.add_provider_for_screen ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+        Gdk.Display? gdk_display = Gdk.Display.get_default ();
+        if (gdk_display != null) // else..?
+            StyleContext.add_provider_for_display ((!) gdk_display, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/first-run-stack.ui");
         var stack = (Stack) builder.get_object ("first_run_stack");
