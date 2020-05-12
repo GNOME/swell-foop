@@ -182,7 +182,7 @@ private class SwellFoopWindow : ApplicationWindow
             score = game.score;
 
         /* Translators: subtitle of the headerbar; the %u is replaced by the score */
-        headerbar.subtitle = _("Score: %u").printf (score);
+//        headerbar.subtitle = _("Score: %u").printf (score);
     }
 
     private void complete_cb ()
