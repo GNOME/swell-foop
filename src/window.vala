@@ -307,7 +307,8 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline void toggle_hamburger (/* SimpleAction action, Variant? variant */)
     {
-        hamburger_button.active = !hamburger_button.active;
+//        hamburger_button.active = !hamburger_button.active;
+        hamburger_button.popup ();    // TODO toggle
     }
 
     /*\
@@ -325,8 +326,8 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
     {
-        if (hamburger_button.get_active())
-            return false;
+//        if (hamburger_button.get_active())
+//            return false;
 
         switch (keyval)
         {
