@@ -97,8 +97,6 @@ private class SwellFoopWindow : ApplicationWindow
         SimpleAction colors_action = (SimpleAction) lookup_action ("change-colors");
         colors_action.set_state (new Variant.@string (colors.to_string ()));
 
-        add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
-
         init_scores ();
 
         /* show the current score */
