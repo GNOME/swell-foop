@@ -339,6 +339,9 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
     {
+        if (hamburger_button.get_active())
+            return false;
+
         switch (keyval)
         {
             case Gdk.Key.F2:
