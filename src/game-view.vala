@@ -265,7 +265,9 @@ private class GameView : Clutter.Group
     private TileActor? find_tile_at_position (int position_x, int position_y)
     {
         foreach (TileActor actor in tiles)
-            if (actor.tile.grid_x == position_x &&
+            if (actor != null
+             && actor.tile != null
+             && actor.tile.grid_x == position_x &&
                 actor.tile.grid_y == position_y)
                 return actor;
         return null;
