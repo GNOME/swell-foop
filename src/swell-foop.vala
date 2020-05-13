@@ -33,7 +33,7 @@ public class SwellFoop : Gtk.Application
     {
         { "help",          help_cb        },
         { "about",         about_cb       },
-        { "quit",          quit_cb        }
+        { "quit",          quit           }
     };
 
     public static int main (string[] args)
@@ -77,20 +77,9 @@ public class SwellFoop : Gtk.Application
         add_window (window);
     }
 
-    protected override void shutdown ()
-    {
-        window.destroy ();
-        base.shutdown ();
-    }
-
     protected override void activate ()
     {
         window.present ();
-    }
-
-    private inline void quit_cb (/* SimpleAction action, Variant? variant */)
-    {
-        window.destroy ();
     }
 
     private inline void help_cb (/* SimpleAction action, Variant? variant */)
