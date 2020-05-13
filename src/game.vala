@@ -68,7 +68,7 @@ private class Tile : Object
  */
 private class Game : Object
 {
-    private Tile[,] tiles;
+    private Tile? [,] tiles;
     private bool is_started = false;
 
     /* Game score */
@@ -125,7 +125,7 @@ private class Game : Object
     {
         var cl = new List<Tile> ();
 
-        if (li.visited || li.closed)
+        if (li == null || li.visited || li.closed)
             return cl;
 
         var x = li.grid_x;
@@ -344,10 +344,7 @@ private class Game : Object
                 Variant tmp_variant_3 = tmp_variant_2.get_child_value (j);
                 uint8 color = tmp_variant_3.get_byte ();
                 if (color == 0)
-                {
-                    tiles [rows - i - 1, j] = new Tile (j, (int) (rows - i - 1), 0);
-                    tiles [rows - i - 1, j].closed = true;
-                }
+                    tiles [rows - i - 1, j] = null;
                 else
                     tiles [rows - i - 1, j] = new Tile (j, (int) (rows - i - 1), color - 1);
             }

@@ -19,7 +19,7 @@ using Config;
 
 private class GameView : Clutter.Group
 {
-    private TileActor highlighted = null;
+    private TileActor? highlighted = null;
 
     private CursorActor cursor;
     private bool cursor_active = false;
@@ -66,6 +66,8 @@ private class GameView : Clutter.Group
 
             /* Put tiles in new locations */
             tiles = new TileActor [game.columns, game.rows];
+            cursor_x = 0;
+            cursor_y = 0;
             place_tiles ();
 
             width  = tile_size * game.columns;
@@ -263,8 +265,10 @@ private class GameView : Clutter.Group
     private TileActor? find_tile_at_position (int position_x, int position_y)
     {
         foreach (TileActor actor in tiles)
-            if (actor.tile.grid_x == position_x &&
-                actor.tile.grid_y == position_y)
+            if (actor != null
+             && actor.tile != null
+             && actor.tile.grid_x == position_x
+             && actor.tile.grid_y == position_y)
                 return actor;
         return null;
     }
@@ -272,11 +276,22 @@ private class GameView : Clutter.Group
     /* Move Keyboard cursor */
     internal void cursor_move (int x, int y)
     {
-        cursor_active = true;
+        if (cursor_active)
+        {
+            int old_cursor_x = cursor_x;
+            int old_cursor_y = cursor_y;
+
+            cursor_x += x;
+            cursor_y += y;
+
+            if (cursor_x == old_cursor_x
+             && cursor_y == old_cursor_y)
+                return;
+        }
+        else
+            cursor_active = true;
 
         opacity_for_connected_tiles (highlighted, 180);
-        cursor_x += x;
-        cursor_y += y;
         highlighted = find_tile_at_position (cursor_x, cursor_y);
 
         if (highlighted != null)
