@@ -232,21 +232,21 @@ private class SwellFoopWindow : ApplicationWindow
         game.bind_property ("can-redo", redo_action, "enabled", BindingFlags.SYNC_CREATE);
     }
 
-    protected override void destroy ()
-    {
-        settings.delay ();
-        settings.set_value ("saved-game", game.get_saved_game ());
-        settings.set_int ("colors", game.color_num);
-        for (uint8 i = 0; i < sizes.length; i++)
-            if (game.rows == sizes [i].rows && game.columns == sizes [i].columns)
-            {
-                settings.set_string ("size", sizes [i].id);
-                break;
-            }
-        settings.apply ();
-
-        base.destroy ();
-    }
+//    protected override void destroy ()
+//    {
+//        settings.delay ();
+//        settings.set_value ("saved-game", game.get_saved_game ());
+//        settings.set_int ("colors", game.color_num);
+//        for (uint8 i = 0; i < sizes.length; i++)
+//            if (game.rows == sizes [i].rows && game.columns == sizes [i].columns)
+//            {
+//                settings.set_string ("size", sizes [i].id);
+//                break;
+//            }
+//        settings.apply ();
+//
+//        base.destroy ();
+//    }
 
     /*\
     * * actions
