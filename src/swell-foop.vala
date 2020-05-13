@@ -63,7 +63,7 @@ public class SwellFoop : Gtk.Application
 
     protected override void shutdown ()
     {
-        window.destroy ();
+     // window.destroy ();
         base.shutdown ();
     }
 
@@ -74,7 +74,7 @@ public class SwellFoop : Gtk.Application
 
     private inline void quit_cb (/* SimpleAction action, Variant? variant */)
     {
-        window.destroy ();
+     // window.destroy ();
     }
 
     private inline void help_cb (/* SimpleAction action, Variant? variant */)
