@@ -96,6 +96,8 @@ private class SwellFoopWindow : ApplicationWindow
         settings.changed ["theme"].connect (load_theme);
         load_theme (settings, "theme");
 
+        close_request.connect (on_close_request);
+
         int32 colors = settings.get_int ("colors"); // 2 <= colors <= 4, per schema file
         SimpleAction colors_action = (SimpleAction) lookup_action ("change-colors");
         colors_action.set_state (new Variant.@string (colors.to_string ()));
@@ -228,7 +230,7 @@ private class SwellFoopWindow : ApplicationWindow
         game.bind_property ("can-redo", redo_action, "enabled", BindingFlags.SYNC_CREATE);
     }
 
-    protected override void destroy ()
+    private inline bool on_close_request ()
     {
         settings.delay ();
         settings.set_value ("saved-game", game.get_saved_game ());
@@ -241,7 +243,7 @@ private class SwellFoopWindow : ApplicationWindow
             }
         settings.apply ();
 
-        base.destroy ();
+        return /* do not stop other handlers */ false;
     }
 
     /*\
