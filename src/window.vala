@@ -230,21 +230,21 @@ private class SwellFoopWindow : ApplicationWindow
         update_score_cb (0);
     }
 
-    protected override void destroy ()
-    {
-        settings.delay ();
-        settings.set_value ("saved-game", game.get_saved_game ());
-        settings.set_int ("colors", game.color_num);
-        for (uint8 i = 0; i < sizes.length; i++)
-            if (game.rows == sizes [i].rows && game.columns == sizes [i].columns)
-            {
-                settings.set_string ("size", sizes [i].id);
-                break;
-            }
-        settings.apply ();
+//    protected override void destroy ()
+//    {
+//        settings.delay ();
+//        settings.set_value ("saved-game", game.get_saved_game ());
+//        settings.set_int ("colors", game.color_num);
+//        for (uint8 i = 0; i < sizes.length; i++)
+//            if (game.rows == sizes [i].rows && game.columns == sizes [i].columns)
+//            {
+//                settings.set_string ("size", sizes [i].id);
+//                break;
+//            }
+//        settings.apply ();
 
-        base.destroy ();
-    }
+//        base.destroy ();
+//    }
 
     /*\
     * * actions
