@@ -203,7 +203,7 @@ private class Game : Object
             /* for each column, separate not-closed and closed tiles */
             for (uint8 y = 0; y < rows; y++)
             {
-                unowned Tile? tile = tiles[y, x];
+                Tile? tile = tiles[y, x];
 
                 if (tile == null)
                     break;

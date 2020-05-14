@@ -76,6 +76,12 @@ private class SwellFoopWindow : ApplicationWindow
 
     construct
     {
+        CssProvider css_provider = new CssProvider ();
+        css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
+        Gdk.Display? gdk_display = Gdk.Display.get_default ();
+        if (gdk_display != null) // else..?
+            StyleContext.add_provider_for_display ((!) gdk_display, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+
         settings = new GLib.Settings ("org.gnome.SwellFoop");
 
         add_action_entries (win_actions, this);
@@ -84,11 +90,8 @@ private class SwellFoopWindow : ApplicationWindow
         add_action (settings.create_action ("zealous"));
         settings.changed ["zealous"].connect ((_settings, _key_name) => { view.set_is_zealous (_settings.get_boolean (_key_name)); });
 
-        string theme = settings.get_string ("theme");
-        if (theme != "colors" && theme != "shapesandcolors")
-            theme = "shapesandcolors";
-        SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
-        theme_action.set_state (new Variant.@string (theme));
+        settings.changed ["theme"].connect (load_theme);
+        load_theme (settings, "theme");
 
         int32 colors = settings.get_int ("colors"); // 2 <= colors <= 4, per schema file
         SimpleAction colors_action = (SimpleAction) lookup_action ("change-colors");
@@ -134,7 +137,6 @@ private class SwellFoopWindow : ApplicationWindow
         game.started.connect (started_cb);
 
         /* Initialize the themes needed by actors */
-        view.set_theme_name (settings.get_string ("theme"));
         view.set_is_zealous (settings.get_boolean ("zealous"));
         view.set_game ((!) game);
 
@@ -144,12 +146,6 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline Stack build_first_run_stack ()
     {
-        CssProvider css_provider = new CssProvider ();
-        css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
-        Gdk.Display? gdk_display = Gdk.Display.get_default ();
-        if (gdk_display != null) // else..?
-            StyleContext.add_provider_for_display ((!) gdk_display, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
-
         Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/first-run-stack.ui");
         var stack = (Stack) builder.get_object ("first_run_stack");
         var tip_label = (Label) builder.get_object ("tip_label");
@@ -221,7 +217,6 @@ private class SwellFoopWindow : ApplicationWindow
         game.update_score.connect (update_score_cb);
         game.complete.connect (complete_cb);
         game.started.connect (started_cb);
-        view.set_theme_name (settings.get_string ("theme"));
         view.set_is_zealous (settings.get_boolean ("zealous"));
         view.set_game ((!) game);
 
@@ -255,7 +250,6 @@ private class SwellFoopWindow : ApplicationWindow
     {
         string new_theme = ((!) variant).get_string ();
         action.set_state ((!) variant);
-        view.set_theme_name (new_theme);
         if (settings.get_string ("theme") != new_theme)
             settings.set_string ("theme", new_theme);
     }
@@ -498,5 +492,41 @@ private class SwellFoopWindow : ApplicationWindow
         motion_controller.set_propagation_phase (PropagationPhase.CAPTURE);
         motion_controller.leave.connect (view.board_left_cb);
         view.add_controller (motion_controller);
+    }
+
+    /*\
+    * * theme
+    \*/
+
+    private bool icon_theme_added = false;
+
+    private void load_theme (GLib.Settings _settings, string _key_name)
+    {
+        string theme = _settings.get_string (_key_name);
+        if (theme != "colors" && theme != "shapesandcolors")
+            theme = "shapesandcolors";
+        set_game_theme (theme);
+        SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
+        theme_action.set_state (new Variant.@string (theme));
+    }
+
+    private inline void set_game_theme (string theme_name)
+    {
+        string theme_path = Path.build_filename (Config.DATADIR, "themes", theme_name);
+
+        if (!icon_theme_added)
+        {
+            IconTheme.get_for_display (Gdk.Display.get_default ()).add_search_path (theme_path);
+            icon_theme_added = true;
+        }
+        else
+        {
+            IconTheme icon_theme = IconTheme.get_for_display (Gdk.Display.get_default ());
+            string[] icon_search_path = icon_theme.get_search_path ();
+            icon_search_path[icon_search_path.length - 1] = theme_path;
+            icon_theme.set_search_path (icon_search_path);
+        }
+
+        queue_draw ();
     }
 }
