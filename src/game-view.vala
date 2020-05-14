@@ -255,14 +255,18 @@ private class GameGroup : Clutter.Group
     }
 
     /* Sets the opacity for all tiles connected to the actor */
-    private void opacity_for_connected_tiles (TileActor? actor, int opacity)
+    private void opacity_for_connected_tiles (TileActor? actor, uint8 opacity)
     {
         if (actor == null)
             return;
 
         var connected_tiles = game.connected_tiles (actor.tile);
         foreach (var l in connected_tiles)
-            tiles[l.grid_x, l.grid_y].opacity = opacity;
+        {
+            TileActor? tile_actor = tiles[l.grid_x, l.grid_y];
+            if (tile_actor != null)
+                ((!) tile_actor).set_opacity (opacity);
+        }
     }
 
     /* When the mouse enters a tile, bright up the connected tiles */
@@ -317,8 +321,9 @@ private class GameGroup : Clutter.Group
     {
         game.reset_visit ();
 
-        foreach (var tile in tiles)
-            tile.opacity = 180;
+        foreach (TileActor? tile_actor in tiles)
+            if (tile_actor != null)
+                ((!) tile_actor).set_opacity (180);
     }
 
     private TileActor? find_tile_at_position (int position_x, int position_y)
@@ -464,7 +469,7 @@ private class TileActor : Clutter.Actor
     internal TileActor (Tile tile, Clutter.Image texture, int size)
     {
         this.tile = tile;
-        opacity = 180;
+        set_opacity (180);
         set_size (size, size);
         content = texture;
 
@@ -502,7 +507,7 @@ private class CursorActor : Clutter.Actor
 {
     internal CursorActor (Clutter.Content texture, int size)
     {
-        opacity = 180;
+        set_opacity (180);
         set_size (size, size);
         content = texture;
 
@@ -545,7 +550,7 @@ private class ScoreActor : Clutter.Group
 
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */
-        opacity = 255;
+        set_opacity (255);
         z_position = 0f;
 
         set_easing_mode (Clutter.AnimationMode.EASE_OUT_SINE);
@@ -567,7 +572,7 @@ private class ScoreActor : Clutter.Group
 
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */
-        opacity = 255;
+        set_opacity (255);
         z_position = -300f + game_size * 100;
 
         set_easing_mode (Clutter.AnimationMode.EASE_OUT_ELASTIC);
