@@ -17,7 +17,66 @@
 
 using Config;
 
-private class GameView : Clutter.Group
+private class GameView : GtkClutter.Embed
+{
+    private Clutter.Stage stage;
+    private GameGroup group;
+
+    construct
+    {
+        stage = (Clutter.Stage) get_stage ();
+        stage.background_color = Clutter.Color.from_string ("#000000");  /* background color is black */
+
+        group = new GameGroup ();
+        stage.add_child (group);
+
+        /* Request an appropriate size for the game view */
+        init_size ();
+    }
+
+    private void init_size ()
+    {
+        stage.set_size (group.width, group.height);
+        set_size_request ((int) stage.width, (int) stage.height);
+    }
+
+    /*\
+    * * proxy calls
+    \*/
+
+    internal void set_game (Game game)
+    {
+        group.game = game;
+        init_size ();
+    }
+
+    internal void set_theme_name (string theme_name)
+    {
+        group.theme_name = theme_name;
+    }
+
+    internal void set_is_zealous (bool is_zealous)
+    {
+        group.is_zealous = is_zealous;
+    }
+
+    internal void board_left_cb ()
+    {
+        group.board_left_cb ();
+    }
+
+    internal void cursor_move (int x, int y)
+    {
+        group.cursor_move (x, y);
+    }
+
+    internal void cursor_click ()
+    {
+        group.cursor_click ();
+    }
+}
+
+private class GameGroup : Clutter.Group
 {
     private TileActor? highlighted = null;
 
@@ -167,7 +226,7 @@ private class GameView : Clutter.Group
 
     internal bool is_zealous { private get; internal set; }
 
-    internal GameView ()
+    construct
     {
         /* Initialize the theme resources */
         themes = new HashTable<string, Theme> (str_hash, str_equal);
