@@ -175,9 +175,9 @@ private class SwellFoopWindow : ApplicationWindow
     * * various
     \*/
 
-    private void update_score_cb (int points_awarded)
+    private void update_score_cb (uint points_awarded)
     {
-        var score = 0;
+        uint score = 0;
         if (game != null)
             score = game.score;
 

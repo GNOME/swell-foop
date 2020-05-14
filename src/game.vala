@@ -70,7 +70,7 @@ private class Game : Object
     private bool is_started = false;
 
     /* Game score */
-    internal int score { internal get; private set; default = 0; }
+    internal uint score { internal get; private set; default = 0; }
 
     private uint8 _color_num = 3;
     public uint8 color_num
@@ -89,7 +89,7 @@ private class Game : Object
     public uint8 rows       { internal get; protected construct; }
     public uint8 columns    { internal get; protected construct; }
 
-    internal signal void update_score (int points_awarded);
+    internal signal void update_score (uint points_awarded);
     internal signal void complete ();
     internal signal void started ();
 
@@ -247,7 +247,7 @@ private class Game : Object
             for (uint8 y = 0; y < rows; y++)
                 tiles[y, new_x] = null;
 
-        increment_score_from_tiles ((int) cl.length ());
+        increment_score_from_tiles ((uint16) cl.length ());
 
         if (!is_started) {
             is_started = true;
@@ -295,17 +295,17 @@ private class Game : Object
         return true;
     }
 
-    internal void increment_score_from_tiles (int n_tiles)
+    private void increment_score_from_tiles (uint16 n_tiles)
     {
-        var points_awarded = 0;
+        uint points_awarded = 0;
 
         if (n_tiles >= 3)
-            points_awarded = (n_tiles - 2) * (n_tiles - 2);
+            points_awarded = (uint) (n_tiles - 2) * (uint) (n_tiles - 2);
 
         increment_score (points_awarded);
     }
 
-    internal void increment_score (int increment)
+    private void increment_score (uint increment)
     {
         score += increment;
         update_score (increment);
@@ -317,7 +317,7 @@ private class Game : Object
 
     private inline bool load_saved_game (Variant variant)
     {
-        if (variant.get_type_string () != "m(yqaay)")
+        if (variant.get_type_string () != "m(yuaay)")
             return false;   // assert_not_reached() ?
 
         Variant? child = variant.get_maybe ();
@@ -326,9 +326,9 @@ private class Game : Object
 
         VariantIter iter = new VariantIter ((!) child);
         uint8 color_num;
-        uint16 score;
+        uint score;
         iter.next ("y", out color_num);
-        iter.next ("q", out score);
+        iter.next ("u", out score);
         Variant? tmp_variant = iter.next_value ();
         if (tmp_variant == null)
             assert_not_reached ();
@@ -368,11 +368,11 @@ private class Game : Object
     internal Variant get_saved_game ()
     {
         if (!is_started || has_completed ())
-            return new Variant ("m(yqaay)", null);
+            return new Variant ("m(yuaay)", null);
 
-        VariantBuilder builder = new VariantBuilder (new VariantType ("(yqaay)"));
+        VariantBuilder builder = new VariantBuilder (new VariantType ("(yuaay)"));
         builder.add ("y", color_num);
-        builder.add ("q", (uint16) score);
+        builder.add ("u", score);
         builder.open (new VariantType ("aay"));
         VariantType ay_type = new VariantType ("ay");
         for (uint8 i = rows; i > 0; i--)
