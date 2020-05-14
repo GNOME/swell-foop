@@ -97,19 +97,20 @@ private class GameGroup : Clutter.Group
     }
 
     /* A 2D array holding all tiles */
-    private TileActor[,] tiles;
+    private TileActor? [,] tiles;
 
     /* Group containing all the actors in the current game */
-    private Clutter.Actor? game_actors = null;
+    private Clutter.Actor game_actors;
 
     /* Game being played */
-    private Game? _game = null;
-    internal Game? game
+    private bool game_is_set = false;
+    private Game _game;
+    internal Game game
     {
-        private get { return _game; }
+        private get { if (!game_is_set) assert_not_reached (); return _game; }
         internal set
         {
-            if (game_actors != null)
+            if (game_is_set)
                 game_actors.destroy ();
             game_actors = new Clutter.Actor ();
             add_child (game_actors);
@@ -117,14 +118,15 @@ private class GameGroup : Clutter.Group
             /* Remove old tiles */
             remove_tiles ();
 
-            if (game != null)
+            if (game_is_set)
                 SignalHandler.disconnect_matched (game, SignalMatchType.DATA, 0, 0, null, null, this);
             _game = value;
+            game_is_set = true;
             game.complete.connect (game_complete_cb);
             game.update_score.connect (update_score_cb);
 
             /* Put tiles in new locations */
-            tiles = new TileActor [game.columns, game.rows];
+            tiles = new TileActor? [game.columns, game.rows];
             cursor_x = 0;
             cursor_y = 0;
             place_tiles ();
@@ -157,7 +159,7 @@ private class GameGroup : Clutter.Group
 
     private void remove_tiles ()
     {
-        if (game == null)
+        if (!game_is_set)
             return;
 
         for (var x = 0; x < game.columns; x++)
@@ -179,7 +181,7 @@ private class GameGroup : Clutter.Group
 
     private void place_tiles ()
     {
-        if (game == null)
+        if (!game_is_set)
             return;
 
         var theme = themes.lookup (theme_name);
@@ -240,7 +242,9 @@ private class GameGroup : Clutter.Group
     /* When a tile in the model layer is closed, play an animation at the view layer */
     private inline void close_cb (int grid_x, int grid_y)
     {
-        tiles[grid_x, grid_y].animate_out ();
+        unowned TileActor? tile_actor = tiles[grid_x, grid_y];
+        if (tile_actor != null)
+            ((!) tile_actor).animate_out ();
     }
 
     /* When a tile in the model layer is moved, play an animation at the view layer */
@@ -328,12 +332,11 @@ private class GameGroup : Clutter.Group
 
     private TileActor? find_tile_at_position (int position_x, int position_y)
     {
-        foreach (TileActor actor in tiles)
-            if (actor != null
-             && actor.tile != null
-             && actor.tile.grid_x == position_x
-             && actor.tile.grid_y == position_y)
-                return actor;
+        foreach (TileActor? tile_actor in tiles)
+            if (tile_actor != null
+             && ((!) tile_actor).tile.grid_x == position_x
+             && ((!) tile_actor).tile.grid_y == position_y)
+                return tile_actor;
         return null;
     }
 

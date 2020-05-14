@@ -136,7 +136,7 @@ private class SwellFoopWindow : ApplicationWindow
         /* Initialize the themes needed by actors */
         view.set_theme_name (settings.get_string ("theme"));
         view.set_is_zealous (settings.get_boolean ("zealous"));
-        view.set_game (game);
+        view.set_game ((!) game);
 
         /* When the mouse leaves the window we need to update the view */
         init_motion ();
@@ -223,7 +223,7 @@ private class SwellFoopWindow : ApplicationWindow
         game.started.connect (started_cb);
         view.set_theme_name (settings.get_string ("theme"));
         view.set_is_zealous (settings.get_boolean ("zealous"));
-        view.set_game (game);
+        view.set_game ((!) game);
 
         game_in_progress = false;
 
