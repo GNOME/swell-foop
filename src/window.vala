@@ -34,9 +34,6 @@ private class SwellFoopWindow : ApplicationWindow
     /* Rendering of game */
     private GameView view;
 
-    private Clutter.Stage stage;
-    private GtkClutter.Embed clutter_embed;
-
     private bool game_in_progress = false;
 
     /* Store size options */
@@ -83,7 +80,7 @@ private class SwellFoopWindow : ApplicationWindow
         add_action (settings.create_action ("size"));
 
         add_action (settings.create_action ("zealous"));
-        settings.changed ["zealous"].connect ((_settings, _key_name) => { view.is_zealous = _settings.get_boolean (_key_name); });
+        settings.changed ["zealous"].connect ((_settings, _key_name) => { view.set_is_zealous (_settings.get_boolean (_key_name)); });
 
         string theme = settings.get_string ("theme");
         if (theme != "colors" && theme != "shapesandcolors")
@@ -103,19 +100,19 @@ private class SwellFoopWindow : ApplicationWindow
         update_score_cb (0);
 
         /* Create a clutter renderer widget */
-        clutter_embed = new GtkClutter.Embed ();
-        clutter_embed.show ();
+        view = new GameView ();
+        view.show ();
         var first_run = settings.get_boolean ("first-run");
 
         if (first_run)
         {
             var stack = build_first_run_stack ();
-            stack.add_named (clutter_embed, "game");
+            stack.add_named (view, "game");
             main_box.pack_start (stack, true, true);
         }
         else
         {
-            main_box.pack_start (clutter_embed, true, true);
+            main_box.pack_start (view, true, true);
             init_keyboard ();
         }
     }
@@ -123,9 +120,6 @@ private class SwellFoopWindow : ApplicationWindow
     internal SwellFoopWindow (Gtk.Application application, GLib.Settings settings)
     {
         Object (application: application, settings: settings);
-
-        stage = (Clutter.Stage) clutter_embed.get_stage ();
-        stage.background_color = Clutter.Color.from_string ("#000000");  /* background color is black */
 
         /* Create an instance of game, either with a saved game, or with initial values for row, column and color */
         Size size = get_board_size ();
@@ -139,16 +133,10 @@ private class SwellFoopWindow : ApplicationWindow
         game.complete.connect (complete_cb);
         game.started.connect (started_cb);
 
-        /* Create an instance of game view. This follow the Model-View-Controller paradigm */
-        view = new GameView ();
         /* Initialize the themes needed by actors */
-        view.theme_name = settings.get_string ("theme");
-        view.is_zealous = settings.get_boolean ("zealous");
-        view.game = game;
-        stage.add_child (view);
-        /* Request an appropriate size for the game view */
-        stage.set_size (view.width, view.height);
-        clutter_embed.set_size_request ((int) stage.width, (int) stage.height);
+        view.set_theme_name (settings.get_string ("theme"));
+        view.set_is_zealous (settings.get_boolean ("zealous"));
+        view.set_game (game);
 
         /* When the mouse leaves the window we need to update the view */
         init_motion ();
@@ -233,12 +221,9 @@ private class SwellFoopWindow : ApplicationWindow
         game.update_score.connect (update_score_cb);
         game.complete.connect (complete_cb);
         game.started.connect (started_cb);
-        view.theme_name = settings.get_string ("theme");
-        view.game = game;
-        view.is_zealous = settings.get_boolean ("zealous");
-
-        stage.set_size (view.width, view.height);
-        clutter_embed.set_size_request ((int) stage.width, (int) stage.height);
+        view.set_theme_name (settings.get_string ("theme"));
+        view.set_is_zealous (settings.get_boolean ("zealous"));
+        view.set_game (game);
 
         game_in_progress = false;
 
@@ -270,7 +255,7 @@ private class SwellFoopWindow : ApplicationWindow
     {
         string new_theme = ((!) variant).get_string ();
         action.set_state ((!) variant);
-        view.theme_name = new_theme;
+        view.set_theme_name (new_theme);
         if (settings.get_string ("theme") != new_theme)
             settings.set_string ("theme", new_theme);
     }
@@ -507,7 +492,7 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline void init_motion ()
     {
-        motion_controller = new EventControllerMotion (clutter_embed);
+        motion_controller = new EventControllerMotion (view);
         motion_controller.set_propagation_phase (PropagationPhase.CAPTURE);
         motion_controller.leave.connect (view.board_left_cb);
     }
