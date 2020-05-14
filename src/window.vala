@@ -41,8 +41,8 @@ private class SwellFoopWindow : ApplicationWindow
     {
         public string id;
         public string name;
-        public int    columns;
-        public int    rows;
+        public uint8  columns;
+        public uint8  rows;
     }
     private static Size [] sizes;
     private static inline void class_init_sizes ()     // called on class construct
@@ -123,7 +123,7 @@ private class SwellFoopWindow : ApplicationWindow
 
         /* Create an instance of game, either with a saved game, or with initial values for row, column and color */
         Size size = get_board_size ();
-        game = new Game (size.rows, size.columns, settings.get_int ("colors"), settings.get_value ("saved-game"));
+        game = new Game (size.rows, size.columns, (uint8) settings.get_int ("colors"), settings.get_value ("saved-game"));
         update_score_cb (game.score);
         if (game.score != 0)
             game_in_progress = true;
@@ -217,7 +217,7 @@ private class SwellFoopWindow : ApplicationWindow
         Size size = get_board_size ();
         game = new Game (size.rows,
                          size.columns,
-                         settings.get_int ("colors"));
+                         (uint8) settings.get_int ("colors"));
         game.update_score.connect (update_score_cb);
         game.complete.connect (complete_cb);
         game.started.connect (started_cb);

@@ -240,7 +240,7 @@ private class GameGroup : Clutter.Group
     }
 
     /* When a tile in the model layer is closed, play an animation at the view layer */
-    private inline void close_cb (int grid_x, int grid_y)
+    private inline void close_cb (uint8 grid_x, uint8 grid_y)
     {
         unowned TileActor? tile_actor = tiles[grid_x, grid_y];
         if (tile_actor != null)
@@ -248,7 +248,7 @@ private class GameGroup : Clutter.Group
     }
 
     /* When a tile in the model layer is moved, play an animation at the view layer */
-    private inline void move_cb (int old_x, int old_y, int new_x, int new_y)
+    private inline void move_cb (uint8 old_x, uint8 old_y, uint8 new_x, uint8 new_y)
     {
         var tile = tiles[old_x, old_y];
         tiles[new_x, new_y] = tile;
@@ -439,7 +439,7 @@ private class Theme : Object
         /* Create the textures required to render */
         try
         {
-            for (int i = 0; i < 4; i++) {
+            for (uint8 i = 0; i < 4; i++) {
                  var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, colors[i] + ".svg"));
                 textures[i] = new Clutter.Image ();
                 textures[i].set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
