@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-05-10 08:04+0000\n"
-"PO-Revision-Date: 2020-05-11 17:47+0200\n"
+"POT-Creation-Date: 2020-05-14 10:02+0000\n"
+"PO-Revision-Date: 2020-05-14 16:56+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -69,46 +69,74 @@ msgstr "El proyecto GNOME"
 msgid "game;logic;board;same;matching;"
 msgstr "juego;lógica;tablero;iguales;coincidentes;"
 
-#: data/org.gnome.swell-foop.gschema.xml:10
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.swell-foop.gschema.xml:11
 msgid "The theme to use"
 msgstr "El tema que usar"
 
-#: data/org.gnome.swell-foop.gschema.xml:11
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.swell-foop.gschema.xml:13
 msgid "The title of the tile theme to use."
 msgstr "El título del tema de fichas que usar."
 
-#: data/org.gnome.swell-foop.gschema.xml:15
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.swell-foop.gschema.xml:18
 msgid "Board size"
 msgstr "Tamaño del tablero"
 
-#: data/org.gnome.swell-foop.gschema.xml:16
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.swell-foop.gschema.xml:20
 msgid "The size of the game board."
 msgstr "El tamaño del tablero de juego."
 
-#: data/org.gnome.swell-foop.gschema.xml:21
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.swell-foop.gschema.xml:26
 msgid "Board color count"
 msgstr "Conteo de color del tablero"
 
-#: data/org.gnome.swell-foop.gschema.xml:22
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.swell-foop.gschema.xml:28
 msgid "The number of colors of tiles to use in the game."
 msgstr "El número de colores de fichas que usar en el juego."
 
-#: data/org.gnome.swell-foop.gschema.xml:26
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.swell-foop.gschema.xml:33
 msgid "Is this the first run"
 msgstr "Es esta la primera ejecución"
 
-#: data/org.gnome.swell-foop.gschema.xml:27
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.swell-foop.gschema.xml:35
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
 "Ajuste para decidir si se debe mostrar el diálogo de primera ejecución o no."
 
-#: data/org.gnome.swell-foop.gschema.xml:31
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.swell-foop.gschema.xml:40
 msgid "Zealous animation"
 msgstr "Animación zealous"
 
-#: data/org.gnome.swell-foop.gschema.xml:32
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.swell-foop.gschema.xml:42
 msgid "Use more flashy, but slower, animations."
 msgstr "Usar animación más vistosas, pero más lentas."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
+#: data/org.gnome.swell-foop.gschema.xml:47
+#| msgctxt "shortcut window"
+#| msgid "Start a new game"
+msgid "Saved game"
+msgstr "Juego guardado"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
+#: data/org.gnome.swell-foop.gschema.xml:49
+msgid ""
+"Has value “nothing” if there is no saved game. Else, the values are: the "
+"number of colors, the score, and a copy of the board, where “0” means "
+"“empty”."
+msgstr ""
+"Tiene el valor “nothing” si no hay ningún juego guardado. En caso contrario "
+"los valore son: el número de colores, la puntuación y una copia del tablero, "
+"donde “0” significa «vacío»."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
@@ -189,13 +217,12 @@ msgstr "Salir"
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:303
+#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:314
 msgid "_New Game"
 msgstr "Juego _nuevo"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
 #: data/ui/swell-foop.ui:30
-#| msgid "Setup"
 msgid "_Setup"
 msgstr "C_onfiguración"
 
@@ -216,7 +243,6 @@ msgstr "_Grande (20 × 15)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
 #: data/ui/swell-foop.ui:54
-#| msgid "_Number of colors:"
 msgid "_Two colors"
 msgstr "_Dos colores"
 
@@ -227,7 +253,6 @@ msgstr "T_res colores"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
 #: data/ui/swell-foop.ui:66
-#| msgid "_Number of colors:"
 msgid "_Four colors"
 msgstr "C_uatro colores"
 
@@ -238,19 +263,16 @@ msgstr "Puntuaciones más _altas"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/swell-foop.ui:88
-#| msgid "Appearance"
 msgid "A_ppearance"
 msgstr "As_pecto"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Shapes and Colors"
 #: data/ui/swell-foop.ui:92
-#| msgid "Colors"
 msgid "_Colors"
 msgstr "C_olores"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Colors"
 #: data/ui/swell-foop.ui:98
-#| msgid "Shapes and Colors"
 msgid "_Shapes and Colors"
 msgstr "_Formas y colores"
 
@@ -275,12 +297,12 @@ msgid "_About Swell Foop"
 msgstr "_Acerca de Swell Foop"
 
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:321
+#: src/game-view.vala:336
 msgid "_Play Again"
 msgstr "_Jugar otra vez"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:488
+#: src/game-view.vala:503
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -288,7 +310,7 @@ msgstr[0] "%u punto"
 msgstr[1] "%u puntos"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:491
+#: src/game-view.vala:506
 msgid "Game Over!"
 msgstr "Juego terminado"
 
@@ -343,7 +365,7 @@ msgid "Large"
 msgstr "Grande"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: src/window.vala:165
+#: src/window.vala:169
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -352,22 +374,22 @@ msgstr ""
 "Menos pulsaciones implican más puntos."
 
 #. Translators: subtitle of the headerbar; the %u is replaced by the score
-#: src/window.vala:193
+#: src/window.vala:197
 #, c-format
 msgid "Score: %u"
 msgstr "Puntuación: %u"
 
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:297
+#: src/window.vala:308
 msgid "Abandon this game to start a new one?"
 msgstr "¿Quiere salir de esta partida e iniciar una nueva?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:300
+#: src/window.vala:311
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/window.vala:376
+#: src/window.vala:390
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -375,7 +397,7 @@ msgstr[0] "%s, %d color"
 msgstr[1] "%s, %d colores"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:387
+#: src/window.vala:401
 msgid "Type"
 msgstr "Tipo"
 
