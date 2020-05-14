@@ -1,3 +1,11 @@
+.board {
+  background-color: black;
+}
+
+/*\
+* * first game screen
+\*/
+
 .welcome {
   font-size:1.5em;
 }
@@ -5,7 +13,7 @@
 .tip {
   font-size: 1em;
 }
- 
+
 .play {
   font-size: 1em;
   padding-right:12px;
@@ -13,3 +21,64 @@
   padding-top:6px;
   padding-bottom:6px;
 }
+
+/*\
+* * tiles
+\*/
+
+/* TODO handle opacity this way */
+.tile {
+  transition: opacity 0.2s;
+}
+.tile.null-opacity {
+  opacity:0.0;
+}
+.tile.half-opacity {
+  opacity:0.7;
+}
+.tile.full-opacity {
+  opacity:1.0;
+}
+
+/* tile images */
+.tile.red {
+  background-image: -gtk-icontheme('red');
+}
+.tile.blue {
+  background-image: -gtk-icontheme('blue');
+}
+.tile.green {
+  background-image: -gtk-icontheme('green');
+}
+.tile.yellow {
+  background-image: -gtk-icontheme('yellow');
+}
+
+/*\
+* * scores
+\*/
+
+.final-score {
+  color:white;
+  font-family: "Bitstream Vera Sans";
+}
+
+.final-score-label {
+  font-size:28px;   /* warning: more or less the bigger we can set, when playing on small size */
+  padding:1em 0.1em;
+}
+
+.final-score-button {
+  font-size:18px;
+  padding:0.3em 1.2em;
+}
+
+.score-label {
+  color:white;
+  font-family: "Bitstream Vera Sans";
+  font-size:28px;
+}
+
+/*\
+* * the end
+\*/
