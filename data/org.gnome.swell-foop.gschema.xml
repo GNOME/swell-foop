@@ -41,7 +41,7 @@
       <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous' -->
       <description>Use more flashy, but slower, animations.</description>
     </key>
-    <key name="saved-game" type="m(yqaay)">
+    <key name="saved-game" type="m(yuaay)">
       <default>nothing</default>
       <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game' -->
       <summary>Saved game</summary>

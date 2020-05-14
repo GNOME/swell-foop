@@ -380,7 +380,7 @@ private class GameGroup : Clutter.Group
     }
 
     /* Show flying score animation after each tile-removing click */
-    private void update_score_cb (int points_awarded)
+    private void update_score_cb (uint points_awarded)
     {
         if (is_zealous)
         {
@@ -543,9 +543,9 @@ private class ScoreActor : Clutter.Group
         this.game_size = game_size;
     }
 
-    internal void animate_score (int points)
+    internal void animate_score (uint points)
     {
-        if (points <= 0)
+        if (points == 0)
             return;
 
         label.set_font_name ("Bitstrem Vera Sans Bold 30");
