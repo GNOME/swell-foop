@@ -106,7 +106,7 @@ private class Game : Object
     private inline void create_new_game ()
     {
         /* A 2D array holds all tiles */
-        tiles = new Tile [rows, columns];
+        tiles = new Tile? [rows, columns];
 
         for (var x = 0; x < columns; x++)
         {
@@ -120,67 +120,75 @@ private class Game : Object
         is_started = false;
     }
 
-    /* Recursively find all the connected tile from li */
-    private List<Tile> _connected_tiles (Tile? li)
+    /* Recursively find all the connected tile from given_tile */
+    private List<Tile> _connected_tiles (Tile? given_tile)
     {
         var cl = new List<Tile> ();
 
-        if (li == null || li.visited || li.closed)
+        if (given_tile == null || ((!) given_tile).visited || ((!) given_tile).closed)
             return cl;
 
-        var x = li.grid_x;
-        var y = li.grid_y;
+        var x = ((!) given_tile).grid_x;
+        var y = ((!) given_tile).grid_y;
 
-        li.visited = true;
+        ((!) given_tile).visited = true;
 
-        cl.append (li);
+        cl.append ((!) given_tile);
 
-        if ((y + 1) < rows && tiles[y + 1, x] != null && (li.color == tiles[y + 1, x].color))
-            cl.concat (_connected_tiles (tiles[y + 1, x]));
+        unowned Tile? tile = tiles[y + 1, x];
+        if ((y + 1) < rows
+         && tile != null && (((!) given_tile).color == ((!) tile).color))
+            cl.concat (_connected_tiles (tile));
 
-        if ((y - 1) >= 0 && tiles[y - 1, x] != null && (li.color == tiles[y - 1, x].color))
-            cl.concat (_connected_tiles (tiles[y - 1, x]));
+        tile = tiles[y - 1, x];
+        if ((y - 1) >= 0
+         && tile != null && (((!) given_tile).color == ((!) tile).color))
+            cl.concat (_connected_tiles (tile));
 
-        if ((x + 1) < columns && tiles[y, x + 1] != null && (li.color == tiles[y, x + 1].color))
-            cl.concat (_connected_tiles (tiles[y, x + 1]));
+        tile = tiles[y, x + 1];
+        if ((x + 1) < columns
+         && tile != null && (((!) given_tile).color == ((!) tile).color))
+            cl.concat (_connected_tiles (tile));
 
-        if ((x - 1) >= 0 && tiles[y, x - 1] != null && (li.color == tiles[y, x - 1].color))
-            cl.concat (_connected_tiles (tiles[y, x - 1]));
+        tile = tiles[y, x - 1];
+        if ((x - 1) >= 0
+         && tile != null && (((!) given_tile).color == ((!) tile).color))
+            cl.concat (_connected_tiles (tile));
 
         return cl;
     }
 
-    internal List<Tile> connected_tiles (Tile li)
+    internal List<Tile> connected_tiles (Tile given_tile)
     {
-        foreach (var l in tiles)
+        foreach (unowned Tile? tile in tiles)
         {
-            if (l != null)
-                l.visited = false;
+            if (tile != null)
+                ((!) tile).visited = false;
         }
 
-        List<Tile> cl = _connected_tiles (li);
+        List<Tile> cl = _connected_tiles (given_tile);
 
         /* single tile will be ignored */
         if (cl.length () < 2)
-            cl = null;
+            return new List<Tile> ();   // technically similar to null, but clearer from Vala pov
 
         return cl;
     }
 
-    internal Tile get_tile (int x, int y)
+    internal Tile? get_tile (int x, int y)
     {
         return tiles[y, x];
     }
 
-    internal bool remove_connected_tiles (Tile tile)
+    internal bool remove_connected_tiles (Tile given_tile)
     {
-        List<Tile> cl = connected_tiles (tile);
+        List<Tile> cl = connected_tiles (given_tile);
 
-        if (cl == null)
+        if (cl.length () < 2)
             return false;
 
-        foreach (var l in cl)
-            l.closed = true;
+        foreach (unowned Tile tile in (!) cl)
+            tile.closed = true;
 
         int new_x = 0;
 
@@ -192,15 +200,15 @@ private class Game : Object
             /* for each column, separate not-closed and closed tiles */
             for (int y = 0; y < rows; y++)
             {
-                var li = tiles[y, x];
+                unowned Tile? tile = tiles[y, x];
 
-                if (li == null)
+                if (tile == null)
                     break;
 
-                if (li.closed)
-                    closed_tiles.append (li);
+                if (((!) tile).closed)
+                    closed_tiles.append ((!) tile);
                 else
-                    not_closed_tiles.append (li);
+                    not_closed_tiles.append ((!) tile);
             }
 
             /* append closed tiles to not-closed tiles */
@@ -216,14 +224,14 @@ private class Game : Object
             /* update the positions (grid_x, grid_y) of tiles at the current column */
             for (int y = 0; y < rows; y++)
             {
-                var l = tiles[y, new_x];
+                unowned Tile? tile = tiles[y, new_x];
 
-                if (l == null)
+                if (tile == null)
                     break;
 
-                l.update_position (new_x, y);
+                ((!) tile).update_position (new_x, y);
 
-                if (!l.closed)
+                if (!((!) tile).closed)
                     has_empty_col = false;
             }
 
@@ -237,7 +245,7 @@ private class Game : Object
             for (int y = 0; y < rows; y++)
                 tiles[y, new_x] = null;
 
-        increment_score_from_tiles ((int)cl.length ());
+        increment_score_from_tiles ((int) cl.length ());
 
         if (!is_started) {
             is_started = true;
@@ -256,18 +264,18 @@ private class Game : Object
 
     internal void reset_visit ()
     {
-        foreach (var l in tiles)
+        foreach (unowned Tile? tile in tiles)
         {
-            if (l != null)
-                l.visited = false;
+            if (tile != null)
+                ((!) tile).visited = false;
         }
     }
 
     internal bool has_completed ()
     {
-        foreach (var l in tiles)
+        foreach (unowned Tile? tile in tiles)
         {
-            if (l != null && !l.closed && (connected_tiles (l).length () > 1))
+            if (tile != null && !((!) tile).closed && (connected_tiles ((!) tile).length () > 1))
                 return false;
         }
 
@@ -276,9 +284,9 @@ private class Game : Object
 
     internal bool has_won ()
     {
-        foreach (var l in tiles)
+        foreach (unowned Tile? tile in tiles)
         {
-            if (l != null && !l.closed)
+            if (tile != null && !((!) tile).closed)
                 return false;
         }
 
@@ -319,14 +327,16 @@ private class Game : Object
         uint16 score;
         iter.next ("y", out color_num);
         iter.next ("q", out score);
-        Variant tmp_variant = iter.next_value ();
+        Variant? tmp_variant = iter.next_value ();
+        if (tmp_variant == null)
+            assert_not_reached ();
 
         if (color_num < 2 || color_num > 4)
             return false;
 
         // all the following way to extract values feels horrible, but there is a bug when trying to do it properly (05/2020)
-        Variant tmp_variant_2 = tmp_variant.get_child_value (0);
-        uint rows = (uint) tmp_variant.n_children ();
+        Variant tmp_variant_2 = ((!) tmp_variant).get_child_value (0);
+        uint rows = (uint) ((!) tmp_variant).n_children ();
         uint columns = (uint) tmp_variant_2.n_children ();
         if (rows    != this.rows
          || columns != this.columns)
@@ -335,10 +345,10 @@ private class Game : Object
         this.color_num = color_num;
         this.score = score;
         update_score (score);
-        tiles = new Tile [rows, columns];
+        tiles = new Tile? [rows, columns];
         for (uint8 i = 0; i < rows; i++)
         {
-            tmp_variant_2 = tmp_variant.get_child_value (i);
+            tmp_variant_2 = ((!) tmp_variant).get_child_value (i);
             for (uint8 j = 0; j < columns; j++)
             {
                 Variant tmp_variant_3 = tmp_variant_2.get_child_value (j);
@@ -367,10 +377,13 @@ private class Game : Object
         {
             builder.open (ay_type);
             for (uint8 j = 0; j < columns; j++)
-                if (tiles [i - 1, j] == null || ((!) tiles [i - 1, j]).closed)
+            {
+                unowned Tile? tile = tiles [i - 1, j];
+                if (tile == null || ((!) tile).closed)
                     builder.add ("y", 0);
                 else
-                    builder.add ("y", tiles [i - 1, j].color + 1);
+                    builder.add ("y", ((!) tile).color + 1);
+            }
             builder.close ();
         }
         builder.close ();
