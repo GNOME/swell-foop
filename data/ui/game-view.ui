@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   This file is part of Swell-Foop.
+
+   Copyright (C) 2020 Arnaud Bonatti <arnaud.bonatti@gmail.com>
+
+   Swell-Foop is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 2 of the License, or
+   (at your option) any later version.
+
+   Swell-Foop is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with Swell-Foop.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<interface>
+  <requires lib="gtk+" version="3.98"/>
+  <template class="GameView" parent="GtkWidget">
+    <child>
+      <object class="GtkOverlay">
+        <child>
+          <object class="Board" id="board"/>
+        </child>
+        <child type="overlay">
+          <object class="GtkRevealer" id="score_revealer">
+            <property name="can-target">False</property>
+            <property name="transition-duration">250</property>
+            <property name="transition-type">crossfade</property>
+            <child>
+              <object class="GtkLabel" id="score_label">
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <style>
+                  <class name="score-label"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="overlay">
+          <object class="GtkRevealer" id="final_score_revealer">
+            <property name="visible">False</property>
+            <property name="transition-type">crossfade</property>
+            <child>
+              <object class="GtkGrid">
+                <property name="orientation">vertical</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="final-score"/>
+                </style>
+                <child>
+                  <object class="GtkLabel" id="final_score_label">
+                    <property name="justify">center</property>
+                    <style>
+                      <class name="final-score-label"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton">
+                    <property name="use-underline">True</property>
+                    <!-- Translators: text of a button that appears on the board at the end of a game -->
+                    <property name="label" translatable="yes">_Play Again</property>
+                    <property name="action-name">win.new-game</property>
+                    <property name="halign">center</property>
+                    <style>
+                      <class name="suggested-action"/>
+                      <class name="final-score-button"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
