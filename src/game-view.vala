@@ -15,72 +15,122 @@
  *  events.
  */
 
-using Config;
+using Gtk;
 
-private class GameView : GtkClutter.Embed
+[GtkTemplate (ui = "/org/gnome/SwellFoop/ui/game-view.ui")]
+private class GameView : Widget
 {
-    private Clutter.Stage stage;
-    private GameGroup group;
+    [GtkChild] private Board board;
+
+    private Game game;
+    private ulong game_complete_handler = 0;
+    private ulong score_updated_handler = 0;
 
     construct
     {
-        stage = (Clutter.Stage) get_stage ();
-        stage.background_color = Clutter.Color.from_string ("#000000");  /* background color is black */
-
-        group = new GameGroup ();
-        stage.add_child (group);
-
-        /* Request an appropriate size for the game view */
-        init_size ();
+        BinLayout layout = new BinLayout ();
+        set_layout_manager (layout);
     }
 
-    private void init_size ()
+    internal void set_game (Game game)
     {
-        stage.set_size (group.width, group.height);
-        set_size_request ((int) stage.width, (int) stage.height);
+        if (game_complete_handler != 0 || score_updated_handler != 0)
+            SignalHandler.disconnect_by_func (game, null, this);
+
+        this.game = game;
+        game_complete_handler = game.complete.connect (on_game_complete);
+        score_updated_handler = game.update_score.connect (on_score_updated);
+
+        board.game = game;
+
+        on_new_game ();
     }
 
     /*\
     * * proxy calls
     \*/
 
-    internal void set_game (Game game)
-    {
-        group.game = game;
-        init_size ();
-    }
-
-    internal void set_theme_name (string theme_name)
-    {
-        group.theme_name = theme_name;
-    }
-
+    private bool is_zealous = true;
     internal void set_is_zealous (bool is_zealous)
     {
-        group.is_zealous = is_zealous;
+        this.is_zealous = is_zealous;
+        board.is_zealous = is_zealous;
     }
 
     internal void board_left_cb ()
     {
-        group.board_left_cb ();
+        board.board_left_cb ();
     }
 
     internal void cursor_move (int x, int y)
     {
-        group.cursor_move (x, y);
+        board.cursor_move (x, y);
     }
 
     internal void cursor_click ()
     {
-        group.cursor_click ();
+        board.cursor_click ();
+    }
+
+    /*\
+    * * scores
+    \*/
+
+    [GtkChild] private Revealer score_revealer;
+    [GtkChild] private Label    score_label;
+
+    private ulong score_revealed_handler = 0;
+
+    private inline void on_score_updated (uint points)
+    {
+        if (!is_zealous || points == 0)
+            return;
+
+        /* Translators: text displayed in the center of the board each time the player scores; the %u is replaced by the number of points */
+        score_label.set_text (_("+%u").printf (points));
+
+        score_revealer.set_reveal_child (true);
+        if (score_revealed_handler == 0)
+            score_revealed_handler = Timeout.add (250, () => {
+                    score_revealer.set_reveal_child (false);
+                    score_revealed_handler = 0;
+                    return Source.REMOVE;
+                });
+    }
+
+    /*\
+    * * final score
+    \*/
+
+    [GtkChild] private Revealer final_score_revealer;
+    [GtkChild] private Label    final_score_label;
+
+    /* Show the final score when the game is over */
+    private inline void on_game_complete ()
+    {
+        /* Translators: text of a label that appears on the board at the end of a game; the %u is replaced by the score */
+        var points_label = ngettext ("%u point", "%u points", game.score).printf (game.score);
+
+        /* Translators: text of a label that appears on the board at the end of a game */
+        final_score_label.set_markup ("<b>%s</b>\n%s".printf (_("Game Over!"), points_label));
+
+        final_score_revealer.show ();
+        final_score_revealer.set_transition_duration (500);
+        final_score_revealer.set_reveal_child (true);
+    }
+
+    private inline void on_new_game ()
+    {
+        final_score_revealer.set_transition_duration (0);
+        final_score_revealer.set_reveal_child (false);
+        final_score_revealer.hide ();
     }
 }
 
-private class GameGroup : Clutter.Group
+private class Board : Widget
 {
-    private TileActor? highlighted = null;
+    private TileView? highlighted = null;
 
-    private CursorActor cursor;
     private bool cursor_active = false;
     private int _cursor_x;
     private int cursor_x
@@ -97,10 +147,10 @@ private class GameGroup : Clutter.Group
     }
 
     /* A 2D array holding all tiles */
-    private TileActor? [,] tiles;
+    private TileView? [,] tiles;
 
     /* Group containing all the actors in the current game */
-    private Clutter.Actor game_actors;
+//    private Clutter.Actor game_actors;
 
     /* Game being played */
     private bool game_is_set = false;
@@ -110,10 +160,10 @@ private class GameGroup : Clutter.Group
         private get { if (!game_is_set) assert_not_reached (); return _game; }
         internal set
         {
-            if (game_is_set)
-                game_actors.destroy ();
-            game_actors = new Clutter.Actor ();
-            add_child (game_actors);
+//            if (game_is_set)
+//                game_actors.destroy ();
+//            game_actors = new Clutter.Actor ();
+//            add_child (game_actors);
 
             /* Remove old tiles */
             remove_tiles ();
@@ -123,35 +173,14 @@ private class GameGroup : Clutter.Group
             _game = value;
             game_is_set = true;
             game.undone.connect (move_undone_cb);
-            game.complete.connect (game_complete_cb);
-            game.update_score.connect (update_score_cb);
 
             /* Put tiles in new locations */
-            tiles = new TileActor? [game.columns, game.rows];
+            tiles = new TileView? [game.columns, game.rows];
             cursor_x = 0;
             cursor_y = 0;
             place_tiles ();
 
-            width  = tile_size * game.columns;
-            height = tile_size * game.rows;
-        }
-    }
-
-    /* This is a <ThemeName -- ThemeObject> container */
-    private HashTable<string, Theme> themes;
-
-    /* Theme being used */
-    private string _theme_name = "shapesandcolors";
-    internal string theme_name
-    {
-        private get { return _theme_name; }
-        internal set
-        {
-            if (theme_name == value)
-                return;
-            _theme_name = value;
-            remove_tiles ();
-            place_tiles ();
+            set_size_request (tile_size * game.columns, tile_size * game.rows);
         }
     }
 
@@ -176,8 +205,6 @@ private class GameGroup : Clutter.Group
                 tile.destroy ();
             }
         }
-
-        cursor.destroy ();
     }
 
     private void place_tiles ()
@@ -185,153 +212,167 @@ private class GameGroup : Clutter.Group
         if (!game_is_set)
             return;
 
-        var theme = themes.lookup (theme_name);
-        if (theme == null)
-            theme = themes.lookup ("shapesandcolors");
-
         for (var x = 0; x < game.columns; x++)
         {
             for (var y = 0; y < game.rows; y++)
             {
                 /* For each tile object, we create a tile actor for it */
-                var l = game.get_tile (x, y);
-                if (l == null || l.closed)
-                    continue;
-                var tile = new TileActor (l, theme.textures[l.color - 1], tile_size);
+                Tile? tile = game.get_tile (x, y);
+                TileView tile_view;
+                if (tile == null || ((!) tile).closed)
+                    tile_view = new TileView.empty (tile_size);
+                else
+                    tile_view = new TileView (tile, tile_size);
 
                 /* The event from the model will be caught and responded by the view */
-                l.move.connect (move_cb);
-                l.close.connect (close_cb);
+                if (tile != null)
+                {
+                    ((!) tile).move.connect (move_cb);
+                    ((!) tile).close.connect (close_cb);
+                }
 
                 /* Physical position in the stage */
-                float xx, yy;
-                xx = x * tile_size;
-                yy = (game.rows - y - 1) * tile_size;
-                tile.set_position (xx, yy);
+//                float xx, yy;
+//                xx = x * tile_size;
+//                yy = (game.rows - y - 1) * tile_size;
+//                tile_view.set_position (xx, yy);
 
                 /* Respond to the user interactions */
-                tile.reactive = true;
-                var tap = new Clutter.TapAction ();
-                tile.add_action (tap);
-                tap.tap.connect (remove_region_cb);
-                tile.enter_event.connect (tile_entered_cb);
-                tile.leave_event.connect (tile_left_cb);
+                if (tile_view.click_controller != null)
+                    ((!) tile_view.click_controller).pressed.connect (remove_region_cb);
 
-                tiles[x, y] = tile;
-                game_actors.add_child (tile);
+                tile_view.inout_controller.enter.connect (tile_entered_cb);
+                tile_view.inout_controller.leave.connect (tile_left_cb);
+
+                tiles[x, y] = tile_view;
+                tile_view.insert_before (this, /* insert last */ null);
+                GridLayoutChild child_layout = (GridLayoutChild) layout.get_layout_child (tile_view);
+                child_layout.set_top_attach (game.rows - y - 1);
+                child_layout.set_left_attach (x);
             }
         }
-
-        cursor = new CursorActor (theme.cursor, tile_size);
-        game_actors.add_child (cursor);
-        cursor.hide ();
     }
 
     internal bool is_zealous { private get; internal set; }
 
+    private GridLayout layout;
     construct
     {
-        /* Initialize the theme resources */
-        themes = new HashTable<string, Theme> (str_hash, str_equal);
-        var theme = new Theme ("colors");
-        themes.insert ("colors", theme);
+        layout = new GridLayout ();
+        layout.set_row_homogeneous (true);
+        layout.set_column_homogeneous (true);
+        set_layout_manager (layout);
 
-        theme = new Theme ("shapesandcolors");
-        themes.insert ("shapesandcolors", theme);
+        add_css_class ("board");
     }
 
     /* When a tile in the model layer is closed, play an animation at the view layer */
     private inline void close_cb (uint8 grid_x, uint8 grid_y)
     {
-        unowned TileActor? tile_actor = tiles[grid_x, grid_y];
+        unowned TileView? tile_actor = tiles[grid_x, grid_y];
         if (tile_actor != null)
-            ((!) tile_actor).animate_out ();
+            ((!) tile_actor).update_opacity (Opacity.NULL);
     }
 
     /* When a tile in the model layer is moved, play an animation at the view layer */
     private inline void move_cb (uint8 old_x, uint8 old_y, uint8 new_x, uint8 new_y)
     {
-        var tile = tiles[old_x, old_y];
-        tiles[new_x, new_y] = tile;
-        var new_xx = new_x * tile_size;
-        var new_yy = (game.rows - new_y - 1) * tile_size;
+        // swap tiles in the tiles array
+        unowned TileView? tile_view_1 = tiles[old_x, old_y];
+        if (tile_view_1 == null)
+            assert_not_reached ();
+        unowned TileView? tile_view_2 = tiles[new_x, new_y];
 
-        tile.animate_to (new_xx, new_yy, is_zealous);
+        tiles[new_x, new_y] = tile_view_1;
+        tiles[old_x, old_y] = tile_view_2;
+
+        // reorder tiles views visually
+        GridLayoutChild child_layout;
+
+        child_layout = (GridLayoutChild) layout.get_layout_child ((!) tile_view_1);
+        child_layout.set_top_attach (game.rows - new_y - 1);
+        child_layout.set_left_attach (new_x);
+
+        child_layout = (GridLayoutChild) layout.get_layout_child ((!) tile_view_2);
+        child_layout.set_top_attach (game.rows - old_y - 1);
+        child_layout.set_left_attach (old_x);
+
+//        // launch tile animation
+//        var new_xx = new_x * tile_size;
+//        var new_yy = (game.rows - new_y - 1) * tile_size;
+
+//        tile.animate_to (new_xx, new_yy, is_zealous);
     }
 
-    /* Sets the opacity for all tiles connected to the actor */
-    private void opacity_for_connected_tiles (TileActor? actor, Opacity opacity)
+    /* Sets the opacity for all tiles connected to the given tile */
+    private void opacity_for_connected_tiles (TileView? given_tile, Opacity opacity)
     {
-        if (actor == null)
+        if (given_tile == null)
             return;
 
-        var connected_tiles = game.connected_tiles (actor.tile);
-        foreach (var l in connected_tiles)
+        var connected_tiles = game.connected_tiles (given_tile.tile);
+        foreach (unowned Tile tile in connected_tiles)
         {
-            TileActor? tile_actor = tiles[l.grid_x, l.grid_y];
-            if (tile_actor != null)
-                ((!) tile_actor).update_opacity (opacity);
+            TileView? tile_view = tiles[tile.grid_x, tile.grid_y];
+            if (tile_view != null)
+                ((!) tile_view).update_opacity (opacity);
         }
     }
 
     /* When the mouse enters a tile, bright up the connected tiles */
-    private bool tile_entered_cb (Clutter.Actor actor, Clutter.CrossingEvent event)
+    private void tile_entered_cb (EventControllerMotion inout_controller, double x, double y, Gdk.CrossingMode mode)
     {
         if (cursor_active)
-            return false;
+            return;
 
-        var tile = (TileActor) actor;
+        TileView tile_view = (TileView) inout_controller.get_widget ();
 
-        opacity_for_connected_tiles (tile, Opacity.FULL);
-        highlighted = tile;
-
-        return false;
+        opacity_for_connected_tiles (tile_view, Opacity.FULL);
+        highlighted = tile_view;
     }
 
     /* When the mouse leaves a tile, lower the brightness of the connected tiles */
-    private bool tile_left_cb (Clutter.Actor actor, Clutter.CrossingEvent event)
+    private void tile_left_cb (EventControllerMotion inout_controller, Gdk.CrossingMode mode)
     {
         if (cursor_active)
-            return false;
+            return;
 
-        var tile = (TileActor) actor;
+        TileView tile_view = (TileView) inout_controller.get_widget ();
 
-        opacity_for_connected_tiles (tile, Opacity.HALF);
-
-        return false;
+        opacity_for_connected_tiles (tile_view, Opacity.HALF);
     }
 
     /* When the user click a tile, send the model to remove the connected tile. */
-    private void remove_region_cb (Clutter.TapAction tap, Clutter.Actor actor)
+    private void remove_region_cb (GestureClick click_controller, int n_press, double x, double y)
     {
-        var tile = (TileActor) actor;
+        TileView tile_view = (TileView) click_controller.get_widget ();
 
         opacity_for_connected_tiles (highlighted, Opacity.HALF);
 
         if (cursor_active)
         {
             cursor_active = false;
-            cursor.hide ();
+//            cursor.hide ();
         }
 
         /* Move the cursor to where the mouse was clicked. Expected for mixed mouse/keyboard use */
-        cursor_x = tile.tile.grid_x;
-        cursor_y = tile.tile.grid_y;
+        cursor_x = tile_view.tile.grid_x;
+        cursor_y = tile_view.tile.grid_y;
 
-        game.remove_connected_tiles (tile.tile);
+        game.remove_connected_tiles (tile_view.tile);
     }
 
     /* When the mouse leaves the application window, reset all tiles to the default brightness */
     internal void board_left_cb ()
     {
-        foreach (TileActor? tile_actor in tiles)
+        foreach (TileView? tile_actor in tiles)
             if (tile_actor != null)
                 ((!) tile_actor).update_opacity (Opacity.HALF);
     }
 
-    private TileActor? find_tile_at_position (int position_x, int position_y)
+    private TileView? find_tile_at_position (int position_x, int position_y)
     {
-        foreach (TileActor? tile_actor in tiles)
+        foreach (TileView? tile_actor in tiles)
             if (tile_actor != null
              && ((!) tile_actor).tile.grid_x == position_x
              && ((!) tile_actor).tile.grid_y == position_y)
@@ -359,13 +400,13 @@ private class GameGroup : Clutter.Group
             cursor_active = true;
 
         // highlight and unhighlight
-        TileActor? cursor_tile = find_tile_at_position (cursor_x, cursor_y);
+        TileView? cursor_tile = find_tile_at_position (cursor_x, cursor_y);
 
         if ((highlighted != null && cursor_tile == null)
          || (highlighted == null && cursor_tile != null)
          || (highlighted != null && cursor_tile != null && ((!) highlighted).tile.color != ((!) cursor_tile).tile.color))
         {
-            // opacity_for_connected_tiles() handles correctly a null TileActor
+            // opacity_for_connected_tiles() handles correctly a null TileView
             opacity_for_connected_tiles (highlighted, Opacity.HALF);
             opacity_for_connected_tiles (cursor_tile, Opacity.FULL);
         }
@@ -376,8 +417,8 @@ private class GameGroup : Clutter.Group
         float xx, yy;
         xx = cursor_x * tile_size;
         yy = (game.rows - 1 - cursor_y) * tile_size;
-        cursor.set_position (xx, yy);
-        cursor.show ();
+//        cursor.set_position (xx, yy);
+//        cursor.show ();
     }
 
     /* Keyboard Cursor Click */
@@ -388,90 +429,9 @@ private class GameGroup : Clutter.Group
         opacity_for_connected_tiles (highlighted, Opacity.FULL);
     }
 
-    /* Show flying score animation after each tile-removing click */
-    private void update_score_cb (uint points_awarded)
-    {
-        if (is_zealous)
-        {
-            var text = new ScoreActor (game.rows / 5, width, height);
-            game_actors.add_child (text);
-            text.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.BOTH, 0.5f));
-            text.animate_score (points_awarded);
-        }
-    }
-
-    /* Show the final score when the game is over */
-    private void game_complete_cb ()
-    {
-        var text = new ScoreActor (game.rows / 5, width, height);
-        game_actors.add_child (text);
-        text.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.BOTH, 0.5f));
-        text.animate_final_score (game.score);
-
-        /* Translators: text of a button that appears on the board at the end of a game */
-        var play_again_button = new Gtk.Button.with_mnemonic (_("_Play Again"));
-        play_again_button.width_request = 130;
-        play_again_button.height_request = 40;
-        play_again_button.action_name = "win.new-game";
-        play_again_button.show ();
-
-        var style = play_again_button.get_style_context ();
-        style.add_class ("suggested-action");
-
-        var button_actor = new GtkClutter.Actor.with_contents (play_again_button);
-        game_actors.add_child (button_actor);
-        button_actor.visible = true;
-        button_actor.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.X_AXIS, 0.5f));
-        button_actor.add_constraint (new Clutter.AlignConstraint (this, Clutter.AlignAxis.Y_AXIS, 0.88f));
-
-        button_actor.set_easing_mode (Clutter.AnimationMode.EASE_OUT_ELASTIC);
-        button_actor.set_easing_duration (2000);
-        button_actor.z_position = -50;
-        button_actor.set_opacity (255);
-    }
-
     private inline void move_undone_cb ()
     {
         game = game;
-    }
-}
-
-/**
- *  This class holds the textures for a specific theme. These textures are used for creating light
- *  actors and cursor actor.
- */
-private class Theme : Object
-{
-    internal Clutter.Image[] textures;
-    internal Clutter.Image cursor;
-
-    internal Theme (string name)
-    {
-        textures = new Clutter.Image [4];
-        string[4] colors = {"blue", "green", "yellow", "red"};
-
-        /* Create the textures required to render */
-        try
-        {
-            for (uint8 i = 0; i < 4; i++) {
-                var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, colors[i] + ".svg"));
-                textures[i] = new Clutter.Image ();
-                textures[i].set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
-                                      pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
-            }
-            var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, "highlight.svg"));
-            cursor = new Clutter.Image ();
-            cursor.set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
-                             pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
-        }
-        catch (Clutter.TextureError e)
-        {
-            warning ("Failed to load textures: %s", e.message);
-        }
-        catch (GLib.Error e)
-        {
-            warning ("Failed to load textures: %s", e.message);
-        }
     }
 }
 
@@ -485,136 +445,115 @@ private enum Opacity
 /**
  *  This class defines the view of a tile. All clutter related stuff goes here
  */
-private class TileActor : Clutter.Actor
+private class TileView : Widget
 {
     /* Tile being represented */
-    internal Tile tile;
+    public Tile? tile   { internal get; protected construct; default = null; }
+    public uint size    { internal get; protected construct; }
 
-    internal TileActor (Tile tile, Clutter.Image texture, int size)
+    public EventControllerMotion inout_controller { internal get; protected construct; }
+    public GestureClick?         click_controller { internal get; protected construct; default = null; }
+
+    private bool tile_destroyed = false;
+
+    internal TileView (Tile tile, uint size)
     {
-        this.tile = tile;
-        update_opacity (Opacity.HALF);
-        set_size (size, size);
-        content = texture;
+        EventControllerMotion _inout_controller = new EventControllerMotion ();
+        GestureClick _click_controller = new GestureClick ();
+        Object (tile: tile,
+                size: size,
+                inout_controller: _inout_controller,
+                click_controller: _click_controller);
+    }
 
-        set_content_gravity (Clutter.ContentGravity.CENTER);
-        set_pivot_point (0.5f, 0.5f);
+    internal TileView.empty (uint size)
+    {
+        EventControllerMotion _inout_controller = new EventControllerMotion ();
+        Object (size: size,
+                inout_controller: _inout_controller);
+    }
+
+    construct
+    {
+        set_size_request ((int) size, (int) size);
+        add_css_class ("tile");
+
+        if (tile == null)
+            add_css_class ("removed");
+        else
+            switch (tile.color)
+            {
+                case 4: add_css_class ("red");      break;
+                case 1: add_css_class ("blue");     break;
+                case 2: add_css_class ("green");    break;
+                case 3: add_css_class ("yellow");   break;
+                case 0: add_css_class ("removed");  break;
+                default: assert_not_reached ();
+            }
+
+//        add_css_class ("half-opacity");
+        if (tile == null || ((!) tile).color == 0)
+            update_opacity (Opacity.NULL);
+        else
+            update_opacity (Opacity.HALF);
+
+        add_controller (inout_controller);
+        if (click_controller != null)
+            add_controller ((!) click_controller);
     }
 
     internal void update_opacity (Opacity opacity)
     {
-        set_easing_duration (200);
-        set_easing_mode (Clutter.AnimationMode.EASE_OUT_QUAD);
+        if (tile_destroyed)
+            return;
+
+//        string [] css_classes = get_css_classes ();
+//        uint i;
+//        for (i = 0; i < css_classes.length; i++)
+//            if (css_classes [i] == "null-opacity"
+//             || css_classes [i] == "half-opacity"
+//             || css_classes [i] == "full-opacity")
+//                break;
+
+//        switch (opacity)
+//        {
+//            case Opacity.NULL: if (css_classes [i] == "null-opacity") return; css_classes [i] = "null-opacity"; break;
+//            case Opacity.HALF: if (css_classes [i] == "half-opacity") return; css_classes [i] = "half-opacity"; break;
+//            case Opacity.FULL: if (css_classes [i] == "full-opacity") return; css_classes [i] = "full-opacity"; break;
+//        }
+//        set_css_classes (css_classes);    // FIXME https://gitlab.gnome.org/GNOME/vala/issues/994
         switch (opacity)
         {
-            case Opacity.NULL:  set_opacity (  0);  break;
-            case Opacity.HALF:  set_opacity (180);  break;
-            case Opacity.FULL:  set_opacity (255);  break;
-            default: assert_not_reached ();
+            case Opacity.NULL: set_opacity (0.0);
+                               tile_destroyed = true;
+                               can_target = false;
+                               if (click_controller != null)
+                                   remove_controller ((!) click_controller);
+                               break;
+            case Opacity.HALF: set_opacity (0.7); break;
+            case Opacity.FULL: set_opacity (1.0); break;
         }
     }
 
     /* Destroy the tile */
-    internal void animate_out ()
-    {
+//    internal void animate_out ()
+//    {
         /* When the animination is done, hide the actor */
-        set_easing_mode (Clutter.AnimationMode.LINEAR);
-        set_easing_duration (500);
-        set_scale (2.0, 2.0);
-        update_opacity (Opacity.NULL);
-        transitions_completed.connect (hide_tile_cb);
-    }
+//        update_opacity (Opacity.NULL);
+//        transitions_completed.connect (hide_tile_cb);
+//    }
 
-    private void hide_tile_cb ()
-    {
-        hide ();
-    }
+//    private void hide_tile_cb ()
+//    {
+//        hide ();
+//    }
 
     /* Define how the tile moves */
-    internal void animate_to (double new_x, double new_y, bool is_zealous = false)
-    {
-        var anim_mode = is_zealous ? Clutter.AnimationMode.EASE_OUT_BOUNCE : Clutter.AnimationMode.EASE_OUT_QUAD;
-        set_easing_mode (anim_mode);
-        set_easing_duration (500);
-        set_position ((float) new_x, (float) new_y);
-    }
-}
-
-private class CursorActor : Clutter.Actor
-{
-    internal CursorActor (Clutter.Content texture, int size)
-    {
-        set_opacity (180);
-        set_size (size, size);
-        content = texture;
-
-        set_content_gravity (Clutter.ContentGravity.CENTER);
-        set_pivot_point (0.5f, 0.5f);
-    }
-}
-
-/**
- *  This class defines the view of a score. All clutter related stuff goes here
- */
-private class ScoreActor : Clutter.Group
-{
-    private Clutter.Text label;
-    private float scene_width;
-    private float scene_height;
-    private int game_size;
-
-    internal ScoreActor (int game_size, double width, double height)
-    {
-        label = new Clutter.Text ();
-        label.set_color (Clutter.Color.from_string ("rgba(255, 255, 255, 255)"));
-
-        add_child (label);
-
-        set_pivot_point (0.5f, 0.5f);
-
-        this.scene_width = (float) width;
-        this.scene_height = (float) height;
-        this.game_size = game_size;
-    }
-
-    internal void animate_score (uint points)
-    {
-        if (points == 0)
-            return;
-
-        label.set_font_name ("Bitstrem Vera Sans Bold 30");
-        label.set_text ("+" + points.to_string ());
-
-        /* The score will be shown repeatedly therefore we need to reset some important properties
-         * before the actual animation */
-        set_opacity (255);
-        z_position = 0f;
-
-        set_easing_mode (Clutter.AnimationMode.EASE_OUT_SINE);
-        set_easing_duration (600);
-        z_position = 500f;
-        set_opacity (0);
-        transitions_completed.connect (() => { destroy (); });
-    }
-
-    internal void animate_final_score (uint points)
-    {
-        label.set_font_name ("Bitstrem Vera Sans 30");
-        var points_label = ngettext (/* Label showing the number of points at the end of the game */
-                                     "%u point", "%u points", points).printf (points);
-
-        /* Translators: text of a label that appears on the board at the end of a game */
-        label.set_markup ("<b>%s</b>\n%s".printf (_("Game Over!"), points_label));
-        label.set_line_alignment (Pango.Alignment.CENTER);
-
-        /* The score will be shown repeatedly therefore we need to reset some important properties
-         * before the actual animation */
-        set_opacity (255);
-        z_position = -300f + game_size * 100;
-
-        set_easing_mode (Clutter.AnimationMode.EASE_OUT_ELASTIC);
-        set_easing_duration (2000);
-        z_position = -200 + game_size * 150;
-        set_opacity (255);
-    }
+//    internal void animate_to (double new_x, double new_y, bool is_zealous = false)
+//    {
+//        var anim_mode = is_zealous ? Clutter.AnimationMode.EASE_OUT_BOUNCE : Clutter.AnimationMode.EASE_OUT_QUAD;
+//        set_easing_mode (anim_mode);
+//        set_easing_duration (500);
+//        set_position ((float) new_x, (float) new_y);
+//    }
 }
