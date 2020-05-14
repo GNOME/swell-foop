@@ -17,7 +17,66 @@
 
 using Config;
 
-private class GameView : Clutter.Group
+private class GameView : GtkClutter.Embed
+{
+    private Clutter.Stage stage;
+    private GameGroup group;
+
+    construct
+    {
+        stage = (Clutter.Stage) get_stage ();
+        stage.background_color = Clutter.Color.from_string ("#000000");  /* background color is black */
+
+        group = new GameGroup ();
+        stage.add_child (group);
+
+        /* Request an appropriate size for the game view */
+        init_size ();
+    }
+
+    private void init_size ()
+    {
+        stage.set_size (group.width, group.height);
+        set_size_request ((int) stage.width, (int) stage.height);
+    }
+
+    /*\
+    * * proxy calls
+    \*/
+
+    internal void set_game (Game game)
+    {
+        group.game = game;
+        init_size ();
+    }
+
+    internal void set_theme_name (string theme_name)
+    {
+        group.theme_name = theme_name;
+    }
+
+    internal void set_is_zealous (bool is_zealous)
+    {
+        group.is_zealous = is_zealous;
+    }
+
+    internal void board_left_cb ()
+    {
+        group.board_left_cb ();
+    }
+
+    internal void cursor_move (int x, int y)
+    {
+        group.cursor_move (x, y);
+    }
+
+    internal void cursor_click ()
+    {
+        group.cursor_click ();
+    }
+}
+
+private class GameGroup : Clutter.Group
 {
     private TileActor? highlighted = null;
 
@@ -38,19 +97,20 @@ private class GameView : Clutter.Group
     }
 
     /* A 2D array holding all tiles */
-    private TileActor[,] tiles;
+    private TileActor? [,] tiles;
 
     /* Group containing all the actors in the current game */
-    private Clutter.Actor? game_actors = null;
+    private Clutter.Actor game_actors;
 
     /* Game being played */
-    private Game? _game = null;
-    internal Game? game
+    private bool game_is_set = false;
+    private Game _game;
+    internal Game game
     {
-        private get { return _game; }
+        private get { if (!game_is_set) assert_not_reached (); return _game; }
         internal set
         {
-            if (game_actors != null)
+            if (game_is_set)
                 game_actors.destroy ();
             game_actors = new Clutter.Actor ();
             add_child (game_actors);
@@ -58,14 +118,15 @@ private class GameView : Clutter.Group
             /* Remove old tiles */
             remove_tiles ();
 
-            if (game != null)
+            if (game_is_set)
                 SignalHandler.disconnect_matched (game, SignalMatchType.DATA, 0, 0, null, null, this);
             _game = value;
+            game_is_set = true;
             game.complete.connect (game_complete_cb);
             game.update_score.connect (update_score_cb);
 
             /* Put tiles in new locations */
-            tiles = new TileActor [game.columns, game.rows];
+            tiles = new TileActor? [game.columns, game.rows];
             cursor_x = 0;
             cursor_y = 0;
             place_tiles ();
@@ -98,7 +159,7 @@ private class GameView : Clutter.Group
 
     private void remove_tiles ()
     {
-        if (game == null)
+        if (!game_is_set)
             return;
 
         for (var x = 0; x < game.columns; x++)
@@ -120,7 +181,7 @@ private class GameView : Clutter.Group
 
     private void place_tiles ()
     {
-        if (game == null)
+        if (!game_is_set)
             return;
 
         var theme = themes.lookup (theme_name);
@@ -167,7 +228,7 @@ private class GameView : Clutter.Group
 
     internal bool is_zealous { private get; internal set; }
 
-    internal GameView ()
+    construct
     {
         /* Initialize the theme resources */
         themes = new HashTable<string, Theme> (str_hash, str_equal);
@@ -179,13 +240,15 @@ private class GameView : Clutter.Group
     }
 
     /* When a tile in the model layer is closed, play an animation at the view layer */
-    private inline void close_cb (int grid_x, int grid_y)
+    private inline void close_cb (uint8 grid_x, uint8 grid_y)
     {
-        tiles[grid_x, grid_y].animate_out ();
+        unowned TileActor? tile_actor = tiles[grid_x, grid_y];
+        if (tile_actor != null)
+            ((!) tile_actor).animate_out ();
     }
 
     /* When a tile in the model layer is moved, play an animation at the view layer */
-    private inline void move_cb (int old_x, int old_y, int new_x, int new_y)
+    private inline void move_cb (uint8 old_x, uint8 old_y, uint8 new_x, uint8 new_y)
     {
         var tile = tiles[old_x, old_y];
         tiles[new_x, new_y] = tile;
@@ -196,14 +259,18 @@ private class GameView : Clutter.Group
     }
 
     /* Sets the opacity for all tiles connected to the actor */
-    private void opacity_for_connected_tiles (TileActor? actor, int opacity)
+    private void opacity_for_connected_tiles (TileActor? actor, uint8 opacity)
     {
         if (actor == null)
             return;
 
         var connected_tiles = game.connected_tiles (actor.tile);
         foreach (var l in connected_tiles)
-            tiles[l.grid_x, l.grid_y].opacity = opacity;
+        {
+            TileActor? tile_actor = tiles[l.grid_x, l.grid_y];
+            if (tile_actor != null)
+                ((!) tile_actor).set_opacity (opacity);
+        }
     }
 
     /* When the mouse enters a tile, bright up the connected tiles */
@@ -258,18 +325,18 @@ private class GameView : Clutter.Group
     {
         game.reset_visit ();
 
-        foreach (var tile in tiles)
-            tile.opacity = 180;
+        foreach (TileActor? tile_actor in tiles)
+            if (tile_actor != null)
+                ((!) tile_actor).set_opacity (180);
     }
 
     private TileActor? find_tile_at_position (int position_x, int position_y)
     {
-        foreach (TileActor actor in tiles)
-            if (actor != null
-             && actor.tile != null
-             && actor.tile.grid_x == position_x
-             && actor.tile.grid_y == position_y)
-                return actor;
+        foreach (TileActor? tile_actor in tiles)
+            if (tile_actor != null
+             && ((!) tile_actor).tile.grid_x == position_x
+             && ((!) tile_actor).tile.grid_y == position_y)
+                return tile_actor;
         return null;
     }
 
@@ -313,7 +380,7 @@ private class GameView : Clutter.Group
     }
 
     /* Show flying score animation after each tile-removing click */
-    private void update_score_cb (int points_awarded)
+    private void update_score_cb (uint points_awarded)
     {
         if (is_zealous)
         {
@@ -372,7 +439,7 @@ private class Theme : Object
         /* Create the textures required to render */
         try
         {
-            for (int i = 0; i < 4; i++) {
+            for (uint8 i = 0; i < 4; i++) {
                  var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, colors[i] + ".svg"));
                 textures[i] = new Clutter.Image ();
                 textures[i].set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
@@ -405,7 +472,7 @@ private class TileActor : Clutter.Actor
     internal TileActor (Tile tile, Clutter.Image texture, int size)
     {
         this.tile = tile;
-        opacity = 180;
+        set_opacity (180);
         set_size (size, size);
         content = texture;
 
@@ -443,7 +510,7 @@ private class CursorActor : Clutter.Actor
 {
     internal CursorActor (Clutter.Content texture, int size)
     {
-        opacity = 180;
+        set_opacity (180);
         set_size (size, size);
         content = texture;
 
@@ -476,9 +543,9 @@ private class ScoreActor : Clutter.Group
         this.game_size = game_size;
     }
 
-    internal void animate_score (int points)
+    internal void animate_score (uint points)
     {
-        if (points <= 0)
+        if (points == 0)
             return;
 
         label.set_font_name ("Bitstrem Vera Sans Bold 30");
@@ -486,7 +553,7 @@ private class ScoreActor : Clutter.Group
 
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */
-        opacity = 255;
+        set_opacity (255);
         z_position = 0f;
 
         set_easing_mode (Clutter.AnimationMode.EASE_OUT_SINE);
@@ -508,7 +575,7 @@ private class ScoreActor : Clutter.Group
 
         /* The score will be shown repeatedly therefore we need to reset some important properties
          * before the actual animation */
-        opacity = 255;
+        set_opacity (255);
         z_position = -300f + game_size * 100;
 
         set_easing_mode (Clutter.AnimationMode.EASE_OUT_ELASTIC);

@@ -18,6 +18,17 @@ public class SwellFoop : Gtk.Application
     /* Main window */
     private SwellFoopWindow window;
 
+    /* Command-line options */
+    private static bool version = false;
+    private const OptionEntry [] option_entries =
+    {
+        /* Translators: command-line option description, see 'swell-foop --help' */
+        { "version", 'v', OptionFlags.NONE, OptionArg.NONE, ref version, N_("Print release version and exit"), null },
+
+        {}
+    };
+
+    /* Actions */
     private const GLib.ActionEntry[] action_entries =
     {
         { "help",          help_cb        },
@@ -132,6 +143,8 @@ public class SwellFoop : Gtk.Application
         context.add_group (Gtk.get_option_group (true));
         context.add_group (Clutter.get_option_group_without_init ());
 
+        context.add_main_entries (option_entries, Config.GETTEXT_PACKAGE);
+
         try
         {
             context.parse (ref args);
@@ -140,6 +153,13 @@ public class SwellFoop : Gtk.Application
         {
             stderr.printf ("%s\n", e.message);
             return Posix.EXIT_FAILURE;
+        }
+
+        if (version)
+        {
+            /* NOTE: Is not translated so can be easily parsed */
+            stderr.printf ("%1$s %2$s\n", "swell-foop", Config.VERSION);
+            return Posix.EXIT_SUCCESS;
         }
 
         /* Translators: name of the application, as displayed in the window manager */
