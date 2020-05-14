@@ -36,10 +36,26 @@ public class SwellFoop : Gtk.Application
         { "quit",          quit_cb        }
     };
 
+    public static int main (string[] args)
+    {
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (Config.GETTEXT_PACKAGE);
+
+        Environment.set_application_name (PROGRAM_NAME);
+        Gtk.Window.set_default_icon_name ("org.gnome.SwellFoop");
+
+        var app = new SwellFoop ();
+        return app.run (args);
+    }
+
     /* Constructor */
     public SwellFoop ()
     {
         Object (application_id: "org.gnome.SwellFoop", flags: ApplicationFlags.FLAGS_NONE);
+
+        add_main_option_entries (option_entries);
     }
 
     protected override void startup ()
@@ -112,50 +128,5 @@ public class SwellFoop : Gtk.Application
                                "translator-credits", _("translator-credits"),
                                "logo-icon-name", "org.gnome.SwellFoop",
                                "website", Config.PACKAGE_URL);
-    }
-
-    public static int main (string[] args)
-    {
-        Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
-        Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
-        Intl.textdomain (Config.GETTEXT_PACKAGE);
-
-        if (GtkClutter.init (ref args) != Clutter.InitError.SUCCESS)
-        {
-            warning ("Failed to initialise Clutter");
-            return Posix.EXIT_FAILURE;
-        }
-
-        var context = new OptionContext (null);
-        context.set_translation_domain (Config.GETTEXT_PACKAGE);
-
-        context.add_group (Gtk.get_option_group (true));
-        context.add_group (Clutter.get_option_group_without_init ());
-
-        context.add_main_entries (option_entries, Config.GETTEXT_PACKAGE);
-
-        try
-        {
-            context.parse (ref args);
-        }
-        catch (Error e)
-        {
-            stderr.printf ("%s\n", e.message);
-            return Posix.EXIT_FAILURE;
-        }
-
-        if (version)
-        {
-            /* NOTE: Is not translated so can be easily parsed */
-            stderr.printf ("%1$s %2$s\n", "swell-foop", Config.VERSION);
-            return Posix.EXIT_SUCCESS;
-        }
-
-        Environment.set_application_name (PROGRAM_NAME);
-        Gtk.Window.set_default_icon_name ("org.gnome.SwellFoop");
-
-        var app = new SwellFoop ();
-        return app.run (args);
     }
 }
