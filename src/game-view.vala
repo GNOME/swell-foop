@@ -497,6 +497,8 @@ private class TileActor : Clutter.Actor
 
     internal void update_opacity (Opacity opacity)
     {
+        set_easing_duration (200);
+        set_easing_mode (Clutter.AnimationMode.EASE_OUT_QUAD);
         switch (opacity)
         {
             case Opacity.NULL:  set_opacity (  0);  break;
