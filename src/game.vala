@@ -120,7 +120,7 @@ private class Game : Object
     }
 
     /* Recursively find all the connected tile from given_tile */
-    private List<Tile> _connected_tiles (Tile? given_tile)
+    private static List<Tile> _connected_tiles (Tile? given_tile, ref Tile? [,] tiles)
     {
         var cl = new List<Tile> ();
 
@@ -135,27 +135,27 @@ private class Game : Object
         cl.append ((!) given_tile);
 
         unowned Tile? tile = tiles[y + 1, x];
-        if (y + 1 < rows
+        if (y + 1 < tiles.length [0]
          && tile != null && (((!) given_tile).color == ((!) tile).color))
-            cl.concat (_connected_tiles (tile));
+            cl.concat (_connected_tiles (tile, ref tiles));
 
         if (y >= 1)
         {
             tile = tiles[y - 1, x];
             if (tile != null && (((!) given_tile).color == ((!) tile).color))
-                cl.concat (_connected_tiles (tile));
+                cl.concat (_connected_tiles (tile, ref tiles));
         }
 
         tile = tiles[y, x + 1];
-        if (x + 1 < columns
+        if (x + 1 < tiles.length [1]
          && tile != null && (((!) given_tile).color == ((!) tile).color))
-            cl.concat (_connected_tiles (tile));
+            cl.concat (_connected_tiles (tile, ref tiles));
 
         if (x >= 1)
         {
             tile = tiles[y, x - 1];
             if (tile != null && (((!) given_tile).color == ((!) tile).color))
-                cl.concat (_connected_tiles (tile));
+                cl.concat (_connected_tiles (tile, ref tiles));
         }
 
         return cl;
@@ -163,7 +163,7 @@ private class Game : Object
 
     internal List<Tile> connected_tiles (Tile given_tile)
     {
-        List<Tile> cl = _connected_tiles (given_tile);
+        List<Tile> cl = _connected_tiles (given_tile, ref tiles);
 
         foreach (unowned Tile? tile in tiles)
         {
