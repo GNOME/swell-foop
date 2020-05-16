@@ -30,7 +30,8 @@ private class Tile : Object
     public uint8 grid_x   { internal get; protected construct set; }
     public uint8 grid_y   { internal get; protected construct set; }
     public uint8 color    { internal get; protected construct; }
-    internal bool visited   { internal get; private set; default = false; }
+    // Vala tip or bug: looks like "private" means "accessible only from this file"; but if both get and set are private, there is a warning
+    internal bool visited { protected get; private set; default = false; }
 
     /* Signals */
     internal signal void move (uint8 old_x, uint8 old_y, uint8 new_x, uint8 new_y);
@@ -162,13 +163,13 @@ private class Game : Object
 
     internal List<Tile> connected_tiles (Tile given_tile)
     {
+        List<Tile> cl = _connected_tiles (given_tile);
+
         foreach (unowned Tile? tile in tiles)
         {
             if (tile != null)
                 ((!) tile).visited = false;
         }
-
-        List<Tile> cl = _connected_tiles (given_tile);
 
         /* single tile will be ignored */
         if (cl.length () < 2)
@@ -216,7 +217,7 @@ private class Game : Object
             /* append closed tiles to not-closed tiles */
             not_closed_tiles.concat ((owned) closed_tiles);
 
-            /* update tile array at the current column, not-closed tiles aret at the bottom, closed ones top */
+            /* update tile array at the current column, not-closed tiles are at the bottom, closed ones top */
             for (uint8 y = 0; y < rows; y++)
                 tiles[y, new_x] = not_closed_tiles.nth_data (y);
 
@@ -262,15 +263,6 @@ private class Game : Object
         }
 
         return false;
-    }
-
-    internal void reset_visit ()
-    {
-        foreach (unowned Tile? tile in tiles)
-        {
-            if (tile != null)
-                ((!) tile).visited = false;
-        }
     }
 
     internal bool has_completed ()
