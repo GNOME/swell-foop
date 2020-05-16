@@ -26,7 +26,7 @@ private class SwellFoopWindow : ApplicationWindow
     [GtkChild] private Box          main_box;
     [GtkChild] private MenuButton   hamburger_button;
 
-    public GLib.Settings settings { private get; protected construct; }
+    private GLib.Settings settings;
 
     /* Game being played */
     private Game? game = null;
@@ -76,6 +76,8 @@ private class SwellFoopWindow : ApplicationWindow
 
     construct
     {
+        settings = new GLib.Settings ("org.gnome.swell-foop");
+
         add_action_entries (win_actions, this);
         add_action (settings.create_action ("size"));
 
@@ -117,9 +119,9 @@ private class SwellFoopWindow : ApplicationWindow
         }
     }
 
-    internal SwellFoopWindow (Gtk.Application application, GLib.Settings settings)
+    internal SwellFoopWindow (Gtk.Application application)
     {
-        Object (application: application, settings: settings);
+        Object (application: application);
 
         /* Create an instance of game, either with a saved game, or with initial values for row, column and color */
         Size size = get_board_size ();

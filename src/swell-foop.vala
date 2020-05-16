@@ -12,9 +12,6 @@ using Config;
 
 public class SwellFoop : Gtk.Application
 {
-    /* Application settings */
-    private Settings settings;
-
     /* Main window */
     private SwellFoopWindow window;
 
@@ -48,8 +45,6 @@ public class SwellFoop : Gtk.Application
 
         Gtk.Settings.get_default ().@set ("gtk-application-prefer-dark-theme", true);
 
-        settings = new Settings ("org.gnome.swell-foop");
-
         add_action_entries (action_entries, this);
         set_accels_for_action ("win.new-game",          { "<Primary>n"      });
         set_accels_for_action ("app.help",              {          "F1"     });
@@ -57,7 +52,7 @@ public class SwellFoop : Gtk.Application
         set_accels_for_action ("app.quit",              { "<Primary>q"      });
 
         /* Create the main window */
-        window = new SwellFoopWindow (this, settings);
+        window = new SwellFoopWindow (this);
         add_window (window);
     }
 
