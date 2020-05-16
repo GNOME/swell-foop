@@ -1,10 +1,10 @@
 <schemalist>
-  <enum id="org.gnome.swell-foop.Sizes">
+  <enum id="org.gnome.SwellFoop.Sizes">
     <value value="0" nick="small"/>
     <value value="1" nick="normal"/>
     <value value="2" nick="large"/>
   </enum>
-  <schema id="org.gnome.swell-foop" path="/org/gnome/swell-foop/" gettext-domain="swell-foop">
+  <schema id="org.gnome.SwellFoop" path="/org/gnome/swell-foop/" gettext-domain="swell-foop">
     <key name="theme" type="s">
       <default>'shapesandcolors'</default>
       <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme' -->
@@ -12,7 +12,7 @@
       <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme' -->
       <description>The title of the tile theme to use.</description>
     </key>
-    <key name="size" enum="org.gnome.swell-foop.Sizes">
+    <key name="size" enum="org.gnome.SwellFoop.Sizes">
       <default>'small'</default>
       <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size' -->
       <summary>Board size</summary>

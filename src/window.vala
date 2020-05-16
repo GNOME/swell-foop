@@ -76,7 +76,7 @@ private class SwellFoopWindow : ApplicationWindow
 
     construct
     {
-        settings = new GLib.Settings ("org.gnome.swell-foop");
+        settings = new GLib.Settings ("org.gnome.SwellFoop");
 
         add_action_entries (win_actions, this);
         add_action (settings.create_action ("size"));
@@ -155,7 +155,7 @@ private class SwellFoopWindow : ApplicationWindow
         Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/first-run-stack.ui");
         var stack = (Stack) builder.get_object ("first_run_stack");
         var tip_label = (Label) builder.get_object ("tip_label");
-        /* Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application */
+        /* Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application */
         tip_label.set_label (_("Clear as many blocks as you can.\nFewer clicks means more points."));
         var play_button = (Button) builder.get_object ("play_button");
         play_button.clicked.connect (() => {

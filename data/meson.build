@@ -64,7 +64,7 @@ if appstream_util.found()
 endif
 
 # Gschema
-install_data('org.gnome.swell-foop.gschema.xml',
+install_data('org.gnome.SwellFoop.gschema.xml',
   install_dir: join_paths(datadir, 'glib-2.0', 'schemas'),
 )
 
