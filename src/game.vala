@@ -336,10 +336,7 @@ private class Game : Object
          || columns != this.columns)
             return false;
 
-        this.color_num = color_num;
-        this.score = score;
-        update_score (score);
-        tiles = new Tile? [rows, columns];
+        Tile? [,] tiles = new Tile? [rows, columns];
         for (uint8 i = 0; i < rows; i++)
         {
             tmp_variant_2 = ((!) tmp_variant).get_child_value (i);
@@ -347,12 +344,19 @@ private class Game : Object
             {
                 Variant tmp_variant_3 = tmp_variant_2.get_child_value (j);
                 uint8 color = tmp_variant_3.get_byte ();
+                if (color > 4)
+                    return false;
                 if (color == 0)
                     tiles [rows - i - 1, j] = null;
                 else
                     tiles [rows - i - 1, j] = new Tile (j, (uint8) (rows - i - 1), color);
             }
         }
+
+        this.tiles = tiles;
+        this.color_num = color_num;
+        this.score = score;
+        update_score (score);
         is_started = true;
         return true;
     }
