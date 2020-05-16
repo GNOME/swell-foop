@@ -29,8 +29,9 @@ private class Tile : Object
 
     public uint8 grid_x   { internal get; protected construct set; }
     public uint8 grid_y   { internal get; protected construct set; }
-    public uint8 color    { internal get; protected construct; }
-    internal bool visited   { internal get; private set; default = false; }
+    public uint8 color    { internal get; protected construct; }    /* 1 <= color <= 4 */
+    // Vala tip or bug: looks like "private" means "accessible only from this file"; but if both get and set are private, there is a warning
+    internal bool visited { protected get; private set; default = false; }
 
     /* Signals */
     internal signal void move (uint8 old_x, uint8 old_y, uint8 new_x, uint8 new_y);
@@ -45,8 +46,8 @@ private class Tile : Object
     /* Do not use this mothod to initialize the position. */
     internal void update_position (uint8 new_x, uint8 new_y)
     {
-        var old_x = grid_x;
-        var old_y = grid_y;
+        uint8 old_x = grid_x;
+        uint8 old_y = grid_y;
 
         if ((new_x != old_x) || (new_y != old_y))
         {
@@ -110,7 +111,7 @@ private class Game : Object
         {
             for (uint8 y = 0; y < rows; y++)
             {
-                uint8 c = (uint8) Math.floor (Random.next_double () * color_num);
+                uint8 c = (uint8) Math.floor (Random.next_double () * color_num) + 1;
                 tiles[y, x] = new Tile (x, y, c);
             }
         }
@@ -119,9 +120,9 @@ private class Game : Object
     }
 
     /* Recursively find all the connected tile from given_tile */
-    private List<Tile> _connected_tiles (Tile? given_tile)
+    private static List<Tile> _connected_tiles (Tile? given_tile, ref Tile? [,] tiles)
     {
-        var cl = new List<Tile> ();
+        List<Tile> cl = new List<Tile> ();
 
         if (given_tile == null || ((!) given_tile).visited || ((!) given_tile).closed)
             return cl;
@@ -134,27 +135,27 @@ private class Game : Object
         cl.append ((!) given_tile);
 
         unowned Tile? tile = tiles[y + 1, x];
-        if (y + 1 < rows
+        if (y + 1 < tiles.length [0]
          && tile != null && (((!) given_tile).color == ((!) tile).color))
-            cl.concat (_connected_tiles (tile));
+            cl.concat (_connected_tiles (tile, ref tiles));
 
         if (y >= 1)
         {
             tile = tiles[y - 1, x];
             if (tile != null && (((!) given_tile).color == ((!) tile).color))
-                cl.concat (_connected_tiles (tile));
+                cl.concat (_connected_tiles (tile, ref tiles));
         }
 
         tile = tiles[y, x + 1];
-        if (x + 1 < columns
+        if (x + 1 < tiles.length [1]
          && tile != null && (((!) given_tile).color == ((!) tile).color))
-            cl.concat (_connected_tiles (tile));
+            cl.concat (_connected_tiles (tile, ref tiles));
 
         if (x >= 1)
         {
             tile = tiles[y, x - 1];
             if (tile != null && (((!) given_tile).color == ((!) tile).color))
-                cl.concat (_connected_tiles (tile));
+                cl.concat (_connected_tiles (tile, ref tiles));
         }
 
         return cl;
@@ -162,13 +163,13 @@ private class Game : Object
 
     internal List<Tile> connected_tiles (Tile given_tile)
     {
+        List<Tile> cl = _connected_tiles (given_tile, ref tiles);
+
         foreach (unowned Tile? tile in tiles)
         {
             if (tile != null)
                 ((!) tile).visited = false;
         }
-
-        List<Tile> cl = _connected_tiles (given_tile);
 
         /* single tile will be ignored */
         if (cl.length () < 2)
@@ -196,8 +197,8 @@ private class Game : Object
 
         for (uint8 x = 0; x < columns; x++)
         {
-            var not_closed_tiles = new List<Tile> ();
-            var closed_tiles = new List<Tile> ();
+            List<Tile> not_closed_tiles = new List<Tile> ();
+            List<Tile> closed_tiles     = new List<Tile> ();
 
             /* for each column, separate not-closed and closed tiles */
             for (uint8 y = 0; y < rows; y++)
@@ -216,12 +217,12 @@ private class Game : Object
             /* append closed tiles to not-closed tiles */
             not_closed_tiles.concat ((owned) closed_tiles);
 
-            /* update tile array at the current column, not-closed tiles aret at the bottom, closed ones top */
+            /* update tile array at the current column, not-closed tiles are at the bottom, closed ones top */
             for (uint8 y = 0; y < rows; y++)
                 tiles[y, new_x] = not_closed_tiles.nth_data (y);
 
             /* flag to check if current column is empty */
-            var has_empty_col = true;
+            bool has_empty_col = true;
 
             /* update the positions (grid_x, grid_y) of tiles at the current column */
             for (uint8 y = 0; y < rows; y++)
@@ -264,16 +265,7 @@ private class Game : Object
         return false;
     }
 
-    internal void reset_visit ()
-    {
-        foreach (unowned Tile? tile in tiles)
-        {
-            if (tile != null)
-                ((!) tile).visited = false;
-        }
-    }
-
-    internal bool has_completed ()
+    private bool has_completed ()
     {
         foreach (unowned Tile? tile in tiles)
         {
@@ -284,7 +276,7 @@ private class Game : Object
         return true;
     }
 
-    internal bool has_won ()
+    private inline bool has_won ()
     {
         foreach (unowned Tile? tile in tiles)
         {
@@ -344,10 +336,7 @@ private class Game : Object
          || columns != this.columns)
             return false;
 
-        this.color_num = color_num;
-        this.score = score;
-        update_score (score);
-        tiles = new Tile? [rows, columns];
+        Tile? [,] tiles = new Tile? [rows, columns];
         for (uint8 i = 0; i < rows; i++)
         {
             tmp_variant_2 = ((!) tmp_variant).get_child_value (i);
@@ -355,12 +344,19 @@ private class Game : Object
             {
                 Variant tmp_variant_3 = tmp_variant_2.get_child_value (j);
                 uint8 color = tmp_variant_3.get_byte ();
+                if (color > 4)
+                    return false;
                 if (color == 0)
                     tiles [rows - i - 1, j] = null;
                 else
-                    tiles [rows - i - 1, j] = new Tile (j, (uint8) (rows - i - 1), color - 1);
+                    tiles [rows - i - 1, j] = new Tile (j, (uint8) (rows - i - 1), color);
             }
         }
+
+        this.tiles = tiles;
+        this.color_num = color_num;
+        this.score = score;
+        update_score (score);
         is_started = true;
         return true;
     }
@@ -384,7 +380,7 @@ private class Game : Object
                 if (tile == null || ((!) tile).closed)
                     builder.add ("y", 0);
                 else
-                    builder.add ("y", ((!) tile).color + 1);
+                    builder.add ("y", ((!) tile).color);
             }
             builder.close ();
         }

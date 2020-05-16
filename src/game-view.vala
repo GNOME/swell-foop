@@ -196,7 +196,7 @@ private class GameGroup : Clutter.Group
                 var l = game.get_tile (x, y);
                 if (l == null || l.closed)
                     continue;
-                var tile = new TileActor (l, theme.textures[l.color], tile_size);
+                var tile = new TileActor (l, theme.textures[l.color - 1], tile_size);
 
                 /* The event from the model will be caught and responded by the view */
                 l.move.connect (move_cb);
@@ -259,7 +259,7 @@ private class GameGroup : Clutter.Group
     }
 
     /* Sets the opacity for all tiles connected to the actor */
-    private void opacity_for_connected_tiles (TileActor? actor, uint8 opacity)
+    private void opacity_for_connected_tiles (TileActor? actor, Opacity opacity)
     {
         if (actor == null)
             return;
@@ -269,7 +269,7 @@ private class GameGroup : Clutter.Group
         {
             TileActor? tile_actor = tiles[l.grid_x, l.grid_y];
             if (tile_actor != null)
-                ((!) tile_actor).set_opacity (opacity);
+                ((!) tile_actor).update_opacity (opacity);
         }
     }
 
@@ -281,7 +281,7 @@ private class GameGroup : Clutter.Group
 
         var tile = (TileActor) actor;
 
-        opacity_for_connected_tiles (tile, 255);
+        opacity_for_connected_tiles (tile, Opacity.FULL);
         highlighted = tile;
 
         return false;
@@ -295,7 +295,7 @@ private class GameGroup : Clutter.Group
 
         var tile = (TileActor) actor;
 
-        opacity_for_connected_tiles (tile, 180);
+        opacity_for_connected_tiles (tile, Opacity.HALF);
 
         return false;
     }
@@ -305,7 +305,7 @@ private class GameGroup : Clutter.Group
     {
         var tile = (TileActor) actor;
 
-        opacity_for_connected_tiles (highlighted, 180);
+        opacity_for_connected_tiles (highlighted, Opacity.HALF);
 
         if (cursor_active)
         {
@@ -323,11 +323,9 @@ private class GameGroup : Clutter.Group
     /* When the mouse leaves the application window, reset all tiles to the default brightness */
     internal void board_left_cb ()
     {
-        game.reset_visit ();
-
         foreach (TileActor? tile_actor in tiles)
             if (tile_actor != null)
-                ((!) tile_actor).set_opacity (180);
+                ((!) tile_actor).update_opacity (Opacity.HALF);
     }
 
     private TileActor? find_tile_at_position (int position_x, int position_y)
@@ -343,6 +341,7 @@ private class GameGroup : Clutter.Group
     /* Move Keyboard cursor */
     internal void cursor_move (int x, int y)
     {
+        // update abstract cursor coords
         if (cursor_active)
         {
             int old_cursor_x = cursor_x;
@@ -358,12 +357,21 @@ private class GameGroup : Clutter.Group
         else
             cursor_active = true;
 
-        opacity_for_connected_tiles (highlighted, 180);
-        highlighted = find_tile_at_position (cursor_x, cursor_y);
+        // highlight and unhighlight
+        TileActor? cursor = find_tile_at_position (cursor_x, cursor_y);
 
-        if (highlighted != null)
-            opacity_for_connected_tiles (highlighted, 255);
+        if ((highlighted != null && cursor == null)
+         || (highlighted == null && cursor != null)
+         || (highlighted != null && cursor != null && ((!) highlighted).tile.color != ((!) cursor).tile.color))
+        {
+            // opacity_for_connected_tiles() handles correctly a null TileActor
+            opacity_for_connected_tiles (highlighted, Opacity.HALF);
+            opacity_for_connected_tiles (cursor,      Opacity.FULL);
+        }
 
+        highlighted = cursor;
+
+        // update visual cursor position
         float xx, yy;
         xx = cursor_x * tile_size;
         yy = (game.rows - 1 - cursor_y) * tile_size;
@@ -376,7 +384,7 @@ private class GameGroup : Clutter.Group
     {
         game.remove_connected_tiles (tiles[cursor_x, cursor_y].tile);
         highlighted = tiles[cursor_x, cursor_y];
-        opacity_for_connected_tiles (highlighted, 255);
+        opacity_for_connected_tiles (highlighted, Opacity.FULL);
     }
 
     /* Show flying score animation after each tile-removing click */
@@ -440,15 +448,15 @@ private class Theme : Object
         try
         {
             for (uint8 i = 0; i < 4; i++) {
-                 var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, colors[i] + ".svg"));
+                var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, colors[i] + ".svg"));
                 textures[i] = new Clutter.Image ();
                 textures[i].set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
-                    pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
+                                      pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
             }
             var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, "highlight.svg"));
             cursor = new Clutter.Image ();
             cursor.set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
-               pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
+                             pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
         }
         catch (Clutter.TextureError e)
         {
@@ -459,6 +467,13 @@ private class Theme : Object
             warning ("Failed to load textures: %s", e.message);
         }
     }
+}
+
+private enum Opacity
+{
+    NULL,
+    HALF,
+    FULL;
 }
 
 /**
@@ -472,12 +487,25 @@ private class TileActor : Clutter.Actor
     internal TileActor (Tile tile, Clutter.Image texture, int size)
     {
         this.tile = tile;
-        set_opacity (180);
+        update_opacity (Opacity.HALF);
         set_size (size, size);
         content = texture;
 
         set_content_gravity (Clutter.ContentGravity.CENTER);
         set_pivot_point (0.5f, 0.5f);
+    }
+
+    internal void update_opacity (Opacity opacity)
+    {
+        set_easing_duration (200);
+        set_easing_mode (Clutter.AnimationMode.EASE_OUT_QUAD);
+        switch (opacity)
+        {
+            case Opacity.NULL:  set_opacity (  0);  break;
+            case Opacity.HALF:  set_opacity (180);  break;
+            case Opacity.FULL:  set_opacity (255);  break;
+            default: assert_not_reached ();
+        }
     }
 
     /* Destroy the tile */
@@ -487,7 +515,7 @@ private class TileActor : Clutter.Actor
         set_easing_mode (Clutter.AnimationMode.LINEAR);
         set_easing_duration (500);
         set_scale (2.0, 2.0);
-        set_opacity (0);
+        update_opacity (Opacity.NULL);
         transitions_completed.connect (hide_tile_cb);
     }
 
