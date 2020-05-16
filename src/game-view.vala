@@ -196,7 +196,7 @@ private class GameGroup : Clutter.Group
                 var l = game.get_tile (x, y);
                 if (l == null || l.closed)
                     continue;
-                var tile = new TileActor (l, theme.textures[l.color], tile_size);
+                var tile = new TileActor (l, theme.textures[l.color - 1], tile_size);
 
                 /* The event from the model will be caught and responded by the view */
                 l.move.connect (move_cb);
@@ -448,15 +448,15 @@ private class Theme : Object
         try
         {
             for (uint8 i = 0; i < 4; i++) {
-                 var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, colors[i] + ".svg"));
+                var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, colors[i] + ".svg"));
                 textures[i] = new Clutter.Image ();
                 textures[i].set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
-                    pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
+                                      pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
             }
             var pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.DATADIR, "themes", name, "highlight.svg"));
             cursor = new Clutter.Image ();
             cursor.set_data (pixbuf.get_pixels (), Cogl.PixelFormat.RGBA_8888,
-               pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
+                             pixbuf.get_width (), pixbuf.get_height (),  pixbuf.get_rowstride ());
         }
         catch (Clutter.TextureError e)
         {

@@ -29,7 +29,7 @@ private class Tile : Object
 
     public uint8 grid_x   { internal get; protected construct set; }
     public uint8 grid_y   { internal get; protected construct set; }
-    public uint8 color    { internal get; protected construct; }
+    public uint8 color    { internal get; protected construct; }    /* 1 <= color <= 4 */
     // Vala tip or bug: looks like "private" means "accessible only from this file"; but if both get and set are private, there is a warning
     internal bool visited { protected get; private set; default = false; }
 
@@ -111,7 +111,7 @@ private class Game : Object
         {
             for (uint8 y = 0; y < rows; y++)
             {
-                uint8 c = (uint8) Math.floor (Random.next_double () * color_num);
+                uint8 c = (uint8) Math.floor (Random.next_double () * color_num) + 1;
                 tiles[y, x] = new Tile (x, y, c);
             }
         }
@@ -350,7 +350,7 @@ private class Game : Object
                 if (color == 0)
                     tiles [rows - i - 1, j] = null;
                 else
-                    tiles [rows - i - 1, j] = new Tile (j, (uint8) (rows - i - 1), color - 1);
+                    tiles [rows - i - 1, j] = new Tile (j, (uint8) (rows - i - 1), color);
             }
         }
         is_started = true;
@@ -376,7 +376,7 @@ private class Game : Object
                 if (tile == null || ((!) tile).closed)
                     builder.add ("y", 0);
                 else
-                    builder.add ("y", ((!) tile).color + 1);
+                    builder.add ("y", ((!) tile).color);
             }
             builder.close ();
         }
