@@ -265,7 +265,7 @@ private class Game : Object
         return false;
     }
 
-    internal bool has_completed ()
+    private bool has_completed ()
     {
         foreach (unowned Tile? tile in tiles)
         {
@@ -276,7 +276,7 @@ private class Game : Object
         return true;
     }
 
-    internal bool has_won ()
+    private inline bool has_won ()
     {
         foreach (unowned Tile? tile in tiles)
         {
