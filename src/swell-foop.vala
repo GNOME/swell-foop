@@ -12,6 +12,9 @@ using Config;
 
 public class SwellFoop : Gtk.Application
 {
+    /* Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog */
+    private const string PROGRAM_NAME = _("Swell Foop");
+
     /* Main window */
     private SwellFoopWindow window;
 
@@ -101,8 +104,7 @@ public class SwellFoop : Gtk.Application
         string[] documenters = {};
 
         Gtk.show_about_dialog (window,
-                               /* Translators: About dialog text, name of the application */
-                               "program-name", _("Swell Foop"),
+                               "program-name", PROGRAM_NAME,
                                "version", Config.VERSION,
                                "comments",
                                /* Translators: About dialog text, small description of the application */
@@ -157,8 +159,7 @@ public class SwellFoop : Gtk.Application
             return Posix.EXIT_SUCCESS;
         }
 
-        /* Translators: name of the application, as displayed in the window manager */
-        Environment.set_application_name (_("Swell Foop"));
+        Environment.set_application_name (PROGRAM_NAME);
         Gtk.Window.set_default_icon_name ("org.gnome.SwellFoop");
 
         var app = new SwellFoop ();
