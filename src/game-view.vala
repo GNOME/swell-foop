@@ -343,6 +343,7 @@ private class GameGroup : Clutter.Group
     /* Move Keyboard cursor */
     internal void cursor_move (int x, int y)
     {
+        // update abstract cursor coords
         if (cursor_active)
         {
             int old_cursor_x = cursor_x;
@@ -358,12 +359,21 @@ private class GameGroup : Clutter.Group
         else
             cursor_active = true;
 
-        opacity_for_connected_tiles (highlighted, Opacity.HALF);
-        highlighted = find_tile_at_position (cursor_x, cursor_y);
+        // highlight and unhighlight
+        TileActor? cursor = find_tile_at_position (cursor_x, cursor_y);
 
-        if (highlighted != null)
-            opacity_for_connected_tiles (highlighted, Opacity.FULL);
+        if ((highlighted != null && cursor == null)
+         || (highlighted == null && cursor != null)
+         || (highlighted != null && cursor != null && ((!) highlighted).tile.color != ((!) cursor).tile.color))
+        {
+            // opacity_for_connected_tiles() handles correctly a null TileActor
+            opacity_for_connected_tiles (highlighted, Opacity.HALF);
+            opacity_for_connected_tiles (cursor,      Opacity.FULL);
+        }
 
+        highlighted = cursor;
+
+        // update visual cursor position
         float xx, yy;
         xx = cursor_x * tile_size;
         yy = (game.rows - 1 - cursor_y) * tile_size;
