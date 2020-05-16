@@ -46,8 +46,8 @@ private class Tile : Object
     /* Do not use this mothod to initialize the position. */
     internal void update_position (uint8 new_x, uint8 new_y)
     {
-        var old_x = grid_x;
-        var old_y = grid_y;
+        uint8 old_x = grid_x;
+        uint8 old_y = grid_y;
 
         if ((new_x != old_x) || (new_y != old_y))
         {
@@ -122,7 +122,7 @@ private class Game : Object
     /* Recursively find all the connected tile from given_tile */
     private static List<Tile> _connected_tiles (Tile? given_tile, ref Tile? [,] tiles)
     {
-        var cl = new List<Tile> ();
+        List<Tile> cl = new List<Tile> ();
 
         if (given_tile == null || ((!) given_tile).visited || ((!) given_tile).closed)
             return cl;
@@ -197,8 +197,8 @@ private class Game : Object
 
         for (uint8 x = 0; x < columns; x++)
         {
-            var not_closed_tiles = new List<Tile> ();
-            var closed_tiles = new List<Tile> ();
+            List<Tile> not_closed_tiles = new List<Tile> ();
+            List<Tile> closed_tiles     = new List<Tile> ();
 
             /* for each column, separate not-closed and closed tiles */
             for (uint8 y = 0; y < rows; y++)
@@ -222,7 +222,7 @@ private class Game : Object
                 tiles[y, new_x] = not_closed_tiles.nth_data (y);
 
             /* flag to check if current column is empty */
-            var has_empty_col = true;
+            bool has_empty_col = true;
 
             /* update the positions (grid_x, grid_y) of tiles at the current column */
             for (uint8 y = 0; y < rows; y++)
