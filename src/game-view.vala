@@ -231,12 +231,6 @@ private class Board : Widget
                     ((!) tile).close.connect (close_cb);
                 }
 
-                /* Physical position in the stage */
-//                float xx, yy;
-//                xx = x * tile_size;
-//                yy = (game.rows - y - 1) * tile_size;
-//                tile_view.set_position (xx, yy);
-
                 /* Respond to the user interactions */
                 if (tile_view.click_controller != null)
                     ((!) tile_view.click_controller).pressed.connect (remove_region_cb);
@@ -246,21 +240,22 @@ private class Board : Widget
 
                 tiles[x, y] = tile_view;
                 tile_view.insert_before (this, /* insert last */ null);
-                GridLayoutChild child_layout = (GridLayoutChild) layout.get_layout_child (tile_view);
-                child_layout.set_top_attach (game.rows - y - 1);
-                child_layout.set_left_attach (x);
+                FixedLayoutChild child_layout = (FixedLayoutChild) layout.get_layout_child (tile_view);
+                Graphene.Point point = Graphene.Point ();
+                point.init ((float) (x * tile_size), (float) ((game.rows - y - 1) * tile_size));
+                Gsk.Transform transform = new Gsk.Transform ();
+                transform = transform.translate (point);
+                child_layout.set_transform (transform);
             }
         }
     }
 
     internal bool is_zealous { private get; internal set; }
 
-    private GridLayout layout;
+    private FixedLayout layout;
     construct
     {
-        layout = new GridLayout ();
-        layout.set_row_homogeneous (true);
-        layout.set_column_homogeneous (true);
+        layout = new FixedLayout ();
         set_layout_manager (layout);
 
         add_css_class ("board");
@@ -287,21 +282,19 @@ private class Board : Widget
         tiles[old_x, old_y] = tile_view_2;
 
         // reorder tiles views visually
-        GridLayoutChild child_layout;
+        FixedLayoutChild child_layout;
+        Graphene.Point point = Graphene.Point ();
+        Gsk.Transform transform = new Gsk.Transform ();
 
-        child_layout = (GridLayoutChild) layout.get_layout_child ((!) tile_view_1);
-        child_layout.set_top_attach (game.rows - new_y - 1);
-        child_layout.set_left_attach (new_x);
+        child_layout = (FixedLayoutChild) layout.get_layout_child ((!) tile_view_1);
+        point.init ((float) (new_x * tile_size), (float) ((game.rows - new_y - 1) * tile_size));
+        transform = transform.translate (point);
+        child_layout.set_transform (transform);
 
-        child_layout = (GridLayoutChild) layout.get_layout_child ((!) tile_view_2);
-        child_layout.set_top_attach (game.rows - old_y - 1);
-        child_layout.set_left_attach (old_x);
-
-//        // launch tile animation
-//        var new_xx = new_x * tile_size;
-//        var new_yy = (game.rows - new_y - 1) * tile_size;
-
-//        tile.animate_to (new_xx, new_yy, is_zealous);
+        child_layout = (FixedLayoutChild) layout.get_layout_child ((!) tile_view_2);
+        point.init ((float) (old_x * tile_size), (float) ((game.rows - old_y - 1) * tile_size));
+        transform.translate (point);
+        child_layout.set_transform (transform);
     }
 
     /* Sets the opacity for all tiles connected to the given tile */
@@ -491,7 +484,6 @@ private class TileView : Widget
                 default: assert_not_reached ();
             }
 
-//        add_css_class ("half-opacity");
         if (tile == null || ((!) tile).color == 0)
             update_opacity (Opacity.NULL);
         else
