@@ -224,6 +224,12 @@ private class Board : Widget
                 else
                     tile_view = new TileView (tile, tile_size);
 
+                tiles[x, y] = tile_view;
+                tile_view.insert_before (this, /* insert last */ null);
+
+                FixedLayoutChild child_layout = (FixedLayoutChild) layout.get_layout_child (tile_view);
+                tile_view.child_layout = child_layout;
+
                 /* The event from the model will be caught and responded by the view */
                 if (tile != null)
                 {
@@ -238,9 +244,7 @@ private class Board : Widget
                 tile_view.inout_controller.enter.connect (tile_entered_cb);
                 tile_view.inout_controller.leave.connect (tile_left_cb);
 
-                tiles[x, y] = tile_view;
-                tile_view.insert_before (this, /* insert last */ null);
-                FixedLayoutChild child_layout = (FixedLayoutChild) layout.get_layout_child (tile_view);
+                /* visual position */
                 Graphene.Point point = Graphene.Point ();
                 point.init ((float) (x * tile_size), (float) ((game.rows - y - 1) * tile_size));
                 Gsk.Transform transform = new Gsk.Transform ();
@@ -250,7 +254,12 @@ private class Board : Widget
         }
     }
 
-    internal bool is_zealous { private get; internal set; }
+    private bool _is_zealous = false;
+    internal bool is_zealous
+    {
+        private  get { return _is_zealous; }
+        internal set { _is_zealous = value; if (value) add_css_class ("zealous"); else remove_css_class ("zealous"); }
+    }
 
     private FixedLayout layout;
     construct
@@ -266,7 +275,7 @@ private class Board : Widget
     {
         unowned TileView? tile_actor = tiles[grid_x, grid_y];
         if (tile_actor != null)
-            ((!) tile_actor).update_opacity (Opacity.NULL);
+            ((!) tile_actor).animate_out (is_zealous);
     }
 
     /* When a tile in the model layer is moved, play an animation at the view layer */
@@ -281,24 +290,13 @@ private class Board : Widget
         tiles[new_x, new_y] = tile_view_1;
         tiles[old_x, old_y] = tile_view_2;
 
-        // reorder tiles views visually
-        FixedLayoutChild child_layout;
-        Graphene.Point point = Graphene.Point ();
-        Gsk.Transform transform = new Gsk.Transform ();
-
-        child_layout = (FixedLayoutChild) layout.get_layout_child ((!) tile_view_1);
-        point.init ((float) (new_x * tile_size), (float) ((game.rows - new_y - 1) * tile_size));
-        transform = transform.translate (point);
-        child_layout.set_transform (transform);
-
-        child_layout = (FixedLayoutChild) layout.get_layout_child ((!) tile_view_2);
-        point.init ((float) (old_x * tile_size), (float) ((game.rows - old_y - 1) * tile_size));
-        transform.translate (point);
-        child_layout.set_transform (transform);
+        tile_view_1.animate_move ((float) (old_x * tile_size), (float) ((game.rows - old_y - 1) * tile_size),
+                                  (float) (new_x * tile_size), (float) ((game.rows - new_y - 1) * tile_size),
+                                  is_zealous);
     }
 
-    /* Sets the opacity for all tiles connected to the given tile */
-    private void opacity_for_connected_tiles (TileView? given_tile, Opacity opacity)
+    /* Sets or unsets the highlight for all tiles connected to the given tile */
+    private void highlight_connected_tiles (TileView? given_tile, bool highlight)
     {
         if (given_tile == null)
             return;
@@ -308,7 +306,7 @@ private class Board : Widget
         {
             TileView? tile_view = tiles[tile.grid_x, tile.grid_y];
             if (tile_view != null)
-                ((!) tile_view).update_opacity (opacity);
+                ((!) tile_view).set_highlight (highlight);
         }
     }
 
@@ -320,7 +318,7 @@ private class Board : Widget
 
         TileView tile_view = (TileView) inout_controller.get_widget ();
 
-        opacity_for_connected_tiles (tile_view, Opacity.FULL);
+        highlight_connected_tiles (tile_view, true);
         highlighted = tile_view;
     }
 
@@ -332,7 +330,7 @@ private class Board : Widget
 
         TileView tile_view = (TileView) inout_controller.get_widget ();
 
-        opacity_for_connected_tiles (tile_view, Opacity.HALF);
+        highlight_connected_tiles (tile_view, false);
     }
 
     /* When the user click a tile, send the model to remove the connected tile. */
@@ -340,7 +338,7 @@ private class Board : Widget
     {
         TileView tile_view = (TileView) click_controller.get_widget ();
 
-        opacity_for_connected_tiles (highlighted, Opacity.HALF);
+        highlight_connected_tiles (highlighted, false);
 
         if (cursor_active)
         {
@@ -360,7 +358,7 @@ private class Board : Widget
     {
         foreach (TileView? tile_actor in tiles)
             if (tile_actor != null)
-                ((!) tile_actor).update_opacity (Opacity.HALF);
+                ((!) tile_actor).set_highlight (false);
     }
 
     private TileView? find_tile_at_position (int position_x, int position_y)
@@ -399,9 +397,9 @@ private class Board : Widget
          || (highlighted == null && cursor_tile != null)
          || (highlighted != null && cursor_tile != null && ((!) highlighted).tile.color != ((!) cursor_tile).tile.color))
         {
-            // opacity_for_connected_tiles() handles correctly a null TileView
-            opacity_for_connected_tiles (highlighted, Opacity.HALF);
-            opacity_for_connected_tiles (cursor_tile, Opacity.FULL);
+            // highlight_connected_tiles() handles correctly a null TileView
+            highlight_connected_tiles (highlighted, false);
+            highlight_connected_tiles (cursor_tile, true);
         }
 
         highlighted = cursor_tile;
@@ -419,20 +417,13 @@ private class Board : Widget
     {
         game.remove_connected_tiles (tiles[cursor_x, cursor_y].tile);
         highlighted = tiles[cursor_x, cursor_y];
-        opacity_for_connected_tiles (highlighted, Opacity.FULL);
+        highlight_connected_tiles (highlighted, true);
     }
 
     private inline void move_undone_cb ()
     {
         game = game;
     }
-}
-
-private enum Opacity
-{
-    NULL,
-    HALF,
-    FULL;
 }
 
 /**
@@ -446,6 +437,8 @@ private class TileView : Widget
 
     public EventControllerMotion inout_controller { internal get; protected construct; }
     public GestureClick?         click_controller { internal get; protected construct; default = null; }
+
+    internal FixedLayoutChild child_layout { private get; internal set; }
 
     private bool tile_destroyed = false;
 
@@ -484,68 +477,76 @@ private class TileView : Widget
                 default: assert_not_reached ();
             }
 
-        if (tile == null || ((!) tile).color == 0)
-            update_opacity (Opacity.NULL);
-        else
-            update_opacity (Opacity.HALF);
+        set_highlight (false);
 
         add_controller (inout_controller);
         if (click_controller != null)
             add_controller ((!) click_controller);
     }
 
-    internal void update_opacity (Opacity opacity)
+    internal void set_highlight (bool highlight)
     {
         if (tile_destroyed)
             return;
 
-//        string [] css_classes = get_css_classes ();
-//        uint i;
-//        for (i = 0; i < css_classes.length; i++)
-//            if (css_classes [i] == "null-opacity"
-//             || css_classes [i] == "half-opacity"
-//             || css_classes [i] == "full-opacity")
-//                break;
-
-//        switch (opacity)
-//        {
-//            case Opacity.NULL: if (css_classes [i] == "null-opacity") return; css_classes [i] = "null-opacity"; break;
-//            case Opacity.HALF: if (css_classes [i] == "half-opacity") return; css_classes [i] = "half-opacity"; break;
-//            case Opacity.FULL: if (css_classes [i] == "full-opacity") return; css_classes [i] = "full-opacity"; break;
-//        }
-//        set_css_classes (css_classes);    // FIXME https://gitlab.gnome.org/GNOME/vala/issues/994
-        switch (opacity)
-        {
-            case Opacity.NULL: set_opacity (0.0);
-                               tile_destroyed = true;
-                               can_target = false;
-                               if (click_controller != null)
-                                   remove_controller ((!) click_controller);
-                               break;
-            case Opacity.HALF: set_opacity (0.7); break;
-            case Opacity.FULL: set_opacity (1.0); break;
-        }
+        if (highlight)
+            add_css_class ("highlight");
+        else
+            remove_css_class ("highlight");
     }
 
     /* Destroy the tile */
-//    internal void animate_out ()
-//    {
+    internal void animate_out (bool is_zealous)
+    {
         /* When the animination is done, hide the actor */
-//        update_opacity (Opacity.NULL);
-//        transitions_completed.connect (hide_tile_cb);
-//    }
-
-//    private void hide_tile_cb ()
-//    {
-//        hide ();
-//    }
+        tile_destroyed = true;
+        can_target = false;
+        if (click_controller != null)
+            remove_controller ((!) click_controller);
+        remove_css_class ("highlight");
+        add_css_class ("removed");
+        Timeout.add (is_zealous ? 240 : 420, () => { hide (); return Source.REMOVE; });
+    }
 
     /* Define how the tile moves */
-//    internal void animate_to (double new_x, double new_y, bool is_zealous = false)
-//    {
-//        var anim_mode = is_zealous ? Clutter.AnimationMode.EASE_OUT_BOUNCE : Clutter.AnimationMode.EASE_OUT_QUAD;
-//        set_easing_mode (anim_mode);
-//        set_easing_duration (500);
-//        set_position ((float) new_x, (float) new_y);
-//    }
+    private uint tick_id = 0;
+    private float current_x = 0.0f;
+    private float current_y = 0.0f;
+    internal void animate_move (float old_x, float old_y, float new_x, float new_y, bool is_zealous = false)
+    {
+        Timeout.add (is_zealous ? 240 : 420, () => {
+                if (tick_id == 0)
+                {
+                    current_x = old_x;
+                    current_y = old_y;
+                }
+                else
+                    remove_tick_callback (tick_id);
+
+                uint8 i = is_zealous ? 25 : 40;
+                float move_distance_x = (new_x - current_x) / (float) i;
+                float move_distance_y = (new_y - current_y) / (float) i;
+
+                tick_id = add_tick_callback (() => {
+                        i--;
+                        Graphene.Point point = Graphene.Point ();
+                        Gsk.Transform transform = new Gsk.Transform ();
+
+                        current_x = new_x - (float) i * move_distance_x;
+                        current_y = new_y - (float) i * move_distance_y;
+                        point.init (current_x, current_y);
+                        transform = transform.translate (point);
+                        child_layout.set_transform (transform);
+
+                        if (i == 0)
+                        {
+                            tick_id = 0;
+                            return Source.REMOVE;
+                        }
+                        else
+                            return Source.CONTINUE;
+                    });
+                return Source.REMOVE;
+            });
+    }
 }
