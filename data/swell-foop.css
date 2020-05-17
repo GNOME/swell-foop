@@ -26,21 +26,24 @@
 * * tiles
 \*/
 
-/* TODO handle opacity this way */
+/* highlighting */
 .tile {
-  transition: opacity 0.2s;
-}
-.tile.null-opacity {
-  opacity:0.0;
-}
-.tile.half-opacity {
   opacity:0.7;
+  transition: opacity 0.3s;
 }
-.tile.full-opacity {
+.tile.highlight {
   opacity:1.0;
 }
+.tile.removed {
+  transition: opacity 1.5s;
+  opacity:0.0;
+}
+.zealous .tile.removed {
+  transition: opacity 0.6s;
+  opacity:0.0;
+}
 
-/* tile images */
+/* tiles images */
 .tile.red {
   background-image: -gtk-icontheme('red');
 }
