@@ -123,24 +123,8 @@ private class SwellFoopWindow : ApplicationWindow
     {
         Object (application: application);
 
-        /* Create an instance of game, either with a saved game, or with initial values for row, column and color */
-        Size size = get_board_size ();
-        game = new Game (size.rows, size.columns, (uint8) settings.get_int ("colors"), settings.get_value ("saved-game"));
-        update_score_cb (game.score);
-        if (game.score != 0)
-            game_in_progress = true;
+        new_game (settings.get_value ("saved-game"));
 
-        /* Game score change will be sent to the main window and show in the score label */
-        game.update_score.connect (update_score_cb);
-        game.complete.connect (complete_cb);
-        game.started.connect (started_cb);
-
-        /* Initialize the themes needed by actors */
-        view.set_theme_name (settings.get_string ("theme"));
-        view.set_is_zealous (settings.get_boolean ("zealous"));
-        view.set_game ((!) game);
-
-        /* When the mouse leaves the window we need to update the view */
         init_motion ();
     }
 
@@ -211,25 +195,28 @@ private class SwellFoopWindow : ApplicationWindow
     }
 
     /*\
-    * * internal calls
+    * * various calls
     \*/
 
-    internal void new_game ()
+    private void new_game (Variant? saved_game = null)
     {
         Size size = get_board_size ();
         game = new Game (size.rows,
                          size.columns,
-                         (uint8) settings.get_int ("colors"));
+                         (uint8) settings.get_int ("colors"),
+                         saved_game);
+        game_in_progress = game.score != 0;
+        update_score_cb (game.score);
+
+        /* Game score change will be sent to the main window and show in the score label */
         game.update_score.connect (update_score_cb);
         game.complete.connect (complete_cb);
         game.started.connect (started_cb);
+
+        /* Initialize the themes needed by actors */
         view.set_theme_name (settings.get_string ("theme"));
         view.set_is_zealous (settings.get_boolean ("zealous"));
         view.set_game ((!) game);
-
-        game_in_progress = false;
-
-        update_score_cb (0);
     }
 
     protected override void destroy ()

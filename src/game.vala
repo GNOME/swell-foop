@@ -95,10 +95,10 @@ private class Game : Object
     internal signal void started ();
 
     /* Constructor */
-    internal Game (uint8 rows, uint8 columns, uint8 color_num, Variant? variant = null)
+    internal Game (uint8 rows, uint8 columns, uint8 color_num, Variant? saved_game)
     {
         Object (rows: rows, columns: columns, color_num: color_num);
-        if (variant == null || !load_saved_game ((!) variant))
+        if (saved_game == null || !load_saved_game ((!) saved_game))
             create_new_game ();
     }
 
