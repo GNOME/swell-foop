@@ -140,6 +140,49 @@
         <!-- Translators: title of the window displayed on the headerbar; name of the application -->
         <property name="title" translatable="yes">Swell Foop</property>
         <child>
+          <object class="GtkBox" id="undo_redo_box">
+            <property name="visible">True</property>
+            <property name="valign">center</property>
+            <style>
+              <class name="linked"/>
+            </style>
+            <child>
+              <object class="GtkButton">
+                <property name="visible">True</property>
+                <property name="valign">center</property>
+                <!-- Translators: tooltip text of the Undo button; probably a verb -->
+                <property name="tooltip-text" translatable="yes">Undo</property>
+                <property name="action-name">win.undo</property>
+                <property name="focus-on-click">False</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">edit-undo-symbolic</property>
+                    <property name="visible">True</property>
+                    <property name="icon-size">1</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="visible">True</property>
+                <property name="valign">center</property>
+                <!-- Translators: tooltip text of the Undo button; probably a verb -->
+                <property name="tooltip-text" translatable="yes">Redo</property>
+                <property name="action-name">win.redo</property>
+                <property name="focus-on-click">False</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">edit-redo-symbolic</property>
+                    <property name="visible">True</property>
+                    <property name="icon-size">1</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
           <object class="GtkMenuButton" id="hamburger_button">
             <property name="visible">True</property>
             <property name="menu-model">hamburger-menu</property>

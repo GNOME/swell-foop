@@ -122,6 +122,7 @@ private class GameGroup : Clutter.Group
                 SignalHandler.disconnect_matched (game, SignalMatchType.DATA, 0, 0, null, null, this);
             _game = value;
             game_is_set = true;
+            game.undone.connect (move_undone_cb);
             game.complete.connect (game_complete_cb);
             game.update_score.connect (update_score_cb);
 
@@ -427,6 +428,11 @@ private class GameGroup : Clutter.Group
         button_actor.set_easing_duration (2000);
         button_actor.z_position = -50;
         button_actor.set_opacity (255);
+    }
+
+    private inline void move_undone_cb ()
+    {
+        game = game;
     }
 }
 

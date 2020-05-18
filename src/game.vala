@@ -46,6 +46,9 @@ private class Tile : Object
     /* Do not use this mothod to initialize the position. */
     internal void update_position (uint8 new_x, uint8 new_y)
     {
+        if (closed)
+            return;
+
         uint8 old_x = grid_x;
         uint8 old_y = grid_y;
 
@@ -101,6 +104,25 @@ private class Game : Object
         if (saved_game == null || !load_saved_game ((!) saved_game))
             create_new_game ();
     }
+
+//    private static string to_string (ref Tile [,] current_board)
+//    {
+//        uint8 rows    = (uint8) current_board.length [0];
+//        uint8 columns = (uint8) current_board.length [1];
+//        string board  = "\n";
+//        for (uint8 row = rows; row > 0; row--)
+//        {
+//            for (uint8 col = 0; col < columns; col++)
+//                if (current_board [row - 1, col] == null)
+//                    board += ". ";
+//                else if (((!) current_board [row - 1, col]).closed)
+//                    board += "0 ";
+//                else
+//                    board += ((!) current_board [row - 1, col]).color.to_string () + " ";
+//            board += "\n";
+//        }
+//        return (board);
+//    }
 
     private inline void create_new_game ()
     {
@@ -224,7 +246,12 @@ private class Game : Object
 
     internal void remove_connected_tiles (Tile given_tile)
     {
-        _remove_connected_tiles (given_tile, ref current_board);
+        remove_connected_tiles_real (given_tile, /* skip history */ false);
+    }
+
+    private void remove_connected_tiles_real (Tile given_tile, bool skip_history)
+    {
+        _remove_connected_tiles (given_tile, ref current_board, skip_history);
 
         if (!is_started) {
             is_started = true;
@@ -238,19 +265,18 @@ private class Game : Object
             complete ();
         }
     }
-    private void _remove_connected_tiles (Tile given_tile, ref Tile? [,] current_board)
+    private void _remove_connected_tiles (Tile given_tile, ref Tile? [,] current_board, bool skip_history)
     {
         List<Tile> cl = _connected_tiles (given_tile, ref current_board);
 
         if (cl.length () < 2)
             return;
 
-        add_history_entry (given_tile.grid_x, given_tile.grid_y);
-
         foreach (unowned Tile tile in (!) cl)
             tile.closed = true;
 
         uint8 new_x = 0;
+        uint8 [] removed_columns = {};
 
         for (uint8 x = 0; x < columns; x++)
         {
@@ -289,15 +315,23 @@ private class Game : Object
                 if (tile == null)
                     break;
 
-                ((!) tile).update_position (new_x, y);
-
                 if (!((!) tile).closed)
+                {
+                    ((!) tile).update_position (new_x, y);
                     has_empty_col = false;
+                }
             }
 
             /* If the current column is empty, don't increment new_x. Otherwise increment */
             if (!has_empty_col)
                 new_x++;
+            else
+            {
+                int length = removed_columns.length;
+                removed_columns.resize (length + 1);
+                removed_columns.move (/* start */ 0, /* dest */ 1, /* length */ length);
+                removed_columns [0] = new_x;
+            }
         }
 
         /* The remaining columns are do-not-cares. Assign null to them */
@@ -306,6 +340,9 @@ private class Game : Object
                 current_board [y, new_x] = null;
 
         increment_score_from_tiles ((uint16) cl.length ());
+
+        if (!skip_history)
+            add_history_entry (given_tile.grid_x, given_tile.grid_y, given_tile.color, cl, (owned) removed_columns);
     }
 
     private static bool has_completed (ref Tile? [,] current_board)
@@ -330,20 +367,28 @@ private class Game : Object
         return true;
     }
 
-    private void increment_score_from_tiles (uint16 n_tiles)
+    private inline void decrement_score_from_tiles (uint16 n_tiles)
     {
-        uint points_awarded = 0;
-
-        if (n_tiles >= 3)
-            points_awarded = (uint) (n_tiles - 2) * (uint) (n_tiles - 2);
-
-        increment_score (points_awarded);
+        increment_score (-1 * get_score_from_tiles (n_tiles));
     }
 
-    private void increment_score (uint increment)
+    private inline void increment_score_from_tiles (uint16 n_tiles)
     {
-        score += increment;
-        update_score (increment);
+        increment_score (get_score_from_tiles (n_tiles));
+    }
+
+    private inline int get_score_from_tiles (uint16 n_tiles)
+    {
+        return n_tiles < 3 ? 0 : (n_tiles - 2) * (n_tiles - 2);
+    }
+
+    private void increment_score (int variation)
+    {
+        score += variation;
+        if (variation > 0)
+            update_score (variation);
+        else
+            update_score (0);
     }
 
     /*\
@@ -413,11 +458,24 @@ private class Game : Object
                 break;
             _remove_connected_tiles (current_board [rows - tmp_variant_1.get_child_value (1).get_byte () - 1,
                                                     tmp_variant_1.get_child_value (0).get_byte ()],
-                                     ref current_board);
+                                     ref current_board,
+                                     /* skip history */ false);
         }
 
-        if (has_completed (ref current_board))
+        if (history_index > reversed_history.length ())
+        {
+            clear_history ();
             return false;
+        }
+
+        for (uint16 i = history_index; i != 0; i--)
+            undo_real (ref current_board);
+
+        if (has_completed (ref current_board))
+        {
+            clear_history ();
+            return false;
+        }
 
         this.current_board = current_board;
         this.initial_board = initial_board;
@@ -446,14 +504,16 @@ private class Game : Object
         builder.close ();
         builder.add ("q", history_index);
         builder.open (new VariantType ("a(yy)"));
-        history.@foreach ((data) => {
+        reversed_history.reverse ();
+        reversed_history.@foreach ((data) => {
                 if (data == null)
                     return;
                 builder.open (new VariantType ("(yy)"));
-                builder.add ("y", ((!) data).x);
-                builder.add ("y", rows - ((!) data).y - 1);
+                builder.add ("y", ((!) data).click.x);
+                builder.add ("y", rows - ((!) data).click.y - 1);
                 builder.close ();
             });
+        reversed_history.reverse ();    // get_saved_game might be called once or twice… so let’s put reversed_history back in its (inverted) order
         builder.close ();
         return new Variant.maybe (/* guess the type */ null, builder.end ());
     }
@@ -462,24 +522,178 @@ private class Game : Object
     * * history
     \*/
 
+    [CCode (notify = true)] internal bool can_undo { internal get; private set; default = false; }
+    [CCode (notify = true)] internal bool can_redo { internal get; private set; default = false; }
+    private uint16 history_length = 0;
     private uint16 history_index = 0;
 
-    private struct HistoryEntry
-    {
-        public uint8 x;
-        public uint8 y;
+    private List<HistoryEntry> reversed_history = new List<HistoryEntry> ();
 
-        internal HistoryEntry (uint8 x, uint8 y)
+    internal signal void undone ();
+
+    private class Point : Object
+    {
+        public uint8 x { internal get; protected construct; }
+        public uint8 y { internal get; protected construct; }
+
+        internal Point (uint8 x, uint8 y)
         {
-            this.x = x;
-            this.y = y;
+            Object (x: x, y: y);
         }
     }
 
-    private List<HistoryEntry?> history = new List<HistoryEntry> ();
-
-    private inline void add_history_entry (uint8 x, uint8 y)
+    private class HistoryEntry : Object
     {
-        history.append (HistoryEntry (x, y));
+        [CCode (notify = false)] public Point click { internal get; protected construct; }
+        [CCode (notify = false)] public uint8 color { internal get; protected construct; }
+
+        internal List<Point> removed_tiles = new List<Point> ();
+        internal uint8 [] removed_columns;
+
+        internal HistoryEntry (uint8 x, uint8 y, uint8 color, List<Tile> cl, owned uint8 [] removed_columns)
+        {
+            Object (click: new Point (x, y), color: color);
+            this.removed_columns = removed_columns;
+
+            // TODO init at construct
+            foreach (unowned Tile tile in cl)
+                removed_tiles.prepend (new Point (tile.grid_x, tile.grid_y));
+            removed_tiles.sort ((tile_1, tile_2) => {
+                    if (tile_1.x < tile_2.x)
+                        return -1;
+                    if (tile_1.x > tile_2.x)
+                        return 1;
+                    if (tile_1.y < tile_2.y)
+                        return -1;
+                    if (tile_1.y > tile_2.y)
+                        return 1;
+                    assert_not_reached ();
+                });
+        }
+    }
+
+    private inline void clear_history ()
+    {
+        reversed_history = new List<HistoryEntry> ();
+        history_length = 0;
+        history_index = 0;
+        can_undo = false;
+        can_redo = false;
+    }
+
+    private inline void add_history_entry (uint8 x, uint8 y, uint8 color, List<Tile> cl, owned uint8 [] removed_columns)
+    {
+        while (history_index > 0)
+        {
+            unowned HistoryEntry? history_data = reversed_history.nth_data (0);
+            if (history_data == null) assert_not_reached ();
+
+            reversed_history.remove ((!) history_data);
+
+            history_index--;
+            history_length--;
+        }
+
+        reversed_history.prepend (new HistoryEntry (x, y, color, cl, (owned) removed_columns));
+        history_length++;
+        can_undo = true;
+        can_redo = false;
+    }
+
+    internal void undo ()
+    {
+        undo_real (ref current_board);
+    }
+
+    private void undo_real (ref Tile? [,] current_board)
+    {
+        if (!can_undo)
+            return;
+
+        unowned List<HistoryEntry>? history_item = reversed_history.nth (history_index);
+        if (history_item == null) assert_not_reached ();
+
+        unowned HistoryEntry? history_data = ((!) history_item).data;
+        if (history_data == null) assert_not_reached ();
+
+        undo_move ((!) history_data, ref current_board);
+
+        if (history_index == history_length)
+            can_undo = false;
+        can_redo = true;
+    }
+    private inline void undo_move (HistoryEntry history_entry, ref Tile? [,] current_board)
+    {
+        if (has_won (ref current_board))
+            increment_score (-1000);
+        decrement_score_from_tiles ((uint16) history_entry.removed_tiles.length ());
+
+        foreach (uint8 removed_column in history_entry.removed_columns)
+        {
+            for (uint8 j = columns - 1; j > removed_column; j--)
+            {
+                for (uint8 i = 0; i < rows; i++)
+                {
+                    if (current_board [i, j - 1] != null)
+                    {
+                        current_board [i, j] = (owned) current_board [i, j - 1];
+                        ((!) current_board [i, j]).update_position (j, i);
+                    }
+                    else
+                        current_board [i, j] = null;
+                }
+            }
+            for (uint8 i = 0; i < rows; i++)
+                current_board [i, removed_column] = null;
+        }
+
+        foreach (unowned Point removed_tile in history_entry.removed_tiles)
+        {
+            uint8 column = removed_tile.x;
+            for (uint8 row = rows - 1; row > removed_tile.y; row--)
+            {
+                if (current_board [row - 1, column] != null)
+                {
+                    current_board [row, column] = (owned) current_board [row - 1, column];
+                    ((!) current_board [row, column]).update_position (column, row);
+                }
+                else
+                    current_board [row, column] = null;
+                if (row == 0)
+                    break;
+            }
+            current_board [removed_tile.y, column] = new Tile (column, removed_tile.y, history_entry.color);
+        }
+
+        history_index++;
+
+        undone ();
+    }
+
+    internal void redo ()
+    {
+        if (!can_redo)
+            return;
+
+        unowned List<HistoryEntry>? history_item = reversed_history.nth (history_index - 1);
+        if (history_item == null) assert_not_reached ();
+
+        unowned HistoryEntry? history_data = ((!) history_item).data;
+        if (history_data == null) assert_not_reached ();
+
+        redo_move ((!) history_data);
+
+        if (history_index == 0)
+            can_redo = false;
+        can_undo = true;
+    }
+    private inline void redo_move (HistoryEntry history_entry)
+    {
+        history_index--;
+
+        // TODO save for real where the user clicked; warning, history_entry.click does not use the same coords system
+        remove_connected_tiles_real (current_board [history_entry.removed_tiles.first ().data.y,
+                                                    history_entry.removed_tiles.first ().data.x],
+                                     /* skip history */ true);
     }
 }

@@ -71,7 +71,10 @@ private class SwellFoopWindow : ApplicationWindow
         { "change-colors",      null,       "s", "'3'",                 change_colors_cb    },  // cannot be done via create_action because it’s an int
         { "new-game",           new_game_cb         },
         { "scores",             scores_cb           },
-        { "toggle-hamburger",   toggle_hamburger    }
+        { "toggle-hamburger",   toggle_hamburger    },
+
+        { "undo",               undo                },
+        { "redo",               redo                }
     };
 
     construct
@@ -173,6 +176,7 @@ private class SwellFoopWindow : ApplicationWindow
 
     private void complete_cb ()
     {
+        undo_action.set_enabled (false);
         Idle.add (() => { add_score (); return Source.REMOVE; });
         game_in_progress = false;
     }
@@ -198,6 +202,10 @@ private class SwellFoopWindow : ApplicationWindow
     * * various calls
     \*/
 
+    // for keeping in memory
+    private SimpleAction undo_action;
+    private SimpleAction redo_action;
+
     private void new_game (Variant? saved_game = null)
     {
         Size size = get_board_size ();
@@ -217,6 +225,13 @@ private class SwellFoopWindow : ApplicationWindow
         view.set_theme_name (settings.get_string ("theme"));
         view.set_is_zealous (settings.get_boolean ("zealous"));
         view.set_game ((!) game);
+
+        /* Update undo and redo actions states */
+        undo_action = (SimpleAction) lookup_action ("undo");
+        game.bind_property ("can-undo", undo_action, "enabled", BindingFlags.SYNC_CREATE);
+
+        redo_action = (SimpleAction) lookup_action ("redo");
+        game.bind_property ("can-redo", redo_action, "enabled", BindingFlags.SYNC_CREATE);
     }
 
     protected override void destroy ()
@@ -297,6 +312,16 @@ private class SwellFoopWindow : ApplicationWindow
     private inline void toggle_hamburger (/* SimpleAction action, Variant? variant */)
     {
         hamburger_button.active = !hamburger_button.active;
+    }
+
+    private inline void undo (/* SimpleAction action, Variant? variant */)
+    {
+        game.undo ();
+    }
+
+    private inline void redo (/* SimpleAction action, Variant? variant */)
+    {
+        game.redo ();
     }
 
     /*\
