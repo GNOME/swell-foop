@@ -104,50 +104,58 @@ private class Game : Object
 
     private inline void create_new_game ()
     {
-        /* A 2D array holds all tiles */
+        initial_board = new uint8 [rows, columns];
         current_board = new Tile? [rows, columns];
 
         /* populate with the requested number of colors */
-        do    (populate_new_game (ref current_board, color_num));
-        while (not_enough_colors (ref current_board, color_num));
+        do    (populate_new_game (ref initial_board, color_num));
+        while (bad_colors_number (ref initial_board, color_num));
+
+        /* create the board of Tile instances */
+        for (uint8 x = 0; x < columns; x++)
+            for (uint8 y = 0; y < rows; y++)
+                current_board [y, x] = new Tile (x, y, initial_board [y, x]);
 
         is_started = false;
     }
-    private static inline void populate_new_game (ref Tile? [,] current_board, uint8 color_num)
+    private static void populate_new_game (ref uint8 [,] initial_board, uint8 color_num)
     {
-        uint8 rows    = (uint8) current_board.length [0];
-        uint8 columns = (uint8) current_board.length [1];
+        uint8 rows    = (uint8) initial_board.length [0];
+        uint8 columns = (uint8) initial_board.length [1];
         for (uint8 x = 0; x < columns; x++)
             for (uint8 y = 0; y < rows; y++)
-            {
-                uint8 c = (uint8) Math.floor (Random.next_double () * color_num) + 1;
-                current_board [y, x] = new Tile (x, y, c);
-            }
+                initial_board [y, x] = (uint8) Math.floor (Random.next_double () * color_num) + 1;
     }
-    private static inline bool not_enough_colors (ref Tile? [,] current_board, uint8 color_num)
+    private static bool bad_colors_number (ref uint8 [,] initial_board, uint8 color_num)
     {
         uint8 n_colors = 0;
         bool [] colors = new bool [color_num];
         for (uint8 x = 0; x < color_num; x++)
             colors [x] = false;
 
-        uint8 rows     = (uint8) current_board.length [0];
-        uint8 columns  = (uint8) current_board.length [1];
+        uint8 rows     = (uint8) initial_board.length [0];
+        uint8 columns  = (uint8) initial_board.length [1];
         for (uint8 x = 0; x < columns; x++)
             for (uint8 y = 0; y < rows; y++)
             {
-                if (colors [current_board [y, x].color - 1])
+                uint8 color_id = initial_board [y, x];
+                if (color_id == 0)
+                    assert_not_reached ();
+                color_id--;
+                if (color_id >= color_num)
+                    return true;
+                if (colors [color_id])
                     continue;
                 n_colors++;
                 if (n_colors == color_num)
                     return false;
-                colors [current_board [y, x].color - 1] = true;
+                colors [color_id] = true;
             }
         return true;
     }
 
     /* Recursively find all the connected tile from given_tile */
-    private static List<Tile> _connected_tiles (Tile? given_tile, ref Tile? [,] current_board)
+    private static List<Tile> _connected_tiles_real (Tile? given_tile, ref Tile? [,] current_board)
     {
         List<Tile> cl = new List<Tile> ();
 
@@ -164,25 +172,25 @@ private class Game : Object
         unowned Tile? tile = current_board [y + 1, x];
         if (y + 1 < current_board.length [0]
          && tile != null && (((!) given_tile).color == ((!) tile).color))
-            cl.concat (_connected_tiles (tile, ref current_board));
+            cl.concat (_connected_tiles_real (tile, ref current_board));
 
         if (y >= 1)
         {
             tile = current_board [y - 1, x];
             if (tile != null && (((!) given_tile).color == ((!) tile).color))
-                cl.concat (_connected_tiles (tile, ref current_board));
+                cl.concat (_connected_tiles_real (tile, ref current_board));
         }
 
         tile = current_board [y, x + 1];
         if (x + 1 < current_board.length [1]
          && tile != null && (((!) given_tile).color == ((!) tile).color))
-            cl.concat (_connected_tiles (tile, ref current_board));
+            cl.concat (_connected_tiles_real (tile, ref current_board));
 
         if (x >= 1)
         {
             tile = current_board [y, x - 1];
             if (tile != null && (((!) given_tile).color == ((!) tile).color))
-                cl.concat (_connected_tiles (tile, ref current_board));
+                cl.concat (_connected_tiles_real (tile, ref current_board));
         }
 
         return cl;
@@ -190,7 +198,11 @@ private class Game : Object
 
     internal List<Tile> connected_tiles (Tile given_tile)
     {
-        List<Tile> cl = _connected_tiles (given_tile, ref current_board);
+        return _connected_tiles (given_tile, ref current_board);
+    }
+    private static List<Tile> _connected_tiles (Tile given_tile, ref Tile? [,] current_board)
+    {
+        List<Tile> cl = _connected_tiles_real (given_tile, ref current_board);
 
         foreach (unowned Tile? tile in current_board)
         {
@@ -212,10 +224,28 @@ private class Game : Object
 
     internal void remove_connected_tiles (Tile given_tile)
     {
-        List<Tile> cl = connected_tiles (given_tile);
+        _remove_connected_tiles (given_tile, ref current_board);
+
+        if (!is_started) {
+            is_started = true;
+            started ();
+        }
+
+        if (has_completed (ref current_board))
+        {
+            if (has_won (ref current_board))
+                increment_score (1000);
+            complete ();
+        }
+    }
+    private void _remove_connected_tiles (Tile given_tile, ref Tile? [,] current_board)
+    {
+        List<Tile> cl = _connected_tiles (given_tile, ref current_board);
 
         if (cl.length () < 2)
             return;
+
+        add_history_entry (given_tile.grid_x, given_tile.grid_y);
 
         foreach (unowned Tile tile in (!) cl)
             tile.closed = true;
@@ -276,32 +306,20 @@ private class Game : Object
                 current_board [y, new_x] = null;
 
         increment_score_from_tiles ((uint16) cl.length ());
-
-        if (!is_started) {
-            is_started = true;
-            started ();
-        }
-
-        if (this.has_completed ())
-        {
-            if (this.has_won ())
-                increment_score (1000);
-            complete ();
-        }
     }
 
-    private bool has_completed ()
+    private static bool has_completed (ref Tile? [,] current_board)
     {
         foreach (unowned Tile? tile in current_board)
         {
-            if (tile != null && !((!) tile).closed && (connected_tiles ((!) tile).length () > 1))
+            if (tile != null && !((!) tile).closed && (_connected_tiles ((!) tile, ref current_board).length () > 1))
                 return false;
         }
 
         return true;
     }
 
-    private inline bool has_won ()
+    private static bool has_won (ref Tile? [,] current_board)
     {
         foreach (unowned Tile? tile in current_board)
         {
@@ -332,9 +350,11 @@ private class Game : Object
     * * loading and saving
     \*/
 
+    private uint8 [,] initial_board;
+
     private inline bool load_saved_game (Variant variant)
     {
-        if (variant.get_type_string () != "m(yuaay)")
+        if (variant.get_type_string () != "m(aayqa(yy))")
             return false;   // assert_not_reached() ?
 
         Variant? child = variant.get_maybe ();
@@ -342,45 +362,67 @@ private class Game : Object
             return false;
 
         VariantIter iter = new VariantIter ((!) child);
-        uint8 color_num;
-        uint score;
-        iter.next ("y", out color_num);
-        iter.next ("u", out score);
-        Variant? tmp_variant = iter.next_value ();
-        if (tmp_variant == null)
+        Variant? board_variant = iter.next_value ();
+        if (board_variant == null)
+            assert_not_reached ();
+        uint16 history_index;
+        iter.next ("q", out history_index);
+        Variant? history_variant = iter.next_value ();
+        if (history_variant == null)
             assert_not_reached ();
 
-        if (color_num < 2 || color_num > 4)
-            return false;
-
         // all the following way to extract values feels horrible, but there is a bug when trying to do it properly (05/2020)
-        Variant tmp_variant_2 = ((!) tmp_variant).get_child_value (0);
-        uint rows = (uint) ((!) tmp_variant).n_children ();
-        uint columns = (uint) tmp_variant_2.n_children ();
+        Variant? tmp_variant_1 = ((!) board_variant).get_child_value (0);
+        if (tmp_variant_1 == null)
+            return false;
+        uint rows    = (uint) ((!) board_variant).n_children ();
+        uint columns = (uint) ((!) tmp_variant_1).n_children ();
         if (rows    != this.rows
          || columns != this.columns)
             return false;
 
-        Tile? [,] current_board = new Tile? [rows, columns];
+        uint8 [,] initial_board = new uint8 [rows, columns];
         for (uint8 i = 0; i < rows; i++)
         {
-            tmp_variant_2 = ((!) tmp_variant).get_child_value (i);
+            tmp_variant_1 = ((!) board_variant).get_child_value (i);
             for (uint8 j = 0; j < columns; j++)
             {
-                Variant tmp_variant_3 = tmp_variant_2.get_child_value (j);
-                uint8 color = tmp_variant_3.get_byte ();
+                Variant tmp_variant_2 = tmp_variant_1.get_child_value (j);
+                uint8 color = tmp_variant_2.get_byte ();
                 if (color > 4)
                     return false;
                 if (color == 0)
-                    current_board [rows - i - 1, j] = null;
-                else
-                    current_board [rows - i - 1, j] = new Tile (j, (uint8) (rows - i - 1), color);
+                    return false;
+                initial_board [rows - i - 1, j] = color;
             }
         }
 
+        if (bad_colors_number (ref initial_board, color_num))
+            return false;
+
+        Tile? [,] current_board = new Tile? [rows, columns];
+        for (uint8 i = 0; i < rows; i++)
+            for (uint8 j = 0; j < columns; j++)
+                current_board [i, j] = new Tile (j, i, initial_board [i, j]);
+
+        iter = new VariantIter ((!) history_variant);
+        while (iter != null)
+        {
+            tmp_variant_1 = iter.next_value ();
+            if (tmp_variant_1 == null)
+                break;
+            _remove_connected_tiles (current_board [rows - tmp_variant_1.get_child_value (1).get_byte () - 1,
+                                                    tmp_variant_1.get_child_value (0).get_byte ()],
+                                     ref current_board);
+        }
+
+        if (has_completed (ref current_board))
+            return false;
+
         this.current_board = current_board;
-        this.color_num = color_num;
-        this.score = score;
+        this.initial_board = initial_board;
+        this.history_index = history_index;
+
         update_score (score);
         is_started = true;
         return true;
@@ -388,28 +430,56 @@ private class Game : Object
 
     internal Variant get_saved_game ()
     {
-        if (!is_started || has_completed ())
-            return new Variant ("m(yuaay)", null);
+        if (!is_started || has_completed (ref current_board))
+            return new Variant ("m(aayqa(yy))", null);
 
-        VariantBuilder builder = new VariantBuilder (new VariantType ("(yuaay)"));
-        builder.add ("y", color_num);
-        builder.add ("u", score);
+        VariantBuilder builder = new VariantBuilder (new VariantType ("(aayqa(yy))"));
         builder.open (new VariantType ("aay"));
         VariantType ay_type = new VariantType ("ay");
         for (uint8 i = rows; i > 0; i--)
         {
             builder.open (ay_type);
             for (uint8 j = 0; j < columns; j++)
-            {
-                unowned Tile? tile = current_board [i - 1, j];
-                if (tile == null || ((!) tile).closed)
-                    builder.add ("y", 0);
-                else
-                    builder.add ("y", ((!) tile).color);
-            }
+                builder.add ("y", initial_board [i - 1, j]);
             builder.close ();
         }
         builder.close ();
-        return new Variant.maybe (null, builder.end ());
+        builder.add ("q", history_index);
+        builder.open (new VariantType ("a(yy)"));
+        history.@foreach ((data) => {
+                if (data == null)
+                    return;
+                builder.open (new VariantType ("(yy)"));
+                builder.add ("y", ((!) data).x);
+                builder.add ("y", rows - ((!) data).y - 1);
+                builder.close ();
+            });
+        builder.close ();
+        return new Variant.maybe (/* guess the type */ null, builder.end ());
+    }
+
+    /*\
+    * * history
+    \*/
+
+    private uint16 history_index = 0;
+
+    private struct HistoryEntry
+    {
+        public uint8 x;
+        public uint8 y;
+
+        internal HistoryEntry (uint8 x, uint8 y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    private List<HistoryEntry?> history = new List<HistoryEntry> ();
+
+    private inline void add_history_entry (uint8 x, uint8 y)
+    {
+        history.append (HistoryEntry (x, y));
     }
 }
