@@ -67,7 +67,7 @@ private class Tile : Object
  */
 private class Game : Object
 {
-    private Tile? [,] tiles;
+    private Tile? [,] current_board;
     private bool is_started = false;
 
     /* Game score */
@@ -105,49 +105,49 @@ private class Game : Object
     private inline void create_new_game ()
     {
         /* A 2D array holds all tiles */
-        tiles = new Tile? [rows, columns];
+        current_board = new Tile? [rows, columns];
 
         /* populate with the requested number of colors */
-        do    (populate_new_game (ref tiles, color_num));
-        while (not_enough_colors (ref tiles, color_num));
+        do    (populate_new_game (ref current_board, color_num));
+        while (not_enough_colors (ref current_board, color_num));
 
         is_started = false;
     }
-    private static inline void populate_new_game (ref Tile? [,] tiles, uint8 color_num)
+    private static inline void populate_new_game (ref Tile? [,] current_board, uint8 color_num)
     {
-        uint8 rows    = (uint8) tiles.length [0];
-        uint8 columns = (uint8) tiles.length [1];
+        uint8 rows    = (uint8) current_board.length [0];
+        uint8 columns = (uint8) current_board.length [1];
         for (uint8 x = 0; x < columns; x++)
             for (uint8 y = 0; y < rows; y++)
             {
                 uint8 c = (uint8) Math.floor (Random.next_double () * color_num) + 1;
-                tiles[y, x] = new Tile (x, y, c);
+                current_board [y, x] = new Tile (x, y, c);
             }
     }
-    private static inline bool not_enough_colors (ref Tile? [,] tiles, uint8 color_num)
+    private static inline bool not_enough_colors (ref Tile? [,] current_board, uint8 color_num)
     {
         uint8 n_colors = 0;
         bool [] colors = new bool [color_num];
         for (uint8 x = 0; x < color_num; x++)
             colors [x] = false;
 
-        uint8 rows     = (uint8) tiles.length [0];
-        uint8 columns  = (uint8) tiles.length [1];
+        uint8 rows     = (uint8) current_board.length [0];
+        uint8 columns  = (uint8) current_board.length [1];
         for (uint8 x = 0; x < columns; x++)
             for (uint8 y = 0; y < rows; y++)
             {
-                if (colors [tiles [y, x].color - 1])
+                if (colors [current_board [y, x].color - 1])
                     continue;
                 n_colors++;
                 if (n_colors == color_num)
                     return false;
-                colors [tiles [y, x].color - 1] = true;
+                colors [current_board [y, x].color - 1] = true;
             }
         return true;
     }
 
     /* Recursively find all the connected tile from given_tile */
-    private static List<Tile> _connected_tiles (Tile? given_tile, ref Tile? [,] tiles)
+    private static List<Tile> _connected_tiles (Tile? given_tile, ref Tile? [,] current_board)
     {
         List<Tile> cl = new List<Tile> ();
 
@@ -161,28 +161,28 @@ private class Game : Object
 
         cl.append ((!) given_tile);
 
-        unowned Tile? tile = tiles[y + 1, x];
-        if (y + 1 < tiles.length [0]
+        unowned Tile? tile = current_board [y + 1, x];
+        if (y + 1 < current_board.length [0]
          && tile != null && (((!) given_tile).color == ((!) tile).color))
-            cl.concat (_connected_tiles (tile, ref tiles));
+            cl.concat (_connected_tiles (tile, ref current_board));
 
         if (y >= 1)
         {
-            tile = tiles[y - 1, x];
+            tile = current_board [y - 1, x];
             if (tile != null && (((!) given_tile).color == ((!) tile).color))
-                cl.concat (_connected_tiles (tile, ref tiles));
+                cl.concat (_connected_tiles (tile, ref current_board));
         }
 
-        tile = tiles[y, x + 1];
-        if (x + 1 < tiles.length [1]
+        tile = current_board [y, x + 1];
+        if (x + 1 < current_board.length [1]
          && tile != null && (((!) given_tile).color == ((!) tile).color))
-            cl.concat (_connected_tiles (tile, ref tiles));
+            cl.concat (_connected_tiles (tile, ref current_board));
 
         if (x >= 1)
         {
-            tile = tiles[y, x - 1];
+            tile = current_board [y, x - 1];
             if (tile != null && (((!) given_tile).color == ((!) tile).color))
-                cl.concat (_connected_tiles (tile, ref tiles));
+                cl.concat (_connected_tiles (tile, ref current_board));
         }
 
         return cl;
@@ -190,9 +190,9 @@ private class Game : Object
 
     internal List<Tile> connected_tiles (Tile given_tile)
     {
-        List<Tile> cl = _connected_tiles (given_tile, ref tiles);
+        List<Tile> cl = _connected_tiles (given_tile, ref current_board);
 
-        foreach (unowned Tile? tile in tiles)
+        foreach (unowned Tile? tile in current_board)
         {
             if (tile != null)
                 ((!) tile).visited = false;
@@ -207,7 +207,7 @@ private class Game : Object
 
     internal Tile? get_tile (uint8 x, uint8 y)
     {
-        return tiles[y, x];
+        return current_board [y, x];
     }
 
     internal void remove_connected_tiles (Tile given_tile)
@@ -230,7 +230,7 @@ private class Game : Object
             /* for each column, separate not-closed and closed tiles */
             for (uint8 y = 0; y < rows; y++)
             {
-                unowned Tile? tile = tiles[y, x];
+                unowned Tile? tile = current_board [y, x];
 
                 if (tile == null)
                     break;
@@ -246,7 +246,7 @@ private class Game : Object
 
             /* update tile array at the current column, not-closed tiles are at the bottom, closed ones top */
             for (uint8 y = 0; y < rows; y++)
-                tiles[y, new_x] = not_closed_tiles.nth_data (y);
+                current_board [y, new_x] = not_closed_tiles.nth_data (y);
 
             /* flag to check if current column is empty */
             bool has_empty_col = true;
@@ -254,7 +254,7 @@ private class Game : Object
             /* update the positions (grid_x, grid_y) of tiles at the current column */
             for (uint8 y = 0; y < rows; y++)
             {
-                unowned Tile? tile = tiles[y, new_x];
+                unowned Tile? tile = current_board [y, new_x];
 
                 if (tile == null)
                     break;
@@ -273,7 +273,7 @@ private class Game : Object
         /* The remaining columns are do-not-cares. Assign null to them */
         for (; new_x < columns; new_x++)
             for (uint8 y = 0; y < rows; y++)
-                tiles[y, new_x] = null;
+                current_board [y, new_x] = null;
 
         increment_score_from_tiles ((uint16) cl.length ());
 
@@ -292,7 +292,7 @@ private class Game : Object
 
     private bool has_completed ()
     {
-        foreach (unowned Tile? tile in tiles)
+        foreach (unowned Tile? tile in current_board)
         {
             if (tile != null && !((!) tile).closed && (connected_tiles ((!) tile).length () > 1))
                 return false;
@@ -303,7 +303,7 @@ private class Game : Object
 
     private inline bool has_won ()
     {
-        foreach (unowned Tile? tile in tiles)
+        foreach (unowned Tile? tile in current_board)
         {
             if (tile != null && !((!) tile).closed)
                 return false;
@@ -361,7 +361,7 @@ private class Game : Object
          || columns != this.columns)
             return false;
 
-        Tile? [,] tiles = new Tile? [rows, columns];
+        Tile? [,] current_board = new Tile? [rows, columns];
         for (uint8 i = 0; i < rows; i++)
         {
             tmp_variant_2 = ((!) tmp_variant).get_child_value (i);
@@ -372,13 +372,13 @@ private class Game : Object
                 if (color > 4)
                     return false;
                 if (color == 0)
-                    tiles [rows - i - 1, j] = null;
+                    current_board [rows - i - 1, j] = null;
                 else
-                    tiles [rows - i - 1, j] = new Tile (j, (uint8) (rows - i - 1), color);
+                    current_board [rows - i - 1, j] = new Tile (j, (uint8) (rows - i - 1), color);
             }
         }
 
-        this.tiles = tiles;
+        this.current_board = current_board;
         this.color_num = color_num;
         this.score = score;
         update_score (score);
@@ -401,7 +401,7 @@ private class Game : Object
             builder.open (ay_type);
             for (uint8 j = 0; j < columns; j++)
             {
-                unowned Tile? tile = tiles [i - 1, j];
+                unowned Tile? tile = current_board [i - 1, j];
                 if (tile == null || ((!) tile).closed)
                     builder.add ("y", 0);
                 else
