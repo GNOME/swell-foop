@@ -107,16 +107,43 @@ private class Game : Object
         /* A 2D array holds all tiles */
         tiles = new Tile? [rows, columns];
 
+        /* populate with the requested number of colors */
+        do    (populate_new_game (ref tiles, color_num));
+        while (not_enough_colors (ref tiles, color_num));
+
+        is_started = false;
+    }
+    private static inline void populate_new_game (ref Tile? [,] tiles, uint8 color_num)
+    {
+        uint8 rows    = (uint8) tiles.length [0];
+        uint8 columns = (uint8) tiles.length [1];
         for (uint8 x = 0; x < columns; x++)
-        {
             for (uint8 y = 0; y < rows; y++)
             {
                 uint8 c = (uint8) Math.floor (Random.next_double () * color_num) + 1;
                 tiles[y, x] = new Tile (x, y, c);
             }
-        }
+    }
+    private static inline bool not_enough_colors (ref Tile? [,] tiles, uint8 color_num)
+    {
+        uint8 n_colors = 0;
+        bool [] colors = new bool [color_num];
+        for (uint8 x = 0; x < color_num; x++)
+            colors [x] = false;
 
-        is_started = false;
+        uint8 rows     = (uint8) tiles.length [0];
+        uint8 columns  = (uint8) tiles.length [1];
+        for (uint8 x = 0; x < columns; x++)
+            for (uint8 y = 0; y < rows; y++)
+            {
+                if (colors [tiles [y, x].color - 1])
+                    continue;
+                n_colors++;
+                if (n_colors == color_num)
+                    return false;
+                colors [tiles [y, x].color - 1] = true;
+            }
+        return true;
     }
 
     /* Recursively find all the connected tile from given_tile */
