@@ -210,12 +210,12 @@ private class Game : Object
         return tiles[y, x];
     }
 
-    internal bool remove_connected_tiles (Tile given_tile)
+    internal void remove_connected_tiles (Tile given_tile)
     {
         List<Tile> cl = connected_tiles (given_tile);
 
         if (cl.length () < 2)
-            return false;
+            return;
 
         foreach (unowned Tile tile in (!) cl)
             tile.closed = true;
@@ -288,8 +288,6 @@ private class Game : Object
                 increment_score (1000);
             complete ();
         }
-
-        return false;
     }
 
     private bool has_completed ()
