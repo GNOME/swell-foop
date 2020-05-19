@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ro\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2018-10-08 19:28+0000\n"
-"PO-Revision-Date: 2019-01-27 02:31+0200\n"
+"POT-Creation-Date: 2020-05-14 23:04+0000\n"
+"PO-Revision-Date: 2020-05-19 08:26+0200\n"
 "Last-Translator: Florentina Mușat <florentina.musat.28 [at] gmail [dot] "
 "com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
@@ -22,12 +22,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.3\n"
 "X-Launchpad-Export-Date: 2009-11-27 09:12+0000\n"
 
+#. Translators: title of the window displayed by window managers; name of the application
+#. Translators: title of the window displayed on the headerbar; name of the application
+#. Translators: About dialog text, name of the application
+#. Translators: name of the application, as displayed in the window manager
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
-#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
+#: data/ui/swell-foop.ui:141 src/swell-foop.vala:110 src/swell-foop.vala:166
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -60,7 +64,7 @@ msgstr ""
 "Swell Foop este întotdeauna foarte rapid de jucat, dar puteți face să dureze "
 "mai mult prin modificarea dimensiunii tablei."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:42
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
 msgid "The GNOME Project"
 msgstr "Proiectul GNOME"
 
@@ -69,91 +73,238 @@ msgstr "Proiectul GNOME"
 msgid "game;logic;board;same;matching;"
 msgstr "game;logic;board;same;matching;joc;logică;tablă;similar;potrivire;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.SwellFoop.desktop.in:8
-msgid "org.gnome.SwellFoop"
-msgstr "org.gnome.SwellFoop"
-
-#: data/org.gnome.swell-foop.gschema.xml:10
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.swell-foop.gschema.xml:11
 msgid "The theme to use"
 msgstr "Tema ce va fi folosită"
 
-#: data/org.gnome.swell-foop.gschema.xml:11
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.swell-foop.gschema.xml:13
 msgid "The title of the tile theme to use."
 msgstr "Titlul temei de mozaic de folosit."
 
-#: data/org.gnome.swell-foop.gschema.xml:15
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.swell-foop.gschema.xml:18
 msgid "Board size"
 msgstr "Mărime tablă"
 
-#: data/org.gnome.swell-foop.gschema.xml:16
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.swell-foop.gschema.xml:20
 msgid "The size of the game board."
 msgstr "Mărimea tablei de joc."
 
-#: data/org.gnome.swell-foop.gschema.xml:20
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.swell-foop.gschema.xml:26
 msgid "Board color count"
 msgstr "Numărul culorilor tablei"
 
-#: data/org.gnome.swell-foop.gschema.xml:21
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.swell-foop.gschema.xml:28
 msgid "The number of colors of tiles to use in the game."
 msgstr "Numărul culorilor pieselor folosite în joc."
 
-#: data/org.gnome.swell-foop.gschema.xml:25
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.swell-foop.gschema.xml:33
 msgid "Is this the first run"
 msgstr "Aceasta este prima rulare"
 
-#: data/org.gnome.swell-foop.gschema.xml:26
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.swell-foop.gschema.xml:35
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
 "Configurare pentru a decide dacă se afișează sau nu dialogul de indiciu "
 "pentru prima rulare."
 
-#: data/org.gnome.swell-foop.gschema.xml:30
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.swell-foop.gschema.xml:40
 msgid "Zealous animation"
 msgstr "Animație îndrăzneață"
 
-#: data/org.gnome.swell-foop.gschema.xml:31
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.swell-foop.gschema.xml:42
 msgid "Use more flashy, but slower, animations."
 msgstr "Folosește animații mai aspectuoase, dar mai încete."
 
-#: data/preferences.ui:31
-msgid "Preferences"
-msgstr "Preferințe"
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
+#: data/org.gnome.swell-foop.gschema.xml:47
+msgid "Saved game"
+msgstr "Joc salvat"
 
-#: data/preferences.ui:68
-msgid "_Board size:"
-msgstr "_Dimensiune tablă:"
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
+#: data/org.gnome.swell-foop.gschema.xml:49
+msgid ""
+"Has value “nothing” if there is no saved game. Else, the values are: the "
+"number of colors, the score, and a copy of the board, where “0” means "
+"“empty”."
+msgstr ""
+"Are valoarea „nimic” dacă nu există niciun joc salvat. Altfel, valorile "
+"sunt: numărul de culori, scorul, și o copie a plăcii unde „0” înseamnă gol."
 
-#: data/preferences.ui:84
-msgid "_Number of colors:"
-msgstr "_Număr de culori:"
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:43
+msgid "Welcome to Swell Foop"
+msgstr "Bine ați venit la Swell Foop"
 
-#: data/preferences.ui:142
-msgid "Setup"
-msgstr "Configurare"
+#. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:64
+msgid "Let’s _Play"
+msgstr "_Hai să jucăm"
 
-#: data/preferences.ui:180
-msgid "_Theme:"
-msgstr "_Temă:"
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr "Funcțiile principale\t"
 
-#: data/preferences.ui:227
-msgid "Appearance"
-msgstr "Aspect"
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
+#: data/ui/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Pornește un nou joc"
 
-#: data/preferences.ui:258
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
+#: data/ui/help-overlay.ui:46
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Jucați-vă cu tastatura"
+
+#. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
+#: data/ui/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Move keyboard highlight"
+msgstr "Mutați evidențierea tastaturii"
+
+#. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Destroy selected block"
+msgstr "Distrugeți blokul selectat"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:69
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Generic"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Open menu"
+msgstr "Meniu deschis"
+
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:82
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Scurtături de tastatură"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:90
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Ajutor"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Despre"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:106
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Ieșire"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
+#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:299
+msgid "_New Game"
+msgstr "Joc _nou"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
+#: data/ui/swell-foop.ui:30
+msgid "_Setup"
+msgstr "_Configurare"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#: data/ui/swell-foop.ui:34
+msgid "_Small (6 × 5)"
+msgstr "_Mică (6 x 5)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#: data/ui/swell-foop.ui:40
+msgid "Nor_mal (15 × 10)"
+msgstr "Nor_mală (15 x 10)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#: data/ui/swell-foop.ui:46
+msgid "_Large (20 × 15)"
+msgstr "_Mare (20 x 15)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#: data/ui/swell-foop.ui:54
+msgid "_Two colors"
+msgstr "_Două culori"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#: data/ui/swell-foop.ui:60
+msgid "T_hree colors"
+msgstr "T_rei culori"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#: data/ui/swell-foop.ui:66
+msgid "_Four colors"
+msgstr "_Patru culori"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:83
+msgid "High _Scores"
+msgstr "_Scoruri mari"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/swell-foop.ui:88
+msgid "A_ppearance"
+msgstr "As_pect"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Shapes and Colors"
+#: data/ui/swell-foop.ui:92
+msgid "_Colors"
+msgstr "_Culori"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Colors"
+#: data/ui/swell-foop.ui:98
+msgid "_Shapes and Colors"
+msgstr "_Forme și culori"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
+#: data/ui/swell-foop.ui:106
 msgid "_Zealous Animation"
 msgstr "Animație îndră_zneață"
 
-#: data/preferences.ui:283
-msgid "Operation"
-msgstr "Operația"
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:115
+msgid "_Keyboard Shortcuts"
+msgstr "_Scurtături de tastatură"
 
-#: src/game-view.vala:322
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:120
+msgid "_Help"
+msgstr "_Ajutor"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:125
+msgid "_About Swell Foop"
+msgstr "_Despre Swell Foop"
+
+#. Translators: text of a button that appears on the board at the end of a game
+#: src/game-view.vala:403
 msgid "_Play Again"
 msgstr "_Jucați din nou"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:495
+#: src/game-view.vala:570
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -161,108 +312,29 @@ msgstr[0] "%u punct"
 msgstr[1] "%u puncte"
 msgstr[2] "%u de puncte"
 
-#: src/game-view.vala:496
+#. Translators: text of a label that appears on the board at the end of a game
+#: src/game-view.vala:573
 msgid "Game Over!"
 msgstr "Jocul s-a terminat!"
 
-#: src/score-dialog.vala:25
-msgid "High Scores"
-msgstr "Scoruri mari"
+#. Translators: command-line option description, see 'swell-foop --help'
+#: src/swell-foop.vala:26
+msgid "Print release version and exit"
+msgstr "Printează versiunea de lansare și ieși"
 
-#: src/score-dialog.vala:28
-msgid "_Quit"
-msgstr "_Ieșire"
+#. Translators: About dialog text, name of an author
+#. Translators: About dialog text, name of an artist
+#: src/swell-foop.vala:96 src/swell-foop.vala:104
+msgid "Tim Horton"
+msgstr "Tim Horton"
 
-#: src/score-dialog.vala:29
-msgid "New Game"
-msgstr "Joc nou"
+#. Translators: About dialog text, name of an author
+#: src/swell-foop.vala:100
+msgid "Sophia Yu"
+msgstr "Sophia Yu"
 
-#: src/score-dialog.vala:32
-msgid "_OK"
-msgstr "_OK"
-
-#: src/score-dialog.vala:44
-msgid "Size:"
-msgstr "Dimensiune:"
-
-#: src/score-dialog.vala:69
-msgid "Date"
-msgstr "Dată"
-
-#: src/score-dialog.vala:72
-msgid "Score"
-msgstr "Scor"
-
-#: src/score-dialog.vala:166
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u culoare"
-msgstr[1] "%u × %u, %u culori"
-msgstr[2] "%u × %u, %u de culori"
-
-#: src/swell-foop.vala:81
-msgid "Welcome to Swell Foop"
-msgstr "Bine ați venit la Swell Foop"
-
-#: src/swell-foop.vala:84
-msgid ""
-"Clear as many blocks as you can.\n"
-"Fewer clicks means more points."
-msgstr ""
-"Eliberați cât mai multe blocuri posibil.\n"
-"Mai puține clicuri înseamnă mai multe puncte."
-
-#: src/swell-foop.vala:87
-msgid "Let’s _Play"
-msgstr "_Hai să jucăm"
-
-#: src/swell-foop.vala:141 src/swell-foop.vala:504
-msgid "_New Game"
-msgstr "Joc _nou"
-
-#: src/swell-foop.vala:144
-msgid "High _Scores"
-msgstr "_Scoruri mari"
-
-#: src/swell-foop.vala:147
-msgid "_Preferences"
-msgstr "_Preferințe"
-
-#: src/swell-foop.vala:148
-msgid "_Help"
-msgstr "_Ajutor"
-
-#: src/swell-foop.vala:149
-msgid "_About Swell Foop"
-msgstr "_Despre Swell Foop"
-
-#: src/swell-foop.vala:190
-msgid "Small"
-msgstr "Mic"
-
-#: src/swell-foop.vala:191
-msgid "Normal"
-msgstr "Normal"
-
-#: src/swell-foop.vala:192
-msgid "Large"
-msgstr "Mare"
-
-#: src/swell-foop.vala:266
-#, c-format
-msgid "Score: %u"
-msgstr "Scor: %u"
-
-#: src/swell-foop.vala:325
-msgid "Colors"
-msgstr "Culori"
-
-#: src/swell-foop.vala:329
-msgid "Shapes and Colors"
-msgstr "Forme și culori"
-
-#: src/swell-foop.vala:463
+#. Translators: About dialog text, small description of the application
+#: src/swell-foop.vala:114
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -270,16 +342,18 @@ msgstr ""
 "Vreau să joc jocul acela!\n"
 "Știți care, acela în care toate se aprind și apeși clic pe ele și dispar!"
 
-#: src/swell-foop.vala:464
+#. Translators: About dialog text, copyright line
+#: src/swell-foop.vala:118
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Drepturi de autor © 2009 Tim Horton"
 
-#: src/swell-foop.vala:469
+#. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
+#: src/swell-foop.vala:122
 msgid "translator-credits"
 msgstr ""
 "Mugurel Tudor <mugurelu@gnome.ro>\n"
 "Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
-"Florentina Mușat <florentina.musat.28 [at] gmail [dot] com>, 2019\n"
+"Florentina Mușat <emryslokadottir [at] gmail [dot] com>, 2019-2020\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Adi Roiban https://launchpad.net/~adiroiban\n"
@@ -297,16 +371,94 @@ msgstr ""
 "  Mugurel Tudor https://launchpad.net/~mugurelu-gnome\n"
 "  leandrud https://launchpad.net/~leandrud"
 
-#: src/swell-foop.vala:502
+#. Translators: name of a possible size of the grid
+#: src/window.vala:52
+msgid "Small"
+msgstr "Mic"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:55
+msgid "Normal"
+msgstr "Normal"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:58
+msgid "Large"
+msgstr "Mare"
+
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: src/window.vala:157
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"Eliberați cât mai multe blocuri posibil.\n"
+"Mai puține clicuri înseamnă mai multe puncte."
+
+#. Translators: subtitle of the headerbar; the %u is replaced by the score
+#: src/window.vala:185
+#, c-format
+msgid "Score: %u"
+msgstr "Scor: %u"
+
+#. Translators: text of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:293
 msgid "Abandon this game to start a new one?"
 msgstr "Abandonați jocul acesta pentru a începe unul nou?"
 
-#: src/swell-foop.vala:503
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
+#: src/window.vala:296
 msgid "_Cancel"
 msgstr "A_nulare"
 
+#: src/window.vala:375
+#, c-format
+msgid "%s, %d color"
+msgid_plural "%s, %d colors"
+msgstr[0] "%s × %d culoare"
+msgstr[1] "%s, %d culori"
+msgstr[2] "%s, %d culori"
+
+#. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
+#: src/window.vala:386
+msgid "Type"
+msgstr "Tip"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferințe"
+
+#~ msgid "_Board size:"
+#~ msgstr "_Dimensiune tablă:"
+
+#~ msgid "_Theme:"
+#~ msgstr "_Temă:"
+
+#~ msgid "Operation"
+#~ msgstr "Operația"
+
+#~ msgid "High Scores"
+#~ msgstr "Scoruri mari"
+
+#~ msgid "New Game"
+#~ msgstr "Joc nou"
+
+#~ msgid "_OK"
+#~ msgstr "_OK"
+
+#~ msgid "Size:"
+#~ msgstr "Dimensiune:"
+
+#~ msgid "Date"
+#~ msgstr "Dată"
+
+#~ msgid "Score"
+#~ msgstr "Scor"
+
+#~ msgid "org.gnome.SwellFoop"
+#~ msgstr "org.gnome.SwellFoop"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Preferințe"
+
 #~ msgid "swell-foop"
 #~ msgstr "swell-foop"
-
-#~ msgid "_About"
-#~ msgstr "_Despre"
