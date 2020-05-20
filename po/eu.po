@@ -4,14 +4,14 @@
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2014, 2015, 2016, 2017.
-# Asier Sarasua Garmendia  <asier.sarasua@gmail.com>, 2019.
+# Asier Sarasua Garmendia  <asiersarasua@ni.eus>, 2019, 2020.
 #
 msgid ""
 msgstr "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2019-03-26 18:34+0000\n"
-"PO-Revision-Date: 2019-08-14 10:00+0100\n"
-"Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
+"POT-Creation-Date: 2020-05-14 23:04+0000\n"
+"PO-Revision-Date: 2020-05-20 10:00+0100\n"
+"Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -19,9 +19,13 @@ msgstr "Project-Id-Version: swell-foop master\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. Translators: title of the window displayed by window managers; name of the application
+#. Translators: title of the window displayed on the headerbar; name of the application
+#. Translators: About dialog text, name of the application
+#. Translators: name of the application, as displayed in the window manager
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
-#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
+#: data/ui/swell-foop.ui:141 src/swell-foop.vala:110 src/swell-foop.vala:166
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -54,214 +58,359 @@ msgstr "GNOME proiektua"
 msgid "game;logic;board;same;matching;"
 msgstr "jokoa;logika;taula;berdina;bat datorrena;"
 
-#: data/org.gnome.swell-foop.gschema.xml:10
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.swell-foop.gschema.xml:11
 msgid "The theme to use"
 msgstr "Erabili beharreko gaia"
 
-#: data/org.gnome.swell-foop.gschema.xml:11
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.swell-foop.gschema.xml:13
 msgid "The title of the tile theme to use."
 msgstr "Erabili beharreko fitxa-gaiaren izena."
 
-#: data/org.gnome.swell-foop.gschema.xml:15
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.swell-foop.gschema.xml:18
 msgid "Board size"
 msgstr "Taularen tamaina"
 
-#: data/org.gnome.swell-foop.gschema.xml:16
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.swell-foop.gschema.xml:20
 msgid "The size of the game board."
 msgstr "Joko-mahaiaren tamaina."
 
-#: data/org.gnome.swell-foop.gschema.xml:20
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.swell-foop.gschema.xml:26
 msgid "Board color count"
 msgstr "Mahaiaren kolore zenbaketa"
 
-#: data/org.gnome.swell-foop.gschema.xml:21
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.swell-foop.gschema.xml:28
 msgid "The number of colors of tiles to use in the game."
 msgstr "Jokoan erabiliko diren fitxen kolore kopurua"
 
-#: data/org.gnome.swell-foop.gschema.xml:25
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.swell-foop.gschema.xml:33
 msgid "Is this the first run"
 msgstr "Lehen exekuzioa da"
 
-#: data/org.gnome.swell-foop.gschema.xml:26
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.swell-foop.gschema.xml:35
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr "Lehen exekuzioan argibideen elkarrizketa-koadroa erakutsiko den ala ez."
 
-#: data/org.gnome.swell-foop.gschema.xml:30
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.swell-foop.gschema.xml:40
 msgid "Zealous animation"
 msgstr "Zealous animazioa"
 
-#: data/org.gnome.swell-foop.gschema.xml:31
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.swell-foop.gschema.xml:42
 msgid "Use more flashy, but slower, animations."
 msgstr "Erabili animazio ikusgarriagoak, baina motelagoak"
 
-#: data/preferences.ui:31
-msgid "Preferences"
-msgstr "Hobespenak"
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
+#: data/org.gnome.swell-foop.gschema.xml:47
+msgid "Saved game"
+msgstr "Gordetako jokoa"
 
-#: data/preferences.ui:68
-msgid "_Board size:"
-msgstr "_Taularen tamaina:"
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
+#: data/org.gnome.swell-foop.gschema.xml:49
+msgid ""
+"Has value “nothing” if there is no saved game. Else, the values are: the "
+"number of colors, the score, and a copy of the board, where “0” means "
+"“empty”."
+msgstr "Balioa “ezer ere ez” da ez badago gordetako jokorik. Bestela, balioak honakoak dira: kolore kopurua, puntuazioa eta taularen kopia bat, non “0” balioaren esanahia “hutsik” den."
 
-#: data/preferences.ui:84
-msgid "_Number of colors:"
-msgstr "Kolore _kopurua:"
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:43
+msgid "Welcome to Swell Foop"
+msgstr "Ongi etorri Swell Foop aplikaziora"
 
-#: data/preferences.ui:142
-msgid "Setup"
-msgstr "Konfigurazioa"
+#. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:64
+msgid "Let’s _Play"
+msgstr "Joka _dezagun"
 
-#: data/preferences.ui:180
-msgid "_Theme:"
-msgstr "_Gaia:"
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr "Funtzio nagusiak"
 
-#: data/preferences.ui:227
-msgid "Appearance"
-msgstr "Itxura"
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
+#: data/ui/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Hasi joko berria"
 
-#: data/preferences.ui:258
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
+#: data/ui/help-overlay.ui:46
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Jokatu teklatuarekin"
+
+#. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
+#: data/ui/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Move keyboard highlight"
+msgstr "Mugitze-teklatuaren nabarmentzea"
+
+#. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Destroy selected block"
+msgstr "Suntsitu hautatutako blokea"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:69
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Orokorra"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Open menu"
+msgstr "Ireki menua"
+
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:82
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Laster-teklak"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:90
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Laguntza"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Honi buruz"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:106
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Irten"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
+#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:299
+msgid "_New Game"
+msgstr "_Joko berria"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
+#: data/ui/swell-foop.ui:30
+msgid "_Setup"
+msgstr "_Konfigurazioa"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#: data/ui/swell-foop.ui:34
+msgid "_Small (6 × 5)"
+msgstr "_Txikia (6 × 5)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#: data/ui/swell-foop.ui:40
+msgid "Nor_mal (15 × 10)"
+msgstr "Nor_mala (15 × 10)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#: data/ui/swell-foop.ui:46
+msgid "_Large (20 × 15)"
+msgstr "_Handia (20 × 15)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#: data/ui/swell-foop.ui:54
+msgid "_Two colors"
+msgstr "_Bi kolore"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#: data/ui/swell-foop.ui:60
+msgid "T_hree colors"
+msgstr "Hi_ru kolorea"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#: data/ui/swell-foop.ui:66
+msgid "_Four colors"
+msgstr "_Lau kolore"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:83
+msgid "High _Scores"
+msgstr "Puntuaziorik _onenak"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/swell-foop.ui:88
+msgid "A_ppearance"
+msgstr "_Itxura"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Shapes and Colors"
+#: data/ui/swell-foop.ui:92
+msgid "_Colors"
+msgstr "_Koloreak"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Colors"
+#: data/ui/swell-foop.ui:98
+msgid "_Shapes and Colors"
+msgstr "_Formak eta koloreak"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
+#: data/ui/swell-foop.ui:106
 msgid "_Zealous Animation"
 msgstr "Zealous _animazioa"
 
-#: data/preferences.ui:283
-msgid "Operation"
-msgstr "Eragiketa"
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:115
+msgid "_Keyboard Shortcuts"
+msgstr "Las_ter-teklak"
 
-#: src/game-view.vala:322
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:120
+msgid "_Help"
+msgstr "_Laguntza"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:125
+msgid "_About Swell Foop"
+msgstr "Swell Foop jokoari _buruz"
+
+#. Translators: text of a button that appears on the board at the end of a game
+#: src/game-view.vala:403
 msgid "_Play Again"
 msgstr "Jokatu _berriro"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:495
+#: src/game-view.vala:570
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "puntu %u"
 msgstr[1] "%u puntu"
 
-#: src/game-view.vala:496
+#. Translators: text of a label that appears on the board at the end of a game
+#: src/game-view.vala:573
 msgid "Game Over!"
 msgstr "Amaitu da!"
 
-#: src/score-dialog.vala:25
-msgid "High Scores"
-msgstr "Puntuaziorik onenak"
+#. Translators: command-line option description, see 'swell-foop --help'
+#: src/swell-foop.vala:26
+msgid "Print release version and exit"
+msgstr "Erakutsi bertsioaren informazioa eta irten"
 
-#: src/score-dialog.vala:28
-msgid "_Quit"
-msgstr "I_rten"
+#. Translators: About dialog text, name of an author
+#. Translators: About dialog text, name of an artist
+#: src/swell-foop.vala:96 src/swell-foop.vala:104
+msgid "Tim Horton"
+msgstr "Tim Horton"
 
-#: src/score-dialog.vala:29
-msgid "New Game"
-msgstr "Joko berria"
+#. Translators: About dialog text, name of an author
+#: src/swell-foop.vala:100
+msgid "Sophia Yu"
+msgstr "Sophia Yu"
 
-#: src/score-dialog.vala:32
-msgid "_OK"
-msgstr "_Ados"
-
-#: src/score-dialog.vala:44
-msgid "Size:"
-msgstr "Tamaina:"
-
-#: src/score-dialog.vala:69
-msgid "Date"
-msgstr "Data"
-
-#: src/score-dialog.vala:72
-msgid "Score"
-msgstr "Puntuazioa"
-
-#: src/score-dialog.vala:166
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, kolore %u"
-msgstr[1] "%u × %u, %u kolore"
-
-#: src/swell-foop.vala:81
-msgid "Welcome to Swell Foop"
-msgstr "Ongi etorri Swell Foop-era"
-
-#: src/swell-foop.vala:84
+#. Translators: About dialog text, small description of the application
+#: src/swell-foop.vala:114
 msgid ""
-"Clear as many blocks as you can.\n"
-"Fewer clicks means more points."
-msgstr "Garbitu ahal dituzun bloke kopuru gehienak.\n"
-"Zenbat eta klik gutxiago orduan eta puntu gehiago."
+"I want to play that game!\n"
+"You know, they all light-up and you click on them and they vanish!"
+msgstr "Jokatu nahi dut.\n"
+"Badakizu, denak pizten dira eta klik egin behar duzu haien gainean itzaltzeko."
 
-#: src/swell-foop.vala:87
-msgid "Let’s _Play"
-msgstr "Joka _dezagun"
+#. Translators: About dialog text, copyright line
+#: src/swell-foop.vala:118
+msgid "Copyright © 2009 Tim Horton"
+msgstr "Copyright-a © 2009 Tim Horton"
 
-#: src/swell-foop.vala:141 src/swell-foop.vala:504
-msgid "_New Game"
-msgstr "_Joko berria"
+#. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
+#: src/swell-foop.vala:122
+msgid "translator-credits"
+msgstr "translator-credits"
 
-#: src/swell-foop.vala:144
-msgid "High _Scores"
-msgstr "Puntuaziorik _onenak"
-
-#: src/swell-foop.vala:147
-msgid "_Preferences"
-msgstr "_Hobespenak"
-
-#: src/swell-foop.vala:148
-msgid "_Help"
-msgstr "_Laguntza"
-
-#: src/swell-foop.vala:149
-msgid "_About Swell Foop"
-msgstr "Swell Foop jokoari _buruz"
-
-#: src/swell-foop.vala:190
+#. Translators: name of a possible size of the grid
+#: src/window.vala:52
 msgid "Small"
 msgstr "Txikia"
 
-#: src/swell-foop.vala:191
+#. Translators: name of a possible size of the grid
+#: src/window.vala:55
 msgid "Normal"
 msgstr "Arrunta"
 
-#: src/swell-foop.vala:192
+#. Translators: name of a possible size of the grid
+#: src/window.vala:58
 msgid "Large"
 msgstr "Handia"
 
-#: src/swell-foop.vala:266
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: src/window.vala:157
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr "Garbitu ahalik eta bloke gehienak.\n"
+"Zenbat eta klik gutxiago, orduan eta puntu gehiago."
+
+#. Translators: subtitle of the headerbar; the %u is replaced by the score
+#: src/window.vala:185
 #, c-format
 msgid "Score: %u"
 msgstr "Puntuazioa: %u"
 
-#: src/swell-foop.vala:325
-msgid "Colors"
-msgstr "Koloreak"
-
-#: src/swell-foop.vala:329
-msgid "Shapes and Colors"
-msgstr "Formak eta koloreak"
-
-#: src/swell-foop.vala:463
-msgid ""
-"I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!"
-msgstr "Jokatzea nahi dut.\n"
-"Badakizu, denak pizten dira eta klik egin behar duzu haien gainean itzaltzeko."
-
-#: src/swell-foop.vala:464
-msgid "Copyright © 2009 Tim Horton"
-msgstr "Copyright-a © 2009 Tim Horton"
-
-#: src/swell-foop.vala:469
-msgid "translator-credits"
-msgstr "Asier Sarasua Garmendia <asier.sarasua@gmail.com>"
-
-#: src/swell-foop.vala:502
+#. Translators: text of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:293
 msgid "Abandon this game to start a new one?"
 msgstr "Utzi joko hau berri batekin hasteko?"
 
-#: src/swell-foop.vala:503
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
+#: src/window.vala:296
 msgid "_Cancel"
 msgstr "_Utzi"
 
-#~ msgid "_About"
-#~ msgstr "Honi _buruz"
+#: src/window.vala:375
+#, c-format
+msgid "%s, %d color"
+msgid_plural "%s, %d colors"
+msgstr[0] "%s, kolore %d"
+msgstr[1] "%s, %d kolore"
 
-#~ msgid "Start a new game"
-#~ msgstr "Beste joko bat hasten du"
+#. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
+#: src/window.vala:386
+msgid "Type"
+msgstr "Mota"
+
+#~ msgid "Preferences"
+#~ msgstr "Hobespenak"
+
+#~ msgid "_Board size:"
+#~ msgstr "_Taularen tamaina:"
+
+#~ msgid "_Theme:"
+#~ msgstr "_Gaia:"
+
+#~ msgid "Operation"
+#~ msgstr "Eragiketa"
+
+#~ msgid "High Scores"
+#~ msgstr "Puntuaziorik onenak"
+
+#~ msgid "New Game"
+#~ msgstr "Joko berria"
+
+#~ msgid "_OK"
+#~ msgstr "_Ados"
+
+#~ msgid "Size:"
+#~ msgstr "Tamaina:"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Score"
+#~ msgstr "Puntuazioa"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Hobespenak"
