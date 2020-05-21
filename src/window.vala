@@ -111,11 +111,11 @@ private class SwellFoopWindow : ApplicationWindow
         {
             var stack = build_first_run_stack ();
             stack.add_named (view, "game");
-            main_box.add (stack);
+            main_box.append (stack);
         }
         else
         {
-            main_box.add (view);
+            main_box.append (view);
             init_keyboard ();
         }
     }
@@ -292,9 +292,14 @@ private class SwellFoopWindow : ApplicationWindow
         /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel” */
         dialog.add_button (_("_New Game"),  ResponseType.YES);
 
-        var result = dialog.run ();
-        dialog.destroy ();
+        dialog.present ();
+        dialog.response.connect (on_confirmation_response);
 
+    }
+
+    private inline void on_confirmation_response (Gtk.Widget dialog, int result)
+    {
+        dialog.destroy ();
         if (result == ResponseType.YES)
             new_game ();
     }
