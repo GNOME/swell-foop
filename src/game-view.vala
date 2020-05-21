@@ -440,6 +440,9 @@ private class TileView : Widget
 
     internal FixedLayoutChild child_layout { private get; internal set; }
 
+    private static uint8 ZEALOUS_ANIMATION = 12;
+    private static uint8 STANDARD_ANIMATION = 30;
+
     private bool tile_destroyed = false;
 
     internal TileView (Tile tile, uint size)
@@ -505,7 +508,7 @@ private class TileView : Widget
             remove_controller ((!) click_controller);
         remove_css_class ("highlight");
         add_css_class ("removed");
-        Timeout.add (is_zealous ? 240 : 420, () => { hide (); return Source.REMOVE; });
+        Timeout.add (is_zealous ? ZEALOUS_ANIMATION * 10: STANDARD_ANIMATION * 10, () => { hide (); return Source.REMOVE; });
     }
 
     /* Define how the tile moves */
@@ -514,7 +517,7 @@ private class TileView : Widget
     private float current_y = 0.0f;
     internal void animate_move (float old_x, float old_y, float new_x, float new_y, bool is_zealous = false)
     {
-        Timeout.add (is_zealous ? 240 : 420, () => {
+        Timeout.add (is_zealous ? ZEALOUS_ANIMATION * 10 : STANDARD_ANIMATION * 10, () => {
                 if (tick_id == 0)
                 {
                     current_x = old_x;
@@ -523,7 +526,7 @@ private class TileView : Widget
                 else
                     remove_tick_callback (tick_id);
 
-                uint8 i = is_zealous ? 25 : 40;
+                uint8 i = is_zealous ? ZEALOUS_ANIMATION : STANDARD_ANIMATION;
                 float move_distance_x = (new_x - current_x) / (float) i;
                 float move_distance_y = (new_y - current_y) / (float) i;
 
