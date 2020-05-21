@@ -201,7 +201,7 @@ private class Board : Widget
                 tiles[x, y] = null;
 
                 SignalHandler.disconnect_matched (tile, SignalMatchType.DATA, 0, 0, null, null, this);
-                tile.destroy ();
+                tile.unparent ();
             }
         }
     }
