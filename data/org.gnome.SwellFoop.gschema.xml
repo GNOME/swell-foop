@@ -41,12 +41,12 @@
       <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous' -->
       <description>Use more flashy, but slower, animations.</description>
     </key>
-    <key name="saved-game" type="m(yuaay)">
+    <key name="saved-game" type="m(aayqa(yy))">
       <default>nothing</default>
       <!-- Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game' -->
       <summary>Saved game</summary>
       <!-- Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example -->
-      <description>Has value “nothing” if there is no saved game. Else, the values are: the number of colors, the score, and a copy of the board, where “0” means “empty”.</description>
+      <description>Has value “nothing” if there is no saved game. Else, contains a copy of the initial board, an index in the history, and the history of actions saved by an array of coords.</description>
     </key>
   </schema>
 </schemalist>

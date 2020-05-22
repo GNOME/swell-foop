@@ -23,22 +23,7 @@
     <child>
       <object class="GtkShortcutsSection">
         <property name="visible">True</property>
-        <property name="max-height">5</property>
-        <child>
-          <object class="GtkShortcutsGroup">
-            <property name="visible">True</property>
-            <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game" -->
-            <property name="title" translatable="yes" context="shortcut window">Main functions</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <property name="accelerator">&lt;Ctrl&gt;N</property>
-                <!-- Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions -->
-                <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
-              </object>
-            </child>
-          </object>
-        </child>
+        <property name="max-height">7</property>
         <child>
           <object class="GtkShortcutsGroup">
             <property name="visible">True</property>
@@ -58,6 +43,52 @@
                 <!-- Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click -->
                 <property name="title" translatable="yes" context="shortcut window">Destroy selected block</property>
                 <property name="accelerator">Return space</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
+            <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo" -->
+            <property name="title" translatable="yes" context="shortcut window">History</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <!-- Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move -->
+                <property name="title" translatable="yes" context="shortcut window">Undo</property>
+                <property name="accelerator">&lt;Ctrl&gt;Z</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <!-- Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move -->
+                <property name="title" translatable="yes" context="shortcut window">Redo</property>
+                <property name="accelerator">&lt;Ctrl&gt;&lt;Shift&gt;Z</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">False</property>
+                <!-- Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game -->
+                <property name="title" translatable="yes" context="shortcut window">Restart</property>
+                <property name="accelerator">&lt;Ctrl&gt;&lt;Shift&gt;R</property> <!-- TODO implement -->
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
+            <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game" -->
+            <property name="title" translatable="yes" context="shortcut window">Main functions</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <property name="accelerator">&lt;Ctrl&gt;N</property>
+                <!-- Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions -->
+                <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
               </object>
             </child>
           </object>
