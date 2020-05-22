@@ -99,7 +99,7 @@ private class SwellFoopWindow : ApplicationWindow
         init_scores ();
 
         /* show the current score */
-        update_score_cb (0);
+        update_score_cb ();
 
         /* Create a clutter renderer widget */
         view = new GameView ();
@@ -161,7 +161,7 @@ private class SwellFoopWindow : ApplicationWindow
     * * various
     \*/
 
-    private void update_score_cb (uint points_awarded)
+    private void update_score_cb ()
     {
         uint score = 0;
         if (game != null)
@@ -206,7 +206,7 @@ private class SwellFoopWindow : ApplicationWindow
                          (uint8) settings.get_int ("colors"),
                          saved_game);
         game_in_progress = game.score != 0;
-        update_score_cb (game.score);
+        update_score_cb ();
 
         /* Game score change will be sent to the main window and show in the score label */
         game.update_score.connect (update_score_cb);
