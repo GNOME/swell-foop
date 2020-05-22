@@ -358,18 +358,18 @@ private class GameGroup : Clutter.Group
             cursor_active = true;
 
         // highlight and unhighlight
-        TileActor? cursor = find_tile_at_position (cursor_x, cursor_y);
+        TileActor? cursor_tile = find_tile_at_position (cursor_x, cursor_y);
 
-        if ((highlighted != null && cursor == null)
-         || (highlighted == null && cursor != null)
-         || (highlighted != null && cursor != null && ((!) highlighted).tile.color != ((!) cursor).tile.color))
+        if ((highlighted != null && cursor_tile == null)
+         || (highlighted == null && cursor_tile != null)
+         || (highlighted != null && cursor_tile != null && ((!) highlighted).tile.color != ((!) cursor_tile).tile.color))
         {
             // opacity_for_connected_tiles() handles correctly a null TileActor
             opacity_for_connected_tiles (highlighted, Opacity.HALF);
-            opacity_for_connected_tiles (cursor,      Opacity.FULL);
+            opacity_for_connected_tiles (cursor_tile, Opacity.FULL);
         }
 
-        highlighted = cursor;
+        highlighted = cursor_tile;
 
         // update visual cursor position
         float xx, yy;
