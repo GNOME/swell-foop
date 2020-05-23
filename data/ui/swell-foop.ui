@@ -127,86 +127,56 @@
       </item>
     </section>
   </menu>
-  <requires lib="gtk+" version="3.12"/>
+  <requires lib="gtk+" version="3.98"/>
   <template class="SwellFoopWindow" parent="GtkApplicationWindow">
     <property name="resizable">False</property>
     <property name="icon-name">org.gnome.SwellFoop</property>
-    <!-- Translators: title of the window displayed by window managers; name of the application -->
+    <!-- Translators: title of the window displayed on the headerbar; name of the application -->
     <property name="title" translatable="yes">Swell Foop</property>
     <child type="titlebar">
       <object class="GtkHeaderBar" id="headerbar">
-        <property name="visible">True</property>
-        <property name="show-close-button">True</property>
-        <!-- Translators: title of the window displayed on the headerbar; name of the application -->
-        <property name="title" translatable="yes">Swell Foop</property>
-        <child>
+        <property name="show-title-buttons">True</property>
+        <child type="start">
           <object class="GtkBox" id="undo_redo_box">
-            <property name="visible">True</property>
             <property name="valign">center</property>
             <style>
               <class name="linked"/>
             </style>
             <child>
               <object class="GtkButton">
-                <property name="visible">True</property>
                 <property name="valign">center</property>
                 <!-- Translators: tooltip text of the Undo button; probably a verb -->
                 <property name="tooltip-text" translatable="yes">Undo</property>
                 <property name="action-name">win.undo</property>
                 <property name="focus-on-click">False</property>
-                <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">edit-undo-symbolic</property>
-                    <property name="visible">True</property>
-                    <property name="icon-size">1</property>
-                  </object>
-                </child>
+                <property name="icon-name">edit-undo-symbolic</property>
               </object>
             </child>
             <child>
               <object class="GtkButton">
-                <property name="visible">True</property>
                 <property name="valign">center</property>
                 <!-- Translators: tooltip text of the Undo button; probably a verb -->
                 <property name="tooltip-text" translatable="yes">Redo</property>
                 <property name="action-name">win.redo</property>
                 <property name="focus-on-click">False</property>
-                <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">edit-redo-symbolic</property>
-                    <property name="visible">True</property>
-                    <property name="icon-size">1</property>
-                  </object>
-                </child>
+                <property name="icon-name">edit-redo-symbolic</property>
               </object>
             </child>
           </object>
         </child>
-        <child>
+        <child type="end">
           <object class="GtkMenuButton" id="hamburger_button">
-            <property name="visible">True</property>
             <property name="menu-model">hamburger-menu</property>
+            <property name="icon-name">open-menu-symbolic</property>
             <style>
               <class name="image-button"/>
             </style>
-            <child>
-              <object class="GtkImage">
-                <property name="icon-name">open-menu-symbolic</property>
-                <property name="visible">True</property>
-                <property name="icon-size">1</property>
-              </object>
-            </child>
           </object>
-          <packing>
-            <property name="pack-type">end</property>
-          </packing>
         </child>
       </object>
     </child>
     <child>
-      <object class="GtkBox" id="main_box">
-        <property name="visible">True</property>
-      </object>
+      <object class="GtkBox" id="main_box"/>
     </child>
   </template>
 </interface>
