@@ -511,7 +511,7 @@ private class TileView : Widget
         /* When the animination is done, hide the actor */
         tile_destroyed = true;
         can_target = false;
-        if (click_controller != null)
+        if (click_controller != null && ((!) click_controller).get_widget () != null)
             remove_controller ((!) click_controller);
         remove_css_class ("highlight");
         add_css_class ("removed");
