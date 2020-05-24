@@ -200,13 +200,23 @@ private class Board : Widget
                 if (tile_view == null)
                     continue;
 
-                if (((!) tile_view).click_controller_pressed_handler != 0)
-                    SignalHandler.disconnect (((!) tile_view).click_controller, ((!) tile_view).click_controller_pressed_handler);
+                SignalHandler.disconnect (((!) tile_view).click_controller, ((!) tile_view).click_controller_pressed_handler);
                 SignalHandler.disconnect (((!) tile_view).inout_controller, ((!) tile_view).inout_controller_enter_handler);
                 SignalHandler.disconnect (((!) tile_view).inout_controller, ((!) tile_view).inout_controller_leave_handler);
 
                 ((!) tile_view).unparent ();
                 tiles[x, y] = null;
+            }
+        }
+
+        for (var x = 0; x < game.columns; x++)
+        {
+            for (var y = 0; y < game.rows; y++)
+            {
+                Tile? tile = game.get_tile (x, y);
+                if (tile == null)
+                    continue;
+                SignalHandler.disconnect_by_func (tile, null, this);
             }
         }
     }
@@ -222,11 +232,13 @@ private class Board : Widget
             {
                 /* For each tile object, we create a tile actor for it */
                 Tile? tile = game.get_tile (x, y);
-                TileView tile_view;
                 if (tile == null || ((!) tile).closed)
-                    tile_view = new TileView.empty (tile_size);
-                else
-                    tile_view = new TileView (tile, tile_size);
+                {
+                    tiles[x, y] = null;
+                    continue;
+                }
+
+                TileView tile_view = new TileView (tile, tile_size);
 
                 tiles[x, y] = tile_view;
                 tile_view.insert_before (this, /* insert last */ null);
@@ -235,18 +247,13 @@ private class Board : Widget
                 tile_view.child_layout = child_layout;
 
                 /* The event from the model will be caught and responded by the view */
-                if (tile != null)
-                {
-                    ((!) tile).move.connect (move_cb);
-                    ((!) tile).close.connect (close_cb);
-                }
+                ((!) tile).move.connect (move_cb);
+                ((!) tile).close.connect (close_cb);
 
                 /* Respond to the user interactions */
-                if (tile_view.click_controller != null)
-                    tile_view.click_controller_pressed_handler = ((!) tile_view.click_controller).pressed.connect (remove_region_cb);
-
-                tile_view.inout_controller_enter_handler = tile_view.inout_controller.enter.connect (tile_entered_cb);
-                tile_view.inout_controller_leave_handler = tile_view.inout_controller.leave.connect (tile_left_cb);
+                tile_view.click_controller_pressed_handler  = tile_view.click_controller.pressed.connect (remove_region_cb);
+                tile_view.inout_controller_enter_handler    = tile_view.inout_controller.enter.connect (tile_entered_cb);
+                tile_view.inout_controller_leave_handler    = tile_view.inout_controller.leave.connect (tile_left_cb);
 
                 /* visual position */
                 Graphene.Point point = Graphene.Point ();
@@ -289,7 +296,7 @@ private class Board : Widget
         unowned TileView? tile_view_1 = tiles[old_x, old_y];
         if (tile_view_1 == null)
             assert_not_reached ();
-        unowned TileView? tile_view_2 = tiles[new_x, new_y];
+        TileView? tile_view_2 = tiles[new_x, new_y];
 
         tiles[new_x, new_y] = tile_view_1;
         tiles[old_x, old_y] = tile_view_2;
@@ -309,8 +316,9 @@ private class Board : Widget
         foreach (unowned Tile tile in connected_tiles)
         {
             TileView? tile_view = tiles[tile.grid_x, tile.grid_y];
-            if (tile_view != null)
-                ((!) tile_view).set_highlight (highlight);
+            if (tile_view == null)
+                assert_not_reached ();
+            ((!) tile_view).set_highlight (highlight);
         }
     }
 
@@ -360,9 +368,9 @@ private class Board : Widget
     /* When the mouse leaves the application window, reset all tiles to the default brightness */
     internal void board_left_cb ()
     {
-        foreach (TileView? tile_actor in tiles)
-            if (tile_actor != null)
-                ((!) tile_actor).set_highlight (false);
+        foreach (unowned TileView? tile_view in tiles)
+            if (tile_view != null) // hidden TileViews correctly react to that
+                ((!) tile_view).set_highlight (false);
     }
 
     private TileView? find_tile_at_position (int position_x, int position_y)
@@ -436,11 +444,11 @@ private class Board : Widget
 private class TileView : Widget
 {
     /* Tile being represented */
-    public Tile? tile   { internal get; protected construct; default = null; }
+    public Tile tile    { internal get; protected construct; }
     public uint size    { internal get; protected construct; }
 
     public EventControllerMotion inout_controller { internal get; protected construct; }
-    public GestureClick?         click_controller { internal get; protected construct; default = null; }
+    public GestureClick          click_controller { internal get; protected construct; }
     internal ulong click_controller_pressed_handler = 0;
     internal ulong inout_controller_enter_handler = 0;
     internal ulong inout_controller_leave_handler = 0;
@@ -462,36 +470,25 @@ private class TileView : Widget
                 click_controller: _click_controller);
     }
 
-    internal TileView.empty (uint size)
-    {
-        EventControllerMotion _inout_controller = new EventControllerMotion ();
-        Object (size: size,
-                inout_controller: _inout_controller);
-    }
-
     construct
     {
         set_size_request ((int) size, (int) size);
         add_css_class ("tile");
 
-        if (tile == null)
-            add_css_class ("removed");
-        else
-            switch (tile.color)
-            {
-                case 4: add_css_class ("red");      break;
-                case 1: add_css_class ("blue");     break;
-                case 2: add_css_class ("green");    break;
-                case 3: add_css_class ("yellow");   break;
-                case 0: add_css_class ("removed");  break;
-                default: assert_not_reached ();
-            }
+        switch (tile.color)
+        {
+            case 4: add_css_class ("red");      break;
+            case 1: add_css_class ("blue");     break;
+            case 2: add_css_class ("green");    break;
+            case 3: add_css_class ("yellow");   break;
+            case 0:
+            default: assert_not_reached ();
+        }
 
         set_highlight (false);
 
         add_controller (inout_controller);
-        if (click_controller != null)
-            add_controller ((!) click_controller);
+        add_controller (click_controller);
     }
 
     internal void set_highlight (bool highlight)
@@ -511,8 +508,11 @@ private class TileView : Widget
         /* When the animination is done, hide the actor */
         tile_destroyed = true;
         can_target = false;
-        if (click_controller != null && ((!) click_controller).get_widget () != null)
-            remove_controller ((!) click_controller);
+        if (click_controller.get_widget () != null)   // FIXME animate_out should not be called multiple times
+        {
+            remove_controller (click_controller);
+            remove_controller (inout_controller);
+        }
         remove_css_class ("highlight");
         add_css_class ("removed");
         Timeout.add (is_zealous ? ZEALOUS_ANIMATION * 10: STANDARD_ANIMATION * 10, () => { hide (); return Source.REMOVE; });

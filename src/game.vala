@@ -44,7 +44,7 @@ private class Tile : Object
     }
 
     /* Do not use this mothod to initialize the position. */
-    internal void update_position (uint8 new_x, uint8 new_y)
+    internal void update_position (uint8 new_x, uint8 new_y, bool undoing)
     {
         if (closed)
             return;
@@ -58,7 +58,7 @@ private class Tile : Object
             grid_y = new_y;
 
             /* Send move signal to actor in the view */
-            if (!closed)
+            if (!undoing)
                 move (old_x, old_y, new_x, new_y);
         }
     }
@@ -317,7 +317,7 @@ private class Game : Object
 
                 if (!((!) tile).closed)
                 {
-                    ((!) tile).update_position (new_x, y);
+                    ((!) tile).update_position (new_x, y, /* undoing */ false);
                     has_empty_col = false;
                 }
             }
@@ -637,7 +637,7 @@ private class Game : Object
                     if (current_board [i, j - 1] != null)
                     {
                         current_board [i, j] = (owned) current_board [i, j - 1];
-                        ((!) current_board [i, j]).update_position (j, i);
+                        ((!) current_board [i, j]).update_position (j, i, /* undoing */ true);
                     }
                     else
                         current_board [i, j] = null;
@@ -655,7 +655,7 @@ private class Game : Object
                 if (current_board [row - 1, column] != null)
                 {
                     current_board [row, column] = (owned) current_board [row - 1, column];
-                    ((!) current_board [row, column]).update_position (column, row);
+                    ((!) current_board [row, column]).update_position (column, row, /* undoing */ true);
                 }
                 else
                     current_board [row, column] = null;
