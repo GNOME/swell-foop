@@ -196,13 +196,17 @@ private class Board : Widget
         {
             for (var y = 0; y < game.rows; y++)
             {
-                var tile = tiles[x, y];
-                if (tile == null)
+                unowned TileView? tile_view = tiles[x, y];
+                if (tile_view == null)
                     continue;
-                tiles[x, y] = null;
 
-                SignalHandler.disconnect_matched (tile, SignalMatchType.DATA, 0, 0, null, null, this);
-                tile.unparent ();
+                if (((!) tile_view).click_controller_pressed_handler != 0)
+                    SignalHandler.disconnect (((!) tile_view).click_controller, ((!) tile_view).click_controller_pressed_handler);
+                SignalHandler.disconnect (((!) tile_view).inout_controller, ((!) tile_view).inout_controller_enter_handler);
+                SignalHandler.disconnect (((!) tile_view).inout_controller, ((!) tile_view).inout_controller_leave_handler);
+
+                ((!) tile_view).unparent ();
+                tiles[x, y] = null;
             }
         }
     }
@@ -239,10 +243,10 @@ private class Board : Widget
 
                 /* Respond to the user interactions */
                 if (tile_view.click_controller != null)
-                    ((!) tile_view.click_controller).pressed.connect (remove_region_cb);
+                    tile_view.click_controller_pressed_handler = ((!) tile_view.click_controller).pressed.connect (remove_region_cb);
 
-                tile_view.inout_controller.enter.connect (tile_entered_cb);
-                tile_view.inout_controller.leave.connect (tile_left_cb);
+                tile_view.inout_controller_enter_handler = tile_view.inout_controller.enter.connect (tile_entered_cb);
+                tile_view.inout_controller_leave_handler = tile_view.inout_controller.leave.connect (tile_left_cb);
 
                 /* visual position */
                 Graphene.Point point = Graphene.Point ();
@@ -437,6 +441,9 @@ private class TileView : Widget
 
     public EventControllerMotion inout_controller { internal get; protected construct; }
     public GestureClick?         click_controller { internal get; protected construct; default = null; }
+    internal ulong click_controller_pressed_handler = 0;
+    internal ulong inout_controller_enter_handler = 0;
+    internal ulong inout_controller_leave_handler = 0;
 
     internal FixedLayoutChild child_layout { private get; internal set; }
 
