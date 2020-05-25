@@ -154,6 +154,7 @@ private class Board : Widget
 
     /* Game being played */
     private bool game_is_set = false;
+    private ulong game_undone_handler = 0;
     private Game _game;
     internal Game game
     {
@@ -168,11 +169,11 @@ private class Board : Widget
             /* Remove old tiles */
             remove_tiles ();
 
-            if (game_is_set)
-                SignalHandler.disconnect_matched (game, SignalMatchType.DATA, 0, 0, null, null, this);
+            if (game_undone_handler != 0)
+                SignalHandler.disconnect (game, game_undone_handler);
             _game = value;
             game_is_set = true;
-            game.undone.connect (move_undone_cb);
+            game_undone_handler = game.undone.connect (move_undone_cb);
 
             /* Put tiles in new locations */
             tiles = new TileView? [game.columns, game.rows];
@@ -200,23 +201,17 @@ private class Board : Widget
                 if (tile_view == null)
                     continue;
 
+                if (((!) tile_view).tile_move_handler != 0)
+                    SignalHandler.disconnect (((!) tile_view).tile, ((!) tile_view).tile_move_handler);
+                if (((!) tile_view).tile_close_handler != 0)
+                    SignalHandler.disconnect (((!) tile_view).tile, ((!) tile_view).tile_close_handler);
+
                 SignalHandler.disconnect (((!) tile_view).click_controller, ((!) tile_view).click_controller_pressed_handler);
                 SignalHandler.disconnect (((!) tile_view).inout_controller, ((!) tile_view).inout_controller_enter_handler);
                 SignalHandler.disconnect (((!) tile_view).inout_controller, ((!) tile_view).inout_controller_leave_handler);
 
                 ((!) tile_view).unparent ();
                 tiles[x, y] = null;
-            }
-        }
-
-        for (var x = 0; x < game.columns; x++)
-        {
-            for (var y = 0; y < game.rows; y++)
-            {
-                Tile? tile = game.get_tile (x, y);
-                if (tile == null)
-                    continue;
-                SignalHandler.disconnect_by_func (tile, null, this);
             }
         }
     }
@@ -247,8 +242,8 @@ private class Board : Widget
                 tile_view.child_layout = child_layout;
 
                 /* The event from the model will be caught and responded by the view */
-                ((!) tile).move.connect (move_cb);
-                ((!) tile).close.connect (close_cb);
+                tile_view.tile_move_handler  = ((!) tile).move.connect (move_cb);
+                tile_view.tile_close_handler = ((!) tile).close.connect (close_cb);
 
                 /* Respond to the user interactions */
                 tile_view.click_controller_pressed_handler  = tile_view.click_controller.pressed.connect (remove_region_cb);
@@ -282,11 +277,16 @@ private class Board : Widget
     }
 
     /* When a tile in the model layer is closed, play an animation at the view layer */
-    private inline void close_cb (uint8 grid_x, uint8 grid_y)
+    private inline void close_cb (Tile tile, uint8 grid_x, uint8 grid_y)
     {
-        unowned TileView? tile_actor = tiles[grid_x, grid_y];
-        if (tile_actor != null)
-            ((!) tile_actor).animate_out (is_zealous);
+        unowned TileView? tile_view = tiles[grid_x, grid_y];
+        if (tile_view == null)
+            assert_not_reached ();
+        ((!) tile_view).animate_out (is_zealous);
+        SignalHandler.disconnect (tile, ((!) tile_view).tile_move_handler);
+        SignalHandler.disconnect (tile, ((!) tile_view).tile_close_handler);
+        ((!) tile_view).tile_move_handler = 0;
+        ((!) tile_view).tile_close_handler = 0;
     }
 
     /* When a tile in the model layer is moved, play an animation at the view layer */
@@ -452,6 +452,8 @@ private class TileView : Widget
     internal ulong click_controller_pressed_handler = 0;
     internal ulong inout_controller_enter_handler = 0;
     internal ulong inout_controller_leave_handler = 0;
+    internal ulong tile_move_handler = 0;
+    internal ulong tile_close_handler = 0;
 
     internal FixedLayoutChild child_layout { private get; internal set; }
 
