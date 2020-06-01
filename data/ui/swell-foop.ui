@@ -50,19 +50,19 @@
         </section>
         <section>
           <item>
-            <!-- Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large" -->
+            <!-- Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "T_hree colors" and "_Four colors" -->
             <attribute name="label" translatable="yes">_Two colors</attribute>
             <attribute name="action">win.change-colors</attribute>
             <attribute name="target">2</attribute>
           </item>
           <item>
-            <!-- Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large" -->
+            <!-- Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "_Four colors" -->
             <attribute name="label" translatable="yes">T_hree colors</attribute>
             <attribute name="action">win.change-colors</attribute>
             <attribute name="target">3</attribute>
           </item>
           <item>
-            <!-- Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal" -->
+            <!-- Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "T_hree colors" -->
             <attribute name="label" translatable="yes">_Four colors</attribute>
             <attribute name="action">win.change-colors</attribute>
             <attribute name="target">4</attribute>
