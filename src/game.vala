@@ -131,7 +131,8 @@ private class Game : Object
 
         /* populate with the requested number of colors */
         do    (populate_new_game (ref initial_board, color_num));
-        while (bad_colors_number (ref initial_board, color_num));
+        while (bad_colors_number (ref initial_board, color_num)
+            || unclickable_board (ref initial_board));
 
         /* create the board of Tile instances */
         for (uint8 x = 0; x < columns; x++)
@@ -179,6 +180,20 @@ private class Game : Object
                 /* else just increase the per-color counter */
                 colors [color_id]++;
             }
+        return true;
+    }
+    private static bool unclickable_board (ref uint8 [,] initial_board)
+    {
+        uint8 rows     = (uint8) initial_board.length [0];
+        uint8 columns  = (uint8) initial_board.length [1];
+        for (uint8 x = 1; x < columns; x++)
+            for (uint8 y = 0; y < rows; y++)
+                if (initial_board [y, x] == initial_board [y, x - 1])
+                    return false;
+        for (uint8 x = 0; x < columns; x++)
+            for (uint8 y = 1; y < rows; y++)
+                if (initial_board [y, x] == initial_board [y - 1, x])
+                    return false;
         return true;
     }
 
@@ -448,7 +463,8 @@ private class Game : Object
             }
         }
 
-        if (bad_colors_number (ref initial_board, color_num))
+        if (bad_colors_number (ref initial_board, color_num)
+         || unclickable_board (ref initial_board))
             return false;
 
         Tile? [,] current_board = new Tile? [rows, columns];
