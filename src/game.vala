@@ -150,10 +150,11 @@ private class Game : Object
     }
     private static bool bad_colors_number (ref uint8 [,] initial_board, uint8 color_num)
     {
-        uint8 n_colors = 0;
-        bool [] colors = new bool [color_num];
+        /* counter will grow to twice the number of colors */
+        uint8 counter = 0;
+        uint8 [] colors = new uint8 [color_num];
         for (uint8 x = 0; x < color_num; x++)
-            colors [x] = false;
+            colors [x] = 0;
 
         uint8 rows     = (uint8) initial_board.length [0];
         uint8 columns  = (uint8) initial_board.length [1];
@@ -161,17 +162,22 @@ private class Game : Object
             for (uint8 y = 0; y < rows; y++)
             {
                 uint8 color_id = initial_board [y, x];
+                /* initial board should be full */
                 if (color_id == 0)
                     assert_not_reached ();
                 color_id--;
+                /* color number too big for given number of colors */
                 if (color_id >= color_num)
                     return true;
-                if (colors [color_id])
+                /* already (at least) two tiles of this color */
+                if (colors [color_id] >= 2)
                     continue;
-                n_colors++;
-                if (n_colors == color_num)
+                /* check if board is now completely good */
+                counter++;
+                if (counter >= 2 * color_num)
                     return false;
-                colors [color_id] = true;
+                /* else just increase the per-color counter */
+                colors [color_id]++;
             }
         return true;
     }
