@@ -323,7 +323,7 @@ private class Board : Widget
     }
 
     /* When the mouse enters a tile, bright up the connected tiles */
-    private void tile_entered_cb (EventControllerMotion inout_controller, double x, double y, Gdk.CrossingMode mode)
+    private void tile_entered_cb (EventControllerMotion inout_controller, double x, double y)
     {
         if (cursor_active)
             return;
@@ -335,7 +335,7 @@ private class Board : Widget
     }
 
     /* When the mouse leaves a tile, lower the brightness of the connected tiles */
-    private void tile_left_cb (EventControllerMotion inout_controller, Gdk.CrossingMode mode)
+    private void tile_left_cb (EventControllerMotion inout_controller)
     {
         if (cursor_active)
             return;
