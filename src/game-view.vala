@@ -238,6 +238,9 @@ private class GameGroup : Clutter.Group
 
         theme = new Theme ("shapesandcolors");
         themes.insert ("shapesandcolors", theme);
+
+        theme = new Theme ("contrastedshapes");
+        themes.insert ("contrastedshapes", theme);
     }
 
     /* When a tile in the model layer is closed, play an animation at the view layer */

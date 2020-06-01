@@ -88,7 +88,7 @@ private class SwellFoopWindow : ApplicationWindow
         settings.changed ["zealous"].connect ((_settings, _key_name) => { view.set_is_zealous (_settings.get_boolean (_key_name)); });
 
         string theme = settings.get_string ("theme");
-        if (theme != "colors" && theme != "shapesandcolors")
+        if (theme != "colors" && theme != "shapesandcolors" && theme != "contrastedshapes")
             theme = "shapesandcolors";
         SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
         theme_action.set_state (new Variant.@string (theme));
