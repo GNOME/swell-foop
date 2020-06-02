@@ -131,7 +131,8 @@ private class Game : Object
 
         /* populate with the requested number of colors */
         do    (populate_new_game (ref initial_board, color_num));
-        while (bad_colors_number (ref initial_board, color_num));
+        while (bad_colors_number (ref initial_board, color_num)
+            || unclickable_board (ref initial_board));
 
         /* create the board of Tile instances */
         for (uint8 x = 0; x < columns; x++)
@@ -150,10 +151,11 @@ private class Game : Object
     }
     private static bool bad_colors_number (ref uint8 [,] initial_board, uint8 color_num)
     {
-        uint8 n_colors = 0;
-        bool [] colors = new bool [color_num];
+        /* counter will grow to twice the number of colors */
+        uint8 counter = 0;
+        uint8 [] colors = new uint8 [color_num];
         for (uint8 x = 0; x < color_num; x++)
-            colors [x] = false;
+            colors [x] = 0;
 
         uint8 rows     = (uint8) initial_board.length [0];
         uint8 columns  = (uint8) initial_board.length [1];
@@ -161,18 +163,37 @@ private class Game : Object
             for (uint8 y = 0; y < rows; y++)
             {
                 uint8 color_id = initial_board [y, x];
+                /* initial board should be full */
                 if (color_id == 0)
                     assert_not_reached ();
                 color_id--;
+                /* color number too big for given number of colors */
                 if (color_id >= color_num)
                     return true;
-                if (colors [color_id])
+                /* already (at least) two tiles of this color */
+                if (colors [color_id] >= 2)
                     continue;
-                n_colors++;
-                if (n_colors == color_num)
+                /* check if board is now completely good */
+                counter++;
+                if (counter >= 2 * color_num)
                     return false;
-                colors [color_id] = true;
+                /* else just increase the per-color counter */
+                colors [color_id]++;
             }
+        return true;
+    }
+    private static bool unclickable_board (ref uint8 [,] initial_board)
+    {
+        uint8 rows     = (uint8) initial_board.length [0];
+        uint8 columns  = (uint8) initial_board.length [1];
+        for (uint8 x = 1; x < columns; x++)
+            for (uint8 y = 0; y < rows; y++)
+                if (initial_board [y, x] == initial_board [y, x - 1])
+                    return false;
+        for (uint8 x = 0; x < columns; x++)
+            for (uint8 y = 1; y < rows; y++)
+                if (initial_board [y, x] == initial_board [y - 1, x])
+                    return false;
         return true;
     }
 
@@ -442,7 +463,8 @@ private class Game : Object
             }
         }
 
-        if (bad_colors_number (ref initial_board, color_num))
+        if (bad_colors_number (ref initial_board, color_num)
+         || unclickable_board (ref initial_board))
             return false;
 
         Tile? [,] current_board = new Tile? [rows, columns];
