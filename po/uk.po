@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-05-24 10:13+0000\n"
-"PO-Revision-Date: 2020-05-24 15:47+0300\n"
+"POT-Creation-Date: 2020-06-02 07:25+0000\n"
+"PO-Revision-Date: 2020-06-02 13:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
 "=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 20.07.70\n"
+"X-Generator: Lokalize 20.03.70\n"
 "X-Project-Style: gnome\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: title of the window displayed on the headerbar; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
-#: data/ui/swell-foop.ui:141 src/swell-foop.vala:16
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:141
+#: data/ui/swell-foop.ui:147 src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Той самий"
 
@@ -123,18 +123,14 @@ msgstr "Збережена гра"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
 #: data/org.gnome.SwellFoop.gschema.xml:49
-#| msgid ""
-#| "Has value “nothing” if there is no saved game. Else, the values are: the "
-#| "number of colors, the score, and a copy of the board, where “0” means "
-#| "“empty”."
 msgid ""
 "Has value “nothing” if there is no saved game. Else, contains a copy of the "
 "initial board, an index in the history, and the history of actions saved by "
 "an array of coords."
 msgstr ""
-"Має значення «nothing» («нічого»), якщо збережених ігор не існує. Якщо"
-" збережені ігри існують, зберігає копію початкової дошки, індекс у журналі та"
-" журнал дій, який зберігається у масиві координат."
+"Має значення «nothing» («нічого»), якщо збережених ігор не існує. Якщо "
+"збережені ігри існують, зберігає копію початкової дошки, індекс у журналі та "
+"журнал дій, який зберігається у масиві координат."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
@@ -248,32 +244,32 @@ msgstr "_Створити гру"
 msgid "_Setup"
 msgstr "_Налаштування"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:34
 msgid "_Small (6 × 5)"
 msgstr "_Малий (6 × 5)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:40
 msgid "Nor_mal (15 × 10)"
 msgstr "Звич_айний (15 × 10)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
 #: data/ui/swell-foop.ui:46
 msgid "_Large (20 × 15)"
 msgstr "_Великий (20 × 15)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:54
 msgid "_Two colors"
 msgstr "Два _кольори"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
 #: data/ui/swell-foop.ui:60
 msgid "T_hree colors"
 msgstr "_Три кольори"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
 #: data/ui/swell-foop.ui:66
 msgid "_Four colors"
 msgstr "_Чотири кольори"
@@ -288,53 +284,58 @@ msgstr "Найкращі _результати"
 msgid "A_ppearance"
 msgstr "_Вигляд"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Shapes and Colors"
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:92
 msgid "_Colors"
 msgstr "_Кольори"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Colors"
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:98
 msgid "_Shapes and Colors"
 msgstr "_Форми і кольори"
 
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
+#: data/ui/swell-foop.ui:104
+msgid "_Boring Shapes"
+msgstr "_Нудні форми"
+
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
-#: data/ui/swell-foop.ui:106
+#: data/ui/swell-foop.ui:112
 msgid "_Zealous Animation"
 msgstr "_Ретельна анімація"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:115
+#: data/ui/swell-foop.ui:121
 msgid "_Keyboard Shortcuts"
 msgstr "_Клавіатурні скорочення"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:120
+#: data/ui/swell-foop.ui:126
 msgid "_Help"
 msgstr "_Довідка"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:125
+#: data/ui/swell-foop.ui:131
 msgid "_About Swell Foop"
 msgstr "_Про «Той самий»"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:154
+#: data/ui/swell-foop.ui:160
 msgid "Undo"
 msgstr "Скасувати"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:171
+#: data/ui/swell-foop.ui:177
 msgid "Redo"
 msgstr "Повторити"
 
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:412
+#: src/game-view.vala:415
 msgid "_Play Again"
 msgstr "_Зіграти ще раз"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:604
+#: src/game-view.vala:607
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -343,7 +344,7 @@ msgstr[1] "%u бали"
 msgstr[2] "%u балів"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:607
+#: src/game-view.vala:610
 msgid "Game Over!"
 msgstr "Гру закінчено!"
 
