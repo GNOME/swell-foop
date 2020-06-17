@@ -11,9 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ro\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-05-24 10:13+0000\n"
-"PO-Revision-Date: 2020-05-24 13:35+0300\n"
-"Last-Translator: Florentina Mușat <emryslokadottir [at] gmail [dot] com>\n"
+"POT-Creation-Date: 2020-06-04 07:19+0000\n"
+"PO-Revision-Date: 2020-06-17 18:46+0300\n"
+"Last-Translator: Florentina Mușat <florentina [dot] musat [dot] 28 [at] "
+"gmail [dot] com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -28,8 +29,8 @@ msgstr ""
 #. Translators: title of the window displayed on the headerbar; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
-#: data/ui/swell-foop.ui:141 src/swell-foop.vala:16
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:141
+#: data/ui/swell-foop.ui:147 src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -251,32 +252,32 @@ msgstr "Joc _nou"
 msgid "_Setup"
 msgstr "_Configurare"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:34
 msgid "_Small (6 × 5)"
 msgstr "_Mică (6 x 5)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:40
 msgid "Nor_mal (15 × 10)"
 msgstr "Nor_mală (15 x 10)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
 #: data/ui/swell-foop.ui:46
 msgid "_Large (20 × 15)"
 msgstr "_Mare (20 x 15)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:54
 msgid "_Two colors"
 msgstr "_Două culori"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
 #: data/ui/swell-foop.ui:60
 msgid "T_hree colors"
 msgstr "T_rei culori"
 
-#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
 #: data/ui/swell-foop.ui:66
 msgid "_Four colors"
 msgstr "_Patru culori"
@@ -291,53 +292,58 @@ msgstr "_Scoruri mari"
 msgid "A_ppearance"
 msgstr "As_pect"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Shapes and Colors"
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:92
 msgid "_Colors"
 msgstr "_Culori"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Colors"
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:98
 msgid "_Shapes and Colors"
 msgstr "_Forme și culori"
 
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
+#: data/ui/swell-foop.ui:104
+msgid "_Boring Shapes"
+msgstr "Forme _plictisitoare"
+
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
-#: data/ui/swell-foop.ui:106
+#: data/ui/swell-foop.ui:112
 msgid "_Zealous Animation"
 msgstr "Animație îndră_zneață"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:115
+#: data/ui/swell-foop.ui:121
 msgid "_Keyboard Shortcuts"
 msgstr "_Scurtături de tastatură"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:120
+#: data/ui/swell-foop.ui:126
 msgid "_Help"
 msgstr "_Ajutor"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:125
+#: data/ui/swell-foop.ui:131
 msgid "_About Swell Foop"
 msgstr "_Despre Swell Foop"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:154
+#: data/ui/swell-foop.ui:160
 msgid "Undo"
 msgstr "Refă"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:171
+#: data/ui/swell-foop.ui:177
 msgid "Redo"
 msgstr "Repetă"
 
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:412
+#: src/game-view.vala:415
 msgid "_Play Again"
 msgstr "_Jucați din nou"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:604
+#: src/game-view.vala:607
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -346,7 +352,7 @@ msgstr[1] "%u puncte"
 msgstr[2] "%u de puncte"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:607
+#: src/game-view.vala:610
 msgid "Game Over!"
 msgstr "Jocul s-a terminat!"
 
@@ -386,7 +392,8 @@ msgid "translator-credits"
 msgstr ""
 "Mugurel Tudor <mugurelu@gnome.ro>\n"
 "Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
-"Florentina Mușat <emryslokadottir [at] gmail [dot] com>, 2019-2020\n"
+"Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] com>, "
+"2019-2020\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Adi Roiban https://launchpad.net/~adiroiban\n"
