@@ -1,0 +1,43 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="guide" style="2column task"
+      id="index">
+
+  <info>
+    <title type="link" role="trail"><media type="image" its:translate="no"
+    src="figures/logo.png"/></title>
+
+    <revision pkgversion="3.14" date="2020-06-24" status="review"/>
+    <credit type="author">
+      <name>Roopa</name>
+      <email its:translate="no">nroopa57@gmail.com</email>
+    </credit>
+
+   <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+   <desc>Swell Foop help.</desc>
+
+  </info>
+
+  <title>
+    <media type="image" mime="image/png" src="figures/logo.png"
+    its:translate="no" />
+    Swell Foop
+  </title>
+  <p>Swell Foop is a puzzle game, previously known as Same GNOME. To know more
+  about the game, Look at -> <link xref="Introduction">Game introduction</link>.</p>
+
+  <section id="play">
+    <title>Playing Swell-foop</title>
+  </section>
+
+  <section id="advanced-settings" style="2column">
+    <title>Advance settings</title>
+  </section>
+
+  <section id="tip" style="2column">
+    <title>Useful tips</title>
+  </section>
+</page>
+

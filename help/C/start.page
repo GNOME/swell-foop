@@ -1,0 +1,34 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="start">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision pkgversion="3.14" date="2020-06-25" status="review"/>
+
+    <credit type="author">
+      <name>Roopa</name>
+      <email>nroopa57@gmail.com</email>
+      <years>2020</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+    <desc>Play another game.</desc>
+
+  </info>
+
+  <title>Start a new game</title>
+
+  <p>You can play <app>Swell Foop</app> all over again. To start a
+  new game:</p>
+  <steps>
+    <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
+    <gui style="menuitem">New Game</gui></guiseq>. Alternatively, you can click
+    on <gui style="button">Start a new game</gui> button.</p></item>
+    <item><p>Click on <gui style="button">New Game</gui> in the dialog to start
+    a new game.</p>
+    </item>
+  </steps>
+</page>
+
