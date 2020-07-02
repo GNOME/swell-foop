@@ -451,7 +451,7 @@ private class Theme : Object
     internal Theme (string name)
     {
         textures = new Clutter.Image [4];
-        string[4] colors = {"blue", "green", "yellow", "red"};
+        string[] colors = {"blue", "green", "yellow", "red"};
 
         /* Create the textures required to render */
         try
