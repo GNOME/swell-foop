@@ -169,7 +169,7 @@ msgstr "Destrueix el bloc seleccionat"
 #: data/ui/help-overlay.ui:54
 msgctxt "shortcut window"
 msgid "History"
-msgstr "Història"
+msgstr "Historial"
 
 #. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move
 #: data/ui/help-overlay.ui:59
