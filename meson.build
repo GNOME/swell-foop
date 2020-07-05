@@ -25,7 +25,7 @@ gobject_dep     = dependency('gobject-2.0')
 gtk_dep         = dependency('gtk+-3.0', version: '>= 3.24')
 clutter_dep     = dependency('clutter-1.0', version: '>= 1.14.0')
 clutter_gtk_dep = dependency('clutter-gtk-1.0', version: '>= 1.5.0')
-lggs_dep        = dependency('libgnome-games-support-1')
+lggs_dep        = dependency('libgnome-games-support-1', version: '>= 1.7.1')
 gee_dep         = dependency('gee-0.8', version: '>= 0.14.0')
 
 # Check for compilers
