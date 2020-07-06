@@ -25,11 +25,11 @@
     its:translate="no" />
     Swell Foop
   </title>
-  <p>Swell Foop is a puzzle game, previously known as Same GNOME. To know more
+  <p>Swell Foop is a puzzle game, previously known as Same GNOME. To learn more
   about the game, Look at -> <link xref="Introduction">Game introduction</link>.</p>
 
   <section id="play">
-    <title>Playing Swell-foop</title>
+    <title>Playing Swell Foop</title>
   </section>
 
   <section id="advanced-settings" style="2column">

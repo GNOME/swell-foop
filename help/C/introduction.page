@@ -22,9 +22,9 @@
   <title>Introduction</title>
 
   <p>The goal of the game is to remove as many objects as possible in the
-  less number of moves. Objects that are adjacent to each other get removed
+  less number of moves. Objects of the same color that are adjacent to each other get removed
   as a group. The remaining objects then collapse to fill in the gaps and form
-  new groups. You cannot remove single objects.</p>
+  new groups. You cannot remove objects that are not adjacent to another object of the same color.</p>
 
 </page>
 

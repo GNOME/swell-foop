@@ -20,8 +20,8 @@
 
   <title>Strategy</title>
 
-  <p>The most important rule when aiming for a high score is to think ahead,
-  each group you remove will form and destroy other groups. Some tips to play
+  <p>The most important rule when aiming for a high score is to think ahead.
+  Each group you remove will form and destroy other groups. Some tips to play
   smartly are:</p>
   <list>
     <item><p>Try to remove higher groups first, unless removing another group
@@ -30,7 +30,7 @@
     <item><p>Since the score increases quadratically, big groups of objects
     will score more.</p></item>
     <item><p>If you have a choice between merging two groups of two into four
-    or, just adding one more to the group of six then, you should add the single
+    or just adding one more to the group of six, then you should add the single
     object. Even though the groups of two you are left with score no points,
     the bigger group scores more overall.</p></item>
   </list>

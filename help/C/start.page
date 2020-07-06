@@ -24,10 +24,7 @@
   new game:</p>
   <steps>
     <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
-    <gui style="menuitem">New Game</gui></guiseq>. Alternatively, you can click
-    on <gui style="button">Start a new game</gui> button.</p></item>
-    <item><p>Click on <gui style="button">New Game</gui> in the dialog to start
-    a new game.</p>
+    <gui style="menuitem">New Game</gui></guiseq>. </p></item>
     </item>
   </steps>
 </page>
