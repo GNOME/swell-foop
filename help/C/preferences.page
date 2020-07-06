@@ -20,25 +20,24 @@
 
   <title>Game settings</title>
 
-  <p>You can change the game look according to your preference.</p>
+  <p>You can change the game look according to your preferences.</p>
 
   <section id="board-size">
-  <title>Change the size</title>
+  <title>Change the board size</title>
   <p>You can set the size of the board according to your preference:</p>
   <steps>
     <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
-    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
-    <item><p>The default board size is <gui>Small</gui>. You can change it from
-    <gui>Board size</gui> under <gui>Setup</gui>.</p></item>
+    <gui style="menuitem">Setup</gui></guiseq>.</p></item>
+    <item><p>The default board size is <gui>Small (6 x 5)</gui>.</p></item>
   </steps>
   </section>
 
   <section id="colors">
-  <title>Change the number of objects</title>
+  <title>Change the number of colors</title>
   <p>You can increase the number of different objects in the game.</p>
   <steps>
     <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
-    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
+    <gui style="menuitem">Setup</gui></guiseq>.</p></item>
     <item><p>The default number of colors is 3, you can increase or decrease
     it from <gui>Number of colors</gui> under <gui>Setup</gui>. The maximum
     number of colors allowed are 4.</p></item>
@@ -50,9 +49,8 @@
   <p>To change the appearance of the objects:</p>
   <steps>
     <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
-    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
-    <item><p>The default theme is <gui>Shapes and Colors</gui>. You can select
-    another theme from <gui>Theme</gui> under <gui>Appearance</gui>.</p></item>
+    <gui style="menuitem">Appearance</gui></guiseq>.</p></item>
+    <item><p>The default theme is <gui>Shapes and Colors</gui>.</p></item>
   </steps>
   </section>
 
@@ -63,9 +61,9 @@
   the game play at the expense of animation quality.</p>
   <steps>
     <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
-    <gui style="menuitem">Preferences</gui></guiseq>.</p></item>
+    <gui style="menuitem">Appearance</gui></guiseq>.</p></item>
     <item><p>To speed up the game, check the <gui style="checkbox">Zealous
-    Animation</gui> under <gui>Operation</gui>.</p></item>
+    Animation</gui> checkbox.</p></item>
   </steps>
   </section>
 </page>

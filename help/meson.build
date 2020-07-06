@@ -1,17 +1,21 @@
 help_pages = [
   'legal.xml',
-  'index.docbook',
+  'index.page',
+  'introduction.page',
+  'playing-game.page',
+  'preferences.page',
+  'score.page',
+  'start.page',
+  'strategy.page',
 ]
 
 help_media = [
-  'figures/play1.png',
-  'figures/play2.png',
-  'figures/play3.png',
-  'figures/play4.png',
-  'figures/start-up.png',
+  'figures/logo.png',
+  'figures/start-game.png',
 ]
 
 gnome.yelp(meson.project_name(),
   sources: help_pages,
-  media: help_media
+  media: help_media,
+  symlink_media: true
 )
