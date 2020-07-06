@@ -34,13 +34,12 @@
 
   <section id="colors">
   <title>Change the number of colors</title>
-  <p>You can increase the number of different objects in the game.</p>
+  <p>You can increase the number of different objects in the game</p>
   <steps>
     <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
     <gui style="menuitem">Setup</gui></guiseq>.</p></item>
-    <item><p>The default number of colors is 3. You can increase or decrease
-    it from <gui>Number of colors</gui> under <gui>Setup</gui>. The maximum
-    number of colors allowed is 4.</p></item>
+    <item><p>The default number of colors is 3. You can change
+    it from <gui>Number of colors</gui> under <gui>Setup</gui>.
   </steps>
   </section>
 
@@ -56,13 +55,13 @@
 
   <section id="animation">
   <title>Change the speed</title>
-  <p>The default animation is designed to be smooth and graceful. If you like
-  playing slower then this may be too fast for you. You can slow down
-  the gameplay at the expense of animation quality.</p>
+  <p>The default animation is designed to be fast. If it is too fast for you
+  and you would like playing slower then this may be too fast for you.
+  In this case you can slow down the game animation.</p>
   <steps>
     <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
     <gui style="menuitem">Appearance</gui></guiseq>.</p></item>
-    <item><p>To slow down the game, uncheck the <gui style="checkbox">Zealous
+    <item><p>To slow down the animations, uncheck the <gui style="checkbox">Zealous
     Animation</gui> checkbox.</p></item>
   </steps>
   </section>

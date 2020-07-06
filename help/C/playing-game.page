@@ -19,15 +19,14 @@
 
   </info>
 
-  <title>Play <app>Swell Foop</app></title>
+  <title>Playing <app>Swell Foop</app></title>
 
-  <p>The board starts as a full grid of objects depending on the size of board
-  you select. You can remove the tiles as follows:</p>
+  <p>The game starts with a grid of objects depending on the size of board
+  you select. You can clear the board as follows:</p>
   <list>
-    <item><p>If a group of objects are adjacent and all the same type, then
-    they can be removed simply by clicking them or by pressing the
-    <key>space bar</key>.</p></item>
-    <item><p>Once the group has been removed the objects above them
+    <item><p>You can remove groups of adjacent objects of the same type by clicking
+    any tile of the group or by pressing the <key>space bar</key>.</p></item>
+    <item><p>Once a group has been removed the objects above them
     fall down to fill the space. If an entire column is cleared then the objects
     slide leftward to fill the gap.</p></item>
   </list>
