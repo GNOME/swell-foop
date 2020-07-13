@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop gnome-3-36\n"
-"POT-Creation-Date: 2020-07-06 19:26+0000\n"
-"PO-Revision-Date: 2020-07-07 08:45+0300\n"
+"POT-Creation-Date: 2020-07-11 08:51+0000\n"
+"PO-Revision-Date: 2020-07-13 07:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -56,9 +56,9 @@ msgid ""
 "about the game, check the <link xref=\"introduction\">game introduction</"
 "link>."
 msgstr ""
-"«Той самий» — гра-головоломка, яка раніше називалася «Той самий GNOME». Щоб"
-" дізнатися більше про гру, ознайомтеся із розділом щодо <link"
-" xref=\"introduction\">вступу до гри</link>."
+"«Той самий» — гра-головоломка, яка раніше називалася «Той самий GNOME». Щоб "
+"дізнатися більше про гру, ознайомтеся із розділом щодо <link xref="
+"\"introduction\">вступу до гри</link>."
 
 #. (itstool) path: section/title
 #: C/index.page:32
@@ -83,7 +83,6 @@ msgstr "2020"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:18
-#| msgid "About <application>Swell Foop</application>"
 msgid "Know about <app>Swell Foop</app>."
 msgstr "Про <app>Той самий</app>"
 
@@ -94,12 +93,6 @@ msgstr "Вступ"
 
 #. (itstool) path: page/p
 #: C/introduction.page:24
-#| msgid ""
-#| "<application>Swell Foop</application> is a puzzle game. The goal is to "
-#| "remove as many objects as possible in as few moves as possible. Objects "
-#| "that are adjacent to each other get removed as a group. The remaining "
-#| "objects then collapse to fill in the gaps and new groups are formed. You "
-#| "cannot remove single objects."
 msgid ""
 "The goal of the game is to remove as many objects as possible in as few "
 "moves as possible. Adjacent objects of the same color form a group, and all "
@@ -107,12 +100,11 @@ msgid ""
 "collapse to fill in the gaps and form new groups. You cannot remove objects "
 "that are not adjacent to another object of the same color."
 msgstr ""
-"Мета гри полягає у вилученні з дошки якомога більшої кількості об'єктів з"
-" використанням "
-"мінімальної кількості ходів. Об'єкти, які є сусідніми щодо один одного, "
-"вилучаються як група. Після цього решта об'єктів падає, заповнюючи прогалини "
-"і формуючи нові групи. Вилучати об'єкти, які не мають сусідніх об'єктів того"
-" самого кольору, не можна."
+"Мета гри полягає у вилученні з дошки якомога більшої кількості об'єктів з "
+"використанням мінімальної кількості ходів. Об'єкти, які є сусідніми щодо "
+"один одного, вилучаються як група. Після цього решта об'єктів падає, "
+"заповнюючи прогалини і формуючи нові групи. Вилучати об'єкти, які не мають "
+"сусідніх об'єктів того самого кольору, не можна."
 
 #. (itstool) path: info/desc
 #: C/playing-game.page:18
@@ -121,7 +113,6 @@ msgstr "Як грати?"
 
 #. (itstool) path: page/title
 #: C/playing-game.page:22
-#| msgid "Playing <application>Swell Foop</application>"
 msgid "Playing <app>Swell Foop</app>"
 msgstr "Гра у <app>Той самий</app>"
 
@@ -131,8 +122,8 @@ msgid ""
 "The game starts with a grid of objects depending on the size of board you "
 "select. You can clear the board as follows:"
 msgstr ""
-"Гра розпочинається з таблиці об'єктів на дошці вибраного розміру. Очистити"
-" дошку можна у такий спосіб:"
+"Гра розпочинається з таблиці об'єктів на дошці вибраного розміру. Очистити "
+"дошку можна у такий спосіб:"
 
 #. (itstool) path: item/p
 #: C/playing-game.page:27
@@ -140,8 +131,8 @@ msgid ""
 "You can remove groups of adjacent objects of the same type by clicking any "
 "tile of the group or by pressing the <key>space bar</key>."
 msgstr ""
-"Ви можете вилучати групи сусідніх об'єктів одного типу клацанням на будь-якій"
-" з плиток групи або натисканням клавіші <key>Пробіл</key>."
+"Ви можете вилучати групи сусідніх об'єктів одного типу клацанням на будь-"
+"якій з плиток групи або натисканням клавіші <key>Пробіл</key>."
 
 #. (itstool) path: item/p
 #: C/playing-game.page:29
@@ -150,9 +141,21 @@ msgid ""
 "space. If an entire column is cleared then the objects slide leftward to "
 "fill the gap."
 msgstr ""
-"Щойно групу буде вилучено, об'єкти над нею впадуть і заповнять вільне місце."
-" Якщо зникне увесь стовпчик об'єктів, об'єкти буде пересунуто ліворуч для"
-" заповнення прогалини."
+"Щойно групу буде вилучено, об'єкти над нею впадуть і заповнять вільне місце. "
+"Якщо зникне увесь стовпчик об'єктів, об'єкти буде пересунуто ліворуч для "
+"заповнення прогалини."
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/playing-game.page:33
+msgctxt "_"
+msgid ""
+"external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
+msgstr ""
+"external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 
 #. (itstool) path: info/desc
 #: C/preferences.page:17
@@ -171,7 +174,6 @@ msgstr "Ви можете змінити вигляд гри відповідн�
 
 #. (itstool) path: section/title
 #: C/preferences.page:26
-#| msgid "Changing the Size"
 msgid "Change the board size"
 msgstr "Зміна розміру дошки"
 
@@ -186,8 +188,8 @@ msgid ""
 "Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
 "\">Setup</gui></guiseq>."
 msgstr ""
-"Виберіть <guiseq><gui style=\"menu\">Той самий</gui> <gui style=\"menuitem\""
-">Налаштувати</gui></guiseq>."
+"Виберіть <guiseq><gui style=\"menu\">Той самий</gui> <gui style=\"menuitem"
+"\">Налаштувати</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/preferences.page:31
@@ -196,7 +198,6 @@ msgstr "Типовим розміром дошки є <gui>Малий (6 x 5)</g
 
 #. (itstool) path: section/title
 #: C/preferences.page:36
-#| msgid "Changing the Number of Objects"
 msgid "Change the number of colors"
 msgstr "Зміна кількості кольорів"
 
@@ -211,18 +212,16 @@ msgid ""
 "The default number of colors is 3. You can change it from <gui>Number of "
 "colors</gui> under <gui>Setup</gui>."
 msgstr ""
-"Типовою кількістю кольорів є 3. Ви можете змінити її за допомогою пункту <gui"
-">Кількість кольорів</gui> у вікні <gui>Налаштування</gui>."
+"Типовою кількістю кольорів є 3. Ви можете змінити її за допомогою пункту "
+"<gui>Кількість кольорів</gui> у вікні <gui>Налаштування</gui>."
 
 #. (itstool) path: section/title
 #: C/preferences.page:47
-#| msgid "Changing the Look"
 msgid "Change the look"
 msgstr "Зміна вигляду"
 
 #. (itstool) path: section/p
 #: C/preferences.page:48
-#| msgid "Changing the Number of Objects"
 msgid "To change the appearance of the objects:"
 msgstr "Щоб змінити вигляд об'єктів, виконайте такі дії:"
 
@@ -232,8 +231,8 @@ msgid ""
 "Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
 "\">Appearance</gui></guiseq>."
 msgstr ""
-"Виберіть <guiseq><gui style=\"menu\">Той самий</gui> <gui style=\"menuitem\""
-">Вигляд</gui></guiseq>."
+"Виберіть <guiseq><gui style=\"menu\">Той самий</gui> <gui style=\"menuitem"
+"\">Вигляд</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/preferences.page:52
@@ -242,7 +241,6 @@ msgstr "Типовою темою є <gui>Форми і кольори</gui>."
 
 #. (itstool) path: section/title
 #: C/preferences.page:57
-#| msgid "Changing the Speed"
 msgid "Change the speed"
 msgstr "Зміна швидкості"
 
@@ -253,8 +251,8 @@ msgid ""
 "you would like playing slower then this may be too fast for you. In this "
 "case you can slow down the game animation."
 msgstr ""
-"Типові анімації виконуються швидко. Якщо швидкість анімації є надто високою"
-" для вас, і ви хочете грати повільніше, вам слід уповільнити анімації."
+"Типові анімації виконуються швидко. Якщо швидкість анімації є надто високою "
+"для вас, і ви хочете грати повільніше, вам слід уповільнити анімації."
 
 #. (itstool) path: item/p
 #: C/preferences.page:64
@@ -262,8 +260,8 @@ msgid ""
 "To slow down the animations, uncheck the <gui style=\"checkbox\">Zealous "
 "Animation</gui> checkbox."
 msgstr ""
-"Щоб уповільнити анімації, зніміть позначку з пункту <gui style=\"checkbox\""
-">Ретельна анімація</gui>."
+"Щоб уповільнити анімації, зніміть позначку з пункту <gui style=\"checkbox"
+"\">Ретельна анімація</gui>."
 
 #. (itstool) path: info/desc
 #: C/score.page:18
@@ -281,8 +279,8 @@ msgid ""
 "Your current score is visible in the game window titlebar. To view scores "
 "obtained in previous games:"
 msgstr ""
-"Поточний результат гри буде показано на смужці заголовка вікна програми. Щоб"
-" побачити результати попередніх ігор, виконайте такі дії:"
+"Поточний результат гри буде показано на смужці заголовка вікна програми. Щоб "
+"побачити результати попередніх ігор, виконайте такі дії:"
 
 #. (itstool) path: item/p
 #: C/score.page:27
@@ -290,8 +288,8 @@ msgid ""
 "Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
 "\">High Scores</gui></guiseq>."
 msgstr ""
-"Виберіть <guiseq><gui style=\"menu\">Той самий</gui> <gui style=\"menuitem\""
-">Найкращі результати</gui></guiseq>."
+"Виберіть <guiseq><gui style=\"menu\">Той самий</gui> <gui style=\"menuitem"
+"\">Найкращі результати</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/score.page:29
@@ -300,10 +298,10 @@ msgid ""
 "To view the scores for other board sizes, select the board size from the "
 "menu at the top of the dialog for the board you wish to see the scores for."
 msgstr ""
-"У відповідь буде показано діалогове вікно із результатами для параметрів гри"
-" <gui>Мала, 3 кольори</gui>. Щоб переглянути результати для інших розмірів"
-" дошки, виберіть відповідний розмір дошки з меню у верхній частині"
-" діалогового вікна."
+"У відповідь буде показано діалогове вікно із результатами для параметрів гри "
+"<gui>Мала, 3 кольори</gui>. Щоб переглянути результати для інших розмірів "
+"дошки, виберіть відповідний розмір дошки з меню у верхній частині "
+"діалогового вікна."
 
 #. (itstool) path: section/title
 #: C/score.page:36
@@ -312,7 +310,6 @@ msgstr "Оцінювання"
 
 #. (itstool) path: section/p
 #: C/score.page:38
-#| msgid "Scoring is based on the number of objects you delete:"
 msgid "Scoring is done based on the objects you delete."
 msgstr "Очки нараховуються на основі кількості об'єктів, які ви вилучаєте."
 
@@ -428,12 +425,10 @@ msgstr "Початок нової гри"
 
 #. (itstool) path: page/p
 #: C/start.page:23
-#| msgid ""
-#| "<application>Swell Foop</application> at the beginning of a new game."
 msgid "You can play <app>Swell Foop</app> all over again. To start a new game:"
 msgstr ""
-"Ви можете зіграти у <app>Той самий</app> ще раз. Щоб розпочати нову гру,"
-" виконайте такі дії:"
+"Ви можете зіграти у <app>Той самий</app> ще раз. Щоб розпочати нову гру, "
+"виконайте такі дії:"
 
 #. (itstool) path: item/p
 #: C/start.page:26
@@ -441,8 +436,8 @@ msgid ""
 "Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
 "\">New Game</gui></guiseq>."
 msgstr ""
-"Виберіть пункт меню <guiseq><gui style=\"menu\">Той самий</gui> <gui"
-" style=\"menuitem\">Нова гра</gui></guiseq>."
+"Виберіть пункт меню <guiseq><gui style=\"menu\">Той самий</gui> <gui style="
+"\"menuitem\">Нова гра</gui></guiseq>."
 
 #. (itstool) path: info/desc
 #: C/strategy.page:17
@@ -456,9 +451,6 @@ msgstr "Стратегія"
 
 #. (itstool) path: page/p
 #: C/strategy.page:23
-#| msgid ""
-#| "The most important rule when aiming for a high score is to think ahead: "
-#| "each group you remove will form and destroy other groups."
 msgid ""
 "The most important rule when aiming for a high score is to think ahead. Each "
 "group you remove will form and destroy other groups. Some tips to play "
@@ -470,10 +462,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/strategy.page:27
-#| msgid ""
-#| "Remove higher groups first, unless removing another group will make it "
-#| "larger. Vertically aligned objects can't be misaligned, but horizontal "
-#| "arrangements can."
 msgid ""
 "Try to remove higher groups first, unless removing another group will make "
 "it larger. Vertically aligned objects can't be misaligned, but horizontal "
@@ -489,19 +477,11 @@ msgid ""
 "Since the score increases quadratically, big groups of objects will score "
 "more."
 msgstr ""
-"Оскільки результат квадратично збільшується із кількістю фрагментів, "
-"за великі групи об'єктів можна отримати більше очок."
+"Оскільки результат квадратично збільшується із кількістю фрагментів, за "
+"великі групи об'єктів можна отримати більше очок."
 
 #. (itstool) path: item/p
 #: C/strategy.page:32
-#| msgid ""
-#| "Since the score increases quadratically, big groups of objects are always "
-#| "better. For example, the points difference between a six object group and "
-#| "a seven object group is nine points. In a situation where you have a "
-#| "choice between merging two groups of two into four or just adding one "
-#| "more to the group of six then you should add the single object. Even "
-#| "though the groups of two you are left with score no points, the bigger "
-#| "group scores more overall."
 msgid ""
 "If you have a choice between merging two groups of two into four or just "
 "adding one more to the group of six, then you should add the single object. "
@@ -515,11 +495,6 @@ msgstr ""
 
 #. (itstool) path: note/p
 #: C/strategy.page:39
-#| msgid ""
-#| "Don't forget the thousand point bonus for clearing all the balls. To get "
-#| "1000 points from a single group you need 34 objects. You are very "
-#| "unlikely to be in a position where you have to sacrifice a group that "
-#| "large to clear the board."
 msgid ""
 "Don't forget the thousand point bonus for clearing the board. To get 1000 "
 "points from a single group you need 34 objects. You are very unlikely to be "
