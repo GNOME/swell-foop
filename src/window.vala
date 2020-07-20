@@ -396,15 +396,15 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline void init_scores ()  // called on construct
     {
-        scores_context = new Games.Scores.Context.with_importer_and_icon_name (
+        scores_context = new Games.Scores.Context.with_importer (
             "swell-foop",
+            "org.gnome.SwellFoop",
             /* Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed */
             _("Type"),
             this,
             category_request,
             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
-            new Games.Scores.HistoryFileImporter (parse_old_score),
-            "org.gnome.SwellFoop");
+            new Games.Scores.HistoryFileImporter (parse_old_score));
     }
 
     private inline Games.Scores.Category? category_request (string key)
