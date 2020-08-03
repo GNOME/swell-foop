@@ -55,9 +55,9 @@
 
   <section id="animation">
   <title>Change the speed</title>
-  <p>The default animation is designed to be fast. If it is too fast for you
-  and you would like playing slower then this may be too fast for you.
-  In this case you can slow down the game animation.</p>
+  <p>The default animation is designed to be fast. If it is too fast for you,
+  then you might like playing slower.
+  In this case, you can slow down the game animation.</p>
   <steps>
     <item><p>Select <guiseq><gui style="menu">Swell Foop</gui>
     <gui style="menuitem">Appearance</gui></guiseq>.</p></item>
