@@ -1,5 +1,5 @@
 # swell-foop ja.po.
-# Copyright (C) 1998-2013, 2019-2020 Free Software Foundation, Inc.
+# Copyright (C) 1998-2010, 2012-2013, 2019-2020 Free Software Foundation, Inc.
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
 "POT-Creation-Date: 2020-06-02 07:25+0000\n"
-"PO-Revision-Date: 2020-01-31 00:00+0900\n"
+"PO-Revision-Date: 2020-08-23 00:16+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -98,12 +98,13 @@ msgstr "ゲーム中で使用するタイルの色の数です。"
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
 #: data/org.gnome.SwellFoop.gschema.xml:33
 msgid "Is this the first run"
-msgstr ""
+msgstr "初めて起動したかどうか"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
 #: data/org.gnome.SwellFoop.gschema.xml:35
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
+"初回起動時のヒントダイアログを表示するかしないかを決める設定です。"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
 #: data/org.gnome.SwellFoop.gschema.xml:40
@@ -142,97 +143,91 @@ msgstr "始める(_P)"
 #: data/ui/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Play with keyboard"
-msgstr ""
+msgstr "キーボード操作"
 
 #. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
 #: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Move keyboard highlight"
-msgstr ""
+msgstr "キーボードハイライトを動かす"
 
 #. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
 #: data/ui/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Destroy selected block"
-msgstr ""
+msgstr "選択したブロックを消す"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo"
 #: data/ui/help-overlay.ui:54
 msgctxt "shortcut window"
 msgid "History"
-msgstr ""
+msgstr "履歴"
 
 #. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move
 #: data/ui/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Undo"
-msgstr ""
+msgstr "元に戻す"
 
 #. Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move
 #: data/ui/help-overlay.ui:67
 msgctxt "shortcut window"
 msgid "Redo"
-msgstr ""
+msgstr "やり直す"
 
 #. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game
 #: data/ui/help-overlay.ui:75
 msgctxt "shortcut window"
 msgid "Restart"
-msgstr ""
+msgstr "初めからやり直す"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
 #: data/ui/help-overlay.ui:85
 msgctxt "shortcut window"
 msgid "Main functions"
-msgstr ""
+msgstr "メイン機能"
 
 #. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
 #: data/ui/help-overlay.ui:91
 msgctxt "shortcut window"
 msgid "Start a new game"
-msgstr ""
+msgstr "新しいゲームを開始する"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
 #: data/ui/help-overlay.ui:100
 msgctxt "shortcut window"
 msgid "Generic"
-msgstr ""
+msgstr "全般"
 
 #. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
 #: data/ui/help-overlay.ui:105
 msgctxt "shortcut window"
 msgid "Open menu"
-msgstr ""
+msgstr "メニューを開く"
 
 #. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
 #: data/ui/help-overlay.ui:113
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "キーボードショートカットを表示する"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:121
-#, fuzzy
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
-msgstr "ヘルプ(_H)"
+msgstr "ヘルプを表示する"
 
 #. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
 #: data/ui/help-overlay.ui:129
-#, fuzzy
-#| msgid "_About"
 msgctxt "shortcut window"
 msgid "About"
-msgstr "このアプリケーションについて(_A)"
+msgstr "“Swell Foop について”を表示する"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
 #: data/ui/help-overlay.ui:137
-#, fuzzy
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "終了(_Q)"
+msgstr "終了する"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
@@ -243,44 +238,38 @@ msgstr "新しいゲーム(_N)"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
 #: data/ui/swell-foop.ui:30
-#, fuzzy
-#| msgid "Setup"
 msgid "_Setup"
-msgstr "事前設定"
+msgstr "事前設定(_S)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:34
 msgid "_Small (6 × 5)"
-msgstr ""
+msgstr "小さい (6 × 5)(_S)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:40
 msgid "Nor_mal (15 × 10)"
-msgstr ""
+msgstr "普通 (15 × 10)(_M)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
 #: data/ui/swell-foop.ui:46
 msgid "_Large (20 × 15)"
-msgstr ""
+msgstr "大きい (20 × 15)(_L)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:54
-#, fuzzy
-#| msgid "_Number of colors:"
 msgid "_Two colors"
-msgstr "色の数(_N):"
+msgstr "2 色(_T)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
 #: data/ui/swell-foop.ui:60
 msgid "T_hree colors"
-msgstr ""
+msgstr "3 色(_H)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
 #: data/ui/swell-foop.ui:66
-#, fuzzy
-#| msgid "_Number of colors:"
 msgid "_Four colors"
-msgstr "色の数(_N):"
+msgstr "4 色(_F)"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #: data/ui/swell-foop.ui:83
@@ -289,29 +278,23 @@ msgstr "高得点(_S)"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/swell-foop.ui:88
-#, fuzzy
-#| msgid "Appearance"
 msgid "A_ppearance"
-msgstr "外観"
+msgstr "外観(_P)"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:92
-#, fuzzy
-#| msgid "Colors"
 msgid "_Colors"
-msgstr "色付き"
+msgstr "色付き(_C)"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:98
-#, fuzzy
-#| msgid "Shapes and Colors"
 msgid "_Shapes and Colors"
-msgstr "形と色"
+msgstr "形と色(_S)"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
 #: data/ui/swell-foop.ui:104
 msgid "_Boring Shapes"
-msgstr ""
+msgstr "形 (色なし)(_B)"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
 #: data/ui/swell-foop.ui:112
@@ -321,7 +304,7 @@ msgstr "白熱したアニメーション(_Z)"
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #: data/ui/swell-foop.ui:121
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカット(_K)"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #: data/ui/swell-foop.ui:126
@@ -336,12 +319,12 @@ msgstr "Swell Foop について(_A)"
 #. Translators: tooltip text of the Undo button; probably a verb
 #: data/ui/swell-foop.ui:160
 msgid "Undo"
-msgstr ""
+msgstr "元に戻す"
 
 #. Translators: tooltip text of the Undo button; probably a verb
 #: data/ui/swell-foop.ui:177
 msgid "Redo"
-msgstr ""
+msgstr "やり直す"
 
 #. Translators: text of a button that appears on the board at the end of a game
 #: src/game-view.vala:415
@@ -363,18 +346,18 @@ msgstr "ゲームオーバー!"
 #. Translators: command-line option description, see 'swell-foop --help'
 #: src/swell-foop.vala:26
 msgid "Print release version and exit"
-msgstr ""
+msgstr "リリースバージョンを表示して終了する"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
 #: src/swell-foop.vala:96 src/swell-foop.vala:104
 msgid "Tim Horton"
-msgstr ""
+msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
 #: src/swell-foop.vala:100
 msgid "Sophia Yu"
-msgstr ""
+msgstr "Sophia Yu"
 
 #. Translators: About dialog text, small description of the application
 #: src/swell-foop.vala:113
@@ -447,20 +430,15 @@ msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
 #: src/window.vala:389
-#, fuzzy, c-format
-#| msgid "%u × %u, %u color"
-#| msgid_plural "%u × %u, %u colors"
+#, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
-msgstr[0] "%u × %u, %u 色"
+msgstr[0] "%s, %d 色"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
 #: src/window.vala:400
 msgid "Type"
-msgstr ""
-
-#~ msgid "Preferences"
-#~ msgstr "設定"
+msgstr "形式"
 
 #~ msgid "_Board size:"
 #~ msgstr "盤の大きさ(_B):"
@@ -491,9 +469,6 @@ msgstr ""
 
 #~ msgid "_Preferences"
 #~ msgstr "設定(_P)"
-
-#~ msgid "_New"
-#~ msgstr "新規(_N)"
 
 #~ msgid "GNOME Games web site"
 #~ msgstr "GNOME ゲーム集のウェブサイト"
