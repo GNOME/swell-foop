@@ -1,6 +1,7 @@
 # German swell-foop translation
 # Copyright (C) 1998-2005 Free Software Foundation, Inc.
 #
+#
 # Carsten Schaar <nhadcasc@fs-maphy.uni-hannover.de>, 1998.
 # Matthias Warkus <mawa@iname.com>, 1999.
 # Karl Eichwalder <ke@suse.de>, 1999, 2000.
@@ -14,30 +15,32 @@
 # Philipp Kerling <k.philipp@gmail.com>, 2007-2008.
 # Björn Deiseroth <service@dual-creators.de>, 2007.
 # Andre Klapper <ak-47@gmx.net>, 2008-2009.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2010-2012, 2016, 2018.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2010-2012, 2016, 2018, 2020.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009-2012.
 # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
 # Wolfgang Stöggl <c72578@yahoo.de>, 2015.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2018-10-08 19:28+0000\n"
-"PO-Revision-Date: 2019-02-28 21:58+0100\n"
-"Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
+"POT-Creation-Date: 2020-06-02 07:25+0000\n"
+"PO-Revision-Date: 2020-09-01 20:28+0200\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Lokalize 20.08.0\n"
 
 # Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
+#. Translators: title of the window displayed by window managers; name of the application
+#. Translators: title of the window displayed on the headerbar; name of the application
+#. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 src/swell-foop.vala:128
-#: src/swell-foop.vala:154 src/swell-foop.vala:460 src/swell-foop.vala:542
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:141
+#: data/ui/swell-foop.ui:147 src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -71,7 +74,7 @@ msgstr ""
 "Swell Foop kann immer sehr schnell gespielt werden. Bei Bedarf können Sie "
 "die Spielzeit verlängern, in dem Sie die Spielbrettgröße anpassen."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:42
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
 msgid "The GNOME Project"
 msgstr "Das GNOME-Projekt"
 
@@ -80,199 +83,317 @@ msgstr "Das GNOME-Projekt"
 msgid "game;logic;board;same;matching;"
 msgstr "Spiel;Logik;Brettspiel;Same;gleich;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.SwellFoop.desktop.in:8
-msgid "org.gnome.SwellFoop"
-msgstr "org.gnome.SwellFoop"
-
-#: data/org.gnome.swell-foop.gschema.xml:10
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:11
 msgid "The theme to use"
 msgstr "Zu verwendendes Thema"
 
-#: data/org.gnome.swell-foop.gschema.xml:11
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:13
 msgid "The title of the tile theme to use."
 msgstr "Der Titel des zu verwendenden Spielsteinthemas."
 
-#: data/org.gnome.swell-foop.gschema.xml:15
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:18
 msgid "Board size"
 msgstr "Spielfeldgröße"
 
-#: data/org.gnome.swell-foop.gschema.xml:16
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:20
 msgid "The size of the game board."
 msgstr "Die Größe des Spielbretts."
 
-#: data/org.gnome.swell-foop.gschema.xml:20
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:26
 msgid "Board color count"
 msgstr "Anzahl der Spielsteinfarben"
 
-#: data/org.gnome.swell-foop.gschema.xml:21
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:28
 msgid "The number of colors of tiles to use in the game."
 msgstr "Die Anzahl der Spielsteinfarben in einem Spiel."
 
-#: data/org.gnome.swell-foop.gschema.xml:25
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:33
 msgid "Is this the first run"
 msgstr "Ist dies der erste Start"
 
-#: data/org.gnome.swell-foop.gschema.xml:26
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:35
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
 "Einstellung legt fest, ob der Hinweisdialog beim ersten Start angezeigt wird."
 
-#: data/org.gnome.swell-foop.gschema.xml:30
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.SwellFoop.gschema.xml:40
 msgid "Zealous animation"
 msgstr "Sehr viel Animation"
 
-#: data/org.gnome.swell-foop.gschema.xml:31
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.SwellFoop.gschema.xml:42
 msgid "Use more flashy, but slower, animations."
 msgstr "Hübschere, aber langsamere Animation verwenden."
 
-#: data/preferences.ui:31
-msgid "Preferences"
-msgstr "Einstellungen"
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
+#: data/org.gnome.SwellFoop.gschema.xml:47
+msgid "Saved game"
+msgstr "Gespeichertes Spiel"
 
-#: data/preferences.ui:68
-msgid "_Board size:"
-msgstr "_Spielfeldgröße:"
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
+#: data/org.gnome.SwellFoop.gschema.xml:49
+msgid ""
+"Has value “nothing” if there is no saved game. Else, contains a copy of the "
+"initial board, an index in the history, and the history of actions saved by "
+"an array of coords."
+msgstr ""
+"Hat den Wert »nothing«, falls es kein gespeichertes Spiel gibt. Andernfalls"
+" enthält es eine Kopie des anfänglichen Spielfelds, einen Verlaufsindex und"
+" den Verlauf der Aktionen, die in einem Feld aus Koordinaten gespeichert sind."
 
-#: data/preferences.ui:84
-msgid "_Number of colors:"
-msgstr "Anzahl der _Farben:"
+# Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:43
+msgid "Welcome to Swell Foop"
+msgstr "Willkommen bei Swell Foop"
 
-# setup => Einrichtung, das wäre hier falsch
-#: data/preferences.ui:142
-msgid "Setup"
+#. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:64
+msgid "Let’s _Play"
+msgstr "S_piel beginnen"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Mit der Tastatur spielen"
+
+#. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
+#: data/ui/help-overlay.ui:36
+msgctxt "shortcut window"
+msgid "Move keyboard highlight"
+msgstr ""
+
+#. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Destroy selected block"
+msgstr "Ausgewählten Block zerstören"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo"
+#: data/ui/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "History"
+msgstr "Verlauf"
+
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Rückgängig"
+
+#. Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Wiederholen"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game
+#: data/ui/help-overlay.ui:75
+msgctxt "shortcut window"
+msgid "Restart"
+msgstr "Neu starten"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
+#: data/ui/help-overlay.ui:85
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr "Hauptfunktionen"
+
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
+#: data/ui/help-overlay.ui:91
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Ein neues Spiel beginnen"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:100
+msgctxt "shortcut window"
+msgid "Generic"
 msgstr "Allgemein"
 
-#: data/preferences.ui:180
-msgid "_Theme:"
-msgstr "_Thema:"
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:105
+msgctxt "shortcut window"
+msgid "Open menu"
+msgstr "Menü öffnen"
 
-#: data/preferences.ui:227
-msgid "Appearance"
-msgstr "Erscheinungsbild"
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Tastenkombinationen"
 
-#: data/preferences.ui:258
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:121
+#| msgid "_Help"
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Hilfe"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:129
+#| msgid "_About"
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Info"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:137
+#| msgid "_Quit"
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Beenden"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
+#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:303
+msgid "_New Game"
+msgstr "_Neues Spiel"
+
+# setup => Einrichtung, das wäre hier falsch
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
+#: data/ui/swell-foop.ui:30
+#| msgid "Setup"
+msgid "_Setup"
+msgstr "_Einrichtung"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:34
+msgid "_Small (6 × 5)"
+msgstr "_Klein (6 × 5)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:40
+msgid "Nor_mal (15 × 10)"
+msgstr "Nor_mal (15 × 10)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
+#: data/ui/swell-foop.ui:46
+msgid "_Large (20 × 15)"
+msgstr "_Groß (20 × 15)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
+#: data/ui/swell-foop.ui:54
+#| msgid "_Number of colors:"
+msgid "_Two colors"
+msgstr "_Zwei Farben"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
+#: data/ui/swell-foop.ui:60
+msgid "T_hree colors"
+msgstr "_Drei Farben"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
+#: data/ui/swell-foop.ui:66
+#| msgid "_Number of colors:"
+msgid "_Four colors"
+msgstr "_Vier Farben"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:83
+msgid "High _Scores"
+msgstr "Er_gebnisse"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/swell-foop.ui:88
+#| msgid "Appearance"
+msgid "A_ppearance"
+msgstr "Er_scheinungsbild"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
+#: data/ui/swell-foop.ui:92
+#| msgid "Colors"
+msgid "_Colors"
+msgstr "_Farben"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
+#: data/ui/swell-foop.ui:98
+#| msgid "Shapes and Colors"
+msgid "_Shapes and Colors"
+msgstr "For_men und Farben"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
+#: data/ui/swell-foop.ui:104
+msgid "_Boring Shapes"
+msgstr "_Gedeckte Farben"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
+#: data/ui/swell-foop.ui:112
 msgid "_Zealous Animation"
 msgstr "_Schnelle Animation"
 
-#: data/preferences.ui:283
-msgid "Operation"
-msgstr "Betrieb"
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:121
+msgid "_Keyboard Shortcuts"
+msgstr "Tasten_kombinationen"
 
-#: src/game-view.vala:322
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:126
+msgid "_Help"
+msgstr "_Hilfe"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:131
+msgid "_About Swell Foop"
+msgstr "_Info zu Swell Foop"
+
+#. Translators: tooltip text of the Undo button; probably a verb
+#: data/ui/swell-foop.ui:160
+msgid "Undo"
+msgstr "Rückgängig"
+
+#. Translators: tooltip text of the Undo button; probably a verb
+#: data/ui/swell-foop.ui:177
+msgid "Redo"
+msgstr "Wiederholen"
+
+#. Translators: text of a button that appears on the board at the end of a game
+#: src/game-view.vala:415
 msgid "_Play Again"
 msgstr "_Weiteres Spiel"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:495
+#: src/game-view.vala:607
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u Punkt"
 msgstr[1] "%u Punkte"
 
-#: src/game-view.vala:496
+#. Translators: text of a label that appears on the board at the end of a game
+#: src/game-view.vala:610
 msgid "Game Over!"
 msgstr "Spiel vorbei!"
 
-#: src/score-dialog.vala:25
-msgid "High Scores"
-msgstr "Ergebnisse"
+#. Translators: command-line option description, see 'swell-foop --help'
+#: src/swell-foop.vala:26
+msgid "Print release version and exit"
+msgstr "Programmversion ausgeben und beenden"
 
-#: src/score-dialog.vala:28
-msgid "_Quit"
-msgstr "_Beenden"
+#. Translators: About dialog text, name of an author
+#. Translators: About dialog text, name of an artist
+#: src/swell-foop.vala:96 src/swell-foop.vala:104
+msgid "Tim Horton"
+msgstr "Tim Horton"
 
-#: src/score-dialog.vala:29
-msgid "New Game"
-msgstr "Neues Spiel"
+#. Translators: About dialog text, name of an author
+#: src/swell-foop.vala:100
+msgid "Sophia Yu"
+msgstr "Sophia Yu"
 
-#: src/score-dialog.vala:32
-msgid "_OK"
-msgstr "_OK"
-
-#: src/score-dialog.vala:44
-msgid "Size:"
-msgstr "Größe:"
-
-#: src/score-dialog.vala:69
-msgid "Date"
-msgstr "Datum"
-
-#: src/score-dialog.vala:72
-msgid "Score"
-msgstr "Ergebnis"
-
-#: src/score-dialog.vala:166
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u Farbe"
-msgstr[1] "%u × %u, %u Farben"
-
-# Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
-#: src/swell-foop.vala:81
-msgid "Welcome to Swell Foop"
-msgstr "Willkommen bei Swell Foop"
-
-#: src/swell-foop.vala:84
-msgid ""
-"Clear as many blocks as you can.\n"
-"Fewer clicks means more points."
-msgstr ""
-"Beseitigen Sie so viele Blöcke wie möglich.\n"
-"Weniger Mausklicks bedeuten mehr Siegpunkte."
-
-#: src/swell-foop.vala:87
-msgid "Let’s _Play"
-msgstr "S_piel beginnen"
-
-#: src/swell-foop.vala:141 src/swell-foop.vala:504
-msgid "_New Game"
-msgstr "_Neues Spiel"
-
-#: src/swell-foop.vala:144
-msgid "High _Scores"
-msgstr "Er_gebnisse"
-
-#: src/swell-foop.vala:147
-msgid "_Preferences"
-msgstr "_Einstellungen"
-
-#: src/swell-foop.vala:148
-msgid "_Help"
-msgstr "_Hilfe"
-
-#: src/swell-foop.vala:149
-msgid "_About Swell Foop"
-msgstr "_Info zu Swell Foop"
-
-#: src/swell-foop.vala:190
-msgid "Small"
-msgstr "Klein"
-
-#: src/swell-foop.vala:191
-msgid "Normal"
-msgstr "Normal"
-
-#: src/swell-foop.vala:192
-msgid "Large"
-msgstr "Groß"
-
-#: src/swell-foop.vala:266
-#, c-format
-msgid "Score: %u"
-msgstr "Punkte: %4u"
-
-#: src/swell-foop.vala:325
-msgid "Colors"
-msgstr "Farben"
-
-#: src/swell-foop.vala:329
-msgid "Shapes and Colors"
-msgstr "Formen und Farben"
-
-#: src/swell-foop.vala:463
+#. Translators: About dialog text, small description of the application
+#: src/swell-foop.vala:113
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -281,11 +402,13 @@ msgstr ""
 "Du weißt schon, alle leuchten auf, dann klickst Du drauf und sie "
 "verschwinden!"
 
-#: src/swell-foop.vala:464
+#. Translators: About dialog text, copyright line
+#: src/swell-foop.vala:117
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
-#: src/swell-foop.vala:469
+#. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
+#: src/swell-foop.vala:121
 msgid "translator-credits"
 msgstr ""
 "Karl Eichwalder <ke@suse.de>\n"
@@ -304,18 +427,97 @@ msgstr ""
 "Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
 "Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>"
 
-#: src/swell-foop.vala:502
+#. Translators: name of a possible size of the grid
+#: src/window.vala:52
+msgid "Small"
+msgstr "Klein"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:55
+msgid "Normal"
+msgstr "Normal"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:58
+msgid "Large"
+msgstr "Groß"
+
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
+#: src/window.vala:146
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"Beseitigen Sie so viele Blöcke wie möglich.\n"
+"Weniger Mausklicks bedeuten mehr Siegpunkte."
+
+#. Translators: subtitle of the headerbar; the %u is replaced by the score
+#: src/window.vala:174
+#, c-format
+msgid "Score: %u"
+msgstr "Punkte: %4u"
+
+#. Translators: text of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:297
 msgid "Abandon this game to start a new one?"
 msgstr "Soll dieses Spiel abgebrochen und ein neues gestartet werden?"
 
-#: src/swell-foop.vala:503
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
+#: src/window.vala:300
 msgid "_Cancel"
 msgstr "A_bbrechen"
+
+#: src/window.vala:389
+#, c-format
+#| msgid "%u × %u, %u color"
+#| msgid_plural "%u × %u, %u colors"
+msgid "%s, %d color"
+msgid_plural "%s, %d colors"
+msgstr[0] "%s, %d Farbe"
+msgstr[1] "%s, %d Farben"
+
+#. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
+#: src/window.vala:400
+msgid "Type"
+msgstr "Typ"
+
+#~ msgid "org.gnome.SwellFoop"
+#~ msgstr "org.gnome.SwellFoop"
+
+#~ msgid "Preferences"
+#~ msgstr "Einstellungen"
+
+#~ msgid "_Board size:"
+#~ msgstr "_Spielfeldgröße:"
+
+#~ msgid "_Theme:"
+#~ msgstr "_Thema:"
+
+#~ msgid "Operation"
+#~ msgstr "Betrieb"
+
+#~ msgid "High Scores"
+#~ msgstr "Ergebnisse"
+
+#~ msgid "New Game"
+#~ msgstr "Neues Spiel"
+
+#~ msgid "_OK"
+#~ msgstr "_OK"
+
+#~ msgid "Size:"
+#~ msgstr "Größe:"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Score"
+#~ msgstr "Ergebnis"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Einstellungen"
 
 # Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
 #~| msgid "Swell Foop"
 #~ msgid "swell-foop"
 #~ msgstr "swell-foop"
-
-#~ msgid "_About"
-#~ msgstr "_Info"
