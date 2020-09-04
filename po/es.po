@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-06-02 15:32+0000\n"
+"POT-Creation-Date: 2020-07-14 11:46+0000\n"
 "PO-Revision-Date: 2020-06-03 11:52+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
@@ -126,10 +126,6 @@ msgstr "Juego guardado"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
 #: data/org.gnome.SwellFoop.gschema.xml:49
-#| msgid ""
-#| "Has value “nothing” if there is no saved game. Else, the values are: the "
-#| "number of colors, the score, and a copy of the board, where “0” means "
-#| "“empty”."
 msgid ""
 "Has value “nothing” if there is no saved game. Else, contains a copy of the "
 "initial board, an index in the history, and the history of actions saved by "
@@ -142,7 +138,7 @@ msgstr ""
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
 msgid "Welcome to Swell Foop"
-msgstr "Bienvenido a Swell Foop"
+msgstr "Bienvenido/a a Swell Foop"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:64
