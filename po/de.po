@@ -23,16 +23,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-06-02 07:25+0000\n"
-"PO-Revision-Date: 2020-09-01 20:28+0200\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2020-09-04 23:02+0000\n"
+"PO-Revision-Date: 2020-09-09 19:15+0200\n"
+"Last-Translator: Stephan Woidowski <swoidowski@t-online.de>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.08.0\n"
+"X-Generator: Poedit 2.4.1\n"
 
 # Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
 #. Translators: title of the window displayed by window managers; name of the application
@@ -146,9 +146,9 @@ msgid ""
 "initial board, an index in the history, and the history of actions saved by "
 "an array of coords."
 msgstr ""
-"Hat den Wert »nothing«, falls es kein gespeichertes Spiel gibt. Andernfalls"
-" enthält es eine Kopie des anfänglichen Spielfelds, einen Verlaufsindex und"
-" den Verlauf der Aktionen, die in einem Feld aus Koordinaten gespeichert sind."
+"Hat den Wert »nothing«, falls es kein gespeichertes Spiel gibt. Andernfalls "
+"enthält es eine Kopie des anfänglichen Spielfelds, einen Verlaufsindex und "
+"den Verlauf der Aktionen, die in einem Feld aus Koordinaten gespeichert sind."
 
 # Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
@@ -171,7 +171,7 @@ msgstr "Mit der Tastatur spielen"
 #: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Move keyboard highlight"
-msgstr ""
+msgstr "Tastaturmarkierung verschieben"
 
 #. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
 #: data/ui/help-overlay.ui:44
@@ -235,21 +235,18 @@ msgstr "Tastenkombinationen"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:121
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Hilfe"
 
 #. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
 #: data/ui/help-overlay.ui:129
-#| msgid "_About"
 msgctxt "shortcut window"
 msgid "About"
 msgstr "Info"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
 #: data/ui/help-overlay.ui:137
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Beenden"
@@ -264,7 +261,6 @@ msgstr "_Neues Spiel"
 # setup => Einrichtung, das wäre hier falsch
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
 #: data/ui/swell-foop.ui:30
-#| msgid "Setup"
 msgid "_Setup"
 msgstr "_Einrichtung"
 
@@ -285,7 +281,6 @@ msgstr "_Groß (20 × 15)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:54
-#| msgid "_Number of colors:"
 msgid "_Two colors"
 msgstr "_Zwei Farben"
 
@@ -296,7 +291,6 @@ msgstr "_Drei Farben"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
 #: data/ui/swell-foop.ui:66
-#| msgid "_Number of colors:"
 msgid "_Four colors"
 msgstr "_Vier Farben"
 
@@ -307,19 +301,16 @@ msgstr "Er_gebnisse"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/swell-foop.ui:88
-#| msgid "Appearance"
 msgid "A_ppearance"
 msgstr "Er_scheinungsbild"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:92
-#| msgid "Colors"
 msgid "_Colors"
 msgstr "_Farben"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:98
-#| msgid "Shapes and Colors"
 msgid "_Shapes and Colors"
 msgstr "For_men und Farben"
 
@@ -469,8 +460,6 @@ msgstr "A_bbrechen"
 
 #: src/window.vala:389
 #, c-format
-#| msgid "%u × %u, %u color"
-#| msgid_plural "%u × %u, %u colors"
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
 msgstr[0] "%s, %d Farbe"
