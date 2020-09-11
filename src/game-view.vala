@@ -513,7 +513,7 @@ private class TileView : Widget
         if (click_controller.get_widget () != null)   // FIXME animate_out should not be called multiple times
         {
             remove_controller (click_controller);
-            remove_controller (inout_controller);
+//            remove_controller (inout_controller);     // FIXME "leak", maybe a Gtk bug
         }
         remove_css_class ("highlight");
         add_css_class ("removed");
