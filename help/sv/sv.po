@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Swell-foop doc\n"
-"POT-Creation-Date: 2020-08-02 16:02+0000\n"
-"PO-Revision-Date: 2020-08-03 12:50+0200\n"
+"POT-Creation-Date: 2020-10-20 16:44+0000\n"
+"PO-Revision-Date: 2020-10-23 18:55+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Project-Style: gnome\n"
 
 #. (itstool) path: p/link
@@ -153,9 +153,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/playing-game.page:33
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 msgctxt "_"
 msgid ""
 "external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
@@ -249,17 +246,16 @@ msgstr "Standardtemat är <gui>Figurer och färger</gui>."
 msgid "Change the speed"
 msgstr "Ändra hastigheten"
 
-# TODO: tautology: If it is too fast for you [...] then this may be too fast for you.
 #. (itstool) path: section/p
 #: C/preferences.page:58
 msgid ""
-"The default animation is designed to be fast. If it is too fast for you and "
-"you would like playing slower then this may be too fast for you. In this "
-"case you can slow down the game animation."
+"The default animation is designed to be fast. If it is too fast for you, "
+"then you might like playing slower. In this case, you can slow down the game "
+"animation."
 msgstr ""
-"Standardanimationen är designad för att vara snabb. Om du du vill spela "
-"långsammare kan detta vara för snabbt för dig. I så fall kan du sakta ner "
-"spelets animation."
+"Standardanimationen är designad för att vara snabb. Om detta är för snabbt "
+"för dig kan du vilja spela långsammare. I så fall kan du sakta ner spelets "
+"animation."
 
 # TODO: not the other way around?
 #. (itstool) path: item/p
