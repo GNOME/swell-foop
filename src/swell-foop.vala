@@ -82,6 +82,16 @@ public class SwellFoop : Gtk.Application
         window.present ();
     }
 
+    protected override void shutdown ()
+    {
+        window.destroy ();
+        base.shutdown ();
+    }
+
+    /*\
+    * * actions
+    \*/
+
     private inline void help_cb (/* SimpleAction action, Variant? variant */)
     {
         Gtk.show_uri (window, "help:swell-foop", Gdk.CURRENT_TIME);

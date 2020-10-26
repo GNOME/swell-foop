@@ -79,6 +79,8 @@ private class SwellFoopWindow : ApplicationWindow
 
     construct
     {
+        unmap.connect (on_unmap);
+
         CssProvider css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
         Gdk.Display? gdk_display = Gdk.Display.get_default ();
@@ -95,8 +97,6 @@ private class SwellFoopWindow : ApplicationWindow
 
         settings.changed ["theme"].connect (load_theme);
         load_theme (settings, "theme");
-
-        close_request.connect (on_close_request);
 
         int32 colors = settings.get_int ("colors"); // 2 <= colors <= 4, per schema file
         SimpleAction colors_action = (SimpleAction) lookup_action ("change-colors");
@@ -230,7 +230,7 @@ private class SwellFoopWindow : ApplicationWindow
         game.bind_property ("can-redo", redo_action, "enabled", BindingFlags.SYNC_CREATE);
     }
 
-    private inline bool on_close_request ()
+    private inline void on_unmap ()
     {
         settings.delay ();
         settings.set_value ("saved-game", game.get_saved_game ());
@@ -243,7 +243,7 @@ private class SwellFoopWindow : ApplicationWindow
             }
         settings.apply ();
 
-        return /* do not stop other handlers */ false;
+        application.quit ();
     }
 
     /*\
