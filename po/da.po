@@ -1,4 +1,4 @@
-# Danish translation of swell-foop.
+# Danish translation for swell-foop.
 # Copyright (C) 1998-2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the swell-foop package.
 # Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-05-05 14:32+0000\n"
-"PO-Revision-Date: 2020-05-08 13:53+0200\n"
+"POT-Creation-Date: 2020-09-29 20:06+0000\n"
+"PO-Revision-Date: 2020-10-31 00:00+0200\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -28,11 +28,10 @@ msgstr ""
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: title of the window displayed on the headerbar; name of the application
-#. Translators: About dialog text, name of the application
-#. Translators: name of the application, as displayed in the window manager
+#. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:64
-#: data/ui/swell-foop.ui:70 src/swell-foop.vala:228 src/swell-foop.vala:275
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:141
+#: data/ui/swell-foop.ui:147 src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -74,45 +73,72 @@ msgstr "GNOME-projektet"
 msgid "game;logic;board;same;matching;"
 msgstr "spil;logik;bræt;samme;matchning;match;"
 
-#: data/org.gnome.swell-foop.gschema.xml:10
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:11
 msgid "The theme to use"
 msgstr "Temaet der skal benyttes"
 
-#: data/org.gnome.swell-foop.gschema.xml:11
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:13
 msgid "The title of the tile theme to use."
 msgstr "Navnet på briktemaet, der skal benyttes."
 
-#: data/org.gnome.swell-foop.gschema.xml:15
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:18
 msgid "Board size"
 msgstr "Brætstørrelse"
 
-#: data/org.gnome.swell-foop.gschema.xml:16
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:20
 msgid "The size of the game board."
 msgstr "Størrelsen af spillebrættet."
 
-#: data/org.gnome.swell-foop.gschema.xml:20
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:26
 msgid "Board color count"
 msgstr "Antal farver på brættet"
 
-#: data/org.gnome.swell-foop.gschema.xml:21
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:28
 msgid "The number of colors of tiles to use in the game."
 msgstr "Antallet af farver, brikker kan have i spillet."
 
-#: data/org.gnome.swell-foop.gschema.xml:25
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:33
 msgid "Is this the first run"
 msgstr "Om dette er første kørsel"
 
-#: data/org.gnome.swell-foop.gschema.xml:26
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:35
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr "Indstilling for om der skal vises fif ved første kørsel eller ikke."
 
-#: data/org.gnome.swell-foop.gschema.xml:30
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.SwellFoop.gschema.xml:40
 msgid "Zealous animation"
 msgstr "Ivrig animation"
 
-#: data/org.gnome.swell-foop.gschema.xml:31
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.SwellFoop.gschema.xml:42
 msgid "Use more flashy, but slower, animations."
 msgstr "Benyt mere iøjnefaldende, men langsommere, animationer."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
+#: data/org.gnome.SwellFoop.gschema.xml:47
+msgid "Saved game"
+msgstr "Gemt spil"
+
+# scootergrisen: tjek oversættelsen af "nothing"
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
+#: data/org.gnome.SwellFoop.gschema.xml:49
+msgid ""
+"Has value “nothing” if there is no saved game. Else, contains a copy of the "
+"initial board, an index in the history, and the history of actions saved by "
+"an array of coords."
+msgstr ""
+"Har værdien “nothing” hvis der ikke er noget gemt spil. Ellers indeholder "
+"den en kopi af det første bræt, et indeks i historikken og historikken over "
+"handlinger gemt som et koordinatgitter."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
@@ -124,154 +150,200 @@ msgstr "Velkommen til Swell Foop"
 msgid "Let’s _Play"
 msgstr "Lad os _spille"
 
-#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
-#: data/ui/help-overlay.ui:31
-msgctxt "shortcut window"
-msgid "Main functions"
-msgstr "Primære funktioner"
-
-#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
-#: data/ui/help-overlay.ui:37
-#| msgid "Start a new game"
-msgctxt "shortcut window"
-msgid "Start a new game"
-msgstr "Start et nyt spil"
-
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
-#: data/ui/help-overlay.ui:46
+#: data/ui/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Play with keyboard"
 msgstr "Spil med tastaturet"
 
 #. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
-#: data/ui/help-overlay.ui:51
+#: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Move keyboard highlight"
 msgstr "Flyt tastaturets fremhævning"
 
 #. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
-#: data/ui/help-overlay.ui:59
+#: data/ui/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Destroy selected block"
 msgstr "Ødelæg den valgte blok"
 
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo"
+#: data/ui/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "History"
+msgstr "Historik"
+
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Fortryd"
+
+#. Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Omgør"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game
+#: data/ui/help-overlay.ui:75
+msgctxt "shortcut window"
+msgid "Restart"
+msgstr "Genstart"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
+#: data/ui/help-overlay.ui:85
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr "Primære funktioner"
+
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
+#: data/ui/help-overlay.ui:91
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Start et nyt spil"
+
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
-#: data/ui/help-overlay.ui:69
+#: data/ui/help-overlay.ui:100
 msgctxt "shortcut window"
 msgid "Generic"
 msgstr "Generisk"
 
 #. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
-#: data/ui/help-overlay.ui:74
+#: data/ui/help-overlay.ui:105
 msgctxt "shortcut window"
 msgid "Open menu"
 msgstr "Åbn menu"
 
 #. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
-#: data/ui/help-overlay.ui:82
+#: data/ui/help-overlay.ui:113
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Tastaturgenveje"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
-#: data/ui/help-overlay.ui:90
-#| msgid "_Help"
+#: data/ui/help-overlay.ui:121
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Hjælp"
 
 #. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
-#: data/ui/help-overlay.ui:98
-#| msgid "_About"
+#: data/ui/help-overlay.ui:129
 msgctxt "shortcut window"
 msgid "About"
 msgstr "Om"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
-#: data/ui/help-overlay.ui:106
-#| msgid "_Quit"
+#: data/ui/help-overlay.ui:137
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Afslut"
 
-#. Translators: title of the Preferences dialog
-#: data/ui/preferences.ui:15
-msgid "Preferences"
-msgstr "Indstillinger"
-
-#. Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the board size
-#: data/ui/preferences.ui:53
-msgid "_Board size:"
-msgstr "_Brætstørrelse:"
-
-#. Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the number of colors
-#: data/ui/preferences.ui:70
-msgid "_Number of colors:"
-msgstr "_Antal farver:"
-
-#. Translators: in the Preferences dialog, name of the section in which there are settings for board size and number of colors
-#: data/ui/preferences.ui:129
-msgid "Setup"
-msgstr "Opsætning"
-
-#. Translators: in the Preferences dialog, text of the label that introduces the combobox for choosing the theme
-#: data/ui/preferences.ui:168
-msgid "_Theme:"
-msgstr "_Tema:"
-
-#. Translators: in the Preferences dialog, name of the section in which there is the theme option
-#: data/ui/preferences.ui:216
-msgid "Appearance"
-msgstr "Udseende"
-
-#. Translators: in the Preferences dialog, text of the fast-animation checkbox
-#: data/ui/preferences.ui:248
-msgid "_Zealous Animation"
-msgstr "_Ivrig animation"
-
-#. Translators: in the Preferences dialog, name of the section in which there is the fast-animation option
-#: data/ui/preferences.ui:274
-msgid "Operation"
-msgstr "Operation"
-
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: data/ui/swell-foop.ui:25 src/window.vala:248
+#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:303
 msgid "_New Game"
 msgstr "_Nyt spil"
 
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
+#: data/ui/swell-foop.ui:30
+msgid "_Setup"
+msgstr "_Opsætning"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:34
+msgid "_Small (6 × 5)"
+msgstr "_Lille (6 × 5)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:40
+msgid "Nor_mal (15 × 10)"
+msgstr "Nor_mal (15 × 10)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
+#: data/ui/swell-foop.ui:46
+msgid "_Large (20 × 15)"
+msgstr "_Stor (20 × 15)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
+#: data/ui/swell-foop.ui:54
+msgid "_Two colors"
+msgstr "_To farver"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
+#: data/ui/swell-foop.ui:60
+msgid "T_hree colors"
+msgstr "T_re farver"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
+#: data/ui/swell-foop.ui:66
+msgid "_Four colors"
+msgstr "_Fire farver"
+
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:32
+#: data/ui/swell-foop.ui:83
 msgid "High _Scores"
 msgstr "_Resultater"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:39
-msgid "_Preferences"
-msgstr "_Indstillinger"
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/swell-foop.ui:88
+msgid "A_ppearance"
+msgstr "_Udseende"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
+#: data/ui/swell-foop.ui:92
+msgid "_Colors"
+msgstr "_Farver"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
+#: data/ui/swell-foop.ui:98
+msgid "_Shapes and Colors"
+msgstr "F_ormer og farver"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
+#: data/ui/swell-foop.ui:104
+msgid "_Boring Shapes"
+msgstr "_Kedelige former"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
+#: data/ui/swell-foop.ui:112
+msgid "_Zealous Animation"
+msgstr "_Ivrig animation"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:44
+#: data/ui/swell-foop.ui:121
 msgid "_Keyboard Shortcuts"
 msgstr "_Tastaturgenveje"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:49
+#: data/ui/swell-foop.ui:126
 msgid "_Help"
 msgstr "_Hjælp"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:54
+#: data/ui/swell-foop.ui:131
 msgid "_About Swell Foop"
 msgstr "_Om Swell Foop"
 
+#. Translators: tooltip text of the Undo button; probably a verb
+#: data/ui/swell-foop.ui:160
+msgid "Undo"
+msgstr "Fortryd"
+
+#. Translators: tooltip text of the Undo button; probably a verb
+#: data/ui/swell-foop.ui:177
+msgid "Redo"
+msgstr "Omgør"
+
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:321
+#: src/game-view.vala:415
 msgid "_Play Again"
 msgstr "_Spil igen"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:488
+#: src/game-view.vala:607
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -279,48 +351,28 @@ msgstr[0] "%u point"
 msgstr[1] "%u point"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:491
+#: src/game-view.vala:610
 msgid "Game Over!"
 msgstr "Spillet er slut!"
 
-#. Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox
-#: src/swell-foop.vala:29
-msgid "Small"
-msgstr "Lille"
-
-#. Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox
-#: src/swell-foop.vala:32
-msgid "Normal"
-msgstr "Normal"
-
-#. Translators: name of a possible size of the grid, as seen in the Preferences dialog “board size” combobox
-#: src/swell-foop.vala:35
-msgid "Large"
-msgstr "Stor"
-
-#. Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox
-#: src/swell-foop.vala:104
-msgid "Colors"
-msgstr "Farver"
-
-#. Translators: name of a possible theme, as seen in the Preferences dialog “theme” combobox
-#: src/swell-foop.vala:109
-msgid "Shapes and Colors"
-msgstr "Former og farver"
+#. Translators: command-line option description, see 'swell-foop --help'
+#: src/swell-foop.vala:26
+msgid "Print release version and exit"
+msgstr "Vis udgivelsesversion og afslut"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:214 src/swell-foop.vala:222
+#: src/swell-foop.vala:96 src/swell-foop.vala:104
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:218
+#: src/swell-foop.vala:100
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
 #. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:232
+#: src/swell-foop.vala:113
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -329,12 +381,12 @@ msgstr ""
 "Du ved, de lyser op, du klikker på dem og de forsvinder!"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:236
+#: src/swell-foop.vala:117
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Ophavsret © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:240
+#: src/swell-foop.vala:121
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -349,8 +401,23 @@ msgstr ""
 "Websted http://dansk-gruppen.dk\n"
 "E-mail <dansk@dansk-gruppen.dk>"
 
-#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: src/window.vala:120
+#. Translators: name of a possible size of the grid
+#: src/window.vala:52
+msgid "Small"
+msgstr "Lille"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:55
+msgid "Normal"
+msgstr "Normal"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:58
+msgid "Large"
+msgstr "Stor"
+
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
+#: src/window.vala:146
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -359,31 +426,29 @@ msgstr ""
 "Færre klik betyder flere points."
 
 #. Translators: subtitle of the headerbar; the %u is replaced by the score
-#: src/window.vala:148
+#: src/window.vala:174
 #, c-format
 msgid "Score: %u"
 msgstr "Resultat: %u"
 
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:242
+#: src/window.vala:297
 msgid "Abandon this game to start a new one?"
 msgstr "Forkast dette spil for at starte et nyt?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:245
+#: src/window.vala:300
 msgid "_Cancel"
 msgstr "_Annullér"
 
-#: src/window.vala:321
+#: src/window.vala:389
 #, c-format
-#| msgid "%u × %u, %u color"
-#| msgid_plural "%u × %u, %u colors"
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
 msgstr[0] "%s, %d farve"
 msgstr[1] "%s, %d farver"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:332
+#: src/window.vala:400
 msgid "Type"
 msgstr "Type"
