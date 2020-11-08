@@ -6,22 +6,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
-"POT-Creation-Date: 2017-02-26 01:20+0000\n"
-"PO-Revision-Date: 2017-05-16 22:43+0700\n"
+"POT-Creation-Date: 2020-06-02 15:32+0000\n"
+"PO-Revision-Date: 2020-11-08 16:07+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
-"Andika Triwidada <andika@gmail.com>, 2017"
+"Andika Triwidada <andika@gmail.com>, 2017, 2020."
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:20
@@ -84,7 +84,7 @@ msgstr ""
 #. (itstool) path: revdescription/para
 #: C/index.docbook:103
 msgid "Updates to the Swell Foop manual."
-msgstr "Memperbarui panduan Swell Foop"
+msgstr "Pembaruan ke panduan Swell Foop."
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:104
@@ -198,11 +198,14 @@ msgstr "<application>Swell Foop</application> di awal permainan baru."
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:155
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
 msgctxt "_"
 msgid ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+"external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 msgstr ""
-"external ref='figures/start-up.png' md5='fa00e896d6d11c12c9f07c5235a29a32'"
+"external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:161
@@ -674,6 +677,17 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
+"DOKUMEN DISEDIAKAN BERDASARKAN \"APA ADANYA\", TANPA JAMINAN DALAM BENTUK "
+"APA PUN, BAIK TEREKSPRESIKAN ATAU TERSIRAT, TERMASUK, TANPA BATASAN, "
+"MENJAMIN BAHWA DOKUMEN ATAU VERSI DOKUMEN YANG DIMODIFIKASI BEBAS DARI CACAT "
+"YANG DAPAT DIPERDAGANGKAN, COCOK UNTUK TUJUAN TERTENTU ATAU TIDAK MELANGGAR. "
+"SELURUH RISIKO TERHADAP KUALITAS, AKURASI, DAN KINERJA DOKUMEN ATAU VERSI "
+"DOKUMEN YANG DIMODIFIKASI ADALAH MILIK ANDA. JIKA DOKUMEN ATAU VERSI YANG "
+"DIMODIFIKASI TERBUKTI CACAT DALAM HAL APA PUN, ANDA (BUKAN PENULIS AWAL, "
+"PENULIS, ATAU KONTRIBUTOR APA PUN) MENANGGUNG BIAYA LAYANAN, PERBAIKAN, ATAU "
+"KOREKSI YANG DIPERLUKAN. SANGGAHAN GARANSI INI MERUPAKAN BAGIAN PENTING DARI "
+"LISENSI INI. TIDAK ADA PENGGUNAAN DOKUMEN ATAU VERSI DOKUMEN YANG "
+"DIMODIFIKASI YANG DIOTORISASI DI BAWAH INI KECUALI DI BAWAH PENAFIAN INI; DAN"
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:55
@@ -689,6 +703,17 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
 "POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
+"DALAM KEADAAN APA PUN DAN TANPA TEORI HUKUM, BAIK DALAM KESALAHAN (TERMASUK "
+"KELALAIAN), KONTRAK, ATAU SEBALIKNYA, AKAN PENULIS, PENULIS AWAL, "
+"KONTRIBUTOR APA PUN, ATAU DISTRIBUTOR DOKUMEN ATAU VERSI DOKUMEN YANG "
+"DIMODIFIKASI, ATAU PEMASOK APA PUN DARI PIHAK TERSEBUT, AKAN BERTANGGUNG "
+"JAWAB KEPADA SETIAP ORANG ATAS KERUSAKAN LANGSUNG, TIDAK LANGSUNG, KHUSUS, "
+"INSIDENTAL, ATAU KONSEKUENSIAL DARI KARAKTER APA PUN TERMASUK , TANPA "
+"BATASAN, KERUSAKAN KARENA KEHILANGAN NIAT BAIK, PENGHENTIAN KERJA, KEGAGALAN "
+"KOMPUTER ATAU KERUSAKAN, ATAU SETIAP DAN SEMUA KERUSAKAN ATAU KERUGIAN LAIN "
+"YANG TIMBUL DARI ATAU BERKAITAN DENGAN PENGGUNAAN DOKUMEN DAN VERSI DOKUMEN "
+"YANG DIMODIFIKASI, BAHKAN JIKA PIHAK TERSEBUT HARUS DIBERITAHU TENTANG "
+"KEMUNGKINAN KERUSAKAN TERSEBUT."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:28
@@ -697,3 +722,6 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
+"DOKUMEN DAN VERSI MODIFIKASI DOKUMEN YANG DISEDIAKAN MENURUT KETENTUAN DARI "
+"LISENSI GNU FREE DOCUMENTATION DENGAN MEMAHAMI LEBIH LANJUT BAHWA: <_:"
+"orderedlist-1/>"
