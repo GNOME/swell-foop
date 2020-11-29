@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
-"POT-Creation-Date: 2020-08-14 08:10+0000\n"
-"PO-Revision-Date: 2020-09-02 00:38+0200\n"
+"POT-Creation-Date: 2020-11-08 09:08+0000\n"
+"PO-Revision-Date: 2020-11-29 11:07+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -58,8 +58,8 @@ msgid ""
 "about the game, check the <link xref=\"introduction\">game introduction</"
 "link>."
 msgstr ""
-"Swell Foop je hlavolam, dříve vydávaný pod názvem Stejné GNOME. Více se o hře "
-"můžete dozvědět v <link xref=\"introduction\">úvodu do hry</link>."
+"Swell Foop je hlavolam, dříve vydávaný pod názvem Stejné GNOME. Více se o "
+"hře můžete dozvědět v <link xref=\"introduction\">úvodu do hry</link>."
 
 #. (itstool) path: section/title
 #: C/index.page:32
@@ -103,9 +103,9 @@ msgid ""
 msgstr ""
 "Cílem hry je odstranit co nejvíce objektů je možné v co nejméně tazích je "
 "možné. Objekty stejného typu, které spolu sousedí, tvoří skupinu a všechny "
-"objekty ve skupině se odstraní naráz. Zbývající objekty se sesunou tak, "
-"aby zaplnily vzniklou mezeru a tak se vytvoří nové skupiny. Samostatný "
-"objekt, který netvoří skupinu, odstranit nelze."
+"objekty ve skupině se odstraní naráz. Zbývající objekty se sesunou tak, aby "
+"zaplnily vzniklou mezeru a tak se vytvoří nové skupiny. Samostatný objekt, "
+"který netvoří skupinu, odstranit nelze."
 
 #. (itstool) path: info/desc
 #: C/playing-game.page:18
@@ -156,7 +156,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 msgstr ""
-"external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
+"external ref='figures/start-game.png' md5='1f95101da2e56f918301fa95abc188b2'"
 
 #. (itstool) path: info/desc
 #: C/preferences.page:17
@@ -248,9 +248,9 @@ msgstr "Změna rychlosti"
 #. (itstool) path: section/p
 #: C/preferences.page:58
 msgid ""
-"The default animation is designed to be fast. If it is too fast for you and "
-"you would like playing slower then this may be too fast for you. In this "
-"case you can slow down the game animation."
+"The default animation is designed to be fast. If it is too fast for you, "
+"then you might like playing slower. In this case, you can slow down the game "
+"animation."
 msgstr ""
 "Výchozí animace je navržená tak, aby byla rychlá. Pokud je na vás příliš "
 "rychlá a raději hrajete v pomalejším tempu, které rychlost animace ruší, "
@@ -300,9 +300,9 @@ msgid ""
 "To view the scores for other board sizes, select the board size from the "
 "menu at the top of the dialog for the board you wish to see the scores for."
 msgstr ""
-"V dialogovém okně se na začátku zobrazí skóre pro typ hry <gui>Malá, 3 barvy"
-"</gui>. Jestli chcete vidět skóre pro jiný typ hry, vyberte ji v rozbalovací "
-"nabídce v horní části dialogového okna."
+"V dialogovém okně se na začátku zobrazí skóre pro typ hry <gui>Malá, 3 "
+"barvy</gui>. Jestli chcete vidět skóre pro jiný typ hry, vyberte ji v "
+"rozbalovací nabídce v horní části dialogového okna."
 
 #. (itstool) path: section/title
 #: C/score.page:36
@@ -458,8 +458,8 @@ msgid ""
 "smartly are:"
 msgstr ""
 "Nejdůležitější pravidlo na získání nejvyššího skóre je myslet dopředu: každá "
-"skupina, kterou odstraníte, vytvoří a naopak rozhodí další skupiny. Pár tipů, "
-"jak hrát promyšleně:"
+"skupina, kterou odstraníte, vytvoří a naopak rozhodí další skupiny. Pár "
+"tipů, jak hrát promyšleně:"
 
 #. (itstool) path: item/p
 #: C/strategy.page:27
@@ -468,9 +468,9 @@ msgid ""
 "it larger. Vertically aligned objects can't be misaligned, but horizontal "
 "arrangements can."
 msgstr ""
-"Snažte se jako první odstranit skupiny nacházející se výše, ledaže odstranění "
-"jiné skupiny způsobí jejich zvětšení. Svisle uspořádané objekty zůstanou "
-"srovnané, ale vodorovně uspořádané se mohou zpřeházet."
+"Snažte se jako první odstranit skupiny nacházející se výše, ledaže "
+"odstranění jiné skupiny způsobí jejich zvětšení. Svisle uspořádané objekty "
+"zůstanou srovnané, ale vodorovně uspořádané se mohou zpřeházet."
 
 #. (itstool) path: item/p
 #: C/strategy.page:30
@@ -478,8 +478,8 @@ msgid ""
 "Since the score increases quadratically, big groups of objects will score "
 "more."
 msgstr ""
-"Jelikož hodnocení roste s velikostí skupiny kvadraticky, rozbití věších skupin "
-"objektů vám přinese podstatně vyšší hodnocení."
+"Jelikož hodnocení roste s velikostí skupiny kvadraticky, rozbití věších "
+"skupin objektů vám přinese podstatně vyšší hodnocení."
 
 #. (itstool) path: item/p
 #: C/strategy.page:32
@@ -491,8 +491,8 @@ msgid ""
 msgstr ""
 "Když se máte rozhodnout mezi spojením dvou skupin po dvou na čtyři nebo "
 "přidáním jednoho objektu ke skupině ze šesti, měli byste volit přidání onoho "
-"jednoho objektu. I přesto, že za skupinu dvou objektů nedostanete žádné body, "
-"body za větší skupinu převáží."
+"jednoho objektu. I přesto, že za skupinu dvou objektů nedostanete žádné "
+"body, body za větší skupinu převáží."
 
 #. (itstool) path: note/p
 #: C/strategy.page:39
