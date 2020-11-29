@@ -156,7 +156,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 msgstr ""
-"external ref='figures/start-game.png' md5='1f95101da2e56f918301fa95abc188b2'"
+"external ref='figures/start-game.png' md5='0f9627195d06ba940de81be980ff7a90'"
 
 #. (itstool) path: info/desc
 #: C/preferences.page:17
