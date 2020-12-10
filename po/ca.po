@@ -262,12 +262,12 @@ msgstr "Nor_mal (15 × 10)"
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
 #: data/ui/swell-foop.ui:46
 msgid "_Large (20 × 15)"
-msgstr "_Llarg (20 × 15)"
+msgstr "_Gran (20 × 15)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:54
 msgid "_Two colors"
-msgstr "_Dos colors:"
+msgstr "_Dos colors"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
 #: data/ui/swell-foop.ui:60
