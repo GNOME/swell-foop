@@ -49,10 +49,10 @@ msgid ""
 "of squares, and also for clearing the entire board."
 msgstr ""
 "Elimineu tants quadrats del tauler com sigui possible. Feu clic en un grup "
-"de quadrats del mateix color per fer-los desaparèixer d'una tirada, fent que "
+"de quadrats del mateix color per a fer-los desaparèixer d'una tirada, fent que "
 "altres quadrats caiguin al lloc buit. No es pot eliminar un sol quadrat en "
 "una tirada. Aconseguireu molts més punts si elimineu molts quadrats d'una "
-"tirada així com per buidar tot el tauler."
+"tirada així com per a buidar tot el tauler."
 
 #: data/org.gnome.SwellFoop.appdata.xml.in:17
 msgid ""
@@ -140,7 +140,7 @@ msgstr ""
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
 msgid "Welcome to Swell Foop"
-msgstr "Benvinguts a l'Atac salvatge"
+msgstr "Us donem la benvinguda a l'Atac salvatge"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:64
