@@ -32,12 +32,36 @@ private class GameView : GtkClutter.Embed
 
         /* Request an appropriate size for the game view */
         init_size ();
+
+        /* Window resizes should trigger view scaling updates */
+        this.configure_event.connect(configure_event_cb);
     }
 
     private void init_size ()
     {
-        stage.set_size (group.width, group.height);
-        set_size_request ((int) stage.width, (int) stage.height);
+        // Force the clutter widget to have a minimum size of the Game View's
+        // size (this will be based on the tile size and arrangement).
+        set_size_request ((int) group.width, (int) group.height);
+
+        // Work out what the largest scale factor we can use is, to fit within
+        // the window.
+        var w_scale = stage.width / group.width;
+        var h_scale = stage.height / group.height;
+        var scale = w_scale < h_scale ? w_scale : h_scale;
+
+        // Set the view to that scale, and move the view within the clutter
+        // widget to match (creating implicit black borders for windows that
+        // aren't perfectly shaped for the board.
+        group.set_scale(scale, scale);
+        group.set_position(
+                (stage.width - scale * group.width) / 2,
+                (stage.height - scale * group.height) / 2);
+    }
+
+    private bool configure_event_cb (Gtk.Widget widget, Gdk.Event event)
+    {
+        init_size ();
+        return false;
     }
 
     /*\
