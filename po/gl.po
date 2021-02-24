@@ -10,16 +10,16 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.gl>, 2011-2020.
+# Fran Dieguez <frandieguez@gnome.org>, 2011-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-06-02 07:25+0000\n"
+"POT-Creation-Date: 2020-11-08 09:08+0000\n"
 "PO-Revision-Date: 2020-08-04 09:43+0200\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.gl>\n"
-"Language-Team: Galician <Proxecto Trasno <proxecto@trasno.gal>>\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,7 +127,6 @@ msgstr "Usar animacións máis rechamantes pero máis lentas."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
 #: data/org.gnome.SwellFoop.gschema.xml:47
-#| msgid "Start a new game"
 msgid "Saved game"
 msgstr "Xogo gardado"
 
@@ -202,7 +201,6 @@ msgstr "Funcións principais"
 
 #. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
 #: data/ui/help-overlay.ui:91
-#| msgid "Start a new game"
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Comezar un xogo novo"
@@ -227,21 +225,18 @@ msgstr "Atallos de teclado"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:121
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Axuda"
 
 #. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
 #: data/ui/help-overlay.ui:129
-#| msgid "_About"
 msgctxt "shortcut window"
 msgid "About"
 msgstr "Sobre"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
 #: data/ui/help-overlay.ui:137
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Saír"
@@ -255,7 +250,6 @@ msgstr "Xogo _novo"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
 #: data/ui/swell-foop.ui:30
-#| msgid "Setup"
 msgid "_Setup"
 msgstr "_Preferencias"
 
@@ -276,7 +270,6 @@ msgstr "_Grande (20 × 15)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:54
-#| msgid "_Number of colors:"
 msgid "_Two colors"
 msgstr "_Dúas cores"
 
@@ -287,7 +280,6 @@ msgstr "T_res cores"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
 #: data/ui/swell-foop.ui:66
-#| msgid "_Number of colors:"
 msgid "_Four colors"
 msgstr "_Catro cores"
 
@@ -298,19 +290,16 @@ msgstr "Puntuacións máis _altas"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/swell-foop.ui:88
-#| msgid "Appearance"
 msgid "A_ppearance"
 msgstr "A_parencia"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:92
-#| msgid "Colors"
 msgid "_Colors"
 msgstr "_Cores"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:98
-#| msgid "Shapes and Colors"
 msgid "_Shapes and Colors"
 msgstr "_Formas e cores"
 
@@ -456,8 +445,6 @@ msgstr "_Cancelar"
 
 #: src/window.vala:389
 #, c-format
-#| msgid "%u × %u, %u color"
-#| msgid_plural "%u × %u, %u colors"
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
 msgstr[0] "%s, %d cor"
