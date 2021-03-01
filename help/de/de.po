@@ -1,18 +1,21 @@
 # German translation of the swell-foop manual.
 #
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2010, 2012, 2018, 2019, 2020.
+#
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2010, 2012, 2018, 2019, 2020, 2021.
+# Philipp Kiemle <philipp.kiemle@gmail.com>, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games swell-foop manual master\n"
-"POT-Creation-Date: 2020-08-14 08:10+0000\n"
-"PO-Revision-Date: 2020-09-05 08:36+0200\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2021-02-28 13:57+0000\n"
+"PO-Revision-Date: 2021-02-28 21:49+0100\n"
+"Last-Translator: Philipp Kiemle <philipp.kiemle@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.0\n"
+"X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. (itstool) path: p/link
@@ -29,7 +32,9 @@ msgstr "Dieses Werk wird unter der <_:link-1/>-Lizenz verbreitet."
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2010, 2012, 2018"
+"Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2010, 2012, "
+"2018-2021.\n"
+"Philipp Kiemle <philipp.kiemle@gmail.com>, 2021."
 
 #. (itstool) path: credit/name
 #: C/index.page:13 C/introduction.page:11 C/playing-game.page:11
@@ -54,10 +59,9 @@ msgid ""
 "about the game, check the <link xref=\"introduction\">game introduction</"
 "link>."
 msgstr ""
-"Swell Foop ist ein Puzzlespiel, das früher als Same GNOME bekannt war. Um"
-" mehr über das Spiel zu erfahren, lesen Sie die <link xref=\"introduction\""
-">Einführung zum Spiel</"
-"link>."
+"Swell Foop ist ein Puzzlespiel, das früher als Same GNOME bekannt war. Um "
+"mehr über das Spiel zu erfahren, lesen Sie die <link xref=\"introduction"
+"\">Einführung zum Spiel</link>."
 
 #. (itstool) path: section/title
 #: C/index.page:32
@@ -82,7 +86,6 @@ msgstr "2020"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:18
-#| msgid "About <application>Swell Foop</application>"
 msgid "Know about <app>Swell Foop</app>."
 msgstr "Infos zu <app>Swell Foop</app>."
 
@@ -93,12 +96,6 @@ msgstr "Einführung"
 
 #. (itstool) path: page/p
 #: C/introduction.page:24
-#| msgid ""
-#| "<application>Swell Foop</application> is a puzzle game. The goal is to "
-#| "remove as many objects as possible in as few moves as possible. Objects "
-#| "that are adjacent to each other get removed as a group. The remaining "
-#| "objects then collapse to fill in the gaps and new groups are formed. You "
-#| "cannot remove single objects."
 msgid ""
 "The goal of the game is to remove as many objects as possible in as few "
 "moves as possible. Adjacent objects of the same color form a group, and all "
@@ -106,12 +103,12 @@ msgid ""
 "collapse to fill in the gaps and form new groups. You cannot remove objects "
 "that are not adjacent to another object of the same color."
 msgstr ""
-"Das Ziel des Spiels ist das "
-"Entfernen von so vielen Objekten wie möglich mit so wenigen Zügen wie "
-"möglich. Objekte, die einander berühren, werden als Gruppe entfernt. Die "
-"übriggebliebenen Objekte fallen zusammen, um die entstandenen Lücken zu "
-"schließen, und bilden dadurch neue Gruppen. Sie können keine Objekte"
-" entfernen, die kein anderes Objekt der gleichen Farbe berühren."
+"Das Ziel des Spiels ist das Entfernen von so vielen Objekten wie möglich mit "
+"so wenigen Zügen wie möglich. Objekte, die einander berühren, werden als "
+"Gruppe entfernt. Die übriggebliebenen Objekte fallen zusammen, um die "
+"entstandenen Lücken zu schließen, und bilden dadurch neue Gruppen. Sie "
+"können keine Objekte entfernen, die kein anderes Objekt der gleichen Farbe "
+"berühren."
 
 #. (itstool) path: info/desc
 #: C/playing-game.page:18
@@ -120,7 +117,6 @@ msgstr "Wie wird gespielt?"
 
 #. (itstool) path: page/title
 #: C/playing-game.page:22
-#| msgid "Playing <application>Swell Foop</application>"
 msgid "Playing <app>Swell Foop</app>"
 msgstr "<app>Swell Foop</app> spielen"
 
@@ -130,8 +126,8 @@ msgid ""
 "The game starts with a grid of objects depending on the size of board you "
 "select. You can clear the board as follows:"
 msgstr ""
-"Das Spiel beginnt mit einem Raster aus Objekten, das von der gewählten"
-" Spielfeldgröße abhängt. Sie können das Spielfeld folgendermaßen leeren:"
+"Das Spiel beginnt mit einem Raster aus Objekten, das von der gewählten "
+"Spielfeldgröße abhängt. Sie können das Spielfeld folgendermaßen leeren:"
 
 #. (itstool) path: item/p
 #: C/playing-game.page:27
@@ -139,9 +135,9 @@ msgid ""
 "You can remove groups of adjacent objects of the same type by clicking any "
 "tile of the group or by pressing the <key>space bar</key>."
 msgstr ""
-"Sie können Gruppen einander berührender Objekte des gleichen Typs entfernen,"
-" indem Sie auf irgendeines der Objekte der Gruppe klicken oder die <key"
-">Leertaste</key> drücken."
+"Sie können Gruppen einander berührender Objekte des gleichen Typs entfernen, "
+"indem Sie auf irgendeines der Objekte der Gruppe klicken oder die "
+"<key>Leertaste</key> drücken."
 
 #. (itstool) path: item/p
 #: C/playing-game.page:29
@@ -150,10 +146,10 @@ msgid ""
 "space. If an entire column is cleared then the objects slide leftward to "
 "fill the gap."
 msgstr ""
-"Sobald eine Gruppe entfernt wurde, fallen die darüber befindlichen Objekte"
-" herunter, um den entstandenen Leerraum zu füllen. Wird eine komplette Spalte"
-" entfernt, werden die verbliebenen Objekte nach links verschoben, um die"
-" Lücke zu füllen."
+"Sobald eine Gruppe entfernt wurde, fallen die darüber befindlichen Objekte "
+"herunter, um den entstandenen Leerraum zu füllen. Wird eine komplette Spalte "
+"entfernt, werden die verbliebenen Objekte nach links verschoben, um die "
+"Lücke zu füllen."
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -161,9 +157,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/playing-game.page:33
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/start-up.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 msgctxt "_"
 msgid ""
 "external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
@@ -187,7 +180,6 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: C/preferences.page:26
-#| msgid "Changing the Size"
 msgid "Change the board size"
 msgstr "Ändern der Spielfeldgröße"
 
@@ -212,7 +204,6 @@ msgstr "Die vorgegebene Spielfeldgröße ist <gui>Klein (6 x 5)</gui>."
 
 #. (itstool) path: section/title
 #: C/preferences.page:36
-#| msgid "Changing the Number of Objects"
 msgid "Change the number of colors"
 msgstr "Ändern der Anzahl der Farben"
 
@@ -227,18 +218,16 @@ msgid ""
 "The default number of colors is 3. You can change it from <gui>Number of "
 "colors</gui> under <gui>Setup</gui>."
 msgstr ""
-"Die vorgegebene Anzahl der Farben ist 3. Sie können sie in <gui>Anzahl der"
-" Farben</gui> in der <gui>Einrichtung</gui> ändern."
+"Die vorgegebene Anzahl der Farben ist 3. Sie können sie in <gui>Anzahl der "
+"Farben</gui> in der <gui>Einrichtung</gui> ändern."
 
 #. (itstool) path: section/title
 #: C/preferences.page:47
-#| msgid "Changing the Look"
 msgid "Change the look"
 msgstr "Das Aussehen anpassen"
 
 #. (itstool) path: section/p
 #: C/preferences.page:48
-#| msgid "Changing the Number of Objects"
 msgid "To change the appearance of the objects:"
 msgstr "So ändern Sie das Aussehen der Objekte:"
 
@@ -258,20 +247,18 @@ msgstr "Das vorgegebene Thema ist <gui>Formen und Farben</gui>."
 
 #. (itstool) path: section/title
 #: C/preferences.page:57
-#| msgid "Changing the Speed"
 msgid "Change the speed"
 msgstr "Die Geschwindigkeit anpassen"
 
 #. (itstool) path: section/p
 #: C/preferences.page:58
 msgid ""
-"The default animation is designed to be fast. If it is too fast for you and "
-"you would like playing slower then this may be too fast for you. In this "
-"case you can slow down the game animation."
+"The default animation is designed to be fast. If it is too fast for you, "
+"then you might like playing slower. In this case, you can slow down the game "
+"animation."
 msgstr ""
-"Die Standardanimation ist auf Geschwindigkeit ausgelegt. Wenn sie Ihnen zu"
-" schnell ist und Sie etwas langsamer spielen wollen, dann könnte Ihnen das zu"
-" schnell sein. In diesem Fall können Sie die Spielanimation verlangsamen."
+"Die Standardanimation ist auf Geschwindigkeit ausgelegt. Sollte Ihnen die "
+"Animation zu schnell sein, können Sie die Spielanimation verlangsamen."
 
 #. (itstool) path: item/p
 #: C/preferences.page:64
@@ -279,9 +266,8 @@ msgid ""
 "To slow down the animations, uncheck the <gui style=\"checkbox\">Zealous "
 "Animation</gui> checkbox."
 msgstr ""
-"Um die Animationen zu verlangsamen, deaktivieren Sie das Ankreuzfeld <gui"
-" style=\"checkbox\">Schnelle "
-"Animation</gui>."
+"Um die Animationen zu verlangsamen, deaktivieren Sie das Ankreuzfeld <gui "
+"style=\"checkbox\">Schnelle Animation</gui>."
 
 #. (itstool) path: info/desc
 #: C/score.page:18
@@ -299,8 +285,8 @@ msgid ""
 "Your current score is visible in the game window titlebar. To view scores "
 "obtained in previous games:"
 msgstr ""
-"Ihr aktueller Punktestand wird in der Titelleiste des Spielfensters"
-" angezeigt. So zeigen Sie Ergebnisse früherer Spiele:"
+"Ihr aktueller Punktestand wird in der Titelleiste des Spielfensters "
+"angezeigt. So zeigen Sie Ergebnisse früherer Spiele:"
 
 #. (itstool) path: item/p
 #: C/score.page:27
@@ -318,10 +304,10 @@ msgid ""
 "To view the scores for other board sizes, select the board size from the "
 "menu at the top of the dialog for the board you wish to see the scores for."
 msgstr ""
-"Der Dialog zeigt standardmäßig die Ergebnisse für <gui>Klein, 3 Farben</gui>"
-" an. Um die Ergebnisse für andere Spielfeldgrößen anzuzeigen, wählen Sie die"
-" Größe aus dem Menü oben im Dialog aus, für die Sie die Ergebnisse sehen"
-" wollen."
+"Der Dialog zeigt standardmäßig die Ergebnisse für <gui>Klein, 3 Farben</gui> "
+"an. Um die Ergebnisse für andere Spielfeldgrößen anzuzeigen, wählen Sie die "
+"Größe aus dem Menü oben im Dialog aus, für die Sie die Ergebnisse sehen "
+"wollen."
 
 #. (itstool) path: section/title
 #: C/score.page:36
@@ -330,7 +316,6 @@ msgstr "Punktwertung"
 
 #. (itstool) path: section/p
 #: C/score.page:38
-#| msgid "Scoring is based on the number of objects you delete:"
 msgid "Scoring is done based on the objects you delete."
 msgstr ""
 "Die Zählung der Punkte basiert auf der Anzahl der Objekte, die Sie entfernen."
@@ -447,12 +432,10 @@ msgstr "Ein neues Spiel starten"
 
 #. (itstool) path: page/p
 #: C/start.page:23
-#| msgid ""
-#| "<application>Swell Foop</application> at the beginning of a new game."
 msgid "You can play <app>Swell Foop</app> all over again. To start a new game:"
 msgstr ""
-"Sie können <app>Swell Foop</app> immer wieder neu spielen. So starten Sie ein"
-" neues Spiel:"
+"Sie können <app>Swell Foop</app> immer wieder neu spielen. So starten Sie "
+"ein neues Spiel:"
 
 #. (itstool) path: item/p
 #: C/start.page:26
@@ -475,34 +458,26 @@ msgstr "Strategie"
 
 #. (itstool) path: page/p
 #: C/strategy.page:23
-#| msgid ""
-#| "The most important rule when aiming for a high score is to think ahead: "
-#| "each group you remove will form and destroy other groups."
 msgid ""
 "The most important rule when aiming for a high score is to think ahead. Each "
 "group you remove will form and destroy other groups. Some tips to play "
 "smartly are:"
 msgstr ""
 "Die bedeutendste Regel zum Erzielen einer hohen Punktzahl ist, dass Sie mit "
-"jeder Gruppe, die Sie entfernen, andere Gruppen erzeugen oder zerstören."
-" Einige Tipps für eine clevere Spielweise:"
+"jeder Gruppe, die Sie entfernen, andere Gruppen erzeugen oder zerstören. "
+"Einige Tipps für eine clevere Spielweise:"
 
 #. (itstool) path: item/p
 #: C/strategy.page:27
-#| msgid ""
-#| "Remove higher groups first, unless removing another group will make it "
-#| "larger. Vertically aligned objects can't be misaligned, but horizontal "
-#| "arrangements can."
 msgid ""
 "Try to remove higher groups first, unless removing another group will make "
 "it larger. Vertically aligned objects can't be misaligned, but horizontal "
 "arrangements can."
 msgstr ""
-"Versuchen Sie, die oberen Gruppen zuerst zu entfernen, es sei denn, dass"
-" diese durch das "
-"Entfernen anderer Gruppen vergrößert werden können. Vertikale Anordnungen "
-"können dadurch nicht verändert werden, horizontale Anordnungen allerdings "
-"schon."
+"Versuchen Sie, die oberen Gruppen zuerst zu entfernen, es sei denn, dass "
+"diese durch das Entfernen anderer Gruppen vergrößert werden können. "
+"Vertikale Anordnungen können dadurch nicht verändert werden, horizontale "
+"Anordnungen allerdings schon."
 
 #. (itstool) path: item/p
 #: C/strategy.page:30
@@ -515,14 +490,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/strategy.page:32
-#| msgid ""
-#| "Since the score increases quadratically, big groups of objects are always "
-#| "better. For example, the points difference between a six object group and "
-#| "a seven object group is nine points. In a situation where you have a "
-#| "choice between merging two groups of two into four or just adding one "
-#| "more to the group of six then you should add the single object. Even "
-#| "though the groups of two you are left with score no points, the bigger "
-#| "group scores more overall."
 msgid ""
 "If you have a choice between merging two groups of two into four or just "
 "adding one more to the group of six, then you should add the single object. "
@@ -537,11 +504,6 @@ msgstr ""
 
 #. (itstool) path: note/p
 #: C/strategy.page:39
-#| msgid ""
-#| "Don't forget the thousand point bonus for clearing all the balls. To get "
-#| "1000 points from a single group you need 34 objects. You are very "
-#| "unlikely to be in a position where you have to sacrifice a group that "
-#| "large to clear the board."
 msgid ""
 "Don't forget the thousand point bonus for clearing the board. To get 1000 "
 "points from a single group you need 34 objects. You are very unlikely to be "
