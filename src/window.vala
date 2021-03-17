@@ -22,9 +22,9 @@ using Gtk;
 [GtkTemplate (ui = "/org/gnome/SwellFoop/ui/swell-foop.ui")]
 private class SwellFoopWindow : ApplicationWindow
 {
-    [GtkChild] private HeaderBar    headerbar;
-    [GtkChild] private Box          main_box;
-    [GtkChild] private MenuButton   hamburger_button;
+    [GtkChild] private unowned HeaderBar    headerbar;
+    [GtkChild] private unowned Box          main_box;
+    [GtkChild] private unowned MenuButton   hamburger_button;
 
     private GLib.Settings settings;
 
