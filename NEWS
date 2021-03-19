@@ -1,3 +1,10 @@
+Swell Foop 40.0
+==================
+
+* Updated translations
+* Use unowned for GtkChild fields (Rico Tzschichholz)
+* Don't use multilib on arches where it doesn't exist (Sébastien Bacher)
+
 Swell Foop 40.rc
 ==================
 
