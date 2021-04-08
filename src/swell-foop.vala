@@ -19,11 +19,10 @@ public class SwellFoop : Gtk.Application
     private SwellFoopWindow window;
 
     /* Command-line options */
-    private static bool version = false;
     private const OptionEntry [] option_entries =
     {
         /* Translators: command-line option description, see 'swell-foop --help' */
-        { "version", 'v', OptionFlags.NONE, OptionArg.NONE, ref version, N_("Print release version and exit"), null },
+        { "version", 'v', OptionFlags.NONE, OptionArg.NONE, null, N_("Print release version and exit"), null },
 
         {}
     };
@@ -40,6 +39,8 @@ public class SwellFoop : Gtk.Application
     public SwellFoop ()
     {
         Object (application_id: "org.gnome.SwellFoop", flags: ApplicationFlags.FLAGS_NONE);
+        add_option_group (Clutter.get_option_group_without_init ());
+        add_main_option_entries (option_entries);
     }
 
     protected override void startup ()
@@ -58,7 +59,16 @@ public class SwellFoop : Gtk.Application
 
         /* Create the main window */
         window = new SwellFoopWindow (this);
-        add_window (window);
+    }
+
+    protected override int handle_local_options (GLib.VariantDict options)
+    {
+        if (options.contains ("version"))
+        {
+            stderr.printf ("%1$s %2$s\n", PROGRAM_NAME, Config.VERSION);
+            return Posix.EXIT_SUCCESS;
+        }
+        return -1;
     }
 
     protected override void shutdown ()
@@ -134,31 +144,6 @@ public class SwellFoop : Gtk.Application
         {
             warning ("Failed to initialise Clutter");
             return Posix.EXIT_FAILURE;
-        }
-
-        var context = new OptionContext (null);
-        context.set_translation_domain (Config.GETTEXT_PACKAGE);
-
-        context.add_group (Gtk.get_option_group (true));
-        context.add_group (Clutter.get_option_group_without_init ());
-
-        context.add_main_entries (option_entries, Config.GETTEXT_PACKAGE);
-
-        try
-        {
-            context.parse (ref args);
-        }
-        catch (Error e)
-        {
-            stderr.printf ("%s\n", e.message);
-            return Posix.EXIT_FAILURE;
-        }
-
-        if (version)
-        {
-            /* NOTE: Is not translated so can be easily parsed */
-            stderr.printf ("%1$s %2$s\n", "swell-foop", Config.VERSION);
-            return Posix.EXIT_SUCCESS;
         }
 
         Environment.set_application_name (PROGRAM_NAME);
