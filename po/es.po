@@ -5,22 +5,22 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2020.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-07-14 11:46+0000\n"
-"PO-Revision-Date: 2020-06-03 11:52+0200\n"
+"POT-Creation-Date: 2021-03-17 10:38+0000\n"
+"PO-Revision-Date: 2021-04-28 09:23+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: es <gnome-es-list@gnome.org>\n"
-"Language: es\n"
+"Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 40.0\n"
 "X-Project-Style: gnome\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
@@ -30,7 +30,7 @@ msgstr ""
 #: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:141
 #: data/ui/swell-foop.ui:147 src/swell-foop.vala:16
 msgid "Swell Foop"
-msgstr "Swell Foopm"
+msgstr "Swell Foop"
 
 #: data/org.gnome.SwellFoop.appdata.xml.in:8
 #: data/org.gnome.SwellFoop.desktop.in:4
@@ -333,12 +333,12 @@ msgid "Redo"
 msgstr "Rehacer"
 
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:415
+#: src/game-view.vala:439
 msgid "_Play Again"
 msgstr "_Jugar otra vez"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:607
+#: src/game-view.vala:631
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -346,7 +346,7 @@ msgstr[0] "%u punto"
 msgstr[1] "%u puntos"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:610
+#: src/game-view.vala:634
 msgid "Game Over!"
 msgstr "Juego terminado"
 
