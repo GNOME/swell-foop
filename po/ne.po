@@ -6,277 +6,457 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ne\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-01-30 19:02+0000\n"
-"PO-Revision-Date: 2008-02-01 12:10+0545\n"
-"Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2020-06-02 07:25+0000\n"
+"PO-Revision-Date: 2021-05-04 21:36+0545\n"
+"Last-Translator: Pawan Chitrakar <chautari@gmail.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
 "Language: ne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n !=1\n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n !=1;\n"
+"X-Generator: Poedit 2.4.2\n"
 
-#: data/org.gnome.swell-foop.gschema.xml:10
+#. Translators: title of the window displayed by window managers; name of the application
+#. Translators: title of the window displayed on the headerbar; name of the application
+#. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
+#: data/org.gnome.SwellFoop.appdata.xml.in:7 data/org.gnome.SwellFoop.desktop.in:3
+#: data/ui/swell-foop.ui:141 data/ui/swell-foop.ui:147 src/swell-foop.vala:16
+msgid "Swell Foop"
+msgstr "स्वेल फोप"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:8 data/org.gnome.SwellFoop.desktop.in:4
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "आकार र रङ्गिएको टायलको समूह हटाएर पर्दा खाली गर्नुहोस्"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of squares of the "
+"same color to make them all disappear in one fell swoop, causing other squares to "
+"fall into place. It is not possible to remove a single square at a time. You get far "
+"more points for clearing a larger group of squares, and also for clearing the entire "
+"board."
+msgstr ""
+"बोर्डबाट सकेसम्म धेरै वर्ग हटाउनुहोस् । एउटै रङको वर्गको समूहमा क्लिक गर्नुहोस् जसले गर्दा तिनीहरू सबै "
+"एउटा ढलेको झड्कामा अदृश्य हुन्छन्, जसले गर्दा अन्य वर्गहरू ठाउँमा खस्छन्। एक पटकमा एकल वर्ग हटाउन "
+"सम्भव छैन । तपाईँले वर्गको ठूलो समूह खाली गर्नका लागि र पूरै बोर्ड खाली गर्नका लागि धेरै बिन्दुहरू "
+"प्राप्त गर्नुहुन्छ ।"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer by "
+"changing the board size."
+msgstr ""
+"स्वेल फोप खेल्न सधैं धेरै छिटो हुन्छ, तर तपाईँले बोर्डको साइज परिवर्तन गरेर यसलाई केही लामो बनाउन "
+"सक्नुहुन्छ ।"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
+msgid "The GNOME Project"
+msgstr "जिनोम परियोजना"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
+msgid "game;logic;board;same;matching;"
+msgstr "खेल;तर्क;बोर्ड;उस्तै;मिल्दो;"
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:11
 msgid "The theme to use"
 msgstr "प्रयोग गरिने विषयवस्तु"
 
-#: data/org.gnome.swell-foop.gschema.xml:11
-#, fuzzy
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:13
 msgid "The title of the tile theme to use."
-msgstr "प्रयोग गरिने विषयवस्तुको फाइलनाम ।"
+msgstr "प्रयोग गरिने टायल विषयवस्तुको शीर्षक ।"
 
-#: data/org.gnome.swell-foop.gschema.xml:15
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:18
 msgid "Board size"
 msgstr "बोर्डको आकार"
 
-#: data/org.gnome.swell-foop.gschema.xml:16
-#, fuzzy
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:20
 msgid "The size of the game board."
-msgstr "खेलिरहेको ग्रिडको साइज"
+msgstr "खेल बोर्डको साइज ।"
 
-#: data/org.gnome.swell-foop.gschema.xml:20
-#, fuzzy
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:26
 msgid "Board color count"
-msgstr "पृष्ठभूमि रङ"
+msgstr "बोर्ड रङ गणना"
 
-#: data/org.gnome.swell-foop.gschema.xml:21
-#, fuzzy
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:28
 msgid "The number of colors of tiles to use in the game."
-msgstr "अनुकूल खेलमा खानीको सङ्ख्या"
+msgstr "खेलमा प्रयोग गर्नका लागि टायलको रङको सङ्ख्या ।"
 
-#: data/org.gnome.swell-foop.gschema.xml:25
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:33
 msgid "Is this the first run"
-msgstr ""
+msgstr "यो पहिलो चाल हो"
 
-#: data/org.gnome.swell-foop.gschema.xml:26
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:35
 msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr ""
+msgstr "पहिलो चालका सङ्केत संवाद देखाउने वा नदेखाउने निर्णय गर्ने सेटिङ ।."
 
-#: data/org.gnome.swell-foop.gschema.xml:30
-#, fuzzy
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.SwellFoop.gschema.xml:40
 msgid "Zealous animation"
-msgstr "छिटो एनिमेसन प्रयोग गर्नुहोस्"
+msgstr "जोसिलो एनिमेसन"
 
-#: data/org.gnome.swell-foop.gschema.xml:31
-#, fuzzy
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.SwellFoop.gschema.xml:42
 msgid "Use more flashy, but slower, animations."
-msgstr "छिटो एनिमेसन प्रयोग गर्नुहोस्"
+msgstr "धेरै चमकीला, तर ढिलो, एनिमेसन प्रयोग गर्नुहोस् ।"
 
-#: data/preferences.ui:31
-msgid "Preferences"
-msgstr "प्राथमिकता"
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
+#: data/org.gnome.SwellFoop.gschema.xml:47
+msgid "Saved game"
+msgstr "बचत गरिएको खेल"
 
-#: data/preferences.ui:68
-msgid "_Board size:"
-msgstr "बोर्डको आकार:"
-
-#: data/preferences.ui:84
-#, fuzzy
-msgid "_Number of colors:"
-msgstr "खेलाडीको सङ्ख्या:"
-
-#: data/preferences.ui:142
-msgid "Setup"
-msgstr "सेटअप"
-
-#: data/preferences.ui:180
-msgid "_Theme:"
-msgstr "विषयवस्तु:"
-
-#: data/preferences.ui:227
-msgid "Appearance"
-msgstr "मोहडा"
-
-#: data/preferences.ui:258
-#, fuzzy
-msgid "_Zealous Animation"
-msgstr "छिटो एनिमेसन"
-
-#: data/preferences.ui:283
-msgid "Operation"
-msgstr "कार्य"
-
-#: data/swell-foop.appdata.xml.in:7 data/swell-foop.desktop.in:3
-#: src/swell-foop.vala:126 src/swell-foop.vala:156 src/swell-foop.vala:455
-#: src/swell-foop.vala:537
-msgid "Swell Foop"
-msgstr ""
-
-#: data/swell-foop.appdata.xml.in:8 data/swell-foop.desktop.in:4
-#, fuzzy
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "रङ लगाइएका बलको समूह हटाएर पर्दा खाली गर्नुहोस्"
-
-#: data/swell-foop.appdata.xml.in:10
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
+#: data/org.gnome.SwellFoop.gschema.xml:49
 msgid ""
-"Remove as many squares as possible from the board. Click on a group of "
-"squares of the same color to make them all disappear in one fell swoop, "
-"causing other squares to fall into place. It is not possible to remove a "
-"single square at a time. You get far more points for clearing a larger group "
-"of squares, and also for clearing the entire board."
+"Has value “nothing” if there is no saved game. Else, contains a copy of the initial "
+"board, an index in the history, and the history of actions saved by an array of "
+"coords."
 msgstr ""
+"यदि त्यहाँ बचत गरिएको खेल छैन भने \"कुनै पनि होइन\" मान छ । अन्यथा, सुरुको बोर्डको प्रतिलिपि, "
+"इतिहासमा अनुक्रमणिका, र संयोजनहरूको एक एरेद्वारा बचत गरिएका कार्यहरूको इतिहास समावेश गर्दछ ।"
 
-#: data/swell-foop.appdata.xml.in:17
-msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer "
-"by changing the board size."
-msgstr ""
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:43
+msgid "Welcome to Swell Foop"
+msgstr "स्वेल फोप मा स्वागतम"
 
-#: data/swell-foop.appdata.xml.in:42
-msgid "The GNOME Project"
-msgstr ""
+#. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:64
+msgid "Let’s _Play"
+msgstr "लो खेलौ"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/swell-foop.desktop.in:6
-msgid "game;logic;board;same;matching;"
-msgstr ""
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "कुञ्जीपाटीले खेल्नुहोस्"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/swell-foop.desktop.in:8
-msgid "swell-foop"
-msgstr ""
+#. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
+#: data/ui/help-overlay.ui:36
+msgctxt "shortcut window"
+msgid "Move keyboard highlight"
+msgstr "कुञ्जीपाटी हाइलाइट सार्नुहोस्"
 
-#: src/game-view.vala:320
-#, fuzzy
-msgid "_Play Again"
-msgstr "खेल खेल्नुहोस्"
+#. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Destroy selected block"
+msgstr "चयन गरिएको खण्ड नष्ट गर्नुहोस्"
 
-#. Label showing the number of points at the end of the game
-#: src/game-view.vala:493
-#, fuzzy, c-format
-msgid "%u point"
-msgid_plural "%u points"
-msgstr[0] "%d अङ्क"
-msgstr[1] "%d अङ्क"
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo"
+#: data/ui/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "History"
+msgstr "इतिहास"
 
-#: src/game-view.vala:494
-msgid "Game Over!"
-msgstr "खेल समाप्त !"
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "पुर्वस्थितिमा फर्काउनुहोस्"
 
-#: src/score-dialog.vala:25
-msgid "High Scores"
-msgstr "उच्च प्राप्ताङ्क"
+#. Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "रिडु गर्नुहोस्"
 
-#: src/score-dialog.vala:28 src/swell-foop.vala:150
-#, fuzzy
-msgid "_Quit"
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game
+#: data/ui/help-overlay.ui:75
+msgctxt "shortcut window"
+msgid "Restart"
+msgstr "पुन: सुरु गर्नुहोस्"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
+#: data/ui/help-overlay.ui:85
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr "मुख्य प्रकार्यहरू"
+
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
+#: data/ui/help-overlay.ui:91
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "नयाँ खेल सुरु गर्नुहोस्"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:100
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "सामान्य"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:105
+msgctxt "shortcut window"
+msgid "Open menu"
+msgstr "मेनु खोल्नुहोस्"
+
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "किबोर्स सर्टकटहरू"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:121
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "मद्दत"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:129
+msgctxt "shortcut window"
+msgid "About"
+msgstr "बारेमा"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Quit"
 msgstr "अन्त्य गर्नुहोस्"
 
-#: src/score-dialog.vala:29
-msgid "New Game"
-msgstr "नयाँ खेल"
-
-#: src/score-dialog.vala:32
-msgid "_OK"
-msgstr "ठीक छ"
-
-#: src/score-dialog.vala:44
-msgid "Size:"
-msgstr "साइज:"
-
-#: src/score-dialog.vala:69
-msgid "Date"
-msgstr "मिति"
-
-#: src/score-dialog.vala:72
-msgid "Score"
-msgstr "प्राप्ताङ्क"
-
-#: src/score-dialog.vala:166
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/swell-foop.vala:79
-#, fuzzy
-msgid "Welcome to Swell Foop"
-msgstr "इयाग्नोमा स्वागत छ !"
-
-#: src/swell-foop.vala:82
-msgid ""
-"Clear as many blocks as you can.\n"
-"Fewer clicks means more points."
-msgstr ""
-
-#: src/swell-foop.vala:85
-msgid "Let’s _Play"
-msgstr ""
-
-#: src/swell-foop.vala:139 src/swell-foop.vala:499
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
+#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:303
 msgid "_New Game"
 msgstr "नयाँ खेल"
 
-#: src/swell-foop.vala:142
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
+#: data/ui/swell-foop.ui:30
+msgid "_Setup"
+msgstr "सेटअप"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:34
+msgid "_Small (6 × 5)"
+msgstr "सानो (६ × ५)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:40
+msgid "Nor_mal (15 × 10)"
+msgstr "सामान्य (१५ × १०)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
+#: data/ui/swell-foop.ui:46
+msgid "_Large (20 × 15)"
+msgstr "ठूलो (२० × १५)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
+#: data/ui/swell-foop.ui:54
+msgid "_Two colors"
+msgstr "दुई रङ"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
+#: data/ui/swell-foop.ui:60
+msgid "T_hree colors"
+msgstr "तिन रङ"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
+#: data/ui/swell-foop.ui:66
+msgid "_Four colors"
+msgstr "चार रङ"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:83
 msgid "High _Scores"
 msgstr "उच्च प्राप्ताङ्क"
 
-#: src/swell-foop.vala:145
-#, fuzzy
-msgid "_Preferences"
-msgstr "प्राथमिकता"
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/swell-foop.ui:88
+msgid "A_ppearance"
+msgstr "देखावट"
 
-#: src/swell-foop.vala:148
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
+#: data/ui/swell-foop.ui:92
+msgid "_Colors"
+msgstr "रङ"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
+#: data/ui/swell-foop.ui:98
+msgid "_Shapes and Colors"
+msgstr "आकार र रङ"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
+#: data/ui/swell-foop.ui:104
+msgid "_Boring Shapes"
+msgstr "बोरिङ आकार"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
+#: data/ui/swell-foop.ui:112
+msgid "_Zealous Animation"
+msgstr "जोसिलो एनिमेसन"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:121
+msgid "_Keyboard Shortcuts"
+msgstr "कुञ्जीपाटी सर्टकट"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:126
 msgid "_Help"
 msgstr "मद्दत"
 
-#: src/swell-foop.vala:149
-msgid "_About"
-msgstr "बारेमा"
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:131
+msgid "_About Swell Foop"
+msgstr "स्वेल फोपका बारेमा"
 
-#: src/swell-foop.vala:185
-msgid "Small"
-msgstr "सानो"
+#. Translators: tooltip text of the Undo button; probably a verb
+#: data/ui/swell-foop.ui:160
+msgid "Undo"
+msgstr "पुर्वस्थितिमा फर्काउनुहोस्"
 
-#: src/swell-foop.vala:186
-msgid "Normal"
-msgstr "सामान्य"
+#. Translators: tooltip text of the Undo button; probably a verb
+#: data/ui/swell-foop.ui:177
+msgid "Redo"
+msgstr "रिडु गर्नुहोस्"
 
-#: src/swell-foop.vala:187
-msgid "Large"
-msgstr "ठूलो"
+#. Translators: text of a button that appears on the board at the end of a game
+#: src/game-view.vala:415
+msgid "_Play Again"
+msgstr "फेरि खेल्नुहोस"
 
-#: src/swell-foop.vala:261
-#, fuzzy, c-format
-msgid "Score: %u"
-msgstr "प्राप्ताङ्क: %d"
+#. Label showing the number of points at the end of the game
+#: src/game-view.vala:607
+#, c-format
+msgid "%u point"
+msgid_plural "%u points"
+msgstr[0] "%u बिन्दु"
+msgstr[1] "%u बिन्दुहरू"
 
-#: src/swell-foop.vala:320
-msgid "Colors"
-msgstr "रङ"
+#. Translators: text of a label that appears on the board at the end of a game
+#: src/game-view.vala:610
+msgid "Game Over!"
+msgstr "खेल समाप्त !"
 
-#: src/swell-foop.vala:324
-#, fuzzy
-msgid "Shapes and Colors"
-msgstr "साथी रङ"
+#. Translators: command-line option description, see 'swell-foop --help'
+#: src/swell-foop.vala:26
+msgid "Print release version and exit"
+msgstr "मुद्रण संस्करण विवरण अनि बाहिरनुहोस्"
 
-#: src/swell-foop.vala:458
-#, fuzzy
+#. Translators: About dialog text, name of an author
+#. Translators: About dialog text, name of an artist
+#: src/swell-foop.vala:96 src/swell-foop.vala:104
+msgid "Tim Horton"
+msgstr "टिम होर्टन"
+
+#. Translators: About dialog text, name of an author
+#: src/swell-foop.vala:100
+msgid "Sophia Yu"
+msgstr "सोफिया यु"
+
+#. Translators: About dialog text, small description of the application
+#: src/swell-foop.vala:113
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
-"म त्यो खेल खेल्न चाहन्छु ! तपाईँलाई थाहा छ, ती सबै घुमिरहेका छन् र तपाईँ तिनीमा क्लिक "
-"गर्नुहोस् अनि तिनीहरु हराउछन्!\n"
-"\n"
-"उस्तै जिनोम जिनोम खेलको भाग हो ।"
+"म त्यो खेल खेल्न चाहन्छु!\n"
+"तपाईंलाई थाहै छ, तिनीहरू सबै प्रकाश-अप र तपाईं तिनीहरूमा क्लिक गर्नुहोस् र तिनीहरू हराउँछन्!"
 
-#: src/swell-foop.vala:459
+#. Translators: About dialog text, copyright line
+#: src/swell-foop.vala:117
 msgid "Copyright © 2009 Tim Horton"
-msgstr ""
+msgstr "प्रतिलिपि अधिकार © २००९ टिम होर्टन"
 
-#: src/swell-foop.vala:464
+#. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
+#: src/swell-foop.vala:121
 msgid "translator-credits"
 msgstr "अनुवादक श्रेय"
 
-#: src/swell-foop.vala:497
-msgid "Abandon this game to start a new one?"
-msgstr ""
+#. Translators: name of a possible size of the grid
+#: src/window.vala:52
+msgid "Small"
+msgstr "सानो"
 
-#: src/swell-foop.vala:498
+#. Translators: name of a possible size of the grid
+#: src/window.vala:55
+msgid "Normal"
+msgstr "सामान्य"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:58
+msgid "Large"
+msgstr "ठूलो"
+
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
+#: src/window.vala:146
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"तपाईँले सकेसम्म धेरै खण्ड खाली गर्नुहोस् ।\n"
+"थोरै क्लिकको अर्थ धेरै बिन्दु हो ।"
+
+#. Translators: subtitle of the headerbar; the %u is replaced by the score
+#: src/window.vala:174
+#, c-format
+msgid "Score: %u"
+msgstr "प्राप्ताङ्क: %u"
+
+#. Translators: text of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:297
+msgid "Abandon this game to start a new one?"
+msgstr "नयाँ खेल सुरु गर्न यो खेल परित्याग गर्नुहुन्छ?"
+
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
+#: src/window.vala:300
 msgid "_Cancel"
 msgstr "रद्द गर्नुहोस्"
+
+#: src/window.vala:389
+#, c-format
+msgid "%s, %d color"
+msgid_plural "%s, %d colors"
+msgstr[0] "%s, %d रङ"
+msgstr[1] "%s, %d रङहरू"
+
+#. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
+#: src/window.vala:400
+msgid "Type"
+msgstr "प्रकार"
+
+#~ msgid "Preferences"
+#~ msgstr "प्राथमिकता"
+
+#~ msgid "_Board size:"
+#~ msgstr "बोर्डको आकार:"
+
+#~ msgid "_Theme:"
+#~ msgstr "विषयवस्तु:"
+
+#~ msgid "Operation"
+#~ msgstr "कार्य"
+
+#~ msgid "High Scores"
+#~ msgstr "उच्च प्राप्ताङ्क"
+
+#~ msgid "New Game"
+#~ msgstr "नयाँ खेल"
+
+#~ msgid "_OK"
+#~ msgstr "ठीक छ"
+
+#~ msgid "Size:"
+#~ msgstr "साइज:"
+
+#~ msgid "Date"
+#~ msgstr "मिति"
+
+#~ msgid "Score"
+#~ msgstr "प्राप्ताङ्क"
+
+#, fuzzy
+#~ msgid "_Preferences"
+#~ msgstr "प्राथमिकता"
