@@ -38,7 +38,18 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <releases>
-    <release version="40.1" date="30-08-2021" />
+    <release version="41.alpha" date="2021-07-10" type="development">
+    <description>
+        <p>Overview of changes in swell-foop 41.alpha</p>
+        <ul>
+          <li>Updated Translations</li>
+          <li>Updated icon !25 (Forever)</li>
+          <li>Fixed swell foop not starting from launcher #22 (Robert Roth)</li>
+          <li>Flatpak build updates (Robert Roth)</li>
+        </ul>
+      </description>
+    </release>
+    <release version="40.1" date="2021-04-30" type="stable" />
   </releases>
   <translation type="gettext">swell-foop</translation>
   <developer_name>The GNOME Project</developer_name>
