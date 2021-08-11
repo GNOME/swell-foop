@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2021-04-08 07:02+0000\n"
-"PO-Revision-Date: 2021-08-02 18:28+0200\n"
+"POT-Creation-Date: 2021-08-02 16:29+0000\n"
+"PO-Revision-Date: 2021-08-11 22:14+0200\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -133,6 +133,9 @@ msgid ""
 "initial board, an index in the history, and the history of actions saved by "
 "an array of coords."
 msgstr ""
+"Possedís la valor « nothing » se cap de jòc es pas enregistrat. Autrament "
+"conten una còpia del tablèu inicial, un indèx de l’istòria e l’istoric de "
+"las accions enregistradas en seria de coordenadas."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
@@ -154,7 +157,7 @@ msgstr "Jogar al clavièr"
 #: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Move keyboard highlight"
-msgstr ""
+msgstr "Desplaçar la pròva en susbrilhanças"
 
 #. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
 #: data/ui/help-overlay.ui:44
