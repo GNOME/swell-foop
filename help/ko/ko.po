@@ -1,0 +1,501 @@
+# Korean translation for swell-foop.
+# Copyright (C) 2021 swell-foop's COPYRIGHT HOLDER
+# This file is distributed under the same license as the swell-foop package.
+# Seong-ho Cho <shcho@gnome.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: swell-foop master\n"
+"POT-Creation-Date: 2021-08-11 20:15+0000\n"
+"PO-Revision-Date: 2021-09-12 17:58+0900\n"
+"Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. (itstool) path: p/link
+#: C/legal.xml:5
+msgid "Creative Commons Attribution-ShareAlike 4.0 International"
+msgstr "크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제"
+
+#. (itstool) path: license/p
+#: C/legal.xml:4
+msgid "This work is licensed under a <_:link-1/> license."
+msgstr "이 문서는 <_:link-1/> 라이선스를 따릅니다."
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "조성호 <shcho@gnome.org>, 2021"
+
+#. (itstool) path: credit/name
+#: C/index.page:13 C/introduction.page:11 C/playing-game.page:11
+#: C/preferences.page:10 C/score.page:11 C/start.page:10 C/strategy.page:10
+msgid "Roopa"
+msgstr "Roopa"
+
+#. (itstool) path: info/desc
+#: C/index.page:19
+msgid "Swell Foop help."
+msgstr "스웰푸프 설명서입니다."
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Swell Foop"
+msgstr "<_:media-1/> 스웰푸프"
+
+#. (itstool) path: page/p
+#: C/index.page:28
+msgid ""
+"Swell Foop is a puzzle game, previously known as Same GNOME. To learn more "
+"about the game, check the <link xref=\"introduction\">game introduction</"
+"link>."
+msgstr ""
+"스웰푸프는 새임 그놈으로 알려진 퍼즐 게임입니다. 게임에 대해 더 알아보려면 "
+"<link xref=\"introduction\">게임 소개</link> 부분을 확인합니다."
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Playing Swell Foop"
+msgstr "스웰푸프 플레이"
+
+#. (itstool) path: section/title
+#: C/index.page:36
+msgid "Advanced settings"
+msgstr "고급 설정"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Useful tips"
+msgstr "쓸만한 팁"
+
+#. (itstool) path: credit/years
+#: C/introduction.page:13 C/playing-game.page:13 C/preferences.page:12
+#: C/score.page:13 C/start.page:12 C/strategy.page:12
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/introduction.page:18
+msgid "Know about <app>Swell Foop</app>."
+msgstr "<app>스웰푸프</app>를 알아봅니다."
+
+#. (itstool) path: page/title
+#: C/introduction.page:22
+msgid "Introduction"
+msgstr "소개"
+
+#. (itstool) path: page/p
+#: C/introduction.page:24
+msgid ""
+"The goal of the game is to remove as many objects as possible in as few "
+"moves as possible. Adjacent objects of the same color form a group, and all "
+"objects from a group get removed together. The remaining objects then "
+"collapse to fill in the gaps and form new groups. You cannot remove objects "
+"that are not adjacent to another object of the same color."
+msgstr ""
+"게임의 목표는 가능한한 적은 움직임으로 더 많은 오브젝트를 제거해나가는 것입니"
+"다. 동일한 색상을 지닌 인접 오브젝트를 한데 묶어, 그룹의 모든 오브젝트를 함"
+"께 제거합니다. 남은 오브젝트는 빈공간을 메워 새 그룹을 만듭니다. 동일한 색상"
+"의 다른 오브젝트가 인접하지 않으면 오브젝트를 제거할 수 없습니다."
+
+#. (itstool) path: info/desc
+#: C/playing-game.page:18
+msgid "How to play?"
+msgstr "어떻게 플레이할까요?"
+
+#. (itstool) path: page/title
+#: C/playing-game.page:22
+msgid "Playing <app>Swell Foop</app>"
+msgstr "<app>스웰푸프</app> 플레이"
+
+#. (itstool) path: page/p
+#: C/playing-game.page:24
+msgid ""
+"The game starts with a grid of objects depending on the size of board you "
+"select. You can clear the board as follows:"
+msgstr ""
+"선택한 게임판 크기에 따라 여러 오브젝트를 격자에 배치하여 시작합니다. 다음과 "
+"같은 규칙에 따라 게임판의 문제를 해결해나갈 수 있습니다:"
+
+#. (itstool) path: item/p
+#: C/playing-game.page:27
+msgid ""
+"You can remove groups of adjacent objects of the same type by clicking any "
+"tile of the group or by pressing the <key>space bar</key>."
+msgstr ""
+"동일한 형태의 인접 오브젝트 그룹을 누르거나 <key>space bar</key> 키를 눌러 제"
+"거할 수 있습니다."
+
+#. (itstool) path: item/p
+#: C/playing-game.page:29
+msgid ""
+"Once a group has been removed the objects above them fall down to fill the "
+"space. If an entire column is cleared then the objects slide leftward to "
+"fill the gap."
+msgstr ""
+"그룹 하나를 제거하고 나면 다른 오브젝트가 떨어져 빈 공간을 메웁니다. 컬럼 전"
+"체를 클리어하면 왼편으로 오브젝트가 움직여 빈 공간을 메웁니다."
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/playing-game.page:33
+msgctxt "_"
+msgid ""
+"external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
+msgstr ""
+"external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
+
+#. (itstool) path: info/desc
+#: C/preferences.page:17
+msgid "Change game settings."
+msgstr "게임 설정을 바꿉니다."
+
+#. (itstool) path: page/title
+#: C/preferences.page:21
+msgid "Game settings"
+msgstr "게임 설정"
+
+#. (itstool) path: page/p
+#: C/preferences.page:23
+msgid "You can change the game look according to your preferences."
+msgstr "기본 설정 값에 따라 게임 모양새를 바꿀 수 있습니다."
+
+#. (itstool) path: section/title
+#: C/preferences.page:26
+msgid "Change the board size"
+msgstr "게임판 크기 바꾸기"
+
+#. (itstool) path: section/p
+#: C/preferences.page:27
+msgid "You can set the size of the board according to your preference:"
+msgstr "기본 설정 값에 따라 게임판 크기를 바꿔 설정할 수 있습니다:"
+
+#. (itstool) path: item/p
+#: C/preferences.page:29 C/preferences.page:39
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">Setup</gui></guiseq>."
+msgstr ""
+"<guiseq><gui style=\"menu\">스웰푸프</gui> <gui style=\"menuitem\">설정</"
+"gui></guiseq>을 선택합니다."
+
+#. (itstool) path: item/p
+#: C/preferences.page:31
+msgid "The default board size is <gui>Small (6 x 5)</gui>."
+msgstr "기본 게임판 크기는 <gui>작게 (6 x 5)</gui>입니다."
+
+#. (itstool) path: section/title
+#: C/preferences.page:36
+msgid "Change the number of colors"
+msgstr "색상 수 바꾸기"
+
+#. (itstool) path: section/p
+#: C/preferences.page:37
+msgid "You can increase the number of different objects in the game."
+msgstr "게임의 오브젝트 가지수를 늘려 설정할 수 있습니다."
+
+#. (itstool) path: item/p
+#: C/preferences.page:41
+msgid ""
+"The default number of colors is 3. You can change it from <gui>Number of "
+"colors</gui> under <gui>Setup</gui>."
+msgstr ""
+"색상 수 기본 값은 3입니다. <gui>설정</gui>의 <gui>색 개수</gui>에서 바꿀 수 "
+"있습니다."
+
+#. (itstool) path: section/title
+#: C/preferences.page:47
+msgid "Change the look"
+msgstr "모양새 바꾸기"
+
+#. (itstool) path: section/p
+#: C/preferences.page:48
+msgid "To change the appearance of the objects:"
+msgstr "오브젝트의 모양새를 바꾸려면:"
+
+#. (itstool) path: item/p
+#: C/preferences.page:50 C/preferences.page:62
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">Appearance</gui></guiseq>."
+msgstr ""
+"<guiseq><gui style=\"menu\">스웰푸프</gui> <gui style=\"menuitem\">모양</"
+"gui></guiseq>을 선택합니다."
+
+#. (itstool) path: item/p
+#: C/preferences.page:52
+msgid "The default theme is <gui>Shapes and Colors</gui>."
+msgstr "기본 테마는 <gui>모양과 색</gui> 입니다."
+
+#. (itstool) path: section/title
+#: C/preferences.page:57
+msgid "Change the speed"
+msgstr "속도 바꾸기"
+
+#. (itstool) path: section/p
+#: C/preferences.page:58
+msgid ""
+"The default animation is designed to be fast. If it is too fast for you, "
+"then you might like playing slower. In this case, you can slow down the game "
+"animation."
+msgstr ""
+"기본 움직임은 빠르게 설계했습니다. 너무 빠르다 느껴진다면, 좀 더 느리게 플레"
+"이하고 싶을지도 모릅니다. 이 경우 게임 움직임을 느리게 할 수 있습니다."
+
+#. (itstool) path: item/p
+#: C/preferences.page:64
+msgid ""
+"To slow down the animations, uncheck the <gui style=\"checkbox\">Zealous "
+"Animation</gui> checkbox."
+msgstr ""
+"움직임 속도를 늦추려면 <gui style=\"checkbox\">화려한 애니메이션</gui> 확인 "
+"상자 표시를 끕니다."
+
+#. (itstool) path: info/desc
+#: C/score.page:18
+msgid "Check out your scores."
+msgstr "점수를 확인합니다."
+
+#. (itstool) path: page/title
+#: C/score.page:22
+msgid "Scores"
+msgstr "점수"
+
+#. (itstool) path: page/p
+#: C/score.page:24
+msgid ""
+"Your current score is visible in the game window titlebar. To view scores "
+"obtained in previous games:"
+msgstr ""
+"현재 점수는 게임 창 제목 표시줄에 나타납니다. 앞서 진행한 게임에서 획득한 점"
+"수를 보려면:"
+
+#. (itstool) path: item/p
+#: C/score.page:27
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">High Scores</gui></guiseq>."
+msgstr ""
+"<guiseq><gui style=\"menu\">스웰푸프</gui> <gui style=\"menuitem\">최고 점수"
+"</gui></guiseq>를 선택합니다."
+
+#. (itstool) path: item/p
+#: C/score.page:29
+msgid ""
+"The dialog by default displays scores for <gui>Small, 3 colors </gui> game. "
+"To view the scores for other board sizes, select the board size from the "
+"menu at the top of the dialog for the board you wish to see the scores for."
+msgstr ""
+"기본적으로 나타나는 대화상자에는 <gui>작게, 3가지 색</gui> 게임 점수가 뜹니"
+"다. 다른 게임판 크기의 점수를 보려면 대화상자 상단의 메뉴에서 점수를 보고자 "
+"하는 게임판 크기를 선택합니다."
+
+#. (itstool) path: section/title
+#: C/score.page:36
+msgid "Scoring"
+msgstr "점수 계산"
+
+#. (itstool) path: section/p
+#: C/score.page:38
+msgid "Scoring is done based on the objects you delete."
+msgstr "삭제한 오브젝트에 따라 점수를 부여합니다."
+
+#. (itstool) path: td/p
+#: C/score.page:42
+msgid "Number of Objects"
+msgstr "오브젝트 수"
+
+#. (itstool) path: td/p
+#: C/score.page:43
+msgid "Points Scored"
+msgstr "부여 점수"
+
+#. (itstool) path: td/p
+#: C/score.page:46
+msgid "2"
+msgstr "2"
+
+#. (itstool) path: td/p
+#: C/score.page:47
+msgid "0"
+msgstr "0"
+
+#. (itstool) path: td/p
+#: C/score.page:50
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/score.page:51
+msgid "1"
+msgstr "1"
+
+#. (itstool) path: td/p
+#: C/score.page:54 C/score.page:55
+msgid "4"
+msgstr "4"
+
+#. (itstool) path: td/p
+#: C/score.page:58
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/score.page:59 C/score.page:74
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/score.page:62
+msgid "6"
+msgstr "6"
+
+#. (itstool) path: td/p
+#: C/score.page:63
+msgid "16"
+msgstr "16"
+
+#. (itstool) path: td/p
+#: C/score.page:66
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/score.page:67
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/score.page:70
+msgid "8"
+msgstr "8"
+
+#. (itstool) path: td/p
+#: C/score.page:71
+msgid "36"
+msgstr "36"
+
+#. (itstool) path: td/p
+#: C/score.page:75
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/score.page:78 C/score.page:79
+msgid "⋮"
+msgstr "⋮"
+
+#. (itstool) path: td/p
+#: C/score.page:82
+msgid "n"
+msgstr "n"
+
+#. (itstool) path: td/p
+#: C/score.page:83
+msgid "(n-2)^2"
+msgstr "(n-2)^2"
+
+#. (itstool) path: note/p
+#: C/score.page:87
+msgid "There is a 1000 point bonus on clearing the board."
+msgstr "게임판을 끝내면 1000점 보너스를 획득합니다."
+
+#. (itstool) path: info/desc
+#: C/start.page:17
+msgid "Play another game."
+msgstr "다른 게임을 플레이합니다."
+
+#. (itstool) path: page/title
+#: C/start.page:21
+msgid "Start a new game"
+msgstr "새 게임 시작"
+
+#. (itstool) path: page/p
+#: C/start.page:23
+msgid "You can play <app>Swell Foop</app> all over again. To start a new game:"
+msgstr ""
+"<app>스웰푸프</app>를 언제든 처음부터 시작할 수 있습니다. 새 게임을 시작하려"
+"면:"
+
+#. (itstool) path: item/p
+#: C/start.page:26
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">New Game</gui></guiseq>."
+msgstr ""
+"<guiseq><gui style=\"menu\">스웰푸프</gui> <gui style=\"menuitem\">새 게임</"
+"gui></guiseq>을 선택합니다."
+
+#. (itstool) path: info/desc
+#: C/strategy.page:17
+msgid "Crack the game using strategies."
+msgstr "전략을 활용하여 게임을 깨나갑니다."
+
+#. (itstool) path: page/title
+#: C/strategy.page:21
+msgid "Strategy"
+msgstr "전략"
+
+#. (itstool) path: page/p
+#: C/strategy.page:23
+msgid ""
+"The most important rule when aiming for a high score is to think ahead. Each "
+"group you remove will form and destroy other groups. Some tips to play "
+"smartly are:"
+msgstr ""
+"고득점을 목표로 할 경우 가장 중요한 규칙은 앞서 생각하는 것입니다. 제거해나가"
+"는 각 그룹은 모양새를 갖춘 다음에 다른 그룹을 무너뜨릴 수 있습니다. 영리하게 "
+"플레이할 수 있는 일부 팁에는:"
+
+#. (itstool) path: item/p
+#: C/strategy.page:27
+msgid ""
+"Try to remove higher groups first, unless removing another group will make "
+"it larger. Vertically aligned objects can't be misaligned, but horizontal "
+"arrangements can."
+msgstr ""
+"다른 그룹이 더 커지기전에 더 많은 수로 이루어진 그룹을 먼저 제거해봅니다. 수"
+"직으로 붙은 오브젝트는 흐트러질 수 없지만 수평으로 붙은 오브젝트는 흐트러질 "
+"수 있습니다."
+
+#. (itstool) path: item/p
+#: C/strategy.page:30
+msgid ""
+"Since the score increases quadratically, big groups of objects will score "
+"more."
+msgstr ""
+"점수는 배로 늘어나기에, 오브젝트의 큰 그룹일 수록 더 많은 점수를 획득할 수 있"
+"습니다."
+
+#. (itstool) path: item/p
+#: C/strategy.page:32
+msgid ""
+"If you have a choice between merging two groups of two into four or just "
+"adding one more to the group of six, then you should add the single object. "
+"Even though the groups of two you are left with score no points, the bigger "
+"group scores more overall."
+msgstr ""
+"네 그룹을 두 그룹으로 합치거나 여섯 그룹을 합치는 선택지가 있다면 단일 오브젝"
+"트를 추가해야 합니다. 두 그룹이 있을 경우 점수를 기록하지 못하지만, 더 규모"
+"가 큰 그룹은 더 많은 점수를 획득할 수 있습니다."
+
+#. (itstool) path: note/p
+#: C/strategy.page:39
+msgid ""
+"Don't forget the thousand point bonus for clearing the board. To get 1000 "
+"points from a single group you need 34 objects. You are very unlikely to be "
+"in a position where you have to sacrifice a group that large to clear the "
+"board."
+msgstr ""
+"게임판의 모든 오브젝트를 완전히 제거하면 보너스 1000점을 획득할 수 있음을 잊"
+"지 마십시오. 단일 그룹에 1000점을 획득하려면 오브젝트 34개가 필요합니다. 게임"
+"판의 더 큰 그룹을 처리하려는 목표를 두고 작은 그룹을 제거해야 하는 드문 경우"
+"도 있습니다."
