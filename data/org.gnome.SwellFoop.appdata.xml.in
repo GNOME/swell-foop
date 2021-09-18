@@ -38,16 +38,9 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <releases>
-    <release version="41.0" date="2021-09-18" type="stable">
-      <description>
-        <p>Overview of changes in swell-foop 41.0</p>
-        <ul>
-          <li>Updated Translations</li>
-        </ul>
-      </description>
-    </release>
+    <release version="40.1" date="2021-04-30" type="stable" />
     <release version="41.alpha" date="2021-07-10" type="development">
-    <description>
+      <description>
         <p>Overview of changes in swell-foop 41.alpha</p>
         <ul>
           <li>Updated Translations</li>
@@ -57,7 +50,15 @@
         </ul>
       </description>
     </release>
-    <release version="40.1" date="2021-04-30" type="stable" />
+    <release version="41.0" date="2021-09-18" type="stable">
+      <description>
+        <p>Overview of changes in swell-foop 41.0</p>
+        <ul>
+          <li>Updated Translations</li>
+        </ul>
+      </description>
+    </release>
+    
   </releases>
   <translation type="gettext">swell-foop</translation>
   <developer_name>The GNOME Project</developer_name>
