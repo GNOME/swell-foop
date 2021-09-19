@@ -46,7 +46,7 @@
         </ul>
       </description>
     </release>
-    <release version="41.alpha" date="2021-07-10" type="development">
+    <release version="41~alpha" date="2021-07-10" type="development">
     <description>
         <p>Overview of changes in swell-foop 41.alpha</p>
         <ul>
