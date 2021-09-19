@@ -38,6 +38,14 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <releases>
+    <release version="41.0.1" date="2021-09-18" type="stable">
+      <description>
+        <p>Overview of changes in swell-foop 41.0.1</p>
+        <ul>
+          <li>Fixed versioning in appdata #25 (Robert Roth)</li>
+        </ul>
+      </description>
+    </release>
     <release version="41.0" date="2021-09-18" type="stable">
       <description>
         <p>Overview of changes in swell-foop 41.0</p>
