@@ -6,15 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
-"POT-Creation-Date: 2020-09-29 20:06+0000\n"
-"PO-Revision-Date: 2020-10-31 00:00+0200\n"
-"Last-Translator: scootergrisen\n"
+"POT-Creation-Date: 2021-03-17 10:38+0000\n"
+"PO-Revision-Date: 2022-01-25 19:47+0100\n"
+"Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
 
 #. (itstool) path: p/link
 #: C/legal.xml:5
@@ -102,8 +103,8 @@ msgstr ""
 "flytninger. Objekter med samme farve, som er ved siden af hinanden, udgør en "
 "gruppe, og alle objekter fra en gruppe fjernes samlet. De tilbageværende "
 "objekter falder så ned for at udfylde tomrummene, og nye grupper formes. Du "
-"kan ikke fjerne objekter, som ikke er ved siden af andre objekter med "
-"samme farve."
+"kan ikke fjerne objekter, som ikke er ved siden af andre objekter med samme "
+"farve."
 
 #. (itstool) path: info/desc
 #: C/playing-game.page:18
@@ -153,7 +154,7 @@ msgstr ""
 msgctxt "_"
 msgid ""
 "external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
-msgstr ""
+msgstr "[Anvendes ikke]"
 
 #. (itstool) path: info/desc
 #: C/preferences.page:17
@@ -245,13 +246,13 @@ msgstr "Ændr hastigheden"
 #. (itstool) path: section/p
 #: C/preferences.page:58
 msgid ""
-"The default animation is designed to be fast. If it is too fast for you and "
-"you would like playing slower then this may be too fast for you. In this "
-"case you can slow down the game animation."
+"The default animation is designed to be fast. If it is too fast for you, "
+"then you might like playing slower. In this case, you can slow down the game "
+"animation."
 msgstr ""
-"Standardanimationen er designet til at være hurtig. Det kan være, det er for "
-"hurtigt for dig, hvis du gerne vil spille langsommere. Hvis det er tilfældet, "
-"kan du gøre spillets animationer langsommere."
+"Standardanimationen er designet til at være hurtig. Er det for hurtigt for "
+"dig, vil du måske gerne spille langsommere. Er det tilfældet, kan du gøre "
+"spillets animationer langsommere."
 
 #. (itstool) path: item/p
 #: C/preferences.page:64
@@ -454,9 +455,9 @@ msgid ""
 "group you remove will form and destroy other groups. Some tips to play "
 "smartly are:"
 msgstr ""
-"Den vigtigste regel, når du går efter det bedste resultat, er at tænke fremad. "
-"Hver gruppe, du fjerner, former og ødelægger andre grupper. Her er nogle tips "
-"til at spille på den smarte måde:"
+"Den vigtigste regel, når du går efter det bedste resultat, er at tænke "
+"fremad. Hver gruppe, du fjerner, former og ødelægger andre grupper. Her er "
+"nogle tips til at spille på den smarte måde:"
 
 #. (itstool) path: item/p
 #: C/strategy.page:27
@@ -486,9 +487,9 @@ msgid ""
 "group scores more overall."
 msgstr ""
 "Hvis du skal vælge mellem at sammenlægge to grupper med 2, så de bliver 4, "
-"eller blot tilføje én mere til gruppen med 6, så tilføj det enkeltstående objekt. "
-"Selvom du ikke scorer nogen point på grupperne med 2, så scorer den større "
-"gruppe samlet set mere."
+"eller blot tilføje én mere til gruppen med 6, så tilføj det enkeltstående "
+"objekt. Selvom du ikke scorer nogen point på grupperne med 2, så scorer den "
+"større gruppe samlet set mere."
 
 #. (itstool) path: note/p
 #: C/strategy.page:39
