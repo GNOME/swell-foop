@@ -3,264 +3,711 @@ msgid ""
 msgstr ""
 "Project-Id-Version: same-gnome trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-08 09:31+0000\n"
-"PO-Revision-Date: 2007-03-08 21:12+0300\n"
-"Last-Translator: Sergey V. Mironov <sergo@bk.ru>\n"
+"POT-Creation-Date: 2022-01-10 17:46+0000\n"
+"PO-Revision-Date: 2022-02-26 22:55+1000\n"
+"Last-Translator: Ser82-png <sw@atrus.ru>\n"
 "Language-Team: Russian\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/swell-foop.xml:117(None) 
-msgid "@@image: 'figures/start-up.png'; md5=e1ae130ce601d40e62b9ea8794ccdf87"
+#. (itstool) path: p/link
+#: C/legal.xml:5
+msgid "Creative Commons Attribution-ShareAlike 4.0 International"
+msgstr "Creative Commons Attribution-ShareAlike 4.0 International"
+
+#. (itstool) path: license/p
+#: C/legal.xml:4
+msgid "This work is licensed under a <_:link-1/> license."
+msgstr "Эта работа находится под лицензией <_:link-1/>."
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
 msgstr ""
+"Сергей В. Миронов <sergo@bk.ru>, 2007\n"
+"Ser82-png <sw@atrus.ru>, 2022"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/swell-foop.xml:130(None) 
-msgid "@@image: 'figures/play.png'; md5=75c75a57ddf8d1a120a56566601022f5"
+#. (itstool) path: credit/name
+#: C/index.page:13 C/introduction.page:11 C/playing-game.page:11
+#: C/preferences.page:10 C/score.page:11 C/start.page:10 C/strategy.page:10
+msgid "Roopa"
+msgstr "Roopa"
+
+#. (itstool) path: info/desc
+#: C/index.page:19
+msgid "Swell Foop help."
+msgstr "Справка по Swell Foop."
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Swell Foop"
+msgstr "<_:media-1/> Swell Foop"
+
+#. (itstool) path: page/p
+#: C/index.page:28
+msgid ""
+"Swell Foop is a puzzle game, previously known as Same GNOME. To learn more "
+"about the game, check the <link xref=\"introduction\">game introduction</"
+"link>."
 msgstr ""
+"Swell Foop — игра-головоломка, ранее известная как Same GNOME. Чтобы узнать "
+"больше об игре, ознакомьтесь с <link xref=\"introduction\">введением в игру</"
+"link>."
 
-#: C/swell-foop.xml:23(title) 
-msgid "<application><application>Same GNOME</application></application> Manual"
-msgstr "Руководство <application><application>Тот же GNOME</application></application>"
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Playing Swell Foop"
+msgstr "Игровой процесс в Swell Foop"
 
-#: C/swell-foop.xml:26(para) 
-msgid "Same GNOME is a puzzle game. The goal is to remove as many objects as possible in as few moves as possible."
-msgstr "Тот же GNOME - это игра-головоломка. Целью является убрать как можно больше объектов с наименьшим количеством передвижений."
+#. (itstool) path: section/title
+#: C/index.page:36
+msgid "Advanced settings"
+msgstr "Расширенные настройки"
 
-#: C/swell-foop.xml:32(year) 
-msgid "2005"
-msgstr "2005"
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Useful tips"
+msgstr "Полезные советы"
 
-#: C/swell-foop.xml:33(holder) 
-msgid "Callum McKenzie"
-msgstr "Callum McKenzie"
+#. (itstool) path: credit/years
+#: C/introduction.page:13 C/playing-game.page:13 C/preferences.page:12
+#: C/score.page:13 C/start.page:12 C/strategy.page:12
+msgid "2020"
+msgstr "2020"
 
-#: C/swell-foop.xml:46(publishername) C/swell-foop.xml:59(orgname) C/swell-foop.xml:86(para) 
-msgid "GNOME Documentation Project"
-msgstr "Проект документирования GNOME"
+#. (itstool) path: info/desc
+#: C/introduction.page:18
+msgid "Know about <app>Swell Foop</app>."
+msgstr "Узнайте о <app>Swell Foop</app>."
 
-#: C/swell-foop.xml:56(firstname) 
-msgid "Callum"
-msgstr "Callum"
+#. (itstool) path: page/title
+#: C/introduction.page:22
+msgid "Introduction"
+msgstr "Введение"
 
-#: C/swell-foop.xml:57(surname) 
-msgid "McKenzie"
-msgstr "McKenzie"
+#. (itstool) path: page/p
+#: C/introduction.page:24
+msgid ""
+"The goal of the game is to remove as many objects as possible in as few "
+"moves as possible. Adjacent objects of the same color form a group, and all "
+"objects from a group get removed together. The remaining objects then "
+"collapse to fill in the gaps and form new groups. You cannot remove objects "
+"that are not adjacent to another object of the same color."
+msgstr ""
+"Цель игры состоит в том, чтобы убрать как можно больше объектов за "
+"наименьшее количество ходов. Соседние объекты одного цвета образуют группу, "
+"и все объекты из группы удаляются вместе. Затем оставшиеся объекты "
+"схлопываются, заполняя пробелы и образуя новые группы. Вы не можете удалить "
+"объекты, которые не находятся рядом с другим объектом того же цвета."
 
-#: C/swell-foop.xml:60(email) 
-msgid "callum@physics.otago.ac.nz"
-msgstr "callum@physics.otago.ac.nz"
+#. (itstool) path: info/desc
+#: C/playing-game.page:18
+msgid "How to play?"
+msgstr "Как играть?"
 
-#: C/swell-foop.xml:81(revnumber) 
-msgid "Same GNOME Manual V2.10"
-msgstr "Руководство Тот же GNOME. Вер. 2.10"
+#. (itstool) path: page/title
+#: C/playing-game.page:22
+msgid "Playing <app>Swell Foop</app>"
+msgstr "Игровой процесс в <app>Swell Foop</app>"
 
-#: C/swell-foop.xml:82(date) 
-msgid "February 2005"
-msgstr "Февраль 2005"
+#. (itstool) path: page/p
+#: C/playing-game.page:24
+msgid ""
+"The game starts with a grid of objects depending on the size of board you "
+"select. You can clear the board as follows:"
+msgstr ""
+"Игра начинается с сетки объектов в зависимости от размера выбранной вами "
+"доски. Вы можете очистить доску следующим образом:"
 
-#: C/swell-foop.xml:84(para) 
-msgid "Initial version for the new Same GNOME."
-msgstr "Начальная версия для новой игры Тот же GNOME."
+#. (itstool) path: item/p
+#: C/playing-game.page:27
+msgid ""
+"You can remove groups of adjacent objects of the same type by clicking any "
+"tile of the group or by pressing the <key>space bar</key>."
+msgstr ""
+"Вы можете удалить группы смежных объектов одного типа, щёлкнув любой "
+"фрагмент группы или нажав клавишу <key>Пробел</key>."
 
-#: C/swell-foop.xml:85(para) 
-msgid "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
-msgstr "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
+#. (itstool) path: item/p
+#: C/playing-game.page:29
+msgid ""
+"Once a group has been removed the objects above them fall down to fill the "
+"space. If an entire column is cleared then the objects slide leftward to "
+"fill the gap."
+msgstr ""
+"После удаления группы, объекты, расположенные над ней, падают, заполняя "
+"пространство. Если весь столбец очищен, объекты сдвигаются влево, чтобы "
+"заполнить пробел."
 
-#: C/swell-foop.xml:91(releaseinfo) 
-msgid "This manual describes version 2.12 of Same GNOME."
-msgstr "Это руководство описывает Тот же GNOME версии 2.12"
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/playing-game.page:33
+msgctxt "_"
+msgid ""
+"external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
+msgstr ""
+"external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
 
-#: C/swell-foop.xml:94(title) 
-msgid "Feedback"
-msgstr "Обратная связь"
+#. (itstool) path: info/desc
+#: C/preferences.page:17
+msgid "Change game settings."
+msgstr "Изменение параметров игры."
 
-#: C/swell-foop.xml:95(para) 
-msgid "To report a bug or make a suggestion regarding the <application>Same GNOME</application> game or this manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
-msgstr "Чтобы сообщить об ошибке или внести предложение относительно игры <application>Тот же GNOME</application> или данного руководства, следуйте ссылке <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Обратная связь с GNOME</ulink>."
+#. (itstool) path: page/title
+#: C/preferences.page:21
+msgid "Game settings"
+msgstr "Параметры игры"
 
-#: C/swell-foop.xml:103(primary) 
-msgid "Same GNOME"
-msgstr "Тот же GNOME"
+#. (itstool) path: page/p
+#: C/preferences.page:23
+msgid "You can change the game look according to your preferences."
+msgstr ""
+"Вы можете изменить внешний вид игры в соответствии с вашими предпочтениями."
 
-#: C/swell-foop.xml:109(title) 
-msgid "Playing <application>Same GNOME</application>"
-msgstr "Правила игры <application>Тот же GNOME</application>"
+#. (itstool) path: section/title
+#: C/preferences.page:26
+msgid "Change the board size"
+msgstr "Изменение размера доски"
 
-#: C/swell-foop.xml:110(para) 
-msgid "<application>Same GNOME</application> is a puzzle game. The goal is to remove as many objects as possible in as few moves as possible. Objects that are adjacent to each other get removed as a group. The remaining objects then collapse to fill in the gaps and new groups are formed. You cannot remove single objects."
-msgstr "<application>Тот же GNOME</application> - это головоломка. Целью является убрать как можно больше объектов с наименьшим количеством движений. Смежные объекты удаляются вместе как группа. Оставшиеся объекты соединяются вместе чтобы заполнить промежутки, формируя новые группы. Вы не можете удалять отдельные объекты."
+#. (itstool) path: section/p
+#: C/preferences.page:27
+msgid "You can set the size of the board according to your preference:"
+msgstr ""
+"Вы можете установить размер доски в соответствии с вашими предпочтениями:"
 
-#: C/swell-foop.xml:113(title) 
-msgid "<application>Same GNOME</application> at the beginning of a new game."
-msgstr "<application>Тот же GNOME</application> в начале новой игры."
+#. (itstool) path: item/p
+#: C/preferences.page:29 C/preferences.page:39
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">Setup</gui></guiseq>."
+msgstr ""
+"Выбрать <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">Настройка</gui></guiseq>."
 
-#: C/swell-foop.xml:123(para) 
-msgid "The board starts as a full grid of objects. Depending on the size of board you select, there are either three or four types of object. If a group of objects are adjacent and all the same type, then they can be removed simply by clicking them with the mouse (or by pressing the space bar). When you move the mouse over a group you can remove, the objects will start moving. The number of objects in the group, and the points you will score for removing that group, is shown in the lower left corner of the window. The more objects in the group, the more points you will score. Once the group has been removed the objects above them fall down to fill the space. If an entire column is cleared then the objects slide leftward to fill the gap."
-msgstr "Сетка игровой доски изначально полностью заполнена объектами. В зависимости от размера выбранной вами доски есть три или четыре типа объектов. Если группа составлена смежными объектами одинакового типа, то их можно удалить простым кликом по ним мышью (или нажатием пробела при наведении мыши). Когда вы передвигаете мышь над группой, которую можете удалить, объекты начнут удаляться. Число объектов в группе и число очков, которые вы сможете получить при удалении этой группы, показано в левом нижнем углу окна игры. Чем больше объектов в группе, тем больше очков смогут пополнить ваш счёт. При удалении группы расположенные выше объекты падают вниз, чтобы заполнить пространство. Если очищается целая колонка объекты смещаются влево для заполнения пробела."
+#. (itstool) path: item/p
+#: C/preferences.page:31
+msgid "The default board size is <gui>Small (6 x 5)</gui>."
+msgstr "Размер доски по умолчанию - <gui>Маленький (6 x 5)</gui>."
 
-#: C/swell-foop.xml:126(title) 
-msgid "Playing <application>Same GNOME</application>."
-msgstr "Правила игры <application>Тот же GNOME </application>."
+#. (itstool) path: section/title
+#: C/preferences.page:36
+msgid "Change the number of colors"
+msgstr "Изменение количества цветов"
 
-#: C/swell-foop.xml:136(para) 
-msgid "Scoring is based on the number of objects you delete:"
-msgstr "Счёт зависит от количества объектов, которые вы удаляете:"
+#. (itstool) path: section/p
+#: C/preferences.page:37
+msgid "You can increase the number of different objects in the game."
+msgstr "Вы можете увеличить количество различных объектов в игре."
 
-#: C/swell-foop.xml:141(entry) 
+#. (itstool) path: item/p
+#: C/preferences.page:41
+msgid ""
+"The default number of colors is 3. You can change it from <gui>Number of "
+"colors</gui> under <gui>Setup</gui>."
+msgstr ""
+"По умолчанию количество цветов - 3. Вы можете изменить это в <gui>Количество "
+"цветов</gui> в разделе <gui>Настройка</gui>."
+
+#. (itstool) path: section/title
+#: C/preferences.page:47
+msgid "Change the look"
+msgstr "Изменение внешнего вида"
+
+#. (itstool) path: section/p
+#: C/preferences.page:48
+msgid "To change the appearance of the objects:"
+msgstr "Чтобы изменить внешний вид объектов:"
+
+#. (itstool) path: item/p
+#: C/preferences.page:50 C/preferences.page:62
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">Appearance</gui></guiseq>."
+msgstr ""
+"Выбрать <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">Вид</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/preferences.page:52
+msgid "The default theme is <gui>Shapes and Colors</gui>."
+msgstr "Тема по умолчанию <gui>Фигуры и цвета</gui>."
+
+#. (itstool) path: section/title
+#: C/preferences.page:57
+msgid "Change the speed"
+msgstr "Изменение скорости"
+
+#. (itstool) path: section/p
+#: C/preferences.page:58
+msgid ""
+"The default animation is designed to be fast. If it is too fast for you, "
+"then you might like playing slower. In this case, you can slow down the game "
+"animation."
+msgstr ""
+"Анимация по умолчанию настроена, чтобы быть быстрой. Если это слишком быстро "
+"для вас, то можете играть медленнее. В этом случае вы можете замедлить "
+"игровую анимацию."
+
+#. (itstool) path: item/p
+#: C/preferences.page:64
+msgid ""
+"To slow down the animations, uncheck the <gui style=\"checkbox\">Zealous "
+"Animation</gui> checkbox."
+msgstr ""
+"Чтобы замедлить анимацию, снимите флажок <gui style=\"checkbox\">Быстрая "
+"анимация</gui>."
+
+#. (itstool) path: info/desc
+#: C/score.page:18
+msgid "Check out your scores."
+msgstr "Проверьте свои результаты."
+
+#. (itstool) path: page/title
+#: C/score.page:22
+msgid "Scores"
+msgstr "Результаты"
+
+#. (itstool) path: page/p
+#: C/score.page:24
+msgid ""
+"Your current score is visible in the game window titlebar. To view scores "
+"obtained in previous games:"
+msgstr ""
+"Текущий счёт отображается в заголовке окна игры. Чтобы просмотреть "
+"результаты, полученные в предыдущих играх:"
+
+#. (itstool) path: item/p
+#: C/score.page:27
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">High Scores</gui></guiseq>."
+msgstr ""
+"Выберите <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">Лучшие результаты</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/score.page:29
+msgid ""
+"The dialog by default displays scores for <gui>Small, 3 colors </gui> game. "
+"To view the scores for other board sizes, select the board size from the "
+"menu at the top of the dialog for the board you wish to see the scores for."
+msgstr ""
+"В диалоговом окне по умолчанию отображаются результаты игры <gui>Маленькая, "
+"3 цвета</gui>. Чтобы просмотреть результаты для других размеров досок, "
+"выберите размер доски в меню в верхней части диалогового окна, для которой "
+"вы хотите просмотреть результаты."
+
+#. (itstool) path: section/title
+#: C/score.page:36
+msgid "Scoring"
+msgstr "Подсчёт очков"
+
+#. (itstool) path: section/p
+#: C/score.page:38
+msgid "Scoring is done based on the objects you delete."
+msgstr ""
+"Начисление очков производится от количества объектов, которые вы удаляете."
+
+#. (itstool) path: td/p
+#: C/score.page:42
 msgid "Number of Objects"
 msgstr "Количество объектов"
 
-#: C/swell-foop.xml:142(entry) 
+#. (itstool) path: td/p
+#: C/score.page:43
 msgid "Points Scored"
 msgstr "Количество очков"
 
-#: C/swell-foop.xml:145(entry) C/swell-foop.xml:154(superscript) 
+#. (itstool) path: td/p
+#: C/score.page:46
 msgid "2"
 msgstr "2"
 
-#: C/swell-foop.xml:145(entry) 
+#. (itstool) path: td/p
+#: C/score.page:47
 msgid "0"
 msgstr "0"
 
-#: C/swell-foop.xml:146(entry) 
+#. (itstool) path: td/p
+#: C/score.page:50
 msgid "3"
 msgstr "3"
 
-#: C/swell-foop.xml:146(entry) 
+#. (itstool) path: td/p
+#: C/score.page:51
 msgid "1"
 msgstr "1"
 
-#: C/swell-foop.xml:147(entry) C/swell-foop.xml:147(entry) 
+#. (itstool) path: td/p
+#: C/score.page:54 C/score.page:55
 msgid "4"
 msgstr "4"
 
-#: C/swell-foop.xml:148(entry) 
+#. (itstool) path: td/p
+#: C/score.page:58
 msgid "5"
 msgstr "5"
 
-#: C/swell-foop.xml:148(entry) C/swell-foop.xml:152(entry) 
+#. (itstool) path: td/p
+#: C/score.page:59 C/score.page:74
 msgid "9"
 msgstr "9"
 
-#: C/swell-foop.xml:149(entry) 
+#. (itstool) path: td/p
+#: C/score.page:62
 msgid "6"
 msgstr "6"
 
-#: C/swell-foop.xml:149(entry) 
+#. (itstool) path: td/p
+#: C/score.page:63
 msgid "16"
 msgstr "16"
 
-#: C/swell-foop.xml:150(entry) 
+#. (itstool) path: td/p
+#: C/score.page:66
 msgid "7"
 msgstr "7"
 
-#: C/swell-foop.xml:150(entry) 
+#. (itstool) path: td/p
+#: C/score.page:67
 msgid "25"
 msgstr "25"
 
-#: C/swell-foop.xml:151(entry) 
+#. (itstool) path: td/p
+#: C/score.page:70
 msgid "8"
 msgstr "8"
 
-#: C/swell-foop.xml:151(entry) 
+#. (itstool) path: td/p
+#: C/score.page:71
 msgid "36"
 msgstr "36"
 
-#: C/swell-foop.xml:152(entry) 
+#. (itstool) path: td/p
+#: C/score.page:75
 msgid "49"
 msgstr "49"
 
-#: C/swell-foop.xml:154(entry) 
+#. (itstool) path: td/p
+#: C/score.page:78 C/score.page:79
+msgid "⋮"
+msgstr "⋮"
+
+#. (itstool) path: td/p
+#: C/score.page:82
 msgid "n"
 msgstr "n"
 
-#: C/swell-foop.xml:154(entry) 
-msgid "(n - 2)<placeholder-1/>"
-msgstr "(n - 2)<placeholder-1/>"
+#. (itstool) path: td/p
+#: C/score.page:83
+msgid "(n-2)^2"
+msgstr "(n-2)^2"
 
-#: C/swell-foop.xml:158(para) 
-msgid "If you clear the board there is a 1000 point bonus."
-msgstr "Если вы полностью очистите доску, то получаете бонус в 1000 очков."
+#. (itstool) path: note/p
+#: C/score.page:87
+msgid "There is a 1000 point bonus on clearing the board."
+msgstr "За очистку доски дается бонус в 1000 очков."
 
-#: C/swell-foop.xml:162(title) 
-msgid "Customization"
-msgstr "Настройка"
+#. (itstool) path: info/desc
+#: C/start.page:17
+msgid "Play another game."
+msgstr "Играть в другую игру."
 
-#: C/swell-foop.xml:165(title) 
-msgid "Changing the Look"
-msgstr "Изменение вида"
+#. (itstool) path: page/title
+#: C/start.page:21
+msgid "Start a new game"
+msgstr "Начать новую игру"
 
-#: C/swell-foop.xml:166(para) 
-msgid "Changing the size of the objects is as simple as resizing the window. To make the maximum use of the screen choose the <guimenuitem>Fullscreen</guimenuitem> option from the <guimenu>View</guimenu> menu."
-msgstr "Изменение размера объектов так же просто, как изменение размера окна. Чтобы полностью использовать экран, выберите опцию <guimenuitem>На весь экран</guimenuitem> из меню <guimenu>Вид</guimenu>."
+#. (itstool) path: page/p
+#: C/start.page:23
+msgid "You can play <app>Swell Foop</app> all over again. To start a new game:"
+msgstr ""
+"Вы можете снова начать играть в <app>Swell Foop</app>. Чтобы начать новую "
+"игру:"
 
-#: C/swell-foop.xml:168(para) 
-msgid "To change the appearance of the objects use the <guimenuitem>Theme</guimenuitem> item in the <guimenu>View</guimenu> menu. Selecting an item from the list changes the theme immediately."
-msgstr "Чтобы изменить облик объектов, используйте пункт <guimenuitem>Тема...</guimenuitem> в меню <guimenu>Вид</guimenu>. Выбор значения из списка изменяет тему немедленно."
+#. (itstool) path: item/p
+#: C/start.page:26
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">New Game</gui></guiseq>."
+msgstr ""
+"Выберите <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
+"\">Новая игра</gui></guiseq>."
 
-#: C/swell-foop.xml:170(para) 
-msgid "You can also create your own themes, although the process is not very straight-forward yet. Use a copy of an existing theme as a template and alter it with your favorite paint program. Put the result in <filename>$XDG_DATA_HOME/gnome-games/same-gnome/themes/2.10/</filename>. It will be automatically included on the themes list next time you run <application>Same GNOME</application>. <filename>$XDG_DATA_HOME</filename> is usually <filename>~/.local/share/</filename>."
-msgstr "Вы можете также создавать свои собственные темы, хотя этот процесс всё ещё не прост. Используйте копию существующей темы в качестве шаблона и измените её в вашем любимом графическом редакторе. Поместите результат в <filename>$XDG_DATA_HOME/gnome-games/same-gnome/themes/2.10/</filename>. Он автоматически будут включён в список тем, когда вы в слещующий раз запустите <application>Тот же GNOME</application>. <filename>$XDG_DATA_HOME</filename> обычно расположена в <filename>~/.local/share/</filename>."
+#. (itstool) path: info/desc
+#: C/strategy.page:17
+msgid "Crack the game using strategies."
+msgstr "Взломайте игру, используя стратегию."
 
-#: C/swell-foop.xml:174(title) 
-msgid "Changing the Size"
-msgstr "Изменение размера"
-
-#: C/swell-foop.xml:175(para) 
-msgid "The <guimenu>Size</guimenu> menu contains three settings: small, medium and large. Aside from increasing the number of objects, the large setting also increases the number of different objects."
-msgstr "Меню <guimenu>Размер</guimenu> содержит три установки: Маленький, Средний и Большой. Отдельно от увеличения количества объектов установка \"Большой\" увеличивает также и количество различающихся объектов."
-
-#: C/swell-foop.xml:179(title) 
-msgid "Changing the Speed"
-msgstr "Изменение скорости"
-
-#: C/swell-foop.xml:180(para) 
-msgid "The default animation is designed to be smooth and graceful. If you like playing fast and furious then this may be too slow for you. By selecting the <guimenuitem>Fast Animation</guimenuitem> option from the <guimenu>View</guimenu> menu you can speed up game-play at the expense of animation quality."
-msgstr "Анимация по умолчанию спроектирована быть гладкой и грациозной. Если вам нравится играть быстро и неистово, она может быть слишком медленной для вас. Выбирая опцию <guimenuitem>Быстрая анимация</guimenuitem> из меню <guimenu>Вид</guimenu> вы можете увеличить скорость игры за счет качества анимации."
-
-#: C/swell-foop.xml:186(title) 
+#. (itstool) path: page/title
+#: C/strategy.page:21
 msgid "Strategy"
 msgstr "Стратегия"
 
-#: C/swell-foop.xml:188(para) 
-msgid "The most important rule when aiming for a high score is to think ahead: each group you remove will form and destroy other groups."
-msgstr "Самое главное правило при цели получить максимальное количество очков: каждая группа, которую вы удаляете, формирует и разрушает другие группы."
+#. (itstool) path: page/p
+#: C/strategy.page:23
+msgid ""
+"The most important rule when aiming for a high score is to think ahead. Each "
+"group you remove will form and destroy other groups. Some tips to play "
+"smartly are:"
+msgstr ""
+"Самое важное правило при стремлении к высокому баллу — думать наперед. "
+"Каждая удалённая вами группа будет формировать и уничтожать другие группы. "
+"Вот несколько советов, как играть с умом:"
 
-#: C/swell-foop.xml:190(para) 
-msgid "Remove higher groups first, unless removing another group will make it larger. Vertically aligned objects can't be misaligned, but horizontal arrangements can."
-msgstr "Удаляйте сначала большие группы, если удаление других групп не сделает их ещё больше. Вертикально расположенные объекты не могут быть выровнены вместе, но горизонтально расположенные могут."
+#. (itstool) path: item/p
+#: C/strategy.page:27
+msgid ""
+"Try to remove higher groups first, unless removing another group will make "
+"it larger. Vertically aligned objects can't be misaligned, but horizontal "
+"arrangements can."
+msgstr ""
+"Попробуйте сначала удалить высоко расположенные группы, если только удаление "
+"другой группы не сделает её больше. Вертикально выровненные объекты не могут "
+"быть смещены, а горизонтально — могут."
 
-#: C/swell-foop.xml:192(para) 
-msgid "Since the score increases quadratically, big groups of objects are always better. For example, the points difference between a six object group and a seven object group is nine points. In a situation where you have a choice between merging two groups of two into four or just adding one more to the group of six then you should add the single object. Even though the groups of two you are left with score no points, the bigger group scores more overall."
-msgstr "Так как счёт возрастает кратно квадрату, большие группы объектов всегда предпочтительнее. К примеру, различие в количестве очков между группой из шести объектов и группой из семи объектов составляет девять очков. В ситуации, когда у вас есть выбор между созданием двух групп из двух и четырёх объектов и добавлением одного объекта в группу из шести объектов, вы должны предпочесть добавить один объект. Даже если вы предпочли оставить группу из двух объектов без очков, счёт от больших групп вырастет больше."
+#. (itstool) path: item/p
+#: C/strategy.page:30
+msgid ""
+"Since the score increases quadratically, big groups of objects will score "
+"more."
+msgstr ""
+"Поскольку оценка увеличивается квадратично, большие группы объектов будут "
+"набирать больше очков."
 
-#: C/swell-foop.xml:194(para) 
-msgid "Don't forget the thousand point bonus for clearing all the balls. To get 1000 points from a single group you need 34 objects. You are very unlikely to be in a position where you have to sacrifice a group that large to clear the board."
-msgstr "Не забывайте о бонусе в тысячу очков при полной очистке доски. Чтобы получить 1000 очков от единой группы, вам нужно 34 объекта. Очень непохоже, что вы будете в позиции, когда вам нужно будет пожертвовать большой группой, чтобы очистить доску."
+#. (itstool) path: item/p
+#: C/strategy.page:32
+msgid ""
+"If you have a choice between merging two groups of two into four or just "
+"adding one more to the group of six, then you should add the single object. "
+"Even though the groups of two you are left with score no points, the bigger "
+"group scores more overall."
+msgstr ""
+"Если у вас есть выбор между объединением двух групп по два в четыре или "
+"просто добавлением ещё одного объекта к группе из шести, вам следует выбрать "
+"последнее. Несмотря на то, что группы из двух объектов, с которыми вы "
+"остались, не набрали очков, большая группа в целом набрала больше очков."
 
-#: C/swell-foop.xml:199(title) 
-msgid "About <application>Same GNOME</application>"
-msgstr "Об игре <application>Тот же GNOME</application>"
+#. (itstool) path: note/p
+#: C/strategy.page:39
+msgid ""
+"Don't forget the thousand point bonus for clearing the board. To get 1000 "
+"points from a single group you need 34 objects. You are very unlikely to be "
+"in a position where you have to sacrifice a group that large to clear the "
+"board."
+msgstr ""
+"Не забывайте о бонусе в тысячу очков за очистку доски. Чтобы получить 1000 "
+"баллов от одной группы, вам нужно 34 предмета. Маловероятно, что вы "
+"окажетесь в ситуации, когда вам придется пожертвовать такой большой группой, "
+"чтобы очистить игровое поле."
 
-#: C/swell-foop.xml:200(para) 
-msgid "<application>Same GNOME</application> was written by Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). To find more information about <application>Same GNOME</application>, please visit the <ulink url=\"http://www.gnome.org/projects/gnome-games/\" type=\"http\">GNOME Games web page</ulink>."
-msgstr "Игра <application>Тот же GNOME</application> была написана Callum McKenzie (<email>callum@physics.otago.ac.nz</email>). Чтобы получить больше информации об игре <application>Тот же GNOME</application> посетите, пожалуйста, <ulink url=\"http://www.gnome.org/projects/gnome-games/\" type=\"http\">Веб-страницу игр GNOME</ulink>."
+#~ msgid ""
+#~ "<application><application>Same GNOME</application></application> Manual"
+#~ msgstr ""
+#~ "Руководство <application><application>Тот же GNOME</application></"
+#~ "application>"
 
-#: C/swell-foop.xml:204(para) 
-msgid "To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
-msgstr "Чтобы сообщить об ошибке или внести предложение относительно этого приложения или данного руководства следуйте ссылке <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Обратная связь с GNOME</ulink>."
+#~ msgid ""
+#~ "Same GNOME is a puzzle game. The goal is to remove as many objects as "
+#~ "possible in as few moves as possible."
+#~ msgstr ""
+#~ "Тот же GNOME - это игра-головоломка. Целью является убрать как можно "
+#~ "больше объектов с наименьшим количеством передвижений."
 
-#: C/swell-foop.xml:210(para) 
-msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url=\"help:gpl\" type=\"help\">link</ulink>, or in the file COPYING included with the source code of this program."
-msgstr "Эта программа распространяется при условии соблюдения GNU General Public license как распространяемой Фондом свободного программного обеспечения, версии 2 или (на ваш выбор) любой более поздней версии. Копию данной лицензии можно найти по этой <ulink url=\"help:gpl\" type=\"help\">ссылке</ulink> или в файле COPYING, включённом в исходные тексты этой программы."
+#~ msgid "2005"
+#~ msgstr "2005"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: C/swell-foop.xml:0(None) 
-msgid "translator-credits"
-msgstr "Сергей В. Миронов sergo@bk.ru, 2007"
+#~ msgid "Callum McKenzie"
+#~ msgstr "Callum McKenzie"
 
+#~ msgid "GNOME Documentation Project"
+#~ msgstr "Проект документирования GNOME"
+
+#~ msgid "Callum"
+#~ msgstr "Callum"
+
+#~ msgid "McKenzie"
+#~ msgstr "McKenzie"
+
+#~ msgid "callum@physics.otago.ac.nz"
+#~ msgstr "callum@physics.otago.ac.nz"
+
+#~ msgid "Same GNOME Manual V2.10"
+#~ msgstr "Руководство Тот же GNOME. Вер. 2.10"
+
+#~ msgid "February 2005"
+#~ msgstr "Февраль 2005"
+
+#~ msgid "Initial version for the new Same GNOME."
+#~ msgstr "Начальная версия для новой игры Тот же GNOME."
+
+#~ msgid "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
+#~ msgstr "Callum McKenzie <email>callum@physics.otago.ac.nz</email>"
+
+#~ msgid "This manual describes version 2.12 of Same GNOME."
+#~ msgstr "Это руководство описывает Тот же GNOME версии 2.12"
+
+#~ msgid "Feedback"
+#~ msgstr "Обратная связь"
+
+#~ msgid ""
+#~ "To report a bug or make a suggestion regarding the <application>Same "
+#~ "GNOME</application> game or this manual, follow the directions in the "
+#~ "<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME "
+#~ "Feedback Page</ulink>."
+#~ msgstr ""
+#~ "Чтобы сообщить об ошибке или внести предложение относительно игры "
+#~ "<application>Тот же GNOME</application> или данного руководства, следуйте "
+#~ "ссылке <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
+#~ "\">Обратная связь с GNOME</ulink>."
+
+#~ msgid "Same GNOME"
+#~ msgstr "Тот же GNOME"
+
+#~ msgid "Playing <application>Same GNOME</application>"
+#~ msgstr "Правила игры <application>Тот же GNOME</application>"
+
+#~ msgid ""
+#~ "<application>Same GNOME</application> at the beginning of a new game."
+#~ msgstr "<application>Тот же GNOME</application> в начале новой игры."
+
+#~ msgid ""
+#~ "The board starts as a full grid of objects. Depending on the size of "
+#~ "board you select, there are either three or four types of object. If a "
+#~ "group of objects are adjacent and all the same type, then they can be "
+#~ "removed simply by clicking them with the mouse (or by pressing the space "
+#~ "bar). When you move the mouse over a group you can remove, the objects "
+#~ "will start moving. The number of objects in the group, and the points you "
+#~ "will score for removing that group, is shown in the lower left corner of "
+#~ "the window. The more objects in the group, the more points you will "
+#~ "score. Once the group has been removed the objects above them fall down "
+#~ "to fill the space. If an entire column is cleared then the objects slide "
+#~ "leftward to fill the gap."
+#~ msgstr ""
+#~ "Сетка игровой доски изначально полностью заполнена объектами. В "
+#~ "зависимости от размера выбранной вами доски есть три или четыре типа "
+#~ "объектов. Если группа составлена смежными объектами одинакового типа, то "
+#~ "их можно удалить простым кликом по ним мышью (или нажатием пробела при "
+#~ "наведении мыши). Когда вы передвигаете мышь над группой, которую можете "
+#~ "удалить, объекты начнут удаляться. Число объектов в группе и число очков, "
+#~ "которые вы сможете получить при удалении этой группы, показано в левом "
+#~ "нижнем углу окна игры. Чем больше объектов в группе, тем больше очков "
+#~ "смогут пополнить ваш счёт. При удалении группы расположенные выше объекты "
+#~ "падают вниз, чтобы заполнить пространство. Если очищается целая колонка "
+#~ "объекты смещаются влево для заполнения пробела."
+
+#~ msgid "Playing <application>Same GNOME</application>."
+#~ msgstr "Правила игры <application>Тот же GNOME </application>."
+
+#~ msgid "(n - 2)<placeholder-1/>"
+#~ msgstr "(n - 2)<placeholder-1/>"
+
+#~ msgid "If you clear the board there is a 1000 point bonus."
+#~ msgstr "Если вы полностью очистите доску, то получаете бонус в 1000 очков."
+
+#~ msgid "Customization"
+#~ msgstr "Настройка"
+
+#~ msgid ""
+#~ "Changing the size of the objects is as simple as resizing the window. To "
+#~ "make the maximum use of the screen choose the <guimenuitem>Fullscreen</"
+#~ "guimenuitem> option from the <guimenu>View</guimenu> menu."
+#~ msgstr ""
+#~ "Изменение размера объектов так же просто, как изменение размера окна. "
+#~ "Чтобы полностью использовать экран, выберите опцию <guimenuitem>На весь "
+#~ "экран</guimenuitem> из меню <guimenu>Вид</guimenu>."
+
+#~ msgid ""
+#~ "To change the appearance of the objects use the <guimenuitem>Theme</"
+#~ "guimenuitem> item in the <guimenu>View</guimenu> menu. Selecting an item "
+#~ "from the list changes the theme immediately."
+#~ msgstr ""
+#~ "Чтобы изменить облик объектов, используйте пункт <guimenuitem>Тема...</"
+#~ "guimenuitem> в меню <guimenu>Вид</guimenu>. Выбор значения из списка "
+#~ "изменяет тему немедленно."
+
+#~ msgid ""
+#~ "You can also create your own themes, although the process is not very "
+#~ "straight-forward yet. Use a copy of an existing theme as a template and "
+#~ "alter it with your favorite paint program. Put the result in <filename>"
+#~ "$XDG_DATA_HOME/gnome-games/same-gnome/themes/2.10/</filename>. It will be "
+#~ "automatically included on the themes list next time you run "
+#~ "<application>Same GNOME</application>. <filename>$XDG_DATA_HOME</"
+#~ "filename> is usually <filename>~/.local/share/</filename>."
+#~ msgstr ""
+#~ "Вы можете также создавать свои собственные темы, хотя этот процесс всё "
+#~ "ещё не прост. Используйте копию существующей темы в качестве шаблона и "
+#~ "измените её в вашем любимом графическом редакторе. Поместите результат в "
+#~ "<filename>$XDG_DATA_HOME/gnome-games/same-gnome/themes/2.10/</filename>. "
+#~ "Он автоматически будут включён в список тем, когда вы в слещующий раз "
+#~ "запустите <application>Тот же GNOME</application>. <filename>"
+#~ "$XDG_DATA_HOME</filename> обычно расположена в <filename>~/.local/share/</"
+#~ "filename>."
+
+#~ msgid ""
+#~ "The <guimenu>Size</guimenu> menu contains three settings: small, medium "
+#~ "and large. Aside from increasing the number of objects, the large setting "
+#~ "also increases the number of different objects."
+#~ msgstr ""
+#~ "Меню <guimenu>Размер</guimenu> содержит три установки: Маленький, Средний "
+#~ "и Большой. Отдельно от увеличения количества объектов установка \"Большой"
+#~ "\" увеличивает также и количество различающихся объектов."
+
+#~ msgid ""
+#~ "The default animation is designed to be smooth and graceful. If you like "
+#~ "playing fast and furious then this may be too slow for you. By selecting "
+#~ "the <guimenuitem>Fast Animation</guimenuitem> option from the "
+#~ "<guimenu>View</guimenu> menu you can speed up game-play at the expense of "
+#~ "animation quality."
+#~ msgstr ""
+#~ "Анимация по умолчанию спроектирована быть гладкой и грациозной. Если вам "
+#~ "нравится играть быстро и неистово, она может быть слишком медленной для "
+#~ "вас. Выбирая опцию <guimenuitem>Быстрая анимация</guimenuitem> из меню "
+#~ "<guimenu>Вид</guimenu> вы можете увеличить скорость игры за счет качества "
+#~ "анимации."
+
+#~ msgid "About <application>Same GNOME</application>"
+#~ msgstr "Об игре <application>Тот же GNOME</application>"
+
+#~ msgid ""
+#~ "<application>Same GNOME</application> was written by Callum McKenzie "
+#~ "(<email>callum@physics.otago.ac.nz</email>). To find more information "
+#~ "about <application>Same GNOME</application>, please visit the <ulink url="
+#~ "\"http://www.gnome.org/projects/gnome-games/\" type=\"http\">GNOME Games "
+#~ "web page</ulink>."
+#~ msgstr ""
+#~ "Игра <application>Тот же GNOME</application> была написана Callum "
+#~ "McKenzie (<email>callum@physics.otago.ac.nz</email>). Чтобы получить "
+#~ "больше информации об игре <application>Тот же GNOME</application> "
+#~ "посетите, пожалуйста, <ulink url=\"http://www.gnome.org/projects/gnome-"
+#~ "games/\" type=\"http\">Веб-страницу игр GNOME</ulink>."
+
+#~ msgid ""
+#~ "To report a bug or make a suggestion regarding this application or this "
+#~ "manual, follow the directions in this <ulink url=\"ghelp:user-guide?"
+#~ "feedback-bugs\" type=\"help\">document</ulink>."
+#~ msgstr ""
+#~ "Чтобы сообщить об ошибке или внести предложение относительно этого "
+#~ "приложения или данного руководства следуйте ссылке <ulink url=\"ghelp:"
+#~ "user-guide?feedback-bugs\" type=\"help\">Обратная связь с GNOME</ulink>."
+
+#~ msgid ""
+#~ "This program is distributed under the terms of the GNU General Public "
+#~ "license as published by the Free Software Foundation; either version 2 of "
+#~ "the License, or (at your option) any later version. A copy of this "
+#~ "license can be found at this <ulink url=\"help:gpl\" type=\"help\">link</"
+#~ "ulink>, or in the file COPYING included with the source code of this "
+#~ "program."
+#~ msgstr ""
+#~ "Эта программа распространяется при условии соблюдения GNU General Public "
+#~ "license как распространяемой Фондом свободного программного обеспечения, "
+#~ "версии 2 или (на ваш выбор) любой более поздней версии. Копию данной "
+#~ "лицензии можно найти по этой <ulink url=\"help:gpl\" type=\"help"
+#~ "\">ссылке</ulink> или в файле COPYING, включённом в исходные тексты этой "
+#~ "программы."
