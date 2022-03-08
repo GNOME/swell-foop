@@ -1,0 +1,320 @@
+# Abkhazian translation for swell-foop.
+# Copyright (C) 2022 swell-foop's COPYRIGHT HOLDER
+# This file is distributed under the same license as the swell-foop package.
+# Нанба Наала <naala-nanba@rambler.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: swell-foop master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2020-05-15 09:13+0000\n"
+"PO-Revision-Date: 2020-05-15 09:13+0000\n"
+"Last-Translator: Нанба Наала <naala-nanba@rambler.ru>\n"
+"Language-Team: Abkhazian <ab@li.org>\n"
+"Language: ab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-DamnedLies-Scope: partial\n"
+
+#. Translators: title of the window displayed by window managers; name of the application
+#. Translators: title of the window displayed on the headerbar; name of the application
+#. Translators: About dialog text, name of the application
+#. Translators: name of the application, as displayed in the window manager
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
+#: data/ui/swell-foop.ui:141 src/swell-foop.vala:110 src/swell-foop.vala:166
+msgid "Swell Foop"
+msgstr "Swell Foop"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
+msgid "Clear the screen by removing groups of colored and shaped tiles"
+msgstr "Ишәрыцқьа аҭыԥ, иԥштәылоу акәымпылқәа аныхуа"
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
+msgid ""
+"Remove as many squares as possible from the board. Click on a group of "
+"squares of the same color to make them all disappear in one fell swoop, "
+"causing other squares to fall into place. It is not possible to remove a "
+"single square at a time. You get far more points for clearing a larger group "
+"of squares, and also for clearing the entire board."
+msgstr  "Аӷәы аҟынтәи излауо ала ирацәаны аквадратқәа ықәыжәга.Ԥштәык змоу аквадратқәа ргәыԥ шәықәыӷәӷәала"
+"аӷәы аҟынтә иқәыжәгарц азы.Иакны иҟоу аквадратқәа шәзаныхӡом.Ианышәхо аквадратқәа ргәыԥқәа шаҟа ирацәоу аҟара ирацәахоит шәкәаталақәагьы "
+"Насгьы акәаталақәа хыԥхьаӡалахоит аӷәы зегьы арыцқьара азы."
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
+msgid ""
+"Swell Foop is always very quick to play, but you can make it somewhat longer "
+"by changing the board size."
+msgstr "Swell Foop-ари иласу хәмарроуп, аха шәара ишәылшоит уи еиҵышәхырц ,аӷәы ашәагаа ԥсахуа. "
+
+#: data/org.gnome.SwellFoop.appdata.xml.in:41
+msgid "The GNOME Project"
+msgstr "Апроект GNOME"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
+msgid "game;logic;board;same;matching;"
+msgstr "ахәмарра; алогикатә; аишәатә; аиқәшәара;"
+
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:43
+msgid "Welcome to Swell Foop"
+msgstr "Бзиала шәаабеит Swell Foop ахь"
+
+#. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:64
+msgid "Let’s _Play"
+msgstr "_Ахәмарра"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr "Ихадоу афункциақәа"
+
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
+#: data/ui/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Ахәмарра ҿыц алагара"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
+#: data/ui/help-overlay.ui:46
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Арыдыркыра ала ахәмарра "
+
+#. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
+#: data/ui/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Move keyboard highlight"
+msgstr "Арыдыркыра ала иалкаау аиҭагара"
+
+#. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Destroy selected block"
+msgstr "Иалху аблокқәа рықәхра"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:69
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Азеиԥш"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Open menu"
+msgstr "Амениу аартра"
+
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:82
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Арыдқәа реилаҵа"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:90
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Аилыркаа"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Аԥшьы иазкны"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:106
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Аҭыҵра "
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
+#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:299
+msgid "_New Game"
+msgstr "_Ахәмарра ҿыц"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
+#: data/ui/swell-foop.ui:30
+msgid "_Setup"
+msgstr "_Архиарақәа"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#: data/ui/swell-foop.ui:34
+msgid "_Small (6 × 5)"
+msgstr "_Ахәыҷы"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#: data/ui/swell-foop.ui:40
+msgid "Nor_mal (15 × 10)"
+msgstr "_Абжьааԥнытәи"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#: data/ui/swell-foop.ui:46
+msgid "_Large (20 × 15)"
+msgstr "_Аду"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "normal" and "large"
+#: data/ui/swell-foop.ui:54
+msgid "_Two colors"
+msgstr "_ҩ-ԥштәык"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "small" and "large"
+#: data/ui/swell-foop.ui:60
+msgid "T_hree colors"
+msgstr "_х-ԥштәык"
+
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "small" and "normal"
+#: data/ui/swell-foop.ui:66
+msgid "_Four colors"
+msgstr "_ԥшь-ԥштәык"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:83
+msgid "High _Scores"
+msgstr "_Иреиӷьу алҵшәақәа"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/swell-foop.ui:88
+msgid "A_ppearance"
+msgstr "_аԥшра"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Shapes and Colors"
+#: data/ui/swell-foop.ui:92
+msgid "_Colors"
+msgstr "_ Аԥштәқәа"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible theme is "_Colors"
+#: data/ui/swell-foop.ui:98
+msgid "_Shapes and Colors"
+msgstr "_Аиҿартәышьақәеи аԥштәқәеи"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
+#: data/ui/swell-foop.ui:106
+msgid "_Zealous Animation"
+msgstr "_Иласу анимациа"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:115
+msgid "_Keyboard Shortcuts"
+msgstr "_Арыдқәа реилаҵа"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:120
+msgid "_Help"
+msgstr "_Аилыркаа"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:125
+msgid "_About Swell Foop"
+msgstr "_Аԥшьы Swell Foop иазкны"
+
+#. Translators: text of a button that appears on the board at the end of a game
+#: src/game-view.vala:403
+msgid "_Play Again"
+msgstr "_Еиҭа аахәмарра"
+
+#. Label showing the number of points at the end of the game
+#: src/game-view.vala:570
+#, c-format
+msgid "%u point"
+msgid_plural "%u points"
+msgstr[0] "%u кәаталак"
+msgstr[1] "%u кәаталак"
+
+#. Translators: text of a label that appears on the board at the end of a game
+#: src/game-view.vala:573
+msgid "Game Over!"
+msgstr "Ахәмарра хырқәшоуп"
+
+#. Translators: command-line option description, see 'swell-foop --help'
+#: src/swell-foop.vala:26
+msgid "Print release version and exit"
+msgstr "Акьыԥхьразы аверсиа аарԥшны аҭыҵра "
+
+#. Translators: About dialog text, name of an author
+#. Translators: About dialog text, name of an artist
+#: src/swell-foop.vala:96 src/swell-foop.vala:104
+msgid "Tim Horton"
+msgstr "Tim Horton"
+
+#. Translators: About dialog text, name of an author
+#: src/swell-foop.vala:100
+msgid "Sophia Yu"
+msgstr "Sophia Yu"
+
+#. Translators: About dialog text, small description of the application
+#: src/swell-foop.vala:114
+msgid ""
+"I want to play that game!\n"
+"You know, they all light-up and you click on them and they vanish!"
+msgstr "Сара исҭахуп абри ахәмарра сыхәмарырц!\n"
+"Урҭ зегьы лашоит нас иӡоит шәанрыцәхасуа."
+
+#. Translators: About dialog text, copyright line
+#: src/swell-foop.vala:118
+msgid "Copyright © 2009 Tim Horton"
+msgstr "Аԥҵаҩы изин © 2009 Тим Хортон «Tim Horton»"
+
+#. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
+#: src/swell-foop.vala:122
+msgid "translator-credits"
+msgstr "Нанба Наала <naala-nanba@rambler.ru>"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:52
+msgid "Small"
+msgstr "Ахәыҷы"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:55
+msgid "Normal"
+msgstr "Инормоу"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:58
+msgid "Large"
+msgstr "Аду"
+
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: src/window.vala:157
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr "Шаҟа шәылшо аблокқәа анышәх. Шаҟа имаҷны шәақәыӷәӷәо аҟара ирацәаны акәаталақәа шәырҳауоит."
+
+#. Translators: subtitle of the headerbar; the %u is replaced by the score
+#: src/window.vala:185
+#, c-format
+msgid "Score: %u"
+msgstr "Аԥхьаӡара: %u "
+
+#. Translators: text of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:293
+msgid "Abandon this game to start a new one?"
+msgstr "Ари ахәмарра кажьны аҿыц алагара"
+
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
+#: src/window.vala:296
+msgid "_Cancel"
+msgstr "_Аԥыхра"
+
+#: src/window.vala:375
+#, c-format
+msgid "%s, %d color"
+msgid_plural "%s, %d colors"
+msgstr[0] "%s, %d аԥштәы"
+msgstr[1] "%s, %d аԥштәқәа"
+
+#. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
+#: src/window.vala:386
+msgid "Type"
+msgstr "Ахкы"
