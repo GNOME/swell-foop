@@ -110,25 +110,25 @@ msgstr "Иалху аблокқәа рықәхра"
 #: data/ui/help-overlay.ui:54
 msgctxt "shortcut window"
 msgid "History"
-msgstr ""
+msgstr "Аҭоурых"
 
 #. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move
 #: data/ui/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Undo"
-msgstr ""
+msgstr "Аԥыхра"
 
 #. Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move
 #: data/ui/help-overlay.ui:67
 msgctxt "shortcut window"
 msgid "Redo"
-msgstr ""
+msgstr "Архынҳәра"
 
 #. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game
 #: data/ui/help-overlay.ui:75
 msgctxt "shortcut window"
 msgid "Restart"
-msgstr ""
+msgstr "Аиҭаҿакра"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
 #: data/ui/help-overlay.ui:85
@@ -243,7 +243,7 @@ msgstr "_Аиҿартәышьақәеи аԥштәқәеи"
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
 #: data/ui/swell-foop.ui:104
 msgid "_Boring Shapes"
-msgstr ""
+msgstr "_Игәырҿыӷьгоу аиҿартәашьақәа"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
 #: data/ui/swell-foop.ui:112
@@ -268,12 +268,12 @@ msgstr "_Аԥшьы Swell Foop иазкны"
 #. Translators: tooltip text of the Undo button; probably a verb
 #: data/ui/swell-foop.ui:160
 msgid "Undo"
-msgstr ""
+msgstr "Аԥыхра"
 
 #. Translators: tooltip text of the Undo button; probably a verb
 #: data/ui/swell-foop.ui:177
 msgid "Redo"
-msgstr ""
+msgstr "Архынҳәра"
 
 #. Translators: text of a button that appears on the board at the end of a game
 #: src/game-view.vala:439
