@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2022-03-08 18:50+0000\n"
+"POT-Creation-Date: 2022-03-08 19:41+0000\n"
 "PO-Revision-Date: 2020-05-15 09:13+0000\n"
 "Last-Translator: Нанба Наала <naala-nanba@rambler.ru>\n"
 "Language-Team: Abkhazian <ab@li.org>\n"
@@ -63,6 +63,46 @@ msgstr "Апроект GNOME"
 msgid "game;logic;board;same;matching;"
 msgstr "ахәмарра; алогикатә; аишәатә; аиқәшәара;"
 
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:11
+msgid "The theme to use"
+msgstr "Ахәмарраҟны ахархәара змоу атема"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:13
+msgid "The title of the tile theme to use."
+msgstr "Ахәмарратә тема хархәагас иамоу афаил ахьӡ"
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:18
+msgid "Board size"
+msgstr "Ахәмарратә ҭыԥ ашәагаа"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:20
+msgid "The size of the game board."
+msgstr "Ахәмарра аӷәа ашәагаа"
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:26
+msgid "Board color count"
+msgstr "Аӷәаҟны аԥштәқәа рхыԥхьаӡара"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:28
+msgid "The number of colors of tiles to use in the game."
+msgstr "Ахәмарратә ӷәы аҟны ахархәара змоу еиуеиԥшым аԥштәқәа рхыԥхьаӡара."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:33
+msgid "Is this the first run"
+msgstr "Ари раԥхьатәи аҿакра акәзар"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:35
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr "Ахышәара, раԥхьатәи аҿакра аиҽцәажәара арбара аҭаху-аҭахыму шьақәзыргыло."
+
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
 #: data/org.gnome.SwellFoop.gschema.xml:40
 #, fuzzy
@@ -70,13 +110,27 @@ msgstr "ахәмарра; алогикатә; аишәатә; аиқәшәара
 msgid "Zealous animation"
 msgstr "_Иласу анимациа"
 
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.SwellFoop.gschema.xml:42
+msgid "Use more flashy, but slower, animations."
+msgstr "Иԥшӡоу анимациа ахархәара."
+
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
 #: data/org.gnome.SwellFoop.gschema.xml:47
 #, fuzzy
 #| msgctxt "shortcut window"
 #| msgid "Start a new game"
 msgid "Saved game"
-msgstr "Ахәмарра ҿыц алагара"
+msgstr "Еиқәырхоу ахәмарра"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
+#: data/org.gnome.SwellFoop.gschema.xml:49
+msgid ""
+"Has value “nothing” if there is no saved game. Else, contains a copy of the "
+"initial board, an index in the history, and the history of actions saved by "
+"an array of coords."
+msgstr "Аҵакы амоуп “nothing” еиқәырхоу ахәмарра ыҟамзар.Мамзар аханатәтәи аӷәы ахкьыԥхьаа, аиндекс ажурнал аҟны,"
+"насгьы аҟаҵарақәа ржурнал, аижәлантәдырра аҭыԥырбага аҟны еиқәырхоу."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
@@ -243,7 +297,7 @@ msgstr "_Аиҿартәышьақәеи аԥштәқәеи"
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
 #: data/ui/swell-foop.ui:104
 msgid "_Boring Shapes"
-msgstr "_Игәырҿыӷьгоу аиҿартәашьақәа"
+msgstr ""
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
 #: data/ui/swell-foop.ui:112
@@ -278,7 +332,7 @@ msgstr "Архынҳәра"
 #. Translators: text of a button that appears on the board at the end of a game
 #: src/game-view.vala:439
 msgid "_Play Again"
-msgstr "_Еиҭа аахәмарра"
+msgstr "_Еиҭа ахәмарра"
 
 #. Label showing the number of points at the end of the game
 #: src/game-view.vala:631
