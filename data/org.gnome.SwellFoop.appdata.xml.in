@@ -38,6 +38,16 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <releases>
+    <release version="41.1" date="2022-04-12" type="stable">
+      <description>
+        <p>Overview of changes in swell-foop 41.1</p>
+        <ul>
+          <li>Updated translations</li>
+          <li>Changed screenshots location (Michael Catanzaro)</li>
+          <li>Fixed flatpak build (Robert Roth)</li>
+        </ul>
+      </description>
+    </release>
     <release version="41.0.1" date="2021-09-18" type="stable">
       <description>
         <p>Overview of changes in swell-foop 41.0.1</p>
