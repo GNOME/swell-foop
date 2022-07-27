@@ -4,7 +4,6 @@ variables:
     BUNDLE: "swell-foop-nightly.flatpak"
 
 flatpak:
-    image: 'registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:master'
     variables:
         MANIFEST_PATH: "org.gnome.SwellFoop.json"
         FLATPAK_MODULE: "swell-foop"
