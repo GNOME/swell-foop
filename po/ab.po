@@ -1,14 +1,7 @@
-# Abkhazian translation for swell-foop.
-# Copyright (C) 2022 swell-foop's COPYRIGHT HOLDER
-# This file is distributed under the same license as the swell-foop package.
-# Нанба Наала <naala-nanba@rambler.ru>, 2022.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2022-03-08 19:41+0000\n"
-"PO-Revision-Date: 2020-05-15 09:13+0000\n"
+"POT-Creation-Date: 2022-03-09 12:11+0000\n"
 "Last-Translator: Нанба Наала <naala-nanba@rambler.ru>\n"
 "Language-Team: Abkhazian <ab@li.org>\n"
 "Language: ab\n"
@@ -16,7 +9,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-DamnedLies-Scope: partial\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: title of the window displayed on the headerbar; name of the application
@@ -56,7 +48,7 @@ msgstr ""
 
 #: data/org.gnome.SwellFoop.appdata.xml.in:71
 msgid "The GNOME Project"
-msgstr "Апроект GNOME"
+msgstr "The GNOME Project"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
@@ -101,14 +93,13 @@ msgstr "Ари раԥхьатәи аҿакра акәзар"
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
 #: data/org.gnome.SwellFoop.gschema.xml:35
 msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr "Ахышәара, раԥхьатәи аҿакра аиҽцәажәара арбара аҭаху-аҭахыму шьақәзыргыло."
+msgstr ""
+"Ахышәара, раԥхьатәи аҿакра аиҽцәажәара арбара аҭаху-аҭахыму шьақәзыргыло."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
 #: data/org.gnome.SwellFoop.gschema.xml:40
-#, fuzzy
-#| msgid "_Zealous Animation"
 msgid "Zealous animation"
-msgstr "_Иласу анимациа"
+msgstr "Иласу анимациа"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
 #: data/org.gnome.SwellFoop.gschema.xml:42
@@ -117,9 +108,6 @@ msgstr "Иԥшӡоу анимациа ахархәара."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
 #: data/org.gnome.SwellFoop.gschema.xml:47
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "Start a new game"
 msgid "Saved game"
 msgstr "Еиқәырхоу ахәмарра"
 
@@ -129,8 +117,10 @@ msgid ""
 "Has value “nothing” if there is no saved game. Else, contains a copy of the "
 "initial board, an index in the history, and the history of actions saved by "
 "an array of coords."
-msgstr "Аҵакы амоуп “nothing” еиқәырхоу ахәмарра ыҟамзар.Мамзар аханатәтәи аӷәы ахкьыԥхьаа, аиндекс ажурнал аҟны,"
-"насгьы аҟаҵарақәа ржурнал, аижәлантәдырра аҭыԥырбага аҟны еиқәырхоу."
+msgstr ""
+"Аҵакы амоуп “nothing” еиқәырхоу ахәмарра ыҟамзар.Мамзар аханатәтәи аӷәы "
+"ахкьыԥхьаа, аиндекс ажурнал аҟны,насгьы аҟаҵарақәа ржурнал, аижәлантәдырра "
+"аҭыԥырбага аҟны еиқәырхоу."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
@@ -322,7 +312,7 @@ msgstr "_Аԥшьы Swell Foop иазкны"
 #. Translators: tooltip text of the Undo button; probably a verb
 #: data/ui/swell-foop.ui:160
 msgid "Undo"
-msgstr "Аԥыхра"
+msgstr "Архынҳәра"
 
 #. Translators: tooltip text of the Undo button; probably a verb
 #: data/ui/swell-foop.ui:177
@@ -375,12 +365,12 @@ msgstr ""
 #. Translators: About dialog text, copyright line
 #: src/swell-foop.vala:127
 msgid "Copyright © 2009 Tim Horton"
-msgstr "Аԥҵаҩы изин © 2009 Тим Хортон «Tim Horton»"
+msgstr "Аԥҵаҩцәа рзинқәа  © 2009 Тим Хортон (Tim Horton)"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
 #: src/swell-foop.vala:131
 msgid "translator-credits"
-msgstr "Нанба Наала <naala-nanba@rambler.ru>"
+msgstr "Нанба Наала <naala-nanba@rambler.ru>, 2022"
 
 #. Translators: name of a possible size of the grid
 #: src/window.vala:52
