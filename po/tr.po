@@ -1,11 +1,8 @@
 # Turkish translation of swell-foop.
 # Copyright (C) 2000-2002, 2004, 2005, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2009-2022 swell-foop's COPYRIGHT HOLDER
+# This file is distributed under the same license as the swell-foop package.
 #
-# foundation: sıralama
-# Tableau: orta sıra
-# reserve: yedek
-# waste: kullanılamayan
-# stock : eldeki kartlar
 # Onur Kucuk, <okucuk@yahoo.com>, 2000.
 # Ömer Fadıl USTA <omer_fad@hotmail.com>,2002.
 # Hakan Bekdas <hakanbekdas@yahoo.com>, 2006.
@@ -20,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-06-02 07:25+0000\n"
+"POT-Creation-Date: 2022-07-27 12:25+0000\n"
 "PO-Revision-Date: 2020-08-11 03:07+0200\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -55,8 +52,8 @@ msgid ""
 msgstr ""
 "Tahtadan olabildiğince çok sayıda kareyi kaldırın. Tek çırpıda ortadan "
 "kaldırmak için aynı renkteki kare kümesine tıklayın ve diğer karelerin "
-"yerlerine düşmesini sağlayın. Kareler tek tek kaldırılamaz. Daha büyük "
-"kare kümesini ya da tüm tahtayı temizleyerek daha çok puan alırsınız."
+"yerlerine düşmesini sağlayın. Kareler tek tek kaldırılamaz. Daha büyük kare "
+"kümesini ya da tüm tahtayı temizleyerek daha çok puan alırsınız."
 
 #: data/org.gnome.SwellFoop.appdata.xml.in:17
 msgid ""
@@ -66,7 +63,7 @@ msgstr ""
 "Sweel Foop her zaman çok hızlı oynanır ama tahta boyutunu değiştirerek oyunu "
 "biraz uzatabilirsiniz."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:41
+#: data/org.gnome.SwellFoop.appdata.xml.in:81
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
@@ -139,8 +136,9 @@ msgid ""
 "initial board, an index in the history, and the history of actions saved by "
 "an array of coords."
 msgstr ""
-"Eğer kayıtlı oyun yoksa “nothing” değerini alır. Varsa, ilk tahtanın kopyasını "
-"geçmiş dizinini ve koordinat dizisince kaydedilen eylemlerin geçmişini içerir."
+"Eğer kayıtlı oyun yoksa “nothing” değerini alır. Varsa, ilk tahtanın "
+"kopyasını geçmiş dizinini ve koordinat dizisince kaydedilen eylemlerin "
+"geçmişini içerir."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
@@ -340,40 +338,40 @@ msgid "Redo"
 msgstr "Yinele"
 
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:415
+#: src/game-view.vala:439
 msgid "_Play Again"
 msgstr "Yeniden _Oyna"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:607
+#: src/game-view.vala:631
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u puan"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:610
+#: src/game-view.vala:634
 msgid "Game Over!"
 msgstr "Oyun Bitti!"
 
 #. Translators: command-line option description, see 'swell-foop --help'
-#: src/swell-foop.vala:26
+#: src/swell-foop.vala:25
 msgid "Print release version and exit"
 msgstr "Dağıtım sürümünü yazdır ve çık"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:96 src/swell-foop.vala:104
+#: src/swell-foop.vala:106 src/swell-foop.vala:114
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:100
+#: src/swell-foop.vala:110
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
 #. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:113
+#: src/swell-foop.vala:123
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -382,12 +380,12 @@ msgstr ""
 "Bilirsin, onların hepsinde ışık yanar ve üstlerine tıklarsın ve kaybolurlar!"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:117
+#: src/swell-foop.vala:127
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Telif Hakkı © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:121
+#: src/swell-foop.vala:131
 msgid "translator-credits"
 msgstr ""
 "Barış Çiçek <baris@teamforce.name.tr> \n"
@@ -443,42 +441,3 @@ msgstr[0] "%s, %d renk"
 #: src/window.vala:400
 msgid "Type"
 msgstr "Tür"
-
-#~ msgid "org.gnome.SwellFoop"
-#~ msgstr "org.gnome.SwellFoop"
-
-#~ msgid "Preferences"
-#~ msgstr "Tercihler"
-
-#~ msgid "_Board size:"
-#~ msgstr "Tahta _boyutu:"
-
-#~ msgid "_Theme:"
-#~ msgstr "_Tema:"
-
-#~ msgid "Operation"
-#~ msgstr "İşlem"
-
-#~ msgid "High Scores"
-#~ msgstr "Yüksek Puanlar"
-
-#~ msgid "New Game"
-#~ msgstr "Yeni Oyun"
-
-#~ msgid "_OK"
-#~ msgstr "_Tamam"
-
-#~ msgid "Size:"
-#~ msgstr "Boyut:"
-
-#~ msgid "Date"
-#~ msgstr "Tarih"
-
-#~ msgid "Score"
-#~ msgstr "Puan"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Tercihler"
-
-#~ msgid "swell-foop"
-#~ msgstr "swell-foop"
