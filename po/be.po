@@ -5,11 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
-"foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-02-26 01:17+0000\n"
-"PO-Revision-Date: 2017-09-08 15:40+0300\n"
-"Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
+"POT-Creation-Date: 2021-10-03 18:34+0000\n"
+"PO-Revision-Date: 2021-10-05 20:04+0300\n"
+"Last-Translator: Launchpad translators\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
@@ -17,92 +16,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 3.0\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/org.gnome.swell-foop.gschema.xml.h:1
-msgid "The theme to use"
-msgstr "Матыў аздаблення"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:2
-msgid "The title of the tile theme to use."
-msgstr "Назва матыва аздаблення квадратаў."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:3
-msgid "Board size"
-msgstr "Памер дошкі"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:4
-msgid "The size of the game board."
-msgstr "Памер дошкі для гульні."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:5
-msgid "Board color count"
-msgstr "Колькасць колераў дошкі"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:6
-msgid "The number of colors of tiles to use in the game."
-msgstr "Колькасць колераў квадратаў, ужытых у гульні."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:7
-msgid "Is this the first run"
-msgstr "Ці гэта першы запуск"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:8
-msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr "Ці паказваць дыялог з парадамі пры запуску."
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:9
-msgid "Zealous animation"
-msgstr "Інтэнсіўная анімацыя"
-
-#: ../data/org.gnome.swell-foop.gschema.xml.h:10
-msgid "Use more flashy, but slower, animations."
-msgstr "Ужыць ярчэйшую, але і маруднейшую анімацыю."
-
-#: ../data/preferences.ui.h:1
-msgid "Preferences"
-msgstr "Настройкі"
-
-#: ../data/preferences.ui.h:2
-msgid "_Board size:"
-msgstr "_Памер дошкі:"
-
-#: ../data/preferences.ui.h:3
-msgid "_Number of colors:"
-msgstr "_Колькасць колераў:"
-
-#: ../data/preferences.ui.h:4
-msgid "Setup"
-msgstr "Настройка"
-
-#: ../data/preferences.ui.h:5
-msgid "_Theme:"
-msgstr "_Матыў:"
-
-#: ../data/preferences.ui.h:6
-msgid "Appearance"
-msgstr "Від"
-
-#: ../data/preferences.ui.h:7
-msgid "_Zealous Animation"
-msgstr "І_нтэнсіўная анімацыя"
-
-#: ../data/preferences.ui.h:8
-msgid "Operation"
-msgstr "Дзеянне"
-
-#: ../data/swell-foop.appdata.xml.in.h:1 ../data/swell-foop.desktop.in.h:1
-#: ../src/swell-foop.vala:125 ../src/swell-foop.vala:150
-#: ../src/swell-foop.vala:457 ../src/swell-foop.vala:539
+#. Translators: title of the window displayed by window managers; name of the application
+#. Translators: title of the window displayed on the headerbar; name of the application
+#. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
+#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:141
+#: data/ui/swell-foop.ui:147 src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
-#: ../data/swell-foop.appdata.xml.in.h:2 ../data/swell-foop.desktop.in.h:2
+#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "Ачысціце экран, выдаляючы групы каляровых квадратаў розных формаў"
+msgstr "Ачысціце экран, выдаляючы групы каляровых і пазначаных фігурамі плітак"
 
-#: ../data/swell-foop.appdata.xml.in.h:3
+#: data/org.gnome.SwellFoop.appdata.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -110,30 +41,298 @@ msgid ""
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
 msgstr ""
-"Выдаліце з дашкі як мага больш плітак. Пстрыкніце па групе плітак аднаго "
-"колеру, і яна знікне адным махам, а іншыя пліткі ўпадуць на вольнае месца. "
-"Выдаліць адзіночную плітку не атрымаецца. За ачыстку вялікай групы плітак і "
-"ўсёй дашкі даецца значна болей ачкоў."
+"Выдаліце з дошкі як мага больш плітак. Націсніце на групу плітак аднаго "
+"колеру – яна знікне, а на вызваленае месца ўпадуць іншыя. Адзіночную плітку "
+"выдаліць немагчыма, за ачыстку вялікай групы плітак, а таксама ачыстку ўсёй "
+"дашкі, даецца значна больш балаў."
 
-#: ../data/swell-foop.appdata.xml.in.h:4
+#: data/org.gnome.SwellFoop.appdata.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
 msgstr ""
-"Гульня Swell Foop вельмі хуткая, яле можна падоўжыць яе, павялічыўшы памер "
-"дашкі."
+"Swell Foop вельмі хуткая гульня, але яе можна падоўжыць, калі павялічыць "
+"памер дошкі."
 
-#: ../data/swell-foop.appdata.xml.in.h:5
+#: data/org.gnome.SwellFoop.appdata.xml.in:71
 msgid "The GNOME Project"
 msgstr "Праект GNOME"
 
-#: ../data/swell-foop.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.SwellFoop.desktop.in:6
 msgid "game;logic;board;same;matching;"
+msgstr "логіка;лагічная;настольная;гульня;аднолькавыя;пары;супадзенні;"
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:11
+msgid "The theme to use"
+msgstr "Тэма"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
+#: data/org.gnome.SwellFoop.gschema.xml:13
+msgid "The title of the tile theme to use."
+msgstr "Назва выкарыстанай тэмы для плітак."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:18
+msgid "Board size"
+msgstr "Памер дошкі"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
+#: data/org.gnome.SwellFoop.gschema.xml:20
+msgid "The size of the game board."
+msgstr "Памер дошкі для гульні."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:26
+msgid "Board color count"
+msgstr "Колькасць колераў на гульнявым полі"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
+#: data/org.gnome.SwellFoop.gschema.xml:28
+msgid "The number of colors of tiles to use in the game."
+msgstr "Колькасць выкарыстаных колераў плітак."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:33
+msgid "Is this the first run"
+msgstr "Ці першы гэта запуск"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
+#: data/org.gnome.SwellFoop.gschema.xml:35
+msgid "Setting to decide whether to show first-run hint dialog or not."
+msgstr "Вызначае ці паказваць акно з парадамі як пры першым запуску."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.SwellFoop.gschema.xml:40
+msgid "Zealous animation"
+msgstr "Інтэнсіўная анімацыя"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
+#: data/org.gnome.SwellFoop.gschema.xml:42
+msgid "Use more flashy, but slower, animations."
+msgstr "Выкарыстоўваць ярчэйшую, але і больш марудную анімацыю."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
+#: data/org.gnome.SwellFoop.gschema.xml:47
+msgid "Saved game"
+msgstr "Захаваная гульня"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
+#: data/org.gnome.SwellFoop.gschema.xml:49
+msgid ""
+"Has value “nothing” if there is no saved game. Else, contains a copy of the "
+"initial board, an index in the history, and the history of actions saved by "
+"an array of coords."
 msgstr ""
-"гульня;логіка;лагічная гульня;настольная гульня;аднолькавае;адпаведнае;"
+"Калі няма захаванай гульні, мае значэнне «nothing». Інакш, змяшчае копію "
+"зыходнай дошкі, індэкс у гісторыі і гісторыю дзеянняў, захаваную як масіў "
+"каардынат."
+
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:43
+msgid "Welcome to Swell Foop"
+msgstr "Вітаем у Swell Foop"
+
+#. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
+#: data/ui/first-run-stack.ui:64
+msgid "Let’s _Play"
+msgstr "Давайце _гуляць"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Гульня з клавіятуры"
+
+#. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
+#: data/ui/help-overlay.ui:36
+msgctxt "shortcut window"
+msgid "Move keyboard highlight"
+msgstr "Перамясціць курсор клавіятуры"
+
+#. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Destroy selected block"
+msgstr "Выдаліць выбраны блок"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo"
+#: data/ui/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "History"
+msgstr "Гісторыя"
+
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Адрабіць"
+
+#. Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Паўтарыць дзеянне"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game
+#: data/ui/help-overlay.ui:75
+msgctxt "shortcut window"
+msgid "Restart"
+msgstr "Перазапусціць"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
+#: data/ui/help-overlay.ui:85
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr "Асноўныя функцыі"
+
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
+#: data/ui/help-overlay.ui:91
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Пачаць новую гульню"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:100
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Агульныя"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:105
+msgctxt "shortcut window"
+msgid "Open menu"
+msgstr "Адкрыць меню"
+
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Спалучэнні клавіш"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:121
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Даведка"
+
+#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:129
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Аб праграме"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Выйсці"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
+#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:303
+msgid "_New Game"
+msgstr "_Новая гульня"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
+#: data/ui/swell-foop.ui:30
+msgid "_Setup"
+msgstr "Н_алады"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:34
+msgid "_Small (6 × 5)"
+msgstr "_Малы (6 × 5)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:40
+msgid "Nor_mal (15 × 10)"
+msgstr "_Звычайны (15 × 10)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
+#: data/ui/swell-foop.ui:46
+msgid "_Large (20 × 15)"
+msgstr "_Вялікі (20 × 15)"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
+#: data/ui/swell-foop.ui:54
+msgid "_Two colors"
+msgstr "_Два колеры"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
+#: data/ui/swell-foop.ui:60
+msgid "T_hree colors"
+msgstr "_Тры колеры"
+
+#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
+#: data/ui/swell-foop.ui:66
+msgid "_Four colors"
+msgstr "_Чатыры колеры"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:83
+msgid "High _Scores"
+msgstr "Лепшыя _вынікі"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/swell-foop.ui:88
+msgid "A_ppearance"
+msgstr "Вы_гляд"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
+#: data/ui/swell-foop.ui:92
+msgid "_Colors"
+msgstr "_Колеры"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
+#: data/ui/swell-foop.ui:98
+msgid "_Shapes and Colors"
+msgstr "_Фігуры і колеры"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
+#: data/ui/swell-foop.ui:104
+msgid "_Boring Shapes"
+msgstr "_Шэрыя фігуры"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
+#: data/ui/swell-foop.ui:112
+msgid "_Zealous Animation"
+msgstr "І_нтэнсіўная анімацыя"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:121
+msgid "_Keyboard Shortcuts"
+msgstr "_Спалучэнні клавіш"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:126
+msgid "_Help"
+msgstr "_Даведка"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/swell-foop.ui:131
+msgid "_About Swell Foop"
+msgstr "_Пра Swell Foop"
+
+#. Translators: tooltip text of the Undo button; probably a verb
+#: data/ui/swell-foop.ui:160
+msgid "Undo"
+msgstr "Адрабіць"
+
+#. Translators: tooltip text of the Undo button; probably a verb
+#: data/ui/swell-foop.ui:177
+msgid "Redo"
+msgstr "Паўтарыць дзеянне"
+
+#. Translators: text of a button that appears on the board at the end of a game
+#: src/game-view.vala:439
+msgid "_Play Again"
+msgstr "Гуляць _зноў"
 
 #. Label showing the number of points at the end of the game
-#: ../src/game-view.vala:472
+#: src/game-view.vala:631
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -141,130 +340,128 @@ msgstr[0] "%u бал"
 msgstr[1] "%u балы"
 msgstr[2] "%u балаў"
 
-#: ../src/game-view.vala:473
+#. Translators: text of a label that appears on the board at the end of a game
+#: src/game-view.vala:634
 msgid "Game Over!"
 msgstr "Гульня скончана!"
 
-#: ../src/score-dialog.vala:28 ../src/swell-foop.vala:144
-msgid "_Quit"
-msgstr "_Выйсці"
+#. Translators: command-line option description, see 'swell-foop --help'
+#: src/swell-foop.vala:25
+msgid "Print release version and exit"
+msgstr "Вывесці версію праграмы і выйсці"
 
-#: ../src/score-dialog.vala:29
-msgid "New Game"
-msgstr "Новая гульня"
+#. Translators: About dialog text, name of an author
+#. Translators: About dialog text, name of an artist
+#: src/swell-foop.vala:106 src/swell-foop.vala:114
+msgid "Tim Horton"
+msgstr "Tim Horton"
 
-#: ../src/score-dialog.vala:32
-msgid "_OK"
-msgstr "_Добра"
+#. Translators: About dialog text, name of an author
+#: src/swell-foop.vala:110
+msgid "Sophia Yu"
+msgstr "Sophia Yu"
 
-#: ../src/score-dialog.vala:44
-msgid "Size:"
-msgstr "Памер:"
-
-#: ../src/score-dialog.vala:69
-msgid "Date"
-msgstr "Дата"
-
-#: ../src/score-dialog.vala:72
-msgid "Score"
-msgstr "Лік"
-
-#: ../src/score-dialog.vala:166
-#, c-format
-msgid "%u × %u, %u color"
-msgid_plural "%u × %u, %u colors"
-msgstr[0] "%u × %u, %u колер"
-msgstr[1] "%u × %u, %u колеры"
-msgstr[2] "%u × %u, %u колераў"
-
-#: ../src/swell-foop.vala:79
-msgid "Welcome to Swell Foop"
-msgstr "Вітаем у Swell Foop"
-
-#: ../src/swell-foop.vala:82
-msgid ""
-"Clear as many blocks as you can.\n"
-"Fewer clicks means more points."
-msgstr ""
-"Ачысціць як мага больш блокаў.\n"
-"Менш пстрычак - больш ачкоў. "
-
-#: ../src/swell-foop.vala:85
-msgid "Let’s _Play"
-msgstr "Давайце _гуляць"
-
-#: ../src/swell-foop.vala:138
-msgid "_Scores"
-msgstr "_Рэкорды"
-
-#: ../src/swell-foop.vala:139
-msgid "_Preferences"
-msgstr "_Настройкі"
-
-#: ../src/swell-foop.vala:142
-msgid "_Help"
-msgstr "_Дапамога"
-
-#: ../src/swell-foop.vala:143
-msgid "_About"
-msgstr "_Аб праграме"
-
-#: ../src/swell-foop.vala:157
-msgid "Start a new game"
-msgstr "Распачаць новую гульню"
-
-#: ../src/swell-foop.vala:185
-msgid "Small"
-msgstr "Малы"
-
-#: ../src/swell-foop.vala:186
-msgid "Normal"
-msgstr "Звычайны"
-
-#: ../src/swell-foop.vala:187
-msgid "Large"
-msgstr "Вялікі"
-
-#: ../src/swell-foop.vala:263
-#, c-format
-msgid "Score: %u"
-msgstr "Лік: %u"
-
-#: ../src/swell-foop.vala:322
-msgid "Colors"
-msgstr "Колеры"
-
-#: ../src/swell-foop.vala:326
-msgid "Shapes and Colors"
-msgstr "Формы і колеры"
-
-#: ../src/swell-foop.vala:460
+#. Translators: About dialog text, small description of the application
+#: src/swell-foop.vala:123
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
 "Цудоўная гульня!\n"
-"Усё свеціцца, а ты пстрыкаеш, каб яно знікала!"
+"Усё свеціцца, а ты ціскаеш і яно знікае!"
 
-#: ../src/swell-foop.vala:461
+#. Translators: About dialog text, copyright line
+#: src/swell-foop.vala:127
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Аўтарскія правы 2009 Tim Horton"
 
-#: ../src/swell-foop.vala:466
+#. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
+#: src/swell-foop.vala:131
 msgid "translator-credits"
 msgstr ""
 "Ales Nyakhaychyk <nab@mail.by>\n"
 "Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Юрась Шумовіч <shumovichy@gmail.com>"
 
-#: ../src/swell-foop.vala:499
-msgid "Abandon this game to start a new one?"
-msgstr "Кінуць гэтую гульню і распачаць новую?"
+#. Translators: name of a possible size of the grid
+#: src/window.vala:52
+msgid "Small"
+msgstr "Малы"
 
-#: ../src/swell-foop.vala:500
+#. Translators: name of a possible size of the grid
+#: src/window.vala:55
+msgid "Normal"
+msgstr "Звычайны"
+
+#. Translators: name of a possible size of the grid
+#: src/window.vala:58
+msgid "Large"
+msgstr "Вялікі"
+
+#. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
+#: src/window.vala:146
+msgid ""
+"Clear as many blocks as you can.\n"
+"Fewer clicks means more points."
+msgstr ""
+"Выдаліце як мага больш блокаў.\n"
+"Менш націсканняў - больш балаў."
+
+#. Translators: subtitle of the headerbar; the %u is replaced by the score
+#: src/window.vala:174
+#, c-format
+msgid "Score: %u"
+msgstr "Лік: %u"
+
+#. Translators: text of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:297
+msgid "Abandon this game to start a new one?"
+msgstr "Кінуць гэтую гульню і пачаць новую?"
+
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
+#: src/window.vala:300
 msgid "_Cancel"
 msgstr "_Скасаваць"
 
-#: ../src/swell-foop.vala:501
-msgid "_New Game"
-msgstr "_Новая гульня"
+#: src/window.vala:389
+#, c-format
+msgid "%s, %d color"
+msgid_plural "%s, %d colors"
+msgstr[0] "%s, %d колер"
+msgstr[1] "%s, %d колеры"
+msgstr[2] "%s, %d колераў"
+
+#. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
+#: src/window.vala:400
+msgid "Type"
+msgstr "Тып"
+
+#~ msgid "Preferences"
+#~ msgstr "Настройкі"
+
+#~ msgid "_Board size:"
+#~ msgstr "_Памер дошкі:"
+
+#~ msgid "_Theme:"
+#~ msgstr "_Матыў:"
+
+#~ msgid "Operation"
+#~ msgstr "Дзеянне"
+
+#~ msgid "New Game"
+#~ msgstr "Новая гульня"
+
+#~ msgid "_OK"
+#~ msgstr "_Добра"
+
+#~ msgid "Size:"
+#~ msgstr "Памер:"
+
+#~ msgid "Date"
+#~ msgstr "Дата"
+
+#~ msgid "Score"
+#~ msgstr "Лік"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Настройкі"
