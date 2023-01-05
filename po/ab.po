@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2022-10-12 20:32+0000\n"
+"POT-Creation-Date: 2022-11-06 14:23+0000\n"
 "Last-Translator: Нанба Наала <naala-nanba@rambler.ru>\n"
 "Language-Team: Abkhazian <daniel.abzakh@gmail.com>\n"
 "Language: ab\n"
@@ -45,7 +45,7 @@ msgid ""
 "by changing the board size."
 msgstr ""
 "Swell Foop-ари иласу хәмарроуп, аха шәара ишәылшоит уи еиҵышәхырц ,аӷәы "
-"ашәагаа ԥсахуа. "
+"ашәагаа ԥсахуа."
 
 #: data/org.gnome.SwellFoop.appdata.xml.in:71
 msgid "The GNOME Project"
@@ -360,6 +360,8 @@ msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
+"Сара исҭахуп абри ахәмарра сыхәмарырц!\n"
+"Урҭ зегьы лашоит нас иӡоит шәанрыцәхасуа."
 
 #. Translators: About dialog text, copyright line
 #: src/swell-foop.vala:127
@@ -392,6 +394,8 @@ msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
 msgstr ""
+"Шаҟа шәылшо аблокқәа анышәх. Шаҟа имаҷны шәақәыӷәӷәо аҟара ирацәаны "
+"акәаталақәа шәырҳауоит."
 
 #. Translators: subtitle of the headerbar; the %u is replaced by the score
 #: src/window.vala:174
