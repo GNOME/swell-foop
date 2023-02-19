@@ -8,23 +8,23 @@
 # Vytautas Povilaitis <punktyras@nkm.lt>, 2007.
 # Gintautas Miliauskas <gintas@akl.lt>, 2006, 2007, 2008, 2010.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2010-2020.
+# Aurimas Černius <aurisc4@gmail.com>, 2010-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-06-02 07:25+0000\n"
-"PO-Revision-Date: 2020-06-21 22:38+0300\n"
+"POT-Creation-Date: 2023-01-25 22:11+0000\n"
+"PO-Revision-Date: 2023-02-19 21:29+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: title of the window displayed on the headerbar; name of the application
@@ -61,9 +61,9 @@ msgstr ""
 "Swell Foop visada yra trumpas žaidimas, bet galite jį kiek prailginti "
 "pakeisdami lentos dydį."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "GNOME projektas"
+#: data/org.gnome.SwellFoop.appdata.xml.in:81
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
@@ -123,7 +123,6 @@ msgstr "Naudoti įmantresnę, bet lėtesnę animaciją."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
 #: data/org.gnome.SwellFoop.gschema.xml:47
-#| msgid "Start a new game"
 msgid "Saved game"
 msgstr "Įrašytas žaidimas"
 
@@ -198,7 +197,6 @@ msgstr "Pagrindinės funkcijos"
 
 #. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
 #: data/ui/help-overlay.ui:91
-#| msgid "Start a new game"
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Pradėti naują žaidimą"
@@ -223,21 +221,18 @@ msgstr "Klaviatūros trumpiniai"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:121
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Žinynas"
 
 #. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
 #: data/ui/help-overlay.ui:129
-#| msgid "_About"
 msgctxt "shortcut window"
 msgid "About"
 msgstr "Apie"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
 #: data/ui/help-overlay.ui:137
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Išeiti"
@@ -251,7 +246,6 @@ msgstr "_Naujas žaidimas"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
 #: data/ui/swell-foop.ui:30
-#| msgid "Setup"
 msgid "_Setup"
 msgstr "_Nustatymai"
 
@@ -272,7 +266,6 @@ msgstr "_Didelis (20 x 15)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:54
-#| msgid "_Number of colors:"
 msgid "_Two colors"
 msgstr "_Dvi spalvos"
 
@@ -283,7 +276,6 @@ msgstr "_Trys spalvos"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
 #: data/ui/swell-foop.ui:66
-#| msgid "_Number of colors:"
 msgid "_Four colors"
 msgstr "_Keturios spalvos"
 
@@ -294,19 +286,16 @@ msgstr "Geriausi _rezultatai"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/swell-foop.ui:88
-#| msgid "Appearance"
 msgid "A_ppearance"
 msgstr "Iš_vaizda"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:92
-#| msgid "Colors"
 msgid "_Colors"
 msgstr "_Spalvos"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:98
-#| msgid "Shapes and Colors"
 msgid "_Shapes and Colors"
 msgstr "_Formos ir spalvos"
 
@@ -346,12 +335,12 @@ msgid "Redo"
 msgstr "Pakartoti"
 
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:415
+#: src/game-view.vala:439
 msgid "_Play Again"
 msgstr "Žais_ti dar kartą"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:607
+#: src/game-view.vala:631
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -360,28 +349,28 @@ msgstr[1] "%u taškai"
 msgstr[2] "%u taškų"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:610
+#: src/game-view.vala:634
 msgid "Game Over!"
 msgstr "Žaidimas baigtas!"
 
 #. Translators: command-line option description, see 'swell-foop --help'
-#: src/swell-foop.vala:26
+#: src/swell-foop.vala:25
 msgid "Print release version and exit"
 msgstr "Atspausdinti leidimo vertiją ir išeiti"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:96 src/swell-foop.vala:104
+#: src/swell-foop.vala:106 src/swell-foop.vala:114
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:100
+#: src/swell-foop.vala:110
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
 #. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:113
+#: src/swell-foop.vala:123
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -391,12 +380,12 @@ msgstr ""
 "išnyksta!"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:117
+#: src/swell-foop.vala:127
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Autorinės teisės © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:121
+#: src/swell-foop.vala:131
 msgid "translator-credits"
 msgstr ""
 "Paskutinis vertėjas:\n"
@@ -451,8 +440,6 @@ msgstr "_Atsisakyti"
 
 #: src/window.vala:389
 #, c-format
-#| msgid "%u × %u, %u color"
-#| msgid_plural "%u × %u, %u colors"
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
 msgstr[0] "%s, %d spalva"
@@ -463,6 +450,9 @@ msgstr[2] "%s, %d spalvų"
 #: src/window.vala:400
 msgid "Type"
 msgstr "Tipas"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME projektas"
 
 #~| msgid "Swell Foop"
 #~ msgid "org.gnome.SwellFoop"
