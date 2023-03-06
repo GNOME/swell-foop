@@ -2,19 +2,19 @@
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 # Copyright (C) 2009, 2010, 2012, 2016, 2017 Free Software Foundation, Inc.
 # Copyright (C) 2010, 2012 Krasimir Chonov <mk2616@abv.bg>.
-# Copyright (C) 2022 Alexander Shopov <ash@kambanaria.org>.
+# Copyright (C) 2022, 2023 Alexander Shopov <ash@kambanaria.org>.
 # Evgeni Boevski <linkej@yahoo.com>, 2002, 2003.
 # Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2004, 2005, 2006.
-# Alexander Shopov <ash@kambanaria.org>, 2007, 2008, 2009, 2010, 2012, 2016, 2017р 2022.
+# Alexander Shopov <ash@kambanaria.org>, 2007, 2008, 2009, 2010, 2012, 2016, 2017, 2022, 2023.
 # Yavor Doganov <yavor@gnu.org>, 2008.
 # Krasimir Chonov <mk2616@abv.bg>, 2010, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: swell-foop gnome-41\n"
+"Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2022-10-06 21:35+0000\n"
-"PO-Revision-Date: 2022-10-12 22:30+0200\n"
+"POT-Creation-Date: 2023-03-05 17:47+0000\n"
+"PO-Revision-Date: 2023-03-06 11:20+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -60,9 +60,9 @@ msgstr ""
 "„Еднакви“ се играе бързо. Може да промените размера на игралното поле за по-"
 "продължителна игра."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:71
-msgid "The GNOME Project"
-msgstr "Проектът GNOME"
+#: data/org.gnome.SwellFoop.appdata.xml.in:81
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
