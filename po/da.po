@@ -1,5 +1,5 @@
 # Danish translation for swell-foop.
-# Copyright (C) 1998-2019 Free Software Foundation, Inc.
+# Copyright (C) 1998-2019, 2022 Free Software Foundation, Inc.
 # This file is distributed under the same license as the swell-foop package.
 # Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
 # Kenneth Christiansen <kenneth@ripen.dk>, 1998-2001.
@@ -7,7 +7,7 @@
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2019.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2019, 2022.
 # scootergrisen, 2020.
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-09-29 20:06+0000\n"
-"PO-Revision-Date: 2020-10-31 00:00+0200\n"
-"Last-Translator: scootergrisen\n"
+"POT-Creation-Date: 2023-01-25 22:11+0000\n"
+"PO-Revision-Date: 2023-02-26 14:24+0100\n"
+"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -64,9 +64,9 @@ msgstr ""
 "Swell Foop er altid meget hurtigt at spille, men du kan få det til at vare "
 "lidt længere ved at ændre brætstørrelse."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "GNOME-projektet"
+#: data/org.gnome.SwellFoop.appdata.xml.in:81
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
@@ -338,12 +338,12 @@ msgid "Redo"
 msgstr "Omgør"
 
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:415
+#: src/game-view.vala:439
 msgid "_Play Again"
 msgstr "_Spil igen"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:607
+#: src/game-view.vala:631
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -351,28 +351,28 @@ msgstr[0] "%u point"
 msgstr[1] "%u point"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:610
+#: src/game-view.vala:634
 msgid "Game Over!"
 msgstr "Spillet er slut!"
 
 #. Translators: command-line option description, see 'swell-foop --help'
-#: src/swell-foop.vala:26
+#: src/swell-foop.vala:25
 msgid "Print release version and exit"
 msgstr "Vis udgivelsesversion og afslut"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:96 src/swell-foop.vala:104
+#: src/swell-foop.vala:106 src/swell-foop.vala:114
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:100
+#: src/swell-foop.vala:110
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
 #. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:113
+#: src/swell-foop.vala:123
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -381,12 +381,12 @@ msgstr ""
 "Du ved, de lyser op, du klikker på dem og de forsvinder!"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:117
+#: src/swell-foop.vala:127
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Ophavsret © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:121
+#: src/swell-foop.vala:131
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -452,3 +452,6 @@ msgstr[1] "%s, %d farver"
 #: src/window.vala:400
 msgid "Type"
 msgstr "Type"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME-projektet"
