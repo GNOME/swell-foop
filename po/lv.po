@@ -5,13 +5,13 @@
 # Peteris Krisjanis <peteris.krisjanis@os.lv>, 2002.
 # Raivis Dejus <orvils@gmail.com>, 2006, 2007.
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2010, 2011.
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2020.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-06-02 07:25+0000\n"
-"PO-Revision-Date: 2020-09-15 21:31+0300\n"
+"POT-Creation-Date: 2023-01-25 22:11+0000\n"
+"PO-Revision-Date: 2023-03-24 22:54+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
 " 2);\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Poedit-Language: Latvian\n"
 "X-Poedit-Country: LATVIA\n"
 
@@ -60,9 +60,9 @@ msgstr ""
 "Swell Foop ir vienmēr ātra spēle, bet to var padarīt garāku, mainot galdiņa "
 "izmēru."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "GNOME projekts"
+#: data/org.gnome.SwellFoop.appdata.xml.in:81
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
@@ -122,7 +122,6 @@ msgstr "Lietot iespaidīgāku, bet lēnāku, animāciju."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
 #: data/org.gnome.SwellFoop.gschema.xml:47
-#| msgid "Start a new game"
 msgid "Saved game"
 msgstr "Saglabātā spēle"
 
@@ -133,9 +132,9 @@ msgid ""
 "initial board, an index in the history, and the history of actions saved by "
 "an array of coords."
 msgstr ""
-"Vērtība ir “nothing” (nekas), ja nav saglabātas spēles. Citādi vērtība satur"
-" sākotnējo galdiņa stāvokli, vēstures indeksu un darbību vēsturi, kas ir"
-" saglabātas kā koordinātu masīvs."
+"Vērtība ir “nothing” (nekas), ja nav saglabātas spēles. Citādi vērtība satur "
+"sākotnējo galdiņa stāvokli, vēstures indeksu un darbību vēsturi, kas ir "
+"saglabātas kā koordinātu masīvs."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run-stack.ui:43
@@ -197,7 +196,6 @@ msgstr "Galvenās funkcijas"
 
 #. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
 #: data/ui/help-overlay.ui:91
-#| msgid "Start a new game"
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Sākt jaunu spēli"
@@ -222,21 +220,18 @@ msgstr "Tastatūras saīsnes"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:121
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Palīdzība"
 
 #. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
 #: data/ui/help-overlay.ui:129
-#| msgid "_About"
 msgctxt "shortcut window"
 msgid "About"
 msgstr "Par"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
 #: data/ui/help-overlay.ui:137
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Iziet"
@@ -250,7 +245,6 @@ msgstr "Jau_na spēle"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
 #: data/ui/swell-foop.ui:30
-#| msgid "Setup"
 msgid "_Setup"
 msgstr "Ie_statīt"
 
@@ -271,7 +265,6 @@ msgstr "_Liels (20 × 15)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:54
-#| msgid "_Number of colors:"
 msgid "_Two colors"
 msgstr "_Divas krāsas"
 
@@ -282,7 +275,6 @@ msgstr "_Trīs krāsas"
 
 #. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
 #: data/ui/swell-foop.ui:66
-#| msgid "_Number of colors:"
 msgid "_Four colors"
 msgstr "Četras _krāsas"
 
@@ -293,19 +285,16 @@ msgstr "Labākie _rezultāti"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/swell-foop.ui:88
-#| msgid "Appearance"
 msgid "A_ppearance"
 msgstr "_Izskats"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:92
-#| msgid "Colors"
 msgid "_Colors"
 msgstr "_Krāsas"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
 #: data/ui/swell-foop.ui:98
-#| msgid "Shapes and Colors"
 msgid "_Shapes and Colors"
 msgstr "Figūra_s un krāsas"
 
@@ -345,12 +334,12 @@ msgid "Redo"
 msgstr "Atatsaukt"
 
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:415
+#: src/game-view.vala:439
 msgid "_Play Again"
 msgstr "S_pēlēt vēlreiz:"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:607
+#: src/game-view.vala:631
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
@@ -359,28 +348,28 @@ msgstr[1] "%u punkti"
 msgstr[2] "%u punktu"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:610
+#: src/game-view.vala:634
 msgid "Game Over!"
 msgstr "Spēles Beigas!"
 
 #. Translators: command-line option description, see 'swell-foop --help'
-#: src/swell-foop.vala:26
+#: src/swell-foop.vala:25
 msgid "Print release version and exit"
 msgstr "Parādīt informāciju par laidienu un iziet"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:96 src/swell-foop.vala:104
+#: src/swell-foop.vala:106 src/swell-foop.vala:114
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:100
+#: src/swell-foop.vala:110
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
 #. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:113
+#: src/swell-foop.vala:123
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -389,12 +378,12 @@ msgstr ""
 "Nu zini, to kur tie visi iedegās, uz kuriem uzklikšķina, un tie izgaist!"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:117
+#: src/swell-foop.vala:127
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Autortiesības © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:121
+#: src/swell-foop.vala:131
 msgid "translator-credits"
 msgstr ""
 "Raivis Dejus <orvils@gmail.com>\n"
@@ -443,8 +432,6 @@ msgstr "At_celt"
 
 #: src/window.vala:389
 #, c-format
-#| msgid "%u × %u, %u color"
-#| msgid_plural "%u × %u, %u colors"
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
 msgstr[0] "%s, %d krāsa"
@@ -455,6 +442,9 @@ msgstr[2] "%s, %d krāsu"
 #: src/window.vala:400
 msgid "Type"
 msgstr "Tips"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME projekts"
 
 #~| msgid "Swell Foop"
 #~ msgid "org.gnome.SwellFoop"
