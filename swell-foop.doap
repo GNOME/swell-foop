@@ -8,7 +8,7 @@
   <shortdesc xml:lang="en">Clear the screen by removing groups of colored and shaped tiles</shortdesc>
   <description xml:lang="en">Clear the screen by removing groups of colored and shaped tiles</description>
   <homepage rdf:resource="https://wiki.gnome.org/Apps/Swell Foop" />
-  <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/games-list" />
+  <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="http://download.gnome.org/sources/swell-foop/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/swell-foop/issues" />
   <programming-language>Vala</programming-language>
