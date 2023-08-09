@@ -1,0 +1,512 @@
+# Turkish translation for swell-foop.
+# Copyright (C) 2023 swell-foop's COPYRIGHT HOLDER
+# This file is distributed under the same license as the swell-foop package.
+#
+# Sabri Ünal <libreajans@gmail.com>, 2023.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: swell-foop master\n"
+"POT-Creation-Date: 2023-02-21 11:06+0000\n"
+"PO-Revision-Date: 2023-02-24 06:26+0300\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. (itstool) path: p/link
+#: C/legal.xml:5
+msgid "Creative Commons Attribution-ShareAlike 4.0 International"
+msgstr "Creative Commons Attribution-ShareAlike 4.0 International"
+
+#. (itstool) path: license/p
+#: C/legal.xml:4
+msgid "This work is licensed under a <_:link-1/> license."
+msgstr "Bu çalışma <_:link-1/> ile lisanslanmıştır."
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Sabri Ünal <libreajans@gmail.com>, 2023.\n"
+"Emin Tufan Çetin <etcetin@gmail.com>, 2023."
+
+# Belgeyi hazırlayan kişi hintlişmiş. Onun adı.
+#. (itstool) path: credit/name
+#: C/index.page:13 C/introduction.page:11 C/playing-game.page:11
+#: C/preferences.page:10 C/score.page:11 C/start.page:10 C/strategy.page:10
+msgid "Roopa"
+msgstr "Roopa"
+
+#. (itstool) path: info/desc
+#: C/index.page:19
+msgid "Swell Foop help."
+msgstr "Swell Foop yardım."
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Swell Foop"
+msgstr "<_:media-1/> Swell Foop"
+
+#. (itstool) path: page/p
+#: C/index.page:28
+msgid ""
+"Swell Foop is a puzzle game, previously known as Same GNOME. To learn more "
+"about the game, check the <link xref=\"introduction\">game introduction</"
+"link>."
+msgstr ""
+"Swell Foop, daha önce Same GNOME olarak bilinen bir bulmaca oyunudur. Oyun "
+"hakkında daha çok bilgi için <link xref=\"introduction\">oyun tanıtımına</"
+"link> bakın."
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Playing Swell Foop"
+msgstr "Swell Foop Oynama"
+
+#. (itstool) path: section/title
+#: C/index.page:36
+msgid "Advanced settings"
+msgstr "Gelişmiş Ayarlar"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Useful tips"
+msgstr "Kullanışlı ipuçları"
+
+#. (itstool) path: credit/years
+#: C/introduction.page:13 C/playing-game.page:13 C/preferences.page:12
+#: C/score.page:13 C/start.page:12 C/strategy.page:12
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/introduction.page:18
+msgid "Know about <app>Swell Foop</app>."
+msgstr "<app>Swell Foop</app> hakkında bilgi edinin."
+
+#. (itstool) path: page/title
+#: C/introduction.page:22
+msgid "Introduction"
+msgstr "Tanıtım"
+
+#. (itstool) path: page/p
+#: C/introduction.page:24
+msgid ""
+"The goal of the game is to remove as many objects as possible in as few "
+"moves as possible. Adjacent objects of the same color form a group, and all "
+"objects from a group get removed together. The remaining objects then "
+"collapse to fill in the gaps and form new groups. You cannot remove objects "
+"that are not adjacent to another object of the same color."
+msgstr ""
+"Oyunun amacı, en az hamlede en çok nesneyi kaldırmaktır. Aynı renkteki "
+"bitişik nesneler grup oluşturur ve gruptaki tüm nesneler birlikte "
+"kaldırılır. Kalan nesneler daha sonra boşlukları doldurmak ve yeni gruplar "
+"oluşturmak için çöker. Aynı renkteki başka nesneye bitişik olmayan nesneleri "
+"kaldıramazsınız."
+
+#. (itstool) path: info/desc
+#: C/playing-game.page:18
+msgid "How to play?"
+msgstr "Nasıl oynanır?"
+
+#. (itstool) path: page/title
+#: C/playing-game.page:22
+msgid "Playing <app>Swell Foop</app>"
+msgstr "<app>Swell Foop</app> oynama"
+
+#. (itstool) path: page/p
+#: C/playing-game.page:24
+msgid ""
+"The game starts with a grid of objects depending on the size of board you "
+"select. You can clear the board as follows:"
+msgstr ""
+"Oyun, seçtiğiniz tahtanın boyutuna bağlı bir nesne ızgarasıyla başlar. "
+"Tahtayı şu şekilde temizleyebilirsiniz:"
+
+#. (itstool) path: item/p
+#: C/playing-game.page:27
+msgid ""
+"You can remove groups of adjacent objects of the same type by clicking any "
+"tile of the group or by pressing the <key>space bar</key>."
+msgstr ""
+"Grubun herhangi bir döşemesine tıklayarak ya da <key>boşluk çubuğuna</key> "
+"basarak aynı türden bitişik nesne gruplarını kaldırabilirsiniz."
+
+#. (itstool) path: item/p
+#: C/playing-game.page:29
+msgid ""
+"Once a group has been removed the objects above them fall down to fill the "
+"space. If an entire column is cleared then the objects slide leftward to "
+"fill the gap."
+msgstr ""
+"Bir grup kaldırıldıktan sonra, üstlerindeki nesneler boşluğu doldurmak için "
+"aşağı düşer. Tüm sütun temizlenirse, nesneler boşluğu doldurmak için sola "
+"doğru kayar."
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/playing-game.page:33
+msgctxt "_"
+msgid ""
+"external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
+msgstr ""
+"external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
+
+#. (itstool) path: info/desc
+#: C/preferences.page:17
+msgid "Change game settings."
+msgstr "Oyun ayarlarını değiştir."
+
+#. (itstool) path: page/title
+#: C/preferences.page:21
+msgid "Game settings"
+msgstr "Oyun ayarları"
+
+#. (itstool) path: page/p
+#: C/preferences.page:23
+msgid "You can change the game look according to your preferences."
+msgstr "Oyun görünümünü tercihlerinize göre değiştirebilirsiniz."
+
+#. (itstool) path: section/title
+#: C/preferences.page:26
+msgid "Change the board size"
+msgstr "Tahta boyutunu değiştir"
+
+#. (itstool) path: section/p
+#: C/preferences.page:27
+msgid "You can set the size of the board according to your preference:"
+msgstr "Tahtanın boyutunu tercihinize göre ayarlayabilirsiniz:"
+
+#. (itstool) path: item/p
+#: C/preferences.page:29 C/preferences.page:39
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Setup</gui></guiseq>."
+msgstr ""
+"<guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Kurulum</gui></guiseq>ʼu seçin."
+
+#. (itstool) path: item/p
+#: C/preferences.page:31
+msgid "The default board size is <gui>Small (6 x 5)</gui>."
+msgstr "Öntanımlı tahta boyutu <gui>Küçük (6 x 5)</gui>ʼdir."
+
+#. (itstool) path: section/title
+#: C/preferences.page:36
+msgid "Change the number of colors"
+msgstr "Renk sayısını değiştir"
+
+#. (itstool) path: section/p
+#: C/preferences.page:37
+msgid "You can increase the number of different objects in the game."
+msgstr "Oyundaki nesne çeşitliliğini artırabilirsiniz."
+
+#. (itstool) path: item/p
+#: C/preferences.page:41
+msgid ""
+"The default number of colors is 3. You can change it from <gui>Number of "
+"colors</gui> under <gui>Setup</gui>."
+msgstr ""
+"Öntanımlı renk sayısı 3ʼtür. Bunu <gui>Kurulum</gui> altındaki <gui>Renk "
+"sayısı</gui>ʼndan değiştirebilirsiniz."
+
+#. (itstool) path: section/title
+#: C/preferences.page:47
+msgid "Change the look"
+msgstr "Görünümü değiştir"
+
+#. (itstool) path: section/p
+#: C/preferences.page:48
+msgid "To change the appearance of the objects:"
+msgstr "Nesnelerin görünümünü değiştirmek için:"
+
+#. (itstool) path: item/p
+#: C/preferences.page:50 C/preferences.page:62
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Appearance</gui></guiseq>."
+msgstr ""
+"<guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Görünüm</gui></guiseq>ʼü seçin."
+
+#. (itstool) path: item/p
+#: C/preferences.page:52
+msgid "The default theme is <gui>Shapes and Colors</gui>."
+msgstr "Öntanımlı tema <gui>Şekiller ve Renkler</gui>ʼdir."
+
+#. (itstool) path: section/title
+#: C/preferences.page:57
+msgid "Change the speed"
+msgstr "Hızı değiştir"
+
+#. (itstool) path: section/p
+#: C/preferences.page:58
+msgid ""
+"The default animation is designed to be fast. If it is too fast for you, "
+"then you might like playing slower. In this case, you can slow down the game "
+"animation."
+msgstr ""
+"Öntanımlı animasyon hızlı olacak şekilde tasarlanmıştır. Sizin için çok "
+"hızlıysa, daha yavaş oynamak isteyebilirsiniz. Bu durumda oyun animasyonunu "
+"yavaşlatabilirsiniz."
+
+#. (itstool) path: item/p
+#: C/preferences.page:64
+msgid ""
+"To slow down the animations, uncheck the <gui style=\"checkbox\">Zealous "
+"Animation</gui> checkbox."
+msgstr ""
+"Animasyonları yavaşlatmak için <gui style=\"checkbox\">Gayretli Candırma</"
+"gui> onay kutusunun işaretini kaldırın."
+
+#. (itstool) path: info/desc
+#: C/score.page:18
+msgid "Check out your scores."
+msgstr "Puanınızı denetleyin."
+
+#. (itstool) path: page/title
+#: C/score.page:22
+msgid "Scores"
+msgstr "Puanlar"
+
+#. (itstool) path: page/p
+#: C/score.page:24
+msgid ""
+"Your current score is visible in the game window titlebar. To view scores "
+"obtained in previous games:"
+msgstr ""
+"Geçerli puanınız oyun penceresi başlık çubuğunda görünür. Önceki oyunlarda "
+"elde edilen puanları görüntülemek için:"
+
+#. (itstool) path: item/p
+#: C/score.page:27
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">High Scores</gui></guiseq>."
+msgstr ""
+"<guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem\">Yüksek "
+"Puanlar</gui></guiseq>ʼı seçin."
+
+#. (itstool) path: item/p
+#: C/score.page:29
+msgid ""
+"The dialog by default displays scores for <gui>Small, 3 colors </gui> game. "
+"To view the scores for other board sizes, select the board size from the "
+"menu at the top of the dialog for the board you wish to see the scores for."
+msgstr ""
+"İletişim kutusunda öntanımlı olarak <gui>Küçük, 3 renk </gui> oyunu için "
+"puanlar görüntülenir. Diğer pano boyutlarının puanlarını görüntülemek için, "
+"puanlarını görmek istediğiniz panonun iletişim kutusunun üst kısmındaki "
+"menüden pano boyutunu seçin."
+
+#. (itstool) path: section/title
+#: C/score.page:36
+msgid "Scoring"
+msgstr "Puanlama"
+
+#. (itstool) path: section/p
+#: C/score.page:38
+msgid "Scoring is done based on the objects you delete."
+msgstr "Puanlama, sildiğiniz nesnelere göre yapılır."
+
+#. (itstool) path: td/p
+#: C/score.page:42
+msgid "Number of Objects"
+msgstr "Nesne Sayısı"
+
+#. (itstool) path: td/p
+#: C/score.page:43
+msgid "Points Scored"
+msgstr "Kazanılan Puan"
+
+#. (itstool) path: td/p
+#: C/score.page:46
+msgid "2"
+msgstr "2"
+
+#. (itstool) path: td/p
+#: C/score.page:47
+msgid "0"
+msgstr "0"
+
+#. (itstool) path: td/p
+#: C/score.page:50
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/score.page:51
+msgid "1"
+msgstr "1"
+
+#. (itstool) path: td/p
+#: C/score.page:54 C/score.page:55
+msgid "4"
+msgstr "4"
+
+#. (itstool) path: td/p
+#: C/score.page:58
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/score.page:59 C/score.page:74
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/score.page:62
+msgid "6"
+msgstr "6"
+
+#. (itstool) path: td/p
+#: C/score.page:63
+msgid "16"
+msgstr "16"
+
+#. (itstool) path: td/p
+#: C/score.page:66
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/score.page:67
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/score.page:70
+msgid "8"
+msgstr "8"
+
+#. (itstool) path: td/p
+#: C/score.page:71
+msgid "36"
+msgstr "36"
+
+#. (itstool) path: td/p
+#: C/score.page:75
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/score.page:78 C/score.page:79
+msgid "⋮"
+msgstr "⋮"
+
+#. (itstool) path: td/p
+#: C/score.page:82
+msgid "n"
+msgstr "n"
+
+#. (itstool) path: td/p
+#: C/score.page:83
+msgid "(n-2)^2"
+msgstr "(n-2)^2"
+
+#. (itstool) path: note/p
+#: C/score.page:87
+msgid "There is a 1000 point bonus on clearing the board."
+msgstr "Tahtayı temizlemek 1000 hediye puan kazandırır."
+
+#. (itstool) path: info/desc
+#: C/start.page:17
+msgid "Play another game."
+msgstr "Başka oyun oyna."
+
+#. (itstool) path: page/title
+#: C/start.page:21
+msgid "Start a new game"
+msgstr "Yeni oyun başlat"
+
+#. (itstool) path: page/p
+#: C/start.page:23
+msgid "You can play <app>Swell Foop</app> all over again. To start a new game:"
+msgstr ""
+"<app>Swell Foop</app> oyununu baştan oynayabilirsiniz. Yeni oyun başlatmak "
+"için:"
+
+#. (itstool) path: item/p
+#: C/start.page:26
+msgid ""
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">New Game</gui></guiseq>."
+msgstr ""
+"<guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem\">Yeni "
+"Oyun</gui></guiseq>ʼu seçin."
+
+#. (itstool) path: info/desc
+#: C/strategy.page:17
+msgid "Crack the game using strategies."
+msgstr "Stratejileri kullanarak oyunu kazanın."
+
+#. (itstool) path: page/title
+#: C/strategy.page:21
+msgid "Strategy"
+msgstr "Strateji"
+
+#. (itstool) path: page/p
+#: C/strategy.page:23
+msgid ""
+"The most important rule when aiming for a high score is to think ahead. Each "
+"group you remove will form and destroy other groups. Some tips to play "
+"smartly are:"
+msgstr ""
+"Yüksek puanı hedeflerken en önemli kural ileriyi düşünmektir. Kaldırdığınız "
+"her grup, yeni gruplar oluşturacak ve diğer grupları yok edecektir. Akıllıca "
+"oynamak için bazı ipuçları:"
+
+#. (itstool) path: item/p
+#: C/strategy.page:27
+msgid ""
+"Try to remove higher groups first, unless removing another group will make "
+"it larger. Vertically aligned objects can't be misaligned, but horizontal "
+"arrangements can."
+msgstr ""
+"Başka grubu kaldırmak grubu büyütmeyecekse, önce daha yüksek grupları "
+"kaldırmayı deneyin. Dikey hizalanmış nesneler yanlış hizalanamaz, ancak "
+"yatay nesneler yanlış hizalanabilir."
+
+#. (itstool) path: item/p
+#: C/strategy.page:30
+msgid ""
+"Since the score increases quadratically, big groups of objects will score "
+"more."
+msgstr ""
+"Puan iki katı olarak arttığından, büyük nesne grupları daha fazla puan "
+"kazandırır."
+
+#. (itstool) path: item/p
+#: C/strategy.page:32
+msgid ""
+"If you have a choice between merging two groups of two into four or just "
+"adding one more to the group of six, then you should add the single object. "
+"Even though the groups of two you are left with score no points, the bigger "
+"group scores more overall."
+msgstr ""
+"İki kişilik iki grubu dörde birleştirmek ya da altılı gruba bir tane daha "
+"eklemek arasında bir seçeneğiniz varsa, tek nesneyi eklemelisiniz. İkili "
+"gruplar puansız kalsa da, daha büyük grup genel olarak daha fazla puan "
+"kazandırır."
+
+#. (itstool) path: note/p
+#: C/strategy.page:39
+msgid ""
+"Don't forget the thousand point bonus for clearing the board. To get 1000 "
+"points from a single group you need 34 objects. You are very unlikely to be "
+"in a position where you have to sacrifice a group that large to clear the "
+"board."
+msgstr ""
+"Tahtayı temizlemek için bin puan hediyesini unutma. Tek gruptan 1000 puan "
+"almak için 34 nesneye ihtiyacın var. Tahtayı temizlemek için bu kadar büyük "
+"bir grubu feda etmek zorunda kalacağınız bir konumda olmanız pek olası "
+"değildir."
