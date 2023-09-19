@@ -3,6 +3,7 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
+    "sdk-extensions": [ "org.freedesktop.Sdk.Extension.vala-nightly" ],
     "command" : "swell-foop",
     "tags" : [
         "nightly"
@@ -18,61 +19,24 @@
         "--talk-name=ca.desrt.dconf",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
+    "build-options": {
+        "prepend-path": "/usr/lib/sdk/vala-nightly/bin/",
+        "prepend-ld-library-path": "/usr/lib/sdk/vala-nightly/lib"
+    },
     "modules" : [
         {
-            "name": "cogl",
-            "config-opts": [
-                "--disable-cogl-gst",
-                "--enable-xlib-egl-platform",
-                "--enable-wayland-egl-platform"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/cogl.git",
-                    "branch": "cogl-1.22"
-                }
-            ]
-        },
-        {
-            "name": "clutter",
-            "config-opts": [
-                "--enable-egl-backend",
-                "--enable-wayland-backend"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/clutter.git"
-                }
-            ]
-        },
-        {
-            "name": "clutter-gtk",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/clutter-gtk.git"
-                }
-            ]
-        },
-        {
-            "name": "clutter-gst",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/clutter-gst.git",
-                    "branch": "clutter-gst-3.0"
-                }
-            ]
-        },
-        {
             "name": "libgee",
-            "config-opts": ["--enable-introspection=no"],
+            "buildsystem": "autotools",
+            "build-options": {
+                "env": {
+                    "ACLOCAL_PATH" : "/usr/lib/sdk/vala-nightly/share/aclocal"
+                }
+            },
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/libgee.git"
+                    "url": "https://gitlab.gnome.org/GNOME/libgee.git",
+                    "branch": "main"
                 }
             ]
         },
@@ -82,8 +46,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "branch": "games-1-8",
-                    "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git"
+                    "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git",
+                    "tag": "2.0.0"
                 }
             ]
         },

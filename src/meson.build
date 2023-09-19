@@ -2,7 +2,7 @@ sources = [
   'game.vala',
   'game-view.vala',
   'swell-foop.vala',
-  'window.vala',
+  'window.vala'
 ]
 
 resource_files = files ('@0@.gresource.xml'.format('org.gnome.SwellFoop'))
@@ -16,10 +16,9 @@ deps = [
   glib_dep,
   gobject_dep,
   gtk_dep,
-  clutter_dep,
-  clutter_gtk_dep,
-  lggs_dep,
+  libgnome_games_support_dep,
   gee_dep,
+  pangocairo_dep
 ]
 
 c_flags = [
@@ -32,5 +31,6 @@ executable('swell-foop', sources + resources,
   dependencies: deps,
   include_directories: config_h_inc,
   c_args: c_flags,
+  vala_args: gtk_define + glib_define + target_glib,
   install: true,
 )

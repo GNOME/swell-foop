@@ -2,6 +2,7 @@
    This file is part of Swell-Foop.
 
    Copyright (C) 2020 Arnaud Bonatti <arnaud.bonatti@gmail.com>
+   Copyright (C) 2023 Ben Corby
 
    Swell-Foop is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -17,16 +18,112 @@
    along with Swell-Foop.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-using Gtk;
+using Gtk; /* designed for Gtk 4, link with libgtk-4-dev or gtk4-devel */
+
+delegate bool KeypressHandlerFunction (uint a, uint b, out bool remove_handler);
 
 [GtkTemplate (ui = "/org/gnome/SwellFoop/ui/swell-foop.ui")]
 private class SwellFoopWindow : ApplicationWindow
 {
     [GtkChild] private unowned HeaderBar    headerbar;
-    [GtkChild] private unowned Box          main_box;
-    [GtkChild] private unowned MenuButton   hamburger_button;
+    [GtkChild] private unowned Overlay      overlay;
+    [GtkChild] internal unowned MenuButton  hamburger_button;
 
     private GLib.Settings settings;
+
+    /* keyboard interface */
+    class DelegateStack 
+    {
+        internal class DelegateStackIterator
+        {
+            /* variables */
+            private Node? pIterator; /* pointer to next node */
+            bool first_next;
+
+            /* public functions */
+            public DelegateStackIterator (DelegateStack p)
+            {
+                pIterator = p.pHead;
+                first_next = true;
+            }
+            
+            public bool next ()
+            {
+                if (pIterator == null)
+                    return false;
+                else if (first_next)
+                {
+                    first_next = !first_next;
+                    return true;
+                }
+                else
+                {
+                    pIterator = pIterator.pNext;
+                    return pIterator != null; 
+                }
+            }
+            
+            public KeypressHandlerFunction @get ()
+            {
+                return (KeypressHandlerFunction)(pIterator.keypress_handler);
+            }
+        }
+
+        struct Node
+        {
+            KeypressHandlerFunction keypress_handler; /* to do, circumnavigate compiler warning message */
+            Node? pNext;
+        }
+        Node? pHead = null;
+
+        internal void push (KeypressHandlerFunction handler)
+        {
+            if (pHead == null)
+                pHead = { (KeypressHandlerFunction)handler, null};
+            else
+                pHead = { (KeypressHandlerFunction)handler, pHead};
+        }
+        /*
+        internal bool pop ()
+        {
+            if (pHead == null)
+                return false;
+            else
+            {
+                pHead = pHead.pNext;
+                return true;
+            }
+        }
+        */
+        internal void remove (KeypressHandlerFunction handler)
+        {
+            if (pHead != null && pHead.keypress_handler == handler)
+                pHead = pHead.pNext;
+            else if (pHead != null && pHead.pNext != null)
+            {
+                var pTrail = pHead;
+                for (var p = pTrail.pNext; p != null;)
+                {
+                    if (p.keypress_handler == handler)
+                    {
+                        pTrail.pNext = p.pNext;
+                        break;
+                    }
+                    else
+                    {
+                         pTrail = p;
+                         p = p.pNext;
+                    }
+                }
+            }
+        }
+
+        public DelegateStackIterator iterator ()
+        {
+            return new DelegateStackIterator (this);
+        }
+    }
+    DelegateStack keypress_handlers = new DelegateStack ();
 
     /* Game being played */
     private Game? game = null;
@@ -81,11 +178,44 @@ private class SwellFoopWindow : ApplicationWindow
     {
         settings = new GLib.Settings ("org.gnome.SwellFoop");
 
+        hamburger_button.get_popover ().closed.connect (() =>
+        {
+            if (null != view)
+                set_focus (view);
+        });
+
         add_action_entries (win_actions, this);
         add_action (settings.create_action ("size"));
 
-        add_action (settings.create_action ("zealous"));
-        settings.changed ["zealous"].connect ((_settings, _key_name) => { view.set_is_zealous (_settings.get_boolean (_key_name)); });
+        set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
+        if (settings.get_boolean ("window-is-maximized"))
+            maximize ();
+
+        EventControllerKey key_controller = new EventControllerKey ();
+        key_controller.key_pressed.connect ((/*EventControllerKey*/controller,/*uint*/keyval,/*uint*/keycode,/*Gdk.ModifierType*/state)=>
+        {
+            DelegateStack handlers_to_remove = new DelegateStack ();
+            foreach (var handler in keypress_handlers)
+            {
+                bool remove_handler;
+                bool r = handler (keyval, keycode, out remove_handler);
+                if (remove_handler)
+                    handlers_to_remove.push (handler);
+                if (r)
+                {
+                    /* remove any handlers that need to be removed before we return */
+                    foreach (var h in handlers_to_remove)
+                        keypress_handlers.remove (h);
+                    return r;
+                }
+            }
+            /* remove any handlers that need to be removed before we return */
+            foreach (var handler in handlers_to_remove)
+                keypress_handlers.remove (handler);
+            return false;
+        });
+        ((Widget)(this)).add_controller (key_controller);
+        keypress_handlers.push (keypress);
 
         string theme = settings.get_string ("theme");
         if (theme != "colors" && theme != "shapesandcolors" && theme != "boringshapes")
@@ -97,15 +227,14 @@ private class SwellFoopWindow : ApplicationWindow
         SimpleAction colors_action = (SimpleAction) lookup_action ("change-colors");
         colors_action.set_state (new Variant.@string (colors.to_string ()));
 
-        add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
-
         init_scores ();
 
         /* show the current score */
         update_score_cb ();
 
-        /* Create a clutter renderer widget */
+        /* Create a cairo view */
         view = new GameView ();
+        add_keypress_handler (view.keypress);
         view.show ();
         var first_run = settings.get_boolean ("first-run");
 
@@ -113,13 +242,36 @@ private class SwellFoopWindow : ApplicationWindow
         {
             var stack = build_first_run_stack ();
             stack.add_named (view, "game");
-            main_box.pack_start (stack, true, true);
+            stack.set_hexpand (true);
+            stack.set_vexpand (true);
+            overlay.set_child (stack);
         }
         else
         {
-            main_box.pack_start (view, true, true);
-            init_keyboard ();
+            overlay.set_child (view);
         }
+        close_request.connect (()=>
+        {
+            settings.delay ();
+            // window state
+            int window_width;
+            int window_height;
+            get_default_size (out window_width, out window_height); 
+            settings.set_int ("window-width", window_width);
+            settings.set_int ("window-height", window_height);
+            settings.set_boolean ("window-is-maximized", maximized);
+            // game properties
+            settings.set_value ("saved-game", game.get_saved_game ());
+            settings.set_int ("colors", game.color_num);
+            for (uint8 i = 0; i < sizes.length; i++)
+                if (game.rows == sizes [i].rows && game.columns == sizes [i].columns)
+                {
+                    settings.set_string ("size", sizes [i].id);
+                    break;
+                }
+            settings.apply ();
+            return false;
+        });
     }
 
     internal SwellFoopWindow (Gtk.Application application)
@@ -127,17 +279,20 @@ private class SwellFoopWindow : ApplicationWindow
         Object (application: application);
 
         new_game (settings.get_value ("saved-game"));
+    }
 
-        init_motion ();
+    internal void add_keypress_handler (KeypressHandlerFunction handler)
+    {
+        keypress_handlers.push (handler);
     }
 
     private inline Stack build_first_run_stack ()
     {
         CssProvider css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
-        Gdk.Screen? gdk_screen = Gdk.Screen.get_default ();
+        Gdk.Display? gdk_screen = Gdk.Display.get_default ();
         if (gdk_screen != null) // else..?
-            StyleContext.add_provider_for_screen ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+            StyleContext.add_provider_for_display ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/first-run-stack.ui");
         var stack = (Stack) builder.get_object ("first_run_stack");
@@ -154,7 +309,6 @@ private class SwellFoopWindow : ApplicationWindow
               stack.set_transition_duration (500);
              /* */
             stack.set_visible_child_name ("game");
-            init_keyboard ();
             settings.set_boolean ("first-run", false);
         });
         return stack;
@@ -169,9 +323,6 @@ private class SwellFoopWindow : ApplicationWindow
         uint score = 0;
         if (game != null)
             score = game.score;
-
-        /* Translators: subtitle of the headerbar; the %u is replaced by the score */
-        headerbar.subtitle = _("Score: %u").printf (score);
     }
 
     private void complete_cb ()
@@ -212,6 +363,7 @@ private class SwellFoopWindow : ApplicationWindow
         game = new Game (size.rows,
                          size.columns,
                          (uint8) settings.get_int ("colors"),
+                         view,
                          saved_game);
         game_in_progress = game.score != 0;
         update_score_cb ();
@@ -221,10 +373,11 @@ private class SwellFoopWindow : ApplicationWindow
         game.complete.connect (complete_cb);
         game.started.connect (started_cb);
 
-        /* Initialize the themes needed by actors */
+        /* Initialize the view */
         view.set_theme_name (settings.get_string ("theme"));
-        view.set_is_zealous (settings.get_boolean ("zealous"));
         view.set_game ((!) game);
+        view.set_score (game.score);
+        view.set_window (this);
 
         /* Update undo and redo actions states */
         undo_action = (SimpleAction) lookup_action ("undo");
@@ -232,22 +385,6 @@ private class SwellFoopWindow : ApplicationWindow
 
         redo_action = (SimpleAction) lookup_action ("redo");
         game.bind_property ("can-redo", redo_action, "enabled", BindingFlags.SYNC_CREATE);
-    }
-
-    protected override void destroy ()
-    {
-        settings.delay ();
-        settings.set_value ("saved-game", game.get_saved_game ());
-        settings.set_int ("colors", game.color_num);
-        for (uint8 i = 0; i < sizes.length; i++)
-            if (game.rows == sizes [i].rows && game.columns == sizes [i].columns)
-            {
-                settings.set_string ("size", sizes [i].id);
-                break;
-            }
-        settings.apply ();
-
-        base.destroy ();
     }
 
     /*\
@@ -302,16 +439,17 @@ private class SwellFoopWindow : ApplicationWindow
         /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel” */
         dialog.add_button (_("_New Game"),  ResponseType.YES);
 
-        var result = dialog.run ();
-        dialog.destroy ();
-
-        if (result == ResponseType.YES)
-            new_game ();
+        dialog.response.connect ((r)=>
+        {
+            dialog.destroy ();
+            if (r == ResponseType.YES)
+                new_game ();
+        });
+        dialog.show ();
     }
 
     private inline void toggle_hamburger (/* SimpleAction action, Variant? variant */)
     {
-        hamburger_button.active = !hamburger_button.active;
     }
 
     private inline void undo (/* SimpleAction action, Variant? variant */)
@@ -327,49 +465,41 @@ private class SwellFoopWindow : ApplicationWindow
     /*\
     * * keyboard
     \*/
-
-    private EventControllerKey key_controller;          // for keeping in memory
-
-    private inline void init_keyboard ()
+    internal bool keypress (uint keyval, uint keycode, out bool remove_handler)
     {
-        key_controller = new EventControllerKey (this);
-        key_controller.key_pressed.connect (on_key_pressed);
-    }
-
-    private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
-    {
-        if (hamburger_button.get_active())
-            return false;
-
+        remove_handler = false;
         switch (keyval)
         {
             case Gdk.Key.F2:
                 new_game ();
-                break;
-
+                return true;
             case Gdk.Key.Up:
-                view.cursor_move ( 0,  1);
-                break;
+            case Gdk.Key.W: /* added key for left hand use */
+            case Gdk.Key.w: /* added key for left hand use */
+                view.cursor_move (0, 1);
+                return true;
             case Gdk.Key.Down:
-                view.cursor_move ( 0, -1);
-                break;
+            case Gdk.Key.S: /* added key for left hand use */
+            case Gdk.Key.s: /* added key for left hand use */
+                view.cursor_move (0, -1);
+                return true;
             case Gdk.Key.Left:
-                view.cursor_move (-1,  0);
-                break;
+            case Gdk.Key.A: /* added key for left hand use */
+            case Gdk.Key.a: /* added key for left hand use */
+                view.cursor_move (-1, 0);
+                return true;
             case Gdk.Key.Right:
-                view.cursor_move ( 1,  0);
-                break;
-
+            case Gdk.Key.D: /* added key for left hand use */
+            case Gdk.Key.d: /* added key for left hand use */
+                view.cursor_move (1, 0);
+                return true;
             case Gdk.Key.space:
             case Gdk.Key.Return:
                 view.cursor_click ();
-                return true; //handle this one to avoid activating the toolbar button
-
+                return true;
             default:
-                break;
+                return false;
         }
-
-        return false;
     }
 
     /*\
@@ -483,32 +613,27 @@ private class SwellFoopWindow : ApplicationWindow
         Games.Scores.Category? category = score_categories.lookup (id);
         if (category == null)
             assert_not_reached ();
-        scores_context.add_score.begin (game.score,
-                                        (!) category,
-                                        /* cancellable */ null,
-                                        (object, result) => {
-                try
+        else
+        {    
+            var scores = scores_context.get_high_scores (category);
+            var lowest_high_score = (scores.size == 10 ? scores.last ().score : -1);
+            scores_context.add_score.begin (game.score,
+                                            (!) category,
+                                            /* cancellable */ null,
+                                            (object, result) =>
                 {
-                    scores_context.add_score.end (result);
-                }
-                catch (Error e)
-                {
-                    warning ("Failed to add score: %s", e.message);
-                }
-                scores_context.run_dialog ();
-            });
-    }
-
-    /*\
-    * * motion control
-    \*/
-
-    private EventControllerMotion motion_controller;    // for keeping in memory
-
-    private inline void init_motion ()
-    {
-        motion_controller = new EventControllerMotion (view);
-        motion_controller.set_propagation_phase (PropagationPhase.CAPTURE);
-        motion_controller.leave.connect (view.board_left_cb);
+                    try
+                    {
+                        scores_context.add_score.end (result);
+                    }
+                    catch (Error e)
+                    {
+                        warning ("Failed to add score: %s", e.message);
+                    }
+                    if (game.score <= lowest_high_score)
+                        scores_context.run_dialog ();
+                });
+        }
     }
 }
+

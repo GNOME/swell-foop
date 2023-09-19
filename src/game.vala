@@ -21,9 +21,8 @@ private class Tile : Object
         private set
         {
             _closed = value;
-            /* Send close signal */
             if (_closed)
-                close (grid_x, grid_y);
+                view.close (grid_x, grid_y, color);
         }
     }
 
@@ -33,14 +32,14 @@ private class Tile : Object
     // Vala tip or bug: looks like "private" means "accessible only from this file"; but if both get and set are private, there is a warning
     internal bool visited { protected get; private set; default = false; }
 
-    /* Signals */
-    internal signal void move (uint8 old_x, uint8 old_y, uint8 new_x, uint8 new_y);
-    internal signal void close (uint8 grid_x, uint8 grid_y);
+    GameView view;
 
     /* Constructor */
-    internal Tile (uint8 x, uint8 y, uint8 c)
+    internal Tile (GameView view, uint8 x, uint8 y, uint8 c)
     {
         Object (grid_x: x, grid_y: y, color: c);
+        this.view = view;
+        view.appear (x, y, c);
     }
 
     /* Do not use this mothod to initialize the position. */
@@ -57,9 +56,8 @@ private class Tile : Object
             grid_x = new_x;
             grid_y = new_y;
 
-            /* Send move signal to actor in the view */
             if (!closed)
-                move (old_x, old_y, new_x, new_y);
+                view.move (old_x, old_y, new_x, new_y, color, this);
         }
     }
 }
@@ -70,7 +68,7 @@ private class Tile : Object
  */
 private class Game : Object
 {
-    private Tile? [,] current_board;
+    internal Tile? [,] current_board;
     private bool is_started = false;
 
     /* Game score */
@@ -92,15 +90,17 @@ private class Game : Object
     /* Property */
     public uint8 rows       { internal get; protected construct; }
     public uint8 columns    { internal get; protected construct; }
+    private GameView view;
 
-    internal signal void update_score (uint points_awarded);
+    internal signal void update_score (int points_awarded);
     internal signal void complete ();
     internal signal void started ();
 
     /* Constructor */
-    internal Game (uint8 rows, uint8 columns, uint8 color_num, Variant? saved_game)
+    internal Game (uint8 rows, uint8 columns, uint8 color_num, GameView view, Variant? saved_game)
     {
         Object (rows: rows, columns: columns, color_num: color_num);
+        this.view = view;
         if (saved_game == null || !load_saved_game ((!) saved_game))
             create_new_game ();
     }
@@ -137,7 +137,7 @@ private class Game : Object
         /* create the board of Tile instances */
         for (uint8 x = 0; x < columns; x++)
             for (uint8 y = 0; y < rows; y++)
-                current_board [y, x] = new Tile (x, y, initial_board [y, x]);
+                current_board [y, x] = new Tile (view, x, y, initial_board [y, x]);
 
         is_started = false;
     }
@@ -260,11 +260,6 @@ private class Game : Object
         return cl;
     }
 
-    internal Tile? get_tile (uint8 x, uint8 y)
-    {
-        return current_board [y, x];
-    }
-
     internal void remove_connected_tiles (Tile given_tile)
     {
         remove_connected_tiles_real (given_tile, /* skip history */ false);
@@ -292,6 +287,8 @@ private class Game : Object
 
         if (cl.length () < 2)
             return;
+
+        view.freeze ();
 
         foreach (unowned Tile tile in (!) cl)
             tile.closed = true;
@@ -360,6 +357,8 @@ private class Game : Object
             for (uint8 y = 0; y < rows; y++)
                 current_board [y, new_x] = null;
 
+        view.unfreeze ();
+
         increment_score_from_tiles ((uint16) cl.length ());
 
         if (!skip_history)
@@ -406,10 +405,7 @@ private class Game : Object
     private void increment_score (int variation)
     {
         score += variation;
-        if (variation > 0)
-            update_score (variation);
-        else
-            update_score (0);
+        update_score (variation);
     }
 
     /*\
@@ -470,7 +466,7 @@ private class Game : Object
         Tile? [,] current_board = new Tile? [rows, columns];
         for (uint8 i = 0; i < rows; i++)
             for (uint8 j = 0; j < columns; j++)
-                current_board [i, j] = new Tile (j, i, initial_board [i, j]);
+                current_board [i, j] = new Tile (view, j, i, initial_board [i, j]);
 
         iter = new VariantIter ((!) history_variant);
         while (iter != null)
@@ -503,7 +499,6 @@ private class Game : Object
         this.initial_board = initial_board;
         this.history_index = history_index;
 
-        update_score (score);
         is_started = true;
         return true;
     }
@@ -650,6 +645,8 @@ private class Game : Object
             increment_score (-1000);
         decrement_score_from_tiles ((uint16) history_entry.removed_tiles.length ());
 
+        view.freeze ();
+
         foreach (uint8 removed_column in history_entry.removed_columns)
         {
             for (uint8 j = columns - 1; j > removed_column; j--)
@@ -684,8 +681,10 @@ private class Game : Object
                 if (row == 0)
                     break;
             }
-            current_board [removed_tile.y, column] = new Tile (column, removed_tile.y, history_entry.color);
+            current_board [removed_tile.y, column] = new Tile (view, column, removed_tile.y, history_entry.color);
         }
+
+        view.unfreeze ();
 
         history_index++;
 

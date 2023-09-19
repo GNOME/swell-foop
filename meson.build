@@ -1,6 +1,6 @@
 project('swell-foop', ['c','vala'],
   version: '41.1',
-  meson_version: '>= 0.50',
+  meson_version: '>= 0.60',
   license: 'GPLv2+',
 )
 
@@ -12,21 +12,35 @@ datadir     = join_paths (get_option ('prefix'), get_option ('datadir'))
 pkgdatadir  = join_paths (datadir, 'swell-foop')
 bindir      = join_paths (get_option ('prefix'), get_option ('bindir'))
 
-podir   = join_paths(meson.source_root(), 'po')
-vapidir = join_paths(meson.source_root(), 'vapi')
+podir   = join_paths(meson.project_source_root(), 'po')
+vapidir = join_paths(meson.project_source_root(), 'vapi')
 
 # Dependencies
-
-glib_min_version = '2.36'
+glib_min_version = '2.74' # for Timeout.add_once
+glib_target_version = '2.78' # most recent tested version
+target_glib = '--target-glib=' + '@0@'.format(glib_target_version)
 
 glib_dep        = dependency('glib-2.0', version: '>= ' + glib_min_version)
 gmodule_dep     = dependency('gmodule-2.0')
 gobject_dep     = dependency('gobject-2.0')
-gtk_dep         = dependency('gtk+-3.0', version: '>= 3.24')
-clutter_dep     = dependency('clutter-1.0', version: '>= 1.14.0')
-clutter_gtk_dep = dependency('clutter-gtk-1.0', version: '>= 1.5.0')
-lggs_dep        = dependency('libgnome-games-support-1', version: '>= 1.7.1')
+gtk_dep         = dependency('gtk4', version: '>= 4.8')
+libgnome_games_support_dep = dependency('libgnome-games-support-2', version: '>= 2.0.0') # requires GTK >= 4.2
 gee_dep         = dependency('gee-0.8', version: '>= 0.14.0')
+pangocairo_dep  = dependency('pangocairo')
+
+# version defines of GTK4 for #if e.g. #if GTK_4_6_or_above
+gtk_version = gtk_dep.version()
+gtk_define = []
+foreach i : range(0, gtk_version.split('.')[1].to_int() + 1, 1)
+	gtk_define += '--define=GTK_4_' + i.to_string() + '_or_above'
+endforeach
+
+# version defines of GLIB for #if e.g. #if GLIB_2_74_or_above
+glib_version = glib_dep.version()
+glib_define = []
+foreach i : range(74, glib_version.split('.')[1].to_int() + 1, 1)
+	glib_define += '--define=GLIB_2_' + i.to_string() + '_or_above'
+endforeach
 
 # Check for compilers
 valac = meson.get_compiler('vala')

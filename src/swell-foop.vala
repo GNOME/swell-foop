@@ -39,7 +39,6 @@ public class SwellFoop : Gtk.Application
     public SwellFoop ()
     {
         Object (application_id: "org.gnome.SwellFoop", flags: ApplicationFlags.FLAGS_NONE);
-        add_option_group (Clutter.get_option_group_without_init ());
         add_main_option_entries (option_entries);
     }
 
@@ -89,15 +88,30 @@ public class SwellFoop : Gtk.Application
 
     private inline void help_cb (/* SimpleAction action, Variant? variant */)
     {
+#if GTK_4_10_or_above
+        launch_help.begin ((obj,res)=>
+        {
+            launch_help.end (res);
+        });
+#else /* GTK_4_0_or_above */
+        Gtk.show_uri (window, "help:swell-foop", Gdk.CURRENT_TIME);
+#endif
+    }
+
+#if GTK_4_10_or_above
+    async void launch_help ()
+    {
+        var help = new Gtk.UriLauncher ("help:swell-foop"); // requires GTK 4.10
         try
         {
-            Gtk.show_uri_on_window (window, "help:swell-foop", Gtk.get_current_event_time ());
+            yield help.launch (window, null);
         }
         catch (Error e)
         {
             warning ("Failed to show help: %s", e.message);
         }
     }
+#endif
 
     private inline void about_cb (/* SimpleAction action, Variant? variant */)
     {
@@ -139,12 +153,6 @@ public class SwellFoop : Gtk.Application
         Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
         Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (Config.GETTEXT_PACKAGE);
-
-        if (GtkClutter.init (ref args) != Clutter.InitError.SUCCESS)
-        {
-            warning ("Failed to initialise Clutter");
-            return Posix.EXIT_FAILURE;
-        }
 
         Environment.set_application_name (PROGRAM_NAME);
         Gtk.Window.set_default_icon_name ("org.gnome.SwellFoop");
