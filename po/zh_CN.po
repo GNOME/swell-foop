@@ -3,21 +3,22 @@
 # Aron Xu <aronxu@gnome.org>, 2011.
 # YunQiang Su <wzssyqa@gmail.com>, 2011, 2012.
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018.
+# lumingzh <lumingzh@qq.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-08-14 08:10+0000\n"
-"PO-Revision-Date: 2020-08-27 14:03-0400\n"
-"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"POT-Creation-Date: 2023-01-25 22:11+0000\n"
+"PO-Revision-Date: 2023-10-05 20:57+0800\n"
+"Last-Translator: lumingzh <lumingzh@qq.com>\n"
+"Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Gtranslator 45.2\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: title of the window displayed on the headerbar; name of the application
@@ -51,9 +52,9 @@ msgid ""
 "by changing the board size."
 msgstr "Swell Foop (消色块)玩起来很快，您可以改变棋盘大小延长玩的时间。"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "GNOME 项目"
+#: data/org.gnome.SwellFoop.appdata.xml.in:81
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
@@ -323,40 +324,40 @@ msgid "Redo"
 msgstr "重做"
 
 #. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:415
+#: src/game-view.vala:439
 msgid "_Play Again"
 msgstr "重玩(_P)"
 
 #. Label showing the number of points at the end of the game
-#: src/game-view.vala:607
+#: src/game-view.vala:631
 #, c-format
 msgid "%u point"
 msgid_plural "%u points"
 msgstr[0] "%u 分"
 
 #. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:610
+#: src/game-view.vala:634
 msgid "Game Over!"
 msgstr "游戏结束！"
 
 #. Translators: command-line option description, see 'swell-foop --help'
-#: src/swell-foop.vala:26
+#: src/swell-foop.vala:25
 msgid "Print release version and exit"
 msgstr "打印发布版本并退出"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:96 src/swell-foop.vala:104
+#: src/swell-foop.vala:106 src/swell-foop.vala:114
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:100
+#: src/swell-foop.vala:110
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
 #. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:113
+#: src/swell-foop.vala:123
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -365,19 +366,20 @@ msgstr ""
 "点击那些闪动的方块，它们就消失了！"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:117
+#: src/swell-foop.vala:127
 msgid "Copyright © 2009 Tim Horton"
-msgstr "Copyright © 2009 Tim Horton"
+msgstr "版权所有 © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:121
+#: src/swell-foop.vala:131
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
 "Ping Z <zpsigma@gmail.com>, 2007\n"
 "Xhacker Liu <liu.dongyuan@gmail.com>, 2010\n"
 "Mingcong Bai <jeffbai@aosc.xyz>, 2018\n"
-"Weiyi Xu <xuweiyi0923@gmail.com>, 2020"
+"Weiyi Xu <xuweiyi0923@gmail.com>, 2020\n"
+"lumingzh <lumingzh@qq.com>, 2023"
 
 #. Translators: name of a possible size of the grid
 #: src/window.vala:52
@@ -429,6 +431,9 @@ msgstr[0] "%s，%d 种颜色"
 #: src/window.vala:400
 msgid "Type"
 msgstr "类型"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME 项目"
 
 #~ msgid "Preferences"
 #~ msgstr "首选项"
