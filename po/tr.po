@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2022-11-05 18:37+0000\n"
-"PO-Revision-Date: 2023-01-22 14:36+0300\n"
+"POT-Creation-Date: 2023-01-25 22:11+0000\n"
+"PO-Revision-Date: 2023-10-16 00:43+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.4\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: title of the window displayed on the headerbar; name of the application
@@ -429,7 +429,7 @@ msgstr "Yeni bir tane başlatmak için bu oyun terk edilsin mi?"
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
 #: src/window.vala:300
 msgid "_Cancel"
-msgstr "_İptal"
+msgstr "İ_ptal"
 
 #: src/window.vala:389
 #, c-format
