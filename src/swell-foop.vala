@@ -88,20 +88,20 @@ public class SwellFoop : Gtk.Application
 
     private inline void help_cb (/* SimpleAction action, Variant? variant */)
     {
-#if GTK_4_10_or_above
+#if GTK_5_0_or_above
         launch_help.begin ((obj,res)=>
         {
             launch_help.end (res);
         });
-#else /* GTK_4_0_or_above */
+#else
         Gtk.show_uri (window, "help:swell-foop", Gdk.CURRENT_TIME);
 #endif
     }
 
-#if GTK_4_10_or_above
+#if GTK_5_0_or_above
     async void launch_help ()
     {
-        var help = new Gtk.UriLauncher ("help:swell-foop"); // requires GTK 4.10
+        var help = new Gtk.UriLauncher ("help:swell-foop");
         try
         {
             yield help.launch (window, null);
