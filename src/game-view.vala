@@ -111,8 +111,6 @@ private class GameView : DrawingArea
     bool game_complete = false;
     bool draw_highlight = false;
 
-    /* score variables */
-    uint score = 0;
     DateTime animate_score_delta;
     uint score_delta = 0;
 
@@ -432,7 +430,6 @@ private class GameView : DrawingArea
         this.game = game;
         game.update_score.connect ((/* int */ points) =>
         {
-            score += points;
             if (points > 0)
             {
                 animate_score_delta = new DateTime.now_utc ();
@@ -440,6 +437,7 @@ private class GameView : DrawingArea
                 redraw ();
             }
         });
+
         game.complete.connect (() =>
         {
             game_complete = true;
@@ -448,11 +446,6 @@ private class GameView : DrawingArea
         {
             game_complete = false;
         });
-    }
-
-    internal void set_score (uint s)
-    {
-        score = s;
     }
 
     internal void set_theme_name (string theme_name)

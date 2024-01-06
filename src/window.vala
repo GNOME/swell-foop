@@ -411,7 +411,6 @@ private class SwellFoopWindow : ApplicationWindow
         /* Initialize the view */
         view.set_theme_name (settings.get_string ("theme"));
         view.set_game ((!) game);
-        view.set_score (game.score);
 
         /* Update undo and redo actions states */
         undo_action = (SimpleAction) lookup_action ("undo");
