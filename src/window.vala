@@ -25,7 +25,6 @@ delegate bool KeypressHandlerFunction (uint a, uint b, out bool remove_handler);
 [GtkTemplate (ui = "/org/gnome/SwellFoop/ui/swell-foop.ui")]
 private class SwellFoopWindow : ApplicationWindow
 {
-    [GtkChild] private unowned HeaderBar    headerbar;
     [GtkChild] private unowned Overlay      overlay;
     [GtkChild] internal unowned MenuButton  hamburger_button;
 
