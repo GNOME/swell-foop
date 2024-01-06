@@ -14,15 +14,18 @@
     <file preprocess="xml-stripblanks" alias="colors/green.svg">../data/themes/colors/green.svg</file>
     <file preprocess="xml-stripblanks" alias="colors/red.svg">../data/themes/colors/red.svg</file>
     <file preprocess="xml-stripblanks" alias="colors/yellow.svg">../data/themes/colors/yellow.svg</file>
+    <file preprocess="xml-stripblanks" alias="colors/highlight.svg">../data/themes/colors/highlight.svg</file>
 
     <file preprocess="xml-stripblanks" alias="shapesandcolors/blue.svg">../data/themes/shapesandcolors/blue.svg</file>
     <file preprocess="xml-stripblanks" alias="shapesandcolors/green.svg">../data/themes/shapesandcolors/green.svg</file>
     <file preprocess="xml-stripblanks" alias="shapesandcolors/red.svg">../data/themes/shapesandcolors/red.svg</file>
     <file preprocess="xml-stripblanks" alias="shapesandcolors/yellow.svg">../data/themes/shapesandcolors/yellow.svg</file>
+    <file preprocess="xml-stripblanks" alias="shapesandcolors/highlight.svg">../data/themes/shapesandcolors/highlight.svg</file>
 
     <file preprocess="xml-stripblanks" alias="boringshapes/blue.svg">../data/themes/boringshapes/blue.svg</file>
     <file preprocess="xml-stripblanks" alias="boringshapes/green.svg">../data/themes/boringshapes/green.svg</file>
     <file preprocess="xml-stripblanks" alias="boringshapes/red.svg">../data/themes/boringshapes/red.svg</file>
     <file preprocess="xml-stripblanks" alias="boringshapes/yellow.svg">../data/themes/boringshapes/yellow.svg</file>
+    <file preprocess="xml-stripblanks" alias="boringshapes/highlight.svg">../data/themes/boringshapes/highlight.svg</file>
   </gresource>
 </gresources>

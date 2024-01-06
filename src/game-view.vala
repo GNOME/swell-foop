@@ -105,16 +105,11 @@ private class GameView : DrawingArea
     /* member variables */
     OrderedList animations = new OrderedList ();
     private Game? game;
-    private SwellFoopWindow window;
-//     enum eTheme {COLORS, SHAPESANDCOLORS, BORINGSHAPES}
+
     string theme;
 
-    /* play again button variables */
     bool game_complete = false;
-    double button_height;
-    double button_width;
-    double b0_x;
-    double b0_y;
+    bool draw_highlight = false;
 
     /* score variables */
     uint score = 0;
@@ -133,8 +128,6 @@ private class GameView : DrawingArea
     /* mouse variables */
     uint16 mouse_segment = 0xffff;
     bool mouse_pressed = false;
-    double mouse_x = -1;
-    double mouse_y = -1;
     uint x_cursor = -1;
     uint y_cursor = -1;
 
@@ -209,9 +202,12 @@ private class GameView : DrawingArea
                 }
                 if (!game_complete)
                 {
-                    draw_cursor (c, x_offset + x_delta * x_cursor, y_offset + y_delta * (game.rows - 1 - y_cursor), x_delta, y_delta);
                     draw_score (c, x_offset + x_delta * (game.columns / 2 - 1), 0,
                                  x_delta * ((game.columns % 2)==0?2:3), y_delta, score);
+                }
+                if (draw_highlight)
+                {
+                    draw_cursor (c, x_offset + x_delta * x_cursor, y_offset + y_delta * (game.rows - 1 - y_cursor), x_delta, y_delta, theme);
                 }
                 if (animate_score (c, now, width, height) || animations.size > 0)
                 {
@@ -227,36 +223,15 @@ private class GameView : DrawingArea
         var mouse_position = new EventControllerMotion ();
         mouse_position.motion.connect ((x,y)=> 
         {
-            if (game_complete)
-            {
-                mouse_x = x;
-                mouse_y = y;
-                redraw ();
-            }
-            else
-                new_position ((int)x, (int)y);
+            new_position ((int)x, (int)y);
         });
         mouse_position.enter.connect ((x,y)=>
         {
-            if (game_complete)
-            {
-                mouse_x = x;
-                mouse_y = y;
-                redraw ();
-            }
-            else
-                new_position ((int)x, (int)y);
+            new_position ((int)x, (int)y);
         });
         mouse_position.leave.connect (()=>
         {
-            if (game_complete)
-            {
-                mouse_x = -1;
-                mouse_y = -1;
-                redraw ();
-            }
-            else
-                new_position (-1, -1);
+            new_position (-1, -1);
         });
 
         var mouse_click = new EventControllerLegacy ();
@@ -270,22 +245,11 @@ private class GameView : DrawingArea
                     return true;
                 case Gdk.EventType.BUTTON_RELEASE:
                     mouse_pressed = false;
-                    if (game_complete)
-                    {
-                        if (mouse_x >= b0_x && mouse_x < b0_x + button_width &&
-                            mouse_y >= b0_y && mouse_y < b0_y + button_height)
-                        {
-                            game_complete = false;
-                            window.activate_action ("new-game", null);
-                        }
-                    }
+                    if (mouse_segment == 0xffff)
+                        redraw ();
                     else
-                    {
-                        if (mouse_segment == 0xffff)
-                            redraw ();
-                        else
-                            cursor_click (mouse_segment >> 8, (uint8)mouse_segment);
-                    }
+                        cursor_click (mouse_segment >> 8, (uint8)mouse_segment);
+                    draw_highlight = false;
                     return true;
                 default:
                     return false;
@@ -492,14 +456,6 @@ private class GameView : DrawingArea
         score = s;
     }
 
-    internal void set_window (SwellFoopWindow w)
-    {
-        window = w;
-        game_complete = false;
-        window.set_focus (this);
-        redraw ();
-    }
-
     internal void set_theme_name (string theme_name)
     {
         if (theme_name == "colors")
@@ -514,12 +470,12 @@ private class GameView : DrawingArea
     {
         if (!is_unitilised () && !game_complete)
         {
+            draw_highlight = true;
             if (x_cursor == -1 || y_cursor == -1 || x_cursor > game.columns - 1 || y_cursor > game.rows - 1)
             {
                 x_cursor = game.columns / 2;
                 y_cursor = game.rows / 2;
                 redraw ();
-                window.set_focus (this);
             }
             else
             {
@@ -536,7 +492,6 @@ private class GameView : DrawingArea
                 }
                 if (r)
                 {
-                    window.set_focus (this);
                     add_select_animations ((uint8)x_cursor, (uint8)y_cursor);
                 }
             }
@@ -773,31 +728,16 @@ private class GameView : DrawingArea
         
     }
 
-    void draw_cursor (Cairo.Context c, double x, double y, uint x_size, uint y_size)
+    void draw_cursor (Cairo.Context c, double x, double y, uint x_size, uint y_size, string theme)
     {
-        /* to do, fix the cursor as it isn't very clear on the yellow block */
-        Pattern pattern = new Pattern.radial (x + x_size * 0.5, y + y_size * 0.5, 0, x + x_size * 0.5, y + y_size * 0.5, (x_size + y_size) / 8);
-        if (theme == "boringshapes") /* to do, this is an attempt to make the cursor clearer when on the BORINGSHAPES circle, it could be improved */
-            pattern.add_color_stop_rgba (0,1,1,1,1);
-        else
-            pattern.add_color_stop_rgba (0,1,1,1,0.75);
-        pattern.add_color_stop_rgba (0.75,1,1,1,0);
-        pattern.add_color_stop_rgba (1,1,1,1,0);
-        c.set_source (pattern);
-        c.move_to (x + x_size * 0.5,  y);
-        c.curve_to (x + x_size * 0.5, y,
-                    x + x_size * 1,   y,
-                    x + x_size * 1,   y + y_size * 0.5);
-        c.curve_to (x + x_size * 1,   y + y_size * 0.5,
-                    x + x_size * 1,   y + y_size * 1,
-                    x + x_size * 0.5, y + y_size * 1);
-        c.curve_to (x + x_size * 0.5, y + y_size * 1,
-                    x + x_size * 0,   y + y_size * 1,
-                    x + x_size * 0,   y + y_size * 0.5);
-        c.curve_to (x + x_size * 0,   y + y_size * 0.5,
-                    x + x_size * 0,   y + y_size * 0,
-                    x + x_size * 0.5, y);
-        c.fill ();
+        string name = "/org/gnome/SwellFoop/themes/%s/%s.svg".printf (theme, "highlight");
+        try
+        {
+            render_svg (c, x, y, x_size, y_size, name);
+        }
+        catch (Error e)
+        {
+        }
     }
 
     void draw_score (Context C, double x, double y, double width, double height, uint score, bool bright = false)
