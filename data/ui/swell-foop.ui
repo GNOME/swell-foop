@@ -19,7 +19,7 @@
    along with Swell-Foop.  If not, see <https://www.gnu.org/licenses/>.
 -->
 <interface>
-  <requires lib="gtk" version="4.0"/>
+  <requires lib="gtk" version="4.10"/>
   <menu id="hamburger-menu">
     <section>
       <item>
