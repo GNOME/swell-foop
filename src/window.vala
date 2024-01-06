@@ -25,7 +25,7 @@ delegate bool KeypressHandlerFunction (uint a, uint b, out bool remove_handler);
 [GtkTemplate (ui = "/org/gnome/SwellFoop/ui/swell-foop.ui")]
 private class SwellFoopWindow : ApplicationWindow
 {
-    [GtkChild] private unowned Overlay      overlay;
+    [GtkChild] private unowned Stack        stack;
     [GtkChild] internal unowned MenuButton  hamburger_button;
 
     private GLib.Settings settings;
@@ -237,18 +237,19 @@ private class SwellFoopWindow : ApplicationWindow
         view.show ();
         var first_run = settings.get_boolean ("first-run");
 
-        if (first_run)
-        {
-            var stack = build_first_run_stack ();
-            stack.add_named (view, "game");
-            stack.set_hexpand (true);
-            stack.set_vexpand (true);
-            overlay.set_child (stack);
-        }
-        else
-        {
-            overlay.set_child (view);
-        }
+        CssProvider css_provider = new CssProvider ();
+        css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
+        Gdk.Display? gdk_screen = Gdk.Display.get_default ();
+        if (gdk_screen != null) // else..?
+            StyleContext.add_provider_for_display ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        var first_run_view = build_first_run_view ();
+
+        stack.add_named (first_run_view, "first_run");
+        stack.add_named (view, "game");
+
+        stack.set_visible_child_name (first_run ? "first_run" : "game");
+
         close_request.connect (()=>
         {
             settings.delay ();
@@ -285,32 +286,19 @@ private class SwellFoopWindow : ApplicationWindow
         keypress_handlers.push (handler);
     }
 
-    private inline Stack build_first_run_stack ()
+    private inline Box build_first_run_view ()
     {
-        CssProvider css_provider = new CssProvider ();
-        css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
-        Gdk.Display? gdk_screen = Gdk.Display.get_default ();
-        if (gdk_screen != null) // else..?
-            StyleContext.add_provider_for_display ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-        Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/first-run-stack.ui");
-        var stack = (Stack) builder.get_object ("first_run_stack");
+        Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/first-run.ui");
+        var box = (Box) builder.get_object ("first_run_box");
         var tip_label = (Label) builder.get_object ("tip_label");
         /* Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application */
         tip_label.set_label (_("Clear as many blocks as you can.\nFewer clicks means more points."));
         var play_button = (Button) builder.get_object ("play_button");
         play_button.clicked.connect (() => {
-            /* FIXME: Currently, on Wayland, the game frame is displayed outside
-             * the window if there's a transition set. Uncomment these 2 lines
-             * when that's no longer a problem.
-             */
-              stack.set_transition_type (StackTransitionType.SLIDE_UP);
-              stack.set_transition_duration (500);
-             /* */
             stack.set_visible_child_name ("game");
             settings.set_boolean ("first-run", false);
         });
-        return stack;
+        return box;
     }
 
     /*\

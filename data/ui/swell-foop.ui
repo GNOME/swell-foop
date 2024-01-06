@@ -190,7 +190,15 @@
       </object>
     </child>
     <child>
-      <object class="GtkOverlay" id="overlay"/>
+      <object class="GtkOverlay" id="overlay">
+        <child>
+          <object class="GtkStack" id="stack">
+            <property name="visible">True</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+          </object>
+        </child>
+      </object>
     </child>
   </template>
 </interface>
