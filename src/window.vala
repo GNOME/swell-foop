@@ -25,9 +25,14 @@ delegate bool KeypressHandlerFunction (uint a, uint b, out bool remove_handler);
 [GtkTemplate (ui = "/org/gnome/SwellFoop/ui/swell-foop.ui")]
 private class SwellFoopWindow : ApplicationWindow
 {
+    [GtkChild] private unowned Overlay      overlay;
     [GtkChild] private unowned Stack        stack;
     [GtkChild] internal unowned MenuButton  hamburger_button;
+
     private AspectFrame aspect_frame;
+    private Label score_label;
+    private Label to_high_score_label;
+    private Box game_over_box;
 
     private GLib.Settings settings;
 
@@ -252,6 +257,9 @@ private class SwellFoopWindow : ApplicationWindow
             StyleContext.add_provider_for_display ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         var first_run_view = build_first_run_view ();
+        game_over_box = build_game_over_view ();
+        game_over_box.visible = false;
+        overlay.add_overlay (game_over_box);
 
         stack.add_named (first_run_view, "first_run");
         stack.add_named (aspect_frame, "game");
@@ -309,6 +317,21 @@ private class SwellFoopWindow : ApplicationWindow
         return box;
     }
 
+    private inline Box build_game_over_view ()
+    {
+        Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/game-over.ui");
+        var box = (Box) builder.get_object ("game_over");
+        
+        score_label = (Label) builder.get_object ("score_label");
+        to_high_score_label = (Label) builder.get_object ("to_high_score_label");
+
+        var play_button = (Button) builder.get_object ("play_button");
+        play_button.clicked.connect (() => {
+            box.set_visible (false);
+        });
+        return box;
+    }
+
     /*\
     * * various
     \*/
@@ -325,6 +348,11 @@ private class SwellFoopWindow : ApplicationWindow
         undo_action.set_enabled (false);
         Idle.add (() => { add_score (); return Source.REMOVE; });
         game_in_progress = false;
+        /* Translators: the text for the score total shown on the game over screen */
+        score_label.set_label (_("%u Points").printf(game.score));
+
+        game_over_box.visible = true;
+
     }
 
     private inline void started_cb ()

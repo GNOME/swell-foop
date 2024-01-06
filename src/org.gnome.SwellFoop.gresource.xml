@@ -2,6 +2,7 @@
 <gresources>
   <gresource prefix="/org/gnome/SwellFoop/ui">
     <file preprocess="xml-stripblanks" alias="first-run.ui">../data/ui/first-run.ui</file>
+    <file preprocess="xml-stripblanks" alias="game-over.ui">../data/ui/game-over.ui</file>
     <file alias="swell-foop.css">../data/swell-foop.css</file>
     <file preprocess="xml-stripblanks" alias="swell-foop.ui">../data/ui/swell-foop.ui</file>
   </gresource>

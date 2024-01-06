@@ -1,5 +1,13 @@
-.welcome {
-  font-size:1.5em;
+.welcome, .score {
+  font-size:2em;
+}
+
+.gameover {
+  font-size:3em;
+}
+
+.goal {
+  font-size:1.2em;
 }
 
 .tip {
@@ -7,7 +15,7 @@
 }
  
 .play {
-  font-size: 1em;
+  font-size: 1.5em;
   padding-right:12px;
   padding-left:12px;
   padding-top:6px;

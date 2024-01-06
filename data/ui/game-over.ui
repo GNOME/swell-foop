@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   This file is part of Swell-Foop.
+
+   Copyright (C) 2020 Arnaud Bonatti <arnaud.bonatti@gmail.com>
+
+   Swell-Foop is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 2 of the License, or
+   (at your option) any later version.
+
+   Swell-Foop is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with Swell-Foop.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<interface>
+  <requires lib="gtk+" version="4.10"/>
+  <object class="GtkBox" id="game_over">
+    <property name="visible">True</property>
+    <property name="orientation">vertical</property>
+    <property name="spacing">12</property>
+    <property name="halign">center</property>
+    <property name="valign">center</property>
+    <property name="hexpand">true</property>
+    <property name="vexpand">true</property>
+    <style>
+      <class name="transparent"/>
+    </style>
+    <child>
+      <object class="GtkLabel">
+        <property name="visible">True</property>
+        <!-- Translators: text appearing on the game over screen -->
+        <property name="label" translatable="yes">Game Over</property>
+        <style>
+          <class name="gameover"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="score_label">
+        <property name="visible">True</property>
+        <!-- label cannot be set there because it contains the score -->
+        <property name="justify">center</property>
+        <style>
+          <class name="score"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="to_high_score_label">
+        <property name="visible">True</property>
+        <!-- label cannot be set there because it needs calculated score -->
+        <property name="justify">center</property>
+        <style>
+          <class name="goal"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkButton" id="play_button">
+        <property name="visible">True</property>
+        <property name="use-underline">True</property>
+        <!-- Translators: label of the button on the game over screen -->
+        <property name="label" translatable="yes">_Play Again</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <property name="action-name">win.new-game</property>
+        <style>
+          <class name="play"/>
+          <class name="suggested-action"/>
+        </style>
+      </object>
+    </child>
+  </object>
+</interface>

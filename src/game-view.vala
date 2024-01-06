@@ -206,9 +206,11 @@ private class GameView : DrawingArea
                         animations.remove (moves_to_do[i]);
                 }
                 if (!game_complete)
+                {
                     draw_cursor (c, x_offset + x_delta * x_cursor, y_offset + y_delta * (game.rows - 1 - y_cursor), x_delta, y_delta);
-                draw_score (c, x_offset + x_delta * (game.columns / 2 - 1), 0,
-                             x_delta * ((game.columns % 2)==0?2:3), y_delta, score);
+                    draw_score (c, x_offset + x_delta * (game.columns / 2 - 1), 0,
+                                 x_delta * ((game.columns % 2)==0?2:3), y_delta, score);
+                }
                 if (animate_score (c, now, width, height) || animations.size > 0)
                 {
 #if GLIB_2_78_or_above
@@ -216,11 +218,6 @@ private class GameView : DrawingArea
 #else
                     Timeout.add (1, (()=>{redraw (); return false;}));
 #endif
-                }
-                else
-                {
-                    if (game_complete)
-                        draw_game_over (c, score, width, height);
                 }
             }
         });
@@ -1313,83 +1310,6 @@ private class GameView : DrawingArea
         else
             font = layout.get_font_description ().copy ();
         font.set_size (Pango.SCALE * target_font_size);
-        layout.set_font_description (font);
-        layout.set_text (text, -1);
-        Pango.cairo_update_layout (C, layout);
-        Pango.cairo_show_layout (C, layout);
-    }
-
-    void draw_game_over (Context c, uint score, double context_width, double context_height)
-    {
-        const double PI2 = 1.570796326794896619231321691639751442; /* PI divided by 2 */
-        const double border_width = 5;
-
-        /* write the score brighter */
-        draw_score (c, x_offset + x_delta * (game.columns / 2 - 1), 0,
-                                x_delta * ((game.columns % 2)==0?2:3), y_delta, score, true);
-
-        /* Translators: message displayed to show the game has finished */
-        string text = _("Game Over!");
-        double game_over_width, game_over_height;
-        int game_over_x_offset, game_over_y_offset;
-        int font_size = calculate_font_size_from_max (c, text, (int)width, (int)y_delta,
-             out game_over_width, out game_over_height, out game_over_x_offset, out game_over_y_offset);
-        draw_dialogue_text (c, (context_width - game_over_width) / 2, y_delta + (y_delta - game_over_height) / 2, text, font_size, game_over_x_offset, game_over_y_offset, true);
-        
-        /* draw buttons */
-        /* to do for Robert, adjust button size */
-        button_height = game_over_height * 2;
-        button_width = game_over_width;
-        /* max size for button */
-        button_height = button_height > 150 ? 150 : button_height; /* maximum height 150 */
-        button_width = button_width > 350 ? 350 : button_width;    /* maximum width 350 */
-        /* button position */
-        b0_x = (context_width - button_width) / 2;
-        b0_y = 2.5 * y_delta;
-        if (b0_y + button_height > context_height)
-            b0_y = context_height - button_height;
-        /* draw button */
-        double b0_radius = button_width < button_height ? button_width / 3 : button_height / 3;
-        c.move_to (b0_x + button_width, b0_y);
-        c.arc (b0_x + button_width - b0_radius, b0_y + b0_radius, b0_radius, -PI2, 0);
-        c.arc (b0_x + button_width - b0_radius, b0_y + button_height - b0_radius, b0_radius, 0, PI2);
-        c.arc (b0_x + b0_radius, b0_y + button_height - b0_radius, b0_radius, PI2, PI2 * 2);
-        c.arc (b0_x + b0_radius, b0_y + b0_radius, b0_radius, PI2 * 2, -PI2);
-        c.set_source_rgba (0.8, 0.8, 0.8, 1); /* border color */
-        c.fill ();                
-        c.arc (b0_x + button_width - b0_radius, b0_y + b0_radius, b0_radius- border_width, -PI2, 0);
-        c.arc (b0_x + button_width - b0_radius, b0_y + button_height - b0_radius, b0_radius- border_width, 0, PI2);
-        c.arc (b0_x + b0_radius, b0_y + button_height - b0_radius, b0_radius - border_width, PI2, PI2 * 2);
-        c.arc (b0_x + b0_radius, b0_y + b0_radius, b0_radius - border_width, PI2 * 2, -PI2);
-        if (mouse_pressed && mouse_x >= b0_x && mouse_x < b0_x + button_width && mouse_y >= b0_y && mouse_y < b0_y + button_height)
-            c.set_source_rgba (0, 0, 0, 1); /* background color when the button is depressed */
-        else
-            c.set_source_rgba (0.15, 0.15, 0.15, 1); /* background color when the button is raised */
-        c.fill ();
-        /* Translators: message displayed in a Button if the player wants to play the game again */
-        text = _("Play Again?");
-        /* draw text */
-        double b0_width, b0_height;
-        int x_offset, y_offset;
-        font_size = calculate_font_size_from_max (c, text, (int)(button_width - border_width * 3), (int)(button_height / 2) , out b0_width, out b0_height, out x_offset, out y_offset);
-        draw_dialogue_text (c, b0_x + (button_width - b0_width) / 2 , b0_y + /*b0_height +*/ button_height / 3, text, font_size, x_offset, y_offset);
-    }
-
-    void draw_dialogue_text (Context C, double x, double y, string text, int font_size, int x_offset, int y_offset, bool bright = false)
-    {
-        /* draw using x,y as the top left corner of the text */
-        C.move_to (x - x_offset, y - y_offset); 
-        if (bright)
-            C.set_source_rgb (1.0, 1.0, 1.0);
-        else
-            C.set_source_rgb (0.75, 0.75, 0.75);
-        var layout =  Pango.cairo_create_layout (C);
-        Pango.FontDescription font;
-        if (null == layout.get_font_description ())
-            font = Pango.FontDescription.from_string ("Sans Bold 1pt");
-        else
-            font = layout.get_font_description ().copy ();
-        font.set_size (Pango.SCALE * font_size);
         layout.set_font_description (font);
         layout.set_text (text, -1);
         Pango.cairo_update_layout (C, layout);
