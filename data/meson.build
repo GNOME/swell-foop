@@ -4,11 +4,6 @@ install_subdir('icons',
   exclude_files: [ 'icon-source.svg' ],
 )
 
-# Themes
-install_subdir('themes',
-  install_dir: pkgdatadir,
-)
-
 # Make D-Bus activatable
 service_conf = configuration_data()
 service_conf.set('bindir', bindir)
