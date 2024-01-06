@@ -424,27 +424,34 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline void show_new_game_confirmation_dialog ()
     {
-        var dialog = new MessageDialog.with_markup (this,
-                                                    DialogFlags.MODAL,
-                                                    MessageType.QUESTION,
-                                                    ButtonsType.NONE,
-                                                    "<span weight=\"bold\" size=\"larger\">%s</span>",
-                                                    /* Translators: text of a Dialog that may appear if you start a new game while one is running */
-                                                    _("Abandon this game to start a new one?"));
+        var dialog = new AlertDialog(
+                                     /* Translators: text of a Dialog that may appear if you start a new game while one is running */
+                                     _("Abandon this game to start a new one?"));
 
-        /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game” */
-        dialog.add_button (_("_Cancel"),    ResponseType.CANCEL);
+        dialog.modal = true;
+        dialog.buttons = {
+                            /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game” */
+                            _("_Cancel"),
+                            /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel” */
+                            _("_New Game")
+        };
+        dialog.default_button = 1;
+        dialog.cancel_button = 0;
 
-        /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel” */
-        dialog.add_button (_("_New Game"),  ResponseType.YES);
-
-        dialog.response.connect ((r)=>
-        {
-            dialog.destroy ();
-            if (r == ResponseType.YES)
-                new_game ();
+        dialog.choose.begin (this, null, (obj, res) => {
+            try
+            {
+                var result = dialog.choose.end(res);
+                if (result == 1)
+                {
+                    new_game ();
+                }
+            }
+            catch (Error e)
+            {
+                warning ("Failed to get result of warning dialog: %s", e.message);
+            }
         });
-        dialog.show ();
     }
 
     private inline void toggle_hamburger (/* SimpleAction action, Variant? variant */)
