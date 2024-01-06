@@ -27,6 +27,7 @@ private class SwellFoopWindow : ApplicationWindow
 {
     [GtkChild] private unowned Stack        stack;
     [GtkChild] internal unowned MenuButton  hamburger_button;
+    private AspectFrame aspect_frame;
 
     private GLib.Settings settings;
 
@@ -235,6 +236,13 @@ private class SwellFoopWindow : ApplicationWindow
         view = new GameView ();
         add_keypress_handler (view.keypress);
         view.show ();
+        Size size = get_board_size ();
+        aspect_frame = new AspectFrame (0.5f, 0.5f, (float)size.columns/size.rows, false);
+        aspect_frame.show ();
+        aspect_frame.hexpand = true;
+        aspect_frame.vexpand = true;
+        aspect_frame.set_child (view);
+
         var first_run = settings.get_boolean ("first-run");
 
         CssProvider css_provider = new CssProvider ();
@@ -246,7 +254,7 @@ private class SwellFoopWindow : ApplicationWindow
         var first_run_view = build_first_run_view ();
 
         stack.add_named (first_run_view, "first_run");
-        stack.add_named (view, "game");
+        stack.add_named (aspect_frame, "game");
 
         stack.set_visible_child_name (first_run ? "first_run" : "game");
 
@@ -347,6 +355,7 @@ private class SwellFoopWindow : ApplicationWindow
     private void new_game (Variant? saved_game = null)
     {
         Size size = get_board_size ();
+        aspect_frame.set_ratio ((float)size.columns/size.rows);
         game = new Game (size.rows,
                          size.columns,
                          (uint8) settings.get_int ("colors"),
