@@ -9,4 +9,20 @@
   <gresource prefix="/org/gnome/SwellFoop/gtk">
     <file preprocess="xml-stripblanks" alias="help-overlay.ui">../data/ui/help-overlay.ui</file>
   </gresource>
+  <gresource prefix="/org/gnome/SwellFoop/themes">
+    <file preprocess="xml-stripblanks" alias="colors/blue.svg">../data/themes/colors/blue.svg</file>
+    <file preprocess="xml-stripblanks" alias="colors/green.svg">../data/themes/colors/green.svg</file>
+    <file preprocess="xml-stripblanks" alias="colors/red.svg">../data/themes/colors/red.svg</file>
+    <file preprocess="xml-stripblanks" alias="colors/yellow.svg">../data/themes/colors/yellow.svg</file>
+
+    <file preprocess="xml-stripblanks" alias="shapesandcolors/blue.svg">../data/themes/shapesandcolors/blue.svg</file>
+    <file preprocess="xml-stripblanks" alias="shapesandcolors/green.svg">../data/themes/shapesandcolors/green.svg</file>
+    <file preprocess="xml-stripblanks" alias="shapesandcolors/red.svg">../data/themes/shapesandcolors/red.svg</file>
+    <file preprocess="xml-stripblanks" alias="shapesandcolors/yellow.svg">../data/themes/shapesandcolors/yellow.svg</file>
+
+    <file preprocess="xml-stripblanks" alias="boringshapes/blue.svg">../data/themes/boringshapes/blue.svg</file>
+    <file preprocess="xml-stripblanks" alias="boringshapes/green.svg">../data/themes/boringshapes/green.svg</file>
+    <file preprocess="xml-stripblanks" alias="boringshapes/red.svg">../data/themes/boringshapes/red.svg</file>
+    <file preprocess="xml-stripblanks" alias="boringshapes/yellow.svg">../data/themes/boringshapes/yellow.svg</file>
+  </gresource>
 </gresources>

@@ -31,6 +31,8 @@ using Gtk; /* designed for Gtk 4, link with libgtk-4-dev or gtk4-devel */
 
 private class GameView : DrawingArea
 {
+    const int animation_length = 240;
+
     /* sub-classes */
     internal class Animation : Object
     {
@@ -104,8 +106,8 @@ private class GameView : DrawingArea
     OrderedList animations = new OrderedList ();
     private Game? game;
     private SwellFoopWindow window;
-    enum eTheme {COLORS, SHAPESANDCOLORS, BORINGSHAPES}
-    eTheme theme;
+//     enum eTheme {COLORS, SHAPESANDCOLORS, BORINGSHAPES}
+    string theme;
 
     /* play again button variables */
     bool game_complete = false;
@@ -214,9 +216,9 @@ private class GameView : DrawingArea
                 if (animate_score (c, now, width, height) || animations.size > 0)
                 {
 #if GLIB_2_78_or_above
-                    Timeout.add_once (1, redraw); /* The documentaion says this requires glib 2.74, I couldn't compile it with 2.74 but could with 2.78. */
+                    Timeout.add_once (3, redraw); /* The documentaion says this requires glib 2.74, I couldn't compile it with 2.74 but could with 2.78. */
 #else
-                    Timeout.add (1, (()=>{redraw (); return false;}));
+                    Timeout.add (3, (()=>{redraw (); return false;}));
 #endif
                 }
             }
@@ -310,8 +312,8 @@ private class GameView : DrawingArea
          * The block that get destroyed do so in the first 48ms of the 240ms.
          * The block that appear do so in the last 48ms of the 240ms.
          */
-        const int total_steps = 240;
-        const int segment_steps = 240 / 5; /* 48 */
+        const int total_steps = animation_length;
+        const int segment_steps = animation_length / 5; /* 48 */
         var diff = now.difference (a.start_time);
         uint steps = (uint)(diff / (TimeSpan.MILLISECOND * 3));
         uint animation;
@@ -380,19 +382,17 @@ private class GameView : DrawingArea
         {
             double degrees = (int)(steps % 360) - 180;
 
-            /* to do for Robert, change selected block look */
-
             /* move the selected blocks in a circular motion */
-            draw_block (c, x_offset + (long)x_delta * a.x + (x_delta / 20) + (x_delta / 50) + Math.sin (degrees / 180 * Math.PI) * (x_delta / 20),
+            /* draw_block (c, x_offset + (long)x_delta * a.x + (x_delta / 20) + (x_delta / 50) + Math.sin (degrees / 180 * Math.PI) * (x_delta / 20),
                            y_offset + (long)y_delta * (game.rows - 1 - a.y) + (y_delta / 20) + (y_delta / 50) + Math.cos (degrees / 180 * Math.PI) * (y_delta / 20),
-                           x_delta * 9 / 10, y_delta * 9 / 10, a.block_type, theme);
+                           x_delta * 9 / 10, y_delta * 9 / 10, a.block_type, theme);*/
 
 
             /* wobble the selected blocks */
-            /* const double wobble_size = 1.0 / 40; // the smalled the value the smaller (and slower) the wobble
+            const double wobble_size = 1.0 / 25; // the smaller the value the smaller (and slower) the wobble
             draw_block (c, x_offset + (long)x_delta * a.x + (x_delta * wobble_size) + (x_delta / 50) + Math.sin (degrees / 180 * Math.PI) * (x_delta * wobble_size),
                            y_offset + (long)y_delta * (game.rows - 1 - a.y) + (y_delta * wobble_size) + (y_delta / 50),
-                           (uint)(x_delta * (1 - wobble_size * 2)), (uint)(y_delta * (1 - wobble_size * 2)), a.block_type, theme); */
+                           (uint)(x_delta * (1 - wobble_size * 2)), (uint)(y_delta * (1 - wobble_size * 2)), a.block_type, theme);
 
             /* a basic draw for the selected blocks, with no animation */
             /*draw_block (c, x_offset + (long)x_delta * a.x,
@@ -412,35 +412,11 @@ private class GameView : DrawingArea
         {
             var diff = now.difference (animate_score_delta);
             uint steps = (uint)(diff / (TimeSpan.MILLISECOND * 3));
-            if (steps < 240)
+            if (steps < animation_length)
             {
                 string text = "+" + score_delta.to_string ();
-                draw_text_font_size (c, width / 2, height / 2, text, (int)steps, (240.0 - steps) / 240.0);
-/*
-                int target_font_size = 1;
-                double text_width = 0;
-                double text_height = 0;
-                for (int font_size = 1;font_size < 200;font_size++)
-                {
-                    Context t = new Context (c.get_target ());
-                    t.move_to (0, 0);
-                    t.set_font_size (font_size);
-                    Cairo.TextExtents extents;
-                    t.text_extents (text, out extents);
-                    if (extents.width > steps || extents.height > steps)
-                        break;
-                    else
-                    {
-                        target_font_size = font_size;
-                        text_width = extents.width;
-                        text_height = extents.height;
-                    }
-                }
-                c.move_to (width / 2 - text_width / 2, height / 2 + text_height / 2);
-                c.set_font_size (target_font_size);
-                c.set_source_rgba (1, 1, 1, (double)(240 - steps) / 240);
-                c.show_text (text);
-*/              return true;
+                draw_text_font_size (c, width / 2, height / 2, text, (int)steps, (animation_length - steps) / (float)animation_length);
+                return true;
             }
             else
                 return false;
@@ -527,11 +503,11 @@ private class GameView : DrawingArea
     internal void set_theme_name (string theme_name)
     {
         if (theme_name == "colors")
-            theme = COLORS;
+            theme = "colors";
         else if (theme_name == "boringshapes")
-            theme = BORINGSHAPES;
+            theme = "boringshapes";
         else
-            theme = SHAPESANDCOLORS;
+            theme = "shapesandcolors";
     }
 
     internal void cursor_move (int x, int y)
@@ -752,520 +728,56 @@ private class GameView : DrawingArea
             return ((uint16)((uint8)((x - x_offset) / x_delta)) << 8) | (uint8)(game.rows - 1 - (y - y_offset) / y_delta);
     }
 
-    void draw_block (Cairo.Context c, double x, double y, uint x_size, uint y_size, uint8 block_id, eTheme theme)
+    void render_svg (Cairo.Context c, double x, double y, uint width, uint height, string path) throws Error
     {
-        double x_m = x_size;
-        double y_m = y_size;
-        Pattern pattern;
+        Rsvg.Rectangle viewport = Rsvg.Rectangle ();
+        viewport.x = x;
+        viewport.y = y;
+        viewport.width = width;
+        viewport.height = height;
+        
+        var bytes = resources_lookup_data (path, 0);
+        var data = bytes.get_data ();
+        var handle = new Rsvg.Handle.from_data (data);
+        handle.render_document (c, viewport);
+    }
+
+    string get_block_name (uint8 block_id)
+    {
         switch (block_id)
         {
-            case 1: /* blue circle */
-                x_m /= 50;
-                y_m /= 50;
-                /* background */
-                c.set_operator (OVER);
-                if (theme == BORINGSHAPES)
-                {
-                    c.set_source_rgba (0.8, 0.8, 0.8, 1);
-                }
-                else
-                {
-                    pattern = new Pattern.radial (x + x_m * 20, y + y_m * -10, 0, x + x_m * 25, y + y_m * 0, (x_m + y_m) * 30);
-                    pattern.add_color_stop_rgba (0,0.447059,0.623529,0.811765,1);
-                    pattern.add_color_stop_rgba (0.667479,0.223529,0.431373,0.701961,1);
-                    pattern.add_color_stop_rgba (1,0.447059,0.623529,0.811765,1);
-                    pattern.set_extend (PAD);
-                    pattern.set_filter (GOOD);
-                    c.set_source (pattern);
-                }
-                c.new_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.line_to (x + x_m * 45.335938, y + y_m * 1.5);
-                c.curve_to (x + x_m * 47.082031, y + y_m * 1.5, x + x_m * 48.5, y + y_m * 2.917969, x + x_m * 48.5, y + y_m * 4.664063);
-                c.line_to (x + x_m * 48.5, y + y_m * 45.335938);
-                c.curve_to (x + x_m * 48.5, y + y_m * 47.082031, x + x_m * 47.082031, y + y_m * 48.5, x + x_m * 45.335938, y + y_m * 48.5);
-                c.line_to (x + x_m * 4.664063, y + y_m * 48.5);
-                c.curve_to (x + x_m * 2.917969, y + y_m * 48.5, x + x_m * 1.5, y + y_m * 47.082031, x + x_m * 1.5, y + y_m * 45.335938);
-                c.line_to (x + x_m * 1.5, y + y_m * 4.664063);
-                c.curve_to (x + x_m * 1.5, y + y_m * 2.917969, x + x_m * 2.917969, y + y_m * 1.5, x + x_m * 4.664063, y + y_m * 1.5);
-                c.close_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.set_tolerance (0.1);
-                c.set_antialias (DEFAULT);
-                c.set_fill_rule (WINDING);
-                c.fill ();//c.fill_preserve ();
-                /* border */
-                c.set_operator (OVER);
-                c.set_line_width (1);
-                c.set_miter_limit (4);
-                c.set_line_cap (BUTT);
-                c.set_line_join (MITER);
-                if (theme == BORINGSHAPES)
-                {
-                    c.set_source_rgba (1, 1, 1, 1);
-                }
-                else
-                {
-                    pattern = new Pattern.linear (x + x_m * 10, y + y_m * 0, x + x_m * 25, y + y_m * 50);
-                    pattern.add_color_stop_rgba (0,1,1,1,1);
-                    pattern.add_color_stop_rgba (1,0.447059,0.623529,0.811765,1);
-                    pattern.set_extend (PAD);
-                    pattern.set_filter (GOOD);
-                    c.set_source (pattern);
-                }
-                c.new_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.line_to (x + x_m * 45.335938, y + y_m * 1.5);
-                c.curve_to (x + x_m * 47.082031, y + y_m * 1.5, x + x_m * 48.5, y + y_m * 2.917969, x + x_m * 48.5, y + y_m * 4.664063);
-                c.line_to (x + x_m * 48.5, y + y_m * 45.335938);
-                c.curve_to (x + x_m * 48.5, y + y_m * 47.082031, x + x_m * 47.082031, y + y_m * 48.5, x + x_m * 45.335938, y + y_m * 48.5);
-                c.line_to (x + x_m * 4.664063, y + y_m * 48.5);
-                c.curve_to (x + x_m * 2.917969, y + y_m * 48.5, x + x_m * 1.5, y + y_m * 47.082031, x + x_m * 1.5, y + y_m * 45.335938);
-                c.line_to (x + x_m * 1.5, y + y_m * 4.664063);
-                c.curve_to (x + x_m * 1.5, y + y_m * 2.917969, x + x_m * 2.917969, y + y_m * 1.5, x + x_m * 4.664063, y + y_m * 1.5);
-                c.close_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.set_tolerance (0.1);
-                c.set_antialias (DEFAULT);
-                c.stroke (); 
-                /* grey circle */
-                if (theme != COLORS)
-                {
-                    c.set_operator (OVER);
-                    c.set_line_width (2.444445 * ((x_m + y_m) / 2));
-                    c.set_miter_limit (4);
-                    c.set_line_cap (BUTT);
-                    c.set_line_join (MITER);
-                    if (theme == BORINGSHAPES)
-                        pattern = new pattern.rgba (0.2,0.2,0.2,0.6);
-                    else
-                        pattern = new pattern.rgba (0.447059,0.623529,0.811765,0.6);
-                    c.set_source (pattern);
-                    c.new_path ();
-                    c.move_to (x + x_m * 39.5, y + y_m * 26);
-                    c.curve_to (x + x_m * 39.5, y + y_m * 33.457031, x + x_m * 33.457031, y + y_m * 39.5, x + x_m * 26, y + y_m * 39.5);
-                    c.curve_to (x + x_m * 18.542969, y + y_m * 39.5, x + x_m * 12.5, y + y_m * 33.457031, x + x_m * 12.5, y + y_m * 26);
-                    c.curve_to (x + x_m * 12.5, y + y_m * 18.542969, x + x_m * 18.542969, y + y_m * 12.5, x + x_m * 26, y + y_m * 12.5);
-                    c.curve_to (x + x_m * 33.457031, y + y_m * 12.5, x + x_m * 39.5, y + y_m * 18.542969, x + x_m * 39.5, y + y_m * 26);
-                    c.close_path ();
-                    c.move_to (x + x_m * 39.5, y + y_m * 26);
-                    c.set_tolerance (0.1);
-                    c.set_antialias (DEFAULT);
-                    c.stroke ();
-                }
-                /* black circle */
-                if (theme != COLORS)
-                {
-                    c.set_operator (OVER);
-                    c.set_line_width (2.444446 * ((x_m + y_m) / 2));
-                    c.set_miter_limit (4);
-                    c.set_line_cap (BUTT);
-                    c.set_line_join (MITER);
-                    if (theme == BORINGSHAPES)
-                        pattern = new pattern.rgba (0.1,0.1,0.1,1);
-                    else
-                        pattern = new pattern.rgba (0.203922,0.396078,0.643137,1);
-                    c.set_source (pattern);
-                    c.new_path ();
-                    c.move_to (x + x_m * 38.5, y + y_m * 25);
-                    c.curve_to (x + x_m * 38.5, y + y_m * 32.457031, x + x_m * 32.457031, y + y_m * 38.5, x + x_m * 25, y + y_m * 38.5);
-                    c.curve_to (x + x_m * 17.542969, y + y_m * 38.5, x + x_m * 11.5, y + y_m * 32.457031, x + x_m * 11.5, y + y_m * 25);
-                    c.curve_to (x + x_m * 11.5, y + y_m * 17.542969, x + x_m * 17.542969, y + y_m * 11.5, x + x_m * 25, y + y_m * 11.5);
-                    c.curve_to (x + x_m * 32.457031, y + y_m * 11.5, x + x_m * 38.5, y + y_m * 17.542969, x + x_m * 38.5, y + y_m * 25);
-                    c.close_path ();
-                    c.move_to (x + x_m * 38.5, y + y_m * 25);
-                    c.set_tolerance (0.1);
-                    c.set_antialias (DEFAULT);
-                    c.stroke (); 
-                }
-                break;
-            case 2: /* green square */
-                x_m /= 50;
-                y_m /= 50;
-                /* background */
-                c.set_operator (OVER);
-                if (theme == BORINGSHAPES)
-                {
-                    c.set_source_rgba (0.8, 0.8, 0.8, 1);
-                }
-                else
-                {
-                    pattern = new Pattern.radial (x + x_m * 20, y + y_m * -10, 0, x + x_m * 25, y + y_m * 0, (x_m + y_m) * 30);
-                    pattern.add_color_stop_rgba (0,0.541176,0.886275,0.203922,1);
-                    pattern.add_color_stop_rgba (0.667479,0.345098,0.678431,0.027451,1);
-                    pattern.add_color_stop_rgba (1,0.541176,0.886275,0.203922,1);
-                    pattern.set_extend (PAD);
-                    pattern.set_filter (GOOD);
-                    c.set_source (pattern);
-                }
-                c.new_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.line_to (x + x_m * 45.335938, y + y_m * 1.5);
-                c.curve_to (x + x_m * 47.082031, y + y_m * 1.5, x + x_m * 48.5, y + y_m * 2.917969, x + x_m * 48.5, y + y_m * 4.664063);
-                c.line_to (x + x_m * 48.5, y + y_m * 45.335938);
-                c.curve_to (x + x_m * 48.5, y + y_m * 47.082031, x + x_m * 47.082031, y + y_m * 48.5, x + x_m * 45.335938, y + y_m * 48.5);
-                c.line_to (x + x_m * 4.664063, y + y_m * 48.5);
-                c.curve_to (x + x_m * 2.917969, y + y_m * 48.5, x + x_m * 1.5, y + y_m * 47.082031, x + x_m * 1.5, y + y_m * 45.335938);
-                c.line_to (x + x_m * 1.5, y + y_m * 4.664063);
-                c.curve_to (x + x_m * 1.5, y + y_m * 2.917969, x + x_m * 2.917969, y + y_m * 1.5, x + x_m * 4.664063, y + y_m * 1.5);
-                c.close_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.set_tolerance (0.1);
-                c.set_antialias (DEFAULT);
-                c.set_fill_rule (WINDING);
-                c.fill ();//c.fill_preserve ();
-                /* border */
-                c.set_operator (OVER);
-                c.set_line_width (1);
-                c.set_miter_limit (4);
-                c.set_line_cap (BUTT);
-                c.set_line_join (MITER);
-                if (theme == BORINGSHAPES)
-                {
-                    c.set_source_rgba (1, 1, 1, 1);
-                }
-                else
-                {
-                    pattern = new Pattern.linear (x + x_m * 10, y + y_m * 0, x + x_m * 25, y + y_m * 50);
-                    pattern.add_color_stop_rgba (0,1,1,1,1);
-                    pattern.add_color_stop_rgba (1,0.541176,0.886275,0.203922,1);
-                    pattern.set_extend (PAD);
-                    pattern.set_filter (GOOD);
-                    c.set_source (pattern);
-                }
-                c.new_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.line_to (x + x_m * 45.335938, y + y_m * 1.5);
-                c.curve_to (x + x_m * 47.082031, y + y_m * 1.5, x + x_m * 48.5, y + y_m * 2.917969, x + x_m * 48.5, y + y_m * 4.664063);
-                c.line_to (x + x_m * 48.5, y + y_m * 45.335938);
-                c.curve_to (x + x_m * 48.5, y + y_m * 47.082031, x + x_m * 47.082031, y + y_m * 48.5, x + x_m * 45.335938, y + y_m * 48.5);
-                c.line_to (x + x_m * 4.664063, y + y_m * 48.5);
-                c.curve_to (x + x_m * 2.917969, y + y_m * 48.5, x + x_m * 1.5, y + y_m * 47.082031, x + x_m * 1.5, y + y_m * 45.335938);
-                c.line_to (x + x_m * 1.5, y + y_m * 4.664063);
-                c.curve_to (x + x_m * 1.5, y + y_m * 2.917969, x + x_m * 2.917969, y + y_m * 1.5, x + x_m * 4.664063, y + y_m * 1.5);
-                c.close_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.set_tolerance (0.1);
-                c.set_antialias (DEFAULT);
-                c.stroke ();
-                /********************/
-                if (theme != COLORS)
-                {
-                    c.set_operator (OVER);
-                    c.set_line_width (3 * ((x_m + y_m) / 2));
-                    c.set_miter_limit (4);
-                    c.set_line_cap (BUTT);
-                    c.set_line_join (MITER);
-                    if (theme == BORINGSHAPES)
-                        pattern = new pattern.rgba (0.2,0.2,0.2,0.6);
-                    else
-                        pattern = new pattern.rgba (0.541176,0.886275,0.203922,0.4);
-                    c.set_source (pattern);
-                    c.new_path ();
-                    c.move_to (x + x_m * 14.5, y + y_m * 14.5);
-                    c.line_to (x + x_m * 37.5, y + y_m * 14.5);
-                    c.line_to (x + x_m * 37.5, y + y_m * 37.5);
-                    c.line_to (x + x_m * 14.5, y + y_m * 37.5);
-                    c.close_path ();
-                    c.move_to (x + x_m * 14.5, y + y_m * 14.5);
-                    c.set_tolerance (0.1);
-                    c.set_antialias (DEFAULT);
-                    if (theme == BORINGSHAPES)
-                        c.fill ();
-                    else
-                        c.stroke ();
-                }
-                /********************/
-                if (theme != COLORS)
-                {
-                    c.set_operator (OVER);
-                    c.set_line_width (3 * ((x_m + y_m) / 2));
-                    c.set_miter_limit (4);
-                    c.set_line_cap (BUTT);
-                    c.set_line_join (MITER);
-                    if (theme == BORINGSHAPES)
-                        pattern = new pattern.rgba (0.1,0.1,0.1,1);
-                    else
-                        pattern = new pattern.rgba (0.345098,0.678431,0.027451,1);
-                    c.set_source (pattern);
-                    c.new_path ();
-                    c.move_to (x + x_m * 13.5, y + y_m * 13.5);
-                    c.line_to (x + x_m * 36.5, y + y_m * 13.5);
-                    c.line_to (x + x_m * 36.5, y + y_m * 36.5);
-                    c.line_to (x + x_m * 13.5, y + y_m * 36.5);
-                    c.close_path ();
-                    c.move_to (x + x_m * 13.5, y + y_m * 13.5);
-                    c.set_tolerance (0.1);
-                    c.set_antialias (DEFAULT);
-                    c.stroke ();
-                }
-                break;
-            case 3: /* yellow star */
-                x_m /= 50;
-                y_m /= 50;
-                /* background */
-                c.set_operator (OVER);
-                if (theme == BORINGSHAPES)
-                {
-                    c.set_source_rgba (0.8, 0.8, 0.8, 1);
-                }
-                else
-                {
-                    pattern = new Pattern.radial (x + x_m * 20, y + y_m * -10, 0, x + x_m * 25, y + y_m * 0, (x_m + y_m) * 30);
-                    pattern.add_color_stop_rgba (0,0.992157,0.941176,0.545098,1);
-                    pattern.add_color_stop_rgba (0.667479,0.929412,0.831373,0,1);
-                    pattern.add_color_stop_rgba (1,0.992157,0.941176,0.545098,1);
-                    pattern.set_extend (PAD);
-                    pattern.set_filter (GOOD);
-                    c.set_source (pattern);
-                }
-                c.new_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.line_to (x + x_m * 45.335938, y + y_m * 1.5);
-                c.curve_to (x + x_m * 47.082031, y + y_m * 1.5, x + x_m * 48.5, y + y_m * 2.917969, x + x_m * 48.5, y + y_m * 4.664063);
-                c.line_to (x + x_m * 48.5, y + y_m * 45.335938);
-                c.curve_to (x + x_m * 48.5, y + y_m * 47.082031, x + x_m * 47.082031, y + y_m * 48.5, x + x_m * 45.335938, y + y_m * 48.5);
-                c.line_to (x + x_m * 4.664063, y + y_m * 48.5);
-                c.curve_to (x + x_m * 2.917969, y + y_m * 48.5, x + x_m * 1.5, y + y_m * 47.082031, x + x_m * 1.5, y + y_m * 45.335938);
-                c.line_to (x + x_m * 1.5, y + y_m * 4.664063);
-                c.curve_to (x + x_m * 1.5, y + y_m * 2.917969, x + x_m * 2.917969, y + y_m * 1.5, x + x_m * 4.664063, y + y_m * 1.5);
-                c.close_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.set_tolerance (0.1);
-                c.set_antialias (DEFAULT);
-                c.set_fill_rule (WINDING);
-                c.fill ();//c.fill_preserve ();
-                /* border */
-                c.set_operator (OVER);
-                c.set_line_width (1);
-                c.set_miter_limit (4);
-                c.set_line_cap (BUTT);
-                c.set_line_join (MITER);
-                if (theme == BORINGSHAPES)
-                {
-                    c.set_source_rgba (1, 1, 1, 1);
-                }
-                else
-                {
-                    pattern = new Pattern.linear (x + x_m * 10, y + y_m * 0, x + x_m * 25, y + y_m * 50);
-                    pattern.add_color_stop_rgba (0,1,1,1,1);
-                    pattern.add_color_stop_rgba (1,0.988235,0.913725,0.309804,1);
-                    pattern.set_extend (PAD);
-                    pattern.set_filter (GOOD);
-                    c.set_source (pattern);
-                }
-                c.new_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.line_to (x + x_m * 45.335938, y + y_m * 1.5);
-                c.curve_to (x + x_m * 47.082031, y + y_m * 1.5, x + x_m * 48.5, y + y_m * 2.917969, x + x_m * 48.5, y + y_m * 4.664063);
-                c.line_to (x + x_m * 48.5, y + y_m * 45.335938);
-                c.curve_to (x + x_m * 48.5, y + y_m * 47.082031, x + x_m * 47.082031, y + y_m * 48.5, x + x_m * 45.335938, y + y_m * 48.5);
-                c.line_to (x + x_m * 4.664063, y + y_m * 48.5);
-                c.curve_to (x + x_m * 2.917969, y + y_m * 48.5, x + x_m * 1.5, y + y_m * 47.082031, x + x_m * 1.5, y + y_m * 45.335938);
-                c.line_to (x + x_m * 1.5, y + y_m * 4.664063);
-                c.curve_to (x + x_m * 1.5, y + y_m * 2.917969, x + x_m * 2.917969, y + y_m * 1.5, x + x_m * 4.664063, y + y_m * 1.5);
-                c.close_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.set_tolerance (0.1);
-                c.set_antialias (DEFAULT);
-                c.stroke ();
-                /********************/
-                if (theme != COLORS)
-                {
-                    c.set_operator (OVER);
-                    c.set_line_width (3.104212 * ((x_m + y_m) / 2));
-                    c.set_miter_limit (4);
-                    c.set_line_cap (BUTT);
-                    c.set_line_join (MITER);
-                    if (theme == BORINGSHAPES)
-                        pattern = new pattern.rgba (0.2,0.2,0.2,0.8);
-                    else
-                        pattern = new pattern.rgba (0.988235,0.913725,0.309804,1);
-                    c.set_source (pattern);
-                    c.new_path ();
-                    c.move_to (x + x_m * 26, y + y_m * 11.5);
-                    c.line_to (x + x_m * 30.261719, y + y_m * 20.132813);
-                    c.line_to (x + x_m * 39.789063, y + y_m * 21.515625);
-                    c.line_to (x + x_m * 32.894531, y + y_m * 28.234375);
-                    c.line_to (x + x_m * 34.523438, y + y_m * 37.722656);
-                    c.line_to (x + x_m * 26, y + y_m * 33.242188);
-                    c.line_to (x + x_m * 17.476563, y + y_m * 37.722656);
-                    c.line_to (x + x_m * 19.105469, y + y_m * 28.234375);
-                    c.line_to (x + x_m * 12.210938, y + y_m * 21.515625);
-                    c.line_to (x + x_m * 21.738281, y + y_m * 20.132813);
-                    c.close_path ();
-                    c.move_to (x + x_m * 26, y + y_m * 11.5);
-                    c.set_tolerance (0.1);
-                    c.set_antialias (DEFAULT);
-                    if (theme == BORINGSHAPES)
-                        c.fill ();
-                    else
-                        c.stroke ();
-                }
-                /********************/
-                if (theme != COLORS)
-                {
-                    c.set_operator (OVER);
-                    c.set_line_width (3.104212 * ((x_m + y_m) / 2));
-                    c.set_miter_limit (4);
-                    c.set_line_cap (BUTT);
-                    c.set_line_join (MITER);
-                    if (theme == BORINGSHAPES)
-                        pattern = new pattern.rgba (0.1,0.1,0.1,1);
-                    else
-                        pattern = new pattern.rgba (0.92549,0.752941,0,1);
-                    c.set_source (pattern);
-                    c.new_path ();
-                    c.move_to (x + x_m * 25, y + y_m * 10.5);
-                    c.line_to (x + x_m * 29.261719, y + y_m * 19.132813);
-                    c.line_to (x + x_m * 38.789063, y + y_m * 20.515625);
-                    c.line_to (x + x_m * 31.894531, y + y_m * 27.234375);
-                    c.line_to (x + x_m * 33.523438, y + y_m * 36.722656);
-                    c.line_to (x + x_m * 25, y + y_m * 32.242188);
-                    c.line_to (x + x_m * 16.476563, y + y_m * 36.722656);
-                    c.line_to (x + x_m * 18.105469, y + y_m * 27.234375);
-                    c.line_to (x + x_m * 11.210938, y + y_m * 20.515625);
-                    c.line_to (x + x_m * 20.738281, y + y_m * 19.132813);
-                    c.close_path ();
-                    c.move_to (x + x_m * 25, y + y_m * 10.5);
-                    c.set_tolerance (0.1);
-                    c.set_antialias (DEFAULT);
-                    c.stroke ();
-                }
-                break;
-            case 4: /* red triangle */
-                x_m /= 50;
-                y_m /= 50;
-                /* background */
-                c.set_operator (OVER);
-                if (theme == BORINGSHAPES)
-                {
-                    c.set_source_rgba (0.8, 0.8, 0.8, 1);
-                }
-                else
-                {
-                    pattern = new Pattern.radial (x + x_m * 20, y + y_m * -10, 0, x + x_m * 25, y + y_m * 0, (x_m + y_m) * 30);
-                    pattern.add_color_stop_rgba (0,0.937255,0.160784,0.160784,1);
-                    pattern.add_color_stop_rgba (0.667479,0.721569,0,0,1);
-                    pattern.add_color_stop_rgba (1,0.937255,0.160784,0.160784,1);
-                    pattern.set_extend (PAD);
-                    pattern.set_filter (GOOD);
-                    c.set_source (pattern);
-                }
-                c.new_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.line_to (x + x_m * 45.335938, y + y_m * 1.5);
-                c.curve_to (x + x_m * 47.082031, y + y_m * 1.5, x + x_m * 48.5, y + y_m * 2.917969, x + x_m * 48.5, y + y_m * 4.664063);
-                c.line_to (x + x_m * 48.5, y + y_m * 45.335938);
-                c.curve_to (x + x_m * 48.5, y + y_m * 47.082031, x + x_m * 47.082031, y + y_m * 48.5, x + x_m * 45.335938, y + y_m * 48.5);
-                c.line_to (x + x_m * 4.664063, y + y_m * 48.5);
-                c.curve_to (x + x_m * 2.917969, y + y_m * 48.5, x + x_m * 1.5, y + y_m * 47.082031, x + x_m * 1.5, y + y_m * 45.335938);
-                c.line_to (x + x_m * 1.5, y + y_m * 4.664063);
-                c.curve_to (x + x_m * 1.5, y + y_m * 2.917969, x + x_m * 2.917969, y + y_m * 1.5, x + x_m * 4.664063, y + y_m * 1.5);
-                c.close_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.set_tolerance (0.1);
-                c.set_antialias (DEFAULT);
-                c.set_fill_rule (WINDING);
-                c.fill ();//c.fill_preserve ();
-                /* border */
-                c.set_operator (OVER);
-                c.set_line_width (1);
-                c.set_miter_limit (4);
-                c.set_line_cap (BUTT);
-                c.set_line_join (MITER);
-                if (theme == BORINGSHAPES)
-                {
-                    c.set_source_rgba (1, 1, 1, 1);
-                }
-                else
-                {
-                    pattern = new Pattern.linear (x + x_m * 10, y + y_m * 0, x + x_m * 25, y + y_m * 50);
-                    pattern.add_color_stop_rgba (0,0.937255,0.160784,0.160784,1);
-                    pattern.add_color_stop_rgba (1,0.988235,0.686275,0.243137,1);
-                    pattern.set_extend (PAD);
-                    pattern.set_filter (GOOD);
-                    c.set_source (pattern);
-                }
-                c.new_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.line_to (x + x_m * 45.335938, y + y_m * 1.5);
-                c.curve_to (x + x_m * 47.082031, y + y_m * 1.5, x + x_m * 48.5, y + y_m * 2.917969, x + x_m * 48.5, y + y_m * 4.664063);
-                c.line_to (x + x_m * 48.5, y + y_m * 45.335938);
-                c.curve_to (x + x_m * 48.5, y + y_m * 47.082031, x + x_m * 47.082031, y + y_m * 48.5, x + x_m * 45.335938, y + y_m * 48.5);
-                c.line_to (x + x_m * 4.664063, y + y_m * 48.5);
-                c.curve_to (x + x_m * 2.917969, y + y_m * 48.5, x + x_m * 1.5, y + y_m * 47.082031, x + x_m * 1.5, y + y_m * 45.335938);
-                c.line_to (x + x_m * 1.5, y + y_m * 4.664063);
-                c.curve_to (x + x_m * 1.5, y + y_m * 2.917969, x + x_m * 2.917969, y + y_m * 1.5, x + x_m * 4.664063, y + y_m * 1.5);
-                c.close_path ();
-                c.move_to (x + x_m * 4.664063, y + y_m * 1.5);
-                c.set_tolerance (0.1);
-                c.set_antialias (DEFAULT);
-                c.stroke ();
-                /********************/
-                if (theme != COLORS)
-                {
-                    c.set_operator (OVER);
-                    c.set_line_width (3.371869 * ((x_m + y_m) / 2));
-                    c.set_miter_limit (4);
-                    c.set_line_cap (BUTT);
-                    c.set_line_join (MITER);
-                    if (theme == BORINGSHAPES)
-                        pattern = new pattern.rgba (0.2,0.2,0.2,0.2);
-                    else
-                        pattern = new pattern.rgba (0.937255,0.160784,0.160784,0.501961);
-                    c.set_source (pattern);
-                    c.new_path ();
-                    c.move_to (x + x_m * 40.832031, y + y_m * 36.5);
-                    c.line_to (x + x_m * 11.167969, y + y_m * 36.5);
-                    c.line_to (x + x_m * 18.582031, y + y_m * 23.675781);
-                    c.line_to (x + x_m * 26, y + y_m * 10.847656);
-                    c.line_to (x + x_m * 33.417969, y + y_m * 23.675781);
-                    c.close_path ();
-                    c.move_to (x + x_m * 40.832031, y + y_m * 36.5);
-                    c.set_tolerance (0.1);
-                    c.set_antialias (DEFAULT);
-                    if (theme == BORINGSHAPES)
-                        c.fill ();
-                    else
-                        c.stroke ();
-                }
-                /********************/
-                if (theme != COLORS)
-                {
-                    c.set_operator (OVER);
-                    c.set_line_width (3.371869 * ((x_m + y_m) / 2));
-                    c.set_miter_limit (4);
-                    c.set_line_cap (BUTT);
-                    c.set_line_join (MITER);
-                    if (theme == BORINGSHAPES)
-                        pattern = new pattern.rgba (0.1,0.1,0.1,1);
-                    else
-                        pattern = new pattern.rgba (0.721569,0,0,1);
-                    c.set_source (pattern);
-                    c.new_path ();
-                    c.move_to (x + x_m * 39.832031, y + y_m * 35.5);
-                    c.line_to (x + x_m * 10.167969, y + y_m * 35.5);
-                    c.line_to (x + x_m * 17.582031, y + y_m * 22.675781);
-                    c.line_to (x + x_m * 25, y + y_m * 9.847656);
-                    c.line_to (x + x_m * 32.417969, y + y_m * 22.675781);
-                    c.close_path ();
-                    c.move_to (x + x_m * 39.832031, y + y_m * 35.5);
-                    c.set_tolerance (0.1);
-                    c.set_antialias (DEFAULT);
-                    c.stroke ();
-                }
-                break;
+            case 1:
+               return "blue";
+            case 2:
+               return "green";
+            case 3:
+               return "yellow";
+            case 4:
+               return "red";
             default:
-                break;
+               return "";
         }
+    }
+
+    void draw_block (Cairo.Context c, double x, double y, uint x_size, uint y_size, uint8 block_id, string theme)
+    {
+        string block_name = get_block_name (block_id);
+        string name = "/org/gnome/SwellFoop/themes/%s/%s.svg".printf (theme, block_name);
+        try
+        {
+            render_svg (c, x, y, x_size, y_size, name);
+        }
+        catch (Error e)
+        {
+        }
+        
     }
 
     void draw_cursor (Cairo.Context c, double x, double y, uint x_size, uint y_size)
     {
         /* to do, fix the cursor as it isn't very clear on the yellow block */
         Pattern pattern = new Pattern.radial (x + x_size * 0.5, y + y_size * 0.5, 0, x + x_size * 0.5, y + y_size * 0.5, (x_size + y_size) / 8);
-        if (theme == BORINGSHAPES) /* to do, this is an attempt to make the cursor clearer when on the BORINGSHAPES circle, it could be improved */
+        if (theme == "boringshapes") /* to do, this is an attempt to make the cursor clearer when on the BORINGSHAPES circle, it could be improved */
             pattern.add_color_stop_rgba (0,1,1,1,1);
         else
             pattern.add_color_stop_rgba (0,1,1,1,0.75);

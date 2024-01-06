@@ -19,11 +19,13 @@ vapidir = join_paths(meson.project_source_root(), 'vapi')
 glib_min_version = '2.74' # for Timeout.add_once
 glib_target_version = '2.78' # most recent tested version
 target_glib = '--target-glib=' + '@0@'.format(glib_target_version)
+gtk_min_version = '4.10'
 
 glib_dep        = dependency('glib-2.0', version: '>= ' + glib_min_version)
 gmodule_dep     = dependency('gmodule-2.0')
 gobject_dep     = dependency('gobject-2.0')
-gtk_dep         = dependency('gtk4', version: '>= 4.8')
+gtk_dep         = dependency('gtk4', version: '>= ' + gtk_min_version)
+rsvg_dep        = dependency('librsvg-2.0', version: '>=2.46' )
 libgnome_games_support_dep = dependency('libgnome-games-support-2', version: '>= 2.0.0') # requires GTK >= 4.2
 gee_dep         = dependency('gee-0.8', version: '>= 0.14.0')
 pangocairo_dep  = dependency('pangocairo')

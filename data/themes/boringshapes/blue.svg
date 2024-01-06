@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50"
+   height="50"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="blue.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3764">
+      <stop
+         style="stop-color:#729fcf;stop-opacity:1"
+         offset="0"
+         id="stop3766" />
+      <stop
+         id="stop3772"
+         offset="0.66747934"
+         style="stop-color:#396eb3;stop-opacity:1" />
+      <stop
+         style="stop-color:#729fcf;stop-opacity:1"
+         offset="1"
+         id="stop3768" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.6413384"
+     inkscape:cx="34.578798"
+     inkscape:cy="20.329446"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3801"
+     showgrid="false"
+     inkscape:window-width="1536"
+     inkscape:window-height="800"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     showborder="false"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:snap-nodes="false"
+     inkscape:document-rotation="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2992" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="25,19"
+       id="guide4096" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="25,25"
+       id="guide4098" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-164.71428,-194.21933)">
+    <g
+       id="g3801">
+      <rect
+         ry="3.1634619"
+         rx="3.1634619"
+         y="195.71933"
+         x="166.21428"
+         height="47.000004"
+         width="47"
+         id="rect3157"
+         style="fill:#f6f5f4;fill-opacity:1;stroke:#878787;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         transform="matrix(1.2272723,0,0,1.2272723,160.03248,189.53753)"
+         d="m 36,25 c 0,6.075132 -4.924868,11 -11,11 -6.075132,0 -11,-4.924868 -11,-11 0,-6.075132 4.924868,-11 11,-11 6.075132,0 11,4.924868 11,11 z"
+         sodipodi:ry="11"
+         sodipodi:rx="11"
+         sodipodi:cy="25"
+         sodipodi:cx="25"
+         id="path3967-7"
+         style="opacity:0.6;color:#000000;fill:none;stroke:#878787;stroke-width:2.44444537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+      <circle
+         transform="matrix(1.227272,0,0,1.227272,159.03249,188.53754)"
+         id="path3967"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#2e3436;stroke-width:2.44445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate;fill-opacity:1"
+         cx="25"
+         cy="25"
+         r="11" />
+    </g>
+  </g>
+</svg>
