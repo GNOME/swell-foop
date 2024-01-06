@@ -160,8 +160,6 @@ private class GameView : DrawingArea
                 var now = new DateTime.now_utc ();
                 int animation_index = 0;
                 Animation[] moves_to_do = {};
-                draw_score (c, x_offset + x_delta * (game.columns / 2 - 1), 0,
-                             x_delta * ((game.columns % 2)==0?2:3), y_delta, score);
                 if (first_draw)
                 {
                     first_draw = false;
@@ -209,6 +207,8 @@ private class GameView : DrawingArea
                 }
                 if (!game_complete)
                     draw_cursor (c, x_offset + x_delta * x_cursor, y_offset + y_delta * (game.rows - 1 - y_cursor), x_delta, y_delta);
+                draw_score (c, x_offset + x_delta * (game.columns / 2 - 1), 0,
+                             x_delta * ((game.columns % 2)==0?2:3), y_delta, score);
                 if (animate_score (c, now, width, height) || animations.size > 0)
                 {
 #if GLIB_2_78_or_above
