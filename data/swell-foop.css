@@ -2,6 +2,10 @@
   font-size:2em;
 }
 
+.score {
+  padding-top: 1em;
+}
+
 .gameover {
   font-size:3em;
 }

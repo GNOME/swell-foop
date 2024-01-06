@@ -200,11 +200,6 @@ private class GameView : DrawingArea
                     if (!do_animation (c, moves_to_do[i], now))
                         animations.remove (moves_to_do[i]);
                 }
-                if (!game_complete)
-                {
-                    draw_score (c, x_offset + x_delta * (game.columns / 2 - 1), 0,
-                                 x_delta * ((game.columns % 2)==0?2:3), y_delta, score);
-                }
                 if (draw_highlight)
                 {
                     draw_cursor (c, x_offset + x_delta * x_cursor, y_offset + y_delta * (game.rows - 1 - y_cursor), x_delta, y_delta, theme);
@@ -379,7 +374,7 @@ private class GameView : DrawingArea
             if (steps < animation_length)
             {
                 string text = "+" + score_delta.to_string ();
-                draw_text_font_size (c, width / 2, height / 2, text, (int)steps, (animation_length - steps) / (float)animation_length);
+                draw_text_font_size (c, width / 2, (int)(height / 2 * (animation_length - steps) / (float)animation_length), text, (int)steps, (animation_length - steps) / (float)animation_length);
                 return true;
             }
             else
@@ -448,6 +443,10 @@ private class GameView : DrawingArea
         game.complete.connect (() =>
         {
             game_complete = true;
+        });
+        game.started.connect (() =>
+        {
+            game_complete = false;
         });
     }
 
@@ -740,73 +739,4 @@ private class GameView : DrawingArea
         }
     }
 
-    void draw_score (Context C, double x, double y, double width, double height, uint score, bool bright = false)
-    {
-        string text = score.to_string ();
-        for (;text.length < 5;text = "0" + text);
-        int x_offset, y_offset;
-        double text_width, text_height;
-        int target_font_size = calculate_font_size_from_max (C, text, (int)width, (int)height, 
-            out text_width, out text_height, out x_offset, out y_offset);
-
-        /* draw */
-        C.move_to (x - x_offset + (width - text_width) / 2, y - y_offset + (height - text_height) / 2); 
-        if (bright)
-            C.set_source_rgb (1.0, 1.0, 1.0);
-        else
-            C.set_source_rgb (0.5, 0.5, 0.5);
-        var layout =  Pango.cairo_create_layout (C);
-        Pango.FontDescription font;
-        if (null == layout.get_font_description ())
-            font = Pango.FontDescription.from_string ("Sans Bold 1pt");
-        else
-            font = layout.get_font_description ().copy ();
-        font.set_size (Pango.SCALE * target_font_size);
-        layout.set_font_description (font);
-        layout.set_text (text, -1);
-        Pango.cairo_update_layout (C, layout);
-        Pango.cairo_show_layout (C, layout);
-    }
-
-    int calculate_font_size_from_max (Context C, string text, int max_width, int max_height,
-                                      out double width, out double height, out int x_offset, out int y_offset)
-    {
-        int target_font_size = 1;
-        width = 0;
-        height = 0;
-        x_offset = 0;
-        y_offset = 0;
-        for (int font_size = 1;font_size < 200;)
-        {
-            var layout =  Pango.cairo_create_layout (C);
-            Pango.FontDescription font;
-            if (null == layout.get_font_description ())
-                font = Pango.FontDescription.from_string ("Sans Bold 1pt");
-            else
-                font = layout.get_font_description ().copy ();
-            font.set_size (Pango.SCALE * font_size);
-            layout.set_font_description (font);
-            layout.set_text (text, -1);
-            Pango.cairo_update_layout (C, layout);
-            Pango.Rectangle a,b;
-            layout.get_extents (out a, out b);
-            if (a.width / Pango.SCALE < max_width && a.height / Pango.SCALE < max_height)
-            {
-                width = a.width / Pango.SCALE;
-                height = a.height / Pango.SCALE;
-                target_font_size = font_size;
-                x_offset = a.x / Pango.SCALE;
-                y_offset = a.y / Pango.SCALE;
-            }
-            else
-                break;
-            if (font_size < 20)
-                font_size++;
-            else if (font_size < 50)
-                font_size+=5;
-            else
-                font_size+=10;
-        }
-        return target_font_size;
-    }
 }

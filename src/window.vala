@@ -33,6 +33,7 @@ private class SwellFoopWindow : ApplicationWindow
     private Label score_label;
     private Label to_high_score_label;
     private Box game_over_box;
+    private Label current_score_label;
 
     private GLib.Settings settings;
 
@@ -234,14 +235,12 @@ private class SwellFoopWindow : ApplicationWindow
 
         init_scores ();
 
-        /* show the current score */
-        update_score_cb ();
-
         /* Create a cairo view */
         view = new GameView ();
         add_keypress_handler (view.keypress);
         view.show ();
         Size size = get_board_size ();
+
         aspect_frame = new AspectFrame (0.5f, 0.5f, (float)size.columns/size.rows, false);
         aspect_frame.show ();
         aspect_frame.hexpand = true;
@@ -261,6 +260,14 @@ private class SwellFoopWindow : ApplicationWindow
         game_over_box.visible = false;
         overlay.add_overlay (game_over_box);
 
+        current_score_label = new Label ("123456");
+        current_score_label.visible = true;
+        current_score_label.use_markup = true;
+        current_score_label.valign = Align.START;
+        
+        current_score_label.set_css_classes ({"score"});
+        overlay.add_overlay (current_score_label);
+        
         stack.add_named (first_run_view, "first_run");
         stack.add_named (aspect_frame, "game");
 
@@ -288,6 +295,7 @@ private class SwellFoopWindow : ApplicationWindow
             settings.apply ();
             return false;
         });
+        
     }
 
     internal SwellFoopWindow (Gtk.Application application)
@@ -341,6 +349,7 @@ private class SwellFoopWindow : ApplicationWindow
         uint score = 0;
         if (game != null)
             score = game.score;
+        current_score_label.label = "<span size=\"x-large\">%u</span>".printf(score);
     }
 
     private void complete_cb ()
@@ -351,6 +360,7 @@ private class SwellFoopWindow : ApplicationWindow
         /* Translators: the text for the score total shown on the game over screen */
         score_label.set_label (_("%u Points").printf(game.score));
 
+        current_score_label.visible = false;
         game_over_box.visible = true;
 
     }
@@ -358,6 +368,7 @@ private class SwellFoopWindow : ApplicationWindow
     private inline void started_cb ()
     {
         game_in_progress = true;
+        current_score_label.visible = true;
     }
 
     private Size get_board_size ()
