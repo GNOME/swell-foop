@@ -26,9 +26,10 @@
   </screenshots>
   <url type="homepage">https://wiki.gnome.org/Apps/Swell%20Foop</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/swell-foop/issues</url>
-  <url type="donation">http://www.gnome.org/friends/</url>
+  <url type="donation">https://www.gnome.org/donate/</url>
   <url type="help">https://help.gnome.org/users/swell-foop/stable/</url>
   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/GNOME/swell-foop</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
@@ -77,6 +78,7 @@
     </release>
     <release version="40.1" date="2021-04-30" type="stable" />
   </releases>
+  <launchable type="desktop-id">org.gnome.SwellFoop.desktop</launchable>
   <translation type="gettext">swell-foop</translation>
   <developer_name>Robert Roth</developer_name>
   <content_rating type="oars-1.1" />
