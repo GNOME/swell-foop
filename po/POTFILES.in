@@ -3,7 +3,8 @@
 data/org.gnome.SwellFoop.appdata.xml.in
 data/org.gnome.SwellFoop.desktop.in
 data/org.gnome.SwellFoop.gschema.xml
-data/ui/first-run-stack.ui
+data/ui/first-run.ui
+data/ui/game-over.ui
 data/ui/help-overlay.ui
 data/ui/swell-foop.ui
 src/game.vala
