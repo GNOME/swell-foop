@@ -4,13 +4,13 @@
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2004-2010.
 # Wanderlust <wanderlust@ukr.net>, 2009.
 # Daniel Korostil <ted.korostiled@gmail.com>, 2014, 2015, 2017.
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2022, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2023-11-28 06:59+0000\n"
-"PO-Revision-Date: 2023-11-29 22:54+0200\n"
+"POT-Creation-Date: 2024-01-13 12:16+0000\n"
+"PO-Revision-Date: 2024-01-14 09:30+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 "X-Project-Style: gnome\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
@@ -56,7 +56,7 @@ msgstr ""
 "«Той самий» — дуже швидка гра, проте можна її розтягнути змінивши розмір "
 "дошки."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:81
+#: data/org.gnome.SwellFoop.appdata.xml.in:83
 msgid "Robert Roth"
 msgstr "Роберт Рот"
 
@@ -152,14 +152,26 @@ msgstr ""
 "журнал дій, який зберігається у масиві координат."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:43
+#: data/ui/first-run.ui:39
 msgid "Welcome to Swell Foop"
 msgstr "Ласкаво просимо в «Той самий»"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:64
+#: data/ui/first-run.ui:60
 msgid "Let’s _Play"
 msgstr "Нумо _грати"
+
+#. Translators: text appearing on the game over screen
+#: data/ui/game-over.ui:37
+#| msgid "Game Over!"
+msgid "Game Over"
+msgstr "Гру закінчено"
+
+#. Translators: label of the button on the game over screen
+#: data/ui/game-over.ui:68
+#| msgid "Play Again?"
+msgid "_Play Again"
+msgstr "_Зіграти ще раз"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
 #: data/ui/help-overlay.ui:31
@@ -254,85 +266,71 @@ msgstr "Вийти"
 #. Translators: entry of the hamburger menu; starts a new game
 #. Translators: entry of the Setup submenu of the hamburger menu; starts a new game
 #: data/ui/swell-foop.ui:27 data/ui/swell-foop.ui:76
-#| msgid "_New Game"
 msgid "New Game"
 msgstr "Створити гру"
 
 #. Translators: submenu of the hamburger menu; allows to configure board size and number of colors
 #: data/ui/swell-foop.ui:32
-#| msgid "_Setup"
 msgid "Setup"
 msgstr "Налаштування"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:36
-#| msgid "_Small (6 × 5)"
 msgid "Small (6 × 5)"
 msgstr "Малий (6 × 5)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:42
-#| msgid "Nor_mal (15 × 10)"
 msgid "Normal (15 × 10)"
 msgstr "Звичайний (15 × 10)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
 #: data/ui/swell-foop.ui:48
-#| msgid "_Large (20 × 15)"
 msgid "Large (20 × 15)"
 msgstr "Великий (20 × 15)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:56
-#| msgid "_Two colors"
 msgid "Two colors"
 msgstr "Два кольори"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "_Four colors"
 #: data/ui/swell-foop.ui:62
-#| msgid "T_hree colors"
 msgid "Three colors"
 msgstr "Три кольори"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "T_hree colors"
 #: data/ui/swell-foop.ui:68
-#| msgid "_Four colors"
 msgid "Four colors"
 msgstr "Чотири кольори"
 
 #. Translators: entry of the hamburger menu; displays high scores
 #: data/ui/swell-foop.ui:85
-#| msgid "High _Scores"
 msgid "High Scores"
 msgstr "Найкращі результати"
 
 #. Translators: submenu of the hamburger menu; allows to change the theme; Colors, Shapes and Colors or Boring Shapes
 #: data/ui/swell-foop.ui:90
-#| msgid "A_ppearance"
 msgid "Appearance"
 msgstr "Вигляд"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Shapes and Colors" and "Boring Shapes"
 #: data/ui/swell-foop.ui:94
-#| msgid "_Colors"
 msgid "Colors"
 msgstr "Кольори"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Boring Shapes"
 #: data/ui/swell-foop.ui:100
-#| msgid "_Shapes and Colors"
 msgid "Shapes and Colors"
 msgstr "Форми і кольори"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Shapes and Colors"
 #: data/ui/swell-foop.ui:106
-#| msgid "_Boring Shapes"
 msgid "Boring Shapes"
 msgstr "Нудні форми"
 
 #. Translators: entry of the hamburger menu; shows a Shortcuts window
 #: data/ui/swell-foop.ui:116
-#| msgid "_Keyboard Shortcuts"
 msgid "Keyboard Shortcuts"
 msgstr "Клавіатурні скорочення"
 
@@ -355,17 +353,6 @@ msgstr "Скасувати"
 #: data/ui/swell-foop.ui:163
 msgid "Redo"
 msgstr "Повторити"
-
-#. Translators: message displayed to show the game has finished
-#: src/game-view.vala:1332
-msgid "Game Over!"
-msgstr "Гру закінчено!"
-
-#. Translators: message displayed in a Button if the player wants to play the game again
-#: src/game-view.vala:1370
-#| msgid "_Play Again"
-msgid "Play Again?"
-msgstr "Зіграти ще раз?"
 
 #. Translators: command-line option description, see 'swell-foop --help'
 #: src/swell-foop.vala:25
@@ -407,22 +394,22 @@ msgstr ""
 "Daniel Korostil <ted.korostiled@gmail.com>"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:149
+#: src/window.vala:155
 msgid "Small"
 msgstr "Маленька"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:152
+#: src/window.vala:158
 msgid "Normal"
 msgstr "Звичайний"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:155
+#: src/window.vala:161
 msgid "Large"
 msgstr "Велика"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:301
+#: src/window.vala:319
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -430,22 +417,30 @@ msgstr ""
 "Очистіть якнайбільше блоків.\n"
 "Більше натисків — більше балів."
 
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:361
+#, c-format
+#| msgid "%u point"
+#| msgid_plural "%u points"
+msgid "%u Points"
+msgstr "%u бали"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:434
+#: src/window.vala:463
 msgid "Abandon this game to start a new one?"
 msgstr "Облишити цю гру та почати нову?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:437
+#: src/window.vala:468
 msgid "_Cancel"
 msgstr "_Скасувати"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:440
+#: src/window.vala:470
 msgid "_New Game"
 msgstr "_Створити гру"
 
-#: src/window.vala:519
+#: src/window.vala:559
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -454,7 +449,7 @@ msgstr[1] "%s, %d кольори"
 msgstr[2] "%s, %d кольорів"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:530
+#: src/window.vala:570
 msgid "Type"
 msgstr "Тип"
 
@@ -466,13 +461,6 @@ msgstr "Тип"
 
 #~ msgid "_Zealous Animation"
 #~ msgstr "_Ретельна анімація"
-
-#, c-format
-#~ msgid "%u point"
-#~ msgid_plural "%u points"
-#~ msgstr[0] "%u бал"
-#~ msgstr[1] "%u бали"
-#~ msgstr[2] "%u балів"
 
 #, c-format
 #~ msgid "Score: %u"
