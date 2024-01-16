@@ -68,6 +68,7 @@
         <property name="label" translatable="yes">_Play Again</property>
         <property name="halign">center</property>
         <property name="valign">center</property>
+        <property name="receives-default">true</property>
         <property name="action-name">win.new-game</property>
         <style>
           <class name="play"/>

@@ -441,6 +441,7 @@ private class GameView : DrawingArea
         game.complete.connect (() =>
         {
             game_complete = true;
+            draw_highlight = false;
         });
         game.started.connect (() =>
         {

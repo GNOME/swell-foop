@@ -408,6 +408,7 @@ private class SwellFoopWindow : ApplicationWindow
 
         redo_action = (SimpleAction) lookup_action ("redo");
         game.bind_property ("can-redo", redo_action, "enabled", BindingFlags.SYNC_CREATE);
+        view.grab_focus ();
     }
 
     /*\
