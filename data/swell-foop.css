@@ -2,8 +2,16 @@
   font-size:2em;
 }
 
+.high_score, .score {
+  padding: 0.2em;
+  font-size: 2.2em;
+}
+
 .score {
-  padding-top: 1em;
+  border: 1px solid shade(grey, 0.5);
+  border-top: 0px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .gameover {

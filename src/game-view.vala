@@ -130,7 +130,7 @@ private class GameView : DrawingArea
     uint y_cursor = -1;
 
     /* frozen board variables */
-    bool frozen_board_initilised = false;
+    bool frozen_board_initialized = false;
     uint8 [,] frozen_board;
     bool frozen = false;
 
@@ -144,7 +144,7 @@ private class GameView : DrawingArea
         {
             this.width = width;
             this.height = height;
-            if (!is_unitilised () && !(frozen && !frozen_board_initilised))
+            if (!is_uninitialized () && !(frozen && !frozen_board_initialized))
             {
                 x_delta = width / game.columns;
                 y_delta = height / game.rows;
@@ -460,7 +460,7 @@ private class GameView : DrawingArea
 
     internal void cursor_move (int x, int y)
     {
-        if (!is_unitilised () && !game_complete)
+        if (!is_uninitialized () && !game_complete)
         {
             draw_highlight = true;
             if (x_cursor == -1 || y_cursor == -1 || x_cursor > game.columns - 1 || y_cursor > game.rows - 1)
@@ -519,7 +519,7 @@ private class GameView : DrawingArea
 
     internal void freeze ()
     {
-        if (!is_unitilised ())
+        if (!is_uninitialized ())
         {
             frozen_board = new uint8 [game.columns, game.rows];
             for (int y = game.rows - 1; y >= 0; --y)
@@ -529,7 +529,7 @@ private class GameView : DrawingArea
                     frozen_board[x, y] = null != game.current_board[y, x] ? game.current_board[y, x].color : 0;
                 }
             }
-            frozen_board_initilised = true;
+            frozen_board_initialized = true;
         }
         frozen = true;
     }
@@ -566,7 +566,7 @@ private class GameView : DrawingArea
 
     /* private functions */
 
-    bool is_unitilised ()
+    bool is_uninitialized ()
     {
         return null == game || null == game.current_board ||
             game.current_board.length[0] != game.rows || 

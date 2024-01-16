@@ -28,12 +28,14 @@ private class SwellFoopWindow : ApplicationWindow
     [GtkChild] private unowned Overlay      overlay;
     [GtkChild] private unowned Stack        stack;
     [GtkChild] internal unowned MenuButton  hamburger_button;
+    [GtkChild] private unowned Label current_score_label;
+    [GtkChild] private unowned Revealer score_revealer;
 
     private AspectFrame aspect_frame;
     private Label score_label;
     private Label to_high_score_label;
     private Box game_over_box;
-    private Label current_score_label;
+
 
     private GLib.Settings settings;
 
@@ -136,8 +138,6 @@ private class SwellFoopWindow : ApplicationWindow
 
     /* Rendering of game */
     private GameView view;
-
-    private bool game_in_progress = false;
 
     /* Store size options */
     private struct Size
@@ -260,14 +260,6 @@ private class SwellFoopWindow : ApplicationWindow
         game_over_box.visible = false;
         overlay.add_overlay (game_over_box);
 
-        current_score_label = new Label ("123456");
-        current_score_label.visible = true;
-        current_score_label.use_markup = true;
-        current_score_label.valign = Align.START;
-        
-        current_score_label.set_css_classes ({"score"});
-        overlay.add_overlay (current_score_label);
-        
         stack.add_named (first_run_view, "first_run");
         stack.add_named (aspect_frame, "game");
 
@@ -349,25 +341,22 @@ private class SwellFoopWindow : ApplicationWindow
         uint score = 0;
         if (game != null)
             score = game.score;
-        current_score_label.label = "<span size=\"x-large\">%u</span>".printf(score);
+        current_score_label.label = "%u".printf(score);
     }
 
     private void complete_cb ()
     {
         undo_action.set_enabled (false);
         Idle.add (() => { add_score (); return Source.REMOVE; });
-        game_in_progress = false;
         /* Translators: the text for the score total shown on the game over screen */
         score_label.set_label (_("%u Points").printf(game.score));
 
-        current_score_label.visible = false;
         game_over_box.visible = true;
 
     }
 
     private inline void started_cb ()
     {
-        game_in_progress = true;
         current_score_label.visible = true;
     }
 
@@ -400,7 +389,7 @@ private class SwellFoopWindow : ApplicationWindow
                          (uint8) settings.get_int ("colors"),
                          view,
                          saved_game);
-        game_in_progress = game.score != 0;
+        game.bind_property ("is-started", score_revealer, "reveal-child", BindingFlags.SYNC_CREATE);
         update_score_cb ();
 
         /* Game score change will be sent to the main window and show in the score label */
@@ -411,6 +400,7 @@ private class SwellFoopWindow : ApplicationWindow
         /* Initialize the view */
         view.set_theme_name (settings.get_string ("theme"));
         view.set_game ((!) game);
+        game_over_box.visible = false;
 
         /* Update undo and redo actions states */
         undo_action = (SimpleAction) lookup_action ("undo");
@@ -450,7 +440,7 @@ private class SwellFoopWindow : ApplicationWindow
 
     private inline void new_game_cb (/* SimpleAction action, Variant? variant */)
     {
-        if (game_in_progress)
+        if (game.is_started)
             show_new_game_confirmation_dialog ();
         else
             new_game ();

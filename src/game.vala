@@ -69,7 +69,7 @@ private class Tile : Object
 private class Game : Object
 {
     internal Tile? [,] current_board;
-    private bool is_started = false;
+    internal bool is_started { get; private set; default = false; }
 
     /* Game score */
     internal uint score { internal get; private set; default = 0; }
@@ -279,6 +279,7 @@ private class Game : Object
             if (has_won (ref current_board))
                 increment_score (1000);
             complete ();
+            is_started = false;
         }
     }
     private void _remove_connected_tiles (Tile given_tile, ref Tile? [,] current_board, bool skip_history)

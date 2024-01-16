@@ -46,7 +46,7 @@
         <!-- label cannot be set there because it contains the score -->
         <property name="justify">center</property>
         <style>
-          <class name="score"/>
+          <class name="high_score"/>
         </style>
       </object>
     </child>
