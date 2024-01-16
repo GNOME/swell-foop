@@ -51,7 +51,7 @@ public class SwellFoop : Gtk.Application
         add_action_entries (action_entries, this);
         set_accels_for_action ("app.help",              {                 "F1"  });
         set_accels_for_action ("win.toggle-hamburger",  {                 "F10" });
-        set_accels_for_action ("win.new-game",          {        "<Primary>n"   });
+        set_accels_for_action ("win.new-game",          {        "<Primary>n", "F2"});
         set_accels_for_action ("app.quit",              {        "<Primary>q"   });
         set_accels_for_action ("win.undo",              {        "<Primary>z"   });
         set_accels_for_action ("win.redo",              { "<Shift><Primary>z"   });

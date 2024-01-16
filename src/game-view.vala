@@ -134,6 +134,39 @@ private class GameView : DrawingArea
     uint8 [,] frozen_board;
     bool frozen = false;
 
+    internal bool keypress (uint keyval, uint keycode)
+    {
+        switch (keyval)
+        {
+            case Gdk.Key.Up:
+            case Gdk.Key.W: // added key for left hand use
+            case Gdk.Key.w: // added key for left hand use
+                cursor_move (0, 1);
+                return true;
+            case Gdk.Key.Down:
+            case Gdk.Key.S: // added key for left hand use
+            case Gdk.Key.s: // added key for left hand use
+                cursor_move (0, -1);
+                return true;
+            case Gdk.Key.Left:
+            case Gdk.Key.A: // added key for left hand use
+            case Gdk.Key.a: // added key for left hand use
+                cursor_move (-1, 0);
+                return true;
+            case Gdk.Key.Right:
+            case Gdk.Key.D: // added key for left hand use
+            case Gdk.Key.d: // added key for left hand use
+                cursor_move (1, 0);
+                return true;
+            case Gdk.Key.space:
+            case Gdk.Key.Return:
+                cursor_click ();
+                return true;
+            default:
+                return false;
+        }
+    }
+
     construct
     {
         set_hexpand (true);
@@ -227,7 +260,9 @@ private class GameView : DrawingArea
             new_position (-1, -1);
         });
 
+        var key_controller = new EventControllerKey ();
         var mouse_click = new EventControllerLegacy ();
+        key_controller.key_pressed.connect ((controller,keyval,keycode,state)=>{ keypress(keyval, keycode);} );
         mouse_click.event.connect ((event)=>
         {
             switch (event.get_event_type ())
@@ -249,6 +284,7 @@ private class GameView : DrawingArea
             }
         });
         add_controller (mouse_click);
+        add_controller (key_controller);
         add_controller (mouse_position);
     }
 
@@ -461,9 +497,9 @@ private class GameView : DrawingArea
 
     internal void cursor_move (int x, int y)
     {
+        draw_highlight = true;
         if (!is_uninitialized () && !game_complete)
         {
-            draw_highlight = true;
             if (x_cursor == -1 || y_cursor == -1 || x_cursor > game.columns - 1 || y_cursor > game.rows - 1)
             {
                 x_cursor = game.columns / 2;
@@ -510,12 +546,6 @@ private class GameView : DrawingArea
                 }
             }
         }
-    }
-
-    internal bool keypress (uint keyval, uint keycode, out bool remove_handler)
-    {
-        remove_handler = false;
-        return false;
     }
 
     internal void freeze ()

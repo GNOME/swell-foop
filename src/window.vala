@@ -20,8 +20,6 @@
 
 using Gtk; /* designed for Gtk 4, link with libgtk-4-dev or gtk4-devel */
 
-delegate bool KeypressHandlerFunction (uint a, uint b, out bool remove_handler);
-
 [GtkTemplate (ui = "/org/gnome/SwellFoop/ui/swell-foop.ui")]
 private class SwellFoopWindow : ApplicationWindow
 {
@@ -38,100 +36,6 @@ private class SwellFoopWindow : ApplicationWindow
 
 
     private GLib.Settings settings;
-
-    /* keyboard interface */
-    class DelegateStack 
-    {
-        internal class DelegateStackIterator
-        {
-            /* variables */
-            private Node? pIterator; /* pointer to next node */
-            bool first_next;
-
-            /* public functions */
-            public DelegateStackIterator (DelegateStack p)
-            {
-                pIterator = p.pHead;
-                first_next = true;
-            }
-            
-            public bool next ()
-            {
-                if (pIterator == null)
-                    return false;
-                else if (first_next)
-                {
-                    first_next = !first_next;
-                    return true;
-                }
-                else
-                {
-                    pIterator = pIterator.pNext;
-                    return pIterator != null; 
-                }
-            }
-            
-            public KeypressHandlerFunction @get ()
-            {
-                return (KeypressHandlerFunction)(pIterator.keypress_handler);
-            }
-        }
-
-        struct Node
-        {
-            KeypressHandlerFunction keypress_handler; /* to do, circumnavigate compiler warning message */
-            Node? pNext;
-        }
-        Node? pHead = null;
-
-        internal void push (KeypressHandlerFunction handler)
-        {
-            if (pHead == null)
-                pHead = { (KeypressHandlerFunction)handler, null};
-            else
-                pHead = { (KeypressHandlerFunction)handler, pHead};
-        }
-        /*
-        internal bool pop ()
-        {
-            if (pHead == null)
-                return false;
-            else
-            {
-                pHead = pHead.pNext;
-                return true;
-            }
-        }
-        */
-        internal void remove (KeypressHandlerFunction handler)
-        {
-            if (pHead != null && pHead.keypress_handler == handler)
-                pHead = pHead.pNext;
-            else if (pHead != null && pHead.pNext != null)
-            {
-                var pTrail = pHead;
-                for (var p = pTrail.pNext; p != null;)
-                {
-                    if (p.keypress_handler == handler)
-                    {
-                        pTrail.pNext = p.pNext;
-                        break;
-                    }
-                    else
-                    {
-                         pTrail = p;
-                         p = p.pNext;
-                    }
-                }
-            }
-        }
-
-        public DelegateStackIterator iterator ()
-        {
-            return new DelegateStackIterator (this);
-        }
-    }
-    DelegateStack keypress_handlers = new DelegateStack ();
 
     /* Game being played */
     private Game? game = null;
@@ -197,32 +101,6 @@ private class SwellFoopWindow : ApplicationWindow
         if (settings.get_boolean ("window-is-maximized"))
             maximize ();
 
-        EventControllerKey key_controller = new EventControllerKey ();
-        key_controller.key_pressed.connect ((/*EventControllerKey*/controller,/*uint*/keyval,/*uint*/keycode,/*Gdk.ModifierType*/state)=>
-        {
-            DelegateStack handlers_to_remove = new DelegateStack ();
-            foreach (var handler in keypress_handlers)
-            {
-                bool remove_handler;
-                bool r = handler (keyval, keycode, out remove_handler);
-                if (remove_handler)
-                    handlers_to_remove.push (handler);
-                if (r)
-                {
-                    /* remove any handlers that need to be removed before we return */
-                    foreach (var h in handlers_to_remove)
-                        keypress_handlers.remove (h);
-                    return r;
-                }
-            }
-            /* remove any handlers that need to be removed before we return */
-            foreach (var handler in handlers_to_remove)
-                keypress_handlers.remove (handler);
-            return false;
-        });
-        ((Widget)(this)).add_controller (key_controller);
-        keypress_handlers.push (keypress);
-
         string theme = settings.get_string ("theme");
         if (theme != "colors" && theme != "shapesandcolors" && theme != "boringshapes")
             theme = "shapesandcolors";
@@ -237,7 +115,6 @@ private class SwellFoopWindow : ApplicationWindow
 
         /* Create a cairo view */
         view = new GameView ();
-        add_keypress_handler (view.keypress);
         view.show ();
         Size size = get_board_size ();
 
@@ -287,7 +164,6 @@ private class SwellFoopWindow : ApplicationWindow
             settings.apply ();
             return false;
         });
-        
     }
 
     internal SwellFoopWindow (Gtk.Application application)
@@ -297,10 +173,10 @@ private class SwellFoopWindow : ApplicationWindow
         new_game (settings.get_value ("saved-game"));
     }
 
-    internal void add_keypress_handler (KeypressHandlerFunction handler)
+    /*internal void add_keypress_handler (KeypressHandlerFunction handler)
     {
         keypress_handlers.push (handler);
-    }
+    }*/
 
     private inline Box build_first_run_view ()
     {
@@ -491,46 +367,6 @@ private class SwellFoopWindow : ApplicationWindow
     private inline void redo (/* SimpleAction action, Variant? variant */)
     {
         game.redo ();
-    }
-
-    /*\
-    * * keyboard
-    \*/
-    internal bool keypress (uint keyval, uint keycode, out bool remove_handler)
-    {
-        remove_handler = false;
-        switch (keyval)
-        {
-            case Gdk.Key.F2:
-                new_game ();
-                return true;
-            case Gdk.Key.Up:
-            case Gdk.Key.W: /* added key for left hand use */
-            case Gdk.Key.w: /* added key for left hand use */
-                view.cursor_move (0, 1);
-                return true;
-            case Gdk.Key.Down:
-            case Gdk.Key.S: /* added key for left hand use */
-            case Gdk.Key.s: /* added key for left hand use */
-                view.cursor_move (0, -1);
-                return true;
-            case Gdk.Key.Left:
-            case Gdk.Key.A: /* added key for left hand use */
-            case Gdk.Key.a: /* added key for left hand use */
-                view.cursor_move (-1, 0);
-                return true;
-            case Gdk.Key.Right:
-            case Gdk.Key.D: /* added key for left hand use */
-            case Gdk.Key.d: /* added key for left hand use */
-                view.cursor_move (1, 0);
-                return true;
-            case Gdk.Key.space:
-            case Gdk.Key.Return:
-                view.cursor_click ();
-                return true;
-            default:
-                return false;
-        }
     }
 
     /*\
