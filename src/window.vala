@@ -497,8 +497,6 @@ private class SwellFoopWindow : ApplicationWindow
                     {
                         warning ("Failed to add score: %s", e.message);
                     }
-                    if (game.score <= lowest_high_score)
-                        scores_context.run_dialog ();
                 });
         }
     }
