@@ -1,14 +1,14 @@
 # Georgian translation for swell-foop.
 # Copyright (C) 2023 swell-foop's authors.
 # This file is distributed under the same license as the swell-foop package.
-# Ekaterine Papava <papava.e@gtu.ge>, 2023.
+# Ekaterine Papava <papava.e@gtu.ge>, 2023-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2023-11-28 06:59+0000\n"
-"PO-Revision-Date: 2023-12-01 23:52+0100\n"
+"POT-Creation-Date: 2024-01-13 12:16+0000\n"
+"PO-Revision-Date: 2024-01-16 21:20+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -46,7 +46,7 @@ msgid ""
 "by changing the board size."
 msgstr ""
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:81
+#: data/org.gnome.SwellFoop.appdata.xml.in:83
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -128,7 +128,7 @@ msgstr ""
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
 #: data/org.gnome.SwellFoop.gschema.xml:61
 msgid "Saved game"
-msgstr ""
+msgstr "შენახული თამაში"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
 #: data/org.gnome.SwellFoop.gschema.xml:63
@@ -139,14 +139,24 @@ msgid ""
 msgstr ""
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:43
+#: data/ui/first-run.ui:39
 msgid "Welcome to Swell Foop"
-msgstr ""
+msgstr "მოგესალმებათ Swell Foop"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:64
+#: data/ui/first-run.ui:60
 msgid "Let’s _Play"
 msgstr "_ვითამაშოთ"
+
+#. Translators: text appearing on the game over screen
+#: data/ui/game-over.ui:37
+msgid "Game Over"
+msgstr "თამაში დასრულდა"
+
+#. Translators: label of the button on the game over screen
+#: data/ui/game-over.ui:68
+msgid "_Play Again"
+msgstr "_თავიდან თამაში"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
 #: data/ui/help-overlay.ui:31
@@ -158,13 +168,13 @@ msgstr "კლავიატურით თამაში"
 #: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Move keyboard highlight"
-msgstr ""
+msgstr "კლავიატურის გამოკვეთის გადატანა"
 
 #. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
 #: data/ui/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Destroy selected block"
-msgstr ""
+msgstr "მონიშნული ბლოკის განადგურება"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo"
 #: data/ui/help-overlay.ui:54
@@ -194,7 +204,7 @@ msgstr "გადატვრთვა"
 #: data/ui/help-overlay.ui:85
 msgctxt "shortcut window"
 msgid "Main functions"
-msgstr ""
+msgstr "მთავარი ფუნქციები"
 
 #. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
 #: data/ui/help-overlay.ui:91
@@ -329,16 +339,6 @@ msgstr "ბრძანების გაუქმება"
 msgid "Redo"
 msgstr "ბრძანების აღდგენა"
 
-#. Translators: message displayed to show the game has finished
-#: src/game-view.vala:1332
-msgid "Game Over!"
-msgstr "თამაში დასრულდა!"
-
-#. Translators: message displayed in a Button if the player wants to play the game again
-#: src/game-view.vala:1370
-msgid "Play Again?"
-msgstr "ითამაშებთ თავიდან?"
-
 #. Translators: command-line option description, see 'swell-foop --help'
 #: src/swell-foop.vala:25
 msgid "Print release version and exit"
@@ -373,43 +373,49 @@ msgid "translator-credits"
 msgstr "თარგმანი-შესრულებულია"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:149
+#: src/window.vala:155
 msgid "Small"
 msgstr "პატარა"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:152
+#: src/window.vala:158
 msgid "Normal"
 msgstr "ნორმალური"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:155
+#: src/window.vala:161
 msgid "Large"
 msgstr "დიდი"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:301
+#: src/window.vala:319
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
 msgstr ""
 
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:361
+#, c-format
+msgid "%u Points"
+msgstr "%u წერტილი"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:434
+#: src/window.vala:463
 msgid "Abandon this game to start a new one?"
-msgstr ""
+msgstr "მიატოვებთ ამ თამაშს და დაიწყებთ ახალს?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:437
+#: src/window.vala:468
 msgid "_Cancel"
 msgstr "_შეწყვეტა"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:440
+#: src/window.vala:470
 msgid "_New Game"
 msgstr "ახალი თამაში"
 
-#: src/window.vala:519
+#: src/window.vala:559
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -417,7 +423,7 @@ msgstr[0] "%s, %d ფერი"
 msgstr[1] "%s, %d ფერი"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:530
+#: src/window.vala:570
 msgid "Type"
 msgstr "ტიპი"
 
