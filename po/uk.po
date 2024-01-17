@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-01-13 12:16+0000\n"
-"PO-Revision-Date: 2024-01-14 09:30+0200\n"
+"POT-Creation-Date: 2024-01-17 00:11+0000\n"
+"PO-Revision-Date: 2024-01-17 21:00+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -163,13 +163,11 @@ msgstr "Нумо _грати"
 
 #. Translators: text appearing on the game over screen
 #: data/ui/game-over.ui:37
-#| msgid "Game Over!"
 msgid "Game Over"
 msgstr "Гру закінчено"
 
 #. Translators: label of the button on the game over screen
 #: data/ui/game-over.ui:68
-#| msgid "Play Again?"
 msgid "_Play Again"
 msgstr "_Зіграти ще раз"
 
@@ -382,7 +380,7 @@ msgstr ""
 #. Translators: About dialog text, copyright line
 #: src/swell-foop.vala:141
 msgid "Copyright © 2009 Tim Horton"
-msgstr "©2009 Tim Horton"
+msgstr "© Tim Horton, 2009"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
 #: src/swell-foop.vala:145
@@ -390,26 +388,27 @@ msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
 "Максим Дзюманенко <dziumanenko@gmail.com>\n"
-"Wanderlust <wanderlust@ukr.net\n"
-"Daniel Korostil <ted.korostiled@gmail.com>"
+"Wanderlust <wanderlust@ukr.net>\n"
+"Daniel Korostil <ted.korostiled@gmail.com>\n"
+"Юрій Чорноіван <yurchor@ukr.net>"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:155
+#: src/window.vala:59
 msgid "Small"
 msgstr "Маленька"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:158
+#: src/window.vala:62
 msgid "Normal"
 msgstr "Звичайний"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:161
+#: src/window.vala:65
 msgid "Large"
 msgstr "Велика"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:319
+#: src/window.vala:187
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -418,29 +417,33 @@ msgstr ""
 "Більше натисків — більше балів."
 
 #. Translators: the text for the score total shown on the game over screen
-#: src/window.vala:361
+#: src/window.vala:234
 #, c-format
-#| msgid "%u point"
-#| msgid_plural "%u points"
 msgid "%u Points"
 msgstr "%u бали"
 
+#. Translators: the text for the high score goal shown on the game over screen
+#: src/window.vala:241
+#, c-format
+msgid "%u points to reach the leaderboard"
+msgstr "%u балів до першої позиції у списку"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:463
+#: src/window.vala:346
 msgid "Abandon this game to start a new one?"
 msgstr "Облишити цю гру та почати нову?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:468
+#: src/window.vala:351
 msgid "_Cancel"
 msgstr "_Скасувати"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:470
+#: src/window.vala:353
 msgid "_New Game"
 msgstr "_Створити гру"
 
-#: src/window.vala:559
+#: src/window.vala:402
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -449,7 +452,7 @@ msgstr[1] "%s, %d кольори"
 msgstr[2] "%s, %d кольорів"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:570
+#: src/window.vala:413
 msgid "Type"
 msgstr "Тип"
 
