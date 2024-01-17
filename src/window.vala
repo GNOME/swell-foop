@@ -223,9 +223,25 @@ private class SwellFoopWindow : ApplicationWindow
     private void complete_cb ()
     {
         undo_action.set_enabled (false);
-        Idle.add (() => { add_score (); return Source.REMOVE; });
+        string id = @"$(get_board_size ().id)-$(game.color_num)";
+        Games.Scores.Category? category = score_categories.lookup (id);
+        if (category == null)
+            assert_not_reached ();
+
+        Idle.add (() => { add_score (category); return Source.REMOVE; });
+
         /* Translators: the text for the score total shown on the game over screen */
         score_label.set_label (_("%u Points").printf(game.score));
+
+        var scores = scores_context.get_high_scores (category);
+        var lowest_high_score = (scores.size == 10 ? scores.last ().score : -1);
+
+        if (lowest_high_score != -1 && lowest_high_score > game.score) {
+            /* Translators: the text for the high score goal shown on the game over screen */
+            to_high_score_label.set_label (_("%u points to reach the leaderboard").printf ((uint)lowest_high_score));
+        } else {
+            to_high_score_label.set_label ("");
+        }
 
         game_over_box.visible = true;
 
@@ -474,31 +490,22 @@ private class SwellFoopWindow : ApplicationWindow
             score.user = Environment.get_user_name ();
     }
 
-    private inline void add_score ()
+    private inline void add_score (Games.Scores.Category category)
     {
-        string id = @"$(get_board_size ().id)-$(game.color_num)";
-        Games.Scores.Category? category = score_categories.lookup (id);
-        if (category == null)
-            assert_not_reached ();
-        else
-        {    
-            var scores = scores_context.get_high_scores (category);
-            var lowest_high_score = (scores.size == 10 ? scores.last ().score : -1);
-            scores_context.add_score.begin (game.score,
-                                            (!) category,
-                                            /* cancellable */ null,
-                                            (object, result) =>
+        scores_context.add_score.begin (game.score,
+                                        (!) category,
+                                        /* cancellable */ null,
+                                        (object, result) =>
+            {
+                try
                 {
-                    try
-                    {
-                        scores_context.add_score.end (result);
-                    }
-                    catch (Error e)
-                    {
-                        warning ("Failed to add score: %s", e.message);
-                    }
-                });
-        }
+                    scores_context.add_score.end (result);
+                }
+                catch (Error e)
+                {
+                    warning ("Failed to add score: %s", e.message);
+                }
+            });
     }
 }
 
