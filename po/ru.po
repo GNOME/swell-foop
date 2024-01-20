@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2023-11-28 06:59+0000\n"
-"PO-Revision-Date: 2023-12-02 22:14+1000\n"
+"POT-Creation-Date: 2024-01-13 12:16+0000\n"
+"PO-Revision-Date: 2024-01-15 16:57+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -65,7 +65,7 @@ msgstr ""
 "Swell Foop — быстрая игра, но вы можете сделать её чуть длиннее, изменяя "
 "размер доски."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:81
+#: data/org.gnome.SwellFoop.appdata.xml.in:83
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -161,14 +161,24 @@ msgstr ""
 "координат."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:43
+#: data/ui/first-run.ui:39
 msgid "Welcome to Swell Foop"
 msgstr "Добро пожаловать в Swell Foop"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:64
+#: data/ui/first-run.ui:60
 msgid "Let’s _Play"
 msgstr "_Играть"
+
+#. Translators: text appearing on the game over screen
+#: data/ui/game-over.ui:37
+msgid "Game Over"
+msgstr "Игра окончена"
+
+#. Translators: label of the button on the game over screen
+#: data/ui/game-over.ui:68
+msgid "_Play Again"
+msgstr "_Играть ещё"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
 #: data/ui/help-overlay.ui:31
@@ -351,16 +361,6 @@ msgstr "Отменить"
 msgid "Redo"
 msgstr "Вернуть"
 
-#. Translators: message displayed to show the game has finished
-#: src/game-view.vala:1332
-msgid "Game Over!"
-msgstr "Игра окончена!"
-
-#. Translators: message displayed in a Button if the player wants to play the game again
-#: src/game-view.vala:1370
-msgid "Play Again?"
-msgstr "Сыграть ещё раз?"
-
 #. Translators: command-line option description, see 'swell-foop --help'
 #: src/swell-foop.vala:25
 msgid "Print release version and exit"
@@ -398,25 +398,25 @@ msgstr ""
 "Ivan Komaritsyn <vantu5z@mail.ru>, 2015.\n"
 "Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012, 2015.\n"
 "Stas Solovey <whats_up@tut.by>, 2015-2018.\n"
-"Ser82-png <asvmail.as@gmail.com>, 2022-2023."
+"Ser82-png <asvmail.as@gmail.com>, 2022-2024."
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:149
+#: src/window.vala:155
 msgid "Small"
 msgstr "Маленький"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:152
+#: src/window.vala:158
 msgid "Normal"
 msgstr "Обычный"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:155
+#: src/window.vala:161
 msgid "Large"
 msgstr "Большой"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:301
+#: src/window.vala:319
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -424,22 +424,28 @@ msgstr ""
 "Удалите столько блоков, сколько сможете.\n"
 "Чем меньше нажатий, тем больше очков."
 
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:361
+#, c-format
+msgid "%u Points"
+msgstr "Очки: %u"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:434
+#: src/window.vala:463
 msgid "Abandon this game to start a new one?"
 msgstr "Бросить эту игру и начать новую?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:437
+#: src/window.vala:468
 msgid "_Cancel"
 msgstr "_Отменить"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:440
+#: src/window.vala:470
 msgid "_New Game"
 msgstr "_Новая игра"
 
-#: src/window.vala:519
+#: src/window.vala:559
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -448,7 +454,7 @@ msgstr[1] "%s, %d цвета"
 msgstr[2] "%s, %d цветов"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:530
+#: src/window.vala:570
 msgid "Type"
 msgstr "Тип"
 
@@ -463,13 +469,6 @@ msgstr "Тип"
 
 #~ msgid "_Zealous Animation"
 #~ msgstr "_Быстрая анимация"
-
-#, c-format
-#~ msgid "%u point"
-#~ msgid_plural "%u points"
-#~ msgstr[0] "%u очко"
-#~ msgstr[1] "%u очка"
-#~ msgstr[2] "%u очков"
 
 #, c-format
 #~ msgid "Score: %u"
