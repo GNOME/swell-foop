@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2023-11-28 06:59+0000\n"
-"PO-Revision-Date: 2023-11-30 17:48+0300\n"
+"POT-Creation-Date: 2024-01-17 00:11+0000\n"
+"PO-Revision-Date: 2024-01-23 03:03+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
@@ -62,7 +62,7 @@ msgstr ""
 "Sweel Foop her zaman çok hızlı oynanır ama tahta boyutunu değiştirerek oyunu "
 "biraz uzatabilirsiniz."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:81
+#: data/org.gnome.SwellFoop.appdata.xml.in:83
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -160,14 +160,24 @@ msgstr ""
 "geçmişini içerir."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:43
+#: data/ui/first-run.ui:39
 msgid "Welcome to Swell Foop"
 msgstr "Swell Foopʼa Hoşgeldiniz"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:64
+#: data/ui/first-run.ui:60
 msgid "Let’s _Play"
 msgstr "Haydi _Oyna"
+
+#. Translators: text appearing on the game over screen
+#: data/ui/game-over.ui:37
+msgid "Game Over"
+msgstr "Oyun Bitti"
+
+#. Translators: label of the button on the game over screen
+#: data/ui/game-over.ui:68
+msgid "_Play Again"
+msgstr "Yeniden _Oyna"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
 #: data/ui/help-overlay.ui:31
@@ -350,16 +360,6 @@ msgstr "Geri al"
 msgid "Redo"
 msgstr "Yinele"
 
-#. Translators: message displayed to show the game has finished
-#: src/game-view.vala:1332
-msgid "Game Over!"
-msgstr "Oyun Bitti!"
-
-#. Translators: message displayed in a Button if the player wants to play the game again
-#: src/game-view.vala:1370
-msgid "Play Again?"
-msgstr "Yeniden Oynayalım Mı?"
-
 #. Translators: command-line option description, see 'swell-foop --help'
 #: src/swell-foop.vala:25
 msgid "Print release version and exit"
@@ -398,22 +398,22 @@ msgstr ""
 "Muhammet Kara <muhammet.k@gmail.com>"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:149
+#: src/window.vala:59
 msgid "Small"
 msgstr "Küçük"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:152
+#: src/window.vala:62
 msgid "Normal"
 msgstr "Normal"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:155
+#: src/window.vala:65
 msgid "Large"
 msgstr "Büyük"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:301
+#: src/window.vala:187
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -421,28 +421,40 @@ msgstr ""
 "Temizleyebildiğiniz kadar kitle temizleyin.\n"
 "Daha az tıklama daha çok puan demektir."
 
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:234
+#, c-format
+msgid "%u Points"
+msgstr "%u Puan"
+
+#. Translators: the text for the high score goal shown on the game over screen
+#: src/window.vala:241
+#, c-format
+msgid "%u points to reach the leaderboard"
+msgstr "Liderlik tablosuna ulaşmak için %u puan"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:434
+#: src/window.vala:346
 msgid "Abandon this game to start a new one?"
 msgstr "Yeni bir tane başlatmak için bu oyun terk edilsin mi?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:437
+#: src/window.vala:351
 msgid "_Cancel"
 msgstr "İ_ptal"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:440
+#: src/window.vala:353
 msgid "_New Game"
 msgstr "Yeni _Oyun"
 
-#: src/window.vala:519
+#: src/window.vala:402
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
 msgstr[0] "%s, %d renk"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:530
+#: src/window.vala:413
 msgid "Type"
 msgstr "Tür"
