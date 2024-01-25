@@ -4,14 +4,14 @@
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
-# Yosef Or Boczko <yoseforb@gmail.com>, 2013-2023.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2013-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2023-11-28 06:59+0000\n"
-"PO-Revision-Date: 2023-12-08 12:36+0200\n"
+"POT-Creation-Date: 2024-01-17 00:11+0000\n"
+"PO-Revision-Date: 2024-01-25 10:32+0200\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
@@ -55,7 +55,7 @@ msgstr ""
 "פיצוץ בצבעים הוא תמיד משחק מהיר, אך נתן לעשות אתו ארוך יותר באמצעות שינוי "
 "גודל הלוח."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:81
+#: data/org.gnome.SwellFoop.appdata.xml.in:83
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -151,14 +151,24 @@ msgstr ""
 "an array of coords."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:43
+#: data/ui/first-run.ui:39
 msgid "Welcome to Swell Foop"
 msgstr "ברוכים הבאים לפיצוץ בצבעים"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:64
+#: data/ui/first-run.ui:60
 msgid "Let’s _Play"
 msgstr "לה_תחיל לשחק!"
+
+#. Translators: text appearing on the game over screen
+#: data/ui/game-over.ui:37
+msgid "Game Over"
+msgstr "המשחק הסתיים"
+
+#. Translators: label of the button on the game over screen
+#: data/ui/game-over.ui:68
+msgid "_Play Again"
+msgstr "ל_שחק שוב"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
 #: data/ui/help-overlay.ui:31
@@ -341,16 +351,6 @@ msgstr "ביטול"
 msgid "Redo"
 msgstr "ביצוע חוזר"
 
-#. Translators: message displayed to show the game has finished
-#: src/game-view.vala:1332
-msgid "Game Over!"
-msgstr "המשחק הסתיים!"
-
-#. Translators: message displayed in a Button if the player wants to play the game again
-#: src/game-view.vala:1370
-msgid "Play Again?"
-msgstr "לשחק שוב?"
-
 #. Translators: command-line option description, see 'swell-foop --help'
 #: src/swell-foop.vala:25
 msgid "Print release version and exit"
@@ -393,26 +393,25 @@ msgstr ""
 "‏dod_basim https://launchpad.net/~yoav-prat\n"
 "ירון שהרבני <sh.yaron@gmail.com>\n"
 "יוסף אור בוצ׳קו <yoseforb@gmail.com>\n"
-"\n"
-"<a href=\"https://l10n.gnome.org/teams/he/\">מיזם תרגום GNOME לעברית</a>"
+"מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:149
+#: src/window.vala:59
 msgid "Small"
 msgstr "קטן"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:152
+#: src/window.vala:62
 msgid "Normal"
 msgstr "רגיל"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:155
+#: src/window.vala:65
 msgid "Large"
 msgstr "גדול"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:301
+#: src/window.vala:187
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -420,22 +419,35 @@ msgstr ""
 "יש לנקות בלוקים רבים ככל האפשר.\n"
 "פחות לחיצות משמען יותר נקודות."
 
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:234
+#, c-format
+# msgid_plural "%u points"
+msgid "%u Points"
+msgstr "‏%u נקודות"
+
+#. Translators: the text for the high score goal shown on the game over screen
+#: src/window.vala:241
+#, c-format
+msgid "%u points to reach the leaderboard"
+msgstr "‏%u נקודות כדי להשיג את המשחק המוביל"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:434
+#: src/window.vala:346
 msgid "Abandon this game to start a new one?"
 msgstr "האם לנטוש את המשחק לפני התחלת אחד חדש?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:437
+#: src/window.vala:351
 msgid "_Cancel"
 msgstr "_ביטול"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:440
+#: src/window.vala:353
 msgid "_New Game"
 msgstr "_משחק חדש"
 
-#: src/window.vala:519
+#: src/window.vala:402
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -443,7 +455,7 @@ msgstr[0] "‏%s, צבע אחד"
 msgstr[1] "‏%s, ‏%d צבעים"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:530
+#: src/window.vala:413
 msgid "Type"
 msgstr "סוג"
 
@@ -455,12 +467,6 @@ msgstr "סוג"
 
 #~ msgid "_Zealous Animation"
 #~ msgstr "ה_נפשה מהירה"
-
-#, c-format
-#~ msgid "%u point"
-#~ msgid_plural "%u points"
-#~ msgstr[0] "נקודה אחת"
-#~ msgstr[1] "%u נקודות"
 
 #, c-format
 #~ msgid "Score: %u"
