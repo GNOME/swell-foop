@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-01-13 12:16+0000\n"
-"PO-Revision-Date: 2024-01-15 16:57+1000\n"
+"POT-Creation-Date: 2024-01-20 18:49+0000\n"
+"PO-Revision-Date: 2024-01-28 08:35+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -401,22 +401,22 @@ msgstr ""
 "Ser82-png <asvmail.as@gmail.com>, 2022-2024."
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:155
+#: src/window.vala:59
 msgid "Small"
 msgstr "Маленький"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:158
+#: src/window.vala:62
 msgid "Normal"
 msgstr "Обычный"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:161
+#: src/window.vala:65
 msgid "Large"
 msgstr "Большой"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:319
+#: src/window.vala:187
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -425,27 +425,33 @@ msgstr ""
 "Чем меньше нажатий, тем больше очков."
 
 #. Translators: the text for the score total shown on the game over screen
-#: src/window.vala:361
+#: src/window.vala:234
 #, c-format
 msgid "%u Points"
 msgstr "Очки: %u"
 
+#. Translators: the text for the high score goal shown on the game over screen
+#: src/window.vala:241
+#, c-format
+msgid "%u points to reach the leaderboard"
+msgstr "Для попадания в таблицу лидеров осталось набрать %u очков"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:463
+#: src/window.vala:346
 msgid "Abandon this game to start a new one?"
 msgstr "Бросить эту игру и начать новую?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:468
+#: src/window.vala:351
 msgid "_Cancel"
 msgstr "_Отменить"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:470
+#: src/window.vala:353
 msgid "_New Game"
 msgstr "_Новая игра"
 
-#: src/window.vala:559
+#: src/window.vala:402
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -454,7 +460,7 @@ msgstr[1] "%s, %d цвета"
 msgstr[2] "%s, %d цветов"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:570
+#: src/window.vala:413
 msgid "Type"
 msgstr "Тип"
 
