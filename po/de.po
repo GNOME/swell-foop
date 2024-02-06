@@ -19,13 +19,13 @@
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009-2012.
 # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
 # Wolfgang Stöggl <c72578@yahoo.de>, 2015.
-# Jürgen Benvenuti <gastornis@posteo.org>, 2023.
+# Jürgen Benvenuti <gastornis@posteo.org>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2023-11-28 06:59+0000\n"
-"PO-Revision-Date: 2023-11-28 12:03+0100\n"
+"POT-Creation-Date: 2024-01-17 00:11+0000\n"
+"PO-Revision-Date: 2024-02-04 17:43+0100\n"
 "Last-Translator: Jürgen Benvenuti <gastornis@posteo.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.4.2\n"
 
 # Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
 #. Translators: title of the window displayed by window managers; name of the application
@@ -74,7 +74,7 @@ msgstr ""
 "Swell Foop kann immer sehr schnell gespielt werden. Bei Bedarf können Sie "
 "die Spielzeit verlängern, indem Sie die Spielbrettgröße anpassen."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:81
+#: data/org.gnome.SwellFoop.appdata.xml.in:83
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -172,14 +172,24 @@ msgstr ""
 
 # Swell Foop ist Band 25 der Saga vom magischen Land Xanth, ein Fantasy-Abenteuer-Zyklus von Piers Anthony mit insgesamt 31 Romanen, von denen bisher (Stand 2007) 22 Romane ins Deutsche übersetzt wurden.
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:43
+#: data/ui/first-run.ui:39
 msgid "Welcome to Swell Foop"
 msgstr "Willkommen bei Swell Foop"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:64
+#: data/ui/first-run.ui:60
 msgid "Let’s _Play"
 msgstr "S_piel beginnen"
+
+#. Translators: text appearing on the game over screen
+#: data/ui/game-over.ui:37
+msgid "Game Over"
+msgstr "Spiel vorbei"
+
+#. Translators: label of the button on the game over screen
+#: data/ui/game-over.ui:68
+msgid "_Play Again"
+msgstr "_Weiteres Spiel"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
 #: data/ui/help-overlay.ui:31
@@ -363,16 +373,6 @@ msgstr "Rückgängig"
 msgid "Redo"
 msgstr "Wiederholen"
 
-#. Translators: message displayed to show the game has finished
-#: src/game-view.vala:1332
-msgid "Game Over!"
-msgstr "Spiel vorbei!"
-
-#. Translators: message displayed in a Button if the player wants to play the game again
-#: src/game-view.vala:1370
-msgid "Play Again?"
-msgstr "Weiteres Spiel?"
-
 #. Translators: command-line option description, see 'swell-foop --help'
 #: src/swell-foop.vala:25
 msgid "Print release version and exit"
@@ -396,7 +396,7 @@ msgid ""
 "You know, they all light-up and you click on them and they vanish!"
 msgstr ""
 "Ich will dieses Spiel spielen!\n"
-"Du weißt schon, alle leuchten auf, dann klickst du drauf und sie "
+"Sie wissen schon, alle leuchten auf, dann klicken Sie drauf und sie "
 "verschwinden!"
 
 #. Translators: About dialog text, copyright line
@@ -426,22 +426,22 @@ msgstr ""
 "Jürgen Benvenuti <gastornis@posteo.org>"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:149
+#: src/window.vala:59
 msgid "Small"
 msgstr "Klein"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:152
+#: src/window.vala:62
 msgid "Normal"
 msgstr "Normal"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:155
+#: src/window.vala:65
 msgid "Large"
 msgstr "Groß"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:301
+#: src/window.vala:187
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -449,22 +449,34 @@ msgstr ""
 "Beseitigen Sie so viele Blöcke wie möglich.\n"
 "Weniger Mausklicks bedeuten mehr Siegpunkte."
 
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:234
+#, c-format
+msgid "%u Points"
+msgstr "%u Punkte"
+
+#. Translators: the text for the high score goal shown on the game over screen
+#: src/window.vala:241
+#, c-format
+msgid "%u points to reach the leaderboard"
+msgstr "%u Punkte, um die Bestenliste zu erreichen"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:434
+#: src/window.vala:346
 msgid "Abandon this game to start a new one?"
 msgstr "Soll dieses Spiel abgebrochen und ein neues gestartet werden?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:437
+#: src/window.vala:351
 msgid "_Cancel"
 msgstr "A_bbrechen"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:440
+#: src/window.vala:353
 msgid "_New Game"
 msgstr "_Neues Spiel"
 
-#: src/window.vala:519
+#: src/window.vala:402
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -472,7 +484,7 @@ msgstr[0] "%s, %d Farbe"
 msgstr[1] "%s, %d Farben"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:530
+#: src/window.vala:413
 msgid "Type"
 msgstr "Typ"
 
@@ -487,12 +499,6 @@ msgstr "Typ"
 
 #~ msgid "_Zealous Animation"
 #~ msgstr "_Schnelle Animation"
-
-#, c-format
-#~ msgid "%u point"
-#~ msgid_plural "%u points"
-#~ msgstr[0] "%u Punkt"
-#~ msgstr[1] "%u Punkte"
 
 #, c-format
 #~ msgid "Score: %u"
