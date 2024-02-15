@@ -70,4 +70,7 @@ subdir('po')
 
 config_file = configure_file(output: 'config.h', configuration: conf)
 # Extra scripts
-meson.add_install_script('meson_post_install.py', datadir)
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+)
