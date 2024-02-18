@@ -3,23 +3,29 @@
 # This file is distributed under the same license as the swell-foop package.
 # Enrico Nicoletto <liverig@gmail.com>, 2013.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2018-2020.
+# Leônidas Araújo <leorusvellt@hotmail.com>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop help\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swell-"
 "foop&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2020-07-14 11:46+0000\n"
-"PO-Revision-Date: 2020-07-19 23:49-0300\n"
-"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"POT-Creation-Date: 2022-07-27 12:25+0000\n"
+"PO-Revision-Date: 2022-09-27 10:42-0300\n"
+"Last-Translator: Leônidas Araújo <leorusvellt@hotmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 40.0\n"
 "X-Project-Style: gnome\n"
+"X-DL-Team: pt_BR\n"
+"X-DL-Module: swell-foop\n"
+"X-DL-Branch: master\n"
+"X-DL-Domain: help\n"
+"X-DL-State: Translating\n"
 
 #. (itstool) path: p/link
 #: C/legal.xml:5
@@ -46,13 +52,11 @@ msgstr "Roopa"
 
 #. (itstool) path: info/desc
 #: C/index.page:19
-#| msgid "Swell Foop"
 msgid "Swell Foop help."
 msgstr "Ajuda do Swell Foop."
 
 #. (itstool) path: page/title
 #: C/index.page:23
-#| msgid "Swell Foop"
 msgid "<_:media-1/> Swell Foop"
 msgstr "<_:media-1/> Swell Foop"
 
@@ -64,12 +68,11 @@ msgid ""
 "link>."
 msgstr ""
 "Swell Foop é um jogo de quebra-cabeça, anteriormente conhecido como Same "
-"GNOME. Para saber mais sobre o jogo, consulte a <link xref=\"introduction"
-"\">introdução do jogo</link>."
+"GNOME. Para saber mais sobre o jogo, consulte a <link "
+"xref=\"introduction\">introdução do jogo</link>."
 
 #. (itstool) path: section/title
 #: C/index.page:32
-#| msgid "Swell Foop"
 msgid "Playing Swell Foop"
 msgstr "Jogando Swell Foop"
 
@@ -91,7 +94,6 @@ msgstr "2020"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:18
-#| msgid "About <application>Swell Foop</application>"
 msgid "Know about <app>Swell Foop</app>."
 msgstr "Saiba sobre o <app>Swell Foop</app>"
 
@@ -102,12 +104,6 @@ msgstr "Introdução"
 
 #. (itstool) path: page/p
 #: C/introduction.page:24
-#| msgid ""
-#| "<application>Swell Foop</application> is a puzzle game. The goal is to "
-#| "remove as many objects as possible in as few moves as possible. Objects "
-#| "that are adjacent to each other get removed as a group. The remaining "
-#| "objects then collapse to fill in the gaps and new groups are formed. You "
-#| "cannot remove single objects."
 msgid ""
 "The goal of the game is to remove as many objects as possible in as few "
 "moves as possible. Adjacent objects of the same color form a group, and all "
@@ -129,7 +125,6 @@ msgstr "Como jogar?"
 
 #. (itstool) path: page/title
 #: C/playing-game.page:22
-#| msgid "Playing <application>Swell Foop</application>"
 msgid "Playing <app>Swell Foop</app>"
 msgstr "Jogando <app>Swell Foop</app>"
 
@@ -168,9 +163,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/playing-game.page:33
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/start-up.png' md5='0602b7508fe03b609daf2dd67e21899e'"
 msgctxt "_"
 msgid ""
 "external ref='figures/start-game.png' md5='6495fc78b639a3cc4ba4e12ee6692f21'"
@@ -184,7 +176,6 @@ msgstr "Altere as configurações do jogo."
 
 #. (itstool) path: page/title
 #: C/preferences.page:21
-#| msgid "_Settings"
 msgid "Game settings"
 msgstr "Configurações do jogo"
 
@@ -195,7 +186,6 @@ msgstr "Você pode alterar a aparência do jogo de acordo com suas preferências
 
 #. (itstool) path: section/title
 #: C/preferences.page:26
-#| msgid "Changing the Size"
 msgid "Change the board size"
 msgstr "Alterando o tamanho do tabuleiro"
 
@@ -208,11 +198,11 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/preferences.page:29 C/preferences.page:39
 msgid ""
-"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
-"\">Setup</gui></guiseq>."
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Setup</gui></guiseq>."
 msgstr ""
-"Selecione <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
-"\">Configurações</gui></guiseq>."
+"Selecione <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Configurações</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/preferences.page:31
@@ -221,7 +211,6 @@ msgstr "O tamanho padrão do tabuleiro é <gui>Pequeno (6 x 5)</gui>."
 
 #. (itstool) path: section/title
 #: C/preferences.page:36
-#| msgid "Changing the Number of Objects"
 msgid "Change the number of colors"
 msgstr "Mudando o número de cores"
 
@@ -241,24 +230,22 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: C/preferences.page:47
-#| msgid "Changing the Look"
 msgid "Change the look"
 msgstr "Mudando a aparência"
 
 #. (itstool) path: section/p
 #: C/preferences.page:48
-#| msgid "Changing the Number of Objects"
 msgid "To change the appearance of the objects:"
 msgstr "Para alterar a aparência dos objetos:"
 
 #. (itstool) path: item/p
 #: C/preferences.page:50 C/preferences.page:62
 msgid ""
-"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
-"\">Appearance</gui></guiseq>."
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Appearance</gui></guiseq>."
 msgstr ""
-"Selecione <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
-"\">Aparência</gui></guiseq>."
+"Selecione <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Aparência</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/preferences.page:52
@@ -267,20 +254,23 @@ msgstr "O tema padrão é <gui>Formas e cores</gui>."
 
 #. (itstool) path: section/title
 #: C/preferences.page:57
-#| msgid "Changing the Speed"
 msgid "Change the speed"
 msgstr "Mudando a velocidade"
 
 #. (itstool) path: section/p
 #: C/preferences.page:58
+#| msgid ""
+#| "The default animation is designed to be fast. If it is too fast for you "
+#| "and you would like playing slower then this may be too fast for you. In "
+#| "this case you can slow down the game animation."
 msgid ""
-"The default animation is designed to be fast. If it is too fast for you and "
-"you would like playing slower then this may be too fast for you. In this "
-"case you can slow down the game animation."
+"The default animation is designed to be fast. If it is too fast for you, "
+"then you might like playing slower. In this case, you can slow down the game "
+"animation."
 msgstr ""
 "A animação padrão foi projetada para ser rápida. Se for muito rápido para "
-"você e você gostaria de jogar mais devagar, isso pode ser muito rápido para "
-"você. Nesse caso, você pode desacelerar a animação do jogo."
+"você, então você pode gostar de jogar mais devagar. Nesse caso, você pode "
+"desacelerar a animação do jogo."
 
 #. (itstool) path: item/p
 #: C/preferences.page:64
@@ -288,8 +278,8 @@ msgid ""
 "To slow down the animations, uncheck the <gui style=\"checkbox\">Zealous "
 "Animation</gui> checkbox."
 msgstr ""
-"Para desacelerar as animações, desmarque a caixa de seleção <gui style="
-"\"checkbox\">Animação rápida</gui>."
+"Para desacelerar as animações, desmarque a caixa de seleção <gui "
+"style=\"checkbox\">Animação rápida</gui>."
 
 #. (itstool) path: info/desc
 #: C/score.page:18
@@ -313,11 +303,11 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/score.page:27
 msgid ""
-"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
-"\">High Scores</gui></guiseq>."
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">High Scores</gui></guiseq>."
 msgstr ""
-"Selecione <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
-"\">Melhores pontuações</gui></guiseq>."
+"Selecione <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Melhores pontuações</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/score.page:29
@@ -333,13 +323,11 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: C/score.page:36
-#| msgid "Score"
 msgid "Scoring"
 msgstr "Pontuação"
 
 #. (itstool) path: section/p
 #: C/score.page:38
-#| msgid "Scoring is based on the number of objects you delete:"
 msgid "Scoring is done based on the objects you delete."
 msgstr "A pontuação é feita com base nos objetos que você exclui."
 
@@ -445,7 +433,6 @@ msgstr "Há um bônus de 1000 pontos na limpeza do tabuleiro."
 
 #. (itstool) path: info/desc
 #: C/start.page:17
-#| msgid "Pause the game"
 msgid "Play another game."
 msgstr "Jogar outro jogo."
 
@@ -456,8 +443,6 @@ msgstr "Inicia um novo jogo"
 
 #. (itstool) path: page/p
 #: C/start.page:23
-#| msgid ""
-#| "<application>Swell Foop</application> at the beginning of a new game."
 msgid "You can play <app>Swell Foop</app> all over again. To start a new game:"
 msgstr ""
 "Você pode jogar <app>Swell Foop</app> do zero novamente. Para iniciar um "
@@ -466,11 +451,11 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/start.page:26
 msgid ""
-"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
-"\">New Game</gui></guiseq>."
+"Select <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">New Game</gui></guiseq>."
 msgstr ""
-"Selecione <guiseq><gui style=\"menu\">Swell Foop</gui> <gui style=\"menuitem"
-"\">Novo jogo</gui></guiseq>."
+"Selecione <guiseq><gui style=\"menu\">Swell Foop</gui> <gui "
+"style=\"menuitem\">Novo jogo</gui></guiseq>."
 
 #. (itstool) path: info/desc
 #: C/strategy.page:17
@@ -484,9 +469,6 @@ msgstr "Estratégia"
 
 #. (itstool) path: page/p
 #: C/strategy.page:23
-#| msgid ""
-#| "The most important rule when aiming for a high score is to think ahead: "
-#| "each group you remove will form and destroy other groups."
 msgid ""
 "The most important rule when aiming for a high score is to think ahead. Each "
 "group you remove will form and destroy other groups. Some tips to play "
@@ -498,10 +480,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/strategy.page:27
-#| msgid ""
-#| "Remove higher groups first, unless removing another group will make it "
-#| "larger. Vertically aligned objects can't be misaligned, but horizontal "
-#| "arrangements can."
 msgid ""
 "Try to remove higher groups first, unless removing another group will make "
 "it larger. Vertically aligned objects can't be misaligned, but horizontal "
@@ -522,14 +500,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/strategy.page:32
-#| msgid ""
-#| "Since the score increases quadratically, big groups of objects are always "
-#| "better. For example, the points difference between a six object group and "
-#| "a seven object group is nine points. In a situation where you have a "
-#| "choice between merging two groups of two into four or just adding one "
-#| "more to the group of six then you should add the single object. Even "
-#| "though the groups of two you are left with score no points, the bigger "
-#| "group scores more overall."
 msgid ""
 "If you have a choice between merging two groups of two into four or just "
 "adding one more to the group of six, then you should add the single object. "
@@ -543,11 +513,6 @@ msgstr ""
 
 #. (itstool) path: note/p
 #: C/strategy.page:39
-#| msgid ""
-#| "Don't forget the thousand point bonus for clearing all the balls. To get "
-#| "1000 points from a single group you need 34 objects. You are very "
-#| "unlikely to be in a position where you have to sacrifice a group that "
-#| "large to clear the board."
 msgid ""
 "Don't forget the thousand point bonus for clearing the board. To get 1000 "
 "points from a single group you need 34 objects. You are very unlikely to be "
@@ -748,18 +713,18 @@ msgstr ""
 #~ "You can also create your own themes, although the process is not very "
 #~ "straight-forward yet. Use a copy of an existing theme from <filename>/usr/"
 #~ "share/gnome-games/swell-foop/themes/</filename> as a template and alter "
-#~ "it with your favorite paint program. Put the result in <filename>"
-#~ "$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. It will be "
-#~ "automatically included on the themes list next time you run "
+#~ "it with your favorite paint program. Put the result in "
+#~ "<filename>$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. It "
+#~ "will be automatically included on the themes list next time you run "
 #~ "<application>Swell Foop</application>. <filename>$XDG_DATA_HOME</"
 #~ "filename> is usually <filename>~/.local/share/</filename>."
 #~ msgstr ""
 #~ "Você também pode criar seus próprios temas, embora o processo não seja "
 #~ "muito direto ainda. Use uma cópia de um tema existente em <filename>/usr/"
 #~ "share/gnome-games/swell-foop/themes/</filename> como um modelo e altere-o "
-#~ "com seu programa de pintura favorito. Coloque o resultado em <filename>"
-#~ "$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. Ele será "
-#~ "incluído automaticamente na lista de temas da próxima vez que você "
+#~ "com seu programa de pintura favorito. Coloque o resultado em "
+#~ "<filename>$XDG_DATA_HOME/gnome-games/swell-foop/themes/</filename>. Ele "
+#~ "será incluído automaticamente na lista de temas da próxima vez que você "
 #~ "executar o <application>Swell Foop</application>. "
 #~ "<filename>XDG_DATA_HOME</filename> é geralmente <filename>~/.local/share/"
 #~ "</filename>."
@@ -806,15 +771,15 @@ msgstr ""
 #~ msgid ""
 #~ "<application>Swell Foop</application> was written by Callum McKenzie "
 #~ "(<email>callum@physics.otago.ac.nz</email>). To find more information "
-#~ "about <application>Swell Foop</application>, please visit the <ulink url="
-#~ "\"http://live.gnome.org/GnomeGames/\" type=\"http\">GNOME Games web page</"
-#~ "ulink>."
+#~ "about <application>Swell Foop</application>, please visit the <ulink "
+#~ "url=\"http://live.gnome.org/GnomeGames/\" type=\"http\">GNOME Games web "
+#~ "page</ulink>."
 #~ msgstr ""
 #~ "<application>Swell Foop</application> foi escrito por Callum McKenzie "
 #~ "(<email>callum@physics.otago.ac.nz</email>). Para saber mais sobre o "
-#~ "<application>Swell Foop</application>, por favor visite a <ulink url="
-#~ "\"http://live.gnome.org/GnomeGames/\" type=\"http\">página web do GNOME "
-#~ "Games</ulink>."
+#~ "<application>Swell Foop</application>, por favor visite a <ulink "
+#~ "url=\"http://live.gnome.org/GnomeGames/\" type=\"http\">página web do "
+#~ "GNOME Games</ulink>."
 
 #~ msgid ""
 #~ "To report a bug or make a suggestion regarding this application or this "
@@ -823,8 +788,8 @@ msgstr ""
 #~ "ulink>."
 #~ msgstr ""
 #~ "Para relatar um erro ou fazer uma sugestão sobre esse aplicativo ou este "
-#~ "manual, siga as instruções na <ulink url=\"ghelp:user-guide?feedback-bugs"
-#~ "\" type=\"help\">seção Feedback do guia do usuário do GNOME</ulink>."
+#~ "manual, siga as instruções na <ulink url=\"ghelp:user-guide?feedback-"
+#~ "bugs\" type=\"help\">seção Feedback do guia do usuário do GNOME</ulink>."
 
 #~ msgid ""
 #~ "This program is distributed under the terms of the GNU General Public "
