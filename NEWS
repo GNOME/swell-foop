@@ -1,3 +1,15 @@
+Swell Foop 46.rc
+==================
+
+* Updated translations
+* GTK4 port improvements (Robert Roth)
+* Appdata fixes (Sabri Ünal)
+* Improved score handling #29 (Robert Roth)
+* Improved keyboard-only gampeplay (Robert Roth)
+* Do not show highscores if score is not high enough (Robert Roth)
+* Show highscore goal on game over screen (Robert Roth)
+* use gnome post_install script (Bobby Rong)
+
 Swell Foop 46.alpha
 ==================
 

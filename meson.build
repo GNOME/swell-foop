@@ -1,5 +1,5 @@
 project('swell-foop', ['c','vala'],
-  version: '46.alpha',
+  version: '46.rc',
   meson_version: '>= 0.60',
   license: 'GPLv2+',
 )
