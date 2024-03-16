@@ -39,7 +39,14 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <releases>
-    <release version="46~rc" date="2022-03-02" type="development">
+    <release version="46.0" date="2024-03-16" type="stable">
+      <description>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="46~rc" date="2024-03-02" type="development">
       <description>
         <p>Overview of changes in swell-foop 46.rc</p>
         <ul>
