@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-01-17 00:11+0000\n"
-"PO-Revision-Date: 2024-03-30 18:27+0100\n"
+"POT-Creation-Date: 2024-03-30 17:27+0000\n"
+"PO-Revision-Date: 2024-03-30 22:12+0100\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -57,7 +57,7 @@ msgid ""
 msgstr ""
 "Pravi Pavliha je dinamična igra, ki jo določa velikost igralne površine."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:83
+#: data/org.gnome.SwellFoop.appdata.xml.in:114
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -108,15 +108,13 @@ msgstr "Višina okna v slikovnih točkah."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-is-maximized'
 #: data/org.gnome.SwellFoop.gschema.xml:39
-#, fuzzy
 msgid "true if the window is maximized"
-msgstr "Izbrano, če je okno programa razpeto"
+msgstr "Potrjeno, če je okno programa razpeto"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-is-maximized'
 #: data/org.gnome.SwellFoop.gschema.xml:41
-#, fuzzy
 msgid "true if the window is maximized."
-msgstr "Izbrano, če je okno programa razpeto."
+msgstr "Potrjeno, če je okno programa razpeto."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
 #: data/org.gnome.SwellFoop.gschema.xml:47
@@ -323,13 +321,12 @@ msgstr "Barve"
 #. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Boring Shapes"
 #: data/ui/swell-foop.ui:100
 msgid "Shapes and Colors"
-msgstr "Oblike in barve"
+msgstr "Liki in barve"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Shapes and Colors"
 #: data/ui/swell-foop.ui:106
-#, fuzzy
 msgid "Boring Shapes"
-msgstr "Dolgočasne oblike"
+msgstr "Dolgočasni liki"
 
 #. Translators: entry of the hamburger menu; shows a Shortcuts window
 #: data/ui/swell-foop.ui:116
