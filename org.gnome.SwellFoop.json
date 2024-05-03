@@ -19,6 +19,17 @@
         "--talk-name=ca.desrt.dconf",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
+    "cleanup": [
+        "/include",
+        "/man",
+        "/share/aclocal",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "/share/vala",
+        "*.la",
+        "*.a"
+    ],
     "build-options": {
         "prepend-path": "/usr/lib/sdk/vala-nightly/bin/",
         "prepend-ld-library-path": "/usr/lib/sdk/vala-nightly/lib"
