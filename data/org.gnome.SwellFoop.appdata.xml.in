@@ -112,6 +112,9 @@
   <launchable type="desktop-id">org.gnome.SwellFoop.desktop</launchable>
   <translation type="gettext">swell-foop</translation>
   <developer_name>Robert Roth</developer_name>
+  <developer id="org.gnome">
+    <name>Robert Roth</name>
+  </developer>
   <content_rating type="oars-1.1" />
 </component>
 
