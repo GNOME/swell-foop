@@ -53,6 +53,7 @@
   </steps>
   </section>
 
+  <!--
   <section id="animation">
   <title>Change the speed</title>
   <p>The default animation is designed to be fast. If it is too fast for you,
@@ -65,5 +66,6 @@
     Animation</gui> checkbox.</p></item>
   </steps>
   </section>
+  -->
 </page>
 
