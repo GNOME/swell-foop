@@ -39,11 +39,11 @@ if desktop_file_validate.found()
   )
 endif
 
-# Appdata
-appdata = 'org.gnome.SwellFoop.appdata.xml'
-appdata_file = i18n.merge_file(
-  input: appdata + '.in',
-  output: appdata,
+# MetaInfo
+metainfo = 'org.gnome.SwellFoop.metainfo.xml'
+metainfo_file = i18n.merge_file(
+  input: metainfo + '.in',
+  output: metainfo,
   po_dir: podir,
   install: true,
   install_dir: join_paths(datadir, 'metainfo')
@@ -51,9 +51,9 @@ appdata_file = i18n.merge_file(
 appstreamcli = find_program('appstreamcli', required: false)
 if appstreamcli.found()
   test(
-    'validate-appdata', appstreamcli,
+    'validate-metainfo', appstreamcli,
     args: [
-      'validate', '--no-net', '--explain', appdata_file.full_path()
+      'validate', '--no-net', '--explain', metainfo_file.full_path()
     ]
   )
 endif
