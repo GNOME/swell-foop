@@ -17,16 +17,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-01-17 00:11+0000\n"
-"PO-Revision-Date: 2024-01-23 03:03+0300\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"POT-Creation-Date: 2024-01-25 15:48+0000\n"
+"PO-Revision-Date: 2024-05-10 22:42+0300\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.3\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
@@ -69,7 +69,9 @@ msgstr "Robert Roth"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
 msgid "game;logic;board;same;matching;"
-msgstr "oyun;mantık;tahta;aynı;benzer;eşleştirme;eşleşme;"
+msgstr ""
+"game;logic;board;same;matching;oyun;mantık;tahta;aynı;benzer;eşleştirme;"
+"eşleşme;"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
 #: data/org.gnome.SwellFoop.gschema.xml:11
