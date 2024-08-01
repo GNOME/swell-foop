@@ -21,7 +21,7 @@
 using Gtk; /* designed for Gtk 4, link with libgtk-4-dev or gtk4-devel */
 
 [GtkTemplate (ui = "/org/gnome/SwellFoop/ui/swell-foop.ui")]
-private class SwellFoopWindow : ApplicationWindow
+private class SwellFoopWindow : Adw.ApplicationWindow
 {
     [GtkChild] private unowned Overlay      overlay;
     [GtkChild] private unowned Stack        stack;

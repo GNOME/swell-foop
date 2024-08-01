@@ -129,102 +129,78 @@
     </section>
   </menu>
   <requires lib="gtk" version="4.0"/>
-  <template class="SwellFoopWindow" parent="GtkApplicationWindow">
+  <template class="SwellFoopWindow" parent="AdwApplicationWindow">
     <property name="icon-name">org.gnome.SwellFoop</property>
     <!-- Translators: title of the window displayed by window managers; name of the application -->
     <property name="title" translatable="1">Swell Foop</property>
-    <child type="titlebar">
-      <object class="GtkHeaderBar" id="headerbar">
-        <child>
-          <object class="GtkBox" id="undo_redo_box">
-            <property name="valign">center</property>
-            <style>
-              <class name="linked"/>
-            </style>
-            <child>
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar" id="headerbar">
+            <child type="start">
               <object class="GtkButton">
-                <property name="valign">center</property>
+                <property name="icon-name">edit-undo-symbolic</property>
                 <!-- Translators: tooltip text of the Undo button; probably a verb -->
                 <property name="tooltip-text" translatable="1">Undo</property>
                 <property name="action-name">win.undo</property>
                 <property name="focus-on-click">0</property>
-                <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">edit-undo-symbolic</property>
-                    <property name="icon-size">normal</property>
-                  </object>
-                </child>
               </object>
             </child>
-            <child>
+            <child type="start">
               <object class="GtkButton">
-                <property name="valign">center</property>
+                <property name="icon-name">edit-redo-symbolic</property>
                 <!-- Translators: tooltip text of the Redo button; probably a verb -->
                 <property name="tooltip-text" translatable="1">Redo</property>
                 <property name="action-name">win.redo</property>
                 <property name="focus-on-click">0</property>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkMenuButton" id="hamburger_button">
+                <property name="menu-model">hamburger-menu</property>
+                <property name="icon-name">open-menu-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkOverlay" id="overlay">
+            <child>
+              <object class="GtkStack" id="stack">
+                <property name="visible">True</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+              </object>
+            </child>
+            <child type="overlay">
+              <object class="GtkRevealer" id="score_revealer">
+                <property name="valign">start</property>
+                <property name="can-focus">false</property>
+                <property name="can-target">false</property>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">edit-redo-symbolic</property>
-                    <property name="icon-size">normal</property>
+                  <object class="GtkLabel" id="current_score_label">
+                    <property name="valign">start</property>
+                    <property name="halign">center</property>
+                    <property name="can-focus">false</property>
+                    <property name="use-markup">true</property>
+                    <property name="visible">true</property>
+                    <property name="single-line-mode">true</property>
+                    <property name="max-width-chars">10</property>
+                    <property name="width-chars">10</property>
+                    <property name="justify">center</property>
+                    <property name="can-target">false</property>
+                    <style>
+                      <class name="score"/>
+                      <class name="osd"/>
+                      <class name="background"/>
+                    </style>
                   </object>
                 </child>
               </object>
             </child>
           </object>
-        </child>
-        <child type="end">
-          <object class="GtkMenuButton" id="hamburger_button">
-            <property name="menu-model">hamburger-menu</property>
-            <style>
-              <class name="image-button"/>
-            </style>
-            <child>
-              <object class="GtkImage">
-                <property name="icon-name">open-menu-symbolic</property>
-                <property name="icon-size">normal</property>
-              </object>
-            </child>
-          </object>
-        </child>
+        </property>
       </object>
-    </child>
-    <child>
-      <object class="GtkOverlay" id="overlay">
-        <child>
-          <object class="GtkStack" id="stack">
-            <property name="visible">True</property>
-            <property name="hexpand">True</property>
-            <property name="vexpand">True</property>
-          </object>
-        </child>
-        <child type="overlay">
-          <object class="GtkRevealer" id="score_revealer">
-            <property name="valign">start</property>
-            <property name="can-focus">false</property>
-            <property name="can-target">false</property>
-            <child>
-              <object class="GtkLabel" id="current_score_label">
-                <property name="valign">start</property>
-                <property name="halign">center</property>
-                <property name="can-focus">false</property>
-                <property name="use-markup">true</property>
-                <property name="visible">true</property>
-                <property name="single-line-mode">true</property>
-                <property name="max-width-chars">10</property>
-                <property name="width-chars">10</property>
-                <property name="justify">center</property>
-                <property name="can-target">false</property>
-                <style>
-                  <class name="score"/>
-                  <class name="osd"/>
-                  <class name="background"/>
-                </style>
-              </object>
-            </child>
-          </object>
-        </child>
-      </object>
-    </child>
+    </property>
   </template>
 </interface>
