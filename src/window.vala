@@ -333,41 +333,36 @@ private class SwellFoopWindow : Adw.ApplicationWindow
     private inline void new_game_cb (/* SimpleAction action, Variant? variant */)
     {
         if (game.is_started)
-            show_new_game_confirmation_dialog ();
+            show_new_game_confirmation_dialog.begin ();
         else
             new_game ();
     }
 
-    private inline void show_new_game_confirmation_dialog ()
+    private async void show_new_game_confirmation_dialog ()
     {
-        var dialog = new AlertDialog(
-                                     /* Translators: text of a Dialog that may appear if you start a new game while one is running */
-                                     _("Abandon this game to start a new one?"));
+        var dialog = new Adw.AlertDialog(
+                                         /* Translators: heading of a Dialog that may appear if you start a new game while one is running */
+                                         _("Start New Game?"),
+                                         /* Translators: text of a Dialog that may appear if you start a new game while one is running */
+                                         _("Abandon this game to start a new one?"));
 
-        dialog.modal = true;
-        dialog.buttons = {
-                            /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game” */
-                            _("_Cancel"),
-                            /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel” */
-                            _("_New Game")
-        };
-        dialog.default_button = 1;
-        dialog.cancel_button = 0;
+        dialog.add_responses ("cancel",
+                              /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game” */
+                              _("_Cancel"),
+                              "new",
+                              /* Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel” */
+                              _("_New Game"),
+                              null
+        );
+        dialog.default_response = "new";
+        dialog.close_response = "cancel";
 
-        dialog.choose.begin (this, null, (obj, res) => {
-            try
-            {
-                var result = dialog.choose.end(res);
-                if (result == 1)
-                {
-                    new_game ();
-                }
-            }
-            catch (Error e)
-            {
-                warning ("Failed to get result of warning dialog: %s", e.message);
-            }
-        });
+        dialog.set_response_appearance ("new", SUGGESTED);
+
+        var response = yield dialog.choose (this, null);
+
+        if (response == "new")
+            new_game ();
     }
 
     private inline void toggle_hamburger (/* SimpleAction action, Variant? variant */)
