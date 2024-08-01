@@ -19,54 +19,23 @@
 -->
 <interface>
   <requires lib="gtk+" version="4.10"/>
-  <object class="GtkBox" id="first_run_box">
-    <property name="visible">True</property>
-    <property name="orientation">vertical</property>
-    <property name="spacing">12</property>
-    <property name="halign">center</property>
-    <property name="valign">center</property>
-    <child>
-      <object class="GtkImage">
-        <property name="icon-name">org.gnome.SwellFoop</property>
-        <property name="visible">True</property>
-        <property name="pixel-size">128</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <!-- Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application -->
-        <property name="label" translatable="yes">Welcome to Swell Foop</property>
-        <style>
-          <class name="welcome"/>
-        </style>
-      </object>
-    </child>
-    <child>
-      <object class="GtkLabel" id="tip_label">
-        <property name="visible">True</property>
-        <!-- label cannot be set there because it is multi-line; see window.vala -->
-        <property name="justify">center</property>
-        <style>
-          <class name="tip"/>
-        </style>
-      </object>
-    </child>
-    <child>
+  <object class="AdwStatusPage" id="first_run_page">
+    <property name="icon-name">org.gnome.SwellFoop</property>
+    <!-- Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application -->
+    <property name="title" translatable="yes">Welcome to Swell Foop</property>
+    <property name="child">
       <object class="GtkButton" id="play_button">
-        <property name="visible">True</property>
         <property name="use-underline">True</property>
         <!-- Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application -->
         <property name="label" translatable="yes">Let’s _Play</property>
         <property name="halign">center</property>
-        <property name="valign">center</property>
         <property name="receives-default">true</property>
         <property name="action-name">win.new-game</property>
         <style>
-          <class name="play"/>
+          <class name="pill"/>
           <class name="suggested-action"/>
         </style>
       </object>
-    </child>
+    </property>
   </object>
 </interface>

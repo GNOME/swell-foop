@@ -178,19 +178,18 @@ private class SwellFoopWindow : Adw.ApplicationWindow
         keypress_handlers.push (handler);
     }*/
 
-    private inline Box build_first_run_view ()
+    private inline Widget build_first_run_view ()
     {
         Builder builder = new Builder.from_resource ("/org/gnome/SwellFoop/ui/first-run.ui");
-        var box = (Box) builder.get_object ("first_run_box");
-        var tip_label = (Label) builder.get_object ("tip_label");
+        var page = (Adw.StatusPage) builder.get_object ("first_run_page");
         /* Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application */
-        tip_label.set_label (_("Clear as many blocks as you can.\nFewer clicks means more points."));
+        page.set_description (_("Clear as many blocks as you can.\nFewer clicks means more points."));
         var play_button = (Button) builder.get_object ("play_button");
         play_button.clicked.connect (() => {
             stack.set_visible_child_name ("game");
             settings.set_boolean ("first-run", false);
         });
-        return box;
+        return page;
     }
 
     private inline Box build_game_over_view ()
