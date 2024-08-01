@@ -25,9 +25,8 @@ private class SwellFoopWindow : Adw.ApplicationWindow
 {
     [GtkChild] private unowned Overlay      overlay;
     [GtkChild] private unowned Stack        stack;
+    [GtkChild] private unowned Adw.WindowTitle window_title;
     [GtkChild] internal unowned MenuButton  hamburger_button;
-    [GtkChild] private unowned Label current_score_label;
-    [GtkChild] private unowned Revealer score_revealer;
 
     private AspectFrame aspect_frame;
     private Label score_label;
@@ -213,10 +212,12 @@ private class SwellFoopWindow : Adw.ApplicationWindow
 
     private void update_score_cb ()
     {
-        uint score = 0;
-        if (game != null)
-            score = game.score;
-        current_score_label.label = "%u".printf(score);
+        if (game != null && game.is_started) {
+            uint score = game.score;
+            window_title.subtitle = _("Score: %u").printf(score);
+        } else {
+            window_title.subtitle = "";
+        }
     }
 
     private void complete_cb ()
@@ -245,11 +246,6 @@ private class SwellFoopWindow : Adw.ApplicationWindow
 
         game_over_box.visible = true;
 
-    }
-
-    private inline void started_cb ()
-    {
-        current_score_label.visible = true;
     }
 
     private Size get_board_size ()
@@ -281,13 +277,12 @@ private class SwellFoopWindow : Adw.ApplicationWindow
                          (uint8) settings.get_int ("colors"),
                          view,
                          saved_game);
-        game.bind_property ("is-started", score_revealer, "reveal-child", BindingFlags.SYNC_CREATE);
         update_score_cb ();
 
         /* Game score change will be sent to the main window and show in the score label */
         game.update_score.connect (update_score_cb);
         game.complete.connect (complete_cb);
-        game.started.connect (started_cb);
+        game.started.connect (update_score_cb);
 
         /* Initialize the view */
         view.set_theme_name (settings.get_string ("theme"));
