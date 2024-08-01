@@ -125,12 +125,6 @@ private class SwellFoopWindow : Adw.ApplicationWindow
 
         var first_run = settings.get_boolean ("first-run");
 
-        CssProvider css_provider = new CssProvider ();
-        css_provider.load_from_resource ("/org/gnome/SwellFoop/ui/swell-foop.css");
-        Gdk.Display? gdk_screen = Gdk.Display.get_default ();
-        if (gdk_screen != null) // else..?
-            StyleContext.add_provider_for_display ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
-
         var first_run_view = build_first_run_view ();
         game_over_box = build_game_over_view ();
         game_over_box.visible = false;
