@@ -36,22 +36,6 @@
     },
     "modules" : [
         {
-            "name": "libgee",
-            "buildsystem": "autotools",
-            "build-options": {
-                "env": {
-                    "ACLOCAL_PATH" : "/usr/lib/sdk/vala-nightly/share/aclocal"
-                }
-            },
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/libgee.git",
-                    "branch": "main"
-                }
-            ]
-        },
-        {
             "name": "libgnome-games-support",
             "buildsystem": "meson",
             "sources": [
