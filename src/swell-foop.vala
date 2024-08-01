@@ -115,7 +115,7 @@ public class SwellFoop : Adw.Application
 
     private inline void about_cb (/* SimpleAction action, Variant? variant */)
     {
-        string[] authors = {
+        string[] developers = {
             /* Translators: About dialog text, name of an author */
             _("Tim Horton"),
 
@@ -129,21 +129,19 @@ public class SwellFoop : Adw.Application
         };
         string[] documenters = {};
 
-        Gtk.show_about_dialog (window,
-                               "program-name", PROGRAM_NAME,
+        Adw.show_about_dialog (window,
+                               "application-icon", "org.gnome.SwellFoop",
+                               "application-name", PROGRAM_NAME,
+                               "developer-name", _("Swell Foop developers"),
                                "version", Config.VERSION,
-                               "comments",
-                               /* Translators: About dialog text, small description of the application */
-                               _("I want to play that game!\nYou know, they all light-up and you click on them and they vanish!"),
                                "license-type", Gtk.License.GPL_2_0,
-                               "authors", authors,
+                               "developers", developers,
                                /* Translators: About dialog text, copyright line */
                                "copyright", _("Copyright \xc2\xa9 2009 Tim Horton"),
                                "artists", artists,
                                "documenters", documenters,
                                /* Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally! */
                                "translator-credits", _("translator-credits"),
-                               "logo-icon-name", "org.gnome.SwellFoop",
                                "website", Config.PACKAGE_URL);
     }
 
