@@ -20,7 +20,6 @@
 <interface>
   <requires lib="gtk+" version="4.10"/>
   <object class="GtkBox" id="game_over">
-    <property name="visible">True</property>
     <property name="orientation">vertical</property>
     <property name="spacing">12</property>
     <property name="halign">center</property>
@@ -32,46 +31,42 @@
     </style>
     <child>
       <object class="GtkLabel">
-        <property name="visible">True</property>
         <!-- Translators: text appearing on the game over screen -->
         <property name="label" translatable="yes">Game Over</property>
         <style>
-          <class name="gameover"/>
+          <class name="title-1"/>
         </style>
       </object>
     </child>
     <child>
       <object class="GtkLabel" id="score_label">
-        <property name="visible">True</property>
         <!-- label cannot be set there because it contains the score -->
         <property name="justify">center</property>
         <style>
-          <class name="high_score"/>
+          <class name="title-4"/>
         </style>
       </object>
     </child>
     <child>
       <object class="GtkLabel" id="to_high_score_label">
-        <property name="visible">True</property>
-        <!-- label cannot be set there because it needs calculated score -->
+=        <!-- label cannot be set there because it needs calculated score -->
         <property name="justify">center</property>
         <style>
-          <class name="goal"/>
+          <class name="body"/>
         </style>
       </object>
     </child>
     <child>
       <object class="GtkButton" id="play_button">
-        <property name="visible">True</property>
         <property name="use-underline">True</property>
         <!-- Translators: label of the button on the game over screen -->
         <property name="label" translatable="yes">_Play Again</property>
         <property name="halign">center</property>
-        <property name="valign">center</property>
         <property name="receives-default">true</property>
         <property name="action-name">win.new-game</property>
+        <property name="margin-top">24</property>
         <style>
-          <class name="play"/>
+          <class name="pill"/>
           <class name="suggested-action"/>
         </style>
       </object>

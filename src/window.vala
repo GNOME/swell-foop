@@ -238,8 +238,9 @@ private class SwellFoopWindow : Adw.ApplicationWindow
         if (lowest_high_score != -1 && lowest_high_score > game.score) {
             /* Translators: the text for the high score goal shown on the game over screen */
             to_high_score_label.set_label (_("%u points to reach the leaderboard").printf ((uint)lowest_high_score));
+            to_high_score_label.visible = true;
         } else {
-            to_high_score_label.set_label ("");
+            to_high_score_label.visible = false;
         }
 
         game_over_box.visible = true;
