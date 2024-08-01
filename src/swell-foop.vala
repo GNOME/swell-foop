@@ -10,7 +10,7 @@
 
 using Config;
 
-public class SwellFoop : Gtk.Application
+public class SwellFoop : Adw.Application
 {
     /* Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog */
     private const string PROGRAM_NAME = _("Swell Foop");
@@ -46,7 +46,7 @@ public class SwellFoop : Gtk.Application
     {
         base.startup ();
 
-        Gtk.Settings.get_default ().@set ("gtk-application-prefer-dark-theme", true);
+        style_manager.color_scheme = FORCE_DARK;
 
         add_action_entries (action_entries, this);
         set_accels_for_action ("app.help",              {                 "F1"  });

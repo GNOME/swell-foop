@@ -16,6 +16,7 @@ deps = [
   glib_dep,
   gobject_dep,
   gtk_dep,
+  adw_dep,
   rsvg_dep,
   libgnome_games_support_dep,
   gee_dep,
