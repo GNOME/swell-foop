@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-01-17 00:11+0000\n"
-"PO-Revision-Date: 2024-01-17 21:00+0200\n"
+"POT-Creation-Date: 2024-08-01 18:36+0000\n"
+"PO-Revision-Date: 2024-08-02 09:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -19,23 +19,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 "X-Project-Style: gnome\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
-#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.metainfo.xml.in:7
 #: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
 #: src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Той самий"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.metainfo.xml.in:8
 #: data/org.gnome.SwellFoop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Очищати екран, вилучаючи групи кольорових кульок"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:10
+#: data/org.gnome.SwellFoop.metainfo.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -48,7 +48,7 @@ msgstr ""
 "квадратик за раз. Ви здобудете набагато більше балів за знищення великих "
 "груп квадратиків й очищення всієї дошки."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:17
+#: data/org.gnome.SwellFoop.metainfo.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -56,7 +56,7 @@ msgstr ""
 "«Той самий» — дуже швидка гра, проте можна її розтягнути змінивши розмір "
 "дошки."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:83
+#: data/org.gnome.SwellFoop.metainfo.xml.in:114
 msgid "Robert Roth"
 msgstr "Роберт Рот"
 
@@ -152,22 +152,22 @@ msgstr ""
 "журнал дій, який зберігається у масиві координат."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run.ui:39
+#: data/ui/first-run.ui:25
 msgid "Welcome to Swell Foop"
 msgstr "Ласкаво просимо в «Той самий»"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run.ui:60
+#: data/ui/first-run.ui:30
 msgid "Let’s _Play"
 msgstr "Нумо _грати"
 
 #. Translators: text appearing on the game over screen
-#: data/ui/game-over.ui:37
+#: data/ui/game-over.ui:35
 msgid "Game Over"
 msgstr "Гру закінчено"
 
 #. Translators: label of the button on the game over screen
-#: data/ui/game-over.ui:68
+#: data/ui/game-over.ui:63
 msgid "_Play Again"
 msgstr "_Зіграти ще раз"
 
@@ -343,12 +343,12 @@ msgid "_About Swell Foop"
 msgstr "_Про «Той самий»"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:148
+#: data/ui/swell-foop.ui:149
 msgid "Undo"
 msgstr "Скасувати"
 
 #. Translators: tooltip text of the Redo button; probably a verb
-#: data/ui/swell-foop.ui:163
+#: data/ui/swell-foop.ui:158
 msgid "Redo"
 msgstr "Повторити"
 
@@ -368,22 +368,18 @@ msgstr "Tim Horton"
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
-#. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:137
-msgid ""
-"I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!"
-msgstr ""
-"Я хочу зіграти в цю гру!\n"
-"Знаєте, вони всі підсвічуються і якщо натиснути на них, то вони зникають!"
+#: src/swell-foop.vala:135
+#| msgid "Swell Foop"
+msgid "Swell Foop developers"
+msgstr "Розробники гри «Той самий»"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:141
+#: src/swell-foop.vala:140
 msgid "Copyright © 2009 Tim Horton"
 msgstr "© Tim Horton, 2009"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:145
+#: src/swell-foop.vala:144
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -393,22 +389,22 @@ msgstr ""
 "Юрій Чорноіван <yurchor@ukr.net>"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:59
+#: src/window.vala:58
 msgid "Small"
 msgstr "Маленька"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:62
+#: src/window.vala:61
 msgid "Normal"
 msgstr "Звичайний"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:65
+#: src/window.vala:64
 msgid "Large"
 msgstr "Велика"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:187
+#: src/window.vala:179
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -416,34 +412,46 @@ msgstr ""
 "Очистіть якнайбільше блоків.\n"
 "Більше натисків — більше балів."
 
+#: src/window.vala:211
+#, c-format
+msgid "Score: %u"
+msgstr "Рахунок: %u"
+
 #. Translators: the text for the score total shown on the game over screen
-#: src/window.vala:234
+#: src/window.vala:228
 #, c-format
 msgid "%u Points"
 msgstr "%u бали"
 
 #. Translators: the text for the high score goal shown on the game over screen
-#: src/window.vala:241
+#: src/window.vala:235
 #, c-format
 msgid "%u points to reach the leaderboard"
 msgstr "%u балів до першої позиції у списку"
 
+#. Translators: heading of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:335
+#| msgctxt "shortcut window"
+#| msgid "Start a new game"
+msgid "Start New Game?"
+msgstr "Розпочати нову гру?"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:346
+#: src/window.vala:337
 msgid "Abandon this game to start a new one?"
 msgstr "Облишити цю гру та почати нову?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:351
+#: src/window.vala:341
 msgid "_Cancel"
 msgstr "_Скасувати"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:353
+#: src/window.vala:344
 msgid "_New Game"
 msgstr "_Створити гру"
 
-#: src/window.vala:402
+#: src/window.vala:386
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -452,9 +460,16 @@ msgstr[1] "%s, %d кольори"
 msgstr[2] "%s, %d кольорів"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:413
+#: src/window.vala:397
 msgid "Type"
 msgstr "Тип"
+
+#~ msgid ""
+#~ "I want to play that game!\n"
+#~ "You know, they all light-up and you click on them and they vanish!"
+#~ msgstr ""
+#~ "Я хочу зіграти в цю гру!\n"
+#~ "Знаєте, вони всі підсвічуються і якщо натиснути на них, то вони зникають!"
 
 #~ msgid "Zealous animation"
 #~ msgstr "Ретельна анімація"
@@ -464,10 +479,6 @@ msgstr "Тип"
 
 #~ msgid "_Zealous Animation"
 #~ msgstr "_Ретельна анімація"
-
-#, c-format
-#~ msgid "Score: %u"
-#~ msgstr "Рахунок: %u"
 
 #~ msgid "The GNOME Project"
 #~ msgstr "Проект GNOME"
