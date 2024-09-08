@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-01-17 00:11+0000\n"
-"PO-Revision-Date: 2024-03-11 00:05+0100\n"
+"POT-Creation-Date: 2024-08-01 18:36+0000\n"
+"PO-Revision-Date: 2024-09-08 09:20+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
@@ -27,20 +27,20 @@ msgstr ""
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
-#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.metainfo.xml.in:7
 #: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
 #: src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.metainfo.xml.in:8
 #: data/org.gnome.SwellFoop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr ""
 "Tisztítsa meg a képernyőt az egyező színű és formájú csempecsoportok "
 "eltávolításával"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:10
+#: data/org.gnome.SwellFoop.metainfo.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -54,7 +54,7 @@ msgstr ""
 "lehet eltávolítani. Nagyobb négyzetcsoport eltüntetéséért sokkal több pont "
 "jár, és a tábla teljes megtisztításáért szintén."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:17
+#: data/org.gnome.SwellFoop.metainfo.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -62,7 +62,7 @@ msgstr ""
 "A Swell Foop mindig nagyon gyorsan végigjátszható, de a tábla méretének "
 "növelésével valamelyest meghosszabbítható."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:83
+#: data/org.gnome.SwellFoop.metainfo.xml.in:114
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -160,23 +160,22 @@ msgstr ""
 "előzményeit koordináták tömbjeként mentve."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run.ui:39
+#: data/ui/first-run.ui:25
 msgid "Welcome to Swell Foop"
 msgstr "Üdvözli a Swell Foop"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run.ui:60
+#: data/ui/first-run.ui:30
 msgid "Let’s _Play"
 msgstr "_Játsszunk"
 
 #. Translators: text appearing on the game over screen
-#: data/ui/game-over.ui:37
-#| msgid "Game Over!"
+#: data/ui/game-over.ui:35
 msgid "Game Over"
 msgstr "Vége a játéknak"
 
 #. Translators: label of the button on the game over screen
-#: data/ui/game-over.ui:68
+#: data/ui/game-over.ui:63
 msgid "_Play Again"
 msgstr "Új _játék"
 
@@ -273,85 +272,71 @@ msgstr "Kilépés"
 #. Translators: entry of the hamburger menu; starts a new game
 #. Translators: entry of the Setup submenu of the hamburger menu; starts a new game
 #: data/ui/swell-foop.ui:27 data/ui/swell-foop.ui:76
-#| msgid "_New Game"
 msgid "New Game"
 msgstr "Új játék"
 
 #. Translators: submenu of the hamburger menu; allows to configure board size and number of colors
 #: data/ui/swell-foop.ui:32
-#| msgid "_Setup"
 msgid "Setup"
 msgstr "Beállítás"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:36
-#| msgid "_Small (6 × 5)"
 msgid "Small (6 × 5)"
 msgstr "Kicsi (6 × 5)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
 #: data/ui/swell-foop.ui:42
-#| msgid "Nor_mal (15 × 10)"
 msgid "Normal (15 × 10)"
 msgstr "Normál (15 × 10)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
 #: data/ui/swell-foop.ui:48
-#| msgid "_Large (20 × 15)"
 msgid "Large (20 × 15)"
 msgstr "Nagy (20 × 15)"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "T_hree colors" and "_Four colors"
 #: data/ui/swell-foop.ui:56
-#| msgid "_Two colors"
 msgid "Two colors"
 msgstr "Két szín"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "_Four colors"
 #: data/ui/swell-foop.ui:62
-#| msgid "T_hree colors"
 msgid "Three colors"
 msgstr "Három szín"
 
 #. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "T_hree colors"
 #: data/ui/swell-foop.ui:68
-#| msgid "_Four colors"
 msgid "Four colors"
 msgstr "Négy szín"
 
 #. Translators: entry of the hamburger menu; displays high scores
 #: data/ui/swell-foop.ui:85
-#| msgid "High _Scores"
 msgid "High Scores"
 msgstr "Legmagasabb pontok"
 
 #. Translators: submenu of the hamburger menu; allows to change the theme; Colors, Shapes and Colors or Boring Shapes
 #: data/ui/swell-foop.ui:90
-#| msgid "A_ppearance"
 msgid "Appearance"
 msgstr "Megjelenés"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Shapes and Colors" and "Boring Shapes"
 #: data/ui/swell-foop.ui:94
-#| msgid "_Colors"
 msgid "Colors"
 msgstr "Színek"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Boring Shapes"
 #: data/ui/swell-foop.ui:100
-#| msgid "_Shapes and Colors"
 msgid "Shapes and Colors"
 msgstr "Alakzatok és színek"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Shapes and Colors"
 #: data/ui/swell-foop.ui:106
-#| msgid "_Boring Shapes"
 msgid "Boring Shapes"
 msgstr "Unalmas alakzatok"
 
 #. Translators: entry of the hamburger menu; shows a Shortcuts window
 #: data/ui/swell-foop.ui:116
-#| msgid "_Keyboard Shortcuts"
 msgid "Keyboard Shortcuts"
 msgstr "Gyorsbillentyűk"
 
@@ -366,12 +351,12 @@ msgid "_About Swell Foop"
 msgstr "A Swell Foop _névjegye"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:148
+#: data/ui/swell-foop.ui:149
 msgid "Undo"
 msgstr "Visszavonás"
 
 #. Translators: tooltip text of the Redo button; probably a verb
-#: data/ui/swell-foop.ui:163
+#: data/ui/swell-foop.ui:158
 msgid "Redo"
 msgstr "Mégis"
 
@@ -391,22 +376,18 @@ msgstr "Tim Horton"
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
-#. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:137
-msgid ""
-"I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!"
-msgstr ""
-"Akarok játszani ezzel!\n"
-"Mind kigyullad, az ember rákattint és eltűnnek!"
+#: src/swell-foop.vala:135
+#| msgid "Swell Foop"
+msgid "Swell Foop developers"
+msgstr "A Swell Foop fejlesztői"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:141
+#: src/swell-foop.vala:140
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:145
+#: src/swell-foop.vala:144
 msgid "translator-credits"
 msgstr ""
 "Bán Szabolcs <shooby at gnome dot hu>\n"
@@ -419,22 +400,22 @@ msgstr ""
 "Varga Szabolcs <shirokuma at shirokuma dot hu>"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:59
+#: src/window.vala:58
 msgid "Small"
 msgstr "Kicsi"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:62
+#: src/window.vala:61
 msgid "Normal"
 msgstr "Normál"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:65
+#: src/window.vala:64
 msgid "Large"
 msgstr "Nagy"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:187
+#: src/window.vala:179
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -442,36 +423,46 @@ msgstr ""
 "Távolítson el annyi blokkot, amennyit csak tud.\n"
 "A kevesebb kattintás több pontot ér."
 
-#. Translators: the text for the score total shown on the game over screen
-#: src/window.vala:234
+#: src/window.vala:211
 #, c-format
-#| msgid "%u point"
-#| msgid_plural "%u points"
+msgid "Score: %u"
+msgstr "Pontszám: %u"
+
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:228
+#, c-format
 msgid "%u Points"
 msgstr "%u pont"
 
 #. Translators: the text for the high score goal shown on the game over screen
-#: src/window.vala:241
+#: src/window.vala:235
 #, c-format
 msgid "%u points to reach the leaderboard"
 msgstr "%u pont az eredménytábla eléréséhez"
 
+#. Translators: heading of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:335
+#| msgctxt "shortcut window"
+#| msgid "Start a new game"
+msgid "Start New Game?"
+msgstr "Új játékot indít?"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:346
+#: src/window.vala:337
 msgid "Abandon this game to start a new one?"
 msgstr "Elhagyja a játékot egy új elkezdéséhez?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:351
+#: src/window.vala:341
 msgid "_Cancel"
 msgstr "Mé_gse"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:353
+#: src/window.vala:344
 msgid "_New Game"
 msgstr "Ú_j játék"
 
-#: src/window.vala:402
+#: src/window.vala:386
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -479,6 +470,6 @@ msgstr[0] "%s, %d szín"
 msgstr[1] "%s, %d szín"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:413
+#: src/window.vala:397
 msgid "Type"
 msgstr "Típus"
