@@ -31,16 +31,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2023-11-28 06:59+0000\n"
-"PO-Revision-Date: 2024-01-04 10:08-0300\n"
+"POT-Creation-Date: 2024-08-01 18:36+0000\n"
+"PO-Revision-Date: 2024-09-23 10:04-0300\n"
 "Last-Translator: Juliano de Souza Camargo <julianosc@pm.me>\n"
-"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
+"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 45.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 46.1\n"
 "X-Project-Style: gnome\n"
 "X-DL-Team: pt_BR\n"
 "X-DL-Module: swell-foop\n"
@@ -50,18 +50,18 @@ msgstr ""
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
-#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.metainfo.xml.in:7
 #: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
 #: src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.metainfo.xml.in:8
 #: data/org.gnome.SwellFoop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Limpe a tela removendo grupos de pedras coloridas e com formas"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:10
+#: data/org.gnome.SwellFoop.metainfo.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -75,7 +75,7 @@ msgstr ""
 "único quadrado por vez. Você ganha muito mais pontos para limpar um grupo "
 "maior de quadrados, e também para limpar todo o tabuleiro."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:17
+#: data/org.gnome.SwellFoop.metainfo.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -83,7 +83,7 @@ msgstr ""
 "Swell Foop é sempre muito rápido para jogar, mas você pode torná-lo um pouco "
 "mais longo, alterando o tamanho do tabuleiro."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:81
+#: data/org.gnome.SwellFoop.metainfo.xml.in:114
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -181,14 +181,24 @@ msgstr ""
 "matriz de cordas."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:43
+#: data/ui/first-run.ui:25
 msgid "Welcome to Swell Foop"
 msgstr "Bem-vindo(a) ao Swell Foop"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:64
+#: data/ui/first-run.ui:30
 msgid "Let’s _Play"
 msgstr "_Jogar"
+
+#. Translators: text appearing on the game over screen
+#: data/ui/game-over.ui:35
+msgid "Game Over"
+msgstr "Fim do jogo"
+
+#. Translators: label of the button on the game over screen
+#: data/ui/game-over.ui:63
+msgid "_Play Again"
+msgstr "_Jogar novamente"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
 #: data/ui/help-overlay.ui:31
@@ -362,24 +372,14 @@ msgid "_About Swell Foop"
 msgstr "_Sobre o Swell Foop"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:148
+#: data/ui/swell-foop.ui:149
 msgid "Undo"
 msgstr "Desfaz"
 
 #. Translators: tooltip text of the Redo button; probably a verb
-#: data/ui/swell-foop.ui:163
+#: data/ui/swell-foop.ui:158
 msgid "Redo"
 msgstr "Refaz"
-
-#. Translators: message displayed to show the game has finished
-#: src/game-view.vala:1332
-msgid "Game Over!"
-msgstr "Fim do jogo!"
-
-#. Translators: message displayed in a Button if the player wants to play the game again
-#: src/game-view.vala:1370
-msgid "Play Again?"
-msgstr "Jogar novamente?"
 
 #. Translators: command-line option description, see 'swell-foop --help'
 #: src/swell-foop.vala:25
@@ -397,22 +397,17 @@ msgstr "Tim Horton"
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
-#. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:137
-msgid ""
-"I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!"
-msgstr ""
-"Eu quero jogar esse jogo!\n"
-"Você sabe, eles todos acendem e você clica neles e eles desaparecem!"
+#: src/swell-foop.vala:135
+msgid "Swell Foop developers"
+msgstr "Os desenvolvedores de Swell Foop"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:141
+#: src/swell-foop.vala:140
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:145
+#: src/swell-foop.vala:144
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -429,25 +424,26 @@ msgstr ""
 "Felipe Borges <felipe10borges@gmail.com>\n"
 "Sérgio Cipolla <secipolla@gmail.com>\n"
 "Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
-"Rafael Fontenelle <rafaelff@gnome.org>"
+"Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Juliano de Souza Camargo <julianosc@pm.me>"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:149
+#: src/window.vala:58
 msgid "Small"
 msgstr "Pequeno"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:152
+#: src/window.vala:61
 msgid "Normal"
 msgstr "Normal"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:155
+#: src/window.vala:64
 msgid "Large"
 msgstr "Grande"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:301
+#: src/window.vala:179
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -455,22 +451,44 @@ msgstr ""
 "Limpe tantos blocos que você puder.\n"
 "Menos cliques significa mais pontos."
 
+#: src/window.vala:211
+#, c-format
+msgid "Score: %u"
+msgstr "Pontuação: %u"
+
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:228
+#, c-format
+msgid "%u Points"
+msgstr "%u pontos"
+
+#. Translators: the text for the high score goal shown on the game over screen
+#: src/window.vala:235
+#, c-format
+msgid "%u points to reach the leaderboard"
+msgstr "%u pontos para chegar ao placar de líderes"
+
+#. Translators: heading of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:335
+msgid "Start New Game?"
+msgstr "Iniciar um novo jogo?"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:434
+#: src/window.vala:337
 msgid "Abandon this game to start a new one?"
 msgstr "Abandonar este jogo para iniciar um novo?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:437
+#: src/window.vala:341
 msgid "_Cancel"
 msgstr "_Cancelar"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:440
+#: src/window.vala:344
 msgid "_New Game"
 msgstr "_Novo jogo"
 
-#: src/window.vala:519
+#: src/window.vala:386
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -478,9 +496,16 @@ msgstr[0] "%s, %d cor"
 msgstr[1] "%s, %d cores"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:530
+#: src/window.vala:397
 msgid "Type"
 msgstr "Tipo"
+
+#~ msgid ""
+#~ "I want to play that game!\n"
+#~ "You know, they all light-up and you click on them and they vanish!"
+#~ msgstr ""
+#~ "Eu quero jogar esse jogo!\n"
+#~ "Você sabe, eles todos acendem e você clica neles e eles desaparecem!"
 
 #~ msgid "Zealous animation"
 #~ msgstr "Animação rápida"
@@ -493,16 +518,6 @@ msgstr "Tipo"
 
 #~ msgid "_Zealous Animation"
 #~ msgstr "_Animação rápida"
-
-#, c-format
-#~ msgid "%u point"
-#~ msgid_plural "%u points"
-#~ msgstr[0] "%u ponto"
-#~ msgstr[1] "%u pontos"
-
-#, c-format
-#~ msgid "Score: %u"
-#~ msgstr "Pontuação: %u"
 
 #~ msgid "The GNOME Project"
 #~ msgstr "O Projeto GNOME"
