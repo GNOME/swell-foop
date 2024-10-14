@@ -134,6 +134,8 @@ private class GameView : DrawingArea
     uint8 [,] frozen_board;
     bool frozen = false;
 
+    Gee.Map<string, Rsvg.Handle> preloaded_svg = new Gee.HashMap<string, Rsvg.Handle> ();
+
     internal bool keypress (uint keyval, uint keycode)
     {
         switch (keyval)
@@ -172,17 +174,10 @@ private class GameView : DrawingArea
         set_hexpand (true);
         set_vexpand (true);
         focusable = true;
-
         set_draw_func ((/*DrawingArea*/ area, /*Cairo.Context*/ c, width, height)=>
         {
-            this.width = width;
-            this.height = height;
             if (!is_uninitialized () && !(frozen && !frozen_board_initialized))
             {
-                x_delta = width / game.columns;
-                y_delta = height / game.rows;
-                x_offset = (width - x_delta * game.columns) / 2;
-                y_offset = (height - y_delta * game.rows) / 2;
                 var now = new DateTime.now_utc ();
                 int animation_index = 0;
                 Animation[] moves_to_do = {};
@@ -246,6 +241,15 @@ private class GameView : DrawingArea
             }
         });
 
+        resize.connect((width, height) => {
+            this.width = width;
+            this.height = height;
+            x_delta = width / game.columns;
+            y_delta = height / game.rows;
+            x_offset = (width - x_delta * game.columns) / 2;
+            y_offset = (height - y_delta * game.rows) / 2;
+            preloaded_svg.clear ();
+		});
         var mouse_position = new EventControllerMotion ();
         mouse_position.motion.connect ((x,y)=> 
         {
@@ -713,10 +717,15 @@ private class GameView : DrawingArea
         viewport.y = y;
         viewport.width = width;
         viewport.height = height;
-        
-        var bytes = resources_lookup_data (path, 0);
-        var data = bytes.get_data ();
-        var handle = new Rsvg.Handle.from_data (data);
+        Rsvg.Handle handle;
+        if (!preloaded_svg.has_key (path)) {
+            var bytes = resources_lookup_data (path, 0);
+            var data = bytes.get_data ();
+            handle = new Rsvg.Handle.from_data (data);
+            preloaded_svg.set (path, handle);
+        } else {
+            handle = preloaded_svg.get (path);
+        }
         handle.render_document (c, viewport);
     }
 
