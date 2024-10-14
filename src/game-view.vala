@@ -31,8 +31,7 @@ using Gtk; /* designed for Gtk 4, link with libgtk-4-dev or gtk4-devel */
 
 private class GameView : DrawingArea
 {
-    const int animation_length = 240;
-
+    const int score_shown_for = 240;
     /* sub-classes */
     internal class Animation : Object
     {
@@ -133,6 +132,12 @@ private class GameView : DrawingArea
     bool frozen_board_initialized = false;
     uint8 [,] frozen_board;
     bool frozen = false;
+    int animation_length;
+    private bool _animated = false;
+    public bool animated {
+        get { return _animated; }
+        set { _animated= value; animation_length = _animated ? 240 : 5;}
+    }
 
     Gee.Map<string, Rsvg.Handle> preloaded_svg = new Gee.HashMap<string, Rsvg.Handle> ();
 
@@ -233,7 +238,7 @@ private class GameView : DrawingArea
                 if (animate_score (c, now, width, height) || animations.size > 0)
                 {
 #if GLIB_2_78_or_above
-                    Timeout.add_once (3, redraw); /* The documentaion says this requires glib 2.74, I couldn't compile it with 2.74 but could with 2.78. */
+                    Timeout.add_once (3, redraw); /* The documentation says this requires glib 2.74, I couldn't compile it with 2.74 but could with 2.78. */
 #else
                     Timeout.add (3, (()=>{redraw (); return false;}));
 #endif
@@ -309,8 +314,8 @@ private class GameView : DrawingArea
          * The block that get destroyed do so in the first 48ms of the 240ms.
          * The block that appear do so in the last 48ms of the 240ms.
          */
-        const int total_steps = animation_length;
-        const int segment_steps = animation_length / 5; /* 48 */
+        int total_steps = animation_length;
+        int segment_steps = animation_length / 5; /* 48 */
         var diff = now.difference (a.start_time);
         uint steps = (uint)(diff / (TimeSpan.MILLISECOND * 3));
         uint animation;
@@ -386,16 +391,18 @@ private class GameView : DrawingArea
 
 
             /* wobble the selected blocks */
-            const double wobble_size = 1.0 / 25; // the smaller the value the smaller (and slower) the wobble
-            draw_block (c, x_offset + (long)x_delta * a.x + (x_delta * wobble_size) + (x_delta / 50) + Math.sin (degrees / 180 * Math.PI) * (x_delta * wobble_size),
-                           y_offset + (long)y_delta * (game.rows - 1 - a.y) + (y_delta * wobble_size) + (y_delta / 50),
-                           (uint)(x_delta * (1 - wobble_size * 2)), (uint)(y_delta * (1 - wobble_size * 2)), a.block_type, theme);
+            if (_animated) {
+                const double wobble_size = 1.0 / 25; // the smaller the value the smaller (and slower) the wobble
+                draw_block (c, x_offset + (long)x_delta * a.x + (x_delta * wobble_size) + (x_delta / 50) + Math.sin (degrees / 180 * Math.PI) * (x_delta * wobble_size),
+                               y_offset + (long)y_delta * (game.rows - 1 - a.y) + (y_delta * wobble_size) + (y_delta / 50),
+                               (uint)(x_delta * (1 - wobble_size * 2)), (uint)(y_delta * (1 - wobble_size * 2)), a.block_type, theme);
+            } else {
+                /* a basic draw for the selected blocks, with no animation */
+                draw_block (c, x_offset + (long)x_delta * a.x,
+                               y_offset + (long)y_delta * (game.rows - 1 - a.y),
+                               x_delta, y_delta, a.block_type, theme);
 
-            /* a basic draw for the selected blocks, with no animation */
-            /*draw_block (c, x_offset + (long)x_delta * a.x,
-                           y_offset + (long)y_delta * (game.rows - 1 - a.y),
-                           x_delta, y_delta, a.block_type, theme);*/
-
+            }
 
             return true;
         }

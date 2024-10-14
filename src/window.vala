@@ -114,6 +114,7 @@ private class SwellFoopWindow : Adw.ApplicationWindow
 
         /* Create a cairo view */
         view = new GameView ();
+        Gtk.Settings.get_default ().bind_property ("gtk-enable-animations", view, "animated", BindingFlags.SYNC_CREATE);
         view.show ();
         Size size = get_board_size ();
 
