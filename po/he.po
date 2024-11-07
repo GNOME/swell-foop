@@ -10,32 +10,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-01-17 00:11+0000\n"
-"PO-Revision-Date: 2024-01-25 10:32+0200\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"POT-Creation-Date: 2024-08-01 18:36+0000\n"
+"PO-Revision-Date: 2024-11-07 21:50+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 45.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
-#: data/org.gnome.SwellFoop.appdata.xml.in:7
+#: data/org.gnome.SwellFoop.metainfo.xml.in:7
 #: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
 #: src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "פיצוץ בצבעים"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:8
+#: data/org.gnome.SwellFoop.metainfo.xml.in:8
 #: data/org.gnome.SwellFoop.desktop.in:4
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "פינוי המסך על ידי הסרת קבוצות של אריחים צבעוניים ובעלי צורה"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:10
+#: data/org.gnome.SwellFoop.metainfo.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -47,7 +47,7 @@ msgstr ""
 "אתם בבת אחת, ותגרום לריבועים אחרים ליפול למקום. לא נתן להסיר ריבוע בודד בכל "
 "פעם. תקבל יותר נקודות עם ניקוי קבוצה גדולה של ריבועים, ואף ניקוי הלוח כולו."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:17
+#: data/org.gnome.SwellFoop.metainfo.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -55,9 +55,9 @@ msgstr ""
 "פיצוץ בצבעים הוא תמיד משחק מהיר, אך נתן לעשות אתו ארוך יותר באמצעות שינוי "
 "גודל הלוח."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:83
+#: data/org.gnome.SwellFoop.metainfo.xml.in:114
 msgid "Robert Roth"
-msgstr "Robert Roth"
+msgstr "רוברט רוֹת׳"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
@@ -67,22 +67,22 @@ msgstr "משחק;הגיון;היגיון;לוח;דומה;זהה;התאמה;"
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
 #: data/org.gnome.SwellFoop.gschema.xml:11
 msgid "The theme to use"
-msgstr "The theme to use"
+msgstr "ערכת העיצוב לשימוש"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
 #: data/org.gnome.SwellFoop.gschema.xml:13
 msgid "The title of the tile theme to use."
-msgstr "The title of the tile theme to use."
+msgstr "כותרת ערכת עיצוב האריחים לשימוש."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
 #: data/org.gnome.SwellFoop.gschema.xml:18
 msgid "Board size"
-msgstr "Board size"
+msgstr "גודל לוח"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/size'
 #: data/org.gnome.SwellFoop.gschema.xml:20
 msgid "The size of the game board."
-msgstr "The size of the game board."
+msgstr "גודל לוח המשחק."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-width'
 #: data/org.gnome.SwellFoop.gschema.xml:25
@@ -92,7 +92,7 @@ msgstr "רוחב החלון בפיקסלים"
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-width'
 #: data/org.gnome.SwellFoop.gschema.xml:27
 msgid "Width of the window in pixels."
-msgstr "רוחב החלון בפיקסלים"
+msgstr "רוחב החלון בפיקסלים."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-height'
 #: data/org.gnome.SwellFoop.gschema.xml:32
@@ -102,42 +102,42 @@ msgstr "גובה החלון בפיקסלים"
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-height'
 #: data/org.gnome.SwellFoop.gschema.xml:34
 msgid "Height of the window in pixels."
-msgstr "גובה החלון בפיקסלים"
+msgstr "גובה החלון בפיקסלים."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-is-maximized'
 #: data/org.gnome.SwellFoop.gschema.xml:39
 msgid "true if the window is maximized"
-msgstr "true if the window is maximized"
+msgstr "נכון (true) אם החלון מוגדל"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-is-maximized'
 #: data/org.gnome.SwellFoop.gschema.xml:41
 msgid "true if the window is maximized."
-msgstr "true if the window is maximized."
+msgstr "נכון (true) אם החלון מוגדל."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
 #: data/org.gnome.SwellFoop.gschema.xml:47
 msgid "Board color count"
-msgstr "Board color count"
+msgstr "כמות צבעים בלוח"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
 #: data/org.gnome.SwellFoop.gschema.xml:49
 msgid "The number of colors of tiles to use in the game."
-msgstr "The number of colors of tiles to use in the game."
+msgstr "מספרי צבעי האריחים לשימוש במשחק."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
 #: data/org.gnome.SwellFoop.gschema.xml:54
 msgid "Is this the first run"
-msgstr "Is this the first run"
+msgstr "האם זאת ההרצה הראשונה"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
 #: data/org.gnome.SwellFoop.gschema.xml:56
 msgid "Setting to decide whether to show first-run hint dialog or not."
-msgstr "Setting to decide whether to show first-run hint dialog or not."
+msgstr "הגדרה להחלטה האם להציג חלונית רמזים להרצה ראשונה או שלא."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
 #: data/org.gnome.SwellFoop.gschema.xml:61
 msgid "Saved game"
-msgstr "Saved game"
+msgstr "משחק שנשמר"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
 #: data/org.gnome.SwellFoop.gschema.xml:63
@@ -146,27 +146,27 @@ msgid ""
 "initial board, an index in the history, and the history of actions saved by "
 "an array of coords."
 msgstr ""
-"Has value “nothing” if there is no saved game. Else, contains a copy of the "
-"initial board, an index in the history, and the history of actions saved by "
-"an array of coords."
+"מכיל את הערך „nothing” (כלום) אם אין משחק שמור. אחרת, מכיל עותק של הלוח "
+"הראשונה, מפתח בהיסטוריה ואת היסטרויית הפעולות שנשמרו על ידי מערך של נקודות "
+"ציון."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run.ui:39
+#: data/ui/first-run.ui:25
 msgid "Welcome to Swell Foop"
-msgstr "ברוכים הבאים לפיצוץ בצבעים"
+msgstr "ברוך בואך לפיצוץ בצבעים"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run.ui:60
+#: data/ui/first-run.ui:30
 msgid "Let’s _Play"
-msgstr "לה_תחיל לשחק!"
+msgstr "לה_תחיל לשחק"
 
 #. Translators: text appearing on the game over screen
-#: data/ui/game-over.ui:37
+#: data/ui/game-over.ui:35
 msgid "Game Over"
 msgstr "המשחק הסתיים"
 
 #. Translators: label of the button on the game over screen
-#: data/ui/game-over.ui:68
+#: data/ui/game-over.ui:63
 msgid "_Play Again"
 msgstr "ל_שחק שוב"
 
@@ -339,15 +339,15 @@ msgstr "ע_זרה"
 #. Translators: entry of the hamburger menu; shows an About window
 #: data/ui/swell-foop.ui:126
 msgid "_About Swell Foop"
-msgstr "_על אודות פיצוץ בצבעים"
+msgstr "_על פיצוץ בצבעים"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:148
+#: data/ui/swell-foop.ui:149
 msgid "Undo"
 msgstr "ביטול"
 
 #. Translators: tooltip text of the Redo button; probably a verb
-#: data/ui/swell-foop.ui:163
+#: data/ui/swell-foop.ui:158
 msgid "Redo"
 msgstr "ביצוע חוזר"
 
@@ -360,29 +360,24 @@ msgstr "Print release version and exit"
 #. Translators: About dialog text, name of an artist
 #: src/swell-foop.vala:120 src/swell-foop.vala:128
 msgid "Tim Horton"
-msgstr "Tim Horton"
+msgstr "טים הורטון"
 
 #. Translators: About dialog text, name of an author
 #: src/swell-foop.vala:124
 msgid "Sophia Yu"
-msgstr "Sophia Yu"
+msgstr "סופיה יו"
 
-#. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:137
-msgid ""
-"I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!"
-msgstr ""
-"אני רוצה לשחק במשחק הזה!\n"
-"תשמעו, כל המשבצות נדלקות וכשלוחצים עליהן הן נעלמות!"
+#: src/swell-foop.vala:135
+msgid "Swell Foop developers"
+msgstr "מפתחי פיצוץ בצבעים"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:141
+#: src/swell-foop.vala:140
 msgid "Copyright © 2009 Tim Horton"
 msgstr "כל הזכויות שמורות © 2009 לטים הורטון"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:145
+#: src/swell-foop.vala:144
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -396,22 +391,22 @@ msgstr ""
 "מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:59
+#: src/window.vala:58
 msgid "Small"
 msgstr "קטן"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:62
+#: src/window.vala:61
 msgid "Normal"
 msgstr "רגיל"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:65
+#: src/window.vala:64
 msgid "Large"
 msgstr "גדול"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:187
+#: src/window.vala:179
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -419,35 +414,45 @@ msgstr ""
 "יש לנקות בלוקים רבים ככל האפשר.\n"
 "פחות לחיצות משמען יותר נקודות."
 
-#. Translators: the text for the score total shown on the game over screen
-#: src/window.vala:234
+#: src/window.vala:211
 #, c-format
+msgid "Score: %u"
+msgstr "ניקוד: %u"
+
 # msgid_plural "%u points"
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:228
+#, c-format
 msgid "%u Points"
 msgstr "‏%u נקודות"
 
 #. Translators: the text for the high score goal shown on the game over screen
-#: src/window.vala:241
+#: src/window.vala:235
 #, c-format
 msgid "%u points to reach the leaderboard"
 msgstr "‏%u נקודות כדי להשיג את המשחק המוביל"
 
+#. Translators: heading of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:335
+msgid "Start New Game?"
+msgstr "להתחיל משחק חדש?"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:346
+#: src/window.vala:337
 msgid "Abandon this game to start a new one?"
-msgstr "האם לנטוש את המשחק לפני התחלת אחד חדש?"
+msgstr "לנטוש את המשחק לפני התחלת אחד חדש?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:351
+#: src/window.vala:341
 msgid "_Cancel"
 msgstr "_ביטול"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:353
+#: src/window.vala:344
 msgid "_New Game"
 msgstr "_משחק חדש"
 
-#: src/window.vala:402
+#: src/window.vala:386
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -455,9 +460,16 @@ msgstr[0] "‏%s, צבע אחד"
 msgstr[1] "‏%s, ‏%d צבעים"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:413
+#: src/window.vala:397
 msgid "Type"
 msgstr "סוג"
+
+#~ msgid ""
+#~ "I want to play that game!\n"
+#~ "You know, they all light-up and you click on them and they vanish!"
+#~ msgstr ""
+#~ "אני רוצה לשחק במשחק הזה!\n"
+#~ "תשמעו, כל המשבצות נדלקות וכשלוחצים עליהן הן נעלמות!"
 
 #~ msgid "Zealous animation"
 #~ msgstr "Zealous animation"
@@ -467,10 +479,6 @@ msgstr "סוג"
 
 #~ msgid "_Zealous Animation"
 #~ msgstr "ה_נפשה מהירה"
-
-#, c-format
-#~ msgid "Score: %u"
-#~ msgstr "ניקוד: %u"
 
 #~ msgid "The GNOME Project"
 #~ msgstr "מיזם GNOME"
