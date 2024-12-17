@@ -3,7 +3,9 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
-    "sdk-extensions": [ "org.freedesktop.Sdk.Extension.vala-nightly" ],
+    "sdk-extensions" : [
+        "org.freedesktop.Sdk.Extension.vala-nightly"
+    ],
     "command" : "swell-foop",
     "tags" : [
         "nightly"
@@ -19,7 +21,7 @@
         "--talk-name=ca.desrt.dconf",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
-    "cleanup": [
+    "cleanup" : [
         "/include",
         "/man",
         "/share/aclocal",
@@ -30,19 +32,20 @@
         "*.la",
         "*.a"
     ],
-    "build-options": {
-        "prepend-path": "/usr/lib/sdk/vala-nightly/bin/",
-        "prepend-ld-library-path": "/usr/lib/sdk/vala-nightly/lib"
+    "build-options" : {
+        "prepend-path" : "/usr/lib/sdk/vala-nightly/bin/",
+        "prepend-ld-library-path" : "/usr/lib/sdk/vala-nightly/lib",
+        "env" : {        }
     },
     "modules" : [
         {
-            "name": "libgnome-games-support",
-            "buildsystem": "meson",
-            "sources": [
+            "name" : "libgnome-games-support",
+            "buildsystem" : "meson",
+            "sources" : [
                 {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git",
-                    "tag": "2.0.0"
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/libgnome-games-support.git",
+                    "tag" : "2.0.0"
                 }
             ]
         },
@@ -54,6 +57,9 @@
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/swell-foop.git"
                 }
+            ],
+            "config-opts" : [
+                "--libdir=lib"
             ]
         }
     ]
