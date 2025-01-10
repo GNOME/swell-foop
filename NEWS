@@ -1,3 +1,14 @@
+Swell Foop 48.alpha
+==================
+
+* Updated translations
+* Updated documentation (Sabri Ünal)
+* Updated metainfo according to recommendations (Sabri Ünal)
+* Validate metainfo (Sabri Ünal)
+* Build improvements and library updates (Alice Mikhaylenko)
+* Honor the disable animation setting #31 (Robert Roth)
+* Preload images #31 (Robert Roth)
+
 Swell Foop 46.0
 ==================
 

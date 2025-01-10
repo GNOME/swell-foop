@@ -21,7 +21,7 @@
   </description>
   <screenshots>
     <screenshot height="547" width="750" type="default">
-      <image>https://gitlab.gnome.org/GNOME/swell-foop/-/raw/master/data/screenshot.png</image>
+      <image>https://gitlab.gnome.org/GNOME/swell-foop/-/raw/main/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://wiki.gnome.org/Apps/Swell%20Foop</url>
@@ -39,6 +39,19 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <releases>
+    <release version="48~alpha" date="2025-01-10" type="development">
+      <description>
+        <ul>
+          <li>Updated translations</li>
+          <li>Updated documentation (Sabri Ünal)</li>
+          <li>Updated metainfo according to recommendations (Sabri Ünal)</li>
+          <li>Validate metainfo (Sabri Ünal)</li>
+          <li>Build improvements and library updates (Alice Mikhaylenko)</li>
+          <li>Honor the disable animation setting #31 (Robert Roth)</li>
+          <li>Preload images #31 (Robert Roth)</li>
+        </ul>
+      </description>
+    </release>
     <release version="46.0" date="2024-03-16" type="stable">
       <description>
         <ul>
