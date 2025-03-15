@@ -39,6 +39,13 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <releases>
+    <release version="48.0" date="2025-03-15" type="stable">
+      <description>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="48~alpha" date="2025-01-10" type="development">
       <description>
         <ul>
