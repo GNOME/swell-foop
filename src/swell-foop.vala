@@ -55,9 +55,6 @@ public class SwellFoop : Adw.Application
         set_accels_for_action ("app.quit",              {        "<Primary>q"   });
         set_accels_for_action ("win.undo",              {        "<Primary>z"   });
         set_accels_for_action ("win.redo",              { "<Shift><Primary>z"   });
-
-        /* Create the main window */
-        window = new SwellFoopWindow (this);
     }
 
     protected override int handle_local_options (GLib.VariantDict options)
@@ -72,12 +69,18 @@ public class SwellFoop : Adw.Application
 
     protected override void shutdown ()
     {
-        window.destroy ();
+        if (window != null)
+            window.destroy ();
+
         base.shutdown ();
     }
 
     protected override void activate ()
     {
+        /* Create the main window */
+        if (window == null)
+            window = new SwellFoopWindow (this);
+
         window.present ();
     }
 
