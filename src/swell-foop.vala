@@ -70,7 +70,7 @@ public class SwellFoop : Adw.Application
     protected override void shutdown ()
     {
         if (window != null)
-            window.destroy ();
+            window.close ();
 
         base.shutdown ();
     }
@@ -86,7 +86,8 @@ public class SwellFoop : Adw.Application
 
     private inline void quit_cb (/* SimpleAction action, Variant? variant */)
     {
-        window.destroy ();
+        if (window != null)
+            window.close ();
     }
 
     private inline void help_cb (/* SimpleAction action, Variant? variant */)
