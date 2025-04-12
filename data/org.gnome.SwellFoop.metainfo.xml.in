@@ -39,6 +39,13 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <releases>
+    <release version="48.1" date="2025-04-12" type="stable">
+      <description>
+        <ul>
+          <li>Fixed save settings on close (Balló György)</li>
+        </ul>
+      </description>
+    </release>
     <release version="48.0" date="2025-03-15" type="stable">
       <description>
         <ul>

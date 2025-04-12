@@ -1,3 +1,9 @@
+Swell Foop 48.1
+==================
+
+* Don't create window in startup phase (Balló György)
+* Fix save settings on close (Balló György)
+
 Swell Foop 48.0
 ==================
 
