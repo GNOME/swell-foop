@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-08-01 18:36+0000\n"
-"PO-Revision-Date: 2024-08-11 04:38+0300\n"
+"POT-Creation-Date: 2025-08-27 11:29+0000\n"
+"PO-Revision-Date: 2025-09-01 22:36+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -26,52 +26,47 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.3\n"
+"X-Generator: Poedit 3.7\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
-#: data/org.gnome.SwellFoop.metainfo.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
-#: src/swell-foop.vala:16
+#: data/org.gnome.SwellFoop.metainfo.xml.in:7 data/org.gnome.SwellFoop.desktop.in:2
+#: data/ui/swell-foop.ui:135 src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
-#: data/org.gnome.SwellFoop.metainfo.xml.in:8
-#: data/org.gnome.SwellFoop.desktop.in:4
+#: data/org.gnome.SwellFoop.metainfo.xml.in:8 data/org.gnome.SwellFoop.desktop.in:3
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Renkli ve şekilli döşeme kümelerini kaldırarak ekranı temizle"
 
 #: data/org.gnome.SwellFoop.metainfo.xml.in:10
 msgid ""
-"Remove as many squares as possible from the board. Click on a group of "
-"squares of the same color to make them all disappear in one fell swoop, "
-"causing other squares to fall into place. It is not possible to remove a "
-"single square at a time. You get far more points for clearing a larger group "
-"of squares, and also for clearing the entire board."
+"Remove as many squares as possible from the board. Click on a group of squares of the "
+"same color to make them all disappear in one fell swoop, causing other squares to fall "
+"into place. It is not possible to remove a single square at a time. You get far more "
+"points for clearing a larger group of squares, and also for clearing the entire board."
 msgstr ""
-"Tahtadan olabildiğince çok sayıda kareyi kaldırın. Tek çırpıda ortadan "
-"kaldırmak için aynı renkteki kare kümesine tıklayın ve diğer karelerin "
-"yerlerine düşmesini sağlayın. Kareler tek tek kaldırılamaz. Daha büyük kare "
-"kümesini ya da tüm tahtayı temizleyerek daha çok puan alırsınız."
+"Tahtadan olabildiğince çok sayıda kareyi kaldırın. Tek çırpıda ortadan kaldırmak için "
+"aynı renkteki kare kümesine tıklayın ve diğer karelerin yerlerine düşmesini sağlayın. "
+"Kareler tek tek kaldırılamaz. Daha büyük kare kümesini ya da tüm tahtayı temizleyerek "
+"daha çok puan alırsınız."
 
 #: data/org.gnome.SwellFoop.metainfo.xml.in:17
 msgid ""
-"Swell Foop is always very quick to play, but you can make it somewhat longer "
-"by changing the board size."
+"Swell Foop is always very quick to play, but you can make it somewhat longer by "
+"changing the board size."
 msgstr ""
-"Sweel Foop her zaman çok hızlı oynanır ama tahta boyutunu değiştirerek oyunu "
-"biraz uzatabilirsiniz."
+"Sweel Foop her zaman çok hızlı oynanır ama tahta boyutunu değiştirerek oyunu biraz "
+"uzatabilirsiniz."
 
-#: data/org.gnome.SwellFoop.metainfo.xml.in:114
+#: data/org.gnome.SwellFoop.metainfo.xml.in:141
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.SwellFoop.desktop.in:6
+#: data/org.gnome.SwellFoop.desktop.in:5
 msgid "game;logic;board;same;matching;"
-msgstr ""
-"game;logic;board;same;matching;oyun;mantık;tahta;aynı;benzer;eşleştirme;"
-"eşleşme;"
+msgstr "game;logic;board;same;matching;oyun;mantık;tahta;aynı;benzer;eşleştirme;eşleşme;"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
 #: data/org.gnome.SwellFoop.gschema.xml:11
@@ -142,8 +137,7 @@ msgstr "İlk çalıştırma mı"
 #: data/org.gnome.SwellFoop.gschema.xml:56
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
-"İlk çalıştırma ipucu penceresinin gösterilip gösterilmeyeceğine karar vermek "
-"için ayar."
+"İlk çalıştırma ipucu penceresinin gösterilip gösterilmeyeceğine karar vermek için ayar."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
 #: data/org.gnome.SwellFoop.gschema.xml:61
@@ -153,13 +147,11 @@ msgstr "Kayıtlı oyun"
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
 #: data/org.gnome.SwellFoop.gschema.xml:63
 msgid ""
-"Has value “nothing” if there is no saved game. Else, contains a copy of the "
-"initial board, an index in the history, and the history of actions saved by "
-"an array of coords."
+"Has value “nothing” if there is no saved game. Else, contains a copy of the initial "
+"board, an index in the history, and the history of actions saved by an array of coords."
 msgstr ""
-"Eğer kayıtlı oyun yoksa “nothing” değerini alır. Varsa, ilk tahtanın "
-"kopyasını geçmiş dizinini ve koordinat dizisince kaydedilen eylemlerin "
-"geçmişini içerir."
+"Eğer kayıtlı oyun yoksa “nothing” değerini alır. Varsa, ilk tahtanın kopyasını, geçmiş "
+"dizinini ve koordinat dizisince kaydedilen eylemlerin geçmişini içerir."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run.ui:25
@@ -369,26 +361,26 @@ msgstr "Dağıtım sürümünü yazdır ve çık"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:120 src/swell-foop.vala:128
+#: src/swell-foop.vala:124 src/swell-foop.vala:132
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:124
+#: src/swell-foop.vala:128
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
-#: src/swell-foop.vala:135
+#: src/swell-foop.vala:139
 msgid "Swell Foop developers"
 msgstr "Swell Foop geliştiricileri"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:140
+#: src/swell-foop.vala:144
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Telif Hakkı © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:144
+#: src/swell-foop.vala:148
 msgid "translator-credits"
 msgstr ""
 "Barış Çiçek <baris@teamforce.name.tr> \n"
@@ -410,7 +402,7 @@ msgid "Large"
 msgstr "Büyük"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:179
+#: src/window.vala:180
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -418,50 +410,50 @@ msgstr ""
 "Temizleyebildiğiniz kadar kitle temizleyin.\n"
 "Daha az tıklama daha çok puan demektir."
 
-#: src/window.vala:211
+#: src/window.vala:212
 #, c-format
 msgid "Score: %u"
 msgstr "Puan: %u"
 
 #. Translators: the text for the score total shown on the game over screen
-#: src/window.vala:228
+#: src/window.vala:229
 #, c-format
 msgid "%u Points"
 msgstr "%u Puan"
 
 #. Translators: the text for the high score goal shown on the game over screen
-#: src/window.vala:235
+#: src/window.vala:236
 #, c-format
 msgid "%u points to reach the leaderboard"
 msgstr "Liderlik tablosuna ulaşmak için %u puan"
 
 #. Translators: heading of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:335
+#: src/window.vala:336
 msgid "Start New Game?"
 msgstr "Yeni Oyun Başlatılsın Mı?"
 
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:337
+#: src/window.vala:338
 msgid "Abandon this game to start a new one?"
 msgstr "Yeni bir tane başlatmak için bu oyun terk edilsin mi?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:341
+#: src/window.vala:342
 msgid "_Cancel"
 msgstr "İ_ptal"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:344
+#: src/window.vala:345
 msgid "_New Game"
 msgstr "Yeni _Oyun"
 
-#: src/window.vala:386
+#: src/window.vala:387
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
 msgstr[0] "%s, %d renk"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:397
+#: src/window.vala:398
 msgid "Type"
 msgstr "Tür"
