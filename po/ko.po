@@ -10,7 +10,7 @@
 #
 # Changwoo Ryu <cwryu@debian.org>, 2013-2015.
 # Kwangseob Jeong <myddpp@gmail.com>, 2018
-# DaeHyun Sung <sungdh86@gmail.com>, 2019-2023.
+# DaeHyun Sung <sungdh86@gmail.com>, 2019-2025.
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
 #
@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2023-01-25 22:11+0000\n"
-"PO-Revision-Date: 2023-03-02 15:42+0900\n"
+"POT-Creation-Date: 2025-08-27 11:29+0000\n"
+"PO-Revision-Date: 2025-09-07 19:49+0900\n"
 "Last-Translator: DaeHyun Sung <sungdh86+git@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -30,23 +30,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.7\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
-#. Translators: title of the window displayed on the headerbar; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
-#: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:141
-#: data/ui/swell-foop.ui:147 src/swell-foop.vala:16
+#: data/org.gnome.SwellFoop.metainfo.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:2 data/ui/swell-foop.ui:135
+#: src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "스웰푸프"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:8
-#: data/org.gnome.SwellFoop.desktop.in:4
+#: data/org.gnome.SwellFoop.metainfo.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:3
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "같은 색이나 모양의 타일을 제거해 나가면서 화면을 청소합니다"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:10
+#: data/org.gnome.SwellFoop.metainfo.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -59,7 +58,7 @@ msgstr ""
 "사각형 1개를 제거할 수는 없습니다. 더 큰 그룹을 제거하면 더 많은 점수를 얻"
 "고, 게임판을 완전히 치워도 추가 점수를 얻습니다."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:17
+#: data/org.gnome.SwellFoop.metainfo.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -67,12 +66,12 @@ msgstr ""
 "스웰푸프는 항상 빠르게 플레이할 수 있지만, 게임판 크기를 바꾸면 오래 플레이"
 "할 수 있습니다."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:81
+#: data/org.gnome.SwellFoop.metainfo.xml.in:141
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.SwellFoop.desktop.in:6
+#: data/org.gnome.SwellFoop.desktop.in:5
 msgid "game;logic;board;same;matching;"
 msgstr "game;게임;logic;논리;로직;board;보드;same;matching;같은;맞추기;"
 
@@ -96,43 +95,63 @@ msgstr "보드 크기"
 msgid "The size of the game board."
 msgstr "게임판의 크기."
 
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-width'
+#: data/org.gnome.SwellFoop.gschema.xml:25
+msgid "Width of the window in pixels"
+msgstr "픽셀 단위의 창 너비"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-width'
+#: data/org.gnome.SwellFoop.gschema.xml:27
+msgid "Width of the window in pixels."
+msgstr "픽셀 단위의 창 너비."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-height'
+#: data/org.gnome.SwellFoop.gschema.xml:32
+msgid "Height of the window in pixels"
+msgstr "픽셀 단위의 창 높이"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-height'
+#: data/org.gnome.SwellFoop.gschema.xml:34
+msgid "Height of the window in pixels."
+msgstr "픽셀 단위의 창 높이."
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-is-maximized'
+#: data/org.gnome.SwellFoop.gschema.xml:39
+msgid "true if the window is maximized"
+msgstr "창이 최대화되면 true입니다"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-is-maximized'
+#: data/org.gnome.SwellFoop.gschema.xml:41
+msgid "true if the window is maximized."
+msgstr "창이 최대화되면 true입니다."
+
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
-#: data/org.gnome.SwellFoop.gschema.xml:26
+#: data/org.gnome.SwellFoop.gschema.xml:47
 msgid "Board color count"
 msgstr "게임판 색 개수"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
-#: data/org.gnome.SwellFoop.gschema.xml:28
+#: data/org.gnome.SwellFoop.gschema.xml:49
 msgid "The number of colors of tiles to use in the game."
 msgstr "게임에 사용할 타일의 색 개수."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
-#: data/org.gnome.SwellFoop.gschema.xml:33
+#: data/org.gnome.SwellFoop.gschema.xml:54
 msgid "Is this the first run"
 msgstr "첫번째 실행인지 여부"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
-#: data/org.gnome.SwellFoop.gschema.xml:35
+#: data/org.gnome.SwellFoop.gschema.xml:56
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr "처음에 실행하는 힌트 대화 상자를 표시할지 여부에 대한 설정."
 
-#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
-#: data/org.gnome.SwellFoop.gschema.xml:40
-msgid "Zealous animation"
-msgstr "화려한 애니메이션"
-
-#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
-#: data/org.gnome.SwellFoop.gschema.xml:42
-msgid "Use more flashy, but slower, animations."
-msgstr "화려한(하지만 느린) 애니메이션 사용."
-
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
-#: data/org.gnome.SwellFoop.gschema.xml:47
+#: data/org.gnome.SwellFoop.gschema.xml:61
 msgid "Saved game"
 msgstr "저장한 게임"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
-#: data/org.gnome.SwellFoop.gschema.xml:49
+#: data/org.gnome.SwellFoop.gschema.xml:63
 msgid ""
 "Has value “nothing” if there is no saved game. Else, contains a copy of the "
 "initial board, an index in the history, and the history of actions saved by "
@@ -142,14 +161,24 @@ msgstr ""
 "본, 기록의 순위, 일련의 좌표로 저장된 작업 기록이 들어있습니다."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:43
+#: data/ui/first-run.ui:25
 msgid "Welcome to Swell Foop"
 msgstr "스웰푸프입니다"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:64
+#: data/ui/first-run.ui:30
 msgid "Let’s _Play"
 msgstr "게임 시작(_P)"
+
+#. Translators: text appearing on the game over screen
+#: data/ui/game-over.ui:35
+msgid "Game Over"
+msgstr "게임 끝"
+
+#. Translators: label of the button on the game over screen
+#: data/ui/game-over.ui:63
+msgid "_Play Again"
+msgstr "재시작 (_P)"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
 #: data/ui/help-overlay.ui:31
@@ -241,119 +270,96 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "끝내기"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:303
-msgid "_New Game"
-msgstr "새 게임(_N)"
+#. Translators: entry of the hamburger menu; starts a new game
+#. Translators: entry of the Setup submenu of the hamburger menu; starts a new game
+#: data/ui/swell-foop.ui:27 data/ui/swell-foop.ui:76
+msgid "New Game"
+msgstr "새 게임"
 
-#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
-#: data/ui/swell-foop.ui:30
-msgid "_Setup"
-msgstr "설정(_S)"
+#. Translators: submenu of the hamburger menu; allows to configure board size and number of colors
+#: data/ui/swell-foop.ui:32
+msgid "Setup"
+msgstr "설정"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
-#: data/ui/swell-foop.ui:34
-msgid "_Small (6 × 5)"
-msgstr "작게 (6 × 5)(_S)"
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:36
+msgid "Small (6 × 5)"
+msgstr "작게 (6 × 5)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
-#: data/ui/swell-foop.ui:40
-msgid "Nor_mal (15 × 10)"
-msgstr "일반 (15 × 10)(_M)"
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:42
+msgid "Normal (15 × 10)"
+msgstr "일반 (15 × 10)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
-#: data/ui/swell-foop.ui:46
-msgid "_Large (20 × 15)"
-msgstr "크게 (20 × 15)(_L)"
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
+#: data/ui/swell-foop.ui:48
+msgid "Large (20 × 15)"
+msgstr "크게 (20 × 15)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
-#: data/ui/swell-foop.ui:54
-msgid "_Two colors"
-msgstr "2가지 색(_T)"
+#. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "T_hree colors" and "_Four colors"
+#: data/ui/swell-foop.ui:56
+msgid "Two colors"
+msgstr "2가지 색"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
-#: data/ui/swell-foop.ui:60
-msgid "T_hree colors"
-msgstr "3가지 색(_H)"
+#. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "_Four colors"
+#: data/ui/swell-foop.ui:62
+msgid "Three colors"
+msgstr "3가지 색"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
-#: data/ui/swell-foop.ui:66
-msgid "_Four colors"
-msgstr "4가지 색(_F)"
+#. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "T_hree colors"
+#: data/ui/swell-foop.ui:68
+msgid "Four colors"
+msgstr "4가지 색"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:83
-msgid "High _Scores"
-msgstr "최고 점수(_S)"
+#. Translators: entry of the hamburger menu; displays high scores
+#: data/ui/swell-foop.ui:85
+msgid "High Scores"
+msgstr "최고 점수"
 
-#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
-#: data/ui/swell-foop.ui:88
-msgid "A_ppearance"
-msgstr "모양(_P)"
+#. Translators: submenu of the hamburger menu; allows to change the theme; Colors, Shapes and Colors or Boring Shapes
+#: data/ui/swell-foop.ui:90
+msgid "Appearance"
+msgstr "모양"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
-#: data/ui/swell-foop.ui:92
-msgid "_Colors"
-msgstr "색(_C)"
+#. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Shapes and Colors" and "Boring Shapes"
+#: data/ui/swell-foop.ui:94
+msgid "Colors"
+msgstr "색"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
-#: data/ui/swell-foop.ui:98
-msgid "_Shapes and Colors"
-msgstr "모양과 색(_S)"
+#. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Boring Shapes"
+#: data/ui/swell-foop.ui:100
+msgid "Shapes and Colors"
+msgstr "모양과 색"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
-#: data/ui/swell-foop.ui:104
-msgid "_Boring Shapes"
-msgstr "단조로운 모양(_B)"
+#. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Shapes and Colors"
+#: data/ui/swell-foop.ui:106
+msgid "Boring Shapes"
+msgstr "단조로운 모양"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
-#: data/ui/swell-foop.ui:112
-msgid "_Zealous Animation"
-msgstr "화려한 애니메이션(_Z)"
+#. Translators: entry of the hamburger menu; shows a Shortcuts window
+#: data/ui/swell-foop.ui:116
+msgid "Keyboard Shortcuts"
+msgstr "키보드 바로 가기"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the hamburger menu; shows a Help window
 #: data/ui/swell-foop.ui:121
-msgid "_Keyboard Shortcuts"
-msgstr "키보드 바로 가기(_K)"
-
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:126
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:131
+#. Translators: entry of the hamburger menu; shows an About window
+#: data/ui/swell-foop.ui:126
 msgid "_About Swell Foop"
 msgstr "스웰푸프 정보(_A)"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:160
+#: data/ui/swell-foop.ui:149
 msgid "Undo"
 msgstr "실행 취소"
 
-#. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:177
+#. Translators: tooltip text of the Redo button; probably a verb
+#: data/ui/swell-foop.ui:158
 msgid "Redo"
 msgstr "되돌리기"
-
-#. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:439
-msgid "_Play Again"
-msgstr "재시작 (_P)"
-
-#. Label showing the number of points at the end of the game
-#: src/game-view.vala:631
-#, c-format
-msgid "%u point"
-msgid_plural "%u points"
-msgstr[0] "%u점"
-
-#. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:634
-msgid "Game Over!"
-msgstr "게임 끝!"
 
 #. Translators: command-line option description, see 'swell-foop --help'
 #: src/swell-foop.vala:25
@@ -362,53 +368,48 @@ msgstr "출시 버전 표시와 나가기"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:106 src/swell-foop.vala:114
+#: src/swell-foop.vala:124 src/swell-foop.vala:132
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:110
+#: src/swell-foop.vala:128
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
-#. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:123
-msgid ""
-"I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!"
-msgstr ""
-"게임을 즐기세요!\n"
-"반짝이는 구슬을 눌러 구슬을 없애세요!"
+#: src/swell-foop.vala:139
+msgid "Swell Foop developers"
+msgstr "스웰푸프 개발자"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:127
+#: src/swell-foop.vala:144
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:131
+#: src/swell-foop.vala:148
 msgid "translator-credits"
 msgstr ""
 "류창우 <cwryu@debian.org>\n"
 "성대현 <sungdh86+git@gmail.com>"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:52
+#: src/window.vala:58
 msgid "Small"
 msgstr "작게"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:55
+#: src/window.vala:61
 msgid "Normal"
 msgstr "보통"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:58
+#: src/window.vala:64
 msgid "Large"
 msgstr "크게"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:146
+#: src/window.vala:180
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -416,32 +417,72 @@ msgstr ""
 "가능한 많은 블럭을 지우십시오.\n"
 "적게 누를 수록 점수가 많습니다."
 
-#. Translators: subtitle of the headerbar; the %u is replaced by the score
-#: src/window.vala:174
+#: src/window.vala:212
 #, c-format
 msgid "Score: %u"
 msgstr "점수: %u"
 
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:229
+#, c-format
+msgid "%u Points"
+msgstr "%u 포인트"
+
+#. Translators: the text for the high score goal shown on the game over screen
+#: src/window.vala:236
+#, c-format
+msgid "%u points to reach the leaderboard"
+msgstr "리더보드에 도달하려면 %u 포인트가 필요합니다."
+
+#. Translators: heading of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:336
+msgid "Start New Game?"
+msgstr "새 게임을 시작할까요?"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:297
+#: src/window.vala:338
 msgid "Abandon this game to start a new one?"
 msgstr "이 게임을 포기하고 새 게임을 시작하시겠습니까?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:300
+#: src/window.vala:342
 msgid "_Cancel"
 msgstr "취소(_C)"
 
-#: src/window.vala:389
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
+#: src/window.vala:345
+msgid "_New Game"
+msgstr "새 게임(_N)"
+
+#: src/window.vala:387
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
 msgstr[0] "%s, 색 %d개"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:400
+#: src/window.vala:398
 msgid "Type"
 msgstr "종류"
+
+#~ msgid "Zealous animation"
+#~ msgstr "화려한 애니메이션"
+
+#~ msgid "Use more flashy, but slower, animations."
+#~ msgstr "화려한(하지만 느린) 애니메이션 사용."
+
+#~ msgid "High _Scores"
+#~ msgstr "최고 점수(_S)"
+
+#~ msgid "_Zealous Animation"
+#~ msgstr "화려한 애니메이션(_Z)"
+
+#~ msgid ""
+#~ "I want to play that game!\n"
+#~ "You know, they all light-up and you click on them and they vanish!"
+#~ msgstr ""
+#~ "게임을 즐기세요!\n"
+#~ "반짝이는 구슬을 눌러 구슬을 없애세요!"
 
 #~ msgid "The GNOME Project"
 #~ msgstr "그놈 프로젝트"
@@ -457,12 +498,6 @@ msgstr "종류"
 
 #~ msgid "Operation"
 #~ msgstr "동작"
-
-#~ msgid "High Scores"
-#~ msgstr "최고 점수"
-
-#~ msgid "New Game"
-#~ msgstr "새 게임"
 
 #~ msgid "_OK"
 #~ msgstr "확인(_O)"
