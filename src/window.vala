@@ -318,7 +318,7 @@ private class SwellFoopWindow : Adw.ApplicationWindow
 
     private inline void scores_cb (/* SimpleAction action, Variant? variant */)
     {
-        scores_context.run_dialog ();
+        scores_context.present_dialog ();
     }
 
     private inline void new_game_cb (/* SimpleAction action, Variant? variant */)
@@ -392,14 +392,13 @@ private class SwellFoopWindow : Adw.ApplicationWindow
 
     private inline void init_scores ()  // called on construct
     {
-        scores_context = new Games.Scores.Context.with_importer_and_icon_name (
+        scores_context = new Games.Scores.Context (
             "swell-foop",
             /* Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed */
             _("Type"),
             this,
             category_request,
             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
-            new Games.Scores.HistoryFileImporter (parse_old_score),
             "org.gnome.SwellFoop");
     }
 
@@ -409,70 +408,6 @@ private class SwellFoopWindow : Adw.ApplicationWindow
         if (category == null)
             assert_not_reached ();
         return (!) category;
-    }
-
-    private inline void parse_old_score (string line, out Games.Scores.Score? score, out Games.Scores.Category? category)
-    {
-        score = null;
-        category = null;
-
-        string [] tokens = line.split (" ");
-        if (tokens.length != 5)
-            return;
-
-        int64 date = Games.Scores.HistoryFileImporter.parse_date (tokens [0]);
-        if (date == 0)
-            return;
-
-        uint64 number_64;
-
-        uint8 cols;
-        uint8 rows;
-        // cols
-        if (!uint64.try_parse (tokens [1], out number_64))
-            return;
-        if (number_64 == 0 || number_64 > 255)
-            return;
-        cols = (uint8) number_64;
-        // rows
-        if (!uint64.try_parse (tokens [2], out number_64))
-            return;
-        if (number_64 == 0 || number_64 > 255)
-            return;
-        rows = (uint8) number_64;
-
-        string id = "";
-        foreach (unowned Size size in sizes)
-        {
-            if (size.rows == rows && size.columns == cols)
-            {
-                id = size.id;
-                break;
-            }
-        }
-        if (id == "")
-            return;
-
-        uint8 colors;
-        long score_value;
-        // colors
-        if (!uint64.try_parse (tokens [3], out number_64))
-            return;
-        if (number_64 < 2 || number_64 > 4)
-            return;
-        colors = (uint8) number_64;
-        // score
-        if (!uint64.try_parse (tokens [4], out number_64))
-            return;
-        if (number_64 > long.MAX)
-            return;
-        score_value = (long) number_64;
-
-        category = category_request (@"$id-$colors");
-        score = new Games.Scores.Score (score_value, date);
-        score.user = Environment.get_real_name ();
-        if (score.user == "Unknown")
-            score.user = Environment.get_user_name ();
     }
 
     private inline void add_score (Games.Scores.Category category)

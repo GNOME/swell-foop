@@ -1,0 +1,95 @@
+# Turkish translation for libgnome-games-support.
+# Copyright (C) 2015-2022 libgnome-games-support's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgnome-games-support package.
+#
+# Necdet Yücel <necdetyucel@gmail.com>, 2015.
+# Muhammet Kara <muhammetk@gmail.com>, 2015, 2016.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2025-08-25 23:47+0000\n"
+"PO-Revision-Date: 2025-08-28 22:48+0300\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"Language-Team: Türkçe <gnome-turk@gnome.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.6\n"
+"X-POOTLE-MTIME: 1423957720.000000\n"
+
+#. Empty State
+#: games/scores/dialog.vala:60
+msgid "No scores yet"
+msgstr "Henüz kayıtlı puan yok"
+
+#: games/scores/dialog.vala:65
+msgid "Play some games and your scores will show up here."
+msgstr "Biraz oyun oynarsanız puanlarınız burada görünecektir."
+
+#: games/scores/dialog.vala:83
+msgid "Score"
+msgstr "Puan"
+
+#: games/scores/dialog.vala:84
+msgid "New Score in"
+msgstr "Yeni Puan"
+
+#: games/scores/dialog.vala:88
+msgid "Time"
+msgstr "Zaman"
+
+#: games/scores/dialog.vala:89
+msgid "New Time in"
+msgstr "Yeni Zaman"
+
+#: games/scores/dialog.vala:96
+msgid "Congratulations!"
+msgstr "Tebrikler!"
+
+#. Button in the top right corner, finishes the dialog
+#: games/scores/dialog.vala:100
+msgid "Done"
+msgstr "Bitti"
+
+#: games/scores/dialog.vala:301
+msgid "Player"
+msgstr "Oyuncu"
+
+#: games/scores/dialog.vala:308
+msgid "_New Game"
+msgstr "_Yeni Oyun"
+
+#: games/scores/dialog.vala:319
+msgid "_Quit"
+msgstr "_Çık"
+
+#~ msgid "High Scores"
+#~ msgstr "Yüksek Puanlar"
+
+#~ msgid "Best Times"
+#~ msgstr "En İyi Zamanlar"
+
+#~ msgid "Rank"
+#~ msgstr "Sıralama"
+
+#, c-format
+#~ msgid "%ld minute"
+#~ msgid_plural "%ld minutes"
+#~ msgstr[0] "%ld dakika"
+
+#, c-format
+#~ msgid "%ld second"
+#~ msgid_plural "%ld seconds"
+#~ msgstr[0] "%ld saniye"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "En iyi puan sizinki!"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Puanınız en iyi on listesine girdi."

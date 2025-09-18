@@ -39,17 +39,6 @@
     },
     "modules" : [
         {
-            "name" : "libgnome-games-support",
-            "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libgnome-games-support.git",
-                    "tag" : "2.0.0"
-                }
-            ]
-        },
-        {
             "name" : "swell-foop",
             "buildsystem" : "meson",
             "sources" : [

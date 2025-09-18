@@ -7,6 +7,8 @@ project('swell-foop', ['c','vala'],
 gnome   = import('gnome')
 i18n    = import('i18n')
 
+gettext_package = meson.project_name()
+
 localedir   = join_paths (get_option ('prefix'), get_option ('localedir'))
 datadir     = join_paths (get_option ('prefix'), get_option ('datadir'))
 pkgdatadir  = join_paths (datadir, 'swell-foop')
@@ -28,9 +30,12 @@ gobject_dep     = dependency('gobject-2.0')
 gtk_dep         = dependency('gtk4', version: '>= ' + gtk_min_version)
 adw_dep         = dependency('libadwaita-1', version: '>= ' + adw_min_version)
 rsvg_dep        = dependency('librsvg-2.0', version: '>=2.46' )
-libgnome_games_support_dep = dependency('libgnome-games-support-2', version: '>= 2.0.0') # requires GTK >= 4.2
 gee_dep         = dependency('gee-0.8', version: '>= 0.14.0')
 pangocairo_dep  = dependency('pangocairo')
+
+libgnome_games_support = subproject ('libgnome-games-support',
+                                     default_options: 'superproject_name=gnome-mines')
+libgnome_games_support_dep = libgnome_games_support.get_variable ('lggs_dependency')
 
 # version defines of GTK4 for #if e.g. #if GTK_4_6_or_above
 gtk_version = gtk_dep.version()
