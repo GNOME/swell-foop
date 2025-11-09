@@ -36,9 +36,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2020-06-02 07:25+0000\n"
+"POT-Creation-Date: 2024-01-17 00:11+0000\n"
 "PO-Revision-Date: 2020-09-09 22:49+0300\n"
-"Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
+"Last-Translator: Giannis Antypas <gianni.antypas@gmail.com>\n"
 "Language-Team: Ελληνικά <>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -49,11 +49,10 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
-#. Translators: title of the window displayed on the headerbar; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
 #: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:141
-#: data/ui/swell-foop.ui:147 src/swell-foop.vala:16
+#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
+#: src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
@@ -84,9 +83,9 @@ msgstr ""
 "Το Swell Foop είναι πάντα πολύ γρήγορο στο παίξιμο, αλλά μπορείτε να το "
 "κάνετε κάπως πιο μεγάλο αλλάζοντας το μέγεθος του πίνακα."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "Το έργο GNOME"
+#: data/org.gnome.SwellFoop.appdata.xml.in:83
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.SwellFoop.desktop.in:6
@@ -113,45 +112,65 @@ msgstr "Μέγεθος πίνακα"
 msgid "The size of the game board."
 msgstr "Το μέγεθος πίνακα του παιχνιδιού."
 
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-width'
+#: data/org.gnome.SwellFoop.gschema.xml:25
+msgid "Width of the window in pixels"
+msgstr "Πλάτος του παραθύρου σε εικονοστοιχεία"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-width'
+#: data/org.gnome.SwellFoop.gschema.xml:27
+msgid "Width of the window in pixels."
+msgstr "Πλάτος του παραθύρου σε εικονοστοιχεία"
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-height'
+#: data/org.gnome.SwellFoop.gschema.xml:32
+msgid "Height of the window in pixels"
+msgstr "Ύψος του παραθύρου σε εικονοστοιχεία"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-height'
+#: data/org.gnome.SwellFoop.gschema.xml:34
+msgid "Height of the window in pixels."
+msgstr "Ύψος του παραθύρου σε εικονοστοιχεία"
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-is-maximized'
+#: data/org.gnome.SwellFoop.gschema.xml:39
+msgid "true if the window is maximized"
+msgstr "αληθές αν το παράθυρο είναι μεγιστοποιημένο"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/window-is-maximized'
+#: data/org.gnome.SwellFoop.gschema.xml:41
+msgid "true if the window is maximized."
+msgstr "αληθές αν το παράθυρο είναι μεγιστοποιημένο"
+
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
-#: data/org.gnome.SwellFoop.gschema.xml:26
+#: data/org.gnome.SwellFoop.gschema.xml:47
 msgid "Board color count"
 msgstr "Αριθμός χρωμάτων πίνακα"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
-#: data/org.gnome.SwellFoop.gschema.xml:28
+#: data/org.gnome.SwellFoop.gschema.xml:49
 msgid "The number of colors of tiles to use in the game."
 msgstr "Ο αριθμός των χρωμάτων πλακιδίων που θα χρησιμοποιούνται στο παιχνίδι."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
-#: data/org.gnome.SwellFoop.gschema.xml:33
+#: data/org.gnome.SwellFoop.gschema.xml:54
 msgid "Is this the first run"
 msgstr "Είναι η πρώτη σας φορά"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
-#: data/org.gnome.SwellFoop.gschema.xml:35
+#: data/org.gnome.SwellFoop.gschema.xml:56
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
 "Καθορίστε εάν θα εμφανίζεται ή όχι το παράθυρο της πρώτης εκκίνησης του "
 "παιχνιδιού."
 
-#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
-#: data/org.gnome.SwellFoop.gschema.xml:40
-msgid "Zealous animation"
-msgstr "Γρήγορες κινούμενες εικόνες"
-
-#. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/zealous'
-#: data/org.gnome.SwellFoop.gschema.xml:42
-msgid "Use more flashy, but slower, animations."
-msgstr "Χρήση πιο εντυπωσιακών, αλλά λιγότερο γρήγορων κινούμενων εικόνων."
-
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
-#: data/org.gnome.SwellFoop.gschema.xml:47
+#: data/org.gnome.SwellFoop.gschema.xml:61
 msgid "Saved game"
 msgstr "Αποθηκευμένο παιχνίδι"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'; "nothing" is a keyword: you might want to translate « “nothing” (your translation) » for example
-#: data/org.gnome.SwellFoop.gschema.xml:49
+#: data/org.gnome.SwellFoop.gschema.xml:63
 msgid ""
 "Has value “nothing” if there is no saved game. Else, contains a copy of the "
 "initial board, an index in the history, and the history of actions saved by "
@@ -162,14 +181,26 @@ msgstr ""
 "το ιστορικό των ενεργειών που έχουν αποθηκευτεί από μια σειρά από συγχορδίες."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:43
+#: data/ui/first-run.ui:39
 msgid "Welcome to Swell Foop"
 msgstr "Καλώς ήρθατε στο Swell Foop"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run-stack.ui:64
+#: data/ui/first-run.ui:60
 msgid "Let’s _Play"
 msgstr "Ας _παίξουμε"
+
+#. Translators: text appearing on the game over screen
+#: data/ui/game-over.ui:37
+#, fuzzy
+#| msgid "Game Over!"
+msgid "Game Over"
+msgstr "Τέλος παιχνιδιού!"
+
+#. Translators: label of the button on the game over screen
+#: data/ui/game-over.ui:68
+msgid "_Play Again"
+msgstr "_Παίξτε ξανά"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
 #: data/ui/help-overlay.ui:31
@@ -261,139 +292,139 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Έξοδος"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: data/ui/swell-foop.ui:25 data/ui/swell-foop.ui:74 src/window.vala:303
-msgid "_New Game"
-msgstr "_Νέο παιχνίδι"
+#. Translators: entry of the hamburger menu; starts a new game
+#. Translators: entry of the Setup submenu of the hamburger menu; starts a new game
+#: data/ui/swell-foop.ui:27 data/ui/swell-foop.ui:76
+msgid "New Game"
+msgstr "Νέο παιχνίδι"
 
-#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to configure board size and number of colors
-#: data/ui/swell-foop.ui:30
-msgid "_Setup"
+#. Translators: submenu of the hamburger menu; allows to configure board size and number of colors
+#: data/ui/swell-foop.ui:32
+#, fuzzy
+#| msgid "_Setup"
+msgid "Setup"
 msgstr "_Ρύθμιση"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
-#: data/ui/swell-foop.ui:34
-msgid "_Small (6 × 5)"
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "small"; other possible sizes are "Nor_mal (15 × 10)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:36
+#, fuzzy
+#| msgid "_Small (6 × 5)"
+msgid "Small (6 × 5)"
 msgstr "_Μικρό (6 × 5)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
-#: data/ui/swell-foop.ui:40
-msgid "Nor_mal (15 × 10)"
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "normal"; other possible sizes are "_Small (6 × 5)" and "_Large (20 × 15)"
+#: data/ui/swell-foop.ui:42
+#, fuzzy
+#| msgid "Nor_mal (15 × 10)"
+msgid "Normal (15 × 10)"
 msgstr "_Κανονικό (15 × 10)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
-#: data/ui/swell-foop.ui:46
-msgid "_Large (20 × 15)"
+#. Translators: entry of the Setup submenu of the hamburger menu; set size to "large"; other possible sizes are "_Small (6 × 5)" and "Nor_mal (15 × 10)"
+#: data/ui/swell-foop.ui:48
+#, fuzzy
+#| msgid "_Large (20 × 15)"
+msgid "Large (20 × 15)"
 msgstr "Με_γάλο (20 × 15)"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "T_hree colors" and "_Four colors"
-#: data/ui/swell-foop.ui:54
-msgid "_Two colors"
+#. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "T_hree colors" and "_Four colors"
+#: data/ui/swell-foop.ui:56
+#, fuzzy
+#| msgid "_Two colors"
+msgid "Two colors"
 msgstr "_Δύο χρώματα"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "_Four colors"
-#: data/ui/swell-foop.ui:60
-msgid "T_hree colors"
+#. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "_Four colors"
+#: data/ui/swell-foop.ui:62
+#, fuzzy
+#| msgid "T_hree colors"
+msgid "Three colors"
 msgstr "Τ_ρία χρώματα"
 
-#. Translators: entry of the Setup submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); set number of colors; other possibilities are "_Two colors" and "T_hree colors"
-#: data/ui/swell-foop.ui:66
-msgid "_Four colors"
+#. Translators: entry of the Setup submenu of the hamburger menu; set number of colors; other possibilities are "_Two colors" and "T_hree colors"
+#: data/ui/swell-foop.ui:68
+#, fuzzy
+#| msgid "_Four colors"
+msgid "Four colors"
 msgstr "_Τέσσερα χρώματα"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:83
-msgid "High _Scores"
-msgstr "_Βαθμολογίες"
+#. Translators: entry of the hamburger menu; displays high scores
+#: data/ui/swell-foop.ui:85
+msgid "High Scores"
+msgstr "Βαθμολογίες"
 
-#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
-#: data/ui/swell-foop.ui:88
-msgid "A_ppearance"
+#. Translators: submenu of the hamburger menu; allows to change the theme; Colors, Shapes and Colors or Boring Shapes
+#: data/ui/swell-foop.ui:90
+#, fuzzy
+#| msgid "A_ppearance"
+msgid "Appearance"
 msgstr "_Εμφάνιση"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Shapes and Colors" and "_Boring Shapes"
-#: data/ui/swell-foop.ui:92
-msgid "_Colors"
+#. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Shapes and Colors" and "Boring Shapes"
+#: data/ui/swell-foop.ui:94
+#, fuzzy
+#| msgid "_Colors"
+msgid "Colors"
 msgstr "_Χρώματα"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Boring Shapes"
-#: data/ui/swell-foop.ui:98
-msgid "_Shapes and Colors"
+#. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Boring Shapes"
+#: data/ui/swell-foop.ui:100
+#, fuzzy
+#| msgid "_Shapes and Colors"
+msgid "Shapes and Colors"
 msgstr "_Σχήματα και χρώματα"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); change theme; other possible themes are "_Colors" and "_Shapes and Colors"
-#: data/ui/swell-foop.ui:104
-msgid "_Boring Shapes"
+#. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Shapes and Colors"
+#: data/ui/swell-foop.ui:106
+#, fuzzy
+#| msgid "_Boring Shapes"
+msgid "Boring Shapes"
 msgstr "_Βαρετά σχήματα"
 
-#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); makes animation faster
-#: data/ui/swell-foop.ui:112
-msgid "_Zealous Animation"
-msgstr "Γ_ρήγορη κίνηση εικόνων"
-
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:121
-msgid "_Keyboard Shortcuts"
+#. Translators: entry of the hamburger menu; shows a Shortcuts window
+#: data/ui/swell-foop.ui:116
+#, fuzzy
+#| msgid "_Keyboard Shortcuts"
+msgid "Keyboard Shortcuts"
 msgstr "Συντομεύσεις _πληκτρολογίου"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:126
+#. Translators: entry of the hamburger menu; shows a Help window
+#: data/ui/swell-foop.ui:121
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
-#: data/ui/swell-foop.ui:131
+#. Translators: entry of the hamburger menu; shows an About window
+#: data/ui/swell-foop.ui:126
 msgid "_About Swell Foop"
 msgstr "_Περί του Swell Foop"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:160
+#: data/ui/swell-foop.ui:148
 msgid "Undo"
 msgstr "Aναίρεση"
 
-#. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:177
+#. Translators: tooltip text of the Redo button; probably a verb
+#: data/ui/swell-foop.ui:163
 msgid "Redo"
 msgstr "Επανάληψη"
 
-#. Translators: text of a button that appears on the board at the end of a game
-#: src/game-view.vala:415
-msgid "_Play Again"
-msgstr "_Παίξτε ξανά"
-
-#. Label showing the number of points at the end of the game
-#: src/game-view.vala:607
-#, c-format
-msgid "%u point"
-msgid_plural "%u points"
-msgstr[0] "%u πόντος"
-msgstr[1] "%u πόντοι"
-
-#. Translators: text of a label that appears on the board at the end of a game
-#: src/game-view.vala:610
-msgid "Game Over!"
-msgstr "Τέλος παιχνιδιού!"
-
 #. Translators: command-line option description, see 'swell-foop --help'
-#: src/swell-foop.vala:26
+#: src/swell-foop.vala:25
 msgid "Print release version and exit"
 msgstr "Εμφάνιση έκδοσης και έξοδος"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:96 src/swell-foop.vala:104
+#: src/swell-foop.vala:120 src/swell-foop.vala:128
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:100
+#: src/swell-foop.vala:124
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
 #. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:113
+#: src/swell-foop.vala:137
 msgid ""
 "I want to play that game!\n"
 "You know, they all light-up and you click on them and they vanish!"
@@ -402,12 +433,12 @@ msgstr ""
 "Ξέρεις, αυτό όπου όλα φωτίζονται, και πατάς πάνω τους και εξαφανίζονται!"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:117
+#: src/swell-foop.vala:141
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Πνευματικά δικαιώματα © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:121
+#: src/swell-foop.vala:145
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -423,22 +454,22 @@ msgstr ""
 "http://gnome.gr/"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:52
+#: src/window.vala:59
 msgid "Small"
 msgstr "Μικρό"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:55
+#: src/window.vala:62
 msgid "Normal"
 msgstr "Κανονικό"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:58
+#: src/window.vala:65
 msgid "Large"
 msgstr "Μεγάλο"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:146
+#: src/window.vala:187
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -446,23 +477,36 @@ msgstr ""
 "Καθαρίστε όσα περισσότερα τετράγωνα μπορείτε.\n"
 "Λιγότερα κλικ σημαίνουν περισσότεροι πόντοι."
 
-#. Translators: subtitle of the headerbar; the %u is replaced by the score
-#: src/window.vala:174
+#. Translators: the text for the score total shown on the game over screen
+#: src/window.vala:234
+#, fuzzy, c-format
+#| msgid "%u point"
+#| msgid_plural "%u points"
+msgid "%u Points"
+msgstr "%u πόντος"
+
+#. Translators: the text for the high score goal shown on the game over screen
+#: src/window.vala:241
 #, c-format
-msgid "Score: %u"
-msgstr "Βαθμολογία: %u"
+msgid "%u points to reach the leaderboard"
+msgstr "%u βαθμοί για κατάταξη στο βαθμολογικό πίνακα"
 
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:297
+#: src/window.vala:346
 msgid "Abandon this game to start a new one?"
 msgstr "Έξοδος από αυτό το παιχνίδι για να ξεκινήσει ένα νέο;"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:300
+#: src/window.vala:351
 msgid "_Cancel"
 msgstr "Α_κύρωση"
 
-#: src/window.vala:389
+#. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
+#: src/window.vala:353
+msgid "_New Game"
+msgstr "_Νέο παιχνίδι"
+
+#: src/window.vala:402
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -470,9 +514,28 @@ msgstr[0] "%s, %d χρώμα"
 msgstr[1] "%s, %d χρώματα"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:400
+#: src/window.vala:413
 msgid "Type"
 msgstr "Τύπος"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Το έργο GNOME"
+
+#~ msgid "Zealous animation"
+#~ msgstr "Γρήγορες κινούμενες εικόνες"
+
+#~ msgid "Use more flashy, but slower, animations."
+#~ msgstr "Χρήση πιο εντυπωσιακών, αλλά λιγότερο γρήγορων κινούμενων εικόνων."
+
+#~ msgid "High _Scores"
+#~ msgstr "_Βαθμολογίες"
+
+#~ msgid "_Zealous Animation"
+#~ msgstr "Γ_ρήγορη κίνηση εικόνων"
+
+#, c-format
+#~ msgid "Score: %u"
+#~ msgstr "Βαθμολογία: %u"
 
 #~ msgid "org.gnome.SwellFoop"
 #~ msgstr "org.gnome.SwellFoop"
@@ -488,12 +551,6 @@ msgstr "Τύπος"
 
 #~ msgid "Operation"
 #~ msgstr "Λειτουργία"
-
-#~ msgid "High Scores"
-#~ msgstr "Βαθμολογίες"
-
-#~ msgid "New Game"
-#~ msgstr "Νέο παιχνίδι"
 
 #~ msgid "_OK"
 #~ msgstr "Ε_ντάξει"
