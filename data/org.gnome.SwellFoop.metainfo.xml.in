@@ -27,7 +27,7 @@
   <url type="homepage">https://wiki.gnome.org/Apps/Swell%20Foop</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/swell-foop/issues</url>
   <url type="donation">https://www.gnome.org/donate/</url>
-  <url type="help">https://help.gnome.org/users/swell-foop/stable/</url>
+  <url type="help">https://help.gnome.org/swell-foop/index.html</url>
   <url type="translate">https://l10n.gnome.org/module/swell-foop/</url>
   <url type="vcs-browser">https://gitlab.gnome.org/GNOME/swell-foop</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
