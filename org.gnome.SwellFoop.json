@@ -41,14 +41,14 @@
         {
             "name" : "swell-foop",
             "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/swell-foop.git"
-                }
-            ],
             "config-opts" : [
                 "--libdir=lib"
+            ],
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "path" : "."
+                }
             ]
         }
     ]

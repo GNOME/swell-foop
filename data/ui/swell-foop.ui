@@ -114,7 +114,7 @@
       <item>
         <!-- Translators: entry of the hamburger menu; shows a Shortcuts window -->
         <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
-        <attribute name="action">win.show-help-overlay</attribute>
+        <attribute name="action">app.shortcuts</attribute>
       </item>
       <item>
         <!-- Translators: entry of the hamburger menu; shows a Help window -->

@@ -18,126 +18,110 @@
    with this GNOME Tetravex.  If not, see <https://www.gnu.org/licenses/>.
 -->
 <interface>
-  <requires lib="gtk+" version="4.10"/>
-  <object class="GtkShortcutsWindow" id="help_overlay">
+  <object class="AdwShortcutsDialog" id="shortcuts_dialog">
     <child>
-      <object class="GtkShortcutsSection">
-        <property name="visible">True</property>
-        <property name="max-height">7</property>
+      <object class="AdwShortcutsSection">
+        <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block" -->
+        <property name="title" translatable="yes" context="shortcut window">Play with keyboard</property>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="visible">True</property>
-            <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block" -->
-            <property name="title" translatable="yes" context="shortcut window">Play with keyboard</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <!-- Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight -->
-                <property name="title" translatable="yes" context="shortcut window">Move keyboard highlight</property>
-                <property name="accelerator">Left Right Up Down</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <!-- Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click -->
-                <property name="title" translatable="yes" context="shortcut window">Destroy selected block</property>
-                <property name="accelerator">Return space</property>
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <!-- Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight -->
+            <property name="title" translatable="yes" context="shortcut window">Move keyboard highlight</property>
+            <property name="accelerator">Left Right Up Down</property>
           </object>
         </child>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="visible">True</property>
-            <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo" -->
-            <property name="title" translatable="yes" context="shortcut window">History</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <!-- Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move -->
-                <property name="title" translatable="yes" context="shortcut window">Undo</property>
-                <property name="accelerator">&lt;Ctrl&gt;Z</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <!-- Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move -->
-                <property name="title" translatable="yes" context="shortcut window">Redo</property>
-                <property name="accelerator">&lt;Ctrl&gt;&lt;Shift&gt;Z</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">False</property>
-                <!-- Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game -->
-                <property name="title" translatable="yes" context="shortcut window">Restart</property>
-                <property name="accelerator">&lt;Ctrl&gt;&lt;Shift&gt;R</property> <!-- TODO implement -->
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <!-- Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click -->
+            <property name="title" translatable="yes" context="shortcut window">Destroy selected block</property>
+            <property name="accelerator">Return space</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
+        <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo" -->
+        <property name="title" translatable="yes" context="shortcut window">History</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <!-- Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move -->
+            <property name="title" translatable="yes" context="shortcut window">Undo</property>
+            <property name="accelerator">&lt;Ctrl&gt;Z</property>
           </object>
         </child>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="visible">True</property>
-            <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game" -->
-            <property name="title" translatable="yes" context="shortcut window">Main functions</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <property name="accelerator">&lt;Ctrl&gt;N</property>
-                <!-- Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions -->
-                <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <!-- Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move -->
+            <property name="title" translatable="yes" context="shortcut window">Redo</property>
+            <property name="accelerator">&lt;Ctrl&gt;&lt;Shift&gt;Z</property>
+          </object>
+        </child>
+        <!-- Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game -->
+        <!-- TODO implement -->
+        <!--
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcut window">Restart</property>
+            <property name="accelerator">&lt;Ctrl&gt;&lt;Shift&gt;R</property>
+          </object>
+        </child>
+        -->
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
+        <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game" -->
+        <property name="title" translatable="yes" context="shortcut window">Main functions</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="accelerator">&lt;Ctrl&gt;N</property>
+            <!-- Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions -->
+            <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
+        <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"... -->
+        <property name="title" translatable="yes" context="shortcut window">Generic</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <!-- Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu -->
+            <property name="title" translatable="yes" context="shortcut window">Open menu</property>
+            <property name="accelerator">F10</property>
           </object>
         </child>
         <child>
-          <object class="GtkShortcutsGroup">
-            <property name="visible">True</property>
-            <!-- Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"... -->
-            <property name="title" translatable="yes" context="shortcut window">Generic</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <!-- Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu -->
-                <property name="title" translatable="yes" context="shortcut window">Open menu</property>
-                <property name="accelerator">F10</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <!-- Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog -->
-                <property name="title" translatable="yes" context="shortcut window">Keyboard shortcuts</property>
-                <property name="accelerator">&lt;Primary&gt;question</property> <!-- TODO &lt;Primary&gt;F1 -->
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <!-- Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help -->
-                <property name="title" translatable="yes" context="shortcut window">Help</property>
-                <property name="accelerator">F1</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">False</property>
-                <!-- Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog -->
-                <property name="title" translatable="yes" context="shortcut window">About</property>
-                <property name="accelerator">&lt;Shift&gt;F1</property> <!-- TODO add shortcut -->
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <!-- Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application -->
-                <property name="title" translatable="yes" context="shortcut window">Quit</property>
-                <property name="accelerator">&lt;Primary&gt;q</property>
-              </object>
-            </child>
+          <object class="AdwShortcutsItem">
+            <!-- Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog -->
+            <property name="title" translatable="yes" context="shortcut window">Keyboard shortcuts</property>
+            <property name="accelerator">&lt;Primary&gt;question</property> <!-- TODO &lt;Primary&gt;F1 -->
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <!-- Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help -->
+            <property name="title" translatable="yes" context="shortcut window">Help</property>
+            <property name="accelerator">F1</property>
+          </object>
+        </child>
+        <!-- Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog -->
+        <!-- TODO add shortcut -->
+        <!--
+          <child>
+            <object class="AdwShortcutsItem">
+              <property name="title" translatable="yes" context="shortcut window">About</property>
+              <property name="accelerator">&lt;Shift&gt;F1</property>
+            </object>
+          </child>
+        -->
+        <child>
+          <object class="AdwShortcutsItem">
+            <!-- Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application -->
+            <property name="title" translatable="yes" context="shortcut window">Quit</property>
+            <property name="accelerator">&lt;Primary&gt;q</property>
           </object>
         </child>
       </object>

@@ -21,8 +21,8 @@ vapidir = join_paths(meson.project_source_root(), 'vapi')
 glib_min_version = '2.74' # for Timeout.add_once
 glib_target_version = '2.78' # most recent tested version
 target_glib = '--target-glib=' + '@0@'.format(glib_target_version)
-gtk_min_version = '4.10'
-adw_min_version = '1.5'
+gtk_min_version = '4.15.3'
+adw_min_version = '1.8.rc'
 
 glib_dep        = dependency('glib-2.0', version: '>= ' + glib_min_version)
 gmodule_dep     = dependency('gmodule-2.0')
