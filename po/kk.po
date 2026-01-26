@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-01-17 00:11+0000\n"
-"PO-Revision-Date: 2024-03-08 10:10+0500\n"
+"POT-Creation-Date: 2025-12-10 12:18+0000\n"
+"PO-Revision-Date: 2026-01-26 20:26+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -16,22 +16,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
-#: data/org.gnome.SwellFoop.appdata.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
+#: data/org.gnome.SwellFoop.metainfo.xml.in:7
+#: data/org.gnome.SwellFoop.desktop.in:2 data/ui/swell-foop.ui:135
 #: src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:8
-#: data/org.gnome.SwellFoop.desktop.in:4
+#: data/org.gnome.SwellFoop.metainfo.xml.in:8
+#: data/org.gnome.SwellFoop.desktop.in:3
 msgid "Clear the screen by removing groups of colored and shaped tiles"
 msgstr "Түсті және кескінді плиткалар топтарын жою арқылы экранды тазалау"
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:10
+#: data/org.gnome.SwellFoop.metainfo.xml.in:10
 msgid ""
 "Remove as many squares as possible from the board. Click on a group of "
 "squares of the same color to make them all disappear in one fell swoop, "
@@ -45,7 +45,7 @@ msgstr ""
 "тазалау, немесе бүкіл тақтаны тазалау нәтижесінде әлдеқайда көп ұпай алуға "
 "болады."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:17
+#: data/org.gnome.SwellFoop.metainfo.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
@@ -53,12 +53,12 @@ msgstr ""
 "Swell Foop әрдайым өте жылдам ойналады, бірақ сіз оны тақтаның өлшемін "
 "өзгерту арқылы біршама ұзарта аласыз."
 
-#: data/org.gnome.SwellFoop.appdata.xml.in:83
+#: data/org.gnome.SwellFoop.metainfo.xml.in:141
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.SwellFoop.desktop.in:6
+#: data/org.gnome.SwellFoop.desktop.in:5
 msgid "game;logic;board;same;matching;"
 msgstr "game;logic;board;same;matching;ойын;логика;тақта;бірдей;сәйкестеу;"
 
@@ -150,22 +150,22 @@ msgstr ""
 "массиві ретінде сақталған әрекеттер тарихы бар."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run.ui:39
+#: data/ui/first-run.ui:25
 msgid "Welcome to Swell Foop"
 msgstr "Swell Foop ойынына қош келдіңіз"
 
 #. Translators: label of the button of the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
-#: data/ui/first-run.ui:60
+#: data/ui/first-run.ui:30
 msgid "Let’s _Play"
 msgstr "Ал, о_йнайық"
 
 #. Translators: text appearing on the game over screen
-#: data/ui/game-over.ui:37
+#: data/ui/game-over.ui:35
 msgid "Game Over"
 msgstr "Ойын аяқталды"
 
 #. Translators: label of the button on the game over screen
-#: data/ui/game-over.ui:68
+#: data/ui/game-over.ui:63
 msgid "_Play Again"
 msgstr "Қайта о_йнау"
 
@@ -341,12 +341,12 @@ msgid "_About Swell Foop"
 msgstr "Swell Foop ойыны тур_алы"
 
 #. Translators: tooltip text of the Undo button; probably a verb
-#: data/ui/swell-foop.ui:148
+#: data/ui/swell-foop.ui:149
 msgid "Undo"
 msgstr "Болдырмау"
 
 #. Translators: tooltip text of the Redo button; probably a verb
-#: data/ui/swell-foop.ui:163
+#: data/ui/swell-foop.ui:158
 msgid "Redo"
 msgstr "Қайталау"
 
@@ -357,51 +357,46 @@ msgstr "Нұсқа ақпаратын шығару және шығу"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:120 src/swell-foop.vala:128
+#: src/swell-foop.vala:124 src/swell-foop.vala:132
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:124
+#: src/swell-foop.vala:128
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
-#. Translators: About dialog text, small description of the application
-#: src/swell-foop.vala:137
-msgid ""
-"I want to play that game!\n"
-"You know, they all light-up and you click on them and they vanish!"
-msgstr ""
-"Бұл ойынды ойнағым келеді!\n"
-"Білесіз бе, олардың бәрі жарықтанып, сіз оларды басасыз, олар жоғалады!"
+#: src/swell-foop.vala:139
+msgid "Swell Foop developers"
+msgstr "Swell Foop әзірлеушілері"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:141
+#: src/swell-foop.vala:144
 msgid "Copyright © 2009 Tim Horton"
 msgstr "Copyright © 2009 Tim Horton"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:145
+#: src/swell-foop.vala:148
 msgid "translator-credits"
 msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:59
+#: src/window.vala:58
 msgid "Small"
 msgstr "Кішкентай"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:62
+#: src/window.vala:61
 msgid "Normal"
 msgstr "Қалыпты"
 
 #. Translators: name of a possible size of the grid
-#: src/window.vala:65
+#: src/window.vala:64
 msgid "Large"
 msgstr "Үлкен"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:187
+#: src/window.vala:180
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
@@ -409,43 +404,60 @@ msgstr ""
 "Мүмкіндігінше көп блоктарды тазалаңыз.\n"
 "Аз шертулер көбірек ұпайларды білдіреді."
 
+#: src/window.vala:212
+#, c-format
+msgid "Score: %u"
+msgstr "Есебі: %u"
+
 #. Translators: the text for the score total shown on the game over screen
-#: src/window.vala:234
+#: src/window.vala:229
 #, c-format
 msgid "%u Points"
 msgstr "%u ұпай"
 
 #. Translators: the text for the high score goal shown on the game over screen
-#: src/window.vala:241
+#: src/window.vala:236
 #, c-format
 msgid "%u points to reach the leaderboard"
 msgstr "үздіктер тақтасына жету үшін %u ұпай"
 
+#. Translators: heading of a Dialog that may appear if you start a new game while one is running
+#: src/window.vala:336
+msgid "Start New Game?"
+msgstr "Жаңа ойын бастау керек пе?"
+
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:346
+#: src/window.vala:338
 msgid "Abandon this game to start a new one?"
 msgstr "Бұл ойыннан бас тартып, жаңасын іске қосу керек пе?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:351
+#: src/window.vala:342
 msgid "_Cancel"
 msgstr "Ба_с тарту"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:353
+#: src/window.vala:345
 msgid "_New Game"
 msgstr "Ж_аңа ойын"
 
-#: src/window.vala:402
+#: src/window.vala:387
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
 msgstr[0] "%s, %d түс"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:413
+#: src/window.vala:398
 msgid "Type"
 msgstr "Түрі"
+
+#~ msgid ""
+#~ "I want to play that game!\n"
+#~ "You know, they all light-up and you click on them and they vanish!"
+#~ msgstr ""
+#~ "Бұл ойынды ойнағым келеді!\n"
+#~ "Білесіз бе, олардың бәрі жарықтанып, сіз оларды басасыз, олар жоғалады!"
 
 #~ msgid "Zealous animation"
 #~ msgstr "Ынталы анимация"
@@ -455,10 +467,6 @@ msgstr "Түрі"
 
 #~ msgid "_Zealous Animation"
 #~ msgstr "_Ынталы анимация"
-
-#, c-format
-#~ msgid "Score: %u"
-#~ msgstr "Есебі: %u"
 
 #~ msgid "The GNOME Project"
 #~ msgstr "GNOME жобасы"
