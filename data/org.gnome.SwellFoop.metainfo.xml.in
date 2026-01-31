@@ -39,6 +39,15 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <releases>
+    <release version="50~beta" date="2026-01-31" type="development">
+      <description>
+        <ul>
+          <li>Updated translations</li>
+          <li>Metadata updates (Daniel Rusek)</li>
+          <li>Use libgames-gnome as subproject (Michael Catanzaro)</li>
+        </ul>
+      </description>
+    </release>
     <release version="48.1" date="2025-04-12" type="stable">
       <description>
         <ul>
