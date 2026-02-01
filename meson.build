@@ -34,7 +34,7 @@ gee_dep         = dependency('gee-0.8', version: '>= 0.14.0')
 pangocairo_dep  = dependency('pangocairo')
 
 libgnome_games_support = subproject ('libgnome-games-support',
-                                     default_options: 'superproject_name=gnome-mines')
+                                     default_options: 'superproject_name=swell-foop')
 libgnome_games_support_dep = libgnome_games_support.get_variable ('lggs_dependency')
 
 # version defines of GTK4 for #if e.g. #if GTK_4_6_or_above
