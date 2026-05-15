@@ -1,14 +1,14 @@
 # Georgian translation for swell-foop.
 # Copyright (C) 2023 swell-foop's authors.
 # This file is distributed under the same license as the swell-foop package.
-# Ekaterine Papava <papava.e@gtu.ge>, 2023-2024.
+# Ekaterine Papava <papava.e@gtu.ge>, 2023-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: swell-foop\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/swell-foop/issues\n"
-"POT-Creation-Date: 2024-08-01 18:36+0000\n"
-"PO-Revision-Date: 2024-09-13 05:08+0200\n"
+"POT-Creation-Date: 2026-03-14 20:59+0000\n"
+"PO-Revision-Date: 2026-05-15 07:32+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <(nothing)>\n"
 "Language: ka\n"
@@ -16,20 +16,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #. Translators: title of the window displayed by window managers; name of the application
 #. Translators: name of the program, as seen in the headerbar, in GNOME Shell, or in the about dialog
 #: data/org.gnome.SwellFoop.metainfo.xml.in:7
-#: data/org.gnome.SwellFoop.desktop.in:3 data/ui/swell-foop.ui:135
+#: data/org.gnome.SwellFoop.desktop.in:2 data/ui/swell-foop.ui:135
 #: src/swell-foop.vala:16
 msgid "Swell Foop"
 msgstr "Swell Foop"
 
 #: data/org.gnome.SwellFoop.metainfo.xml.in:8
-#: data/org.gnome.SwellFoop.desktop.in:4
+#: data/org.gnome.SwellFoop.desktop.in:3
 msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr ""
+msgstr "ეკრანის გასუფთავება ფერადი და დახაზული ფილების წაშლით"
 
 #: data/org.gnome.SwellFoop.metainfo.xml.in:10
 msgid ""
@@ -39,21 +39,28 @@ msgid ""
 "single square at a time. You get far more points for clearing a larger group "
 "of squares, and also for clearing the entire board."
 msgstr ""
+"წაშალეთ დაფიდან რაც შეიძლება, მეტი ფილა. დააწკაპუნეთ იგივე ფერის მქონე "
+"კვადრატების ჯგუფზე, რომ ისინი ერთი გასმით გააქროთ. ეს სხვა კვადრატების "
+"შეგროვებას გამოიწვევს. ერთდროულად, მხოლოდ, ერთ კვადრატს ვერ წაშლით. რაც მეტ "
+"ფილას წაშლით ერთდროულად და მთელი დაფის გასუფთავებით ყველაზე მეტ ქულას "
+"მიიღებთ."
 
 #: data/org.gnome.SwellFoop.metainfo.xml.in:17
 msgid ""
 "Swell Foop is always very quick to play, but you can make it somewhat longer "
 "by changing the board size."
 msgstr ""
+"Swell Foop ყოველთვის სწრაფია სათამაშოდ. თამაშის დროის ოდნავ გადიდება დაფის "
+"ზომის გაზრდით შეგიძლიათ."
 
-#: data/org.gnome.SwellFoop.metainfo.xml.in:114
+#: data/org.gnome.SwellFoop.metainfo.xml.in:164
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.SwellFoop.desktop.in:6
+#: data/org.gnome.SwellFoop.desktop.in:5
 msgid "game;logic;board;same;matching;"
-msgstr ""
+msgstr "game;logic;board;same;matching;თამაში;ლოგიკა;"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/theme'
 #: data/org.gnome.SwellFoop.gschema.xml:11
@@ -113,7 +120,7 @@ msgstr "ფონის ფერი"
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/swell-foop/colors'
 #: data/org.gnome.SwellFoop.gschema.xml:49
 msgid "The number of colors of tiles to use in the game."
-msgstr ""
+msgstr "თამაშში გამოყენებული ფილის ფერების რაოდენობა."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/first-run'
 #: data/org.gnome.SwellFoop.gschema.xml:54
@@ -124,6 +131,7 @@ msgstr "პირველი გაშვებაა"
 #: data/org.gnome.SwellFoop.gschema.xml:56
 msgid "Setting to decide whether to show first-run hint dialog or not."
 msgstr ""
+"პარამეტრი, რომელიც წყვეტს, ნაჩვენები იქნება, თუ არა პირველი გაშვების ფანჯარა."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/swell-foop/saved-game'
 #: data/org.gnome.SwellFoop.gschema.xml:61
@@ -137,6 +145,9 @@ msgid ""
 "initial board, an index in the history, and the history of actions saved by "
 "an array of coords."
 msgstr ""
+"აქვს მნიშვნელობა \"არაფერი\", თუ შენახული თამაშები არ გაქვთ. თუ არა, შეიცავს "
+"საწყისი დაფის ასლს, ისტორიის ინდექსს და კოორდინატების მასივის მიერ შენახული "
+"ქმედებების ისტორიას."
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.swell-foop first-run true` before launching application
 #: data/ui/first-run.ui:25
@@ -159,91 +170,79 @@ msgid "_Play Again"
 msgstr "_თავიდან თამაში"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Move keyboard highlight" and "Destroy selected block"
-#: data/ui/help-overlay.ui:31
+#: data/ui/help-overlay.ui:25
 msgctxt "shortcut window"
 msgid "Play with keyboard"
 msgstr "კლავიატურით თამაში"
 
 #. Translators: Left/Right/Up/Down arrows actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; moves highlight
-#: data/ui/help-overlay.ui:36
+#: data/ui/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "Move keyboard highlight"
 msgstr "კლავიატურის გამოკვეთის გადატანა"
 
 #. Translators: Return/space actions description in the Keyboard Shortcuts dialog, section "Play with keyboard"; does as a mouse click
-#: data/ui/help-overlay.ui:44
+#: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Destroy selected block"
 msgstr "მონიშნული ბლოკის განადგურება"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Undo" and "Redo"
-#: data/ui/help-overlay.ui:54
+#: data/ui/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "History"
 msgstr "ისტორია"
 
 #. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; undoes a move
-#: data/ui/help-overlay.ui:59
+#: data/ui/help-overlay.ui:49
 msgctxt "shortcut window"
 msgid "Undo"
 msgstr "ბრძანების გაუქმება"
 
 #. Translators: Ctrl-Shift-Z shortcut description in the Keyboard Shortcuts dialog, section "History"; redoes an undone move
-#: data/ui/help-overlay.ui:67
+#: data/ui/help-overlay.ui:56
 msgctxt "shortcut window"
 msgid "Redo"
 msgstr "ბრძანების აღდგენა"
 
-#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "History"; resets the current game
-#: data/ui/help-overlay.ui:75
-msgctxt "shortcut window"
-msgid "Restart"
-msgstr "გადატვრთვა"
-
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Start a new game"
-#: data/ui/help-overlay.ui:85
+#: data/ui/help-overlay.ui:75
 msgctxt "shortcut window"
 msgid "Main functions"
 msgstr "მთავარი ფუნქციები"
 
 #. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section Main Functions
-#: data/ui/help-overlay.ui:91
+#: data/ui/help-overlay.ui:80
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "დაიწყეთ ახალი თამაში"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
-#: data/ui/help-overlay.ui:100
+#: data/ui/help-overlay.ui:88
 msgctxt "shortcut window"
 msgid "Generic"
 msgstr "ზოგადი"
 
 #. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
-#: data/ui/help-overlay.ui:105
+#: data/ui/help-overlay.ui:92
 msgctxt "shortcut window"
 msgid "Open menu"
 msgstr "მენიუს გახსნა"
 
 #. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
-#: data/ui/help-overlay.ui:113
+#: data/ui/help-overlay.ui:99
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "კლავიატურის მალსახმობები"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
-#: data/ui/help-overlay.ui:121
+#: data/ui/help-overlay.ui:106
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "დახმარება"
 
-#. Translators: future shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
-#: data/ui/help-overlay.ui:129
-msgctxt "shortcut window"
-msgid "About"
-msgstr "შესახებ"
-
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
-#: data/ui/help-overlay.ui:137
+#: data/ui/help-overlay.ui:123
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "გამოსვლა"
@@ -312,7 +311,7 @@ msgstr "მოხაზულობები და ფერები"
 #. Translators: entry of the Appearance submenu of the hamburger menu; change theme; other possible themes are "Colors" and "Shapes and Colors"
 #: data/ui/swell-foop.ui:106
 msgid "Boring Shapes"
-msgstr ""
+msgstr "მოსაწყენი ფორმები"
 
 #. Translators: entry of the hamburger menu; shows a Shortcuts window
 #: data/ui/swell-foop.ui:116
@@ -327,7 +326,7 @@ msgstr "_დახმარება"
 #. Translators: entry of the hamburger menu; shows an About window
 #: data/ui/swell-foop.ui:126
 msgid "_About Swell Foop"
-msgstr ""
+msgstr "Swell Foop-ის შეს_ახებ"
 
 #. Translators: tooltip text of the Undo button; probably a verb
 #: data/ui/swell-foop.ui:149
@@ -346,26 +345,26 @@ msgstr "ვერსიის ჩვენება და გასვლა"
 
 #. Translators: About dialog text, name of an author
 #. Translators: About dialog text, name of an artist
-#: src/swell-foop.vala:120 src/swell-foop.vala:128
+#: src/swell-foop.vala:124 src/swell-foop.vala:132
 msgid "Tim Horton"
 msgstr "Tim Horton"
 
 #. Translators: About dialog text, name of an author
-#: src/swell-foop.vala:124
+#: src/swell-foop.vala:128
 msgid "Sophia Yu"
 msgstr "Sophia Yu"
 
-#: src/swell-foop.vala:135
+#: src/swell-foop.vala:139
 msgid "Swell Foop developers"
 msgstr "Swell Foop-ის პროგრამისტები"
 
 #. Translators: About dialog text, copyright line
-#: src/swell-foop.vala:140
+#: src/swell-foop.vala:144
 msgid "Copyright © 2009 Tim Horton"
-msgstr ""
+msgstr "© 2009 ტიმ ჰორტონი, ყველა უფლება დაცულია"
 
 #. Translators: About dialog text, should be replaced with a credit for you and your team; do not translate literally!
-#: src/swell-foop.vala:144
+#: src/swell-foop.vala:148
 msgid "translator-credits"
 msgstr "თარგმანი-შესრულებულია"
 
@@ -385,50 +384,52 @@ msgid "Large"
 msgstr "დიდი"
 
 #. Translators: text appearing on the first-run screen; to test, run `gsettings set org.gnome.SwellFoop first-run true` before launching application
-#: src/window.vala:179
+#: src/window.vala:180
 msgid ""
 "Clear as many blocks as you can.\n"
 "Fewer clicks means more points."
 msgstr ""
+"გაასუფთავეთ რაც შეიძლება მეტი ბლოკი.\n"
+"ნაკლები დაწკაპუნება ნიშნავს მეტ ქულას."
 
-#: src/window.vala:211
+#: src/window.vala:212
 #, c-format
 msgid "Score: %u"
 msgstr "ქულა: %u"
 
 #. Translators: the text for the score total shown on the game over screen
-#: src/window.vala:228
+#: src/window.vala:229
 #, c-format
 msgid "%u Points"
 msgstr "%u წერტილი"
 
 #. Translators: the text for the high score goal shown on the game over screen
-#: src/window.vala:235
+#: src/window.vala:236
 #, c-format
 msgid "%u points to reach the leaderboard"
-msgstr ""
+msgstr "%u ქულა ლიდერების დაფაზე მისაღწევად"
 
 #. Translators: heading of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:335
+#: src/window.vala:336
 msgid "Start New Game?"
 msgstr "დაიწყებთ ახალ თამაშს?"
 
 #. Translators: text of a Dialog that may appear if you start a new game while one is running
-#: src/window.vala:337
+#: src/window.vala:338
 msgid "Abandon this game to start a new one?"
 msgstr "მიატოვებთ ამ თამაშს და დაიწყებთ ახალს?"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_New Game”
-#: src/window.vala:341
+#: src/window.vala:342
 msgid "_Cancel"
 msgstr "_შეწყვეტა"
 
 #. Translators: text of one of the two buttons of a Dialog that appears if you start a new game while one is running; the other is “_Cancel”
-#: src/window.vala:344
+#: src/window.vala:345
 msgid "_New Game"
 msgstr "ახალი თამაში"
 
-#: src/window.vala:386
+#: src/window.vala:387
 #, c-format
 msgid "%s, %d color"
 msgid_plural "%s, %d colors"
@@ -436,9 +437,17 @@ msgstr[0] "%s, %d ფერი"
 msgstr[1] "%s, %d ფერი"
 
 #. Translators: in the Scores dialog, label introducing for which board configuration (size and number of colors) the best scores are displayed
-#: src/window.vala:397
+#: src/window.vala:398
 msgid "Type"
 msgstr "ტიპი"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Restart"
+#~ msgstr "გადატვრთვა"
+
+#~ msgctxt "shortcut window"
+#~ msgid "About"
+#~ msgstr "შესახებ"
 
 #~ msgid "The GNOME Project"
 #~ msgstr "პროექტი \"GNOME\""
