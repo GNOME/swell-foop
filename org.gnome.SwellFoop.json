@@ -3,9 +3,6 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
-    "sdk-extensions" : [
-        "org.freedesktop.Sdk.Extension.vala-nightly"
-    ],
     "command" : "swell-foop",
     "tags" : [
         "nightly"
@@ -33,8 +30,6 @@
         "*.a"
     ],
     "build-options" : {
-        "prepend-path" : "/usr/lib/sdk/vala-nightly/bin/",
-        "prepend-ld-library-path" : "/usr/lib/sdk/vala-nightly/lib",
         "env" : {        }
     },
     "modules" : [
