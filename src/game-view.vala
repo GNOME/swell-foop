@@ -238,11 +238,7 @@ private class GameView : DrawingArea
                 }
                 if (animate_score (c, now, width, height) || animations.size > 0)
                 {
-#if GLIB_2_78_or_above
-                    Timeout.add_once (3, redraw); /* The documentation says this requires glib 2.74, I couldn't compile it with 2.74 but could with 2.78. */
-#else
-                    Timeout.add (3, (()=>{redraw (); return false;}));
-#endif
+                    redraw_next_frame ();
                 }
             }
         });
@@ -605,6 +601,20 @@ private class GameView : DrawingArea
     public void redraw ()
     {
         queue_draw ();
+    }
+
+    /* queue_draw () called while drawing is not honoured, so ask for the next frame from the frame clock */
+    bool tick_pending = false;
+    void redraw_next_frame ()
+    {
+        if (tick_pending)
+            return;
+        tick_pending = true;
+        add_tick_callback (() => {
+            tick_pending = false;
+            queue_draw ();
+            return Source.REMOVE;
+        });
     }
 
     /* private functions */
