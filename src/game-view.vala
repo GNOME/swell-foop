@@ -40,10 +40,11 @@ private class GameView : Gtk.Widget
         public eType animation_type;
         internal uint8 x;
         internal uint8 y;
-        internal uint8 dx;
-        internal uint8 dy;
+        internal double dx; /* where a move starts, in grid units */
+        internal double dy;
         internal uint8 block_type;
         internal Tile tile;
+        internal int epoch; /* which model update created it, moves are only merged within one */
 
         /* Constructor */
         internal Animation (eType type, uint8 x, uint8 y, uint8 block_type, uint8 dx = 0xff, uint8 dy = 0xff, Tile? t = null)
@@ -103,6 +104,7 @@ private class GameView : Gtk.Widget
 
     /* member variables */
     OrderedList animations = new OrderedList ();
+    int epoch = 0;
     private Game? game;
 
     string theme;
@@ -301,6 +303,49 @@ private class GameView : Gtk.Widget
             }
     }
 
+    /* where a move is now, in grid units, following the bouncing profile described in do_animation */
+    bool move_position (Animation a, DateTime now, out double x, out double y)
+    {
+        int total_steps = animation_length;
+        int segment_steps = animation_length / 5; /* 48 */
+        uint steps = (uint)(now.difference (a.start_time) / (TimeSpan.MILLISECOND * 3));
+        uint animation;
+        if (steps >= total_steps - 1)
+            animation = 0;
+        else
+            animation = (total_steps - 1 - steps);
+        uint range;
+        uint p;
+        if (animation >= total_steps - segment_steps /* 192 */)
+        {
+            range = segment_steps; /* 48 */
+            p = total_steps - animation; /* 240 - (239 to 192) --> (1 to 48) */
+        }
+        else if (animation >= total_steps - segment_steps * 2 /* 144 */)
+        {
+            range = segment_steps * 3; /* 144 */
+            p = animation - segment_steps; /* (191 to 144) - 48 --> (143 to 96)*/
+        }
+        else if (animation >= total_steps - segment_steps * 3 /* 96 */)
+        {
+            range = segment_steps * 3; /* 144 */
+            p = total_steps - animation; /* 240 - (143 to 96) --> (97 to 144) */
+        }
+        else if (animation >= segment_steps /* 48 */)
+        {
+            range = segment_steps * 6; /* 288 */
+            p = animation + segment_steps * 4; /* (95 to 48) + 144 --> (287 to 240) */
+        }
+        else
+        {
+            range = segment_steps * 6; /* 288 */
+            p = segment_steps * 6 - animation;  /* (47 to 0) --> (241 to 288) */
+        }
+        x = a.dx + (a.x - a.dx) * p / range;
+        y = a.dy + (a.y - a.dy) * p / range;
+        return animation > 0;
+    }
+
     bool do_animation (Gtk.Snapshot c, Animation a, DateTime now)
     {
         /* to do, Consider adding sound to the animation.
@@ -329,38 +374,10 @@ private class GameView : Gtk.Widget
             animation = (total_steps - 1 - steps);
         if (a.animation_type == MOVE)
         {
-            uint range;
-            uint p;
-            if (animation >= total_steps - segment_steps /* 192 */)
-            {
-                range = segment_steps; /* 48 */
-                p = total_steps - animation; /* 240 - (239 to 192) --> (1 to 48) */
-            }
-            else if (animation >= total_steps - segment_steps * 2 /* 144 */)
-            {
-                range = segment_steps * 3; /* 144 */
-                p = animation - segment_steps; /* (191 to 144) - 48 --> (143 to 96)*/
-            }
-            else if (animation >= total_steps - segment_steps * 3 /* 96 */)
-            {
-                range = segment_steps * 3; /* 144 */
-                p = total_steps - animation; /* 240 - (143 to 96) --> (97 to 144) */
-            }
-            else if (animation >= segment_steps /* 48 */)
-            {
-                range = segment_steps * 6; /* 288 */
-                p = animation + segment_steps * 4; /* (95 to 48) + 144 --> (287 to 240) */
-            }
-            else
-            {
-                range = segment_steps * 6; /* 288 */
-                p = segment_steps * 6 - animation;  /* (47 to 0) --> (241 to 288) */
-            }
-            draw_block (c,
-                 (x_delta * ((long)a.x - a.dx))                                     * p / range + x_offset + x_delta * a.dx,
-                 (y_delta * ((long)(game.rows - 1 - a.y) - (game.rows - 1 - a.dy))) * p / range + y_offset + y_delta * (game.rows - 1 - a.dy),
-                 x_delta, y_delta, a.block_type, theme);
-            return animation > 0;
+            double mx, my;
+            bool running = move_position (a, now, out mx, out my);
+            draw_block (c, x_offset + x_delta * mx, y_offset + y_delta * (game.rows - 1 - my), x_delta, y_delta, a.block_type, theme);
+            return running;
         }
         else if (a.animation_type == DESTROY) 
         {
@@ -386,6 +403,10 @@ private class GameView : Gtk.Widget
         }
         else if (a.animation_type == SELECT) 
         {
+            /* the board is already in its final state, so wait for the block to arrive */
+            if (is_animated (a.x, a.y))
+                return true;
+
             double degrees = (int)(steps % 360) - 180;
 
             /* move the selected blocks in a circular motion */
@@ -522,27 +543,27 @@ private class GameView : Gtk.Widget
 
     internal void cursor_click (uint8 x = 0xff, uint8 y = 0xff)
     {
-        if (!frozen && (animations.size == 0 || animations.contain_only (SELECT)))
+        if (frozen || null == game)
+            return;
+        if (x == 0xff && y == 0xff)
         {
-            animations.clear ();
-            if (null != game)
-            {
-                if (x == 0xff && y == 0xff)
-                {
-                    if (y_cursor < game.current_board.length[0] && x_cursor < game.current_board.length[1] && null != game.current_board[y_cursor, x_cursor])
-                        game.remove_connected_tiles (game.current_board[y_cursor, x_cursor]);
-                }
-                else
-                {
-                    if (y < game.current_board.length[0] && x < game.current_board.length[1] && null != game.current_board[y, x])
-                        game.remove_connected_tiles (game.current_board[y, x]);
-                }
-            }
+            x = (uint8)x_cursor;
+            y = (uint8)y_cursor;
         }
+        if (y >= game.current_board.length[0] || x >= game.current_board.length[1] || null == game.current_board[y, x])
+            return;
+
+        /* blocks that are still moving can't be clicked, the others can while other blocks are animating */
+        var tile = game.current_board[y, x];
+        if (is_animated (tile.grid_x, tile.grid_y))
+            return;
+        animations.remove_type (SELECT);
+        game.remove_connected_tiles (tile);
     }
 
     internal void freeze ()
     {
+        epoch++;
         if (!is_uninitialized ())
         {
             frozen_board = new uint8 [game.columns, game.rows];
@@ -566,6 +587,13 @@ private class GameView : Gtk.Widget
 
     internal void close (uint8 grid_x, uint8 grid_y, uint8 block_type)
     {
+        /* a block that is closed while still on its way, or appearing, is only shown as closing */
+        for (int i = animations.size - 1; i >= 0; --i)
+        {
+            var a = animations.@get (i);
+            if ((a.animation_type == MOVE || a.animation_type == APPEAR) && a.x == grid_x && a.y == grid_y)
+                animations.remove_at (i);
+        }
         animations.add (new Animation (DESTROY, grid_x, grid_y, block_type));
     }
 
@@ -579,7 +607,22 @@ private class GameView : Gtk.Widget
         if (merge_moves (old_x, old_y, new_x, new_y, block_type, t))
             merge_moves2 (t);
         else
-            animations.add (new Animation (MOVE, new_x, new_y, block_type, old_x, old_y, t));
+        {
+            var move = new Animation (MOVE, new_x, new_y, block_type, old_x, old_y, t);
+            move.epoch = epoch;
+
+            /* take over from a move of an earlier click that is still running, from where it is drawn now */
+            for (int i = animations.size - 1; i >= 0; --i)
+            {
+                var running = animations.@get (i);
+                if (running.animation_type == MOVE && running.tile == t)
+                {
+                    move_position (running, new DateTime.now_utc (), out move.dx, out move.dy);
+                    animations.remove_at (i);
+                }
+            }
+            animations.add (move);
+        }
     }
 
     /* redraw */
@@ -615,7 +658,7 @@ private class GameView : Gtk.Widget
     {
         for (int i=0; i<animations.size; ++i)
         {
-            if (animations.@get (i).animation_type == MOVE && animations.@get (i).tile == t)
+            if (animations.@get (i).animation_type == MOVE && animations.@get (i).tile == t && animations.@get (i).epoch == epoch)
             {
                 if (new_x == animations.@get (i).dx && new_y == animations.@get (i).dy)
                 {
@@ -643,14 +686,14 @@ private class GameView : Gtk.Widget
         for (;;)
         {
             int i;
-            for (i = 0; i < animations.size && animations.@get (i).tile != t; i++);
+            for (i = 0; i < animations.size && (animations.@get (i).tile != t || animations.@get (i).epoch != epoch); i++);
             if (i < animations.size)
             {
                 bool done_merge = false;
                 int o;
                 for (o = i + 1; o < animations.size; o++)
                 {
-                    if (animations.@get (o).tile == t)
+                    if (animations.@get (o).tile == t && animations.@get (o).epoch == epoch)
                     {
                         if (animations.@get (o).x == animations.@get (i).dx && animations.@get (o).y == animations.@get (i).dy)
                         {
@@ -703,6 +746,16 @@ private class GameView : Gtk.Widget
                 animations.add (new Animation (SELECT, tile.grid_x, tile.grid_y, tile.color));
         }
         redraw ();
+    }
+
+    bool is_animated (uint8 x, uint8 y)
+    {
+        foreach (var a in animations)
+        {
+            if (a.animation_type != SELECT && a.x == x && a.y == y)
+                return true;
+        }
+        return false;
     }
 
     uint16 segment (int x, int y)
