@@ -140,6 +140,7 @@ private class GameView : DrawingArea
     }
 
     Gee.Map<string, Rsvg.Handle> preloaded_svg = new Gee.HashMap<string, Rsvg.Handle> ();
+    Gee.Map<string, Cairo.ImageSurface> sprite_cache = new Gee.HashMap<string, Cairo.ImageSurface> ();
 
     internal bool keypress (uint keyval, uint keycode)
     {
@@ -253,7 +254,7 @@ private class GameView : DrawingArea
             y_delta = height / game.rows;
             x_offset = (width - x_delta * game.columns) / 2;
             y_offset = (height - y_delta * game.rows) / 2;
-            preloaded_svg.clear ();
+            sprite_cache.clear ();
 		});
         var mouse_position = new EventControllerMotion ();
         mouse_position.motion.connect ((x,y)=> 
@@ -753,30 +754,42 @@ private class GameView : DrawingArea
         }
     }
 
+    /* rasterise each svg once at cell size, then only blit (and scale for animations) */
+    void draw_sprite (Cairo.Context c, double x, double y, uint x_size, uint y_size, string name)
+    {
+        if (x_delta == 0 || y_delta == 0)
+            return;
+
+        var surface = sprite_cache.get (name);
+        if (surface == null)
+        {
+            surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, (int) x_delta, (int) y_delta);
+            try
+            {
+                render_svg (new Cairo.Context (surface), 0, 0, x_delta, y_delta, name);
+            }
+            catch (Error e)
+            {
+            }
+            sprite_cache.set (name, surface);
+        }
+
+        c.save ();
+        c.translate (x, y);
+        c.scale ((double) x_size / x_delta, (double) y_size / y_delta);
+        c.set_source_surface (surface, 0, 0);
+        c.paint ();
+        c.restore ();
+    }
+
     void draw_block (Cairo.Context c, double x, double y, uint x_size, uint y_size, uint8 block_id, string theme)
     {
-        string block_name = get_block_name (block_id);
-        string name = "/org/gnome/SwellFoop/themes/%s/%s.svg".printf (theme, block_name);
-        try
-        {
-            render_svg (c, x, y, x_size, y_size, name);
-        }
-        catch (Error e)
-        {
-        }
-        
+        draw_sprite (c, x, y, x_size, y_size, "/org/gnome/SwellFoop/themes/%s/%s.svg".printf (theme, get_block_name (block_id)));
     }
 
     void draw_cursor (Cairo.Context c, double x, double y, uint x_size, uint y_size, string theme)
     {
-        string name = "/org/gnome/SwellFoop/themes/%s/%s.svg".printf (theme, "highlight");
-        try
-        {
-            render_svg (c, x, y, x_size, y_size, name);
-        }
-        catch (Error e)
-        {
-        }
+        draw_sprite (c, x, y, x_size, y_size, "/org/gnome/SwellFoop/themes/%s/highlight.svg".printf (theme));
     }
 
 }
