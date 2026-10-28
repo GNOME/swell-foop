@@ -29,7 +29,7 @@ using Config;
 using Cairo; /* designed for Cairo */
 using Gtk; /* designed for Gtk 4, link with libgtk-4-dev or gtk4-devel */
 
-private class GameView : DrawingArea
+private class GameView : Gtk.Widget
 {
     const int score_shown_for = 240;
     /* sub-classes */
@@ -140,7 +140,7 @@ private class GameView : DrawingArea
     }
 
     Gee.Map<string, Rsvg.Handle> preloaded_svg = new Gee.HashMap<string, Rsvg.Handle> ();
-    Gee.Map<string, Cairo.ImageSurface> sprite_cache = new Gee.HashMap<string, Cairo.ImageSurface> ();
+    Gee.Map<string, Gdk.Texture> sprite_cache = new Gee.HashMap<string, Gdk.Texture> ();
 
     internal bool keypress (uint keyval, uint keycode)
     {
@@ -180,8 +180,66 @@ private class GameView : DrawingArea
         set_hexpand (true);
         set_vexpand (true);
         focusable = true;
-        set_draw_func ((/*DrawingArea*/ area, /*Cairo.Context*/ c, width, height)=>
+
+        var mouse_position = new EventControllerMotion ();
+        mouse_position.motion.connect ((x,y)=> 
         {
+            new_position ((int)x, (int)y);
+        });
+        mouse_position.enter.connect ((x,y)=>
+        {
+            new_position ((int)x, (int)y);
+        });
+        mouse_position.leave.connect (()=>
+        {
+            new_position (-1, -1);
+        });
+
+        var key_controller = new EventControllerKey ();
+        var mouse_click = new EventControllerLegacy ();
+        key_controller.key_pressed.connect ((controller,keyval,keycode,state)=>{ keypress(keyval, keycode);} );
+        mouse_click.event.connect ((event)=>
+        {
+            switch (event.get_event_type ())
+            {
+                case Gdk.EventType.BUTTON_PRESS:
+                    mouse_pressed = true;
+                    redraw ();
+                    return true;
+                case Gdk.EventType.BUTTON_RELEASE:
+                    mouse_pressed = false;
+                    if (mouse_segment == 0xffff)
+                        redraw ();
+                    else
+                        cursor_click (mouse_segment >> 8, (uint8)mouse_segment);
+                    draw_highlight = false;
+                    return true;
+                default:
+                    return false;
+            }
+        });
+        add_controller (mouse_click);
+        add_controller (key_controller);
+        add_controller (mouse_position);
+    }
+
+    public override void size_allocate (int width, int height, int baseline)
+    {
+        if (game == null)
+            return;
+            this.width = width;
+            this.height = height;
+            x_delta = width / game.columns;
+            y_delta = height / game.rows;
+            x_offset = (width - x_delta * game.columns) / 2;
+            y_offset = (height - y_delta * game.rows) / 2;
+            sprite_cache.clear ();
+    }
+
+    public override void snapshot (Gtk.Snapshot c)
+    {
+        int width = get_width ();
+        int height = get_height ();
             if (!is_uninitialized () && !(frozen && !frozen_board_initialized))
             {
                 var now = new DateTime.now_utc ();
@@ -241,60 +299,9 @@ private class GameView : DrawingArea
                     redraw_next_frame ();
                 }
             }
-        });
-
-        resize.connect((width, height) => {
-            this.width = width;
-            this.height = height;
-            x_delta = width / game.columns;
-            y_delta = height / game.rows;
-            x_offset = (width - x_delta * game.columns) / 2;
-            y_offset = (height - y_delta * game.rows) / 2;
-            sprite_cache.clear ();
-		});
-        var mouse_position = new EventControllerMotion ();
-        mouse_position.motion.connect ((x,y)=> 
-        {
-            new_position ((int)x, (int)y);
-        });
-        mouse_position.enter.connect ((x,y)=>
-        {
-            new_position ((int)x, (int)y);
-        });
-        mouse_position.leave.connect (()=>
-        {
-            new_position (-1, -1);
-        });
-
-        var key_controller = new EventControllerKey ();
-        var mouse_click = new EventControllerLegacy ();
-        key_controller.key_pressed.connect ((controller,keyval,keycode,state)=>{ keypress(keyval, keycode);} );
-        mouse_click.event.connect ((event)=>
-        {
-            switch (event.get_event_type ())
-            {
-                case Gdk.EventType.BUTTON_PRESS:
-                    mouse_pressed = true;
-                    redraw ();
-                    return true;
-                case Gdk.EventType.BUTTON_RELEASE:
-                    mouse_pressed = false;
-                    if (mouse_segment == 0xffff)
-                        redraw ();
-                    else
-                        cursor_click (mouse_segment >> 8, (uint8)mouse_segment);
-                    draw_highlight = false;
-                    return true;
-                default:
-                    return false;
-            }
-        });
-        add_controller (mouse_click);
-        add_controller (key_controller);
-        add_controller (mouse_position);
     }
 
-    bool do_animation (Context c, Animation a, DateTime now)
+    bool do_animation (Gtk.Snapshot c, Animation a, DateTime now)
     {
         /* to do, Consider adding sound to the animation.
          *
@@ -407,7 +414,7 @@ private class GameView : DrawingArea
             return false;
     }
 
-    bool animate_score (Context c, DateTime now, int width, int height)
+    bool animate_score (Gtk.Snapshot c, DateTime now, int width, int height)
     {
         if (score_delta > 0)
         {
@@ -426,43 +433,20 @@ private class GameView : DrawingArea
             return false;
     }
 
-    void draw_text_font_size (Context C, int x, int y, string text, int font_size, double a)
+    void draw_text_font_size (Gtk.Snapshot c, int x, int y, string text, int font_size, double a)
     {
-        int x_offset, y_offset, width, height;
-        get_text_offsets (C, text, font_size, out x_offset, out y_offset, out width, out height);
-        C.move_to (x - x_offset - width / 2, y - y_offset - height / 2); 
-        C.set_source_rgba (1, 1, 1, a);
-        var layout =  Pango.cairo_create_layout (C);
-        Pango.FontDescription font;
-        if (null == layout.get_font_description ())
-            font = Pango.FontDescription.from_string ("Sans Bold 1pt");
-        else
-            font = layout.get_font_description ().copy ();
+        if (font_size < 1)
+            return;
+        var layout = create_pango_layout (text);
+        var font = Pango.FontDescription.from_string ("Sans Bold 1pt");
         font.set_size (Pango.SCALE * font_size);
         layout.set_font_description (font);
-        layout.set_text (text, -1);
-        Pango.cairo_update_layout (C, layout);
-        Pango.cairo_show_layout (C, layout);
-    }
-
-    void get_text_offsets (Context C, string text, int font_size, out int x_offset, out int y_offset, out int width, out int height)
-    {
-        var layout =  Pango.cairo_create_layout (C);
-        Pango.FontDescription font;
-        if (null == layout.get_font_description ())
-            font = Pango.FontDescription.from_string ("Sans Bold 1pt");
-        else
-            font = layout.get_font_description ().copy ();
-        font.set_size (Pango.SCALE * font_size);
-        layout.set_font_description (font);
-        layout.set_text (text, -1);
-        Pango.cairo_update_layout (C, layout);
-        Pango.Rectangle a,b;
-        layout.get_extents (out a, out b);
-        x_offset = a.x / Pango.SCALE;
-        y_offset = a.y / Pango.SCALE;
-        width = a.width / Pango.SCALE;
-        height = a.height / Pango.SCALE;
+        int w, h;
+        layout.get_pixel_size (out w, out h);
+        c.save ();
+        c.translate (Graphene.Point () { x = x - w / 2, y = y - h / 2 });
+        c.append_layout (layout, Gdk.RGBA () { red = 1, green = 1, blue = 1, alpha = (float) a });
+        c.restore ();
     }
 
     /*\
@@ -495,6 +479,7 @@ private class GameView : DrawingArea
 
     internal void set_theme_name (string theme_name)
     {
+        sprite_cache.clear ();
         if (theme_name == "colors")
             theme = "colors";
         else if (theme_name == "boringshapes")
@@ -764,16 +749,16 @@ private class GameView : DrawingArea
         }
     }
 
-    /* rasterise each svg once at cell size, then only blit (and scale for animations) */
-    void draw_sprite (Cairo.Context c, double x, double y, uint x_size, uint y_size, string name)
+    /* rasterise each svg once at cell size into a texture; the GPU does the placing and scaling */
+    void draw_sprite (Gtk.Snapshot c, double x, double y, uint x_size, uint y_size, string name)
     {
         if (x_delta == 0 || y_delta == 0)
             return;
 
-        var surface = sprite_cache.get (name);
-        if (surface == null)
+        var texture = sprite_cache.get (name);
+        if (texture == null)
         {
-            surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, (int) x_delta, (int) y_delta);
+            var surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, (int) x_delta, (int) y_delta);
             try
             {
                 render_svg (new Cairo.Context (surface), 0, 0, x_delta, y_delta, name);
@@ -781,23 +766,25 @@ private class GameView : DrawingArea
             catch (Error e)
             {
             }
-            sprite_cache.set (name, surface);
+            surface.flush ();
+            unowned uint8[] pixels = surface.get_data ();
+            pixels.length = surface.get_stride () * surface.get_height ();
+            /* cairo's ARGB32 is a native-endian 32 bit value, gdk's formats are byte orders */
+            var format = ByteOrder.HOST == ByteOrder.LITTLE_ENDIAN ? Gdk.MemoryFormat.B8G8R8A8_PREMULTIPLIED
+                                                                  : Gdk.MemoryFormat.A8R8G8B8_PREMULTIPLIED;
+            texture = new Gdk.MemoryTexture (surface.get_width (), surface.get_height (), format, new Bytes (pixels), surface.get_stride ());
+            sprite_cache.set (name, texture);
         }
 
-        c.save ();
-        c.translate (x, y);
-        c.scale ((double) x_size / x_delta, (double) y_size / y_delta);
-        c.set_source_surface (surface, 0, 0);
-        c.paint ();
-        c.restore ();
+        c.append_texture (texture, Graphene.Rect ().init ((float) x, (float) y, (float) x_size, (float) y_size));
     }
 
-    void draw_block (Cairo.Context c, double x, double y, uint x_size, uint y_size, uint8 block_id, string theme)
+    void draw_block (Gtk.Snapshot c, double x, double y, uint x_size, uint y_size, uint8 block_id, string theme)
     {
         draw_sprite (c, x, y, x_size, y_size, "/org/gnome/SwellFoop/themes/%s/%s.svg".printf (theme, get_block_name (block_id)));
     }
 
-    void draw_cursor (Cairo.Context c, double x, double y, uint x_size, uint y_size, string theme)
+    void draw_cursor (Gtk.Snapshot c, double x, double y, uint x_size, uint y_size, string theme)
     {
         draw_sprite (c, x, y, x_size, y_size, "/org/gnome/SwellFoop/themes/%s/highlight.svg".printf (theme));
     }
