@@ -143,6 +143,7 @@ private class GameView : Gtk.Widget
 
     Gee.Map<string, Rsvg.Handle> preloaded_svg = new Gee.HashMap<string, Rsvg.Handle> ();
     Gee.Map<string, Gdk.Texture> sprite_cache = new Gee.HashMap<string, Gdk.Texture> ();
+    double sprite_scale = 1;
 
     internal bool keypress (uint keyval, uint keycode)
     {
@@ -242,6 +243,15 @@ private class GameView : Gtk.Widget
     {
         int width = get_width ();
         int height = get_height ();
+
+        /* sprites are rasterised in device pixels, so they stay sharp on hidpi displays */
+        var surface = get_native ()?.get_surface ();
+        double scale = surface != null ? surface.get_scale () : scale_factor;
+        if (scale != sprite_scale)
+        {
+            sprite_scale = scale;
+            sprite_cache.clear ();
+        }
             if (!is_uninitialized () && !(frozen && !frozen_board_initialized))
             {
                 var now = new DateTime.now_utc ();
@@ -811,7 +821,8 @@ private class GameView : Gtk.Widget
         var texture = sprite_cache.get (name);
         if (texture == null)
         {
-            var surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, (int) x_delta, (int) y_delta);
+            var surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, (int) Math.ceil (x_delta * sprite_scale), (int) Math.ceil (y_delta * sprite_scale));
+            surface.set_device_scale (sprite_scale, sprite_scale);
             try
             {
                 render_svg (new Cairo.Context (surface), 0, 0, x_delta, y_delta, name);
