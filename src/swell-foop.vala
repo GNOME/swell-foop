@@ -3,9 +3,11 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 2 of the License, or (at your option) any later
+ * Foundation, either version 3 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 using Config;
@@ -138,7 +140,7 @@ public class SwellFoop : Adw.Application
                                "application-name", PROGRAM_NAME,
                                "developer-name", _("Swell Foop developers"),
                                "version", Config.VERSION,
-                               "license-type", Gtk.License.GPL_2_0,
+                               "license-type", Gtk.License.GPL_3_0,
                                "developers", developers,
                                /* Translators: About dialog text, copyright line */
                                "copyright", _("Copyright \xc2\xa9 2009 Tim Horton"),

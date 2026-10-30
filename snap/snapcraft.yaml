@@ -17,7 +17,7 @@ base: core18
 
 # Launchpad doesn't recognize these fields yet
 passthrough:
-  license: GPL-2.0+
+  license: GPL-3.0+
   title: Swell Foop
 
 slots:

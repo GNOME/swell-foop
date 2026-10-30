@@ -1,7 +1,7 @@
 project('swell-foop', ['c','vala'],
   version: '50.0',
   meson_version: '>= 0.60',
-  license: 'GPLv2+',
+  license: 'GPLv3+',
 )
 
 gnome   = import('gnome')
